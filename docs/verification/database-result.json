@@ -1,0 +1,51 @@
+{
+  "startedAt": "2026-09-06T02:13:16.159Z",
+  "seedCounts": {
+    "apm_chapters": {
+      "expectedMinimum": 9,
+      "actual": 9
+    },
+    "apm_lessons": {
+      "expectedMinimum": 70,
+      "actual": 70
+    },
+    "apm_source_revisions": {
+      "expectedMinimum": 70,
+      "actual": 70
+    },
+    "apm_cards": {
+      "expectedMinimum": 14,
+      "actual": 14
+    },
+    "apm_card_revisions": {
+      "expectedMinimum": 14,
+      "actual": 14
+    },
+    "apm_migrations": {
+      "actual": 1
+    },
+    "apm_users": {
+      "actual": 1
+    },
+    "apm_settings": {
+      "actual": 1
+    },
+    "apm_review_states": {
+      "actual": 0
+    },
+    "apm_review_events": {
+      "actual": 0
+    },
+    "apm_study_activity": {
+      "actual": 0
+    }
+  },
+  "checks": {
+    "anonReadsDeniedForAllApmTables": true,
+    "reviewIdempotencyAndStateConflict": true,
+    "settingsVersionConflict": true,
+    "undoAndIdempotency": true
+  },
+  "completedAt": "2026-09-06T02:13:42.455Z",
+  "passed": true
+}

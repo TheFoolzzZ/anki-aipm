@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-09-06T02:10:42.816Z",
+  "tables": {
+    "apm_users": 1,
+    "apm_chapters": 9,
+    "apm_lessons": 70,
+    "apm_source_revisions": 70,
+    "apm_cards": 14,
+    "apm_card_revisions": 14
+  }
+}

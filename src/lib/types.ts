@@ -1,0 +1,12 @@
+export type Chapter = { id:string; position:number; title:string; subtitle:string; description:string; color:string; target_cards:number; icon:string };
+export type Lesson = { id:string; chapter_id:string; title:string; position:number; source_key:string; summary:string; reading_minutes:number; headings:{text:string;level:number}[] };
+export type SourceRef = { source_revision_id:string; lesson_id:string; title:string; line_start:number; content_hash:string };
+export type CardMeta = { id:string; canonical_key:string; lesson_id:string; chapter_id:string; concept_keys:string[]; position:number; active_revision:number; title:string; kind:string; prompt:string; estimated_seconds:number };
+export type CardDetail = CardMeta & { answer_short:string; required_points:string[]; pitfalls:string; explanation:string; source_refs:SourceRef[] };
+export type SavedCard = { due:string; stability:number; difficulty:number; elapsed_days:number; scheduled_days:number; reps:number; lapses:number; state:number; learning_steps:number; last_review?:string };
+export type ReviewState = { card_id:string; fsrs:SavedCard; due:string; version:number; suspended:boolean; last_event_id:string|null };
+export type ReviewEvent = { id:string; card_id:string; kind:'review'|'undo'; rating:number|null; state_before:SavedCard; state_after:SavedCard; received_at:string; reviewed_at:string; duration_ms:number; undone_event_id:string|null };
+export type Settings = { daily_minutes:number; new_cards_per_day:number; retention:number; timezone:string; day_start_hour:number; route_mode:'guided'|'chapter'; familiarity:Record<string,string>; version:number };
+export type Bootstrap = { user:{id:string;display_name:string}; settings:Settings; chapters:Chapter[]; lessons:Lesson[]; cards:CardMeta[]; states:ReviewState[]; events:ReviewEvent[]; activity:{lesson_id:string;completed_at:string}[]; now:string; historyLimited:boolean };
+export type Preview = { token:string; options:{rating:number;due:string;interval:string}[] };
+export type ReviewResult = { eventId:string;cardId:string;version:number;state:SavedCard };
