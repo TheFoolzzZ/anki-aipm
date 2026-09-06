@@ -15,6 +15,7 @@ npm run dev
 npm run typecheck
 npm test
 npm run build
+npm run deploy:check
 npm run content:prepare
 npm run db:seed
 npm run db:verify
@@ -39,8 +40,9 @@ npm run content:verify -- --batch content/batches/ch01-foundations-001.json
 2. [实现规格与验收标准](docs/specs/v0.1-learning-core.md)
 3. [制卡与入库规范](docs/specs/card-production-and-publishing.md)
 4. [运行与部署](docs/operations.md)
-5. [设计决策](docs/decisions/001-learning-core.md)
-6. [阶段计划](task_plan.md) / [执行日志](progress.md)
-7. [数据库实测](docs/verification/database-verification.md) / [第1、2章发布验证](docs/verification/ch01-ch02-card-publishing.md) / [核心审查](docs/verification/core-review.md)
+5. [Vercel发布手册](docs/deployment/vercel.md)
+6. [设计决策](docs/decisions/001-learning-core.md)
+7. [阶段计划](task_plan.md) / [执行日志](progress.md)
+8. [数据库实测](docs/verification/database-verification.md) / [第1、2章发布验证](docs/verification/ch01-ch02-card-publishing.md) / [核心审查](docs/verification/core-review.md)
 
 原始设计保存在 docs/plans。新增决定以当前 spec、ADR 和 handover 为准，旧设计不是已实现能力清单。

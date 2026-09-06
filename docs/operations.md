@@ -25,14 +25,13 @@ npm run content:verify -- --batch <file>
 
 批次必须是 accepted、最多20张；发布 RPC 以批次 hash 幂等并在单个事务中写卡片、不可变修订和账本，不写 `apm_review_states` 或 `apm_review_events`。同批次 ID 如果内容变化会拒绝，卡片文字变化必须递增 revision。当前第1、2章三个批次见 `content/batches/`。
 
-## Vercel 准备（尚未部署）
+## Vercel 准备（仓库已就绪，尚未部署）
 
-1. 把代码放入独立仓库，保留 .gitignore，确认无 .env.local/data/private/真实凭据进入 Git。
-2. Vercel 选择 Next.js，执行 npm run build；线上不使用绑定本机地址的 npm run start。
-3. 配置 NEXT_PUBLIC_SUPABASE_URL、SUPABASE_SECRET_KEY、APM_SESSION_SECRET；将 APM_DEV_AUTO_LOGIN 关闭。APM_OWNER_ID/ACCESS_CODE 是本机 seed 配置，线上运行无需为 seed 暴露明文访问码。
-4. 访问码通过受控渠道交付给使用者；当前没有注册、找回、多用户管理 UI，也没有速率限制，正式开放前需补认证与滥用防护验收。
-5. KB_SOURCE_PATH 只用于本地导入，Vercel 从 Supabase 读取课程，不需要携带用户本地知识库目录。
-6. 先在预览环境完成登录、读取、评分、撤销、设置、刷新持久化、移动端与跨用户隔离验收，再考虑正式发布。
+仓库已增加 `vercel.json`、`.vercelignore`、Node 22 固定、`vercel-build` 环境门禁和部署健康检查。提交前执行 `npm run deploy:check`；Vercel 构建执行 `npm run vercel-build`，缺少必需变量或误开自动登录会失败。
+
+Preview/Production 的环境变量、Dashboard/CLI 步骤、验收和回滚见 [Vercel 发布手册](deployment/vercel.md)。线上只配置 `NEXT_PUBLIC_SUPABASE_URL`、`SUPABASE_SECRET_KEY`、`APM_SESSION_SECRET`；`APM_DEV_AUTO_LOGIN` 保持 false 或不配置。不要上传本地知识库、seed 变量或明文访问码。
+
+访问码通过受控渠道交付；当前没有注册、找回、多用户管理或速率限制，Production 只适合作为受控个人空间。先完成 Preview 登录、读取、评分、撤销、设置、刷新持久化、移动端与隔离验收，再晋级生产。
 
 当前字体采用 Google Fonts CSS 与系统回退；离线/网络不可达时使用系统字体。分享知识库原文前需确认材料可被分享的范围，当前没有将其公开发布。
 

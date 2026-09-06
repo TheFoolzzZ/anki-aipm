@@ -44,8 +44,11 @@ async function handle(req:NextRequest,{params}:{params:Promise<{path:string[]}>}
   const path=(await params).path.join('/');
   if(req.method!=='GET')sameOrigin(req);
   if(path==='health'){
-   const r=await db().from('apm_migrations').select('version').eq('version','202609050001').single();
-   return json({ok:!r.error,storage:'supabase',schemaReady:!!r.data},r.error?503:200);
+   const required=['202609050001','202609060001'];
+   const r=await db().from('apm_migrations').select('version').in('version',required);
+   const applied=new Set((r.data||[]).map(row=>row.version));
+   const schemaReady=!r.error&&required.every(version=>applied.has(version));
+   return json({ok:schemaReady,storage:'supabase',schemaReady,requiredMigrations:required.length},schemaReady?200:503);
   }
   if(path==='auth'&&req.method==='POST'){
    const input=z.object({code:z.string().max(256).optional(),local:z.boolean().optional()}).parse(await body(req));

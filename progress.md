@@ -39,3 +39,14 @@
 - 发布后59张卡、59个修订、3个批次；第1章20、第2章25。复习状态和事件发布前后均为0，原14张样卡未被覆盖。
 - 已登录本地卡片库显示59张并能打开第1章新卡详情；最终 `typecheck`、8项测试和生产构建全部通过。
 - 对当前工作区和全部可达 Git 历史再次扫描特定零售项目标识，无匹配项。
+
+## 2026-09-06 · Vercel发布准备
+
+- 读取现有部署说明、运行时代码与环境变量使用点，并以Vercel官方项目配置、环境、Node版本和CLI文档校准当前要求。
+- 新增 `vercel.json`、`.vercelignore` 与 `scripts/check-deployment.mjs`；固定Node 22、npm ci、Next.js preset和受环境门禁的构建命令。
+- 更新 `.env.example`，明确Vercel三项必需变量与本地导入/seed变量的边界；任何秘密均未写入仓库。
+- 缺变量的 `--vercel` 检查按预期失败；使用真实本机配置且强制 `APM_DEV_AUTO_LOGIN=false` 时通过。
+- `npm run deploy:check` 通过：typecheck、9项测试和生产构建全部成功；精确 `npm run vercel-build` 模拟也通过。
+- `npm ci` 从锁文件重新安装150个包后再次执行完整deploy check通过；本机配置中的自动登录为true时，Vercel环境门禁按预期拒绝。
+- 首次本地健康检查因沙箱无法连接127.0.0.1失败；随后确认端口已有服务，获准在沙箱外请求后返回 `ok=true`、两个迁移就绪。重复启动开发服务因端口占用失败，没有影响现有服务。
+- 新增 `docs/deployment/vercel.md`，覆盖Dashboard Git导入、CLI Preview、环境变量、上线验收、生产晋级和回滚；尚未执行外部Vercel创建或发布。

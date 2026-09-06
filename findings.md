@@ -36,3 +36,11 @@
 - 远端 dry-run 确认45张全为新增；三个批次发布后逐字段回读均通过，账本 hash 与本地批次一致。
 - 发布后 `apm_cards=59`、`apm_card_revisions=59`、`apm_content_batches=3`；章节分布为第1章20、第2章25、第3章12、第5章2。
 - 发布前后 `apm_review_states=0`、`apm_review_events=0`，说明内容发布未污染个人学习记录；第1章批次再次 diff 为20张 unchanged，再次 publish 返回同一账本结果。
+
+## 2026-09-06 Vercel发布准备
+
+- Vercel官方当前为新项目默认最新LTS（现为Node 24），但本项目已在Node 22验证；通过 `package.json#engines.node=22.x` 固定运行主版本，避免平台默认漂移。
+- Next.js由Vercel自动识别输出目录，不应把 `.next` 配成自定义Output Directory；仓库只显式固定framework、`npm ci`和受门禁的build命令。
+- 线上运行只读取Supabase URL、服务端secret与session secret；anon key、owner ID/access code、KB路径只用于本地导入或验证。
+- Vercel环境变量只应用到后续部署，变量更新后必须重新部署；Preview与Production分别配置和验收。
+- 精确 `vercel-build` 模拟通过；缺失三项必需变量时门禁按预期失败且只显示变量名。新版健康接口真实返回 `ok=true`、`schemaReady=true`、`requiredMigrations=2`。

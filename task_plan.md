@@ -1,6 +1,6 @@
 # AI PM Recall Studio 实施计划
 
-更新：2026-09-06。当前任务是完成第 1、2 大章全部学习单元的制卡、审校、发布与远端回读验证。
+更新：2026-09-06。当前任务是在既有制卡成果上补齐 Vercel 构建、环境门禁、发布材料和可复现步骤；本轮不直接创建 Vercel 项目或切换生产域名。
 
 | 阶段 | 状态 | 说明 |
 | --- | --- | --- |
@@ -15,16 +15,19 @@
 | 第1章制卡 | completed | 7篇课程20张，全部逐卡来源与教学审校 |
 | 第2章制卡 | completed | 4篇课程25张，全部逐卡来源与教学审校 |
 | 第1、2章上传与回读 | completed | 45张新卡入库；总计59张，原样卡与用户复习进度未覆盖 |
+| Vercel构建配置 | completed | 固定Node版本、框架/安装/构建命令、部署忽略清单和环境预检 |
+| Preview发布手册 | completed | 环境变量、Git/CLI步骤、健康检查、学习闭环和回滚 |
+| Vercel就绪验证 | completed | deploy check、精确vercel-build模拟、健康检查和配置扫描通过 |
 | 交接与目标 | completed | docs/HANDOVER.md、README、operations齐备 |
-| 全量扩卡 / 语音 / Vercel发布 | future | 不在本轮完成范围 |
+| 全量扩卡 / 语音 / Vercel实际发布 | future | 不在本轮完成范围 |
 
 ## 当前完成判据
 
-1. 三个 accepted 批次覆盖第1章7篇、第2章4篇课程，共20+25张新卡。
-2. 每张卡只有一个学习目标，包含必答点、误区、稳定身份和真实来源 hash/行范围。
-3. validate 与 dry-run 无阻断错误；发布事务不会覆盖 review_states/review_events。
-4. 远端回读卡片、修订、active_revision、来源引用和章节计数全部一致。
-5. 测试、typecheck、build通过；spec、progress、findings、verification、handover同步。
+1. Vercel 能从仓库根目录用锁定的 Node/npm 依赖完成 Next.js 构建，不要求上传本地知识库或私有 seed 文件。
+2. 缺少三项运行时必需变量、包含占位值或误开本机自动登录时，Vercel 构建必须提前失败且不打印秘密。
+3. 文档分别说明 Dashboard Git 导入与 CLI Preview 路径、环境变量作用域、健康检查、访问码登录、生产晋级和回滚。
+4. `deploy:check`、测试、typecheck、build通过；部署材料不包含凭据或本机路径。
+5. README、operations、progress、findings、verification、handover同步；实际未部署必须明确。
 
 ## 管理规则
 

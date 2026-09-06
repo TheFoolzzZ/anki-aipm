@@ -1,0 +1,18 @@
+# Runtime build does not need editorial sources, database migrations, or test evidence.
+content/
+data/private/
+docs/
+supabase/
+tests/
+artifacts/
+coverage/
+findings.md
+progress.md
+task_plan.md
+
+# Never upload local configuration or generated output through the CLI.
+.env
+.env.*
+!.env.example
+.next/
+*.tsbuildinfo

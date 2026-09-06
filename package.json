@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1 --port 3210",
     "build": "next build",
@@ -16,7 +19,9 @@
     "content:validate": "node --import tsx scripts/content-validate.ts",
     "content:diff": "node --import tsx scripts/content-diff.ts",
     "content:publish": "node --import tsx scripts/content-publish.ts",
-    "content:verify": "node --import tsx scripts/content-verify.ts"
+    "content:verify": "node --import tsx scripts/content-verify.ts",
+    "deploy:check": "node scripts/check-deployment.mjs && npm run typecheck && npm test && npm run build",
+    "vercel-build": "node scripts/check-deployment.mjs --vercel && next build"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.95.2",
