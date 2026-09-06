@@ -10,11 +10,20 @@
 
 ## 数据库
 
-已执行 `supabase/migrations/202609050001_learning_core.sql`。仅新增 11 张 apm_ 表和 2 个 apm_ RPC，旧项目业务表未变更。新表启用 RLS，拒绝 anon/authenticated 直接访问，服务端校验用户并按 user_id 限制个人数据。
+已执行 `supabase/migrations/202609050001_learning_core.sql` 和 `supabase/migrations/202609060001_content_batches.sql`。当前为 12 张 apm_ 表和 3 个 apm_ RPC。新表启用 RLS，拒绝 anon/authenticated 直接访问；个人数据由服务端校验用户并按 user_id 限制。
 
 `npm run content:prepare` → `npm run db:seed` → `npm run db:verify` 为当前试点复现路径。准备脚本只接受当前固定 14 张卡，不是全量内容发布工具。具体扩卡要求见制卡规范。
 
-当前 seed 跨多次 upsert，不是单事务；失败可在核对错误后重跑，不能声称具备原子批次发布。现有卡片修订 ignoreDuplicates，不会覆盖同版本答案。
+`content:prepare` 与 `db:seed` 仍只用于重建最初 14 张样卡。正式扩卡使用以下受控链路：
+
+```sh
+npm run content:validate -- --batch <file>
+npm run content:diff -- --batch <file>
+npm run content:publish -- --batch <file>
+npm run content:verify -- --batch <file>
+```
+
+批次必须是 accepted、最多20张；发布 RPC 以批次 hash 幂等并在单个事务中写卡片、不可变修订和账本，不写 `apm_review_states` 或 `apm_review_events`。同批次 ID 如果内容变化会拒绝，卡片文字变化必须递增 revision。当前第1、2章三个批次见 `content/batches/`。
 
 ## Vercel 准备（尚未部署）
 

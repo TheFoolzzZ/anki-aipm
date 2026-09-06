@@ -23,3 +23,13 @@ test('route rejects malformed JSON as client input and sends only signed candida
   assert.match(route, /p_expected:p\.version/);
   assert.match(route, /p_settings_version:p\.settingsVersion/);
 });
+
+test('content publishing RPC is atomic, idempotent, and cannot write review progress', async () => {
+  const sql = await source('supabase/migrations/202609060001_content_batches.sql');
+  assert.match(sql, /pg_advisory_xact_lock/);
+  assert.match(sql, /BATCH_ID_CONFLICT/);
+  assert.match(sql, /REVISION_SEQUENCE_CONFLICT/);
+  assert.match(sql, /revoke all on function public\.apm_publish_card_batch[\s\S]*from public,anon,authenticated/);
+  assert.doesNotMatch(sql, /insert into public\.apm_review_(states|events)/);
+  assert.doesNotMatch(sql, /update public\.apm_review_(states|events)/);
+});

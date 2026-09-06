@@ -12,7 +12,11 @@
     "content:prepare": "node --import tsx scripts/prepare-content.ts",
     "db:inspect": "node scripts/inspect-database.mjs",
     "db:seed": "node --import tsx scripts/seed.ts",
-    "db:verify": "node --import tsx scripts/verify-database.ts"
+    "db:verify": "node --import tsx scripts/verify-database.ts",
+    "content:validate": "node --import tsx scripts/content-validate.ts",
+    "content:diff": "node --import tsx scripts/content-diff.ts",
+    "content:publish": "node --import tsx scripts/content-publish.ts",
+    "content:verify": "node --import tsx scripts/content-verify.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.95.2",

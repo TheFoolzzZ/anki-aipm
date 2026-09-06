@@ -18,13 +18,17 @@ npm run build
 npm run content:prepare
 npm run db:seed
 npm run db:verify
+npm run content:validate -- --batch content/batches/ch01-foundations-001.json
+npm run content:diff -- --batch content/batches/ch01-foundations-001.json
+npm run content:publish -- --batch content/batches/ch01-foundations-001.json
+npm run content:verify -- --batch content/batches/ch01-foundations-001.json
 ```
 
-最后三条涉及本地知识库与远端 Supabase。首次建表与数据上传说明见文档。
+内容准备、数据库及批次命令涉及本地知识库或远端 Supabase。首次建表与数据上传说明见文档。
 
 ## 当前内容与页面
 
-- 9 个章节、70 篇原文、14 张样卡已上传到独立 apm_ 表。
+- 9 个章节、70 篇原文、59 张卡已上传到独立 apm_ 表；其中第1章20张、第2章25张，另有第3、5章14张初始样卡。
 - 今日学习、知识地图、课程阅读、卡片库、FSRS 四档学习与撤销、进度、设置、访问码登录已实现代码。
 - 360 张为课程规划目标，尚未制成；语音面试仅有规划页。
 - Next.js 16.3.4、React 19.2.3、TypeScript、ts-fsrs 5.4.2、Supabase。
@@ -37,6 +41,6 @@ npm run db:verify
 4. [运行与部署](docs/operations.md)
 5. [设计决策](docs/decisions/001-learning-core.md)
 6. [阶段计划](task_plan.md) / [执行日志](progress.md)
-7. [数据库实测](docs/verification/database-verification.md) / [核心审查](docs/verification/core-review.md)
+7. [数据库实测](docs/verification/database-verification.md) / [第1、2章发布验证](docs/verification/ch01-ch02-card-publishing.md) / [核心审查](docs/verification/core-review.md)
 
 原始设计保存在 docs/plans。新增决定以当前 spec、ADR 和 handover 为准，旧设计不是已实现能力清单。
