@@ -1,6 +1,6 @@
 # AI PM Recall Studio 实施计划
 
-更新：2026-09-06。当前任务是在既有制卡成果上补齐 Vercel 构建、环境门禁、发布材料和可复现步骤；本轮不直接创建 Vercel 项目或切换生产域名。
+更新：2026-09-07。当前任务是定位并修复本地页面约 2 秒的普遍交互延迟，同时判断 Vercel 部署后的风险；以修改前后同口径浏览器与 API 计时作为完成证据。
 
 | 阶段 | 状态 | 说明 |
 | --- | --- | --- |
@@ -18,16 +18,18 @@
 | Vercel构建配置 | completed | 固定Node版本、框架/安装/构建命令、部署忽略清单和环境预检 |
 | Preview发布手册 | completed | 环境变量、Git/CLI步骤、健康检查、学习闭环和回滚 |
 | Vercel就绪验证 | completed | deploy check、精确vercel-build模拟、健康检查和配置扫描通过 |
+| 交互性能诊断 | completed | 已确认路由切换重复 bootstrap、远程数据库往返、过大课程元数据和串行详情查询共同造成延迟 |
+| 交互性能修复 | completed | 数据壳持久化，bootstrap 缩小73%，详情并行，学习页去除冗余全量查询，Vercel固定bom1 |
 | 交接与目标 | completed | docs/HANDOVER.md、README、operations齐备 |
 | 全量扩卡 / 语音 / Vercel实际发布 | future | 不在本轮完成范围 |
 
 ## 当前完成判据
 
-1. Vercel 能从仓库根目录用锁定的 Node/npm 依赖完成 Next.js 构建，不要求上传本地知识库或私有 seed 文件。
-2. 缺少三项运行时必需变量、包含占位值或误开本机自动登录时，Vercel 构建必须提前失败且不打印秘密。
-3. 文档分别说明 Dashboard Git 导入与 CLI Preview 路径、环境变量作用域、健康检查、访问码登录、生产晋级和回滚。
-4. `deploy:check`、测试、typecheck、build通过；部署材料不包含凭据或本机路径。
-5. README、operations、progress、findings、verification、handover同步；实际未部署必须明确。
+1. 页面间客户端跳转不得重新请求完整 bootstrap，也不再回退到整页“正在展开”状态。
+2. bootstrap 不传输页面未使用的课程 headings/source_key，卡片详情中的独立读取并行执行。
+3. 显示答案不再为了单张卡片读取全部章节、课程、卡片与历史事件。
+4. 用同一环境复测 API 与浏览器交互，记录 Vercel 上仍然存在和已消除的延迟来源。
+5. 测试、typecheck、build通过，并同步 findings、progress、verification 与 handover。
 
 ## 管理规则
 

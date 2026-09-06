@@ -6,7 +6,7 @@ export async function bootstrap(user:{id:string;display_name:string}):Promise<Bo
  const result=await Promise.all([
   client.from('apm_settings').select('*').eq('user_id',user.id).single(),
   client.from('apm_chapters').select('*').order('position'),
-  client.from('apm_lessons').select('*').order('position'),
+  client.from('apm_lessons').select('id,chapter_id,title,position,summary,reading_minutes').order('position'),
   client.from('apm_cards').select('*').eq('lifecycle','active').order('position'),
   client.from('apm_card_revisions').select('card_id,revision,title,kind,prompt,estimated_seconds'),
   client.from('apm_review_states').select('card_id,fsrs,due,version,suspended,last_event_id').eq('user_id',user.id),
@@ -21,9 +21,23 @@ export async function bootstrap(user:{id:string;display_name:string}):Promise<Bo
 }
 export async function cardDetail(id:string):Promise<CardDetail>{
  const client=db();
- const card=await client.from('apm_cards').select('*').eq('id',id).eq('lifecycle','active').single();
- if(card.error)throw new Error('CARD_NOT_FOUND');
- const revision=await client.from('apm_card_revisions').select('*').eq('card_id',id).eq('revision',card.data.active_revision).single();
- if(revision.error)throw new Error('CARD_NOT_FOUND');
- return {...card.data,...revision.data};
+ const [card,revisions]=await Promise.all([
+  client.from('apm_cards').select('*').eq('id',id).eq('lifecycle','active').single(),
+  client.from('apm_card_revisions').select('*').eq('card_id',id),
+ ]);
+ if(card.error||revisions.error)throw new Error('CARD_NOT_FOUND');
+ const revision=revisions.data?.find(item=>item.revision===card.data.active_revision);
+ if(!revision)throw new Error('CARD_NOT_FOUND');
+ return {...card.data,...revision};
+}
+export async function reviewContext(userId:string,cardId:string){
+ const client=db();
+ const [settings,state,detail]=await Promise.all([
+  client.from('apm_settings').select('*').eq('user_id',userId).single(),
+  client.from('apm_review_states').select('card_id,fsrs,due,version,suspended,last_event_id').eq('user_id',userId).eq('card_id',cardId).maybeSingle(),
+  cardDetail(cardId),
+ ]);
+ if(settings.error||state.error)throw new Error('DATABASE_READ_FAILED');
+ const value=settings.data as unknown as Settings;
+ return {settings:{...value,retention:Number(value.retention)},state:state.data,detail};
 }

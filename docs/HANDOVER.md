@@ -6,6 +6,8 @@
 
 用户最新要求：**添加发布到Vercel所必须的构建文件和材料，以及发布步骤。** 仓库构建与发布材料已完成；本轮没有用户授权创建外部Vercel项目或切换生产域名，因此实际Preview/Production发布仍待执行。此前第1章7篇20张、第2章4篇25张的制卡与上传已经完成。
 
+2026-09-07 追加：已修复本地每次页面跳转重新 bootstrap 导致的约2秒以上卡顿。客户端数据壳现在跨路由持久化，初始化请求去重，bootstrap 体积缩小约73%，卡片/学习/设置/已读链路去除多次不必要全量刷新。Supabase Primary 已核实在 Mumbai `ap-south-1`，Vercel Functions 必须保持仓库配置的 `bom1`。
+
 用户已确认工作日 30 分钟。语音面试延后。允许子 Agent 承担数据、测试、文档和次一级模型验收；主 Agent 负责系统设计与核心 UI。浏览器使用已登录 Chrome，不再使用 Tabbit。
 
 ## 当前成果
@@ -36,6 +38,7 @@
 | 桌面/手机视觉 | 未验收 | 尚未截图审阅；不要引用自评审美分数 |
 | Vercel实际发布 | 未执行 | 尚无Vercel项目、Preview或Production URL |
 | Vercel仓库就绪 | 通过 | `npm run deploy:check`、精确 `vercel-build` 模拟及 `/api/health` 均通过 |
+| 交互性能修复 | 通过 | 连续导航41ms/12ms且无bootstrap；详见 `docs/verification/interaction-performance.md` |
 
 当前 dev server 在工具会话 73763 启动；会话编号只是本次执行线索，不保证跨会话仍有效。接手先检查端口，若未运行执行 npm run dev。构建会话 87964 已成功结束。不要为了运行项目重复生成/替换密钥。
 

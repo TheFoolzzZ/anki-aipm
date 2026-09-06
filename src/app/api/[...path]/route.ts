@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { db } from '@/lib/db';
 import { sign, verify, sha256 } from '@/lib/crypto';
-import { bootstrap, cardDetail } from '@/lib/repository';
+import { bootstrap, cardDetail, reviewContext } from '@/lib/repository';
 import { selectNext } from '@/lib/learning';
 import { previewSchedule } from '@/lib/scheduler';
 import type { SavedCard } from '@/lib/types';
@@ -72,17 +72,17 @@ async function handle(req:NextRequest,{params}:{params:Promise<{path:string[]}>}
   }
   if(path==='study/reveal'&&req.method==='POST'){
    const input=z.object({cardId:uuid}).parse(await body(req));
-   const data=await bootstrap(current);const detail=await cardDetail(input.cardId);
-   const state=data.states.find(s=>s.card_id===input.cardId);if(state?.suspended)throw new Error('STATE_CONFLICT');
-   const now=new Date();const schedule=previewSchedule(state?.fsrs||null,data.settings,now);
-   const payload:PreviewToken={userId:current.id,cardId:detail.id,revision:detail.active_revision,version:state?.version||0,settingsVersion:data.settings.version,before:schedule.before,candidates:schedule.candidates,at:now.toISOString(),expires:now.getTime()+600000};
-   return json({card:detail,preview:{token:sign(payload,'review'),options:schedule.options}});
+   const context=await reviewContext(current.id,input.cardId);
+   if(context.state?.suspended)throw new Error('STATE_CONFLICT');
+   const now=new Date();const schedule=previewSchedule(context.state?.fsrs||null,context.settings,now);
+   const payload:PreviewToken={userId:current.id,cardId:context.detail.id,revision:context.detail.active_revision,version:context.state?.version||0,settingsVersion:context.settings.version,before:schedule.before,candidates:schedule.candidates,at:now.toISOString(),expires:now.getTime()+600000};
+   return json({card:context.detail,preview:{token:sign(payload,'review'),options:schedule.options}});
   }
   if(path==='reviews'&&req.method==='POST'){
    const input=z.object({rating:z.number().int().min(1).max(4),token:z.string().max(24000),clientEventId:uuid,durationMs:z.number().int().min(0).max(1800000)}).parse(await body(req));
    const p=verify<PreviewToken>(input.token,'review');if(!p)throw new Error('PREVIEW_EXPIRED');if(p.userId!==current.id)throw new Error('FORBIDDEN');
    const r=await db().rpc('apm_commit_review',{p_user:current.id,p_card:p.cardId,p_revision:p.revision,p_expected:p.version,p_settings_version:p.settingsVersion,p_client_event:input.clientEventId,p_hash:sha256(`${input.token}:${input.rating}`),p_rating:input.rating,p_before:p.before,p_after:p.candidates[input.rating],p_reviewed_at:p.at,p_duration:input.durationMs});
-   if(r.error)throw new Error(r.error.message);return json(r.data);
+   if(r.error)throw new Error(r.error.message);return json({...r.data,before:p.before,rating:input.rating,reviewedAt:p.at,receivedAt:new Date().toISOString(),durationMs:input.durationMs});
   }
   if(path==='reviews/undo'&&req.method==='POST'){
    const input=z.object({eventId:uuid,version:z.number().int().min(1),clientEventId:uuid}).parse(await body(req));

@@ -1,5 +1,18 @@
 # 实施日志
 
+## 2026-09-07 · 交互性能诊断
+
+- 读取当前 Next.js 16.3.4 随包文档，确认 layout 在客户端导航中会复用，`usePathname` 可让持久 Client Component 响应路径变化。
+- 建立修改前 API 和真实浏览器计时基线，定位到动态 page 重挂载导致完整 bootstrap 重复执行。
+- 统计 bootstrap 各数据段，确认 70 篇课程未使用的 headings 使响应膨胀到约 284KB。
+- 已先添加性能架构回归契约；下一步先确认其在旧实现上失败，再实施持久 layout、查询裁剪与并行化。
+- 性能回归契约在旧实现上4项全部失败，实施后通过；新增Vercel与Supabase同区域合同。
+- 将 Studio 移入持久 root layout，以 `usePathname` 切换页面；连续页面导航不再清空数据或请求 bootstrap。
+- bootstrap 去除未渲染的 lesson headings/source_key，并对开发模式初始化请求去重；卡片详情并行读取。
+- 学习页直接使用已有卡片队列，显示答案只取当前设置、状态和详情；评分、设置保存、标记已读改为局部更新，避免成功后再次全量刷新（撤销仍以服务端回读校准）。
+- 在 Supabase Dashboard 核实 Primary 为 Mumbai `ap-south-1`，`vercel.json` 固定 Functions 到 `bom1`；修改后真实浏览器与开发服务请求日志已复测。
+- 最终 `npm run deploy:check` 通过：TypeScript、14项测试和生产构建全部成功；`git diff --check` 无格式错误。
+
 ## 2026-09-05
 
 - 已读取用户提供的 Supabase 连接指南，明确复用配置而隔离业务对象的方向。

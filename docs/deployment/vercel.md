@@ -7,6 +7,7 @@
 - `package.json` 固定 Node `22.x`；Vercel 当前默认新项目使用最新 LTS，因此不能依赖平台默认值。
 - `package-lock.json` 与 `npm ci` 固定依赖树。
 - `vercel.json` 显式选择 Next.js、`npm ci` 和带环境门禁的 `npm run vercel-build`。Next.js 输出目录由 Vercel 自动识别，不填写自定义 Output Directory。
+- 当前 Supabase Primary 已在 Dashboard 核实为 Mumbai `ap-south-1`，因此 Vercel Node.js Functions 固定到同城 `bom1`。不要在 Dashboard 改成默认 `iad1`；跨洲的函数到数据库往返会直接放大登录、课程正文和复习 API 延迟。
 - `.vercelignore` 排除课程批次、迁移、测试证据、本地配置和生成物；运行时只上传应用代码与必要依赖。
 - `scripts/check-deployment.mjs` 在构建前验证配置和三项必需变量，只输出变量名和错误类型，不输出值。
 
@@ -30,7 +31,7 @@
 ## 3. 推荐路径：GitHub 导入 + Preview
 
 1. 在 Vercel Dashboard 选择 Add New → Project，导入 `TheFoolzzZ/anki-aipm`。
-2. Root Directory 保持仓库根目录；Framework Preset 应显示 Next.js。不要覆盖 Install、Build 或 Output Directory，仓库中的 `vercel.json` 是版本化事实来源。
+2. Root Directory 保持仓库根目录；Framework Preset 应显示 Next.js。不要覆盖 Install、Build、Output Directory 或 Function Region，仓库中的 `vercel.json` 是版本化事实来源；部署摘要应显示 Mumbai `bom1`。
 3. 在 Preview 与 Production 分别添加上表三项必需变量；`APM_DEV_AUTO_LOGIN` 不配置或明确填 `false`。
 4. 在项目Git设置中确认Production Branch为 `main`；首次从其他分支或Pull Request生成Preview。
 5. 构建日志应依次出现 `Deployment check passed (Vercel environment)` 和 Next.js `Compiled successfully`。
@@ -38,6 +39,8 @@
 7. 在 Preview 使用已有学习访问码完成：登录 → 今日 → 打开卡片 → 显示答案 → 评分 → 刷新后状态仍在 → 撤销 → 设置保存 → 打开课程来源。用测试学习者验收，避免污染正式进度。
 8. 检查手机与桌面视口、Vercel Function error logs，并确认页面显示59张卡。
 9. Preview 验收通过后合并到 `main` 触发 Production；再次执行健康检查和一次只读登录/课程抽查。
+
+性能验收需分别记录首次登录/初始化、页面内连续导航、卡片详情和显示答案。首次动态请求仍可能受冷启动和用户到 Mumbai 的公网距离影响；页面内导航不应再次出现“正在展开你的知识地图…”，Function 日志中也不应因 `/today`、`/curriculum`、`/cards` 互跳而新增 `/api/bootstrap`。
 
 Preview 与 Production 的行为说明见 [Vercel Environments](https://vercel.com/docs/deployments/environments)。
 
