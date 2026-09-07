@@ -1,5 +1,11 @@
 # 实施发现
 
+## 2026-09-07 课程原文图片
+
+- Lessons 运行时原文来自 Supabase `apm_source_revisions.body_markdown`；原 renderer 主动把所有 Markdown 图片替换成“查看原文图片”链接，并非 Supabase 或 Cloudinary 无法显示。
+- 当前原文图片使用 `https://res.cloudinary.com/...`。页面现仅对此 HTTPS 主机内嵌，避免数据库中的任意图片地址直接成为页面资源；其他地址和加载失败仍保留可点击链接。
+- 内嵌图片使用原始宽高比、正文最大宽度、720px 最大高度、lazy loading 和 async decoding；点击图片仍可打开 Cloudinary 原图。
+
 ## 2026-09-07 本地交互性能基线
 
 - 开发服务已热运行约 17 分钟，排除“刚启动仍在首次编译”作为全部延迟的解释。

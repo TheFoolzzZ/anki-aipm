@@ -20,6 +20,7 @@
 | Vercel就绪验证 | completed | deploy check、精确vercel-build模拟、健康检查和配置扫描通过 |
 | 交互性能诊断 | completed | 已确认路由切换重复 bootstrap、远程数据库往返、过大课程元数据和串行详情查询共同造成延迟 |
 | 交互性能修复 | completed | 数据壳持久化，bootstrap 缩小73%，详情并行，学习页去除冗余全量查询，Vercel固定bom1 |
+| 课程原文图片内嵌 | completed | Supabase Markdown 中的 Cloudinary 图片按正文宽度懒加载，失败与非可信来源回退链接 |
 | 交接与目标 | completed | docs/HANDOVER.md、README、operations齐备 |
 | 全量扩卡 / 语音 / Vercel实际发布 | future | 不在本轮完成范围 |
 

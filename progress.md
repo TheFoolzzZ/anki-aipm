@@ -1,5 +1,10 @@
 # 实施日志
 
+## 2026-09-07 · Lessons 原文图片内嵌
+
+- 根据真实课程页截图定位 `ReactMarkdown` 图片 renderer，将 Cloudinary 原图从文字链接恢复为正文内嵌图片。
+- 新增可信 URL 校验和单元测试，并为桌面与移动正文添加响应式图片样式；加载失败或非 Cloudinary HTTPS 地址回退为原链接。
+
 ## 2026-09-07 · 交互性能诊断
 
 - 读取当前 Next.js 16.3.4 随包文档，确认 layout 在客户端导航中会复用，`usePathname` 可让持久 Client Component 响应路径变化。
