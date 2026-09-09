@@ -4,6 +4,7 @@ node_modules/
 .env
 .env.*
 !.env.example
+import.env
 coverage/
 *.tsbuildinfo
 .DS_Store

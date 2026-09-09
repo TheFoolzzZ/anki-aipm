@@ -1,5 +1,11 @@
 # 实施日志
 
+## 2026-09-09 · Vercel 环境变量导入文件
+
+- 根据本机私有配置生成仓库根目录 `import.env`，包含部署界面要求的 8 个变量；未在日志或终端输出变量值。
+- 为线上生成独立 `APM_SESSION_SECRET`，强制 `APM_DEV_AUTO_LOGIN=false`；文件权限为 `0600`，并已加入 Git 忽略。
+- 使用 Node `--env-file` 执行 Vercel 环境门禁，结果通过。
+
 ## 2026-09-07 · Lessons 原文图片内嵌
 
 - 根据真实课程页截图定位 `ReactMarkdown` 图片 renderer，将 Cloudinary 原图从文字链接恢复为正文内嵌图片。

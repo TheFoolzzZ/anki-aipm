@@ -28,6 +28,8 @@
 
 环境变量变更只影响后续部署；修改后必须重新部署。参见 [Vercel 环境变量](https://vercel.com/docs/environment-variables)。
 
+本机若需要使用 Vercel 的 `.env` 批量导入，可准备仓库根目录 `import.env`。该文件必须保持 `0600` 权限并由 Git 忽略；导入完成后以本节表格为准，确认线上自动登录为 `false`。即使导入界面列出本地工具变量，它们也不属于线上运行依赖。
+
 ## 3. 推荐路径：GitHub 导入 + Preview
 
 1. 在 Vercel Dashboard 选择 Add New → Project，导入 `TheFoolzzZ/anki-aipm`。
