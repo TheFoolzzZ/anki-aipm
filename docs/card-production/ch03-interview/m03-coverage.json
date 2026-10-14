@@ -1,0 +1,758 @@
+{
+  "module_id": "3.3",
+  "updated_at": "2026-09-18",
+  "batch_id": "ch03-interview-20260917-m03",
+  "source": {
+    "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+    "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+    "line_count": 1183
+  },
+  "counts": {
+    "native_checklist_total": 29,
+    "registered": 29,
+    "local_cards": 16,
+    "revisions": 8,
+    "new_cards": 8,
+    "cross_module_reused_cards": 5,
+    "native_objectives_with_core_cards": 29,
+    "objectives_requiring_comprehensive_or_practice": 8,
+    "learner_practices_completed": 0,
+    "published_this_round": 16
+  },
+  "objectives": [
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o01",
+      "original": "*   [ ] 我能解释深度学习\"深\"在哪里（层数多、特征层次化）",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1103,
+        "line_end": 1103
+      },
+      "decision": "拆分",
+      "reason": "分层表示及业务边界，由C01独立评分。",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.dl.hierarchical-representation.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o02",
+      "original": "*   [ ] 我能解释神经元的工作原理（加权求和 + 激活函数）",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1104,
+        "line_end": 1104
+      },
+      "decision": "合并",
+      "reason": "神经元输入与非线性组成同一计算机制，不丢失加权和、偏置。",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.dl.activation-nonlinearity.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o03",
+      "original": "*   [ ] 我能解释为什么需要激活函数（引入非线性）",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1105,
+        "line_end": 1105
+      },
+      "decision": "合并",
+      "reason": "与神经元机制合并，明确纯仿射复合的限制。",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.dl.activation-nonlinearity.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o04",
+      "original": "*   [ ] 我能解释前向传播和反向传播的直觉",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1106,
+        "line_end": 1106
+      },
+      "decision": "拆分",
+      "reason": "职责链条以C03检查，完整训练图留T1。",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.dl.training-inference.001"
+      ],
+      "practice_ids": [
+        "T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡+综合/实践",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o05",
+      "original": "*   [ ] 我能解释梯度消失和梯度爆炸的原因及解决方案",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1107,
+        "line_end": 1107
+      },
+      "decision": "拆分",
+      "reason": "候选原因、证据和复测组成诊断单元。",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.dl.gradient-diagnosis.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o06",
+      "original": "*   [ ] 我能解释批归一化的作用和原理",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1111,
+        "line_end": 1111
+      },
+      "decision": "采用",
+      "reason": "补齐统计量、仿射变换及训练推理差异。",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m03.batchnorm-deployment.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o07",
+      "original": "*   [ ] 我能解释残差连接为什么有效",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1112,
+        "line_end": 1112
+      },
+      "decision": "采用",
+      "reason": "旧C04仅列残差为措施，缺机制；新增直接路径专卡。",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m03.residual-path.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o08",
+      "original": "*   [ ] 我能解释 Dropout 的原理和作用",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1113,
+        "line_end": 1113
+      },
+      "decision": "采用",
+      "reason": "补原理和模式切换，并纠正原文补偿约定混用。",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m03.dropout-modes.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o09",
+      "original": "*   [ ] 我能解释数据增强的价值和常见方法",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1114,
+        "line_end": 1114
+      },
+      "decision": "采用",
+      "reason": "从笼统数据量扩展为语义、划分和真实验证。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.interview.m03.augmentation-contract.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o10",
+      "original": "*   [ ] 我能解释不同优化器（SGD/Adam/AdamW）的区别",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1115,
+        "line_end": 1115
+      },
+      "decision": "采用",
+      "reason": "按更新机制和实测取舍对比，去掉通用最优断言。",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m03.optimizer-tradeoff.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o11",
+      "original": "*   [ ] 我能解释 CNN 的卷积操作的直觉",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1119,
+        "line_end": 1119
+      },
+      "decision": "合并",
+      "reason": "卷积计算与局部图像结构合并，不考推导。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.dl.convolution-bias.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o12",
+      "original": "*   [ ] 我能解释为什么 CNN 适合图像任务",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1120,
+        "line_end": 1120
+      },
+      "decision": "合并",
+      "reason": "同一划痕场景解释适用原因与边界。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.dl.convolution-bias.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o13",
+      "original": "*   [ ] 我能解释 RNN 的序列建模能力及长程依赖问题",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1121,
+        "line_end": 1121
+      },
+      "decision": "合并",
+      "reason": "递推状态与有限长期记忆一起比较。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.dl.recurrent-memory.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o14",
+      "original": "*   [ ] 我能解释 LSTM 的三个门控机制",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1122,
+        "line_end": 1122
+      },
+      "decision": "合并",
+      "reason": "三个门的职责都在必答点和直接答案。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.dl.recurrent-memory.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o15",
+      "original": "*   [ ] 我能解释 Transformer 的 Self-Attention 机制",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1123,
+        "line_end": 1123
+      },
+      "decision": "合并",
+      "reason": "复用3.4 QKV机制卡，避免跨课同义重复；本课母题串联。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.transformer.qkv-aggregation.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o16",
+      "original": "*   [ ] 我能解释 Encoder 和 Decoder 的区别",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1124,
+        "line_end": 1124
+      },
+      "decision": "合并",
+      "reason": "复用3.4架构家族卡，不把decoder-only错误写成必有cross-attention。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.transformer.architecture-families.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o17",
+      "original": "*   [ ] 我能解释为什么 Transformer 比 RNN 更适合 NLP",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1125,
+        "line_end": 1125
+      },
+      "decision": "合并",
+      "reason": "复用3.4并行边界卡；改写原题普遍优越前提，训练并行不等于生成并行。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.transformer.parallel-boundary.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o18",
+      "original": "*   [ ] 我能解释 GAN 的生成器-判别器博弈机制",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1129,
+        "line_end": 1129
+      },
+      "decision": "合并",
+      "reason": "生成路线对比保留对抗双方与风险。",
+      "mother_question_id": "M3",
+      "card_keys": [
+        "ch03.dl.generative-mechanisms.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o19",
+      "original": "*   [ ] 我能解释 VAE 的编码器-解码器结构",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1130,
+        "line_end": 1130
+      },
+      "decision": "合并",
+      "reason": "VAE保留概率潜变量、重建及先验约束。",
+      "mother_question_id": "M3",
+      "card_keys": [
+        "ch03.dl.generative-mechanisms.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o20",
+      "original": "*   [ ] 我能解释扩散模型的逐步去噪思想",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1131,
+        "line_end": 1131
+      },
+      "decision": "合并",
+      "reason": "扩散保留学习去噪过程，不能解释成找回唯一原图。",
+      "mother_question_id": "M3",
+      "card_keys": [
+        "ch03.dl.generative-mechanisms.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o21",
+      "original": "*   [ ] 我知道三种生成模型各自的优缺点",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1132,
+        "line_end": 1132
+      },
+      "decision": "拆分",
+      "reason": "C07提供机制与风险起点，完整多维比较由M3和T3，不能声称90秒已穷尽所有优缺点。",
+      "mother_question_id": "M3",
+      "card_keys": [
+        "ch03.dl.generative-mechanisms.001"
+      ],
+      "practice_ids": [
+        "T3"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡+综合/实践",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o22",
+      "original": "*   [ ] 我能根据场景选择合适的网络架构",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1136,
+        "line_end": 1136
+      },
+      "decision": "实践任务",
+      "reason": "卡片仅做候选判断，实际架构选择含Transformer/MLP需M2及T2方案对照。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.dl.convolution-bias.001",
+        "ch03.dl.recurrent-memory.001",
+        "ch03.dl.selection-validation.001"
+      ],
+      "practice_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡+综合/实践",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o23",
+      "original": "*   [ ] 我能估算深度学习项目的训练成本（时间、算力、数据）",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1137,
+        "line_end": 1137
+      },
+      "decision": "拆分",
+      "reason": "C14检查预算单位和遗漏，真实报价及训练试跑由T2，未执行。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.interview.m03.training-budget.001"
+      ],
+      "practice_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡+综合/实践",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o24",
+      "original": "*   [ ] 我能设计深度学习模型的上线策略",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1138,
+        "line_end": 1138
+      },
+      "decision": "实践任务",
+      "reason": "卡片覆盖上线门槛判断，完整灰度/回退方案与演练由T2。 跨课逐点评分对照后复用3.2上线恢复卡，不仅更换质检场景重复造卡。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "practice_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡+综合/实践",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o25",
+      "original": "*   [ ] 我知道深度学习模型的监控要点",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1139,
+        "line_end": 1139
+      },
+      "decision": "采用",
+      "reason": "服务健康、输入和结果质量分开，可观察证据明确。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.interview.m03.monitoring-evidence.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o26",
+      "original": "*   [ ] 我能判断一个业务问题是否适合用深度学习",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1143,
+        "line_end": 1143
+      },
+      "decision": "采用",
+      "reason": "少样本并非排除条件，按成本/效果和替代基线判断。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.dl.selection-validation.001"
+      ],
+      "practice_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o27",
+      "original": "*   [ ] 我能和算法工程师讨论模型架构选择",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1144,
+        "line_end": 1144
+      },
+      "decision": "实践任务",
+      "reason": "同事协作能力不能由术语卡认证，T2包含选型评审记录。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.dl.convolution-bias.001",
+        "ch03.dl.recurrent-memory.001",
+        "ch03.dl.selection-validation.001",
+        "ch03.interview.m03.optimizer-tradeoff.001"
+      ],
+      "practice_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡+综合/实践",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o28",
+      "original": "*   [ ] 我能评估模型推理延迟是否满足产品需求",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1145,
+        "line_end": 1145
+      },
+      "decision": "拆分",
+      "reason": "C17明确全链路P95及负载条件，T2实际压测仍未执行。 复用3.1容量延迟卡，单次前向与全链路预算作为M2/T2追问，不重复新增。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.tech.capacity-latency.001"
+      ],
+      "practice_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡+综合/实践",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.3",
+      "objective_id": "m03-o29",
+      "original": "*   [ ] 我能设计深度学习模型的兜底策略",
+      "source": {
+        "relative_path": "第3章-技术攻克/3.3-深度学习.md",
+        "content_hash": "4e5c963fc95f9f7c8700d9e6f33ed56f6b543df607ec843adbb127b68f7446b9",
+        "line_start": 1146,
+        "line_end": 1146
+      },
+      "decision": "拆分",
+      "reason": "C15要求触发、责任和回退路径，T2演练验证容量。 跨课逐点评分对照后复用3.2上线恢复卡，不仅更换质检场景重复造卡。",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "practice_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_level": "核心卡+综合/实践",
+      "learner_practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "editorial_additions": [
+    {
+      "card_key": "ch03.interview.m03.loss-business.001",
+      "reason": "损失代理与业务代价不一致会造成验收误判；正文194–223有依据，章末未独立列出。"
+    }
+  ],
+  "deferred": [
+    {
+      "topic": "训练脚本实现、实测成本和真实产线灰度",
+      "reason": "属于学习者T1/T2实践，不能由题卡生产代执行；未完成。"
+    },
+    {
+      "topic": "逐厂商架构排名、固定样本门槛、当前SOTA、具体GPU报价",
+      "reason": "时效性强或原文断言过强，不纳入必答点，实际采购另行核验。"
+    }
+  ],
+  "publication_status": "published_and_verified_2026-09-18"
+}

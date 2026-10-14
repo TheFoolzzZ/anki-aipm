@@ -1,0 +1,734 @@
+{
+  "module_id": "4.3",
+  "source_path": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+  "source_hash": "efa733b263f86825b210191452610e3a4eccf658e3fe9672fb08e8757cc8d759",
+  "native_objectives": 0,
+  "registered": 0,
+  "non_checklist_registered": 45,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L1",
+      "original_text": "# 4.3 市面上VibeCoding工具",
+      "source_line": 1,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "C12"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L5",
+      "original_text": "上一节我们用一个完整的项目展示了 VibeCoding 的实战威力。但你可能会问：\"市面上到底有哪些工具可以用？我该怎么选？\"",
+      "source_line": 5,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "C12"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L13",
+      "original_text": "## 一、工具全景图：一张图看懂分类",
+      "source_line": 13,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.task-fit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L27",
+      "original_text": "## 二、AI 编辑器类：专业开发者的主战场",
+      "source_line": 27,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L33",
+      "original_text": "### （一）Windsurf：AI 编辑器的当前首选",
+      "source_line": 33,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L56",
+      "original_text": "### （二）GitHub Copilot：企业级稳妥之选",
+      "source_line": 56,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L80",
+      "original_text": "### （三）Trae：国内用户的首选",
+      "source_line": 80,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.data-flow.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L93",
+      "original_text": "### （四）Codeium：速度极快的免费替代方案",
+      "source_line": 93,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L107",
+      "original_text": "### （五）Cursor：曾经的先行者",
+      "source_line": 107,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L122",
+      "original_text": "**Cursor 还值得用吗？**",
+      "source_line": 122,
+      "source_type": "正文明确问题",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L132",
+      "original_text": "## 三、AI Agent 类：全自动编程的探索",
+      "source_line": 132,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L136",
+      "original_text": "### （一）Claude Code：VibeCoding 的标杆产品",
+      "source_line": 136,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L151",
+      "original_text": "# 进入项目目录，启动 Claude Code",
+      "source_line": 151,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L154",
+      "original_text": "# 用自然语言下达指令",
+      "source_line": 154,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L157",
+      "original_text": "# AI 自动完成：分析依赖 → 修改文件 → 运行测试 → 生成 commit",
+      "source_line": 157,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L172",
+      "original_text": "### （二）OpenAI Codex：Agent 编程的强劲挑战者",
+      "source_line": 172,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L186",
+      "original_text": "# 命令行方式",
+      "source_line": 186,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L189",
+      "original_text": "# 或者在 VS Code 中直接调用 Codex Agent",
+      "source_line": 189,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L204",
+      "original_text": "### （三）Devin：AI 软件工程师",
+      "source_line": 204,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L223",
+      "original_text": "### （四）OpenCode：开源自由之魂",
+      "source_line": 223,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.provider-cost.001",
+        "ch04.interview.m03.data-flow.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L245",
+      "original_text": "### （五）SweAgent / OpenHands",
+      "source_line": 245,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L259",
+      "original_text": "## 四、零配置构建平台：产品经理的乐园",
+      "source_line": 259,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L263",
+      "original_text": "### （一）Bolt.new：全栈应用的即时生成",
+      "source_line": 263,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L288",
+      "original_text": "### （二）Lovable：产品经理最爱的 AI 构建工具",
+      "source_line": 288,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L311",
+      "original_text": "### （三）v0.dev：React 组件的生成利器",
+      "source_line": 311,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L323",
+      "original_text": "### （四）Replit：从教学到生产的全链路",
+      "source_line": 323,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L337",
+      "original_text": "## 五、垂直场景工具：专注解决一类问题",
+      "source_line": 337,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L339",
+      "original_text": "### （一）Streamlit：数据应用的 VibeCoding",
+      "source_line": 339,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L351",
+      "original_text": "### （二）Claude Artifacts：对话即产物",
+      "source_line": 351,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L367",
+      "original_text": "### （三）FlutterFlow：AI + 低代码构建 App",
+      "source_line": 367,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L375",
+      "original_text": "## 六、中国本土工具：国内团队的务实选择",
+      "source_line": 375,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L377",
+      "original_text": "### （一）Kimi Code：多模态编程新势力",
+      "source_line": 377,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L392",
+      "original_text": "### （二）通义灵码（阿里云）",
+      "source_line": 392,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L399",
+      "original_text": "### （三）CodeGeeX（智谱 AI）",
+      "source_line": 399,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L406",
+      "original_text": "### （四）文心快码（百度）",
+      "source_line": 406,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L412",
+      "original_text": "### （五）选择建议",
+      "source_line": 412,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.data-flow.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L424",
+      "original_text": "## 七、工具选型指南：如何找到最适合你的？",
+      "source_line": 424,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.task-fit.001",
+        "ch04.interview.m03.provider-cost.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L426",
+      "original_text": "面对琳琅满目的工具，AI 产品经理该如何选择？我们从三个维度给出决策框架。",
+      "source_line": 426,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.task-fit.001",
+        "ch04.interview.m03.provider-cost.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L428",
+      "original_text": "### （一）按使用场景选型",
+      "source_line": 428,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.task-fit.001",
+        "ch04.interview.m03.provider-cost.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L442",
+      "original_text": "### （二）按技术背景选型",
+      "source_line": 442,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.task-fit.001",
+        "ch04.interview.m03.provider-cost.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L451",
+      "original_text": "### （三）按团队规模选型",
+      "source_line": 451,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.task-fit.001",
+        "ch04.interview.m03.provider-cost.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "4.3-L462",
+      "original_text": "## 八、写在最后",
+      "source_line": 462,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m03.provider-cost.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "ch04.interview.m03.task-fit.001",
+      "original_text": "专考类别与任务适配；工具名称存台账，不把厂商比较写死。",
+      "source_line": 13,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "专考类别与任务适配；工具名称存台账，不把厂商比较写死。",
+      "card_keys": [
+        "ch04.interview.m03.task-fit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "ch04.interview.m03.provider-cost.001",
+      "original_text": "专考工具许可与模型/迁移边界；Token单价计算复用C12。",
+      "source_line": 223,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "专考工具许可与模型/迁移边界；Token单价计算复用C12。",
+      "card_keys": [
+        "ch04.interview.m03.provider-cost.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.3",
+      "objective_id": "ch04.interview.m03.data-flow.001",
+      "original_text": "独立目标为编码工具数据流拓扑，不复写通用权限/模型注入卡。",
+      "source_line": 65,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "独立目标为编码工具数据流拓扑，不复写通用权限/模型注入卡。",
+      "card_keys": [
+        "ch04.interview.m03.data-flow.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

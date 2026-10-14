@@ -1,0 +1,271 @@
+{
+  "batch_id": "ch03-interview-20261001-m14",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m14.context-scope.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-scope"
+      ],
+      "revision": 1,
+      "position": 2401,
+      "title": "上下文工程的对象与重叠边界",
+      "kind": "概念",
+      "prompt": "上下文工程主要优化什么？如何解释它与Prompt Engineering、RAG的关系，避免把三者画成互不重叠的独立模块？",
+      "answer_short": "上下文工程优化每次推理实际可见的信息集合及其获取、选择、组织和更新，包含指令、工具信息、外部证据与历史状态。Prompt Engineering侧重指令设计，也属于可见上下文的一部分；RAG把外部检索证据用于生成，其筛选与组装和上下文工程重叠。三者是关注面与链路，不能绝对切割。",
+      "required_points": [
+        "对象是每次推理实际可见上下文，包含指令工具证据历史，不只是文档库",
+        "Prompt指令设计属于上下文构成，两者关注不同但非互斥",
+        "RAG检索、组织与生成和上下文工程重叠，不说RAG只找不组织"
+      ],
+      "explanation": "原文以给什么、怎么给、给多少解释上下文工程，适合用来分析信息责任；但“关注点截然不同”与“RAG只管找不管组织”会误导工程边界。2026-10-01第一方核对Anthropic将上下文工程描述为持续整理推理时可用信息，包含系统指令、工具、数据与消息历史。编辑情境：制度问答可同时改稳定回答指令、筛选现行条款、将例外与主规则合并；这是同一个实际请求的不同优化，而不是三个产品只能选一个。若模型不知道上周登录决议，反复改措辞无法凭空补事实，应获取决议记录；若事实已齐但任务范围不明确，则需改指令。最终仍按任务正确性和必要证据判断，不因采用某个术语就保证效果。\n【面试追问】只读了一份文档就做完上下文工程吗？参考：还要明确实际送入的信息、来源/时效、预算和本轮状态；按每次任务动态维护。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "上下文不等于长期记忆，更大窗口也不保证信息被正确利用；不要把Prompt与背景简单相加视为准确性的数学公式。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 36,
+          "line_end": 66
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 94,
+          "line_end": 119
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m14.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.context-record-contract.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-record-contract"
+      ],
+      "revision": 1,
+      "position": 2402,
+      "title": "上下文里的来源时间和状态如何标注",
+      "kind": "场景判断",
+      "prompt": "上下文包含订单表中的refunded记录、前天客服口述“退款申请中”和下月生效的新政策。怎样组织这些信息，才能让模型判断当前退款问题而不混成一个事实？",
+      "answer_short": "按对象和事件区分状态，记录每项来源、获取时间、适用/生效时间与证据范围；申请中和已退款属于不同阶段，不能仅按最近文本裁决。明确权威业务记录和政策适用关系，关联条件/例外；无法解释冲突时保留分歧并核实，不把日期排序当事实治理。",
+      "required_points": [
+        "保留对象/事件、来源、获取时间及生效适用时间，区分信息说的时刻与读取时刻",
+        "区分申请/执行/最终状态和不同证据权威范围，最近不等于当前适用",
+        "显式标注关联、条件和冲突，未确定时保留待核实状态而非拼接结论"
+      ],
+      "explanation": "原文用订单状态和查询时间示例说明构建，并通过新旧政策生效日展示适用性。编辑情境的查询时间、客服叙述对应事件时间、新政策生效时间是三种不同含义；昨天读到的记录也可能在今天变化，下月政策不因为发布时间新就适用于今天。可整理为对象ID、状态、来源系统、获取时刻、状态事件时刻和适用范围，再把制度条件及证据放在各自标签下。模型需看到“客服口述尚未核验”而不是把两种状态去重成最近一句。这个记录契约用于帮助理解，不替代服务端读回当前状态或权限校验；元数据缺失应标出缺口。关系标注还应说明主规则、例外和前置条件，不能只堆独立短句让模型猜关联。\n【面试追问】旧记录和新政策都保留会污染上下文吗？参考：相关历史可解释变化，明确对象、时刻和效力即可；不应为了简洁删掉有用冲突证据。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "获取较新、语义相似或引文更多均不能独立证明现行适用；时间衰减是启发，不是制度效力规则。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 129,
+          "line_end": 164
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 258,
+          "line_end": 264
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 299,
+          "line_end": 326
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m14.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.context-task-state.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-task-state"
+      ],
+      "revision": 1,
+      "position": 2403,
+      "title": "长任务压缩如何保住真实状态",
+      "kind": "机制",
+      "prompt": "订票Agent历史很长，准备只保留最近三次工具输出。早期预算上限、已选航班和一次支付超时会被删掉。压缩后的任务状态应保留什么，为什么不能把超时记录标成“失败已隔离”？",
+      "answer_short": "保留当前目标与硬约束、已确认选择、已完成动作及证据、未解决或未知执行状态、下一步依赖和来源指针；最近步骤数量不能替代信息重要性。支付超时意味着结果未知，错误隔离只避免把错误内容当事实，不能删除可能已执行的状态，恢复应先查业务记录。",
+      "required_points": [
+        "持续保留目标硬约束与用户选择，摘要不能丢前期关键决定",
+        "区分已完成/失败/未知与待办，保留证据和可回查标识",
+        "超时不证明未付款，隔离错误信息不等于抹去执行历史，先查状态"
+      ],
+      "explanation": "原文提出任务约束锚定、分层工作记忆和错误隔离。编辑修正：最近3–5步是候选实现，不是能覆盖所有长任务的规则，信息是否影响后续决策比时间顺序更关键。编辑情境把预算、允许日期和用户已选航班作为稳定状态，把最近搜到的其他航班当可淘汰候选；支付请求则记录请求ID、发起时刻和结果未知，不能压成“失败无需理会”。压缩可以用简短状态表加来源位置，细节必要时再读原工具结果；这样保留恢复依据而不重复全部日志。错误内容要注明性质，例如误算的中间数不继续使用，但真实发生的尝试、失败和副作用仍属于证据。状态记录仍可能失真，关键动作前以业务系统回读校验。\n【面试追问】完成后才发现预算被压掉怎么办？参考：恢复原约束和来源，核查已执行动作是否越界；不能仅更新摘要便假装此前合规。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "任务状态不是保存全部聊天；对未知写入作“干净”摘要可能诱发重复付款。保存记忆也不是参数学习。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 109,
+          "line_end": 119
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 367,
+          "line_end": 402
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m14.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.context-on-demand.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-on-demand"
+      ],
+      "revision": 1,
+      "position": 2404,
+      "title": "按需加载如何保住必要依赖",
+      "kind": "场景判断",
+      "prompt": "代码助手只拿到login函数摘要，准备修改返回字段；相关调用方和接口定义很大。怎样用层次与按需加载获取必要上下文，避免“全仓塞入”和“只有摘要”两个方案？",
+      "answer_short": "先从任务定位当前实现和接口，再检查调用方、类型/错误契约、必要依赖与验证；保留路径/符号/版本等来源指针，需要细节时读取原文。粗到细检索可减输入，但粗层漏掉正确入口或摘要省略条件都会失败，须据任务证据补读而非把摘要当完整行为。",
+      "required_points": [
+        "按任务定位实现/接口并追踪调用方与相关依赖，不只读修改点",
+        "用层次筛选和来源指针按需读取具体细节，保留版本/上下文关系",
+        "粗层与摘要可漏信息，必要时补查原文并用实际调用行为验证"
+      ],
+      "explanation": "原文层次检索先定位章节再找小节与例外，代码场景列函数/模块依赖和动态增量加载。第一方Context Engineering文章（2026-10-01核对）说明可维护路径、查询、链接等轻量指针，在运行时按需读取信息；这和预先检索可组合，具体成本依任务。编辑情境先读取login契约和实际实现，查所有使用该返回字段的调用方，再看对调用行为有影响的权限及错误处理。摘要适合索引和定位，不保证保留类型、默认值或副作用；遇到接口不确定就读具体定义。粗到细也可能第一层选错模块，因此需要查询回退与缺口记录。目标是本次改动的充分背景，不要求模型“懂整个仓库”，也不宣称所有工具都先建AST索引。\n【面试追问】摘要与原文冲突时信谁？参考：定位当前版本和真实实现，以可核查源码/运行证据为准，修过期摘要而非强行统一。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "按需加载增加查询等待与操作成本，不自动比预载快；有函数签名不能证明实现或调用方与它一致。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 248,
+          "line_end": 255
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 404,
+          "line_end": 423
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m14.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.embedding-codec-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "embedding-codec-boundary"
+      ],
+      "revision": 1,
+      "position": 2405,
+      "title": "检索向量不能代替原文存档",
+      "kind": "场景判断",
+      "prompt": "知识库希望只保存普通检索Embedding、删掉原文，认为可按需“解码”还原精确退款条件。这个方案为何不足，应保留哪些信息？",
+      "answer_short": "普通检索Embedding用于表示相关性，不提供精确还原原文的无损解码契约；不同文本可能无法由向量唯一恢复，不能靠生成模型猜私有条件。应保存受控原文或可验证的证据块、来源版本与定位指针，向量负责找位置；专门压缩编码技术需单独说明方法和任务验证。",
+      "required_points": [
+        "检索向量与无损编码不同，不承诺从向量精确恢复原文",
+        "保留可回查的证据文本和出处版本，检索返回定位后加载实际依据",
+        "专门压缩方法另核实现与任务收益，不沿用通用压缩率"
+      ],
+      "explanation": "原文L214的“向量表示替代文本，需要时再解码”未说明编码器/解码器，不能移用到普通RAG检索Embedding。第一方Embedding指南（2026-10-01核对）将文本嵌入用于文本相关性测量及搜索等任务；没有因此提供原文无损恢复接口。编辑推理：检索表示聚焦任务相关特征，其训练和维度并未建立一一对应原文字串的保证；语义很接近的“已拆封不可退”和“未拆封可退”都需要精确保留条件，而由相近向量生成的文字无法成为原制度证据。可将向量、文档ID、块位置与版本配对，找到后再加载有权访问的实际内容。如果研究专门可解码潜表示，要按其真实模型与误差评估，不拿检索向量或原文100倍宣称替代。\n【面试追问】只保留摘要能否替代原文？参考：摘要也是可能损失条件的变换；关键依据和来源应可回查，复用3.11压缩完整性卡。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "本题不否认专门潜空间压缩研究，拒绝的是把普通检索Embedding当可逆文本存档；生成相似文字不是还原来源。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 166,
+          "line_end": 223
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m14.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.context-utilization-limit.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-utilization-limit"
+      ],
+      "revision": 1,
+      "position": 2406,
+      "title": "未引用的信息是否都该删掉",
+      "kind": "故障诊断",
+      "prompt": "团队把“回答没有引用的上下文Token比例”当浪费率，准备删掉权限限制和退货例外。为什么该指标不足，怎样判断精简是否有效？",
+      "answer_short": "引用只是可见输出线索，未引用内容仍可约束拒答、选择范围或解释例外；重复引用也不证明主张受支持。先定义任务必需证据/约束基线，再对照实际输入与输出，并用去除信息的对照验证任务、边界、费用和延迟；不能以更高引用率作为单一目标。",
+      "required_points": [
+        "未引用仍可能发挥约束/反例作用，引用数量与必要性不是同一对象",
+        "建立包含事实与硬约束的任务基线，检查实际最终输入及主张支持",
+        "用固定任务精简对照同时看正确性/合规及资源，不按引用率直接删除"
+      ],
+      "explanation": "原文五维质量检查和理想上下文方法有用，但“每条都物尽其用”若解释成必须显式引用，会奖励冗长输出并删掉安全条件。编辑情境：权限条款禁止展示他人订单，正确回答通常不会引用这条限制；退货例外也可能让助手只回答“不符合条件”，不逐句列出所有例外。它们没有出现在引用列表，却改变可接受动作和结论。基线应说明本题所需主规则、适用条件、例外、来源/时间和行为限制，再核对实际输入是否足够。固定模型和任务，比较精简前后普通与边界样例，并观察Token、延迟及失败返工，避免把一句限制拿掉后平均回答更短误称优化。引用率可作为查冗余线索，不能直接量化模型实际用过哪些信息。\n【面试追问】回答引用所有块，质量就高吗？参考：可能只堆来源或包含无关信息，仍需逐主张支持、切题与合规检查。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "一份人工理想上下文也可能漏条件，需独立核对和失败回归；固定抽10问或无证据70%瓶颈不是通用验收线。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 431,
+          "line_end": 439
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 481,
+          "line_end": 516
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 530,
+          "line_end": 534
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m14.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

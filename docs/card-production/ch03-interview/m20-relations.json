@@ -1,0 +1,23 @@
+{
+  "module_id": "3.20",
+  "relations": [
+    {
+      "to": "ch03.interview.m10.embedding-migration.001",
+      "type": "compare",
+      "reason": "固定编码的引擎迁移可能复用向量，换编码空间通常需要重编码",
+      "from": "ch03.interview.m20.recovery-exit.001"
+    },
+    {
+      "to": "ch03.vector.database-selection.001",
+      "type": "extension",
+      "reason": "已有负载选型增加退出和恢复能力的实证要求",
+      "from": "ch03.interview.m20.recovery-exit.001"
+    },
+    {
+      "to": "ch03.rag.update-deletion.001",
+      "type": "prerequisite",
+      "reason": "恢复和回退必须保留更新/删除及权限事实，不恢复已撤回资料",
+      "from": "ch03.interview.m20.recovery-exit.001"
+    }
+  ]
+}

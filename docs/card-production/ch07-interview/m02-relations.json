@@ -1,0 +1,20 @@
+[
+  {
+    "to": "ch07.interview.m02.billing-incentive.001",
+    "type": "extension",
+    "reason": "选择结果计费后进一步约定失败成本、外部责任和任务范围，避免成功单位掩盖履约风险",
+    "from": "ch07.interview.m02.outcome-contract.001"
+  },
+  {
+    "to": "ch07.interview.m02.billing-incentive.001",
+    "type": "compare",
+    "reason": "结果计费在工单成功与交易结算中各有不同状态、归因和激励边界",
+    "from": "ch07.interview.m02.commission-base.001"
+  },
+  {
+    "to": "ch07.interview.m02.custom-delivery.001",
+    "type": "compare",
+    "reason": "托管支持把免费模型转服务收入，企业定制需区分可复用与专属交付",
+    "from": "ch07.interview.m02.open-service.001"
+  }
+]

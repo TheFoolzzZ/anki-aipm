@@ -1,0 +1,438 @@
+{
+  "batch_id": "ch03-interview-20260917-m04",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.transformer.qkv-aggregation.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.qkv-aggregation"
+      ],
+      "revision": 2,
+      "position": 25,
+      "title": "QKV如何形成上下文表示",
+      "kind": "机制",
+      "prompt": "Self-Attention中Q、K、V分别承担什么作用？从一个位置到其上下文表示，应说明哪条计算链？",
+      "answer_short": "Q表达当前位置用于匹配的查询表示，K用于被匹配，V携带被汇聚的信息。计算Q与允许访问位置的K之间的分数，经缩放、掩码和归一化得到权重，再加权汇聚V形成当前位置输出；这些表示由模型学习，非人工标签。",
+      "required_points": [
+        "Q与K产生匹配分数，V是被汇聚的信息，三者职责不互换",
+        "分数经缩放/掩码/归一化后加权V，访问范围受注意力掩码约束",
+        "输出是上下文相关表示，不是必然选出一个正确词或事实依据"
+      ],
+      "explanation": "原文以图书馆的需求、索引、内容类比Q/K/V，核心是匹配与信息汇聚分工。编辑扩展：Q/K/V是输入表示经过学习到的投影，不是人给每个词贴“语法”“事实”标签。同一个位置可以从多个允许访问的位置加权获取信息，不必只选一个最大权重词。因果生成时未来位置被掩码屏蔽，不能照搬“所有词都能看所有词”的表述。权重描述某层某头的计算关系，不直接等于事实可靠性或唯一推理原因。原文示例分数与Softmax结果并不一致，本卡不复用那些数字；需要数值练习时应显式计算或仅提供标明为假设的归一化权重。\n\n编辑情境：采购合同中“甲方验收后付款”，当前Token可以汇聚甲方、验收和付款的表示，但这并不证明系统理解了法律义务。面试追问：为何要除以√d_k？参考思路：在分量尺度相当等假设下，点积方差随维度增大，缩放有助于避免Softmax过度尖锐导致梯度过小；不是把所有分数拉成一样。能说清匹配→权重→汇聚即为核心掌握。",
+      "pitfalls": "Self-Attention不是从外部知识库搜索；注意力高不证明该信息正确，也不等于完整解释模型决策。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 143,
+          "line_end": 245
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.transformer.multihead.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.multihead"
+      ],
+      "revision": 2,
+      "position": 26,
+      "title": "多头为什么不等于多人分工表",
+      "kind": "机制",
+      "prompt": "Multi-Head Attention相对单头增加了什么表达方式？能否保证每个头各司一种固定语义，或头越多越好？",
+      "answer_short": "多头在不同学习到的投影子空间分别做注意力汇聚，再组合各头结果，增加表示关系的方式。头的语义不是预先分配且未必彼此独立；增加头数是否改善效果或增加成本取决于总维度、配置与实现，需要实测。",
+      "required_points": [
+        "多组投影和注意力输出再组合，说明多视角来自学习",
+        "固定语法头/情感头只是类比，不保证每头语义唯一或稳定",
+        "评价头数须控制总维度等变量，看任务效果与实际资源，不能单变量断言"
+      ],
+      "explanation": "原文用多人分析报告解释多头，这是帮助理解的类比，不是模型内部的固定岗位表。编辑扩展：每个头使用不同投影参数，可能学到互补关系，也可能冗余，结果通过拼接和后续投影组合。若总隐藏维度固定而增加头数，每头维度通常减小，因此不能只看头数就推断参数、速度或能力线性增长。对于同一产品应查看具体模型在目标任务的成功率、延迟和内存，而不是向工程师要求“至少16头”。还要区分查询头和共享的键值头，原文提到的多查询注意力并非简单删掉若干查询头；若要选这种优化，应明确所节省的是哪部分资源并复测质量。\n\n编辑情境：采购工单既有主体关系也有时间限定，多头提供学习多种关系的空间，但不能指定“第3头必须负责供应商”。面试追问：减少KV头和减少全部头一样吗？参考思路：MQA/GQA共享K/V以降低KV缓存等开销，仍可保留多个查询头；是否适用看真实长度、并发和质量。必答三点是评分核心，MQA细节为加分。",
+      "pitfalls": "不背原文模型与head数的错配表；注意力可视化只是观察，不构成“模型一定这样思考”的证明。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 249,
+          "line_end": 302
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.transformer.position.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.position"
+      ],
+      "revision": 2,
+      "position": 27,
+      "title": "位置信息为何必要但不保证长文能力",
+      "kind": "机制",
+      "prompt": "注意力模型为什么需要位置信息？“位置编码能计算到更长位置”为什么不等于模型可靠理解更长文档？",
+      "answer_short": "纯无位置信息的自注意力不能单靠内容表达所需的顺序关系，因此引入绝对位置、相对位置或旋转位置等机制。编码可延伸只说明表示层面可处理位置，训练长度、注意力模式、资源及长距离任务效果仍需独立验证。",
+      "required_points": [
+        "顺序会改变含义，需要额外机制表达位置/相对关系",
+        "能区分固定或学习的绝对位置、相对关系、旋转位置等思路",
+        "编码可计算与长文任务可靠是两回事，需按长度和证据位置测试"
+      ],
+      "explanation": "原文用“猫追老鼠”和“老鼠追猫”说明顺序重要，并介绍多类位置方案。编辑扩展：更精确地说，无位置且无额外顺序结构的自注意力对输入置换具有等变性质；不是把所有位置输出都变成一个完全相同的结果。位置方案让模型利用位置与相对距离，但超出训练范围可能出现外推失效。能生成第十万个位置的编码并不证明跨段引用和多处约束综合都可靠。测试长文时把关键证据放在不同位置，比较同一问题在增加无关内容前后的表现，并检查实际输入是否被截断。位置插值等方法属于特定适配方案，不能通过改一个窗口数字就承诺长文能力。\n\n编辑情境：合同长文验收把关键付款限制分别放到开头、中段、末尾，加入无关附件，检查回答是否仍保留限制。面试追问：可否只扩大max_length？参考思路：位置范围只是一个约束，仍需核对训练/适配、截断和算力；位置插值改变位置尺度，分块摘要压缩信息，RAG检索片段，三者解决的层次不同。评分看顺序、位置机制和可靠性边界。",
+      "pitfalls": "不把RoPE或正弦编码当无限外推保证；最大上下文限制也不只由位置编码一个因素决定。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 306,
+          "line_end": 372
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.transformer.block-roles.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.block-roles"
+      ],
+      "revision": 2,
+      "position": 28,
+      "title": "Attention之外的组件做什么",
+      "kind": "机制",
+      "prompt": "Transformer Block中的Attention、FFN、残差连接和LayerNorm各承担什么职责？为什么残差连接不能理解为自动跳过计算？",
+      "answer_short": "Attention在允许的位置间汇聚信息，FFN对各位置表示做非线性加工；残差将输入与子层输出相加，LayerNorm按指定特征维度归一化并可学习缩放/偏移，以帮助训练。残差是信息路径，不意味着子层在执行时自动不算。",
+      "required_points": [
+        "Attention混合位置信息，FFN通常逐位置加工并共享参数",
+        "残差保留加法路径，LayerNorm按特征维度归一化以辅助稳定训练",
+        "二者不保证不出错或自动省计算，具体顺序与架构可变"
+      ],
+      "explanation": "原文把Attention比作讨论会、FFN比作各自加工，说明两者职责互补。编辑扩展：FFN的“独立”是同一层计算时不直接读取其他位置，不是每个位置拥有一套不同参数；它的输入已经包含注意力汇聚的上下文。标准LayerNorm有归一化后的可学习缩放与偏移，因此输出并非永远严格均值0方差1。残差可写为输入加子层变换，若变换接近零，表示可近似保留，但运行时仍可能计算该变换。原始编码器与不同解码器子层数量并不完全相同，不能说所有Block固定只有两处连接。PM无需规定Norm先后，重要的是理解模型深度、稳定性与推理成本不能混为一项指标。\n\n编辑情境：工程师说“残差让96层模型像6层一样便宜”，PM应要求推理性能证据，不能从信息捷径推导计算被省掉。面试追问：Attention已经混合上下文，为何还要FFN？参考思路：跨位置的信息聚合与位置内的非线性特征加工互补；通常同层各位置共享FFN参数。能区分四组件职责为必答，Norm顺序属于加分。",
+      "pitfalls": "Attention整体并非纯线性运算；残差不是自动路由或剪枝，LayerNorm也不使数据变成正态分布。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 376,
+          "line_end": 438
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 442,
+          "line_end": 479
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.transformer.architecture-families.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.architecture-families"
+      ],
+      "revision": 2,
+      "position": 29,
+      "title": "三类架构如何联系任务",
+      "kind": "对比",
+      "prompt": "以BERT、GPT、T5为例，Encoder-only、Decoder-only与Encoder-Decoder在信息流和典型训练任务上如何区分？这能否直接决定产品选型？",
+      "answer_short": "BERT典型地双向编码并以遮蔽词预测学习；GPT典型地用因果注意力做下一Token预测与自回归生成；T5先编码输入，再由解码器结合源表示生成，以文本到文本组织任务。家族特性指导候选选择，不能替代同场景效果、成本与约束验证。",
+      "required_points": [
+        "BERT双向编码/MLM，GPT因果生成/下一Token，不能只记理解与生成标签",
+        "T5编码输入再解码输出，文本到文本可表示多类任务",
+        "任务能力可重叠，架构不足以保证质量或效率排名"
+      ],
+      "explanation": "原文把三类范式分别对应BERT、GPT与T5，本卡保留已明确的经典例子，不推断闭源模型内部细节。编辑扩展：双向编码有利于根据输入整体形成表示，分类或抽取可接相应输出头；因果模型按前缀逐步生成，也能把分类表示成输出一个类别词。编码器-解码器通过交叉注意力利用源序列表示，并结合已生成前缀形成目标输出。T5把翻译、分类等都写成文本输入和输出，并不意味着只有它能统一任务。做工单分类时可把编码模型与生成模型都列候选，固定标签、样例和评估口径，比较错误、响应和运行成本。不要凭“Decoder”一词认定它必然理解更差或生成更好。\n\n面试追问：为何不能直接说“工单分类必须BERT”？参考思路：分类能用输出头也能写成生成标签；同一固定测试集测误分代价、尾部类别、输出格式、P95延迟与单位任务成本，再按部署限制筛选。模型家族帮助提出候选，不能替代证据。评分只要求三类信息流、经典训练目标及选型边界，不背品牌排名。",
+      "pitfalls": "Decoder-only通常没有对独立Encoder输出的交叉注意力；原始完整Transformer的Decoder结构不能整套套给GPT。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 95,
+          "line_end": 115
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 509,
+          "line_end": 577
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 624,
+          "line_end": 680
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.transformer.parallel-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.parallel-boundary"
+      ],
+      "revision": 2,
+      "position": 30,
+      "title": "训练并行与逐Token生成的区别",
+      "kind": "机制",
+      "prompt": "Transformer能并行处理序列，为什么普通自回归生成长回答仍需逐步等待？与RNN相比的优势边界是什么？",
+      "answer_short": "已知输入或训练序列可在每层并行计算多个位置的表示；普通自回归生成时，下一个Token依赖已经生成的前缀，未来Token还未知，所以仍需多步。相对RNN的时间递推，全注意力缩短位置间路径，但不保证所有长距离关系都被正确利用。",
+      "required_points": [
+        "区分已知序列上的位置并行与未知输出上的生成依赖",
+        "自回归每步依赖已生成前缀，不能一次并行生成任意完整答案",
+        "全注意力缩短信息路径不等于保证长文准确；延迟按首Token和完成分开测"
+      ],
+      "explanation": "原文强调Transformer避免RNN逐时间步计算表示的限制，又在GPT部分说明自回归生成，这两者并不矛盾。编辑扩展：训练时目标序列已经提供，可以用因果掩码让每个位置仅依赖允许前缀，并并行计算各位置的训练预测。实际生成时用户只给前缀，系统必须先产生后续Token才知道下一步输入。因而长回答会累积多次计算，流式输出只让用户较早看到已有部分。RNN仍可在不同样本或层内矩阵运算等维度并行，不能说完全无法利用GPU。产品验收应分别测输入处理到首Token、逐步输出和完整完成时间，用目标长度分布评估等待体验。\n\n编辑情境：客服摘要首字出现很快但长回复仍等很久，应分别看输入处理、每Token生成速度和输出长度，不能仅用流式效果验收。面试追问：KV cache解决了什么？参考思路：复用已有前缀的K/V，避免每步重复计算这部分，但仍等待新Token且缓存占内存；不等于一次并行生成全部未知输出。评分以位置并行和因果依赖的区别为准。",
+      "pitfalls": "注意力并行不代表生成恒定耗时；直接信息路径不是无限记忆或长文百分百正确。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 19,
+          "line_end": 66
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 571,
+          "line_end": 622
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.transformer.attention-cost.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.attention-cost"
+      ],
+      "revision": 2,
+      "position": 31,
+      "title": "二次计算与FlashAttention优化范围",
+      "kind": "机制",
+      "prompt": "标准稠密Self-Attention中，序列长度翻倍为什么会使位置配对计算约增为四倍？FlashAttention是否把它变成线性注意力？",
+      "answer_short": "每个位置需与所有位置配对，配对数随长度n为n²，在其他维度固定时翻倍约为四倍。FlashAttention通过分块等方式减少显存读写和中间结果存储，保持精确注意力；它不是把标准稠密配对计算改成线性注意力。",
+      "required_points": [
+        "固定其他维度下n×n配对，长度翻倍对应约四倍的该部分计算",
+        "FlashAttention优化IO和存储，不等同稀疏或线性注意力",
+        "该复杂度不直接等于端到端延迟或API费用，实际需测瓶颈"
+      ],
+      "explanation": "原文明确区分稀疏/线性注意力与优化GPU内存访问的FlashAttention，但各方案固定倍数不能通用于所有环境。编辑扩展：n²指标准稠密注意力中位置两两交互的计算项，不是整个服务账单的公式；前馈、投影、缓存、硬件利用率和生成过程也参与总耗时。FlashAttention避免把完整注意力矩阵按传统方式反复写入和读出高带宽显存，因而可改善速度与内存需求，但保留精确的稠密注意力计算目标。选长文本方案时先测真正瓶颈；若是外部接口排队，注意力实现优化未必改善用户等待。若换稀疏模式，则需复测跨远距离证据的任务，不能只比较内存节省。\n\n编辑情境：合同由4千Token增到8千，在其他维度不变下稠密配对由1600万到6400万；这不是实测毫秒或API收费。面试追问：只把上下文加长能解决跨附件审查吗？参考思路：先看截断与证据位置，再测prefill、生成、显存和质量；FlashAttention提高IO效率，稀疏注意力改变连接，两者不能按同一效果承诺。评分不要求记固定加速倍数。",
+      "pitfalls": "不要把FlashAttention说成消除O(n²)算术量，也不要把输入长度翻倍直接写成调用价翻四倍。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 684,
+          "line_end": 710
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m04.compression-choice.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.compression-choice"
+      ],
+      "revision": 1,
+      "position": 1401,
+      "title": "压缩方法究竟改变什么",
+      "kind": "对比",
+      "prompt": "企业工单分类模型需要减少部署资源。量化、蒸馏、剪枝分别改变什么？为何不能仅凭模型文件变小就认定上线会更快？",
+      "answer_short": "量化降低数值表示精度；蒸馏用教师的输出或表示训练学生；剪枝去除部分权重或结构。三者都需按目标硬件、实际负载测内存、延迟和业务质量，文件大小不能直接推出推理加速。",
+      "required_points": [
+        "量化改变数值精度，蒸馏改变学生模型的学习过程，剪枝改变保留的权重或结构",
+        "区分存储/运行内存/计算延迟，实际加速依赖算子、硬件和稀疏支持",
+        "用同一业务评估集和负载比较压缩前后，关键错误超限则回退"
+      ],
+      "explanation": "原文列出压缩方法，但给出的固定保真比例与加速范围不能作为承诺。编辑补充：量化会引入舍入或截断误差；蒸馏从教师软目标、生成样本或表示中迁移行为，也可能继承教师错误；非结构化剪枝产生零权重时，普通稠密算子未必跳过计算，结构化剪枝则可改变可执行形状。\n编辑情境：压缩后工单模型文件减半，罕见“退款争议”召回却下降，且服务器P95不变。应检查关键类别漏判、实际加载内存与算子实现，再决定换方案或回退。\n面试追问：LoRA算压缩吗？参考思路：LoRA主要减少训练时更新参数，基础模型通常仍需加载，不能直接当推理模型变小。必答三点决定掌握，不要求背压缩率。",
+      "pitfalls": "低比特不保证任何硬件都更快；蒸馏不保证学生无损或永远更小；剪成零不等于实际省算。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 890,
+          "line_end": 903
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m04.moe-resources.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.moe-resources"
+      ],
+      "revision": 1,
+      "position": 1402,
+      "title": "MoE的激活量和部署成本",
+      "kind": "机制",
+      "prompt": "某供应商称MoE每个Token只激活少数专家，因此部署显存和响应时间必然按激活比例下降。你如何用路由机制解释这句话的问题？",
+      "answer_short": "稀疏MoE通常由路由器为每个Token选少数FFN专家，再组合其输出，以较少激活计算使用较大总容量。总参数仍需被存储和访问，跨设备通信、路由不均与负载会影响内存和延迟；不能按激活比例线性估算整机资源。",
+      "required_points": [
+        "路由通常按Token选择少数专家计算，专家不等于人工设定的领域Agent",
+        "区分总参数容量、每Token激活计算和实际显存；稀疏激活不删除其他专家权重",
+        "以目标并发和长度测质量、吞吐、P95与通信/负载分布后判断收益"
+      ],
+      "explanation": "原文把专家比作顾问，适合理解选择性计算；编辑补充：专家通常是可训练子网络而非独立工具代理，不保证一个专管财务、另一个专管法务。某些设计每Token选一个，另一些选多个，不背固定专家数。大总参数可增加模型容量，但部署仍需安排专家驻留或调入，跨设备交换Token也有成本。\n编辑情境：企业客服并发增加后某些专家负载集中、尾延迟升高，即使理论激活FLOPs较低，也不能承诺用户响应更快。应看路由分布、设备通信、排队与相同业务质量下的吞吐。\n面试追问：专家都放CPU再按需搬运可否省GPU显存？参考思路：可能改变驻留内存，但引入传输与等待，须实测，不能当免费收益。三项必答点足够，部署细节为扩展。",
+      "pitfalls": "不把MoE当多个聊天机器人投票；不依据闭源模型传闻确认其结构或推算成本。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 471,
+          "line_end": 505
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m04.decoder-tradeoff.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.decoder-tradeoff"
+      ],
+      "revision": 1,
+      "position": 1403,
+      "title": "统一生成接口的价值与代价",
+      "kind": "机制",
+      "prompt": "为什么Decoder-only适合做统一语言任务接口？请从训练目标和任务表达解释其吸引力，并指出一项产品代价。",
+      "answer_short": "下一Token预测能从文本序列构造训练目标，分类、问答和写作又能统一成给定前缀生成输出，便于共用模型接口。但统一形式不保证每个任务都最优；自回归输出有串行依赖，分类等窄任务仍应比较专用模型。",
+      "required_points": [
+        "下一Token预测能直接由文本构造目标，不等于无需数据清洗或训练工程",
+        "多类任务可编码为输入指令到输出文本，统一的是接口而非效果保证",
+        "指出自回归等待或输出约束成本，并保留窄任务专用模型对照"
+      ],
+      "explanation": "本题承接原文“成为主流”的自评项，回答可核验的技术吸引力，不把历史采用归因到唯一原因。编辑补充：指令适配使模型更容易遵守任务要求，但预训练目标本身不保证企业指令服从和事实可靠。\n编辑情境：客服平台同时需生成回复与分类工单，统一生成接口可简化接入，但把分类也变成长段生成会增加延迟及解析风险。可约束输出标签并比较专用分类器，按任务成功、格式有效率和成本决定是否共用。\n面试追问：能流式输出是否意味着推理便宜？参考思路：流式改善首段可见性，仍要生成后续Token；看完整完成时间和资源。三项必答为核心，不考“哪年谁成为主流”。",
+      "pitfalls": "不说Decoder-only必然比Encoder理解差或性能好；不能用涌现阈值替代业务测试。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 601,
+          "line_end": 622
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m04.multimodal-input.001",
+      "lesson_source_key": "第3章-技术攻克/3.4-Transformer.md",
+      "concept_keys": [
+        "transformer.multimodal-input"
+      ],
+      "revision": 1,
+      "position": 1404,
+      "title": "多模态输入如何进入Transformer",
+      "kind": "机制",
+      "prompt": "仓储异常工单包含照片和文字。用ViT式图像编码为例，图像怎样成为Transformer可处理的输入？为何切成Patch并不自动保证识别货损？",
+      "answer_short": "ViT把图像分成Patch并映射为向量序列，加入位置信息后由Transformer建模；与文本共同使用还需相应模型的跨模态对齐或融合。表示可输入不等于会识别目标异常，须以实际照片和任务标签验证。",
+      "required_points": [
+        "图像Patch经过向量映射并保留位置关系，不是直接把像素当自然语言词",
+        "图像与文本协作需要相应对齐/融合机制，不保证任意两个编码器可直接拼接",
+        "用目标图像条件和业务标签验证识别，明确看不清时的人工复核"
+      ],
+      "explanation": "原文ViT示例说明Transformer接受的不必是文字Token；编辑补充：具体多模态模型可能使用图像编码器、投影器或其他融合设计，不能据输入界面断言内部统一结构。\n编辑情境：同一种包装在光照、遮挡和压缩分辨率变化下识别表现可能不同，应分层评测“可见破损”和“证据不足”，而不是用几张漂亮示例承诺可自动判责。图像中看到裂痕也不等于知道责任方或发生时间。\n面试追问：图片切块越细越好吗？参考思路：可能保留更多细节，同时增加序列长度与计算；按小目标质量和资源取舍。必答只检查表示、融合、验证边界，不要求推导视觉模型。",
+      "pitfalls": "多模态不代表所有模态都同样可靠；不能将CLIP+LLM当普适最优方案或把图像识别等同责任裁定。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.4-Transformer.md",
+          "content_hash": "8af10abfd69973f335f51729a0feab425c96cca1a4cf80e2e5106ee3daad3a52",
+          "line_start": 740,
+          "line_end": 773
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-09-18）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块重复审阅通过；见docs/card-production/ch03-interview/m04.md。",
+          "最终主审与修订记录见docs/verification/ch03-first-five-interview-20260918.md。"
+        ]
+      }
+    }
+  ]
+}

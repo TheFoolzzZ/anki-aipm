@@ -1,0 +1,229 @@
+{
+  "batch_id": "ch02-quality-m24",
+  "status": "accepted",
+  "chapter_position": 2,
+  "cards": [
+    {
+      "canonical_key": "ch02.tech.knowledge-depth.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+      "concept_keys": [
+        "tech.knowledge-depth"
+      ],
+      "revision": 2,
+      "position": 21,
+      "title": "技术知识的三层深度",
+      "kind": "场景判断",
+      "prompt": "AI PM 应如何区分必须掌握、需要理解和仅需知道的技术知识？原文警告的两种极端是什么？",
+      "answer_short": "产品决策与用户价值要独立掌握；工程方案要理解原理、边界和权衡；实现细节只需知道作用、风险和责任人。两种极端：技术恐惧型（回避理解，失去对话资格）和技术沉迷型（钻得太深，偏离产品本质）。",
+      "required_points": [
+        "三层：掌握决策、理解工程、知道实现",
+        "深度由责任和风险决定，不是越深越好",
+        "说出两种极端及各自后果"
+      ],
+      "pitfalls": "「不用写代码」不等于「不用理解原理」：不理解原理就无法判断方案边界。反过来，以学技术为由长期不动产品，是本模块点名要防的沉迷。检验标准：能否用技术做出更好的产品决策。",
+      "explanation": "原文的金字塔（17–134行）把知识分为基础概念、模型原理、工程化能力、商业判断、横向能力五层，小结（584–606行）点名两种极端。编辑补充：三层深度可以落到具体行为——「掌握」=能独立做决策并承担后果；「理解」=能听懂方案争论并问出关键问题；「知道」=知道这个东西存在、出问题找谁。技术是语言不是目的：它让你能和算法团队坐在同一张桌子上对话。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+          "content_hash": "81b5d0dfbee429cf98ee91edcf26671ca9dd07903193649d5cb74530e118dc6a",
+          "line_start": 17,
+          "line_end": 134
+        },
+        {
+          "relative_path": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+          "content_hash": "81b5d0dfbee429cf98ee91edcf26671ca9dd07903193649d5cb74530e118dc6a",
+          "line_start": 584,
+          "line_end": 606
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：三层行为化定义+双极端；「语言」比喻还原原文"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.tech.eight-layer-map.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+      "concept_keys": [
+        "tech.eight-layer-map"
+      ],
+      "revision": 2,
+      "position": 22,
+      "title": "AI 系统八层地图",
+      "kind": "机制",
+      "prompt": "用八层地图拆解一个 AI 产品时，从上到下是哪八层？这张地图的实际用法是什么？",
+      "answer_short": "业务应用→Agent编排→大模型能力→知识增强（RAG）→模型工程→工具连接→数据基础设施→云原生基础。用法是定位问题：用户体验出问题往下层找原因，成本出问题找模型与基础设施层，扩展性问题找编排与工具连接层。",
+      "required_points": [
+        "按顺序说全八层",
+        "说出依赖关系：上层体验依赖下层能力与治理",
+        "说出至少一种用法：按症状定位问题所在层"
+      ],
+      "pitfalls": "只背层名不理解依赖关系等于没学：例如回答质量问题可能在RAG层（检索不准）而非大模型层。也不要假设每个产品都有全部八层——简单应用可能只有其中三四层。",
+      "explanation": "原文（135–320行）逐层展开八层架构。编辑补充：八层地图的三个实际用途——①定位：用户抱怨答案不准时，沿地图判断是应用层（Prompt）、RAG层（知识库质量）还是模型层（能力上限）的问题；②选型：每一层都有买/建/借的选择；③沟通：和不同团队对齐「我们在说哪一层」。这张地图是第3章各模块的目录：3.9对应应用层、3.11对应RAG层、3.12对应编排层。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+          "content_hash": "81b5d0dfbee429cf98ee91edcf26671ca9dd07903193649d5cb74530e118dc6a",
+          "line_start": 135,
+          "line_end": 320
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补定位/选型/沟通三用法；与第3章映射为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.tech.solution-selection.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+      "concept_keys": [
+        "tech.solution-selection"
+      ],
+      "revision": 2,
+      "position": 23,
+      "title": "选合适方案而非最强方案",
+      "kind": "场景判断",
+      "prompt": "评估 AI 技术方案时，为什么不能默认选择能力最强的模型？",
+      "answer_short": "因为产品要同时满足效果、成本、延迟、隐私、维护能力和供应稳定性六维约束；单项能力最强的方案可能让整体不可交付或不划算。选型服务于产品约束与持续运营，不是技术排名。",
+      "required_points": [
+        "说出至少四个比较维度：效果、成本、延迟、隐私/安全、供应稳定性",
+        "说出机制：约束是多维的，单项最优≠全局最优",
+        "说出反例形态：最强模型成本超预算或延迟毁掉体验"
+      ],
+      "pitfalls": "另一个极端是「够用就行」变成长期将就：选型要有升级路径（模型可替换、评测可复跑），否则技术债务会以体验债的形式偿还。",
+      "explanation": "原文（324–370行）的成本-效果权衡框架要求同时比较效果与代价。编辑补充：多维约束下的选型实操是两轮筛选——先用硬约束（隐私、延迟上限、预算）排除不可行项，再在可行集里比效果。这样「最强模型」经常第一轮就被排除。保留可替换性（抽象模型调用层、维护评测集）让未来的升级成本可控，这是2.3模型策略PM路由策略的个人版。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+          "content_hash": "81b5d0dfbee429cf98ee91edcf26671ca9dd07903193649d5cb74530e118dc6a",
+          "line_start": 324,
+          "line_end": 370
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：两轮筛选法与可替换性为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.tech.risk-checklist.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+      "concept_keys": [
+        "tech.risk-checklist"
+      ],
+      "revision": 2,
+      "position": 24,
+      "title": "AI 方案风险清单",
+      "kind": "场景判断",
+      "prompt": "一个 AI 方案效果演示良好，但准备上线时还应系统检查哪五类风险？",
+      "answer_short": "技术效果（真实分布下是否仍达标）、成本失控（用量增长的边际成本）、安全与幻觉（高代价错误与注入攻击）、数据与内容合规（授权、隐私、版权）、运营与供应稳定性（第三方依赖、限流、版本变更）。每类都要配可执行的缓解措施。",
+      "required_points": [
+        "说全五类：技术、成本、安全、合规、运营供应",
+        "每类能举一个具体风险场景",
+        "指出演示良好≠可上线：演示样例不覆盖真实分布"
+      ],
+      "pitfalls": "最常见的漏项是供应稳定性：第三方模型涨价、限流、下线都会直接改变产品可行性；其次是成本——演示时调100次不觉得，上线后调用量放大一万倍。",
+      "explanation": "原文（362–370行）的风险评估清单要求为每类风险设置缓解措施。编辑补充：五类风险对应五个追问——真实数据上测过吗（技术）？用量翻10倍成本多少（成本）？最坏输出是什么（安全）？数据从哪来的有权用吗（合规）？供应商变了怎么办（运营）？这份清单是5.6风险边界模块的速用版，高风险行业（医疗/金融）需要更完整的评估。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+          "content_hash": "81b5d0dfbee429cf98ee91edcf26671ca9dd07903193649d5cb74530e118dc6a",
+          "line_start": 362,
+          "line_end": 370
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：五追问化为编辑补充；供应稳定性漏项强调"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.project.end-to-end.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+      "concept_keys": [
+        "project.end-to-end"
+      ],
+      "revision": 2,
+      "position": 25,
+      "title": "企业 AI 项目端到端流程",
+      "kind": "机制",
+      "prompt": "一个完整企业级 AI 项目从需求到持续价值，通常要经历哪七个阶段？每个阶段的质量门槛是什么？",
+      "answer_short": "需求与规划（目标与ROI明确）→数据准备与接入（数据可用合规）→模型与知识构建（效果达标）→应用开发与集成（体验完整含兜底）→测试与验证（测试集通过+Badcase分级）→部署与上线（灰度可控）→运营与持续优化（监控与回流）。每阶段有产出物和质量门槛，不过门槛不进下一阶段。",
+      "required_points": [
+        "按顺序说全七阶段",
+        "每阶段至少说出一个质量门槛",
+        "指出与2.3六阶段工作流的关系：同一骨架的企业级展开"
+      ],
+      "pitfalls": "最常见的跳步是从需求直接进开发（跳过数据准备），或上线后不进运营阶段——前者做到一半发现没数据，后者让模型效果随时间悄悄衰减。门槛后置等于风险后置。",
+      "explanation": "原文（374–485行）把企业级项目拆为七个阶段。编辑补充：与2.3的六阶段工作流对照看——2.3按PM职责切分，2.4按系统工程切分；2.4多出「数据准备与接入」独立成阶段，这是企业级项目的关键差异：数据能不能用、合不合规，往往决定项目可行性，必须前置。PM 在端到端流程中的核心价值是让每阶段的门槛被真实执行，而不是让流程变成形式。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+          "content_hash": "81b5d0dfbee429cf98ee91edcf26671ca9dd07903193649d5cb74530e118dc6a",
+          "line_start": 374,
+          "line_end": 485
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：与2.3互证、数据前置差异为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.tech.self-assessment.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+      "concept_keys": [
+        "tech.self-assessment"
+      ],
+      "revision": 1,
+      "position": 50,
+      "title": "技术知识自评总表怎么用",
+      "kind": "场景判断",
+      "prompt": "原文的自评总表把25项能力分成哪四层掌握度要求？这张表的正确用法是什么？",
+      "answer_short": "四层：基础层（必须100%掌握）、工程层（掌握核心、了解细节）、决策层（PM核心竞争力）、企业级项目层（高阶必备）。用法是诊断而非打分：把「不能」的项映射到具体学习模块，生成自己的学习顺序。",
+      "required_points": [
+        "说出四层及各自掌握度要求",
+        "说出用法：自评→映射到学习模块→排序，而非算总分",
+        "指出决策层是PM差异化的核心，基础层是对话资格"
+      ],
+      "pitfalls": "两个误用：把自评当考试追求全勾（基础层之外的深度要按需分配）；或评完不映射行动（知道不会但不安排学习）。25项的技术细节验收在第3章各模块，不在本章。",
+      "explanation": "原文（540–580行）的自评总表按四层组织25项：基础层（Token、Embedding、幻觉、预训练等概念）、工程层（Prompt框架、RAG、Agent、向量库）、决策层（可行性、成本、风险、沟通）、企业级项目层（8层架构、端到端流程、治理）。编辑补充：这张表和2.2的能力三区可以直接拼用——自评结果里「全勾」的是舒适区、「能但不能教别人」的是协作区、「看不懂」的是盲区；然后按第3章模块顺序把盲区逐项转为协作区。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.4-AI-PM技术全景图.md",
+          "content_hash": "81b5d0dfbee429cf98ee91edcf26671ca9dd07903193649d5cb74530e118dc6a",
+          "line_start": 540,
+          "line_end": 580
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "四层掌握度还原；与2.2三区拼用为编辑补充"
+        ]
+      }
+    }
+  ]
+}

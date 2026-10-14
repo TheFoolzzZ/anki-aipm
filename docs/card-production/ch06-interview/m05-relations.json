@@ -1,0 +1,11 @@
+{
+  "module_id": "6.5",
+  "relations": [
+    {
+      "from": "ch06.interview.m05.workspace-change-ownership.001",
+      "to": "ch06.interview.m05.delegation-package.001",
+      "type": "compare",
+      "reason": "委派任务需先明确目标和责任；撤销功能则要保留真实工作区基线与各方变更归属，任务范围不能替代文件增量边界"
+    }
+  ]
+}

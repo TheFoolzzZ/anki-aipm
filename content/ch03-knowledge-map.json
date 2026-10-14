@@ -1,0 +1,1308 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-02",
+  "relations": [
+    {
+      "from": "ch03.tech.api-contract.001",
+      "to": "ch03.interview.m01.auth-boundary.001",
+      "type": "extension",
+      "reason": "接口业务合同必须补上服务端资源授权边界。"
+    },
+    {
+      "from": "ch03.tech.capacity-latency.001",
+      "to": "ch03.interview.m01.infra-boundaries.001",
+      "type": "extension",
+      "reason": "容量证据帮助判断应优化内容分发、实例或服务拆分。"
+    },
+    {
+      "from": "ch03.tech.feasibility-evidence.001",
+      "to": "ch03.token.request-monthly-cost.001",
+      "type": "extension",
+      "reason": "可行性还需用实际调用单位核算成本，复用3.8不重复制卡。"
+    },
+    {
+      "from": "ch03.tech.api-contract.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "extension",
+      "reason": "接口超时需区分未响应与未执行，复用工具恢复卡。"
+    },
+    {
+      "from": "ch03.interview.m01.retrieval-ranking.001",
+      "to": "ch03.interview.m02.cold-start.001",
+      "type": "extension",
+      "reason": "推荐链路发现新实体缺失后，再制定冷启动信号与探索方案。"
+    },
+    {
+      "from": "ch03.ml.problem-contract.001",
+      "to": "ch03.interview.m02.label-governance.001",
+      "type": "extension",
+      "reason": "任务定义之后需明确标签边界与裁决流程。"
+    },
+    {
+      "from": "ch03.ml.fit-diagnosis.001",
+      "to": "ch03.interview.m02.bias-variance.001",
+      "type": "extension",
+      "reason": "诊断泛化异常时，区分误差性质与证据。"
+    },
+    {
+      "from": "ch03.interview.m02.feature-experiment.001",
+      "to": "ch03.ml.leakage-prevention.001",
+      "type": "prerequisite",
+      "reason": "特征实验必须先保证预测时可得和评估隔离。"
+    },
+    {
+      "from": "ch03.interview.m02.model-selection.001",
+      "to": "ch03.ml.ensemble-tradeoff.001",
+      "type": "extension",
+      "reason": "候选包含树模型时需要理解集成机制及成本。"
+    },
+    {
+      "from": "ch03.interview.m02.group-bias.001",
+      "to": "ch03.interview.m02.cold-start.001",
+      "type": "compare",
+      "reason": "欠代表群体与缺少历史实体的原因和补救不同。"
+    },
+    {
+      "from": "ch03.interview.m02.feature-experiment.001",
+      "to": "ch03.interview.m02.explanation-limit.001",
+      "type": "extension",
+      "reason": "预测相关特征有用不代表可用于因果干预。"
+    },
+    {
+      "from": "ch03.interview.m03.batchnorm-deployment.001",
+      "to": "ch03.dl.training-inference.001",
+      "type": "prerequisite",
+      "reason": "先分清训练与推理，才能检查BatchNorm统计模式。"
+    },
+    {
+      "from": "ch03.interview.m03.dropout-modes.001",
+      "to": "ch03.dl.training-inference.001",
+      "type": "prerequisite",
+      "reason": "Dropout的模式切换以训练/推理职责区分为前提。"
+    },
+    {
+      "from": "ch03.interview.m03.residual-path.001",
+      "to": "ch03.dl.gradient-diagnosis.001",
+      "type": "extension",
+      "reason": "从梯度不稳定的诊断扩展到残差直接路径机制。"
+    },
+    {
+      "from": "ch03.interview.m03.augmentation-contract.001",
+      "to": "ch03.dl.selection-validation.001",
+      "type": "extension",
+      "reason": "将少样本选型中的数据增强细化为标签与隔离契约。"
+    },
+    {
+      "from": "ch03.ml.release-recovery.001",
+      "to": "ch03.interview.m03.monitoring-evidence.001",
+      "type": "extension",
+      "reason": "上线门槛需要持续的质量和业务监控提供回退证据。"
+    },
+    {
+      "from": "ch03.tech.capacity-latency.001",
+      "to": "ch03.dl.selection-validation.001",
+      "type": "extension",
+      "reason": "把选型中的延迟约束落实到端到端负载测试。"
+    },
+    {
+      "from": "ch03.interview.m03.loss-business.001",
+      "to": "ch03.dl.training-inference.001",
+      "type": "extension",
+      "reason": "训练损失的职责继续延伸到业务代理目标偏差。"
+    },
+    {
+      "from": "ch03.dl.recurrent-memory.001",
+      "to": "ch03.transformer.parallel-boundary.001",
+      "type": "compare",
+      "reason": "比较循环时间步依赖和Transformer训练并行，避免误认为生成可一次并行完成。"
+    },
+    {
+      "to": "ch03.transformer.qkv-aggregation.001",
+      "type": "prerequisite",
+      "reason": "先理解QK匹配与V汇聚，再理解多组投影",
+      "from": "ch03.transformer.multihead.001"
+    },
+    {
+      "to": "ch03.transformer.block-roles.001",
+      "type": "prerequisite",
+      "reason": "MoE通常替换FFN子层，须先区分FFN与注意力",
+      "from": "ch03.interview.m04.moe-resources.001"
+    },
+    {
+      "to": "ch03.interview.m04.moe-resources.001",
+      "type": "compare",
+      "reason": "压缩改变精度或模型结构，MoE选择性激活，资源收益不能混算",
+      "from": "ch03.interview.m04.compression-choice.001"
+    },
+    {
+      "to": "ch03.transformer.attention-cost.001",
+      "type": "extension",
+      "reason": "位置可表达之外，还需评估长序列计算成本",
+      "from": "ch03.transformer.position.001"
+    },
+    {
+      "to": "ch03.transformer.position.001",
+      "type": "prerequisite",
+      "reason": "Patch序列也需要保留位置关系",
+      "from": "ch03.interview.m04.multimodal-input.001"
+    },
+    {
+      "to": "ch03.transformer.architecture-families.001",
+      "type": "extension",
+      "reason": "由三架构信息流理解统一生成接口的取舍",
+      "from": "ch03.interview.m04.decoder-tradeoff.001"
+    },
+    {
+      "from": "ch03.interview.m05.scaling-budget.001",
+      "to": "ch03.llm.selection-evidence.001",
+      "type": "extension",
+      "reason": "训练预算规律需回到业务选型评测"
+    },
+    {
+      "from": "ch03.interview.m05.emergence-measurement.001",
+      "to": "ch03.llm.selection-evidence.001",
+      "type": "extension",
+      "reason": "能力跳变测量影响模型采购证据"
+    },
+    {
+      "from": "ch03.interview.m05.preference-dpo.001",
+      "to": "ch03.llm.training-stages.001",
+      "type": "prerequisite",
+      "reason": "比较偏好路线前先理解训练阶段"
+    },
+    {
+      "from": "ch03.interview.m05.icl-vs-training.001",
+      "to": "ch03.llm.generalization.001",
+      "type": "prerequisite",
+      "reason": "上下文示例说明通用能力如何指定任务"
+    },
+    {
+      "from": "ch03.interview.m05.license-evidence.001",
+      "to": "ch03.llm.deployment-tradeoff.001",
+      "type": "extension",
+      "reason": "部署方案还需具体版本许可证据"
+    },
+    {
+      "from": "ch03.interview.m05.refusal-evaluation.001",
+      "to": "ch03.llm.training-stages.001",
+      "type": "extension",
+      "reason": "后训练可用性代价需分层评估"
+    },
+    {
+      "from": "ch03.llm.application-routing.001",
+      "to": "ch03.llm.hallucination-controls.001",
+      "type": "extension",
+      "reason": "外部检索和执行仍需核查事实支持"
+    },
+    {
+      "from": "ch03.interview.m05.scaling-budget.001",
+      "to": "ch03.interview.m04.moe-resources.001",
+      "type": "compare",
+      "reason": "总参数规模与稀疏激活资源不是同一口径"
+    },
+    {
+      "from": "ch03.interview.m06.method-evidence.001",
+      "to": "ch03.finetune.lora-boundary.001",
+      "type": "compare",
+      "reason": "相同任务下比较适配范围与资源条件"
+    },
+    {
+      "from": "ch03.interview.m06.hyperparameter-experiment.001",
+      "to": "ch03.finetune.overfitting-diagnosis.001",
+      "type": "extension",
+      "reason": "从超参数试验推进到验证回归诊断"
+    },
+    {
+      "from": "ch03.finetune.acceptance.001",
+      "to": "ch03.finetune.split-leakage.001",
+      "type": "prerequisite",
+      "reason": "无独立测试集不能建立可信增益"
+    },
+    {
+      "from": "ch03.finetune.release-monitoring.001",
+      "to": "ch03.finetune.acceptance.001",
+      "type": "prerequisite",
+      "reason": "部署之前先满足质量验收"
+    },
+    {
+      "from": "ch03.interview.m07.unigram-mechanism.001",
+      "to": "ch03.tokenization.bpe-process.001",
+      "type": "compare",
+      "reason": "概率裁减与频率合并不同"
+    },
+    {
+      "from": "ch03.tokenization.sentencepiece-layer.001",
+      "to": "ch03.interview.m07.unigram-mechanism.001",
+      "type": "extension",
+      "reason": "框架支持Unigram但不等于算法"
+    },
+    {
+      "from": "ch03.interview.m07.chinese-ambiguity.001",
+      "to": "ch03.tokenization.subword-tradeoff.001",
+      "type": "extension",
+      "reason": "把子词边界用于中文业务歧义"
+    },
+    {
+      "from": "ch03.tokenization.language-measurement.001",
+      "to": "ch03.tokenization.subword-tradeoff.001",
+      "type": "prerequisite",
+      "reason": "先理解词表与序列长度取舍再测语言差异"
+    },
+    {
+      "from": "ch03.token.context-reservation.001",
+      "to": "ch03.token.unit-vs-character.001",
+      "type": "prerequisite",
+      "reason": "先理解编码资源单位，才能给完整请求预留容量"
+    },
+    {
+      "from": "ch03.token.usage-reconciliation.001",
+      "to": "ch03.token.request-monthly-cost.001",
+      "type": "extension",
+      "reason": "预算公式需进一步用逐请求用量对账"
+    },
+    {
+      "from": "ch03.token.long-context-verification.001",
+      "to": "ch03.token.context-reservation.001",
+      "type": "compare",
+      "reason": "容量合规与证据利用是两类验收"
+    },
+    {
+      "from": "ch03.token.unit-vs-character.001",
+      "to": "ch03.tokenization.language-measurement.001",
+      "type": "extension",
+      "reason": "由无固定字符倍率迁移到中英文同任务测量"
+    },
+    {
+      "from": "ch03.token.optimization-quality.001",
+      "to": "ch03.prompt.few-shot-selection.001",
+      "type": "extension",
+      "reason": "示例数量改变输入成本与分类质量"
+    },
+    {
+      "from": "ch03.interview.m09.message-responsibility.001",
+      "to": "ch03.prompt.injection-boundary.001",
+      "type": "extension",
+      "reason": "消息组织清楚仍要在执行端阻止不可信资料自授权限"
+    },
+    {
+      "from": "ch03.prompt.json-validation.001",
+      "to": "ch03.prompt.task-contract.001",
+      "type": "prerequisite",
+      "reason": "先有字段与未知值约定才能做结构和语义校验"
+    },
+    {
+      "from": "ch03.prompt.regression-versioning.001",
+      "to": "ch03.prompt.few-shot-selection.001",
+      "type": "extension",
+      "reason": "示例更新也需独立样本回归及版本追踪"
+    },
+    {
+      "from": "ch03.prompt.optimization-stop.001",
+      "to": "ch03.token.optimization-quality.001",
+      "type": "extension",
+      "reason": "停止堆提示需要比较完整成功任务的收益成本"
+    },
+    {
+      "from": "ch03.prompt.consistency-limit.001",
+      "to": "ch03.prompt.reasoning-tool-choice.001",
+      "type": "compare",
+      "reason": "重复生成的一致性不能替代外部工具观察与核验"
+    },
+    {
+      "from": "ch03.interview.m10.colbert-late-interaction.001",
+      "to": "ch03.vector.rerank-candidate-ceiling.001",
+      "type": "compare",
+      "reason": "晚交互多向量与共同编码逐对评分不同"
+    },
+    {
+      "from": "ch03.interview.m10.sparse-representation.001",
+      "to": "ch03.vector.hybrid-evaluation.001",
+      "type": "prerequisite",
+      "reason": "先区分词项/潜在表示，再理解多路融合"
+    },
+    {
+      "from": "ch03.interview.m10.filtered-recall.001",
+      "to": "ch03.vector.ann-quality-budget.001",
+      "type": "extension",
+      "reason": "过滤改变候选可见性，需固定授权子集基线"
+    },
+    {
+      "from": "ch03.interview.m10.embedding-migration.001",
+      "to": "ch03.vector.training-objective.001",
+      "type": "prerequisite",
+      "reason": "迁移依赖编码空间与任务训练目标的区别"
+    },
+    {
+      "from": "ch03.vector.compression-choice.001",
+      "to": "ch03.vector.capacity-arithmetic.001",
+      "type": "extension",
+      "reason": "预算算出原始向量占用后再判断压缩收益"
+    },
+    {
+      "from": "ch03.vector.metric-compatibility.001",
+      "to": "ch03.vector.ann-quality-budget.001",
+      "type": "extension",
+      "reason": "相似度与归一化固定后才比较近似检索"
+    },
+    {
+      "from": "ch03.interview.m10.embedding-migration.001",
+      "to": "ch03.rag.update-deletion.001",
+      "type": "compare",
+      "reason": "编码空间迁移和同模型资料更新是两种操作"
+    },
+    {
+      "from": "ch03.interview.m11.rag-lifecycle.001",
+      "to": "ch03.rag.source-ingestion-loss.001",
+      "type": "extension",
+      "reason": "完整链路确定数据丢失的排查位置"
+    },
+    {
+      "from": "ch03.rag.chunk-experiment.001",
+      "to": "C03",
+      "type": "prerequisite",
+      "reason": "先理解块大小的完整性与噪声取舍再设计实验"
+    },
+    {
+      "from": "ch03.rag.cost-quality-budget.001",
+      "to": "ch03.token.request-monthly-cost.001",
+      "type": "extension",
+      "reason": "模型调用预算扩展到入库、检索及单位成功任务成本"
+    },
+    {
+      "from": "ch03.rag.rewrite-constraint.001",
+      "to": "ch03.vector.hybrid-evaluation.001",
+      "type": "extension",
+      "reason": "融合只能在查询硬条件被保留后评估"
+    },
+    {
+      "from": "ch03.rag.conflicting-sources.001",
+      "to": "C05",
+      "type": "extension",
+      "reason": "忠实于文本还须判断资料效力与适用范围"
+    },
+    {
+      "from": "ch03.interview.m12.agent-component-roles.001",
+      "to": "ch03.agent.task-fit.001",
+      "type": "extension",
+      "reason": "按任务路径确定是否需要反馈驱动系统，再分析组件职责"
+    },
+    {
+      "from": "ch03.agent.loop-stop-budget.001",
+      "to": "ch03.interview.m12.agent-component-roles.001",
+      "type": "prerequisite",
+      "reason": "理解观察和行动职责后制定继续/停止条件"
+    },
+    {
+      "from": "ch03.agent.ambiguous-tool-result.001",
+      "to": "C06",
+      "type": "prerequisite",
+      "reason": "请求与执行分离是理解超时未知状态的前提"
+    },
+    {
+      "from": "ch03.agent.reflection-evidence.001",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "compare",
+      "reason": "候选自检与可观察执行证据不能混同"
+    },
+    {
+      "from": "ch03.agent.tool-result-trust.001",
+      "to": "ch03.prompt.injection-boundary.001",
+      "type": "extension",
+      "reason": "指令边界延伸到跨工具数据外发"
+    },
+    {
+      "from": "ch03.interview.m12.agent-framework-roles.001",
+      "to": "ch03.agent.task-fit.001",
+      "type": "prerequisite",
+      "reason": "选择框架前先明确任务需要何种控制流"
+    },
+    {
+      "from": "ch03.interview.m13.skill-layers.001",
+      "to": "ch03.interview.m12.agent-component-roles.001",
+      "type": "compare",
+      "reason": "能力知识封装与运行系统组件是不同分析层级"
+    },
+    {
+      "from": "ch03.interview.m13.result-contract.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "compare",
+      "reason": "稳定返回契约与实际执行未知状态需要不同处理"
+    },
+    {
+      "from": "ch03.interview.m13.orchestration-dependencies.001",
+      "to": "ch03.agent.loop-stop-budget.001",
+      "type": "prerequisite",
+      "reason": "循环编排先理解停止与总预算边界"
+    },
+    {
+      "from": "ch03.interview.m13.platform-vocabulary.001",
+      "to": "ch03.interview.m13.skill-layers.001",
+      "type": "prerequisite",
+      "reason": "辨清泛化能力与Agent Skills格式后再比较平台术语"
+    },
+    {
+      "from": "ch03.interview.m13.skill-portfolio.001",
+      "to": "ch03.agent.tool-result-trust.001",
+      "type": "extension",
+      "reason": "能力分类之后还要检查组合数据流风险"
+    },
+    {
+      "from": "ch03.interview.m14.context-scope.001",
+      "to": "ch03.interview.m11.rag-lifecycle.001",
+      "type": "compare",
+      "reason": "上下文的全信息维护与RAG知识接入链路有重叠而非互斥"
+    },
+    {
+      "from": "ch03.interview.m14.context-record-contract.001",
+      "to": "ch03.rag.conflicting-sources.001",
+      "type": "extension",
+      "reason": "制度适用性判断扩展为多源对象/状态/时间契约"
+    },
+    {
+      "from": "ch03.interview.m14.context-task-state.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "prerequisite",
+      "reason": "摘要保留未知动作的理由依赖请求/执行/结果分离"
+    },
+    {
+      "from": "ch03.interview.m14.context-on-demand.001",
+      "to": "ch03.interview.m14.context-record-contract.001",
+      "type": "prerequisite",
+      "reason": "按需加载需可回查的来源对象与版本关系"
+    },
+    {
+      "from": "ch03.interview.m14.embedding-codec-boundary.001",
+      "to": "ch03.vector.training-objective.001",
+      "type": "prerequisite",
+      "reason": "检索任务塑造表示而非保证原文可逆"
+    },
+    {
+      "from": "ch03.interview.m14.context-utilization-limit.001",
+      "to": "C05",
+      "type": "extension",
+      "reason": "引用可见性既不等于主张支持也不等于任务必要性"
+    },
+    {
+      "from": "ch03.interview.m14.context-task-state.001",
+      "to": "ch03.agent.memory-freshness.001",
+      "type": "compare",
+      "reason": "当前任务状态与跨会话偏好冲突有不同维护目标"
+    },
+    {
+      "from": "ch03.interview.m15.model-adapter.001",
+      "to": "ch03.interview.m15.framework-boundary.001",
+      "type": "prerequisite",
+      "reason": "接口适配的取舍依赖框架与模型职责区别"
+    },
+    {
+      "from": "ch03.interview.m15.thread-memory.001",
+      "to": "ch03.agent.memory-freshness.001",
+      "type": "extension",
+      "reason": "线程恢复之外，跨会话偏好还需失效与当前指令规则"
+    },
+    {
+      "from": "ch03.interview.m15.fork-join-contract.001",
+      "to": "ch03.tech.observability-response.001",
+      "type": "extension",
+      "reason": "分支契约失败通过同run节点输入输出来定位"
+    },
+    {
+      "from": "ch03.tech.observability-response.001",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "compare",
+      "reason": "节点数据变换定位与整任务执行代价是不同观察粒度"
+    },
+    {
+      "from": "ch03.interview.m16.centroid-classification.001",
+      "to": "ch03.vector.training-objective.001",
+      "type": "prerequisite",
+      "reason": "分类距离是否有用依赖表示训练目标和标签语义"
+    },
+    {
+      "from": "ch03.interview.m16.semantic-dedup.001",
+      "to": "ch03.interview.m16.score-calibration.001",
+      "type": "prerequisite",
+      "reason": "去重门槛需理解分数不是概率和任务标注"
+    },
+    {
+      "from": "ch03.interview.m16.content-recommendation.001",
+      "to": "ch03.interview.m16.centroid-classification.001",
+      "type": "compare",
+      "reason": "推荐选择有用内容与分类选择类别使用不同任务目标"
+    },
+    {
+      "from": "ch03.interview.m16.cross-modal-alignment.001",
+      "to": "ch03.vector.training-objective.001",
+      "type": "prerequisite",
+      "reason": "跨模态对齐仍由匹配训练目标建立空间关系"
+    },
+    {
+      "from": "ch03.interview.m16.cross-modal-alignment.001",
+      "to": "ch03.interview.m10.embedding-migration.001",
+      "type": "compare",
+      "reason": "跨模态编码兼容与同模态模型迁移是相关但不同的条件"
+    },
+    {
+      "from": "ch03.interview.m16.score-calibration.001",
+      "to": "ch03.vector.metric-compatibility.001",
+      "type": "prerequisite",
+      "reason": "先分清距离的数学性质再解释业务门槛"
+    },
+    {
+      "from": "ch03.interview.m17.call-result-correlation.001",
+      "to": "C06",
+      "type": "prerequisite",
+      "reason": "结果消息续接以模型请求与独立执行的分工为前提"
+    },
+    {
+      "from": "ch03.interview.m17.schema-contract.001",
+      "to": "ch03.interview.m17.missing-arguments.001",
+      "type": "extension",
+      "reason": "清晰字段契约还需要辨别参数来源和缺参澄清"
+    },
+    {
+      "from": "ch03.interview.m17.rag-tool-composition.001",
+      "to": "C01",
+      "type": "extension",
+      "reason": "知识证据之外还需实时业务接口及动作结果"
+    },
+    {
+      "from": "ch03.interview.m17.poc-failure-layers.001",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "compare",
+      "reason": "模型工具选择/参数层与整任务成功及执行轨迹分层观察"
+    },
+    {
+      "from": "ch03.interview.m17.call-budget.001",
+      "to": "ch03.interview.m15.fork-join-contract.001",
+      "type": "prerequisite",
+      "reason": "工具并行的关键路径与分支汇总契约一致"
+    },
+    {
+      "from": "C07",
+      "to": "ch03.agent.tool-result-trust.001",
+      "type": "extension",
+      "reason": "执行端授权还需防工具返回引发跨工具泄露链"
+    },
+    {
+      "to": "ch03.interview.m18.delegation-boundary.001",
+      "type": "prerequisite",
+      "reason": "发现能力以前须分清发起Client与黑盒执行Server",
+      "from": "ch03.interview.m18.agent-discovery.001"
+    },
+    {
+      "to": "ch03.interview.m18.delegation-boundary.001",
+      "type": "prerequisite",
+      "reason": "委派后任务状态属于远程执行，不是本地会话状态",
+      "from": "ch03.interview.m18.task-lifecycle.001"
+    },
+    {
+      "to": "ch03.interview.m18.task-lifecycle.001",
+      "type": "prerequisite",
+      "reason": "增量产物是否完整需结合任务及输出语义",
+      "from": "ch03.interview.m18.message-artifact.001"
+    },
+    {
+      "to": "ch03.interview.m18.task-lifecycle.001",
+      "type": "prerequisite",
+      "reason": "断线恢复需知道可继续态与终态",
+      "from": "ch03.interview.m18.async-updates.001"
+    },
+    {
+      "to": "C08",
+      "type": "extension",
+      "reason": "从模型调用意图/MCP工具接入扩展到远程Agent委派",
+      "from": "ch03.interview.m18.protocol-composition.001"
+    },
+    {
+      "to": "ch03.interview.m18.message-artifact.001",
+      "type": "prerequisite",
+      "reason": "报价汇总依赖每个供应商任务的明确产物",
+      "from": "ch03.interview.m18.parallel-quote-aggregation.001"
+    },
+    {
+      "to": "ch03.interview.m18.async-updates.001",
+      "type": "prerequisite",
+      "reason": "子任务期限与部分结果汇总须正确理解更新和断线状态",
+      "from": "ch03.interview.m18.parallel-quote-aggregation.001"
+    },
+    {
+      "to": "C08",
+      "type": "extension",
+      "reason": "将调用意图/协议分层落实为应用及通信组件职责",
+      "from": "ch03.interview.m19.host-client-server.001"
+    },
+    {
+      "to": "ch03.interview.m19.host-client-server.001",
+      "type": "prerequisite",
+      "reason": "先确定Server和Host职责，再划分上下文/动作/模板",
+      "from": "ch03.interview.m19.server-primitives.001"
+    },
+    {
+      "to": "ch03.interview.m19.server-primitives.001",
+      "type": "prerequisite",
+      "reason": "工具发现与执行前须区分工具与上下文模板",
+      "from": "ch03.interview.m19.discovery-call-loop.001"
+    },
+    {
+      "to": "C08",
+      "type": "prerequisite",
+      "reason": "调用链依赖模型意图与实际执行不同",
+      "from": "ch03.interview.m19.discovery-call-loop.001"
+    },
+    {
+      "to": "ch03.interview.m19.host-client-server.001",
+      "type": "extension",
+      "reason": "角色不变而本地进程与远程服务接入条件不同",
+      "from": "ch03.interview.m19.transport-compatibility.001"
+    },
+    {
+      "to": "C08",
+      "type": "extension",
+      "reason": "统一接入仍需应用承担业务编排和执行事实",
+      "from": "ch03.interview.m19.integration-boundary.001"
+    },
+    {
+      "to": "ch03.interview.m19.discovery-call-loop.001",
+      "type": "extension",
+      "reason": "准入用完整调用及失败轨迹验证实际适配",
+      "from": "ch03.interview.m19.server-admission.001"
+    },
+    {
+      "to": "ch03.interview.m10.embedding-migration.001",
+      "type": "compare",
+      "reason": "固定编码的引擎迁移可能复用向量，换编码空间通常需要重编码",
+      "from": "ch03.interview.m20.recovery-exit.001"
+    },
+    {
+      "to": "ch03.vector.database-selection.001",
+      "type": "extension",
+      "reason": "已有负载选型增加退出和恢复能力的实证要求",
+      "from": "ch03.interview.m20.recovery-exit.001"
+    },
+    {
+      "to": "ch03.rag.update-deletion.001",
+      "type": "prerequisite",
+      "reason": "恢复和回退必须保留更新/删除及权限事实，不恢复已撤回资料",
+      "from": "ch03.interview.m20.recovery-exit.001"
+    },
+    {
+      "from": "ch03.interview.m21.graph-execution.001",
+      "to": "ch03.interview.m15.framework-boundary.001",
+      "type": "extension",
+      "reason": "生态职责进一步展开为图内状态、节点与路由执行"
+    },
+    {
+      "from": "ch03.interview.m21.state-reducer.001",
+      "to": "ch03.interview.m21.graph-execution.001",
+      "type": "prerequisite",
+      "reason": "理解状态更新先知道节点返回部分更新"
+    },
+    {
+      "from": "ch03.interview.m21.interrupt-resume.001",
+      "to": "ch03.interview.m15.thread-memory.001",
+      "type": "prerequisite",
+      "reason": "恢复中断先定位正确thread的持久化状态"
+    },
+    {
+      "from": "ch03.interview.m21.interrupt-resume.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "extension",
+      "reason": "节点重跑产生副作用窗口，仍须查业务事实"
+    },
+    {
+      "from": "ch03.interview.m21.conditional-routing.001",
+      "to": "ch03.agent.loop-stop-budget.001",
+      "type": "extension",
+      "reason": "条件回路另需任务层停止与预算"
+    },
+    {
+      "from": "ch03.interview.m21.graph-evolution.001",
+      "to": "ch03.interview.m21.interrupt-resume.001",
+      "type": "prerequisite",
+      "reason": "升级在途任务前需理解中断的节点/状态恢复边界"
+    },
+    {
+      "from": "ch03.interview.m21.workflow-coexistence.001",
+      "to": "ch03.interview.m19.integration-boundary.001",
+      "type": "compare",
+      "reason": "框架与接口标准都不能代替跨业务系统事务"
+    },
+    {
+      "from": "ch03.interview.m22.event-semantic-layer.001",
+      "to": "ch03.interview.m18.protocol-composition.001",
+      "type": "extension",
+      "reason": "加入Agent到用户界面的事件接口，与Agent委派/工具接入分边"
+    },
+    {
+      "from": "ch03.interview.m22.text-event-assembly.001",
+      "to": "ch03.interview.m22.thread-run-lifecycle.001",
+      "type": "prerequisite",
+      "reason": "消息组装先区分会话和一次运行归属"
+    },
+    {
+      "from": "ch03.interview.m22.tool-event-completion.001",
+      "to": "C06",
+      "type": "prerequisite",
+      "reason": "理解参数事件结束不是执行事实，依赖工具请求与真实结果分离"
+    },
+    {
+      "from": "ch03.interview.m22.state-snapshot-delta.001",
+      "to": "ch03.interview.m22.thread-run-lifecycle.001",
+      "type": "prerequisite",
+      "reason": "状态增量须归到正确运行/会话并在有效基线上应用"
+    },
+    {
+      "from": "ch03.interview.m22.shared-state-authority.001",
+      "to": "ch03.interview.m22.state-snapshot-delta.001",
+      "type": "prerequisite",
+      "reason": "双写冲突处理先理解快照/增量同步"
+    },
+    {
+      "from": "ch03.interview.m22.confirmation-contract.001",
+      "to": "ch03.interview.m21.interrupt-resume.001",
+      "type": "compare",
+      "reason": "前端确认契约与后台中断节点重执行分属不同责任"
+    },
+    {
+      "from": "ch03.interview.m22.generative-ui-contract.001",
+      "to": "ch03.interview.m22.confirmation-contract.001",
+      "type": "extension",
+      "reason": "渲染一个操作按钮还须单独建立确认/授权执行链"
+    },
+    {
+      "from": "ch03.interview.m22.event-render-diagnosis.001",
+      "to": "ch03.interview.m22.state-snapshot-delta.001",
+      "type": "prerequisite",
+      "reason": "不同步诊断依赖知道补丁应用与快照重建的边界"
+    },
+    {
+      "from": "ch03.interview.m23.roc-pr-threshold.001",
+      "to": "ch03.ml.confusion-cost.001",
+      "type": "prerequisite",
+      "reason": "先理解TP/FP/FN/TN分母，再比较跨阈值曲线与选定工作点"
+    },
+    {
+      "from": "ch03.interview.m23.probability-quality.001",
+      "to": "ch03.interview.m23.roc-pr-threshold.001",
+      "type": "compare",
+      "reason": "AUC排序保持不变时，真实标签预测概率仍会改变Log Loss"
+    },
+    {
+      "from": "ch03.interview.m23.r2-baseline.001",
+      "to": "ch03.interview.m23.regression-error-scale.001",
+      "type": "prerequisite",
+      "reason": "R²用残差平方和相对均值基线，先理解平方误差与量纲"
+    },
+    {
+      "from": "ch03.interview.m23.regression-error-scale.001",
+      "to": "ch03.interview.m02.regression-metrics.001",
+      "type": "extension",
+      "reason": "绝对误差与量纲补齐已有零销量MAPE及补货损失"
+    },
+    {
+      "from": "ch03.interview.m23.ndcg-gain.001",
+      "to": "C04",
+      "type": "extension",
+      "reason": "检索集合覆盖之外，还要考等级与位置，不替代Recall分母"
+    },
+    {
+      "from": "ch03.interview.m23.rank-objectives.001",
+      "to": "C04",
+      "type": "compare",
+      "reason": "任一命中、首个位置、多个相关项排序与全相关集合覆盖分工"
+    },
+    {
+      "from": "ch03.interview.m23.text-metric-boundary.001",
+      "to": "C05",
+      "type": "compare",
+      "reason": "文本相似度不证明回答忠实于证据且切题"
+    },
+    {
+      "from": "ch03.interview.m23.drift-detection.001",
+      "to": "ch03.interview.m23.drift-types.001",
+      "type": "prerequisite",
+      "reason": "先明确监测的分布对象，再解释PSI/KS/KL只能提供变化信号"
+    },
+    {
+      "from": "ch03.interview.m23.dashboard-alert.001",
+      "to": "ch03.tech.evaluation-contract.001",
+      "type": "prerequisite",
+      "reason": "指标口径先冻结，受众分层和报警才可行动"
+    },
+    {
+      "from": "ch03.interview.m23.serving-metrics.001",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "extension",
+      "reason": "节点/服务负载单位补充整任务成功与执行代价的评估"
+    },
+    {
+      "from": "ch03.interview.m23.ab-guardrails.001",
+      "to": "ch03.ml.release-recovery.001",
+      "type": "extension",
+      "reason": "扩展已有灰度/A-B证据为推荐代理目标与长期护栏"
+    },
+    {
+      "from": "ch03.interview.m24.concept-layers.001",
+      "to": "ch03.interview.m21.graph-execution.001",
+      "type": "prerequisite",
+      "reason": "先理解节点与控制边，再解释工作流/状态图和节点内部循环分层"
+    },
+    {
+      "from": "ch03.interview.m24.hybrid-placement.001",
+      "to": "ch03.agent.task-fit.001",
+      "type": "extension",
+      "reason": "已有是否需要动态行动判断，本课加外层SOP与受限子流程控制位置"
+    },
+    {
+      "from": "ch03.interview.m24.llm-shapes.001",
+      "to": "ch03.prompt.reasoning-tool-choice.001",
+      "type": "extension",
+      "reason": "提示策略可以组合，不能把Few-shot与行动观察循环当互斥等级"
+    },
+    {
+      "from": "ch03.interview.m13.intent-routing.001",
+      "to": "ch03.interview.m11.rag-lifecycle.001",
+      "type": "extension",
+      "reason": "先路由到获准知识域，再执行已有检索生成链路，错库不能靠库内召回修复"
+    },
+    {
+      "from": "ch03.interview.m13.result-contract.001",
+      "to": "ch03.prompt.json-validation.001",
+      "type": "extension",
+      "reason": "业务前置和空/错/部分状态比格式解析更进一步，决定下游允许执行"
+    },
+    {
+      "from": "ch03.interview.m21.conditional-routing.001",
+      "to": "ch03.interview.m21.graph-execution.001",
+      "type": "extension",
+      "reason": "允许边需要业务状态/终态/等待前提，聊天文本不足"
+    },
+    {
+      "from": "ch03.interview.m24.human-resume.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "extension",
+      "reason": "审批恢复可能重放副作用，必须保留已执行/未知状态并查业务事实"
+    },
+    {
+      "from": "ch03.interview.m24.failure-policy.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "prerequisite",
+      "reason": "写结果未知不是普通暂态读取失败，恢复分流先理解已发布机制"
+    },
+    {
+      "from": "ch03.interview.m21.state-reducer.001",
+      "to": "ch03.interview.m21.conditional-routing.001",
+      "type": "extension",
+      "reason": "图状态转换契约在LangGraph中还要定义字段覆盖/合并更新"
+    },
+    {
+      "from": "ch03.interview.m24.platform-proof.001",
+      "to": "ch03.interview.m24.human-resume.001",
+      "type": "extension",
+      "reason": "目标平台必须通过具体暂停/审批改动/恢复试验，不以有人工节点宣称完成"
+    },
+    {
+      "from": "ch03.interview.m24.failure-policy.001",
+      "to": "ch03.interview.m15.fork-join-contract.001",
+      "type": "extension",
+      "reason": "错误语义决定部分支路失败是否阻断汇总，复用既有fork-join机制"
+    },
+    {
+      "from": "C10",
+      "to": "C09",
+      "type": "prerequisite",
+      "reason": "RAG诊断须区分运行器实际产物与评分线索"
+    },
+    {
+      "from": "C11",
+      "to": "ch03.interview.m25.rubric-atomic.001",
+      "type": "prerequisite",
+      "reason": "位置敏感性比较必须在同一行为判据下解释"
+    },
+    {
+      "from": "ch03.interview.m25.g-eval-expectation.001",
+      "to": "ch03.interview.m25.rubric-atomic.001",
+      "type": "prerequisite",
+      "reason": "概率加权也依赖已定义的评分尺度"
+    },
+    {
+      "from": "ch03.interview.m25.kappa-calibration.001",
+      "to": "ch03.interview.m25.rubric-atomic.001",
+      "type": "extension",
+      "reason": "用一致性检查判据执行分歧，不替代真值"
+    },
+    {
+      "from": "ch03.interview.m25.cache-identity.001",
+      "to": "C09",
+      "type": "prerequisite",
+      "reason": "分别识别输出与评分计算的输入契约"
+    },
+    {
+      "from": "ch03.interview.m25.cascade-audit.001",
+      "to": "ch03.interview.m25.grader-selection.001",
+      "type": "prerequisite",
+      "reason": "出口审计依据各评分器能验证的对象"
+    },
+    {
+      "from": "ch03.interview.m25.badcase-curation.001",
+      "to": "ch03.interview.m25.dataset-representation.001",
+      "type": "extension",
+      "reason": "反馈核验后进入分布与风险已说明的集"
+    },
+    {
+      "from": "C14",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "extension",
+      "reason": "终点与轨迹责任区分后延伸到指标口径"
+    },
+    {
+      "from": "ch03.interview.m25.dataset-representation.001",
+      "to": "ch03.ml.evaluation-split.001",
+      "type": "extension",
+      "reason": "代表性与风险取样区别于调参/测试隔离"
+    },
+    {
+      "from": "ch03.interview.m26.object-identity.001",
+      "to": "ch03.interview.m26.ontology-layer.001",
+      "type": "prerequisite",
+      "reason": "先理解语义层再区分类与具体实例"
+    },
+    {
+      "from": "ch03.interview.m26.link-semantics.001",
+      "to": "ch03.interview.m26.object-identity.001",
+      "type": "prerequisite",
+      "reason": "类型化关系连接明确身份的实例"
+    },
+    {
+      "from": "ch03.interview.m26.action-function.001",
+      "to": "ch03.interview.m26.ontology-layer.001",
+      "type": "prerequisite",
+      "reason": "动态元素属于操作本体但动作与函数非同义"
+    },
+    {
+      "from": "ch03.interview.m26.intent-granularity.001",
+      "to": "ch03.interview.m26.action-function.001",
+      "type": "extension",
+      "reason": "从动作定义展开到多对象意图粒度"
+    },
+    {
+      "from": "ch03.interview.m26.projection-authority.001",
+      "to": "ch03.interview.m26.object-identity.001",
+      "type": "extension",
+      "reason": "统一引用不代表投影是最新权威状态"
+    },
+    {
+      "from": "ch03.interview.m26.object-data-permissions.001",
+      "to": "C07",
+      "type": "extension",
+      "reason": "通用执行授权扩展为Schema/实例/动作权限分层"
+    },
+    {
+      "from": "ch03.interview.m26.reference-operational.001",
+      "to": "ch03.interview.m26.link-semantics.001",
+      "type": "prerequisite",
+      "reason": "通用规则与实例通过明确关系关联"
+    },
+    {
+      "from": "ch03.interview.m26.extracted-rule-boundary.001",
+      "to": "ch03.interview.m26.action-function.001",
+      "type": "prerequisite",
+      "reason": "提取描述不等于配置完整的可执行动作"
+    },
+    {
+      "from": "ch03.interview.m26.draft-state-provenance.001",
+      "to": "ch03.interview.m26.link-semantics.001",
+      "type": "extension",
+      "reason": "段落与原始证据用语义关系追溯"
+    },
+    {
+      "from": "ch03.interview.m26.fde-delivery.001",
+      "to": "ch03.interview.m26.ontology-layer.001",
+      "type": "extension",
+      "reason": "FDE可选本体作为交付手段而非岗位全部"
+    },
+    {
+      "from": "ch04.interview.m01.executable-loop.001",
+      "to": "ch03.prompt.task-contract.001",
+      "type": "extension",
+      "reason": "软件事件验收依托明确输入/输出与约束，通用任务契约在3.9，不再复制模板卡"
+    },
+    {
+      "from": "ch04.interview.m01.reproduction-feedback.001",
+      "to": "ch03.prompt.regression-versioning.001",
+      "type": "extension",
+      "reason": "复现与修复后回归沿用版本/代表样例证据规范，检验对象由Prompt改为软件行为"
+    },
+    {
+      "from": "ch04.interview.m02.three-surface-contract.001",
+      "to": "ch03.interview.m13.result-contract.001",
+      "type": "extension",
+      "reason": "三工程API需要明确成功、失败和部分结果语义，复用既有结果契约"
+    },
+    {
+      "from": "ch04.interview.m02.fill-versus-submit.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "extension",
+      "reason": "投递结果未知时按已发表写操作恢复目标核对事实，避免重复提交"
+    },
+    {
+      "from": "ch04.interview.m03.task-fit.001",
+      "to": "ch04.interview.m01.executable-loop.001",
+      "type": "extension",
+      "reason": "编码工具候选需完成同一可运行行为验收，先理解软件改动结束条件"
+    },
+    {
+      "from": "ch04.interview.m03.provider-cost.001",
+      "to": "C12",
+      "type": "extension",
+      "reason": "免费工具仍需模型调用预算，C12提供假设单价及Token计费算术"
+    },
+    {
+      "from": "ch04.interview.m03.data-flow.001",
+      "to": "ch03.interview.m19.transport-compatibility.001",
+      "type": "compare",
+      "reason": "本地/远程连接形式和索引、推理、回传数据流是不同层次，不能从前者推出不出域"
+    },
+    {
+      "from": "C12",
+      "to": "ch03.token.request-monthly-cost.001",
+      "type": "compare",
+      "reason": "两张旧卡原有基础算术重叠；本轮仅兼容修订C12而非新增覆盖，不退役或重设学习状态"
+    },
+    {
+      "from": "ch05.interview.m01.concurrency-billing.001",
+      "to": "ch03.token.request-monthly-cost.001",
+      "type": "extension",
+      "reason": "真实调用用量预算基础上，纠正并发不是Token固定乘数"
+    },
+    {
+      "from": "ch05.interview.m01.paid-cohort.001",
+      "to": "ch03.token.request-monthly-cost.001",
+      "type": "extension",
+      "reason": "完整月度费用后仍需付费人数、免费/重度群体收入和成本，MAU不是收入分母"
+    },
+    {
+      "from": "ch05.interview.m01.cache-economics.001",
+      "to": "ch03.interview.m25.cache-identity.001",
+      "type": "compare",
+      "reason": "Prompt前缀计费缓存与评测输出/评分结果缓存是不同层次与失效条件"
+    },
+    {
+      "from": "ch05.interview.m01.batch-deadline.001",
+      "to": "ch03.interview.m24.failure-policy.001",
+      "type": "extension",
+      "reason": "异步批次须按受理/成功/失败/过期结果处理，折扣不免除业务失败分流"
+    },
+    {
+      "from": "ch05.interview.m02.pain-capability.001",
+      "to": "ch05.interview.m02.task-interview.001",
+      "type": "prerequisite",
+      "reason": "能力匹配需要先还原任务与现有痛点基线"
+    },
+    {
+      "from": "ch05.interview.m02.must-evidence.001",
+      "to": "ch05.interview.m02.pain-capability.001",
+      "type": "prerequisite",
+      "reason": "需求层级讨论依赖用户价值与能力条件对齐"
+    },
+    {
+      "from": "ch05.interview.m02.signal-hypothesis.001",
+      "to": "ch05.interview.m02.task-interview.001",
+      "type": "extension",
+      "reason": "日志现象与近期任务访谈互证，避免从行为直接编造动机"
+    },
+    {
+      "from": "ch05.interview.m03.blackbox-evidence.001",
+      "to": "ch05.interview.m03.matched-task.001",
+      "type": "compare",
+      "reason": "同任务实测描述产品表现，黑盒证据卡限制对内部路线的归因"
+    },
+    {
+      "from": "ch05.interview.m03.workflow-gap.001",
+      "to": "ch05.interview.m03.matched-task.001",
+      "type": "extension",
+      "reason": "把回答比较扩为输入到交付的场景闭环"
+    },
+    {
+      "from": "ch05.interview.m04.noncompensable-gate.001",
+      "to": "ch05.interview.m04.four-evidence.001",
+      "type": "extension",
+      "reason": "四维证据中必须区分可排序因素和不能补偿的硬约束"
+    },
+    {
+      "from": "ch05.interview.m04.conditional-plan.001",
+      "to": "ch05.interview.m04.four-evidence.001",
+      "type": "extension",
+      "reason": "把技术未知与风险依赖转换为受限交付计划"
+    },
+    {
+      "from": "ch05.interview.m04.priority-uncertainty.001",
+      "to": "ch05.interview.m04.noncompensable-gate.001",
+      "type": "prerequisite",
+      "reason": "排序先受硬门槛约束，再讨论分数敏感性"
+    },
+    {
+      "from": "ch05.interview.m05.release-contract.001",
+      "to": "C13",
+      "type": "extension",
+      "reason": "将可测质量标准延伸为目标/最低值/关键切片的发布判断"
+    },
+    {
+      "from": "ch05.interview.m05.data-delivery.001",
+      "to": "C13",
+      "type": "prerequisite",
+      "reason": "质量验收需要可交付且用途明确的数据范围"
+    },
+    {
+      "from": "ch05.interview.m05.failure-state.001",
+      "to": "ch05.interview.m05.release-contract.001",
+      "type": "extension",
+      "reason": "发布契约同时需要可测试的失效状态与用户感知"
+    },
+    {
+      "from": "ch05.interview.m06.matrix-residual.001",
+      "to": "ch05.interview.m06.risk-event-chain.001",
+      "type": "prerequisite",
+      "reason": "剩余风险判断需要先登记具体事件及后果"
+    },
+    {
+      "from": "ch05.interview.m06.risk-treatment.001",
+      "to": "ch05.interview.m06.matrix-residual.001",
+      "type": "extension",
+      "reason": "矩阵评审后选择改变活动/损失/概率的策略"
+    },
+    {
+      "from": "ch05.interview.m06.human-review-bias.001",
+      "to": "ch05.interview.m06.risk-treatment.001",
+      "type": "extension",
+      "reason": "人工审核作为降低策略还要验证实际纠错能力"
+    },
+    {
+      "from": "ch05.interview.m06.deletion-scope.001",
+      "to": "ch05.interview.m06.risk-event-chain.001",
+      "type": "extension",
+      "reason": "数据承诺的风险沿生命周期登记触发与派生副本"
+    },
+    {
+      "from": "C07",
+      "to": "ch05.interview.m07.five-layer-trace.001",
+      "type": "prerequisite",
+      "reason": "业务控制与模型生成责任需要先理解本课层次视图"
+    },
+    {
+      "from": "ch05.interview.m07.async-product-contract.001",
+      "to": "ch05.interview.m07.five-layer-trace.001",
+      "type": "extension",
+      "reason": "长任务将五层协作延伸为持久化状态与异步交付"
+    },
+    {
+      "from": "ch05.interview.m07.review-capacity.001",
+      "to": "ch05.interview.m07.async-product-contract.001",
+      "type": "extension",
+      "reason": "人工审核队列也需等待状态与交付期限，不能只画接管箭头"
+    },
+    {
+      "from": "ch06.interview.m01.video-continuity.001",
+      "to": "ch06.interview.m01.brief-control.001",
+      "type": "compare",
+      "reason": "静态商品约束与视频跨帧一致性都关心身份保持，但视频必须检查状态转移而不只输出单张图"
+    },
+    {
+      "from": "ch06.interview.m02.citation-location.001",
+      "to": "ch03.rag.conflicting-sources.001",
+      "type": "extension",
+      "reason": "冲突判断依赖来源适用性，引用入口进一步让用户打开回答使用的具体版本核对支持关系"
+    },
+    {
+      "from": "ch06.interview.m02.expert-knowledge.001",
+      "to": "ch06.interview.m02.vin-context.001",
+      "type": "prerequisite",
+      "reason": "维修经验入库的适用范围必须保留VIN关联配置及实车差异，否则个案会误推广给其他车辆"
+    },
+    {
+      "from": "ch06.interview.m03.page-completeness.001",
+      "to": "ch06.interview.m03.comparable-price.001",
+      "type": "compare",
+      "reason": "可比价格要确认字段语义，页面完整性要确认目标范围：记录采对与记录采全分别是交付所需证据"
+    },
+    {
+      "from": "ch06.interview.m04.compensation-authority.001",
+      "to": "C07",
+      "type": "prerequisite",
+      "reason": "情绪只能改变服务优先级；赔偿写操作仍由工具授权与实际执行结果约束"
+    },
+    {
+      "from": "ch06.interview.m04.mixed-service-intent.001",
+      "to": "ch06.interview.m04.handoff-ownership.001",
+      "type": "extension",
+      "reason": "混合诉求的未完成项与条件关系要进入坐席交接，避免人工只处理最后一句话"
+    },
+    {
+      "from": "ch06.interview.m05.workspace-change-ownership.001",
+      "to": "ch06.interview.m05.delegation-package.001",
+      "type": "compare",
+      "reason": "委派任务需先明确目标和责任；撤销功能则要保留真实工作区基线与各方变更归属，任务范围不能替代文件增量边界"
+    },
+    {
+      "to": "ch07.interview.m01.network-effect.001",
+      "type": "compare",
+      "reason": "交互改进闭环与跨参与者外部性不同；不能把个人数据积累直接称网络效应",
+      "from": "ch07.interview.m01.data-loop.001"
+    },
+    {
+      "to": "ch07.interview.m01.data-loop.001",
+      "type": "prerequisite",
+      "reason": "检验数据壁垒先需要证明反馈治理到任务增益的有效闭环",
+      "from": "ch07.interview.m01.moat-test.001"
+    },
+    {
+      "to": "ch07.interview.m01.incremental-return.001",
+      "type": "compare",
+      "reason": "生命周期获客回收看客户持续贡献，模型升级看方案增量收益，期间和分母不同",
+      "from": "ch07.interview.m01.cohort-payback.001"
+    },
+    {
+      "to": "ch07.interview.m02.billing-incentive.001",
+      "type": "extension",
+      "reason": "选择结果计费后进一步约定失败成本、外部责任和任务范围，避免成功单位掩盖履约风险",
+      "from": "ch07.interview.m02.outcome-contract.001"
+    },
+    {
+      "to": "ch07.interview.m02.billing-incentive.001",
+      "type": "compare",
+      "reason": "结果计费在工单成功与交易结算中各有不同状态、归因和激励边界",
+      "from": "ch07.interview.m02.commission-base.001"
+    },
+    {
+      "to": "ch07.interview.m02.custom-delivery.001",
+      "type": "compare",
+      "reason": "托管支持把免费模型转服务收入，企业定制需区分可复用与专属交付",
+      "from": "ch07.interview.m02.open-service.001"
+    },
+    {
+      "to": "ch07.interview.m03.chain-flow.001",
+      "type": "prerequisite",
+      "reason": "先辨每层交付对象，再追溯看似独立供应商共用的上游瓶颈",
+      "from": "ch07.interview.m03.bottleneck.001"
+    },
+    {
+      "to": "ch07.interview.m03.bottleneck.001",
+      "type": "extension",
+      "reason": "可用替代还需支付算子与工具链迁移验证成本，不能只数供应商",
+      "from": "ch07.interview.m03.migration-economics.001"
+    },
+    {
+      "to": "ch07.interview.m03.bottleneck.001",
+      "type": "extension",
+      "reason": "真正替代与议价能力决定上游节省在应用、客户和竞品间如何传导",
+      "from": "ch07.interview.m03.price-transmission.001"
+    },
+    {
+      "to": "ch07.interview.m03.chain-flow.001",
+      "type": "extension",
+      "reason": "层间服务边界确定供应商声明覆盖范围，应用仍需自己的责任证据",
+      "from": "ch07.interview.m03.responsibility-map.001"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "module_id": "3.26",
+  "relations": [
+    {
+      "from": "ch03.interview.m26.object-identity.001",
+      "to": "ch03.interview.m26.ontology-layer.001",
+      "type": "prerequisite",
+      "reason": "先理解语义层再区分类与具体实例"
+    },
+    {
+      "from": "ch03.interview.m26.link-semantics.001",
+      "to": "ch03.interview.m26.object-identity.001",
+      "type": "prerequisite",
+      "reason": "类型化关系连接明确身份的实例"
+    },
+    {
+      "from": "ch03.interview.m26.action-function.001",
+      "to": "ch03.interview.m26.ontology-layer.001",
+      "type": "prerequisite",
+      "reason": "动态元素属于操作本体但动作与函数非同义"
+    },
+    {
+      "from": "ch03.interview.m26.intent-granularity.001",
+      "to": "ch03.interview.m26.action-function.001",
+      "type": "extension",
+      "reason": "从动作定义展开到多对象意图粒度"
+    },
+    {
+      "from": "ch03.interview.m26.projection-authority.001",
+      "to": "ch03.interview.m26.object-identity.001",
+      "type": "extension",
+      "reason": "统一引用不代表投影是最新权威状态"
+    },
+    {
+      "from": "ch03.interview.m26.object-data-permissions.001",
+      "to": "C07",
+      "type": "extension",
+      "reason": "通用执行授权扩展为Schema/实例/动作权限分层"
+    },
+    {
+      "from": "ch03.interview.m26.reference-operational.001",
+      "to": "ch03.interview.m26.link-semantics.001",
+      "type": "prerequisite",
+      "reason": "通用规则与实例通过明确关系关联"
+    },
+    {
+      "from": "ch03.interview.m26.extracted-rule-boundary.001",
+      "to": "ch03.interview.m26.action-function.001",
+      "type": "prerequisite",
+      "reason": "提取描述不等于配置完整的可执行动作"
+    },
+    {
+      "from": "ch03.interview.m26.draft-state-provenance.001",
+      "to": "ch03.interview.m26.link-semantics.001",
+      "type": "extension",
+      "reason": "段落与原始证据用语义关系追溯"
+    },
+    {
+      "from": "ch03.interview.m26.fde-delivery.001",
+      "to": "ch03.interview.m26.ontology-layer.001",
+      "type": "extension",
+      "reason": "FDE可选本体作为交付手段而非岗位全部"
+    }
+  ]
+}

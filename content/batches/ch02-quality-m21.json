@@ -1,0 +1,295 @@
+{
+  "batch_id": "ch02-quality-m21",
+  "status": "accepted",
+  "chapter_position": 2,
+  "cards": [
+    {
+      "canonical_key": "ch02.ai.discriminative-vs-generative.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+      "concept_keys": [
+        "ai.discriminative-vs-generative"
+      ],
+      "revision": 2,
+      "position": 1,
+      "title": "判别式与生成式 AI",
+      "kind": "对比",
+      "prompt": "判别式 AI 与生成式 AI 在任务、输出和 PM 关注点上有什么根本差异？同一个业务里能各举一个任务吗？",
+      "answer_short": "任务上，判别式在既有选项中分类或预测（阅卷老师），生成式创造新内容（作文老师）；输出上，前者是标签/分数、确定性较高，后者是开放文本、概率性波动；PM 关注点前者看准确率/召回，后者看质量、可控性、幻觉和成本。同业务例子：电商里「评论情感分类」是判别式，「自动生成商品文案」是生成式。",
+      "required_points": [
+        "任务维：分类预测 vs 内容生成，并能各举一例",
+        "输出维：确定标签 vs 开放概率输出，失败方式分别为误分与幻觉/失控",
+        "PM 关注点维：准确率召回 vs 质量可控性幻觉成本"
+      ],
+      "pitfalls": "不要把两者理解为新旧替代关系：成熟产品常同时组合使用（如客服系统用判别式做意图识别、生成式写回复）。也不能用单一准确率去覆盖生成质量。",
+      "explanation": "原文用「阅卷老师 vs 作文老师」区分两者：判别式给输入打分或选择，输出空间有限；生成式从零创作，输出空间开放。PM 关注点的差异由输出性质决定：判别式的错误是离散的误分类，用准确率/召回率就能度量；生成式的错误是连续的质量问题（太简略、跑题、编造），需要质量评估、可控性约束和幻觉防护，且每次生成都消耗成本。编辑补充：判断一个功能属于哪类，看它的输出空间——有限选项内做选择是判别式，产出新内容是生成式；客服机器人往往两者都有。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+          "content_hash": "309aee25ae043562127c5da81fc2dfc27ebd550d24acbb9beaf3c3eb3b14d205",
+          "line_start": 152,
+          "line_end": 210
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：标准§1点名卡，三维逐一对齐+同业务两例+组合边界"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.generative.pm-shift.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+      "concept_keys": [
+        "generative.pm-shift"
+      ],
+      "revision": 2,
+      "position": 2,
+      "title": "生成式 AI 改变 PM 工作",
+      "kind": "对比",
+      "prompt": "生成式 AI 为什么会把 PM 的重心从功能正确转向生成质量管理？",
+      "answer_short": "因为输出不再是固定答案：同一输入可能得到不同质量的结果，功能「能跑」不代表「答得好」。PM 的重心随之转为管理生成质量：用 Prompt 与上下文约束行为、管理幻觉与成本、设计重试/反馈/流式交互和失败兜底。",
+      "required_points": [
+        "说出机制：输出开放且波动，正确性从二元变为连续光谱",
+        "说出至少三项质量管理动作：约束、评估、交互、兜底",
+        "指出质量是模型+上下文+交互+运营共同作用，不是只调提示词"
+      ],
+      "pitfalls": "只优化提示词无法覆盖数据、成本、交互和失败处理；也不要以为功能测试通过就等于生成质量达标——两者是不同验收对象。",
+      "explanation": "传统功能的对错由逻辑决定，测试通过即收敛；生成式功能的「对」是程度问题，且随输入分布漂移。编辑补充：PM 动作因此分成四层——约束层（Prompt/System Prompt）、评估层（测试集+准确率）、交互层（流式、重试、反馈入口）、兜底层（答不出转人工）。这四个动作在1.5的PRD八项和2.1的五坑里反复出现，是生成式产品的最小质量管理系统。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+          "content_hash": "309aee25ae043562127c5da81fc2dfc27ebd550d24acbb9beaf3c3eb3b14d205",
+          "line_start": 72,
+          "line_end": 86
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补四层质量管理系统；跨模块印证为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.agent.task-to-action.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+      "concept_keys": [
+        "agent.task-to-action"
+      ],
+      "revision": 2,
+      "position": 3,
+      "title": "Agent 从回答走向行动",
+      "kind": "概念",
+      "prompt": "Agent 产品相对对话式 AI 新增了什么能力？这给 PM 增加了哪些设计责任？",
+      "answer_short": "Agent 能围绕目标拆解任务、调用工具并多步执行，从「回答」走向「行动」。PM 的新增责任：定义任务流、授权边界、完成标准、错误兜底和用户信任机制。",
+      "required_points": [
+        "说出能力跃迁：目标拆解+工具调用+多步执行",
+        "说出至少三项 PM 新增责任：任务流、授权、完成标准、兜底、信任",
+        "说出授权边界原则：读操作可宽、写操作和高风险动作必须受控"
+      ],
+      "pitfalls": "能调用工具不等于可以无限自主：订机票和查天气的错误代价天差地别，授权必须分级。把 Agent 当“更聪明的聊天框”会漏掉整个执行安全设计。",
+      "explanation": "行动能力扩大价值，也同步扩大误操作与数据风险。编辑补充：PM 侧可以按「读/写/高风险」三级思考授权——查询类工具默认放行，创建修改类需确认，支付/删除/外发类必须人工批准+可回滚。完成标准也要显式定义：Agent「说自己做完了」不等于做完，需要可观察的验证点。这是3.12 Agent 模块的入门框架。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+          "content_hash": "309aee25ae043562127c5da81fc2dfc27ebd550d24acbb9beaf3c3eb3b14d205",
+          "line_start": 88,
+          "line_end": 112
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补授权三级框架与完成标准验证点；为3.12铺垫"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.delivery.deterministic-vs-probabilistic.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+      "concept_keys": [
+        "delivery.deterministic-vs-probabilistic"
+      ],
+      "revision": 2,
+      "position": 4,
+      "title": "确定性交付与概率性交付",
+      "kind": "对比",
+      "prompt": "传统软件的确定性交付与 AI 产品的概率性交付，在测试方式和上线标准上有什么不同？",
+      "answer_short": "确定性交付：逻辑可穷举，测试通过+0 P0 Bug 即可上线。概率性交付：输入无法穷举，用代表性测试集评估准确率，上线标准是「准确率达标+容错设计完善」，目标从「没有Bug」变为「85%正确+15%容错不崩」。",
+      "required_points": [
+        "测试方式：路径穷举 vs 测试集采样评估",
+        "上线标准：0 Bug 容忍 vs 准确率达标+容错设计",
+        "PM 心态：掌控感 vs 管理失控感（只能把概率从80%推到90%）"
+      ],
+      "pitfalls": "概率性交付不代表可以接受任意错误，也不应机械追求100%正确；可接受阈值必须根据场景风险与用户价值设定，85%只是原文示例口径。",
+      "explanation": "原文用电商下单（检查库存→余额→生成订单，每步逻辑确定）对照 AI 客服（同一问题有多种可能回答，含幻觉和重复），说明两种交付的本质差异：前者的质量在开发期就确定，后者的质量只能在分布上管理。编辑补充：这条主线贯穿后续所有模块——测试集（3.25）、容错兜底（1.5/3.12）、持续监控（3.23）都是「管理概率」的具体工具。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+          "content_hash": "309aee25ae043562127c5da81fc2dfc27ebd550d24acbb9beaf3c3eb3b14d205",
+          "line_start": 259,
+          "line_end": 326
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：测试/上线/心态三维对齐原文表格；主线衔接为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.quality.badcase.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+      "concept_keys": [
+        "quality.badcase"
+      ],
+      "revision": 2,
+      "position": 5,
+      "title": "Bad Case 不是传统 Bug",
+      "kind": "对比",
+      "prompt": "怎样区分 AI Bad Case 与传统软件 Bug？处理动作有什么不同？",
+      "answer_short": "Bug 是确定性逻辑不符合预期：一定报错、可稳定复现、改代码修复、修复后彻底解决、0容忍。Bad Case 是系统没报错但输出效果不好：可能偶发、修复靠调 Prompt/补数据/改产品兜底、这个修好可能冒出新的、必须接受一定存在。",
+      "required_points": [
+        "定义差异：功能失败（报错）vs 效果失败（不报错但不好）",
+        "处理差异：提Bug单改代码 vs 归因后写进优化清单（提示/数据/兜底）",
+        "说出 Bad Case 三类例子之一：答非所问、质量不达标、幻觉（最严重）"
+      ],
+      "pitfalls": "Bad Case 不是无需处理的主观抱怨，应进入可分类、可度量的优化清单；同一表现也可能同时包含工程 Bug 与模型效果问题，先定位根因再决定改哪边。",
+      "explanation": "原文用七维表格对比（定义/报错/复现/修复方式/修复后/容忍度/PM动作），核心差异是：Bug 是离散故障，修复即收敛；Bad Case 是分布问题，只能持续压降。编辑补充：这决定了两个系统的质量工程不同——Bug 管理看「清零」，Bad Case 管理看「分级+趋势」：按频率和代价分级，每周看占比变化，而不是追求修完。幻觉类 Bad Case（编造不存在的信息）因为直接摧毁信任，通常单独定级。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+          "content_hash": "309aee25ae043562127c5da81fc2dfc27ebd550d24acbb9beaf3c3eb3b14d205",
+          "line_start": 328,
+          "line_end": 360
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：七维压缩为三必答+三类例子；分级管理为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.ai-pm.postlaunch.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+      "concept_keys": [
+        "ai-pm.postlaunch"
+      ],
+      "revision": 2,
+      "position": 6,
+      "title": "AI 上线不是终点",
+      "kind": "机制",
+      "prompt": "为什么 AI 产品上线后必须持续收集 Bad Case，而不能只等待传统故障告警？",
+      "answer_short": "因为 Bad Case 不触发告警——系统运行正常但效果不好；且线上输入分布不断变化，会持续暴露测试集未覆盖的问题。需要监控、归因、回流评测集并验证优化，形成永不停歇的迭代。",
+      "required_points": [
+        "说出告警盲区：效果失败不报错，传统监控看不见",
+        "说出分布漂移：线上问法和场景会变，模型效果会衰退",
+        "说出回流动作：Bad Case 归因后补充进评测集，优化后重新验证"
+      ],
+      "pitfalls": "只统计投诉数量或只改个别回答，都无法判断整体质量是否改善；个案修复不等于分布改善，必须看测试集指标的变化。",
+      "explanation": "传统软件上线后稳定是常态，例外是 Bug；AI 产品相反，每天都有新 Bad Case 是常态。编辑补充：这决定了 PM 的时间分配——上线后固定动作是「每天看 Bad Case、每周优化 Prompt、定期扩测试集」。孤立 Bad Case 的价值在于回流：每一个被归因的失败都让评测集更贴近真实分布，测试资产因此越用越强。这与1.5持续优化闭环是同一机制的两面表述。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+          "content_hash": "309aee25ae043562127c5da81fc2dfc27ebd550d24acbb9beaf3c3eb3b14d205",
+          "line_start": 350,
+          "line_end": 360
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：告警盲区+漂移机制补齐；时间分配建议为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.ai-pm.traps.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+      "concept_keys": [
+        "ai-pm.traps"
+      ],
+      "revision": 1,
+      "position": 26,
+      "title": "转型最容易踩的五个坑",
+      "kind": "场景判断",
+      "prompt": "传统 PM 转 AI PM 最容易踩的五个坑是什么？它们共同源于哪种认知错位？",
+      "answer_short": "五坑：追求100%准确率、用if-else逻辑管AI、测试期追求0 Badcase、上线后就不管、不设计容错机制。共同根源是把确定性交付的思维套到概率系统上。",
+      "required_points": [
+        "至少说出三个坑及其「传统思维→现实→AI PM思维」结构",
+        "指出共同根源：用确定性思维管理概率系统",
+        "说出容错设计在 AI 产品中比功能设计更重要的原文判断"
+      ],
+      "pitfalls": "坑与坑会互相加固：追求0 Badcase（坑3）导致永远无法上线（坑1），上线后不管（坑4）又放大没有容错（坑5）的代价。85%是原文示例口径，不是通用上线线。",
+      "explanation": "原文（401–448行）逐坑给出「传统PM思维/现实/AI PM思维」三段：坑1追求100%准确率——GPT-4级别也就85%-95%，追求100%意味着永远不上线；坑2用if-else管AI——问法无法穷举，要用System Prompt+测试集+容错；坑3测试期追求0 Badcase——Badcase永远修不完，达标+重点修复即可上线；坑4上线后不管——每天看Badcase每周优化；坑5不设计容错——AI约15%概率出错，没有容错体验就崩。编辑补充：五坑是同一条主线的五个投影，自查方法很简单——看自己正在做的决策，是不是隐含了「AI应该做到确定」的假设。",
+      "estimated_seconds": 65,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+          "content_hash": "309aee25ae043562127c5da81fc2dfc27ebd550d24acbb9beaf3c3eb3b14d205",
+          "line_start": 399,
+          "line_end": 448
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "五坑全收+共同根源；坑间互相加固与数字口径为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.ai-pm.specializations.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+      "concept_keys": [
+        "ai-pm.specializations"
+      ],
+      "revision": 1,
+      "position": 27,
+      "title": "AI PM 的细分方向",
+      "kind": "概念",
+      "prompt": "AI PM 可以按哪三种方式划分细分方向？选择方向时应该看什么？",
+      "answer_short": "三种划分：按技术方向（大模型应用、推荐策略、CV、语音多模态、基础设施）、按业务场景（AIGC、企业知识库、个人助理、垂直领域）、按能力层级（初级到专家）。选择时看自己的背景与目标场景的核心挑战是否匹配。",
+      "required_points": [
+        "说出三种划分方式及各至少两个例子",
+        "说出选择依据：方向的核心挑战（如推荐=平衡体验与商业、垂直=领域知识+合规）与个人背景的匹配",
+        "指出薪资区间等数字是时效信息，方向结构比数字稳定"
+      ],
+      "pitfalls": "不要按「哪个方向火」选择：方向差异本质是技术栈与业务约束的差异，选择错误代价是长期积累的领域经验作废。层级表是能力要求参考，不是晋升承诺。",
+      "explanation": "原文（365–397行）给出三张表：技术方向表（各方向核心工作+所需技术）、业务场景表（各场景核心挑战）、能力层级表（各层级能力要求）。编辑补充：三张表的正确用法是交叉定位——先按场景选领域（决定你面对的核心挑战），再按技术方向确认要补的知识，最后用能力层级表自评差距。例如想做企业知识库，核心挑战是数据安全与私有化，对应要补 RAG 与权限设计。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.1-宏观了解-AI-PM.md",
+          "content_hash": "309aee25ae043562127c5da81fc2dfc27ebd550d24acbb9beaf3c3eb3b14d205",
+          "line_start": 365,
+          "line_end": 397
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "三划分还原；交叉定位用法为编辑补充；薪资数字排除出必答点"
+        ]
+      }
+    }
+  ]
+}

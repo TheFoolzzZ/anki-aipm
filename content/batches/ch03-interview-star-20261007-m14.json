@@ -1,0 +1,283 @@
+{
+  "batch_id": "ch03-interview-star-20261007-m14",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m14.context-on-demand.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-on-demand"
+      ],
+      "revision": 2,
+      "position": 2404,
+      "title": "按需上下文的依赖核对",
+      "kind": "场景判断",
+      "prompt": "假设代码助手只看login摘要就要改返回字段，调用方和接口很大。你会如何按需获取足够上下文，避免全仓预载或只信摘要？",
+      "answer_short": "S｜返回字段可能影响未读的调用方。\nT｜取得本次改动所需的真实接口和依赖。\nA｜一、定位当前实现与接口，查使用该字段的调用方、类型和错误契约。二、按路径、符号和版本指针粗到细读取必要细节，不把全仓都塞入。三、摘要冲突或入口缺失时回到原文查证，并核对实际调用行为。\nR｜预期输入更聚焦且依赖不漏；检查受影响调用并记录未读边界，按需查询也会增加等待。",
+      "required_points": [
+        "读实现接口及相关调用依赖，不能只读修改点",
+        "轻量来源指针和层次筛选后读取真实细节",
+        "补查摘要或粗层遗漏，以行为证据核验范围"
+      ],
+      "pitfalls": "函数签名可能过期；粗层选错入口后细检索再准也无用。",
+      "explanation": "假设login原来返回user，新方案改为account，调用方仍访问user时就会失效。摘要用于定位，不一定保留默认值、错误和副作用。按需加载的收益取决于任务，不能承诺比预载总更快；应保留可回查来源并补读关键依赖。\n【面试追问】摘要与源码冲突怎么处理？参考答案：核对当前版本，以真实实现及运行证据为准，再修摘要。\n【评分】依赖追踪、按需来源、遗漏处理三项必答；只读摘要不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 248,
+          "line_end": 255
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 404,
+          "line_end": 423
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "STAR围绕返回字段依赖补读，保留按需/层次检索机制和失败点。",
+          "具体案例、处理顺序和验收为编辑假设/推演，非实测成果。",
+          "独立审校通过：保留按需上下文与调用依赖目标，STAR从当前实现/接口追返回字段的调用方与错误契约，再按路径符号版本粗到细，摘要冲突回原文；login user/account反例解释故障，追问核当前源码和运行，R明确未读边界及按需等待代价。",
+          "独立审校内容指纹：5d1c17081da640056c22ed22d133cd3c041b51e21041c7ce52c3bc976bf6db77"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.embedding-codec-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "embedding-codec-boundary"
+      ],
+      "revision": 2,
+      "position": 2405,
+      "title": "检索向量不是原文压缩存档",
+      "kind": "场景判断",
+      "prompt": "有人想删掉退款原文，只保存普通检索Embedding，需要时解码出精确条款。这个想法错在哪，应该保存什么？",
+      "answer_short": "一、普通检索Embedding训练用于相关性表示，不提供精确还原字串的无损解码契约；生成相似文字不是恢复制度证据。\n二、应保留受控原文或可核验的证据块及来源、版本、定位指针；向量找到位置，再按权限加载真实条件。\n三、专门潜空间压缩可能有配套解码方法，但要单独验证误差与任务，不把它同普通检索向量混用，也不承诺固定压缩率。",
+      "required_points": [
+        "检索表示与可逆无损编码不同",
+        "保存可核验文本出处版本，向量负责定位",
+        "专门压缩另看方法误差，拒绝通用解码或压缩率"
+      ],
+      "pitfalls": "此题不否定专门可解码研究；否定的是普通检索向量自动提供精确原文。",
+      "explanation": "假设条款区分“已拆封不可退”与“未拆封可退”，即便表示语义相近，也必须保留否定和状态。普通相似度向量没有供调用方依约还原原字串的接口，不能让生成模型猜私有细节。原文L214未交代编码解码机制，因此按既有台账第一方核对作边界纠正。\n【面试追问】用摘要替原文呢？参考答案：摘要也可能丢条件，关键依据仍需可回查。\n【评分】表示用途、证据保留、专门方法边界必答；从向量能猜就认定还原不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 166,
+          "line_end": 223
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "编号保留技术辨析，纠正原文无解码契约的向量压缩外推，未强套STAR。",
+          "具体案例、处理顺序和验收为编辑假设/推演，非实测成果。",
+          "独立审校通过：保留检索Embedding与无损编码区别，编号解释任务相关表示不提供原字串还原契约、应保存受控原文/版本/定位并按权限加载；否定退款条件例子具体，摘要追问指出同样有损。第一方Embedding用途支持边界，未否定专门解码研究或声称固定压缩率。",
+          "独立审校内容指纹：8317da3918e5cd25819590bde9c69cf5c2915bc3d6f5ca34486b0c8021d89044"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.context-scope.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-scope"
+      ],
+      "revision": 2,
+      "position": 2401,
+      "title": "上下文工程与Prompt及RAG的关系",
+      "kind": "概念",
+      "prompt": "上下文工程优化的对象是什么？请说明它与Prompt Engineering、RAG的重叠，不能把三者绝对切成哪些边界？",
+      "answer_short": "一、上下文工程管理每次推理实际可见的信息，决定取什么、怎样组织、何时更新及放多少；包含指令、工具描述、资料与历史状态。\n二、Prompt Engineering重点是指令和表达约束，指令本身就在上下文里，所以两者有重叠，而非指令与背景互斥。\n三、RAG通过检索提供生成证据，筛选和组装证据也属于上下文管理；它不只负责找资料。三个术语描述关注面和链路，不是只能选一个的方案。",
+      "required_points": [
+        "对象是每次推理实际可见的信息集合",
+        "指令工程与上下文工程重叠但重点不同",
+        "RAG含证据检索组织生成，与上下文管理重叠"
+      ],
+      "pitfalls": "窗口更大不保证模型利用更好；上下文也不等于持久记忆。",
+      "explanation": "假设制度问答要保留例外、排除旧版并要求引用，三个改动分别涉及资料筛选、组装与指令，却都作用于同一请求。资料缺失时仅润色指令补不出事实，资料齐全但任务含糊时又需要改指令。原文“RAG只管找”的切割不沿用。\n【面试追问】一次检索足够完成上下文工程吗？参考答案：还须看最终可见内容、时间权限、预算和多轮状态更新。\n【评分】对象及两处重叠必答；只给术语定义或绝对分层不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 36,
+          "line_end": 66
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 94,
+          "line_end": 119
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "编号从实际可见输入解释三者关系，保持概念目标并纠正绝对切割。",
+          "具体案例、处理顺序和验收为编辑假设/推演，非实测成果。",
+          "独立审校通过：保留每次推理实际可见信息以及Prompt/RAG重叠目标，三个编号含指令工具资料历史、指令与背景重叠及检索组织生成；制度例子解释缺资料与任务含糊需不同修复，追问覆盖时间权限预算状态，不照搬RAG只找不组织。",
+          "独立审校内容指纹：fb65d09b674fffb5524c3a5aad3525ddd217ccfe4fe61a7b63839ef4e3ec7dba"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.context-utilization-limit.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-utilization-limit"
+      ],
+      "revision": 2,
+      "position": 2406,
+      "title": "未引用不等于无用",
+      "kind": "故障诊断",
+      "prompt": "假设团队按未引用Token删上下文，连权限限制和退款例外也要删。你会怎样解释指标局限，并验证精简是否有效？",
+      "answer_short": "S｜团队把输出引用当成全部信息使用痕迹。\nT｜减少冗余而不破坏资格判断和行为限制。\nA｜一、列任务必要事实、条件、例外与权限基线，未引用也可能约束拒答。二、核对最终输入和输出主张，而非只数引用。三、固定模型任务做去除信息对照，比较普通和边界例的正确合规、Token与延迟。\nR｜只移除证据显示可省的信息；限制删掉后越权或误答就回退，不以引用率变高放行。",
+      "required_points": [
+        "未引用可能约束决策，引用率不是必要性指标",
+        "建立含事实硬约束的基线并查实际输入主张",
+        "精简对照同时看边界正确合规与资源代价"
+      ],
+      "pitfalls": "人工理想上下文也可能漏条件；引用所有块并不证明主张受支持。",
+      "explanation": "假设用户无权看他人订单，正确系统会拒绝，未必在回复引用权限条款，但条款仍影响允许行为。删掉它让引用率上升，可能同时让系统泄露数据。利用率只能提示待查冗余，无法直接观测模型内在使用哪些信息。\n【面试追问】引用所有资料算高质量吗？参考答案：可能只堆引用，应逐主张查支持、切题和合规。\n【评分】局限、必要基线、对照验证必答；按引用率直接删除判未掌握。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 431,
+          "line_end": 439
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 481,
+          "line_end": 516
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 530,
+          "line_end": 534
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "STAR用边界对照反驳利用率误读，保留指标测量对象而非泛化上线题。",
+          "具体案例、处理顺序和验收为编辑假设/推演，非实测成果。",
+          "独立审校通过：保留未引用不等于浪费及精简验证目标，STAR建立事实/条件/权限基线，再看实际输入主张与边界对照；拒答不引用权限条款的例子说明引用率不是内在利用证据。R越权即回退，人工基线也可能漏条件，未用固定比例替代内容判断。",
+          "独立审校内容指纹：6aa598272e483a01be1d71f1460e24b2d4398362a65ea821c0149cfba936b148"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.context-task-state.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-task-state"
+      ],
+      "revision": 2,
+      "position": 2403,
+      "title": "压缩历史须保留的状态",
+      "kind": "机制",
+      "prompt": "长任务只留最近工具输出，将预算、已选航班和支付超时删掉。任务状态应保留什么？为什么不能把支付超时压成“失败已隔离”？",
+      "answer_short": "一、保留目标、硬约束、确认选择和下一步依赖，它们即使很早出现也决定后续合法动作；最近步数不代表重要性。\n二、区分已完成、明确失败、未知和待办，并保留业务ID、证据位置及版本，必要时回读细节。\n三、支付超时只是结果未知，后台可能已执行；隔离错误内容不能抹去动作历史，应先查真实订单。摘要不是业务事实的替代。",
+      "required_points": [
+        "关键约束和选择持续保留，不按最近数量机械截取",
+        "状态分类与证据标识可回查",
+        "超时未知须回读，隔离错误不删除执行事实"
+      ],
+      "pitfalls": "不需保留全部聊天；错误数值可停止使用，真实尝试和副作用仍要留证据。",
+      "explanation": "假设支付请求已发而响应丢失，摘要若写“失败已处理”，下一轮可能再付一次。用简短状态表记录未知请求和来源，既省上下文又保留恢复依据。早期预算是稳定约束，新的候选机票是可淘汰信息，不能按时间顺序一刀切。本题解释状态机制，用编号而非重述恢复STAR。\n【面试追问】摘要写成功，业务回读未成功信谁？参考答案：核对同请求和当前业务状态，修摘要并保持证据边界。\n【评分】约束、状态证据、未知语义必答；把超时当未执行不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 109,
+          "line_end": 119
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 367,
+          "line_end": 402
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "编号解释重要性选取与状态压缩，明确错误隔离不能抹去真实执行历史。",
+          "具体案例、处理顺序和验收为编辑假设/推演，非实测成果。",
+          "独立审校通过：保留长任务硬约束、状态分类和未知付款机制，编号解释早期选择仍决定合法后续、证据ID/版本可回查及超时不证明未执行；丢响应摘要为失败会再付的例子具体，追问核同请求业务状态。无需保留全聊天，但不能抹去真实尝试和副作用。",
+          "独立审校内容指纹：7fbd0c6970b1a0795815ca3ad0b509abb2c04fbd1cc820a993dbbc78accf5c81"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m14.context-record-contract.001",
+      "lesson_source_key": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "concept_keys": [
+        "context-record-contract"
+      ],
+      "revision": 2,
+      "position": 2402,
+      "title": "时间与业务状态的上下文标注",
+      "kind": "场景判断",
+      "prompt": "假设订单表是refunded，前天客服说申请中，下月新政策已发布。你会怎样组织依据，避免模型把它们拼成同一当前事实？",
+      "answer_short": "S｜业务状态、口述记录和未来政策混在上下文中。\nT｜回答当前这笔退款，以适用证据而非最新文本为准。\nA｜一、按对象/事件标注来源、获取时间、事件时间与生效范围。二、区分申请与执行状态，回读权威业务记录；未来政策按生效日处理。三、明确主规则例外及未解释冲突，缺元数据就核实。\nR｜测试历史状态和未来规则样例，预期不再错用时间；仍不能裁决时保留缺口，不拼接确定结论。",
+      "required_points": [
+        "区分获取事件生效时间并关联对象来源",
+        "分清业务阶段与权威范围，最近不等于当前适用",
+        "标明关系冲突与缺口，以当前记录核验"
+      ],
+      "pitfalls": "时间衰减是检索启发，不能替代政策效力或订单真值。",
+      "explanation": "申请中可能是退款前一阶段，订单表可能是后续状态，也可能不是同一订单；先看对象与事件。假设今天读取下月生效政策，读取新并不代表今天可执行。把来源和时态显式分开，模型才能解释变化而不把冲突去重掉。\n【面试追问】旧记录都该删吗？参考答案：有关历史可解释变化，应标注时间效力，保留能核对的状态演变。\n【评分】时间分类、业务权威、冲突处理齐全；仅按日期排序不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 129,
+          "line_end": 164
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 258,
+          "line_end": 264
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+          "content_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+          "line_start": 299,
+          "line_end": 326
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "STAR将时间类型和状态阶段显式分开，仍以记录契约为主目标。",
+          "具体案例、处理顺序和验收为编辑假设/推演，非实测成果。",
+          "独立审校通过：保留订单/客服口述/未来制度的时态与权威目标，STAR区分对象、获取/事件/生效时间，回读当前订单并标关系冲突；今天读未来政策不适用于今天的例子有因果，追问允许相关历史，R缺元数据保留不确定，不按最近文本拼事实。",
+          "独立审校内容指纹：2322bb8fc3d8ac33202a8d45238d83c5e2b63f221f8a4efb3b3c3fc4fdf727d2"
+        ]
+      }
+    }
+  ]
+}

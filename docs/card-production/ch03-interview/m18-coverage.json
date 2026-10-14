@@ -1,0 +1,378 @@
+{
+  "module_id": "3.18",
+  "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+  "source_line_count": 535,
+  "native_objectives": 12,
+  "registered": 12,
+  "practice_completed": 0,
+  "publication_status": "published_and_verified_2026-10-02",
+  "objectives": [
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O01",
+      "original_text": "*   [ ] **体验 A2A**：访问 Google 的 A2A 开源仓库（google/A2A），阅读官方示例，理解 Agent Card 的 JSON 结构。",
+      "source_line": 502,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m18.agent-discovery.001",
+        "ch03.interview.m18.task-lifecycle.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "体验是实践；短卡先掌握发现与任务语义",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O02",
+      "original_text": "*   [ ] **盘点现有产品**：梳理你负责的 AI 产品中，哪些场景涉及\"多 Agent 协作\"或\"与外部系统对接\"，标记 A2A 可能适用的点。",
+      "source_line": 503,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m18.delegation-boundary.001",
+        "ch03.interview.m18.protocol-composition.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "场景盘点需判断是否委派自主Agent，不能把所有API对接叫A2A",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O03",
+      "original_text": "*   [ ] **画一张架构图**：用你现有的产品为例，画一张\"如果用 A2A 改造后的架构图\"，哪怕只是草稿。",
+      "source_line": 504,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "架构图为综合产出，短卡不能代替画图",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O04",
+      "original_text": "*   [ ] **竞品调研**：查看 SAP、Salesforce 等巨头的 Agent 产品动态，关注它们的 A2A 集成策略。",
+      "source_line": 508,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "厂商动态时效性强，需第一方案例而非旧生态表",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O05",
+      "original_text": "*   [ ] **内部讨论**：和技术负责人开一次会，评估团队引入 A2A 的技术成本和学习曲线。",
+      "source_line": 509,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "技术成本会议是协作产出，不作为理论已掌握",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O06",
+      "original_text": "*   [ ] **小范围试点**：选择一个内部 Agent 之间的通信场景（如客服转售后），用 A2A 做一个小型 POC（概念验证）。",
+      "source_line": 510,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m18.task-lifecycle.001",
+        "ch03.interview.m18.async-updates.001",
+        "ch03.interview.m18.parallel-quote-aggregation.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "POC由真实报文与异常证据验收，卡只检验核心理解",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O07",
+      "original_text": "*   [ ] **制定 Agent 战略**：如果公司有多条 Agent 产品线，制定统一的 Agent 通信标准和目录规范。",
+      "source_line": 514,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m18.agent-discovery.001",
+        "ch03.interview.m18.protocol-composition.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "目录与通信战略需实施条件，不靠协议名称定战略",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O08",
+      "original_text": "*   [ ] **关注 MCP+A2A 组合**：评估在产品中同时引入 MCP（工具连接）和 A2A（Agent 互联）的可行性。",
+      "source_line": 515,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m18.protocol-composition.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "两种接口对象分工可单独评分，完整组合方案留M2",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O09",
+      "original_text": "*   [ ] **建立 Agent 评价体系**：如果计划做 Agent 市场或生态，设计 Agent 的准入标准、评分机制、信任体系。",
+      "source_line": 516,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "市场准入/信任评分包含业务规则及服务证据，卡片不代表已建立体系",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O10",
+      "original_text": "*   [ ] A2A 协议的版本更新（目前刚发布，预计会有快速迭代）。",
+      "source_line": 520,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "持续版本监控是动作；名片/传输与报文不可永久冻结",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O11",
+      "original_text": "*   [ ] 国内大厂（阿里、字节、百度、腾讯）对 A2A 的态度和动作。",
+      "source_line": 521,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "国内厂商跟进必须查当前第一方证据，历史观点不写稳定答案",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.18",
+      "objective_id": "m18-O12",
+      "original_text": "*   [ ] 与 MCP 协议的融合趋势（两者是否有合并或统一的可能性）。",
+      "source_line": 522,
+      "source_path": "第3章-技术攻克/3.18-A2A.md",
+      "source_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "合并趋势是观察假设，不认定会合并或取代",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "T1",
+      "description": "从A2A官方文档和目标实现读取当前Agent Card、任务状态、消息/产物样例；记录文档核对时间、实现版本、传输绑定和可用能力，复现缺信息→补齐→完成→关联新任务；不保存凭证值。产出兼容表、报文说明及执行证据。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T2",
+      "description": "选采购询价或客服转售后，画Client/Remote Agent及内部工具边，列已知业务对象、输入/交付契约、分支/期限/人工接管；做小范围POC计划及研发成本评审。产出架构图、三条失败轨迹、接入收益与停止条件；本轮未执行真实POC。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T3",
+      "description": "制作Agent目录及准入草案；另查目标厂商第一方发布/实际互通证据，记录版本和可用范围；研究MCP/A2A组合收益与不采用条件。厂商动态和“可能合并”只列观察项，不背预测结论。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "additional_objectives": [
+    {
+      "objective_id": "m18-B01",
+      "original_text": "L61–76：Agent Card",
+      "source_line": 61,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m18.agent-discovery.001"
+      ],
+      "reason": "采用稳定发现角色，旧endpoint/authentication字段不当永久Schema。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m18-B02",
+      "original_text": "L78–93：Task与input-required",
+      "source_line": 78,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m18.task-lifecycle.001"
+      ],
+      "reason": "拆分可继续态、终态与关联后续；不声称history总完整。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m18-B03",
+      "original_text": "L95–122：消息和Artifact",
+      "source_line": 95,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m18.message-artifact.001"
+      ],
+      "reason": "纠正form核心类型及Artifact只能终结产生。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m18-B04",
+      "original_text": "L126–160：A2A/MCP",
+      "source_line": 126,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m18.protocol-composition.001"
+      ],
+      "reason": "按对象分工，拒绝MCP永远无状态/单次绝对比较。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m18-B05",
+      "original_text": "L168–203：传输/流程",
+      "source_line": 168,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m18.async-updates.001"
+      ],
+      "reason": "纠正轮询不支持，记录多绑定与更新能力，不背SSE唯一。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m18-B06",
+      "original_text": "L205–225：Function Call/REST/MQ比较",
+      "source_line": 205,
+      "decision": "合并",
+      "card_keys": [
+        "C08",
+        "ch03.interview.m18.delegation-boundary.001"
+      ],
+      "reason": "表中“不能多轮/无进度/没人介入”非这些系统永久限制；不新增排名卡，M2按实际职责判断。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m18-B07",
+      "original_text": "L229–374：企业互联、目录、采购",
+      "source_line": 229,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m18.parallel-quote-aggregation.001"
+      ],
+      "reason": "M2串联独立子任务与报价归一；商业效果数字、权重及48小时属原文示例。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m18-B08",
+      "original_text": "L376–434：安全与信任",
+      "source_line": 376,
+      "decision": "实践任务",
+      "card_keys": [],
+      "reason": "T2/T3复用通用权限治理；名片不是凭证仓库，认证不等于全部权限，普通hash不自动防篡改。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m18-B09",
+      "original_text": "L435–493：生态与局限、L526–535：总结",
+      "source_line": 435,
+      "decision": "实践任务",
+      "card_keys": [],
+      "reason": "厂商动态和未来HTTP地位不进入稳定卡；“有A2A打通不再是问题”改为需能力/语义/服务证据。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    }
+  ],
+  "review_status": "editor_review_complete",
+  "published_cards": 7
+}

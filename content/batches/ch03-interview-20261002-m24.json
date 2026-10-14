@@ -1,0 +1,289 @@
+{
+  "batch_id": "ch03-interview-20261002-m24",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m24.concept-layers.001",
+      "lesson_source_key": "第3章-技术攻克/3.24-WorkFlow.md",
+      "concept_keys": [
+        "interview.m24.concept-layers"
+      ],
+      "revision": 1,
+      "position": 3402,
+      "title": "Workflow、ReAct、Agent、状态图的层次",
+      "kind": "对比",
+      "prompt": "团队把Workflow、ReAct、Agent和State Graph当四种互斥产品。它们分别描述什么，怎样在同一个退款助手中共存？",
+      "answer_short": "Workflow是可编排流程组织，ReAct是基于行动观察更新决策的循环范式，Agent是执行任务的系统角色/形态，State Graph以共享状态和条件转换组织运行。Agent可用图承载Workflow，在一个受限环节运行ReAct。",
+      "required_points": [
+        "区分流程、推理行动循环、任务系统和状态图建模",
+        "说明图/工作流可承载ReAct与规则/人工节点",
+        "这些不是互斥产品，名称不保证自治或正确"
+      ],
+      "explanation": "【机制】组织控制图与节点内部行为是两层；同一节点可读状态、决定一次动作，再把观察写回状态，图控制接下来允许何处。\n【编辑情境】退款助手先查订单与政策，复杂争议调查在允许工具内循环，再回固定审核和执行节点。\n【边界】State Graph可有固定边而无LLM自主；ReAct也可由整个图实现，不必永远是单个子节点。\n【面试追问】为何有向图不一定是DAG？参考：流程允许回访、补充与循环；需状态与终止条件，而非把所有图当无环。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "State Graph可有固定边而无LLM自主；ReAct也可由整个图实现，不必永远是单个子节点。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 209,
+          "line_end": 327
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 508,
+          "line_end": 539
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 729,
+          "line_end": 764
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m24.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O03：四概念分层，不重复m12组件/行动循环卡；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：m24.md主编独立去重与范围核对；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m24.llm-shapes.001",
+      "lesson_source_key": "第3章-技术攻克/3.24-WorkFlow.md",
+      "concept_keys": [
+        "interview.m24.llm-shapes"
+      ],
+      "revision": 1,
+      "position": 3403,
+      "title": "提示策略与行动循环不是同一轴",
+      "kind": "对比",
+      "prompt": "原文列单次调用、Few-shot、CoT、ReAct四种LLM节点。为何这不是互斥分类，怎么为退款原因抽取选择最小方案？",
+      "answer_short": "单次/多轮描述调用结构，Few-shot是用示例引导，CoT是分步推理策略，ReAct把工具行动和观察纳入决策循环。可组合，抽取已有文本通常先试一次调用加示例和结构校验，不必自主调工具。",
+      "required_points": [
+        "区分调用结构、示例/推理策略与行动观察循环",
+        "这些策略可组合，不是四个互斥能力等级",
+        "按任务证据选最小方案并验证，非单纯按名字排成本"
+      ],
+      "explanation": "【机制】一次调用可以含Few-shot，ReAct每次模型输入也可含示例；成本由真实Token、轮次和工具决定。需要外部状态时才把读取/动作纳入，不为了复杂措辞开循环。\n【编辑情境】用户说“尺码不合适”，一次抽取退货原因与订单线索即可；欠缺政策证据时先走批准的查询步骤。\n【边界】分步解释不证明推理正确或有工具；Few-shot不自动保证JSON/业务字段正确，也不一概中等成本。\n【面试追问】为什么不靠展示所有Thought审计？参考：记录可核查动作、状态、证据和决策结果，文本推理不是外部事实证明。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "分步解释不证明推理正确或有工具；Few-shot不自动保证JSON/业务字段正确，也不一概中等成本。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 292,
+          "line_end": 310
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 676,
+          "line_end": 691
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m24.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O05：分类轴纠错，单次与工具边界复用m09；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：m24.md主编独立去重与范围核对；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m24.hybrid-placement.001",
+      "lesson_source_key": "第3章-技术攻克/3.24-WorkFlow.md",
+      "concept_keys": [
+        "interview.m24.hybrid-placement"
+      ],
+      "revision": 1,
+      "position": 3404,
+      "title": "固定节点与受限子流程怎样选",
+      "kind": "场景判断",
+      "prompt": "售后有固定退款政策，也有需要查证多份材料的争议。什么时候用Workflow+单次LLM，什么时候嵌入受限ReAct？",
+      "answer_short": "已知步骤与政策由流程/规则控制，非结构化理解或解释可用单次LLM；仅调查步骤要根据新证据动态选择工具时嵌受限ReAct。子流程回交证据与明确结果，外层保留授权、验证和终止。",
+      "required_points": [
+        "区分固定SOP/单次理解与动态证据调查",
+        "嵌入循环限定工具、权限、资源和结束/失败契约",
+        "子流程输出回到外层规则/审批，不自行改变高风险政策"
+      ],
+      "explanation": "【机制】把自主性只放在不确定环节，外层规定进入条件与交付物；不是所有多源查询都需要自主循环，已知来源可固定或并行。\n【编辑情境】普通尺码退货由订单条件决定；争议取证可查物流与历史承诺，再提交有证据的建议，不让模型自定退款额。\n【边界】金融/医疗标签不决定唯一架构；Workflow不自动合法，ReAct也可施加限制，选型依任务和风险。\n【面试追问】查三个系统就一定ReAct吗？参考：若查询项与顺序已知，固定/并行流程够用，复用fork-join卡。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "金融/医疗标签不决定唯一架构；Workflow不自动合法，ReAct也可施加限制，选型依任务和风险。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 380,
+          "line_end": 392
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 398,
+          "line_end": 473
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 793,
+          "line_end": 839
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m24.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O04/O06/O08：模式一/二独立架构判断；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：m24.md主编独立去重与范围核对；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m24.human-resume.001",
+      "lesson_source_key": "第3章-技术攻克/3.24-WorkFlow.md",
+      "concept_keys": [
+        "interview.m24.human-resume"
+      ],
+      "revision": 1,
+      "position": 3408,
+      "title": "人工等待恢复需要审批内容绑定",
+      "kind": "场景判断",
+      "prompt": "主管审核500元退款时流程暂停；等待期间退款金额改成800元。主管旧审批回到流程后应怎样恢复，超时能否默认通过？",
+      "answer_short": "审批绑定具体对象、金额、证据/政策版本；暂停保存可恢复上下文。恢复时核对审批人权限与内容仍一致，变更需重审；超时按已定风险策略通知/挂起/接管，不能默认为批准。",
+      "required_points": [
+        "待审批内容与版本绑定并保留恢复状态",
+        "恢复校验权限与对象/金额/条件未变，改变需重审",
+        "审批超时不自行推成授权或成功"
+      ],
+      "explanation": "【机制】人要看已查事实、未决风险、拟执行动作和变更范围；批准是业务前置，按钮返回只提供输入。图恢复不自动证明审批合法。\n【编辑情境】500元旧审批对应旧建议；金额变800元时原批准不足，流程停在重新审核，用户看到等待原因。\n【边界】LangGraph当前interrupt依checkpointer与同thread恢复，节点恢复会从头执行，暂停前副作用可能重放；框架不提供业务exactly-once保证。\n【面试追问】如何避免审批恢复重复退款？参考：将获准后写入独立受控步骤，按业务幂等和真实状态核对；详见既有写超时卡。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "LangGraph当前interrupt依checkpointer与同thread恢复，节点恢复会从头执行，暂停前副作用可能重放；框架不提供业务exactly-once保证。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 599,
+          "line_end": 634
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 735,
+          "line_end": 775
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m24.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O22：审批内容绑定与恢复语义，不重复通用权限卡；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：m24.md主编独立去重与范围核对；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m24.failure-policy.001",
+      "lesson_source_key": "第3章-技术攻克/3.24-WorkFlow.md",
+      "concept_keys": [
+        "interview.m24.failure-policy"
+      ],
+      "revision": 1,
+      "position": 3409,
+      "title": "异常分支按错误语义设计",
+      "kind": "故障诊断",
+      "prompt": "订单查询超时、金额字段格式错、主管审核超时都走“重试三次然后自动通过”。这个统一异常策略哪里错，应怎样改？",
+      "answer_short": "先分通信/只读暂态、输入或业务验证失败与等待审批。可重试的只读暂态受次数/时间预算限制；字段错补充或纠正；审批超时通知/挂起/接管，不能默认批准。失败或关键证据不完整时不能进入成功执行分支。",
+      "required_points": [
+        "按错误语义分层，而非统一重试/通过",
+        "只读暂态、输入问题、审批等待各有分支和预算",
+        "关键证据或批准未确认时不能进入成功执行分支"
+      ],
+      "explanation": "【机制】重试适用性由操作与故障决定：输入错重复请求不会变正确，审核没人回应不产生批准，工具不可用也未必可安全跳过。缓存须满足版本、时效、权限与可展示限制。\n【编辑情境】订单查不到真实状态时，可返回待查或转人工；不能拿旧缓存确认已退款，也不让格式修复默认金额为0。\n【边界】原文重试3次、默认格式、跳过工具、审批自动通过是示例，不能推广；未知写恢复和fork-join复用既有卡。\n【面试追问】能否所有异常都报警？参考：按风险、频率和可行动性分日志/聚合报警，避免正常澄清淹没故障。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "原文重试3次、默认格式、跳过工具、审批自动通过是示例，不能推广；未知写恢复和fork-join复用既有卡。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 599,
+          "line_end": 615
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 636,
+          "line_end": 658
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 693,
+          "line_end": 701
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m24.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O09/O21：异常语义与禁止成功穿透；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：m24.md主编独立去重与范围核对；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m24.platform-proof.001",
+      "lesson_source_key": "第3章-技术攻克/3.24-WorkFlow.md",
+      "concept_keys": [
+        "interview.m24.platform-proof"
+      ],
+      "revision": 1,
+      "position": 3411,
+      "title": "平台选型怎样变成能力证据",
+      "kind": "场景判断",
+      "prompt": "原文说Dify/Coze循环有限、LangGraph人工介入需自己实现。采购助手应怎样核对当前平台能力并选型，避免照表排名？",
+      "answer_short": "从代表流程的状态、等待恢复、循环/并行、授权、观测、部署及退出要求建立能力清单；在目标版本/部署核对第一方并跑成功/失败/恢复样例，再比团队开发维护成本。可视化或代码框架只是实现方式，原文绝对能力表不能当永久结论。",
+      "required_points": [
+        "从业务必须能力、团队与部署约束建清单",
+        "核对目标版本第一方并验证真实样例/退出",
+        "成本、维护与能力证据一起决策，不按永久排名"
+      ],
+      "explanation": "【机制】可视化降低部分流程编辑门槛，不免除系统集成、授权与运行维护；代码框架允许定制也不自动降低总成本。当前Dify有Human Input暂停/超时分支，LangGraph有interrupt恢复，不能沿用“没有”或“保证可用”。\n【编辑情境】采购助手需要跨日审批后恢复与内网部署，选型试验交暂停快照、审核改金额、重启恢复和依赖失败轨迹，而非只看Demo。\n【边界】本轮未核对Coze某版本/部署全能力，也未实跑Dify/LangGraph；只能列待验证，不编造平台保证。\n【面试追问】低代码Demo当天跑通即可采购？参考：补目标部署权限、运维/数据退出、恢复与成本证据，未满足前有条件结论。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "本轮未核对Coze某版本/部署全能力，也未实跑Dify/LangGraph；只能列待验证，不编造平台保证。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 723,
+          "line_end": 789
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.24-WorkFlow.md",
+          "content_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+          "line_start": 1088,
+          "line_end": 1104
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m24.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O11：时效平台表纠错与有条件选型；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：m24.md主编独立去重与范围核对；实践及UI未执行"
+        ]
+      }
+    }
+  ]
+}

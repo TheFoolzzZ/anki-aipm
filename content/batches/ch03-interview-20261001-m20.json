@@ -1,0 +1,50 @@
+{
+  "batch_id": "ch03-interview-20261001-m20",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m20.recovery-exit.001",
+      "lesson_source_key": "第3章-技术攻克/3.20-VectorDB.md",
+      "concept_keys": [
+        "interview.m20.recovery-exit"
+      ],
+      "revision": 1,
+      "position": 3001,
+      "title": "数据库迁移与恢复的验收证据",
+      "kind": "场景判断",
+      "prompt": "同一Embedding模型迁移到另一向量库，备份显示成功。怎样证明能退出旧服务并恢复检索？是否一定需要重新付费编码？",
+      "answer_short": "保留可导出的向量/模型版本、对象ID、元数据及原文映射，检查目标库维度/距离/过滤兼容；模型与输入规范不变且向量可用时可复用。恢复到隔离环境并对账、验证查询/更新/删除与耗时，备份成功不等于恢复可用。",
+      "required_points": [
+        "迁移包包含向量及编码约定、ID/元数据/原文映射",
+        "固定模型且表示兼容时可复用向量，不默认重编码",
+        "在隔离环境恢复并验证数据、行为及恢复耗时，再切换/回退"
+      ],
+      "explanation": "原文提出退出成本、升级与灾难恢复，具体迁移/恢复步骤为编辑工程设计。本题固定Embedding，区别于3.10编码空间迁移：数据库快照未必跨引擎可读，可移植数据与引擎内部快照是两类资产。编辑情境：备份恢复了向量，却丢掉商品下架元数据，搜索能运行但业务已错；恢复后的ID数量与版本、精确条件、代表查询和删除记录要逐项核对。迁移期间还要追平新增/修改/删除，保留旧服务可回退，但不能恢复已删除对象。\n【面试追问】多副本能替代备份吗？参考思路：不能；误删可同步到副本。先设可接受数据损失/恢复时间，再做隔离恢复演练并保留证据。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "“自建完全安全、托管零运维”都不能替代恢复演练；本轮只设计，未实际恢复。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.20-VectorDB.md",
+          "content_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+          "line_start": 409,
+          "line_end": 413
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.20-VectorDB.md",
+          "content_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+          "line_start": 437,
+          "line_end": 440
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m20.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

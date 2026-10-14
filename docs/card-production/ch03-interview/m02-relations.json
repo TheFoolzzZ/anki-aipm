@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-18",
+  "relations": [
+    {
+      "from": "ch03.ml.problem-contract.001",
+      "to": "ch03.interview.m02.label-governance.001",
+      "type": "extension",
+      "reason": "任务定义之后需明确标签边界与裁决流程。"
+    },
+    {
+      "from": "ch03.ml.fit-diagnosis.001",
+      "to": "ch03.interview.m02.bias-variance.001",
+      "type": "extension",
+      "reason": "诊断泛化异常时，区分误差性质与证据。"
+    },
+    {
+      "from": "ch03.interview.m02.feature-experiment.001",
+      "to": "ch03.ml.leakage-prevention.001",
+      "type": "prerequisite",
+      "reason": "特征实验必须先保证预测时可得和评估隔离。"
+    },
+    {
+      "from": "ch03.interview.m02.model-selection.001",
+      "to": "ch03.ml.ensemble-tradeoff.001",
+      "type": "extension",
+      "reason": "候选包含树模型时需要理解集成机制及成本。"
+    },
+    {
+      "from": "ch03.interview.m02.group-bias.001",
+      "to": "ch03.interview.m02.cold-start.001",
+      "type": "compare",
+      "reason": "欠代表群体与缺少历史实体的原因和补救不同。"
+    },
+    {
+      "from": "ch03.interview.m02.feature-experiment.001",
+      "to": "ch03.interview.m02.explanation-limit.001",
+      "type": "extension",
+      "reason": "预测相关特征有用不代表可用于因果干预。"
+    }
+  ]
+}

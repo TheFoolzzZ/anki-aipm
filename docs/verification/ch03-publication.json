@@ -1,0 +1,495 @@
+[
+  {
+    "at": "2026-09-13T08:47:12.722Z",
+    "local": {
+      "batchId": "ch03-quality-m31",
+      "chapter": 3,
+      "cards": 6,
+      "contentHash": "d4e57cf67312ee7648dc07e4aa48a609fe7d4378d5be42ee17abb4568a90f1b6"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m31",
+      "chapter": 3,
+      "cards": 6,
+      "contentHash": "d4e57cf67312ee7648dc07e4aa48a609fe7d4378d5be42ee17abb4568a90f1b6",
+      "published": false,
+      "additions": [
+        "ch03.tech.feasibility-evidence.001",
+        "ch03.tech.capacity-latency.001",
+        "ch03.tech.api-contract.001",
+        "ch03.tech.cache-validity.001",
+        "ch03.tech.observability-response.001",
+        "ch03.tech.evaluation-contract.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m31",
+      "cardCount": 6,
+      "contentHash": "d4e57cf67312ee7648dc07e4aa48a609fe7d4378d5be42ee17abb4568a90f1b6"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m31",
+      "cards": 6,
+      "revisions": 6,
+      "ledgerHash": "d4e57cf67312ee7648dc07e4aa48a609fe7d4378d5be42ee17abb4568a90f1b6",
+      "expectedHash": "d4e57cf67312ee7648dc07e4aa48a609fe7d4378d5be42ee17abb4568a90f1b6",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:47:20.446Z",
+    "local": {
+      "batchId": "ch03-quality-m32",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "ea26c25b14d3087064642d318150a975c745dc3e5e475626847a412bbba791a4"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m32",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "ea26c25b14d3087064642d318150a975c745dc3e5e475626847a412bbba791a4",
+      "published": false,
+      "additions": [
+        "ch03.ml.problem-contract.001",
+        "ch03.ml.learning-signals.001",
+        "ch03.ml.evaluation-split.001",
+        "ch03.ml.fit-diagnosis.001",
+        "ch03.ml.confusion-cost.001",
+        "ch03.ml.ensemble-tradeoff.001",
+        "ch03.ml.leakage-prevention.001",
+        "ch03.ml.release-recovery.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m32",
+      "cardCount": 8,
+      "contentHash": "ea26c25b14d3087064642d318150a975c745dc3e5e475626847a412bbba791a4"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m32",
+      "cards": 8,
+      "revisions": 8,
+      "ledgerHash": "ea26c25b14d3087064642d318150a975c745dc3e5e475626847a412bbba791a4",
+      "expectedHash": "ea26c25b14d3087064642d318150a975c745dc3e5e475626847a412bbba791a4",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:47:28.507Z",
+    "local": {
+      "batchId": "ch03-quality-m33",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "bdf71cf87b2bf71e083224b1484a5b0683a4bab1e047ac79f5498a8e14a8efb0"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m33",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "bdf71cf87b2bf71e083224b1484a5b0683a4bab1e047ac79f5498a8e14a8efb0",
+      "published": false,
+      "additions": [
+        "ch03.dl.hierarchical-representation.001",
+        "ch03.dl.activation-nonlinearity.001",
+        "ch03.dl.training-inference.001",
+        "ch03.dl.gradient-diagnosis.001",
+        "ch03.dl.convolution-bias.001",
+        "ch03.dl.recurrent-memory.001",
+        "ch03.dl.generative-mechanisms.001",
+        "ch03.dl.selection-validation.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m33",
+      "cardCount": 8,
+      "contentHash": "bdf71cf87b2bf71e083224b1484a5b0683a4bab1e047ac79f5498a8e14a8efb0"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m33",
+      "cards": 8,
+      "revisions": 8,
+      "ledgerHash": "bdf71cf87b2bf71e083224b1484a5b0683a4bab1e047ac79f5498a8e14a8efb0",
+      "expectedHash": "bdf71cf87b2bf71e083224b1484a5b0683a4bab1e047ac79f5498a8e14a8efb0",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:47:37.570Z",
+    "local": {
+      "batchId": "ch03-quality-m34",
+      "chapter": 3,
+      "cards": 7,
+      "contentHash": "5070294fd2628aa2b9429e7556cd6f3b41d7724faae81f4bf76647c8965d3f25"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m34",
+      "chapter": 3,
+      "cards": 7,
+      "contentHash": "5070294fd2628aa2b9429e7556cd6f3b41d7724faae81f4bf76647c8965d3f25",
+      "published": false,
+      "additions": [
+        "ch03.transformer.qkv-aggregation.001",
+        "ch03.transformer.multihead.001",
+        "ch03.transformer.position.001",
+        "ch03.transformer.block-roles.001",
+        "ch03.transformer.architecture-families.001",
+        "ch03.transformer.parallel-boundary.001",
+        "ch03.transformer.attention-cost.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m34",
+      "cardCount": 7,
+      "contentHash": "5070294fd2628aa2b9429e7556cd6f3b41d7724faae81f4bf76647c8965d3f25"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m34",
+      "cards": 7,
+      "revisions": 7,
+      "ledgerHash": "5070294fd2628aa2b9429e7556cd6f3b41d7724faae81f4bf76647c8965d3f25",
+      "expectedHash": "5070294fd2628aa2b9429e7556cd6f3b41d7724faae81f4bf76647c8965d3f25",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:47:46.315Z",
+    "local": {
+      "batchId": "ch03-quality-m35",
+      "chapter": 3,
+      "cards": 6,
+      "contentHash": "5f40696e4a6d82836650c33e295fc0489360f81fa1fde85119d9d9af6163335e"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m35",
+      "chapter": 3,
+      "cards": 6,
+      "contentHash": "5f40696e4a6d82836650c33e295fc0489360f81fa1fde85119d9d9af6163335e",
+      "published": false,
+      "additions": [
+        "ch03.llm.generalization.001",
+        "ch03.llm.training-stages.001",
+        "ch03.llm.selection-evidence.001",
+        "ch03.llm.deployment-tradeoff.001",
+        "ch03.llm.hallucination-controls.001",
+        "ch03.llm.application-routing.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m35",
+      "cardCount": 6,
+      "contentHash": "5f40696e4a6d82836650c33e295fc0489360f81fa1fde85119d9d9af6163335e"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m35",
+      "cards": 6,
+      "revisions": 6,
+      "ledgerHash": "5f40696e4a6d82836650c33e295fc0489360f81fa1fde85119d9d9af6163335e",
+      "expectedHash": "5f40696e4a6d82836650c33e295fc0489360f81fa1fde85119d9d9af6163335e",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:47:55.004Z",
+    "local": {
+      "batchId": "ch03-quality-m36",
+      "chapter": 3,
+      "cards": 7,
+      "contentHash": "354dfcb01fa29c03d6c24533f045f58c4b6882d46061ed60f5beffaaf4e09900"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m36",
+      "chapter": 3,
+      "cards": 7,
+      "contentHash": "354dfcb01fa29c03d6c24533f045f58c4b6882d46061ed60f5beffaaf4e09900",
+      "published": false,
+      "additions": [
+        "ch03.finetune.problem-selection.001",
+        "ch03.finetune.lora-boundary.001",
+        "ch03.finetune.data-contract.001",
+        "ch03.finetune.split-leakage.001",
+        "ch03.finetune.overfitting-diagnosis.001",
+        "ch03.finetune.acceptance.001",
+        "ch03.finetune.release-monitoring.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m36",
+      "cardCount": 7,
+      "contentHash": "354dfcb01fa29c03d6c24533f045f58c4b6882d46061ed60f5beffaaf4e09900"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m36",
+      "cards": 7,
+      "revisions": 7,
+      "ledgerHash": "354dfcb01fa29c03d6c24533f045f58c4b6882d46061ed60f5beffaaf4e09900",
+      "expectedHash": "354dfcb01fa29c03d6c24533f045f58c4b6882d46061ed60f5beffaaf4e09900",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:48:04.202Z",
+    "local": {
+      "batchId": "ch03-quality-m37",
+      "chapter": 3,
+      "cards": 6,
+      "contentHash": "02b4f62046d54a644639a48bc04bb53db6ba389443a87a6b31fbb777762cdac2"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m37",
+      "chapter": 3,
+      "cards": 6,
+      "contentHash": "02b4f62046d54a644639a48bc04bb53db6ba389443a87a6b31fbb777762cdac2",
+      "published": false,
+      "additions": [
+        "ch03.tokenization.subword-tradeoff.001",
+        "ch03.tokenization.bpe-process.001",
+        "ch03.tokenization.wordpiece-boundary.001",
+        "ch03.tokenization.sentencepiece-layer.001",
+        "ch03.tokenization.language-measurement.001",
+        "ch03.tokenization.number-code-diagnosis.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m37",
+      "cardCount": 6,
+      "contentHash": "02b4f62046d54a644639a48bc04bb53db6ba389443a87a6b31fbb777762cdac2"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m37",
+      "cards": 6,
+      "revisions": 6,
+      "ledgerHash": "02b4f62046d54a644639a48bc04bb53db6ba389443a87a6b31fbb777762cdac2",
+      "expectedHash": "02b4f62046d54a644639a48bc04bb53db6ba389443a87a6b31fbb777762cdac2",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:48:13.407Z",
+    "local": {
+      "batchId": "ch03-quality-m38",
+      "chapter": 3,
+      "cards": 6,
+      "contentHash": "02acf0f7db32f01dded7cf95d166c2b6e11c7740c76ab1973c77da85bf26e52b"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m38",
+      "chapter": 3,
+      "cards": 6,
+      "contentHash": "02acf0f7db32f01dded7cf95d166c2b6e11c7740c76ab1973c77da85bf26e52b",
+      "published": false,
+      "additions": [
+        "ch03.token.unit-vs-character.001",
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.context-reservation.001",
+        "ch03.token.long-context-verification.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m38",
+      "cardCount": 6,
+      "contentHash": "02acf0f7db32f01dded7cf95d166c2b6e11c7740c76ab1973c77da85bf26e52b"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m38",
+      "cards": 6,
+      "revisions": 6,
+      "ledgerHash": "02acf0f7db32f01dded7cf95d166c2b6e11c7740c76ab1973c77da85bf26e52b",
+      "expectedHash": "02acf0f7db32f01dded7cf95d166c2b6e11c7740c76ab1973c77da85bf26e52b",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:48:21.646Z",
+    "local": {
+      "batchId": "ch03-quality-m39",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "28958dba5bff5d65dc1bd9d5dedf42ef27bbb270bf94d68ee56f8ee991ecb3bb"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m39",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "28958dba5bff5d65dc1bd9d5dedf42ef27bbb270bf94d68ee56f8ee991ecb3bb",
+      "published": false,
+      "additions": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.few-shot-selection.001",
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.prompt.json-validation.001",
+        "ch03.prompt.regression-versioning.001",
+        "ch03.prompt.injection-boundary.001",
+        "ch03.prompt.optimization-stop.001",
+        "ch03.prompt.consistency-limit.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m39",
+      "cardCount": 8,
+      "contentHash": "28958dba5bff5d65dc1bd9d5dedf42ef27bbb270bf94d68ee56f8ee991ecb3bb"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m39",
+      "cards": 8,
+      "revisions": 8,
+      "ledgerHash": "28958dba5bff5d65dc1bd9d5dedf42ef27bbb270bf94d68ee56f8ee991ecb3bb",
+      "expectedHash": "28958dba5bff5d65dc1bd9d5dedf42ef27bbb270bf94d68ee56f8ee991ecb3bb",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:48:28.720Z",
+    "local": {
+      "batchId": "ch03-quality-m310",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "4f123320b95c63f67ea40f5a9ad6f7d21687e613bf6dc3a458b0ddadc2071589"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m310",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "4f123320b95c63f67ea40f5a9ad6f7d21687e613bf6dc3a458b0ddadc2071589",
+      "published": false,
+      "additions": [
+        "ch03.vector.training-objective.001",
+        "ch03.vector.rerank-candidate-ceiling.001",
+        "ch03.vector.metric-compatibility.001",
+        "ch03.vector.ann-quality-budget.001",
+        "ch03.vector.capacity-arithmetic.001",
+        "ch03.vector.compression-choice.001",
+        "ch03.vector.database-selection.001",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m310",
+      "cardCount": 8,
+      "contentHash": "4f123320b95c63f67ea40f5a9ad6f7d21687e613bf6dc3a458b0ddadc2071589"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m310",
+      "cards": 8,
+      "revisions": 8,
+      "ledgerHash": "4f123320b95c63f67ea40f5a9ad6f7d21687e613bf6dc3a458b0ddadc2071589",
+      "expectedHash": "4f123320b95c63f67ea40f5a9ad6f7d21687e613bf6dc3a458b0ddadc2071589",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:48:35.505Z",
+    "local": {
+      "batchId": "ch03-quality-m311",
+      "chapter": 3,
+      "cards": 7,
+      "contentHash": "5f3e72aa135836bbc306bea562baa85f2b3f013d8f169b961eb4e4ea84060e25"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m311",
+      "chapter": 3,
+      "cards": 7,
+      "contentHash": "5f3e72aa135836bbc306bea562baa85f2b3f013d8f169b961eb4e4ea84060e25",
+      "published": false,
+      "additions": [
+        "ch03.rag.source-ingestion-loss.001",
+        "ch03.rag.chunk-experiment.001",
+        "ch03.rag.update-deletion.001",
+        "ch03.rag.rewrite-constraint.001",
+        "ch03.rag.context-compression.001",
+        "ch03.rag.conflicting-sources.001",
+        "ch03.rag.cost-quality-budget.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m311",
+      "cardCount": 7,
+      "contentHash": "5f3e72aa135836bbc306bea562baa85f2b3f013d8f169b961eb4e4ea84060e25"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m311",
+      "cards": 7,
+      "revisions": 7,
+      "ledgerHash": "5f3e72aa135836bbc306bea562baa85f2b3f013d8f169b961eb4e4ea84060e25",
+      "expectedHash": "5f3e72aa135836bbc306bea562baa85f2b3f013d8f169b961eb4e4ea84060e25",
+      "passed": true
+    }
+  },
+  {
+    "at": "2026-09-13T08:48:43.477Z",
+    "local": {
+      "batchId": "ch03-quality-m312",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "c4ed59246319c33bf88ee65a1ee87d67a6bf1f81f1b392a30955e89001e7b4a5"
+    },
+    "diff": {
+      "batchId": "ch03-quality-m312",
+      "chapter": 3,
+      "cards": 8,
+      "contentHash": "c4ed59246319c33bf88ee65a1ee87d67a6bf1f81f1b392a30955e89001e7b4a5",
+      "published": false,
+      "additions": [
+        "ch03.agent.task-fit.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.agent.ambiguous-tool-result.001",
+        "ch03.agent.memory-freshness.001",
+        "ch03.agent.reflection-evidence.001",
+        "ch03.agent.autonomy-release.001",
+        "ch03.agent.tool-result-trust.001",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "revisions": [],
+      "unchanged": []
+    },
+    "publish": {
+      "status": "published",
+      "batchId": "ch03-quality-m312",
+      "cardCount": 8,
+      "contentHash": "c4ed59246319c33bf88ee65a1ee87d67a6bf1f81f1b392a30955e89001e7b4a5"
+    },
+    "verify": {
+      "batchId": "ch03-quality-m312",
+      "cards": 8,
+      "revisions": 8,
+      "ledgerHash": "c4ed59246319c33bf88ee65a1ee87d67a6bf1f81f1b392a30955e89001e7b4a5",
+      "expectedHash": "c4ed59246319c33bf88ee65a1ee87d67a6bf1f81f1b392a30955e89001e7b4a5",
+      "passed": true
+    }
+  }
+]

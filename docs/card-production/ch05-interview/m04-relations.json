@@ -1,0 +1,20 @@
+[
+  {
+    "from": "ch05.interview.m04.noncompensable-gate.001",
+    "to": "ch05.interview.m04.four-evidence.001",
+    "type": "extension",
+    "reason": "四维证据中必须区分可排序因素和不能补偿的硬约束"
+  },
+  {
+    "from": "ch05.interview.m04.conditional-plan.001",
+    "to": "ch05.interview.m04.four-evidence.001",
+    "type": "extension",
+    "reason": "把技术未知与风险依赖转换为受限交付计划"
+  },
+  {
+    "from": "ch05.interview.m04.priority-uncertainty.001",
+    "to": "ch05.interview.m04.noncompensable-gate.001",
+    "type": "prerequisite",
+    "reason": "排序先受硬门槛约束，再讨论分数敏感性"
+  }
+]

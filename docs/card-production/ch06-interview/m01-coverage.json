@@ -1,0 +1,1436 @@
+{
+  "module_id": "6.1",
+  "source": {
+    "relative_path": "第6章-行业案例/6.1-AIGC.md",
+    "absolute_path": "/Users/klein/Documents/AI-PM-guide/第6章-行业案例/6.1-AIGC.md",
+    "content_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+    "line_count": 816
+  },
+  "native_checklist_count": 41,
+  "registered_native_count": 41,
+  "objectives": [
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O001",
+      "original_text": "- [ ] 中文理解与生成的流畅度",
+      "source_line": 205,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "中文任务要用目标用户文案样本核对流畅与事实保留；成品规格卡不测语言能力。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O002",
+      "original_text": "- [ ] 逻辑推理和数学计算准确率",
+      "source_line": 206,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "数学/推理要用有真值的问题独立核对；海报交付不能代替逻辑正确证据。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O003",
+      "original_text": "- [ ] 代码生成和 debug 能力",
+      "source_line": 207,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "代码/debug需实际仓库任务与运行证据；AIGC营销成品卡未测试编程能力。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O004",
+      "original_text": "- [ ] 多轮对话上下文保持",
+      "source_line": 208,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "多轮保持要设置追问与改约束任务，核对上下文一致；本课成品卡未覆盖此机制。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O005",
+      "original_text": "- [ ] 幻觉率控制水平",
+      "source_line": 209,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "按事实主张和引用支持关系检查幻觉，并区分任务错误与无证扩展；safety-stages只测安全阶段，不能覆盖一般幻觉率。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O006",
+      "original_text": "- [ ] 首屏响应速度（< 1s 为优）",
+      "source_line": 212,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "首屏延迟需明确首次反馈/可用成品口径及任务预算；原文<1秒不是通用优良线。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O007",
+      "original_text": "- [ ] 流式输出的流畅度",
+      "source_line": 213,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "流式体验需区分部分输出、失败和成品状态；用同任务观察，成品规格不验证流式。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O008",
+      "original_text": "- [ ] 移动端适配质量",
+      "source_line": 214,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "移动端需实测目标屏幕/输入/编辑与导出路径；不从桌面成品卡外推适配。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O009",
+      "original_text": "- [ ] 历史记录管理",
+      "source_line": 215,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "历史管理需设计稿件查找、版本与保留需求；成品卡仅提沿链路定位返工，未评分历史设计。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O010",
+      "original_text": "- [ ] 导出/分享功能完善度",
+      "source_line": 216,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "导出/分享范围需按目标用途设计和验证；creative-deliverable只覆盖导出规格，分享协作与访问另留实践。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O011",
+      "original_text": "- [ ] 超长上下文支持",
+      "source_line": 219,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "长上下文需核对输入容量和实际信息利用，卖点上限不能代替任务表现。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O012",
+      "original_text": "- [ ] 多模态输入输出",
+      "source_line": 220,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "多模态能力需按输入/输出任务实际测试；跨工具工程交接不等于模型支持多模态。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O013",
+      "original_text": "- [ ] 联网搜索能力",
+      "source_line": 221,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "联网能力需查目标来源、更新与事实支持；本课不把厂商支持联网视为当前已验证。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O014",
+      "original_text": "- [ ] 插件/工具调用生态",
+      "source_line": 222,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "工具生态需确认目标接口、授权和任务完成；生成成品卡未覆盖接插件执行。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O015",
+      "original_text": "- [ ] 私有化部署支持",
+      "source_line": 223,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "私有部署需确认运行位置、外部调用、维护责任；本地执行不等于数据不外传。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O016",
+      "original_text": "- [ ] 定价策略合理性",
+      "source_line": 226,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "定价合理性需针对付费方、权益和用量比较；本课删免费层候选，商业卡另承接。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O017",
+      "original_text": "- [ ] API 稳定性与文档质量",
+      "source_line": 227,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "API稳定和文档需对具体接口/错误/版本与恢复条件做任务核对，成品卡不提供此证据。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O018",
+      "original_text": "- [ ] 企业级安全合规",
+      "source_line": 228,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "企业安全应列数据流/访问/日志责任及验证证据，厂商合规称谓不是保证。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O019",
+      "original_text": "- [ ] 行业解决方案成熟度",
+      "source_line": 229,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "行业成熟应看实际目标任务、依赖、实施与运维能力，不按厂商宣传或一场演示判定。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O020",
+      "original_text": "- [ ] 功能限制：限制模型能力（如 GPT-4o mini vs GPT-4o）",
+      "source_line": 457,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O021",
+      "original_text": "- [ ] 用量限制：每日/每月生成次数限制",
+      "source_line": 458,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O022",
+      "original_text": "- [ ] 质量限制：降低分辨率、增加水印、限制商用",
+      "source_line": 459,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O023",
+      "original_text": "- [ ] 时间限制：新用户试用期",
+      "source_line": 460,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O024",
+      "original_text": "- [ ] 清晰的价值阶梯：每个 tier 都要有明确的升级理由",
+      "source_line": 463,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O025",
+      "original_text": "- [ ] 用量与价格的平衡：避免\"用不起\"或\"不够用\"",
+      "source_line": 464,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O026",
+      "original_text": "- [ ] 团队/企业功能：协作、管理、安全是企业付费的关键",
+      "source_line": 465,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O027",
+      "original_text": "- [ ] 学生/教育优惠：培养未来用户",
+      "source_line": 468,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O028",
+      "original_text": "- [ ] 年度订阅折扣：提高 LTV 和留存",
+      "source_line": 469,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O029",
+      "original_text": "- [ ] 积分/代币制：适合用量波动大的场景",
+      "source_line": 470,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文免费/付费权益或促销策略是待检验商业选择；T3逐项说明目标群体、升级价值、费用与限制，不背厂商额度或承诺留存提升。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O030",
+      "original_text": "- [ ] 输入过滤：检测并拦截有害 Prompt",
+      "source_line": 538,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "合并",
+      "reason": "与同一案例任务的控制/交付/治理目标合并；不背清单每项功能或原文固定阈值。",
+      "card_keys": [
+        "ch06.interview.m01.safety-stages.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O031",
+      "original_text": "- [ ] 输出审核：模型层面的安全对齐（RLHF）",
+      "source_line": 539,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "合并",
+      "reason": "与同一案例任务的控制/交付/治理目标合并；不背清单每项功能或原文固定阈值。",
+      "card_keys": [
+        "ch06.interview.m01.safety-stages.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O032",
+      "original_text": "- [ ] 事后追溯：生成内容水印/溯源标识",
+      "source_line": 540,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "合并",
+      "reason": "与同一案例任务的控制/交付/治理目标合并；不背清单每项功能或原文固定阈值。",
+      "card_keys": [
+        "ch06.interview.m01.safety-stages.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O033",
+      "original_text": "- [ ] 举报机制：用户可举报有害内容",
+      "source_line": 541,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "合并",
+      "reason": "与同一案例任务的控制/交付/治理目标合并；不背清单每项功能或原文固定阈值。",
+      "card_keys": [
+        "ch06.interview.m01.safety-stages.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O034",
+      "original_text": "- [ ] 训练数据授权：确保数据来源合法",
+      "source_line": 544,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "训练资料授权及允许使用范围需核对来源合约与专业责任；safety-stages不回答授权成立。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O035",
+      "original_text": "- [ ] 生成内容标识：明确标注 AI 生成",
+      "source_line": 545,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "T2设计生成标识在哪些交付/分享阶段保留及转换时如何呈现；具体标识法律义务另核，不声称安全阶段卡评分了此要求。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O036",
+      "original_text": "- [ ] 风格保护：避免直接模仿在世艺术家风格",
+      "source_line": 546,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "在世艺术家风格保护是作者建议，具体法律/平台条件未验证，不作普遍禁止或许可结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O037",
+      "original_text": "- [ ] 用户协议：明确生成内容的使用权归属",
+      "source_line": 547,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "内容使用权归属需核对具体协议与法域，举报/标识机制无法决定权利。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O038",
+      "original_text": "- [ ] 数据处理协议：承诺不将用户数据用于训练",
+      "source_line": 550,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "“承诺不训练”需确认具体数据用途、处理协议与例外，未核实不能背成事实保障。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O039",
+      "original_text": "- [ ] 企业隔离：企业版数据完全隔离",
+      "source_line": 551,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "“企业版完全隔离”是未经验证的绝对承诺，需实际架构/数据路径证据。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O040",
+      "original_text": "- [ ] 最小收集：只收集必要的用户数据",
+      "source_line": 552,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "T2逐数据字段说明目的与必要性、避免上传无关敏感资料；安全内容审核不等于最小收集治理。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O041",
+      "original_text": "- [ ] 删除权利：用户可要求删除个人数据",
+      "source_line": 553,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "T2设计删除请求到原始/派生/备份的责任与证据，不推断删表等于全部遗忘，具体权利及期限需专业核对。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O042",
+      "original_text": "### 1.1 什么是 AIGC？",
+      "source_line": 17,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O043",
+      "original_text": "为什么 2023 年是 AIGC 商业化元年？",
+      "source_line": 106,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "原文具体法律/医疗/历史商业前提未作第一方逐项验证；保留原句与出处，不给未经核实的必答结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O044",
+      "original_text": "Anthropic 的\"Computer Use\"能力意味着什么？",
+      "source_line": 183,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O045",
+      "original_text": "作为 AI PM，如何评估大模型产品？",
+      "source_line": 197,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O046",
+      "original_text": "视频生成为什么比图像生成难 100 倍？",
+      "source_line": 342,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "合并",
+      "reason": "原文明确问题在本任务母题串联；相应子卡只评分稳定判断，不要求复述案例厂商故事。",
+      "card_keys": [
+        "ch06.interview.m01.video-continuity.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O047",
+      "original_text": "Cursor 为什么能挑战 Copilot？",
+      "source_line": 421,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O048",
+      "original_text": "1.   **训练数据版权**：用受版权保护的内容训练模型是否合法？（全球诉讼不断）",
+      "source_line": 526,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "原文具体法律/医疗/历史商业前提未作第一方逐项验证；保留原句与出处，不给未经核实的必答结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O049",
+      "original_text": "2.   **生成内容版权**：AI 生成的内容版权归谁？（美国版权局：纯 AI 生成不享版权）",
+      "source_line": 527,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "原文具体法律/医疗/历史商业前提未作第一方逐项验证；保留原句与出处，不给未经核实的必答结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O050",
+      "original_text": "什么是多模态统一模型？",
+      "source_line": 696,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O051",
+      "original_text": "*   训练数据是否侵权？（《纽约时报》诉 OpenAI 等）",
+      "source_line": 772,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "原文具体法律/医疗/历史商业前提未作第一方逐项验证；保留原句与出处，不给未经核实的必答结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O052",
+      "original_text": "*   AI 生成内容的版权归属？",
+      "source_line": 773,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "原文具体法律/医疗/历史商业前提未作第一方逐项验证；保留原句与出处，不给未经核实的必答结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O053",
+      "original_text": "*   AI 替代人类工作的社会影响？",
+      "source_line": 774,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O054",
+      "original_text": "*   深度伪造技术的滥用风险？",
+      "source_line": 775,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O055",
+      "original_text": "□ 深度体验至少 3 个头部 AIGC 产品（ChatGPT / Midjourney / Sora）",
+      "source_line": 802,
+      "source_type": "原生行动清单",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文要求体验/跟踪/学习或形成产物，保留为T1设计；执行0，不把行动设计记为已完成。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O056",
+      "original_text": "□ 建立自己的 Prompt 工程能力（这是 AIGC PM 的基本功）",
+      "source_line": 803,
+      "source_type": "原生行动清单",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文要求体验/跟踪/学习或形成产物，保留为T1设计；执行0，不把行动设计记为已完成。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O057",
+      "original_text": "□ 关注一个垂直赛道（文本/图像/视频/音频/代码），做到专业",
+      "source_line": 804,
+      "source_type": "原生行动清单",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文要求体验/跟踪/学习或形成产物，保留为T1设计；执行0，不把行动设计记为已完成。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O058",
+      "original_text": "□ 跟踪 3-5 个大模型公司的产品动态和技术发布",
+      "source_line": 805,
+      "source_type": "原生行动清单",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文要求体验/跟踪/学习或形成产物，保留为T1设计；执行0，不把行动设计记为已完成。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O059",
+      "original_text": "□ 学习基础的机器学习知识（理解模型能力的边界）",
+      "source_line": 806,
+      "source_type": "原生行动清单",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文要求体验/跟踪/学习或形成产物，保留为T1设计；执行0，不把行动设计记为已完成。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O060",
+      "original_text": "□ 关注 AIGC 相关的法规动态（版权、内容安全、数据隐私）",
+      "source_line": 807,
+      "source_type": "原生行动清单",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文要求体验/跟踪/学习或形成产物，保留为T1设计；执行0，不把行动设计记为已完成。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O061",
+      "original_text": "□ 尝试用 AI 工具完成自己的日常工作（ eat your own dog food ）",
+      "source_line": 808,
+      "source_type": "原生行动清单",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文要求体验/跟踪/学习或形成产物，保留为T1设计；执行0，不把行动设计记为已完成。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O062",
+      "original_text": "□ 建立一个自己的 AIGC 产品评估框架",
+      "source_line": 809,
+      "source_type": "原生行动清单",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "实践任务",
+      "reason": "原文要求体验/跟踪/学习或形成产物，保留为T1设计；执行0，不把行动设计记为已完成。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O063",
+      "original_text": "### 8.1 Prompt 工程的产品化",
+      "source_line": 477,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "采用",
+      "reason": "新增创意探索与商品真值分离，不重复3.7通用Prompt结构；原句仅为证据锚点，正面情境和细化处置为编辑设计。",
+      "card_keys": [
+        "ch06.interview.m01.brief-control.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "电商设计师希望生成多套海报，但商品包装文字和品牌色必须保持。你会把哪些输入设计成可控项，哪些保留探索？改图时如何保护已确认部分？"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O064",
+      "original_text": "## 五、赛道三：视频生成（Video Generation）",
+      "source_line": 336,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "采用",
+      "reason": "新增视频跨帧交付单位与失真处置，非通用评测定义；原句仅为证据锚点，正面情境和细化处置为编辑设计。",
+      "card_keys": [
+        "ch06.interview.m01.video-continuity.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "广告视频每个单帧都很漂亮，但产品在转身时换了形状、人物拿取动作前后不连贯。为什么单帧美学分不能验收这段素材？该按什么单位检查并如何处理失败段？"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O065",
+      "original_text": "### 8.4 质量控制与评估体系",
+      "source_line": 556,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "采用",
+      "reason": "以原文质量评估中成品可用性（分辨率/格式/用途）为证据，编辑延伸到生成后返工链路；不重复中文能力勾选或声称该清单已由成品卡覆盖。",
+      "card_keys": [
+        "ch06.interview.m01.creative-deliverable.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "营销工具生成了海报图，用户却仍要人工改尺寸、校正文案、导出并导入投放系统。PM如何判断应补哪段产品能力，而不是只提升出图美学？说明一项具体交付要求。"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O066",
+      "original_text": "**合规设计 Checklist：**",
+      "source_line": 532,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "采用",
+      "reason": "新增内容生命周期治理并纠正RLHF阶段混淆；原句仅为证据锚点，正面情境和细化处置为编辑设计。",
+      "card_keys": [
+        "ch06.interview.m01.safety-stages.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "团队说“模型已做RLHF，所以不需要输出审核和举报处理”。在用户上传参考图、生成广告并公开分享的链路中，这个说法哪里不成立？各阶段应承担什么？"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O067",
+      "original_text": "### 案例二：字节跳动豆包 + 剪映 AI——生态整合的流量打法",
+      "source_line": 616,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "采用",
+      "reason": "新增跨工具工程对象/时间轴结构保真与转换损失，区别单工具成品规格验收；原句仅为证据锚点，正面情境和细化处置为编辑设计。",
+      "card_keys": [
+        "ch06.interview.m01.ecosystem-handoff.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "生成工具输出带字幕、分轨音频和镜头信息的工程稿，剪辑工具却只接收到合成视频。为使用户在剪辑端继续改字幕与音轨，两边应约定什么资产交接契约？什么条件下不值得做这种整合？"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O068",
+      "original_text": "AIGC 的本质不是\"替代人类创作\"，而是**将内容生产的边际成本趋近于零**，让每个人都拥有\"超级创作助手\"。",
+      "source_line": 32,
+      "source_type": "待核实子断言",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "原文强断言、时效产品参数、效果数字或法律/医疗规则未独立证实；不纳入恒定必答，不因引用本地来源视为已核实。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O069",
+      "original_text": "| **技术架构** | GPT-4o / o3 系列模型，MoE 架构，原生多模态 |",
+      "source_line": 146,
+      "source_type": "待核实子断言",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "原文强断言、时效产品参数、效果数字或法律/医疗规则未独立证实；不纳入恒定必答，不因引用本地来源视为已核实。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O070",
+      "original_text": "视频生成是 2024-2025 年 AIGC 最热门的赛道。Sora 的发布证明 AI 已经能够理解物理世界并生成连贯的视频内容，这被认为是通往世界模型（World Model）的重要一步。",
+      "source_line": 340,
+      "source_type": "待核实子断言",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "原文强断言、时效产品参数、效果数字或法律/医疗规则未独立证实；不纳入恒定必答，不因引用本地来源视为已核实。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O071",
+      "original_text": "2025-2026: 多模态融合 → 文本/图像/视频/音频统一模型",
+      "source_line": 680,
+      "source_type": "待核实子断言",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "延期核实",
+      "reason": "原文强断言、时效产品参数、效果数字或法律/医疗规则未独立证实；不纳入恒定必答，不因引用本地来源视为已核实。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O072",
+      "original_text": "*   **上下文长度**：决定模型能处理多长的输入（Kimi 支持 200 万字上下文是核心卖点）",
+      "source_line": 132,
+      "source_type": "主要知识目标",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "合并",
+      "reason": "长窗口与有效利用已有机制；不复刻行业产品上限宣传",
+      "card_keys": [
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O073",
+      "original_text": "5.   **数据隐私**：用户输入的敏感信息是否被用于训练",
+      "source_line": 530,
+      "source_type": "主要知识目标",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "合并",
+      "reason": "输入数据处理与外传须拆链路，已有卡覆盖，不以本课企业隔离承诺作新事实",
+      "card_keys": [
+        "ch04.interview.m03.data-flow.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.1",
+      "objective_id": "m01-O074",
+      "original_text": "*   GPT-4 级别的模型，一次对话成本约 $0.01-0.1",
+      "source_line": 744,
+      "source_type": "主要知识目标",
+      "source_path": "第6章-行业案例/6.1-AIGC.md",
+      "source_hash": "58293258a1fd093808d99e3b00243bd9303cee82d92fd049cd5478cd50cde61d",
+      "decision": "合并",
+      "reason": "低付费率下收入与整体API费用已有目标，不重做成本故事",
+      "card_keys": [
+        "ch05.interview.m01.paid-cohort.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "T1",
+      "description": "30–45分钟：为营销生成任务设计评估方案（不运行）：逐项标出中文/推理/代码/多轮、延迟/流式/移动/历史/导出、长上下文/多模态/联网/工具/部署哪些适用，列样本、观察口径及预期证据；不适用附任务理由，不宣称所有能力已测。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T2",
+      "description": "30–45分钟：设计参考图上传、生成、导出/分享的数据/内容治理表，列授权与权利待核项、生成标识、必要字段、隔离/删除职责和需要验证的证据。待法务/数据负责人核对的项保持延期；未执行删除或专业核查。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T3",
+      "description": "30–45分钟：设计商业/企业采用评估表，对原文免费/付费权益及学生/年度/积分策略逐项标适用群体、价值假设与待证条件；检查API文档/稳定性、安全与实施责任。复用商业章知识，不运行付费实验或核实厂商当前套餐。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "practices_completed": 0,
+  "local_cards": 5,
+  "publication_status": "local_candidate_not_published",
+  "review_status": "author_self_check_complete_pending_editor",
+  "publication_coverage": "最终映射卡已发布回读；原生登记/短卡覆盖/综合任务/实践完成分别计数"
+}

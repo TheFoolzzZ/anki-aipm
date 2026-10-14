@@ -1,0 +1,843 @@
+{
+  "module": "3.2",
+  "updated_at": "2026-09-18",
+  "source": "第3章-技术攻克/3.2-机器学习.md",
+  "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+  "native_objectives": 36,
+  "registered": 36,
+  "registration_coverage": "100%",
+  "publication_status": "published_and_verified_2026-09-18",
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O01",
+      "original_text": "*   [ ] 模型推理延迟是否满足要求？",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 636,
+        "line_end": 636
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O02",
+      "original_text": "*   [ ] 模型服务是否有兜底机制？（模型挂了怎么办？）",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 637,
+        "line_end": 637
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O03",
+      "original_text": "*   [ ] 监控和告警是否配置好？",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 638,
+        "line_end": 638
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O04",
+      "original_text": "*   [ ] 回滚方案是否准备好？（多长时间内可以回滚到旧版本？）",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 639,
+        "line_end": 639
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O05",
+      "original_text": "*   [ ] 错误处理是否完善？（输入异常、超时、模型返回空值等情况）",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 640,
+        "line_end": 640
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O06",
+      "original_text": "*   [ ] 文档是否更新？（模型版本、效果指标、已知问题）",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 641,
+        "line_end": 641
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O07",
+      "original_text": "*   [ ] 我能用一句话解释机器学习与传统编程的区别",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2129,
+        "line_end": 2129
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.ml.problem-contract.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O08",
+      "original_text": "*   [ ] 我能解释监督学习、无监督学习、强化学习的区别，并各举两个产品案例",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2130,
+        "line_end": 2130
+      },
+      "decision": "采用",
+      "reason": "卡提供各两例，M1还要求解释每例学习信号，不把六个名称当掌握。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.ml.learning-signals.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O09",
+      "original_text": "*   [ ] 我能解释特征、标签、模型、训练、预测的含义",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2131,
+        "line_end": 2131
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.ml.problem-contract.001",
+        "ch03.interview.m02.label-governance.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O10",
+      "original_text": "*   [ ] 我能解释训练集、验证集、测试集的区别和划分原则",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2132,
+        "line_end": 2132
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M2",
+      "card_keys": [
+        "ch03.ml.evaluation-split.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O11",
+      "original_text": "*   [ ] 我能解释过拟合和欠拟合，并知道如何判断和解决",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2133,
+        "line_end": 2133
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M2",
+      "card_keys": [
+        "ch03.ml.fit-diagnosis.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O12",
+      "original_text": "*   [ ] 我能解释偏差和方差，以及它们的权衡",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2134,
+        "line_end": 2134
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M2",
+      "card_keys": [
+        "ch03.interview.m02.bias-variance.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O13",
+      "original_text": "*   [ ] 我能解释精确率和召回率的区别，并根据业务场景判断哪个更重要",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2135,
+        "line_end": 2135
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M2",
+      "card_keys": [
+        "ch03.ml.confusion-cost.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O14",
+      "original_text": "*   [ ] 我能读懂混淆矩阵，并从中计算准确率、精确率、召回率、F1",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2136,
+        "line_end": 2136
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M2",
+      "card_keys": [
+        "ch03.ml.confusion-cost.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O15",
+      "original_text": "*   [ ] 我能用生活中的类比解释线性回归、逻辑回归、决策树、KNN",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2140,
+        "line_end": 2140
+      },
+      "decision": "拆分",
+      "reason": "核心卡给四种算法机制，M1要求生活类比并指出失真边界，防止只背比喻。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.interview.m02.algorithm-mechanisms.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O16",
+      "original_text": "*   [ ] 我能解释随机森林和 GBDT 的核心区别（Bagging vs Boosting）",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2141,
+        "line_end": 2141
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.ml.ensemble-tradeoff.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O17",
+      "original_text": "*   [ ] 我知道 XGBoost、LightGBM、CatBoost 各自的优势场景",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2142,
+        "line_end": 2142
+      },
+      "decision": "拆分",
+      "reason": "原文固定优势结论具版本依赖；核心只教选型方法，具体实现比较在T4按版本文档核实。",
+      "mother_question_id": "m02-T4",
+      "card_keys": [
+        "ch03.interview.m02.model-selection.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O18",
+      "original_text": "*   [ ] 我能解释 CNN 为什么适合图像任务",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2143,
+        "line_end": 2143
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.dl.convolution-bias.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O19",
+      "original_text": "*   [ ] 我能解释 Transformer 的自注意力机制的核心思想",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2144,
+        "line_end": 2144
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.transformer.qkv-aggregation.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O20",
+      "original_text": "*   [ ] 我知道 GAN、VAE、Diffusion 三种生成模型的基本思想",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2145,
+        "line_end": 2145
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.dl.generative-mechanisms.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O21",
+      "original_text": "*   [ ] 我能根据业务场景选择合适的算法（参考第七章决策树）",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2146,
+        "line_end": 2146
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.interview.m02.model-selection.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O22",
+      "original_text": "*   [ ] 我能描述从\"业务问题\"到\"上线模型\"的完整流程",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2150,
+        "line_end": 2150
+      },
+      "decision": "拆分",
+      "reason": "完整八阶段跨多个目标，T1以产物清单承载，不压成90秒卡。",
+      "mother_question_id": "m02-T1",
+      "card_keys": [
+        "ch03.ml.problem-contract.001",
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O23",
+      "original_text": "*   [ ] 我知道数据预处理包括哪些步骤",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2151,
+        "line_end": 2151
+      },
+      "decision": "拆分",
+      "reason": "现有卡仅覆盖标注和泄漏，T1明确清洗/编码/缩放/划分步骤，不能认定完整核心覆盖。",
+      "mother_question_id": "m02-T1",
+      "card_keys": [
+        "ch03.interview.m02.label-governance.001",
+        "ch03.ml.leakage-prevention.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O24",
+      "original_text": "*   [ ] 我知道特征工程的价值和常见方法",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2152,
+        "line_end": 2152
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T1",
+      "card_keys": [
+        "ch03.interview.m02.feature-experiment.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O25",
+      "original_text": "*   [ ] 我能解释正则化（L1/L2）的作用",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2153,
+        "line_end": 2153
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M2",
+      "card_keys": [
+        "ch03.interview.m02.regularization.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O26",
+      "original_text": "*   [ ] 我知道模型有哪些上线方式及各自的适用场景",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2154,
+        "line_end": 2154
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O27",
+      "original_text": "*   [ ] 我能估算一个机器学习项目的成本（数据、标注、算力、人力）",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2155,
+        "line_end": 2155
+      },
+      "decision": "实践任务",
+      "reason": "成本拆解作为T3预算表；本批不加独立计算卡，避免与Token成本目标混淆。",
+      "mother_question_id": "m02-T3",
+      "card_keys": [],
+      "coverage_level": "document_task_only",
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O28",
+      "original_text": "*   [ ] 我能识别数据泄露的风险并知道如何防范",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2159,
+        "line_end": 2159
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T1",
+      "card_keys": [
+        "ch03.ml.leakage-prevention.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O29",
+      "original_text": "*   [ ] 我能识别数据偏见并知道产品层面的影响",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2160,
+        "line_end": 2160
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M3",
+      "card_keys": [
+        "ch03.interview.m02.group-bias.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O30",
+      "original_text": "*   [ ] 我知道冷启动问题及常见解决方案",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2161,
+        "line_end": 2161
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M3",
+      "card_keys": [
+        "ch03.interview.m02.cold-start.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O31",
+      "original_text": "*   [ ] 我知道模型不可解释性的风险及应对方法",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2162,
+        "line_end": 2162
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M3",
+      "card_keys": [
+        "ch03.interview.m02.explanation-limit.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O32",
+      "original_text": "*   [ ] 我知道类别不平衡时准确率是误导性指标",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2163,
+        "line_end": 2163
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M2",
+      "card_keys": [
+        "ch03.ml.confusion-cost.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O33",
+      "original_text": "*   [ ] 我能把业务需求翻译成机器学习问题类型",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2167,
+        "line_end": 2167
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.ml.problem-contract.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O34",
+      "original_text": "*   [ ] 我能和算法工程师讨论特征设计和评估指标",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2168,
+        "line_end": 2168
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T1",
+      "card_keys": [
+        "ch03.interview.m02.feature-experiment.001",
+        "ch03.ml.confusion-cost.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O35",
+      "original_text": "*   [ ] 我能判断算法工程师给出的技术方案是否合理",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2169,
+        "line_end": 2169
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-M1",
+      "card_keys": [
+        "ch03.interview.m02.model-selection.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.2",
+      "objective_id": "m02-O36",
+      "original_text": "*   [ ] 我能设计模型的兜底策略和降级方案",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.2-机器学习.md",
+        "content_hash": "c1bc39734842d2a1e41c4fafc9aab1eea78189222eb2f799a911fe1a6d67d5d9",
+        "line_start": 2170,
+        "line_end": 2170
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m02-T2",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

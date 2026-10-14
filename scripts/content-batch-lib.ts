@@ -9,7 +9,7 @@ const sourceRefSchema = z.object({
   line_start: z.number().int().positive(), line_end: z.number().int().positive(),
 }).refine(x => x.line_end >= x.line_start, 'source line range is reversed');
 const cardSchema = z.object({
-  canonical_key: z.string().regex(/^ch(01|02)\.[a-z0-9.-]+$/), lesson_source_key: z.string().min(3),
+  canonical_key: z.string().regex(/^(?:ch(01|02|03|04|05|06|07)\.[a-z0-9.-]+|C(?:0[1-9]|1[0-4]))$/), lesson_source_key: z.string().min(3),
   concept_keys: z.array(z.string().min(3)).min(1), revision: z.number().int().positive(),
   position: z.number().int().positive(), title: z.string().min(3).max(80),
   kind: z.enum(['概念','对比','机制','场景判断','故障诊断']),
@@ -18,13 +18,13 @@ const cardSchema = z.object({
   explanation: z.string().max(1000).default(''), estimated_seconds: z.number().int().min(30).max(90),
   source_refs: z.array(sourceRefSchema).min(1).max(3),
   review: z.object({status:z.literal('accepted'),reviewer:z.string().min(2),notes:z.array(z.string())}),
-});
+}).refine(card => !card.canonical_key.startsWith('C') || card.revision >= 2, 'Legacy seed cards can only be revised');
 export const batchSchema = z.object({
   batch_id: z.string().regex(/^[a-z0-9][a-z0-9-]{2,79}$/), status: z.literal('accepted'),
   chapter_position: z.number().int().min(1).max(9), cards: z.array(cardSchema).min(1).max(20),
-});
+}).refine(batch => batch.cards.every(card => card.canonical_key.startsWith('C') || Number(card.canonical_key.slice(2,4)) === batch.chapter_position), 'Card key/chapter mismatch');
 export type ContentBatch = z.infer<typeof batchSchema>;
-type Seed = { chapters:{id:string;position:number}[]; lessons:{id:string;chapter_id:string;source_key:string;title:string}[]; sources:{id:string;lesson_id:string;relative_path:string;content_hash:string}[] };
+type Seed = { chapters:{id:string;position:number}[]; lessons:{id:string;chapter_id:string;source_key:string;title:string}[]; sources:{id:string;lesson_id:string;relative_path:string;content_hash:string}[]; cards:{canonical_key:string;lesson_id:string}[] };
 
 export function stableCardId(key:string){
   const h=createHash('sha256').update(`recall-studio:card:${key}`).digest('hex');
@@ -52,6 +52,7 @@ export function validateLocal(batch:ContentBatch){
   const chapter=seed.chapters.find(x=>x.position===batch.chapter_position); if(!chapter)throw new Error('Chapter missing from seed');
   for(const card of batch.cards){
     const lesson=seed.lessons.find(x=>x.source_key===card.lesson_source_key); if(!lesson||lesson.chapter_id!==chapter.id)throw new Error(`${card.canonical_key}: lesson/chapter mismatch`);
+    if(card.canonical_key.startsWith('C')&&!seed.cards.some(x=>x.canonical_key===card.canonical_key&&x.lesson_id===lesson.id))throw new Error(`${card.canonical_key}: legacy card/lesson missing from seed`);
     for(const ref of card.source_refs){
       const source=seed.sources.find(x=>x.relative_path===ref.relative_path&&x.content_hash===ref.content_hash);
       if(!source)throw new Error(`${card.canonical_key}: source/hash missing from seed`);
@@ -85,7 +86,7 @@ export async function remotePlan(batch:ContentBatch){
       if(ledger&&card.revision===current.active_revision)unchanged.push(card.canonical_key);
       else if(card.revision===current.active_revision+1)revisions.push(card.canonical_key);
       else throw new Error(`${card.canonical_key}: expected revision ${ledger?current.active_revision:current.active_revision+1}`);
-    }else{if(card.revision!==1)throw new Error(`${card.canonical_key}: new card must start at revision 1`); additions.push(card.canonical_key);}
+    }else{if(card.canonical_key.startsWith('C'))throw new Error(`${card.canonical_key}: legacy card missing from remote database`);if(card.revision!==1)throw new Error(`${card.canonical_key}: new card must start at revision 1`); additions.push(card.canonical_key);}
     const source_refs=card.source_refs.map(ref=>{const source=sources?.find(x=>x.relative_path===ref.relative_path&&x.content_hash===ref.content_hash);if(!source)throw new Error(`${card.canonical_key}: source/hash missing from remote database`);if(source.lesson_id!==lesson.id)throw new Error(`${card.canonical_key}: source/lesson mismatch in remote database`);return {...ref,source_revision_id:source.id,lesson_id:source.lesson_id,title:lesson.title};});
     const {review: _review,lesson_source_key: _lessonSourceKey,...content}=card;
     payload.push({...content,card_id:stableCardId(card.canonical_key),lesson_id:lesson.id,chapter_id:lesson.chapter_id,source_refs});

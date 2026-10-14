@@ -1,0 +1,17 @@
+{
+  "module_id": "6.4",
+  "relations": [
+    {
+      "from": "ch06.interview.m04.compensation-authority.001",
+      "to": "C07",
+      "type": "prerequisite",
+      "reason": "情绪只能改变服务优先级；赔偿写操作仍由工具授权与实际执行结果约束"
+    },
+    {
+      "from": "ch06.interview.m04.mixed-service-intent.001",
+      "to": "ch06.interview.m04.handoff-ownership.001",
+      "type": "extension",
+      "reason": "混合诉求的未完成项与条件关系要进入坐席交接，避免人工只处理最后一句话"
+    }
+  ]
+}

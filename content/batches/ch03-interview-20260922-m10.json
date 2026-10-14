@@ -1,0 +1,498 @@
+{
+  "batch_id": "ch03-interview-20260922-m10",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.vector.training-objective.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.training-objective"
+      ],
+      "revision": 2,
+      "position": 73,
+      "title": "向量模型选型看什么证据",
+      "kind": "场景判断",
+      "prompt": "中英文售后检索准备直接使用通用语言模型的句向量。静态词向量、上下文表示和检索匹配训练各解决什么问题？应以什么证据选择模型？",
+      "answer_short": "应确认表示是否针对检索或语义匹配训练、支持的语言与输入规范，并用真实跨语言查询和相关文档标注比较。语言理解强不等于距离排序适合检索；上下文表示解决歧义，对比学习进一步让匹配目标影响向量空间。",
+      "required_points": [
+        "区分静态词向量、上下文表示与匹配训练目标的作用",
+        "检查语言/查询文档输入规范与领域适配，不能只看通用能力",
+        "用实际同语种和跨语种查询分层评测，榜单只用于筛候选"
+      ],
+      "explanation": "原文从 Word2Vec 的静态词表示，讲到 BERT 的上下文表示，再到针对匹配任务训练的句向量。编辑补充：这是一条理解技术动机的简化路径，不是说后来的模型只使用一种训练方法。语言模型能解释“苹果”的不同含义，并不保证直接抽取的向量就把售后问题和对应条款排在一起；表示如何汇聚、训练时哪些配对被拉近，都影响检索。编辑情境可用中文“多久能退”和英文退货条款，以及字面相近但条件相反的负例测试。先固定文档切分与候选范围，再比較模型，才能判断改善是否来自表示。还应检查查询与文档是否需要不同前缀，避免使用方式错误被误判为语言能力不足。\n【面试追问】为什么同为768维不能直接混用？参考思路：维度只规定坐标数量，不保证两个模型的坐标含义一致；记录编码模型/版本/输入规范，换模型须评估重编码与切换。\n【自评】按必答点判断掌握；追问供迁移练习，不要求背诵整段解析。",
+      "pitfalls": "高维或榜单总分高不保证业务召回高；语言列表支持不等于所有语言方向的质量相同。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 54,
+          "line_end": 132
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 181,
+          "line_end": 205
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 515,
+          "line_end": 559
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.vector.rerank-candidate-ceiling.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.rerank-candidate-ceiling"
+      ],
+      "revision": 2,
+      "position": 74,
+      "title": "重排序为何救不回漏召回",
+      "kind": "故障诊断",
+      "prompt": "正确退货条款从未进入候选Top-50。双塔召回和Cross-Encoder重排的计算职责有何区别？为什么只换更强重排器不足，怎样验证修复？",
+      "answer_short": "Cross-Encoder只重排送入它的候选，不能找回候选之外的条款。先查资料入库、查询与文档表示、检索过滤和候选覆盖；若正确条款已在候选中却靠后，再比较重排序质量与延迟。",
+      "required_points": [
+        "说明双塔可预编码文档，交叉编码器逐对评分候选的职责差异",
+        "依据候选中有无正确资料区分召回缺失与排序问题",
+        "先修候选覆盖，再固定候选比较排序收益和额外耗时"
+      ],
+      "explanation": "双塔把查询和文档独立编码，使文档向量能离线准备，适合大范围筛选；交叉编码器把二者共同输入，利用更细的交互信号给候选打分。编辑补充：这种计算差异解释了两阶段组合的价值，也限定了重排的作用范围。若正确条款未被加载、权限过滤出错或编码时被截断，无论后续评分多强都没有机会比较它。编辑情境应先保存完整候选列表与过滤条件，核对目标条款是否存在于可访问索引，再检查查询表达与召回方法。只有条款进入候选后，才能用相同候选集合比较排名和下游答案。增加候选量可能提高覆盖，却会增加逐对评分成本；Top-50或其他数量都是实验条件，不是固定最佳参数。\n【面试追问】扩大候选就能解决吗？参考思路：先排除未入库和错误过滤，再测扩大候选后的相关覆盖、重排开销和尾延迟；缺数据不能靠扩大K补救。\n【自评】按必答点判断掌握；追问供迁移练习，不要求背诵整段解析。",
+      "pitfalls": "重排序不必然提升每个任务；生成模型也不能可靠补回从未检索到的私有事实。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 134,
+          "line_end": 152
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 608,
+          "line_end": 630
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.vector.metric-compatibility.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.metric-compatibility"
+      ],
+      "revision": 2,
+      "position": 75,
+      "title": "相似度更换前的兼容检查",
+      "kind": "场景判断",
+      "prompt": "编辑情境：工程师打算把余弦相似度换成点积以优化速度。什么条件下排序可等价？未归一化时为何不能直接下结论？",
+      "answer_short": "若查询和文档向量都归一化为单位长度，点积等于余弦，精确评分排序相同；未归一化时点积还受长度影响。应依据模型训练与输出约定选度量，用固定数据检查排序和检索指标，不能凭未归一化就断言欧氏距离最好。",
+      "required_points": [
+        "给出双侧单位归一化时点积等于余弦的条件",
+        "解释未归一化时长度影响，欧氏距离也考虑绝对差异",
+        "核对模型约定并复测排序与业务相关性，不凭速度猜效果"
+      ],
+      "explanation": "余弦度量方向相近程度，点积在方向之外还乘上两个向量的长度，欧氏距离测量坐标差异。编辑补充：双侧为单位向量时，点积与余弦一致，平方欧氏距离也可写成2减2倍点积，因此距离由小到大的精确排序相同。这说明原文把欧氏距离简单绑定“没有归一化”过于绝对；选法必须结合模型训练约定。实际系统更换度量还可能涉及索引实现、阈值方向和近似误差，数学等价不代表线上结果毫无变化。编辑情境先保存一组查询及精确分数，核对归一化和排序，再在近似索引下比较召回和延迟；原来基于余弦校准的阈值也要重新确认，不直接沿用。\n【面试追问】精确排序等价，线上结果为何仍变？参考思路：检查归一化执行、索引参数、阈值和近似搜索误差；数学结论不等于具体执行计划已保持一致。\n【自评】按必答点判断掌握；追问供迁移练习，不要求背诵整段解析。",
+      "pitfalls": "向量相反方向不能普遍解释为自然语言反义；未经校准的相似度不是答案正确概率。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 209,
+          "line_end": 281
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.vector.ann-quality-budget.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.ann-quality-budget"
+      ],
+      "revision": 2,
+      "position": 76,
+      "title": "索引调参如何区分速度与质量",
+      "kind": "场景判断",
+      "prompt": "HNSW漏近邻，团队考虑改IVF。二者索引思路及关键参数有何区别？应如何设置实验、区分近邻召回与业务相关性？",
+      "answer_short": "HNSW沿分层邻接图搜索，IVF把向量分桶后探测部分桶；二者都可减少搜索工作并漏掉近邻。区分建索引参数和查询预算，在固定向量/度量上对照精确搜索测邻居召回，再用相关性标注测业务质量，同时比较资源和更新成本。",
+      "required_points": [
+        "区分精确近邻召回与业务相关资料召回，分别选基准",
+        "区分HNSW分层图与IVF分桶机制，并区分构建设置和查询搜索预算",
+        "用固定数据测召回、尾延迟、内存及构建更新成本，不能只照默认参数"
+      ],
+      "explanation": "【机制】HNSW从稀疏上层导航到下层邻接图，底层仍可近似；IVF按粗聚类分桶，查询探测选中桶。M控制图连接，efConstruction控制构建搜索范围，efSearch控制查询候选搜索；nlist为桶数，nprobe为查询探测桶数。建图或聚类调整与查询预算调整的成本不同。\n【编辑情境】固定向量和度量，精确Top-10中ANN找回8个，则近邻召回80%；这些邻居不一定都是相关条款，还需独立人工标注的业务召回。若精确搜索也排错，应检查表示或数据，而不是无限增加搜索预算。\n【面试追问】“Flat只有当基线的价值吗？”参考思路：不是；小候选集或硬件足够时精确检索也可直接服务。按实际规模、过滤选择性和延迟测定，不背某条数阈值。\n【边界】不承诺固定加速倍数，IVF动态更新行为依实现，不能声称每次增删都重建。\n【自评】只按本卡必答点判断掌握，追问与参数细节为可选拓展。",
+      "pitfalls": "ANN邻居召回100%不等于答案100%正确；不同实现的动态更新行为需实际核对，不能把IVF一概说成每次增删都要重建。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 313,
+          "line_end": 388
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 418,
+          "line_end": 458
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 502,
+          "line_end": 511
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.vector.capacity-arithmetic.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.capacity-arithmetic"
+      ],
+      "revision": 2,
+      "position": 77,
+      "title": "按块数算存储和编码成本",
+      "kind": "场景判断",
+      "prompt": "编辑假设：100万块、每块500 Token、768维float32；编码价0.02元/百万Token。只算原始向量与首次编码，各是多少？为何不是完整预算？",
+      "answer_short": "原始向量为100万×768×4=30.72亿字节，即3.072 GB（十进制）；首次编码5亿Token，费用500×0.02=10元。完整预算还包含索引、原文元数据、副本备份、增量/重编码、查询编码及运维，不能按原始文档数代替分块数。",
+      "required_points": [
+        "正确计算原始向量3.072 GB并明确float32与十进制单位",
+        "正确计算5亿Token与10元，价格明确为题设假设",
+        "列出索引副本及更新/查询等遗漏，并区分文档数与块数"
+      ],
+      "explanation": "容量估算要从实际向量条目开始，而不是从原始文件个数开始：一篇文件可能拆成很多块，重叠还会增加重复编码的Token。编辑假设先忽略这些额外因素，100万块各500 Token得到5亿Token，除以百万再乘单价；向量每个分量4字节得到3.072 GB，不能把GB与GiB混为同一数值。编辑纠错：原文成本表把1000万篇×500 Token写为5000万Token，乘法与后续费用均不一致，不作为实价或结论引用。若采用压缩或降低维度，原始存储会变化，但需同时回测相关性；索引开销不是一条固定倍率可覆盖所有实现。正式预算还应按保留版本、副本数量、更新频率和查询量列出持续成本。\n【面试追问】文档不增多，预算为什么上涨？参考思路：重叠分块、版本留存、重编码、查询量或重试可能变化；按条目/Token/调用量逐项对账，不只看文件总数。\n【自评】按必答点判断掌握；追问供迁移练习，不要求背诵整段解析。",
+      "pitfalls": "题中价格不是当前供应商报价；自建模型成本不只有电费，原始向量容量也不是所需实例内存。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 657,
+          "line_end": 684
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.vector.compression-choice.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.compression-choice"
+      ],
+      "revision": 2,
+      "position": 78,
+      "title": "内存不足时压缩是否合算",
+      "kind": "场景判断",
+      "prompt": "编辑情境：检索服务内存超预算，团队提议缩短向量维度或使用PQ。需要比较哪些收益与代价，为什么不能只看压缩率？",
+      "answer_short": "先分清内存来自向量、索引还是副本，再比较受支持的降维、PQ及资源调整。压缩可降低存储，但近似距离或信息变化可能损害检索；应在真实查询上同时测召回、排序、延迟和重建成本，选择满足质量底线的方案。",
+      "required_points": [
+        "先定位真实内存组成，不假设向量是唯一占用",
+        "说明降维与量化可能改变表示/距离精度，不能任意截断",
+        "用质量资源和重建成本对比，保留可回退原索引或版本"
+      ],
+      "explanation": "原文把PQ作为资源受限时的压缩选项，也讨论维度与存储的权衡。编辑补充：PQ通常把向量划为子向量，分别量化到码本并保存短码；不应把它理解成逐维简单分类，压缩比也不直接等于召回损失。降低维度则需要模型或处理方法支持，任意取前几维可能破坏语义表示。先测实际资源组成，如果主要占用来自冗余副本或索引连接，单压向量未必解决瓶颈。编辑情境可保留原索引作为质量基线，逐方案运行同一组包含精确编号、短查询和相近条款的任务，记录内存、尾延迟及相关资料缺失。节省资源达到预算且关键任务质量守住底线，才考虑迁移；具体压缩收益要实测。\n【面试追问】PQ之后型号条款召回下降怎么处理？参考思路：对比原索引确认退化集中在哪些任务，再试更保守压缩或回退；不以全局平均守住就忽略高代价漏项。\n【自评】按必答点判断掌握；追问供迁移练习，不要求背诵整段解析。",
+      "pitfalls": "“损失少量精度”不是业务可接受证明，漏掉例外条款可能比漏掉一条普通说明代价大得多。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 154,
+          "line_end": 179
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 390,
+          "line_end": 416
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 644,
+          "line_end": 653
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.vector.database-selection.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.database-selection"
+      ],
+      "revision": 2,
+      "position": 79,
+      "title": "数据规模不能单独决定数据库",
+      "kind": "场景判断",
+      "prompt": "编辑情境：团队已有关系数据库，计划新增200万向量检索且每日更新。应如何比较扩展现有数据库与引入专用向量库？",
+      "answer_short": "先用真实权限过滤、并发与更新负载测试现有扩展能否达标，再与专用库比较查询尾延迟、更新可见性、可恢复性及总维护成本。200万条只是输入条件；复用可能降低集成成本，但不是零运维，专用库也不因规模更大就自动更合适。",
+      "required_points": [
+        "把过滤并发更新和可用性约束写入同一测试条件",
+        "比较查询/更新/恢复证据，不能按条数阈值直接选品牌",
+        "计入集成运维迁移成本并明确达标/停止条件"
+      ],
+      "explanation": "原文列出专用库和传统数据库扩展两条路线，真正的选型对象是满足业务约束的一套服务。编辑补充：若读取延迟很好，但删除文件后旧内容仍被检索到，就没有满足需要的更新语义；如果权限过滤后的有效候选很少，未过滤压测也不能代表实际质量。编辑情境中先把数据规模、查询分布、并发、更新批次与权限选择性固定，分别测查询尾延迟和新增/删除到检索可见的时间。再验证备份恢复及失败告警，计入监控、容量规划、升级和迁移工作。现有扩展满足目标时，可以避免引入新的数据同步链；若隔离与扩展能力明显受限，再考虑专用服务。品牌能力随版本变化，本卡要求比较方法，不给永久榜单。\n【面试追问】现有数据库查询很快，可以直接通过吗？参考思路：还须验证删除/更新可见性、租户隔离、恢复和峰值写入；查询性能不能覆盖数据正确性及运维责任。\n【自评】按必答点判断掌握；追问供迁移练习，不要求背诵整段解析。",
+      "pitfalls": "托管并非零运维责任；已有数据库也可能需新增实例和索引资源，不能把增量费用默认写零。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 447,
+          "line_end": 511
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.vector.hybrid-evaluation.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.hybrid-evaluation"
+      ],
+      "revision": 2,
+      "position": 80,
+      "title": "混合检索改善如何验证",
+      "kind": "场景判断",
+      "prompt": "向量检索漏编号，关键词检索漏口语。如何融合两路并比较单路基线？Recall@K、MRR、NDCG各评价什么，怎样避免平均改善掩盖退化？",
+      "answer_short": "按编号、口语及混合查询分别标注相关资料，保留两条单路基线，可试按排名的RRF或有校准依据的分数融合。Recall@K看覆盖，MRR看首个相关位置，NDCG看分级排序；同时检查延迟与各类退化。",
+      "required_points": [
+        "分层构造查询和相关性标注，保留单路基线",
+        "区分Recall覆盖、MRR首条、NDCG分级排序各测什么",
+        "采用有依据的融合策略（如按排名RRF，或校准/学习后的分数融合），回测质量和延迟"
+      ],
+      "explanation": "原文说明密集向量擅长语义匹配，稀疏表示或关键词路径可补词项信号。编辑补充：两路分数尺度可能不同，不能把原始分值直接相加就假设可比较；RRF把各路排名转成1/(常数+名次)后求和，是可试的办法；有校准与验证依据的分数融合也可用，但不保证对每类查询更好。编号精确的样本与口语表达应分别观察，否则总体均值可能掩盖关键订单型号检索的退化。Recall@K需先有相关资料集合，MRR对每个查询取首个相关结果名次倒数再平均；无相关结果按约定记零。NDCG适合相关性有等级时比较排序，但仍依赖标注质量。本卡对指标定义和基线要求属于编辑补充，原生清单提及MRR/NDCG却没有展开，实践任务需产出可复核标注。\n【面试追问】融合分数更高能直接作为答案置信度吗？参考思路：不能，融合分数用于同条件排序，不是事实正确概率；用标注集评估覆盖与排序，再独立核对生成主张。\n【自评】按必答点判断掌握；追问供迁移练习，不要求背诵整段解析。",
+      "pitfalls": "有任意结果返回不是命中正确资料；融合也不能替代权限、日期或价格等硬条件过滤。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 587,
+          "line_end": 606
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 709,
+          "line_end": 718
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m10.colbert-late-interaction.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.colbert-late-interaction"
+      ],
+      "revision": 1,
+      "position": 2001,
+      "title": "多向量怎样保留细粒度匹配",
+      "kind": "机制",
+      "prompt": "ColBERT与把整段压成单向量有何区别？经典MaxSim怎样汇总查询与文档的匹配，为什么不能只取所有Token配对中的一个最大分？",
+      "answer_short": "ColBERT分别编码查询与文档，保留Token级上下文向量；经典MaxSim为每个查询向量寻找最相似的文档向量，再将这些最大相似度求和。只取全局一个最大分会丢掉其他查询项的匹配证据；多向量也增加存储与交互成本。",
+      "required_points": [
+        "分别编码并保留多个Token级向量，文档表示可离线准备",
+        "说明每个查询项取最大，再对查询项求和，不是整个矩阵只取一个最大值",
+        "比较细粒度匹配收益与存储/服务成本，不保证所有任务都优于单向量"
+      ],
+      "explanation": "【编辑修正】原文“取最大相似度作为匹配分数”省略了跨查询项求和。原始ColBERT论文§3.1–3.3明确这两个步骤；它也不同于把query/document共同送入Cross-Encoder。\n【编辑算例】两个查询向量对某文档各自的最高相似度为0.8、0.3，则简化演示总分1.1，而非0.8；分数不是正确概率，真实查询编码还可能有特殊Token等处理。\n【面试追问】“有多向量就不会漏限制词吗？”参考：仍受训练、切分、截断和检索近似影响，需用包含型号与例外条款的任务验证。\n【来源】https://arxiv.org/html/2004.12832v2（2026-09-22）；不背固定精度增益或存储倍率。\n【自评】只按本卡必答点判断掌握，追问与参数细节为可选拓展。",
+      "pitfalls": "Embedding不是可无损解压的原文；MaxSim分高不证明所有业务条件满足。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 566,
+          "line_end": 585
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m10.sparse-representation.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.sparse-representation"
+      ],
+      "revision": 1,
+      "position": 2002,
+      "title": "稀疏向量不只是稠密向量补零",
+      "kind": "对比",
+      "prompt": "检索团队说“SPLADE就是把普通句向量低分维度设成0，等同BM25”。如何区分词项稀疏表示、稠密表示和BM25的信号来源？",
+      "answer_short": "SPLADE学习词表维度上的权重和词项扩展，通过稀疏约束保留少量有效项；普通稠密向量在潜在维度分布式表示语义，不能靠补零改成同一坐标含义。BM25主要依据词频、文档频率和长度等词项统计，两者并不等同。",
+      "required_points": [
+        "稀疏词项维度可对应词表，稠密潜在维度不等同逐词坐标",
+        "SPLADE权重/扩展由模型学习，BM25以词项统计评分，不混为一个模型"
+      ],
+      "explanation": "【机制】稀疏表示便于用非零词项组织检索；SPLADE还可激活原文未直接出现但模型预测相关的词项，不能简单称为精确字符串匹配。\n【编辑情境】采购询问某型号停产替代品，编号匹配与“可替代”的语义都重要；先比较单路候选，再考虑融合，不能认定有词表坐标就天然理解否定或供货资格。\n【面试追问】“先给稠密向量置零能复用倒排词项索引吗？”参考：置零只改变数值稀疏度，没有让原先的潜在维度自动变成词项语义；编码空间、评分与索引须匹配。\n【编辑补充来源】https://arxiv.org/abs/2107.05720（2026-09-22），引用学习稀疏词项权重/扩展机制，不引用通用性能排名。\n【自评】只按本卡必答点判断掌握，追问与参数细节为可选拓展。",
+      "pitfalls": "稀疏向量不限于SPLADE，BM25也可表示词项权重；相似不等于方法完全相同。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 587,
+          "line_end": 606
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m10.filtered-recall.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.filtered-recall"
+      ],
+      "revision": 1,
+      "position": 2003,
+      "title": "权限过滤后不满K如何排查",
+      "kind": "故障诊断",
+      "prompt": "租户内明明有足够文档，向量检索请求Top-10却只返回2条。为什么可能与ANN和过滤顺序有关，如何排查且不削弱权限边界？",
+      "answer_short": "若先在共享空间取有限近似候选再过滤，多数候选可能属于其他租户，被移除后不足10条。先核对可访问文档、索引状态、过滤与执行计划，再比较授权子集精确搜索及可用的扩大扫描/分区方案；不能为凑满结果放开租户限制。",
+      "required_points": [
+        "区分授权集不足与候选被过滤截短，保留实际候选及执行证据",
+        "始终在授权范围校验结果，不能用取消权限过滤修复召回",
+        "以相同授权子集的精确结果作对照，测扫描/过滤方案的召回和延迟"
+      ],
+      "explanation": "【编辑补充】pgvector文档给出近似索引扫描后过滤可能减少返回条数的情况，并提供迭代扫描等选择；并非所有向量库都采用相同流程，所以先查具体执行计划。\n【编辑情境】Top-10候选8条是其他租户资料，过滤后仅2条，不说明本租户只有2条。验证可访问索引是否完整，再比较扩大搜索预算、支持的过滤执行方式或租户分区；扫描范围增加也有延迟与资源代价。\n【面试追问】“把过滤放在最后前端做行吗？”参考：不可把未授权内容交给前端或生成模型后才隐藏，服务端授权必须在数据对外使用前成立。\n【来源】https://github.com/pgvector/pgvector#filtering（2026-09-22）；具体实现与版本须核对。\n【自评】只按本卡必答点判断掌握，追问与参数细节为可选拓展。",
+      "pitfalls": "返回不满K也可能来自数据未入库、阈值或空向量；不要看到少结果就断定单一原因。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 644,
+          "line_end": 653
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m10.embedding-migration.001",
+      "lesson_source_key": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "concept_keys": [
+        "vector.embedding-migration"
+      ],
+      "revision": 1,
+      "position": 2004,
+      "title": "同维度模型更换为何仍要迁移",
+      "kind": "场景判断",
+      "prompt": "旧文档由模型A编码，新查询改用同为768维的模型B，接口可正常计算距离。为什么检索仍可能失效？怎样设计可验证的切换与回退？",
+      "answer_short": "相同维度只保证形状兼容，不保证A/B坐标空间对齐；查询和文档应按兼容的编码器与输入约定生成。通常为B重编码文档并建新索引，用同一查询集及更新对账验证后成套切换查询编码和索引，保留可回退的A链路。",
+      "required_points": [
+        "维度相同不保证语义坐标兼容，核对模型版本及query/document输入约定",
+        "维护明确版本的新索引并覆盖增量更新，避免未经验证混合空间",
+        "固定评测集比较质量/延迟，成套切换和回退编码器与索引"
+      ],
+      "explanation": "【编辑补充】这是由表示空间兼容性推导的工程题，不是原文给出的固定操作步骤。用同一维度重新训练得到的模型不必共享坐标方向；除非提供明确的兼容或对齐证据，不能据接口无报错认定可互换。\n【编辑情境】政策库迁移期间仍有新增与删除，除重编码历史条目，还需把变更同步到新旧路径并对账；切换前用跨语言、精确编号和例外条款查询复测。\n【面试追问】“回退只改模型名够吗？”参考：必须指向与旧模型匹配的旧索引及处理规范；检查迁移期间删除与权限变化仍有效，避免恢复了已失效内容。\n【边界】有供应商明确兼容承诺时也要业务验证；不要求盲目重建所有无关数据。\n【自评】只按本卡必答点判断掌握，追问与参数细节为可选拓展。",
+      "pitfalls": "本题针对更换编码空间；同模型文档更新由3.11更新删除卡承接，不重复考简单入库刷新。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+          "content_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+          "line_start": 54,
+          "line_end": 152
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校及主编修订通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m10.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

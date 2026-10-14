@@ -1,0 +1,188 @@
+{
+  "batch_id": "ch03-interview-20261001-m15",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m15.framework-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.15-LangChain.md",
+      "concept_keys": [
+        "m15.framework-boundary"
+      ],
+      "revision": 1,
+      "position": 2501,
+      "title": "框架在系统中负责什么",
+      "kind": "概念",
+      "prompt": "LangChain、LangGraph与LangSmith分别承担什么职责？企业采购助手接入这些组件后，能否据此断言模型理解和业务正确性已经提升？",
+      "answer_short": "LangChain提供模型、工具等应用接口与Agent封装；LangGraph提供较低层的状态和流程编排；LangSmith用于追踪、调试和评估。它们改变系统组织与可观察性，不自动提高模型权重中的推理能力，也不替代业务验收。",
+      "required_points": [
+        "区分LangChain应用封装、LangGraph流程状态编排、LangSmith追踪评估",
+        "框架接通能力不等于模型或业务质量已改善，须用任务证据验收"
+      ],
+      "explanation": "【机制】应用框架安排模型何时获得资料、调用工具和处理返回；底层编排保存运行状态、控制分支，追踪平台帮助定位哪一步失败。三者不是三种模型，也不是必须同时采购的产品。\n【编辑情境】采购助手通过ERP工具查到真实库存，答案更可靠来自新证据及约束；若模型仍把箱误当件，增加框架不会自行修复单位错误。\n【面试追问】“一个固定查库存接口必须引入全部组件吗？”参考：先比较现有后端直连，复杂状态、恢复或观测需求出现时再引入对应能力。\n【第一方核对】https://docs.langchain.com/oss/python/langchain/overview（2026-10-01）；职责说明随版本核对。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "“六大模块”是原文教学分类，不是现行唯一包结构；不背历史类名或事实标准地位。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.15-LangChain.md",
+          "content_hash": "62c5343efc2a6a48bea92580215b37b84d017791a7d73a9062a966fd80878547",
+          "line_start": 11,
+          "line_end": 21
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m15.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m15.model-adapter.001",
+      "lesson_source_key": "第3章-技术攻克/3.15-LangChain.md",
+      "concept_keys": [
+        "m15.model-adapter"
+      ],
+      "revision": 1,
+      "position": 2502,
+      "title": "统一接口的替换边界",
+      "kind": "场景判断",
+      "prompt": "LangChain让模型A/B通过统一接口调用。财务助手从A切到B后无需改业务代码，是否就能直接上线？说出需要验证的两类兼容性。",
+      "answer_short": "统一接口降低调用适配工作，但不保证行为等价。先验证所需能力和输入输出契约，如工具调用、结构化输出、上下文与流式行为；再用相同财务样例比较质量、延迟及完整调用成本，确认业务约束仍成立后切换。",
+      "required_points": [
+        "统一接口只降低适配成本，检查能力与消息/输出契约",
+        "用同一业务回归集比较正确性、延迟和成本，不能以接口无报错验收"
+      ],
+      "explanation": "【机制】适配层可以统一方法名和部分消息格式，供应商模型仍有不同能力、限制与生成行为。切换后能返回字符串，不说明能正确输出审核所需字段或支持同一工具模式。\n【编辑情境】发票助手A返回可校验的含税金额，B虽能聊天却把空字段猜成0，下游汇总未报错但账目变化；应固定含缺失项、币种和红字发票的样例逐项核对。\n【面试追问】“能随时切模型就不会锁定吗？”参考：还要看供应商特有参数、消息格式、托管能力和迁移成本；统一接口提供可移植性的一部分。\n【第一方核对】https://docs.langchain.com/oss/python/langchain/overview（2026-10-01）；替换验收步骤为编辑推导。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "不要背“换一行配置即可等效”或模型名称决定任务复杂度；统一API不是统一质量保证。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.15-LangChain.md",
+          "content_hash": "62c5343efc2a6a48bea92580215b37b84d017791a7d73a9062a966fd80878547",
+          "line_start": 77,
+          "line_end": 90
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m15.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m15.fork-join-contract.001",
+      "lesson_source_key": "第3章-技术攻克/3.15-LangChain.md",
+      "concept_keys": [
+        "m15.fork-join-contract"
+      ],
+      "revision": 1,
+      "position": 2503,
+      "title": "并行子链如何汇总",
+      "kind": "机制",
+      "prompt": "合同审查流水线先解析，再并行做合规检查、风险分析和摘要，最后汇总。为什么总耗时不是把并行支路简单相加？合规支路失败时怎样避免报告显示“全部通过”？",
+      "answer_short": "真正并行且汇总等待全部时，耗时由串行部分加最慢支路及汇总开销决定；资源竞争可能增加实测时间。各支路返回结构化状态与结果，汇总核对必需支路是否成功；合规未完成时明确未检查并按业务规则中止或返回部分报告，不能把空值当通过。",
+      "required_points": [
+        "区分串行耗时与并行最慢支路，实际等待策略和资源影响结果",
+        "支路契约包含状态/结果，汇总按必需性处理缺失与失败"
+      ],
+      "explanation": "【机制】并行节点同时起跑，汇合节点是否等待所有分支决定关键路径。原文“各链延迟之和”只适合串行或未真正并行的情况。结果接口必须区分成功但无风险、失败、超时与未运行，否则汇总容易把缺省空列表理解成无风险。\n【编辑情境】合同摘要2秒、合规8秒、风险5秒为编辑假设，三支路并行等待全部约受8秒支路支配，另加解析、汇总及排队；合规超时的报告应显示“合规未完成”，不能发出可签约结论。\n【面试追问】“失败后重跑整条链吗？”参考：能确认输入和成功产物仍有效时，仅重跑失败支路；写操作要另查幂等和真实状态。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "并行不等于必然低延迟；不通过输出结构缺省值伪造完整成功。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.15-LangChain.md",
+          "content_hash": "62c5343efc2a6a48bea92580215b37b84d017791a7d73a9062a966fd80878547",
+          "line_start": 252,
+          "line_end": 275
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m15.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m15.thread-memory.001",
+      "lesson_source_key": "第3章-技术攻克/3.15-LangChain.md",
+      "concept_keys": [
+        "m15.thread-memory"
+      ],
+      "revision": 1,
+      "position": 2504,
+      "title": "线程状态与长时记忆",
+      "kind": "故障诊断",
+      "prompt": "LangChain采购助手同一对话重启后丢失澄清结果，另一位员工却看到了上个人的历史。怎样区分保存状态和会话隔离两个问题？",
+      "answer_short": "检查短期状态是否由持久checkpointer保存、恢复是否使用正确thread标识，并核对服务端把线程绑定到已验证用户/租户。短期记忆只承接同一会话状态；跨会话偏好或知识需独立长期存储和检索，不能把共享线程当长期记忆。",
+      "required_points": [
+        "持久状态与正确thread恢复决定同一会话连续性",
+        "线程必须在服务端绑定用户/租户；短期会话状态不同于跨会话长期存储"
+      ],
+      "explanation": "【机制】现行LangChain Agent把会话信息放在状态中，checkpointer在步骤间持久保存；进程内存保存器重启后通常不保留。thread用于组织恢复，用户可输入的thread_id本身不是授权证据；历史保存在库中也不代表全部进入下一次模型输入。\n【编辑情境】两名采购员都被客户端分配thread=1，导致需求数量混入；把标识改随机只能减少碰撞，仍需服务端验证归属，禁止读取他人会话。\n【面试追问】“保存了所有历史就一定记得吗？”参考：模型可见上下文仍受窗口和摘要选择影响，应检查实际输入。\n【第一方核对】https://docs.langchain.com/oss/python/langchain/short-term-memory（2026-10-01）；线程授权要求为编辑工程推导。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "checkpointer不是长期用户知识库，也不是自动实现租户权限的安全机制。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.15-LangChain.md",
+          "content_hash": "62c5343efc2a6a48bea92580215b37b84d017791a7d73a9062a966fd80878547",
+          "line_start": 132,
+          "line_end": 149
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m15.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m15.structured-response.001",
+      "lesson_source_key": "第3章-技术攻克/3.15-LangChain.md",
+      "concept_keys": [
+        "m15.structured-response"
+      ],
+      "revision": 1,
+      "position": 2505,
+      "title": "框架的两种结构化返回路径",
+      "kind": "机制",
+      "prompt": "LangChain Agent可采用提供商原生约束或ToolStrategy生成结构化结果。两条路径分别怎样产生并校验结果，需要什么模型能力？ToolStrategy验证失败后怎样处理？",
+      "answer_short": "原生路径使用提供商支持的结构化输出能力，由API按支持范围约束并返回结果；ToolStrategy把目标结构作为工具调用Schema，让模型生成参数，框架验证并捕获为结构化响应。前者须支持原生结构化，后者须支持工具调用；工具策略验证失败可反馈错误让模型重试或配置为抛出，仍须设停止边界。",
+      "required_points": [
+        "提供商原生路径依赖模型/API支持的结构化约束，不把普通JSON提示当原生保证",
+        "ToolStrategy借工具Schema/调用参数承载结果并由框架验证，依赖工具调用能力",
+        "ToolStrategy验证失败可回传错误重试或抛出；需有限重试，不能把重试机制当内容正确证明"
+      ],
+      "explanation": "【机制】两种策略负责把输出变成程序可使用的结构。原生路径在受支持的API约束下产生结构；工具策略把Schema当作用于返回数据的工具，模型输出其参数，框架校验并收集结构化响应；它可以不调用业务写接口。多份结构化响应或校验错误也需处理。\n【编辑情境】合同助手A支持原生结构化，B仅支持工具调用，可选择相应策略保持目标字段契约；若还需真实合同查询工具，要核对模型是否支持同时使用工具与结构化结果，而不能因“支持聊天”就直接切换。\n【面试追问】“框架反馈错误就一定修好吗？”参考：只提供纠错机会，应限定重试，失败明确返回；事实核验复用ch03.prompt.json-validation.001，不新增同目标评分点。\n【第一方核对】https://docs.langchain.com/oss/python/langchain/structured-output（2026-10-01）；不要求记参数或版本号。\n【自评】三项必答都覆盖；具体SDK写法和事实核验为选答。",
+      "pitfalls": "ToolStrategy中的工具调用可以只承载数据，不代表写业务系统；两策略都不自动证明字段事实正确。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.15-LangChain.md",
+          "content_hash": "62c5343efc2a6a48bea92580215b37b84d017791a7d73a9062a966fd80878547",
+          "line_start": 351,
+          "line_end": 357
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m15.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

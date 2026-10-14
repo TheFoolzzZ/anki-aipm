@@ -1,0 +1,843 @@
+{
+  "module": "3.1",
+  "updated_at": "2026-09-18",
+  "source": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+  "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+  "native_objectives": 36,
+  "registered": 36,
+  "registration_coverage": "100%",
+  "publication_status": "published_and_verified_2026-09-18",
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O01",
+      "original_text": "*   [ ] 我能解释监督学习、无监督学习、强化学习的区别",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1421,
+        "line_end": 1421
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.ml.learning-signals.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O02",
+      "original_text": "*   [ ] 我能解释准确率、精确率、召回率、F1 值的区别和适用场景",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1422,
+        "line_end": 1422
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.ml.confusion-cost.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O03",
+      "original_text": "*   [ ] 我能解释过拟合和欠拟合，以及如何解决",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1423,
+        "line_end": 1423
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.ml.fit-diagnosis.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O04",
+      "original_text": "*   [ ] 我能解释偏差和方差的权衡",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1424,
+        "line_end": 1424
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.interview.m02.bias-variance.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O05",
+      "original_text": "*   [ ] 我能解释神经网络的基本结构（输入层、隐藏层、输出层）",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1428,
+        "line_end": 1428
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.dl.hierarchical-representation.001",
+        "ch03.dl.activation-nonlinearity.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O06",
+      "original_text": "*   [ ] 我能解释 CNN 为什么适合图像任务",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1429,
+        "line_end": 1429
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.dl.convolution-bias.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O07",
+      "original_text": "*   [ ] 我能解释 Transformer 的核心机制（自注意力）",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1430,
+        "line_end": 1430
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.transformer.qkv-aggregation.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O08",
+      "original_text": "*   [ ] 我知道 GPT、BERT、T5 的区别",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1431,
+        "line_end": 1431
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.transformer.architecture-families.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O09",
+      "original_text": "*   [ ] 我能解释 LLM 的预训练、SFT、RLHF 三阶段",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1435,
+        "line_end": 1435
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.llm.training-stages.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O10",
+      "original_text": "*   [ ] 我能解释 Token、上下文窗口、Temperature 的含义",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1436,
+        "line_end": 1436
+      },
+      "decision": "拆分",
+      "reason": "卡覆盖Token与窗口；Temperature的采样意义与非事实保证在T1单独辨析，未声称两卡完整覆盖三个概念。",
+      "mother_question_id": "m01-T1",
+      "card_keys": [
+        "ch03.token.unit-vs-character.001",
+        "ch03.token.context-reservation.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O11",
+      "original_text": "*   [ ] 我能设计一个有效的 System Prompt",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1437,
+        "line_end": 1437
+      },
+      "decision": "拆分",
+      "reason": "写出完整System Prompt属于产物能力，卡只检查任务合同；T1提交成品。",
+      "mother_question_id": "m01-T1",
+      "card_keys": [
+        "ch03.prompt.task-contract.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O12",
+      "original_text": "*   [ ] 我能解释 RAG 的工作原理和常见问题",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1438,
+        "line_end": 1438
+      },
+      "decision": "拆分",
+      "reason": "两卡覆盖路由与解析故障，完整离线/在线架构需T1画图，不把两问当全链路覆盖。",
+      "mother_question_id": "m01-T1",
+      "card_keys": [
+        "ch03.rag.source-ingestion-loss.001",
+        "ch03.llm.application-routing.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O13",
+      "original_text": "*   [ ] 我能估算一个 AI 产品的 Token 消耗和成本",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1439,
+        "line_end": 1439
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M2",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O14",
+      "original_text": "*   [ ] 我能解释幻觉产生的原因和缓解方法",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1440,
+        "line_end": 1440
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.llm.hallucination-controls.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O15",
+      "original_text": "*   [ ] 我了解计算机视觉的主要任务和评估指标",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1444,
+        "line_end": 1444
+      },
+      "decision": "拆分",
+      "reason": "核心卡限分类/检测/分割；OCR、生成及指标细节在T2，视觉全景目标部分核心覆盖。",
+      "mother_question_id": "m01-T2",
+      "card_keys": [
+        "ch03.interview.m01.cv-output-contract.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O16",
+      "original_text": "*   [ ] 我了解语音识别和语音合成的基本原理",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1445,
+        "line_end": 1445
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M3",
+      "card_keys": [
+        "ch03.interview.m01.speech-chain.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O17",
+      "original_text": "*   [ ] 我了解推荐系统的召回-排序架构",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1446,
+        "line_end": 1446
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M3",
+      "card_keys": [
+        "ch03.interview.m01.retrieval-ranking.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O18",
+      "original_text": "*   [ ] 我了解向量数据库的作用和选型",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1447,
+        "line_end": 1447
+      },
+      "decision": "合并",
+      "reason": "复用3.10选型卡，向量索引实现不在3.1重复展开。",
+      "mother_question_id": "m01-M2",
+      "card_keys": [
+        "ch03.vector.database-selection.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O19",
+      "original_text": "*   [ ] 我能解释前端和后端的区别，以及它们如何协作",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1451,
+        "line_end": 1451
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M2",
+      "card_keys": [
+        "ch03.tech.api-contract.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O20",
+      "original_text": "*   [ ] 我能解释 API 的工作原理，能读懂 JSON 格式的数据",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1452,
+        "line_end": 1452
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M2",
+      "card_keys": [
+        "ch03.tech.api-contract.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O21",
+      "original_text": "*   [ ] 我能解释 QPS、RT、并发的含义，并能做简单的容量估算",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1453,
+        "line_end": 1453
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M2",
+      "card_keys": [
+        "ch03.tech.capacity-latency.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O22",
+      "original_text": "*   [ ] 我能解释数据库和缓存的区别和适用场景",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1454,
+        "line_end": 1454
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M2",
+      "card_keys": [
+        "ch03.tech.cache-validity.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O23",
+      "original_text": "*   [ ] 我能解释消息队列的作用，并知道什么时候该用异步处理",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1455,
+        "line_end": 1455
+      },
+      "decision": "拆分",
+      "reason": "复用3.12超时恢复；队列缓冲与任务状态设计在T3，不把恢复卡冒充消息队列全貌。",
+      "mother_question_id": "m01-T3",
+      "card_keys": [
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O24",
+      "original_text": "*   [ ] 我能解释负载均衡、CDN、微服务的基本原理",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1456,
+        "line_end": 1456
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M2",
+      "card_keys": [
+        "ch03.interview.m01.infra-boundaries.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O25",
+      "original_text": "*   [ ] 我能解释 Docker 和 K8s 的作用",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1457,
+        "line_end": 1457
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M2",
+      "card_keys": [
+        "ch03.interview.m01.container-operations.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O26",
+      "original_text": "*   [ ] 我能解释 Token/JWT 认证的基本流程",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1458,
+        "line_end": 1458
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M2",
+      "card_keys": [
+        "ch03.interview.m01.auth-boundary.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O27",
+      "original_text": "*   [ ] 我能解释同步/异步的区别，以及幂等性的重要性",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1459,
+        "line_end": 1459
+      },
+      "decision": "拆分",
+      "reason": "同步/异步区别由T3架构口述补齐，幂等风险复用已发布卡。",
+      "mother_question_id": "m01-T3",
+      "card_keys": [
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O28",
+      "original_text": "*   [ ] 我能设计合理的埋点方案，理解监控告警的核心指标",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1460,
+        "line_end": 1460
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-T3",
+      "card_keys": [
+        "ch03.tech.observability-response.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O29",
+      "original_text": "*   [ ] 我能解释模型量化、剪枝、蒸馏的区别",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1464,
+        "line_end": 1464
+      },
+      "decision": "实践任务",
+      "reason": "量化/剪枝/蒸馏用T4对照任务覆盖，避免与专章混写；未纳入本批核心FSRS，不计核心覆盖。",
+      "mother_question_id": "m01-T4",
+      "card_keys": [],
+      "coverage_level": "document_task_only",
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O30",
+      "original_text": "*   [ ] 我了解 MLOps 的核心环节",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1465,
+        "line_end": 1465
+      },
+      "decision": "合并",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-T3",
+      "card_keys": [
+        "ch03.ml.release-recovery.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O31",
+      "original_text": "*   [ ] 我能设计一个多维度的模型评估体系",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1466,
+        "line_end": 1466
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-T3",
+      "card_keys": [
+        "ch03.tech.evaluation-contract.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O32",
+      "original_text": "*   [ ] 我能设计一个有效的测试集",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1467,
+        "line_end": 1467
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-T3",
+      "card_keys": [
+        "ch03.tech.evaluation-contract.001",
+        "ch03.ml.evaluation-split.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O33",
+      "original_text": "*   [ ] 我能听懂算法工程师的技术术语",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1471,
+        "line_end": 1471
+      },
+      "decision": "拆分",
+      "reason": "术语沟通能力不能由读卡证明，M1用角色模拟给出可观察产出。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.tech.feasibility-evidence.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O34",
+      "original_text": "*   [ ] 我能提出有技术深度的产品需求",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1472,
+        "line_end": 1472
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.tech.feasibility-evidence.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O35",
+      "original_text": "*   [ ] 我能判断一个需求的技术可行性",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1473,
+        "line_end": 1473
+      },
+      "decision": "采用",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.tech.feasibility-evidence.001"
+      ],
+      "coverage_level": "core_and_synthesis",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.1",
+      "objective_id": "m01-O36",
+      "original_text": "*   [ ] 我能和算法团队一起定义技术目标",
+      "source_ref": {
+        "relative_path": "第3章-技术攻克/3.1-AI-产品技术理解要求.md",
+        "content_hash": "13d2be94cafa126ed9804194d57b5035abc64de9d0de8825f8813a88e81c4011",
+        "line_start": 1474,
+        "line_end": 1474
+      },
+      "decision": "拆分",
+      "reason": "原生目标保留；机制/判断由所列卡承担，综合表述或产物由对应练习承接，避免扩成多目标背诵。",
+      "mother_question_id": "m01-M1",
+      "card_keys": [
+        "ch03.tech.evaluation-contract.001"
+      ],
+      "coverage_level": "partial_core_plus_task",
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "practice_completed": false,
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "module_id": "3.10",
+  "relations": [
+    {
+      "from": "ch03.interview.m10.colbert-late-interaction.001",
+      "to": "ch03.vector.rerank-candidate-ceiling.001",
+      "type": "compare",
+      "reason": "晚交互多向量与共同编码逐对评分不同"
+    },
+    {
+      "from": "ch03.interview.m10.sparse-representation.001",
+      "to": "ch03.vector.hybrid-evaluation.001",
+      "type": "prerequisite",
+      "reason": "先区分词项/潜在表示，再理解多路融合"
+    },
+    {
+      "from": "ch03.interview.m10.filtered-recall.001",
+      "to": "ch03.vector.ann-quality-budget.001",
+      "type": "extension",
+      "reason": "过滤改变候选可见性，需固定授权子集基线"
+    },
+    {
+      "from": "ch03.interview.m10.embedding-migration.001",
+      "to": "ch03.vector.training-objective.001",
+      "type": "prerequisite",
+      "reason": "迁移依赖编码空间与任务训练目标的区别"
+    },
+    {
+      "from": "ch03.vector.compression-choice.001",
+      "to": "ch03.vector.capacity-arithmetic.001",
+      "type": "extension",
+      "reason": "预算算出原始向量占用后再判断压缩收益"
+    },
+    {
+      "from": "ch03.vector.metric-compatibility.001",
+      "to": "ch03.vector.ann-quality-budget.001",
+      "type": "extension",
+      "reason": "相似度与归一化固定后才比较近似检索"
+    },
+    {
+      "from": "ch03.interview.m10.embedding-migration.001",
+      "to": "ch03.rag.update-deletion.001",
+      "type": "compare",
+      "reason": "编码空间迁移和同模型资料更新是两种操作"
+    }
+  ]
+}

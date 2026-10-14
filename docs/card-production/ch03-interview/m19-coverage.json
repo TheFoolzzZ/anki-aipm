@@ -1,0 +1,401 @@
+{
+  "module_id": "3.19",
+  "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+  "source_line_count": 625,
+  "native_objectives": 12,
+  "registered": 12,
+  "practice_completed": 0,
+  "publication_status": "published_and_verified_2026-10-02",
+  "objectives": [
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O01",
+      "original_text": "*   [ ] 该 Server 是否覆盖我产品需求的 80% 以上场景？",
+      "source_line": 423,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m19.server-admission.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "80%场景覆盖改为关键任务门槛与代表路径证据",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O02",
+      "original_text": "*   [ ] 是否支持我需要的认证方式（OAuth / API Key / Token）？",
+      "source_line": 424,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m19.transport-compatibility.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "按实际部署/认证兼容核对；HTTP OAuth和stdio不混用",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O03",
+      "original_text": "*   [ ] 最近 3 个月内是否有代码提交或版本发布？",
+      "source_line": 425,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m19.server-admission.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "近三个月更新仅维护线索，需当前业务复测",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O04",
+      "original_text": "*   [ ] 是否有明确的 License（MIT/Apache 优先，避免 GPL 传染）？",
+      "source_line": 426,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.interview.m05.license-evidence.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "复用已发布许可证据目标；具体开源许可证适用性另核对，不教GPL一律不可用",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O05",
+      "original_text": "*   [ ] 是否经过安全审计或有企业用户在生产环境使用？",
+      "source_line": 427,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m19.server-admission.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "第三方案例/审计不能替代本产品代表任务和安全范围",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O06",
+      "original_text": "*   [ ] 文档是否包含：安装指南、配置说明、权限设计、故障排查？",
+      "source_line": 428,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m19.server-admission.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "文档须能支持发现、部署、故障恢复及维护，不只列标题",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O07",
+      "original_text": "*   [ ] 是否有社区支持（Discord / GitHub Discussions / 微信群）？",
+      "source_line": 429,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m19.server-admission.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "社区有无仅支持渠道线索，验证责任与响应机制",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O08",
+      "original_text": "*   [ ] **体验 MCP**：下载 Claude Desktop，配置 1-2 个 MCP Server（如 Filesystem 和 GitHub），亲身体验\"AI 操作外部系统\"的感觉",
+      "source_line": 610,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.interview.m19.host-client-server.001",
+        "ch03.interview.m19.server-primitives.001",
+        "ch03.interview.m19.discovery-call-loop.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "配置应用体验留真实报文/结果，短卡不算已安装成功",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O09",
+      "original_text": "*   [ ] **盘点现有产品**：梳理你的产品已经接入了哪些外部系统，评估哪些可以用 MCP Server 替换或补充",
+      "source_line": 611,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "拆分",
+      "card_keys": [
+        "C08",
+        "ch03.interview.m19.integration-boundary.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "盘点API保留及适配需求，协议不能替代编排",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O10",
+      "original_text": "*   [ ] **评估生态**：访问 MCP 社区（如 GitHub mcp-server 仓库），筛选 3-5 个和你业务相关的 MCP Server，用五维模型打分",
+      "source_line": 612,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.interview.m19.server-admission.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "五维作为问题列表，候选筛选需具体测试而非固定分数",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O11",
+      "original_text": "*   [ ] **画一张架构图**：假设为你的产品设计 MCP 架构，画出 Client-Server 的连接关系，标注每个 Server 的职责",
+      "source_line": 613,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.interview.m19.host-client-server.001",
+        "ch03.interview.m19.server-primitives.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "连接架构图需把Host及每Server职责标全",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.19",
+      "objective_id": "m19-O12",
+      "original_text": "*   [ ] **组织一次内部分享**：把 MCP 的概念、生态、机会讲给研发团队和业务方听，推动一次 POC（概念验证）",
+      "source_line": 614,
+      "source_path": "第3章-技术攻克/3.19-MCP.md",
+      "source_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "内部分享和POC实施需独立产出反馈，未执行不报完成",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "T1",
+      "description": "配置隔离的只读演示Server或使用目标产品测试环境，记录Host/Client/Server、实现版本、stdio/HTTP、发现/工具调用/结果回传；故意制造枚举缺工具与回传失败，保留分段证据。具体SDK和初始化报文随版本核对；实践尚未执行。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T2",
+      "description": "按必需业务路径评估候选Server，列协议/传输/部署/认证、关键操作、故障恢复、文档、维护责任及具体许可版本；权重非通用定律，撤销等关键缺口不能平均分抵消。认证/许可详细核对留证据任务，不输出通用法律结论。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T3",
+      "description": "盘点既有API接入与改造边界，画数仓、方法论文档、报告与通知链路；组织研发/业务评审及POC草案。输出业务输入输出、耗时、重复/失败恢复、可保留的API和停止条件，不能拿分享举行代替验证完成。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "additional_objectives": [
+    {
+      "objective_id": "m19-B01",
+      "original_text": "L9–58：定义及N×M",
+      "source_line": 9,
+      "decision": "合并",
+      "card_keys": [
+        "C08"
+      ],
+      "reason": "接口复用是潜在收益，不是固定工期或自动兼容所有Server；M2比较已有API。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m19-B02",
+      "original_text": "L65–96：Server/Client",
+      "source_line": 65,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.host-client-server.001"
+      ],
+      "reason": "补Host并纠正Server必须第三方、Client自行决定一切。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m19-B03",
+      "original_text": "L98–142：Resource/Tool/Prompt",
+      "source_line": 98,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.server-primitives.001"
+      ],
+      "reason": "只读Tool反例与模板边界；上下文暴露不等于自动完成RAG。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m19-B04",
+      "original_text": "L146–189：Function Call/API",
+      "source_line": 146,
+      "decision": "合并",
+      "card_keys": [
+        "C08",
+        "ch03.interview.m19.discovery-call-loop.001"
+      ],
+      "reason": "同目标C08 rev2，意图与执行分开，不改身份或所属课。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m19-B05",
+      "original_text": "L192–223：生态统计",
+      "source_line": 192,
+      "decision": "实践任务",
+      "card_keys": [],
+      "reason": "Server数量/厂商动态时效性强，留T2资料核对而非背诵。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m19-B06",
+      "original_text": "L225–396：五场景及BI案例",
+      "source_line": 225,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.integration-boundary.001"
+      ],
+      "reason": "M1/M2完整业务链路；SQL准确率、人员耗时和默认可写方案不作实测。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m19-B07",
+      "original_text": "L398–429：五维和选型清单",
+      "source_line": 398,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.server-admission.001"
+      ],
+      "reason": "关键门槛取代固定权重/80%/Star；自研或外采都需测试。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m19-B08",
+      "original_text": "L433–475：权限、敏感数据、审计",
+      "source_line": 433,
+      "decision": "实践任务",
+      "card_keys": [],
+      "reason": "具体验证留T2/T3，复用通用权限目标，不背固定日志保留年限为合规法律要求。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m19-B09",
+      "original_text": "L479–525：商业机会",
+      "source_line": 479,
+      "decision": "实践任务",
+      "card_keys": [],
+      "reason": "抽成20–30%、必出巨头属预测，不纳入确定事实。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m19-B10",
+      "original_text": "L527–606：兼容/安全/成本/八坑及L618–625：总结",
+      "source_line": 527,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.transport-compatibility.001"
+      ],
+      "reason": "纠正MCP完全无安全规范和每调用必网络；不背当前SDK及报文为永久规则。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    }
+  ],
+  "review_status": "editor_review_complete",
+  "published_cards": 7
+}

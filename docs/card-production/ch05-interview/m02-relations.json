@@ -1,0 +1,20 @@
+[
+  {
+    "from": "ch05.interview.m02.pain-capability.001",
+    "to": "ch05.interview.m02.task-interview.001",
+    "type": "prerequisite",
+    "reason": "能力匹配需要先还原任务与现有痛点基线"
+  },
+  {
+    "from": "ch05.interview.m02.must-evidence.001",
+    "to": "ch05.interview.m02.pain-capability.001",
+    "type": "prerequisite",
+    "reason": "需求层级讨论依赖用户价值与能力条件对齐"
+  },
+  {
+    "from": "ch05.interview.m02.signal-hypothesis.001",
+    "to": "ch05.interview.m02.task-interview.001",
+    "type": "extension",
+    "reason": "日志现象与近期任务访谈互证，避免从行为直接编造动机"
+  }
+]

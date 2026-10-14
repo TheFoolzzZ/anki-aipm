@@ -1,0 +1,59 @@
+{
+  "module_id": "3.25",
+  "relations": [
+    {
+      "from": "C10",
+      "to": "C09",
+      "type": "prerequisite",
+      "reason": "RAG诊断须区分运行器实际产物与评分线索"
+    },
+    {
+      "from": "C11",
+      "to": "ch03.interview.m25.rubric-atomic.001",
+      "type": "prerequisite",
+      "reason": "位置敏感性比较必须在同一行为判据下解释"
+    },
+    {
+      "from": "ch03.interview.m25.g-eval-expectation.001",
+      "to": "ch03.interview.m25.rubric-atomic.001",
+      "type": "prerequisite",
+      "reason": "概率加权也依赖已定义的评分尺度"
+    },
+    {
+      "from": "ch03.interview.m25.kappa-calibration.001",
+      "to": "ch03.interview.m25.rubric-atomic.001",
+      "type": "extension",
+      "reason": "用一致性检查判据执行分歧，不替代真值"
+    },
+    {
+      "from": "ch03.interview.m25.cache-identity.001",
+      "to": "C09",
+      "type": "prerequisite",
+      "reason": "分别识别输出与评分计算的输入契约"
+    },
+    {
+      "from": "ch03.interview.m25.cascade-audit.001",
+      "to": "ch03.interview.m25.grader-selection.001",
+      "type": "prerequisite",
+      "reason": "出口审计依据各评分器能验证的对象"
+    },
+    {
+      "from": "ch03.interview.m25.badcase-curation.001",
+      "to": "ch03.interview.m25.dataset-representation.001",
+      "type": "extension",
+      "reason": "反馈核验后进入分布与风险已说明的集"
+    },
+    {
+      "from": "C14",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "extension",
+      "reason": "终点与轨迹责任区分后延伸到指标口径"
+    },
+    {
+      "from": "ch03.interview.m25.dataset-representation.001",
+      "to": "ch03.ml.evaluation-split.001",
+      "type": "extension",
+      "reason": "代表性与风险取样区别于调参/测试隔离"
+    }
+  ]
+}

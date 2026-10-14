@@ -1,0 +1,2154 @@
+{
+  "module_id": "5.6",
+  "source_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+  "source_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+  "lf_line_count": 1008,
+  "native_objectives": 0,
+  "registered": 0,
+  "native_box_items": 65,
+  "explicit_question_lines": 11,
+  "registered_box_items": 65,
+  "non_checklist_registered": 138,
+  "practice_completed": 0,
+  "publication_coverage": "最终映射卡已发布回读；原生登记/短卡覆盖/综合任务/实践完成分别计数",
+  "objectives": [
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L13",
+      "original_text": "## 一、为什么AI产品需要专门的风险评估",
+      "source_line": 13,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L38",
+      "original_text": "## 二、AI产品六大风险类型全景图",
+      "source_line": 38,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.risk-event-chain.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L57",
+      "original_text": "## 三、模型风险：AI产品的\"原罪\"",
+      "source_line": 57,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L61",
+      "original_text": "### 3.1 幻觉（Hallucination）：一本正经地胡说八道",
+      "source_line": 61,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L76",
+      "original_text": "| 发生概率 | 该场景下模型产生幻觉的概率是多少？ | 用测试集跑100次，统计错误率 |",
+      "source_line": 76,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L77",
+      "original_text": "| 错误类型 | 是\"事实性错误\"还是\"逻辑性错误\"？ | 事实性错误（如编造数据）> 逻辑性错误 |",
+      "source_line": 77,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L78",
+      "original_text": "| 可检测性 | 用户能否轻易发现这是幻觉？ | 专业领域用户可能发现，普通用户很难 |",
+      "source_line": 78,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L79",
+      "original_text": "| 影响范围 | 幻觉内容会被多少人看到？ | 1对1对话 < 公开生成的内容 |",
+      "source_line": 79,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L107",
+      "original_text": "### 3.2 偏见与歧视：数据里的\"社会镜像\"",
+      "source_line": 107,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L136",
+      "original_text": "### 3.3 模型迭代导致的回退（Regression）",
+      "source_line": 136,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L151-B1",
+      "original_text": "□ 建立\"能力基线测试集\"",
+      "source_line": 151,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L155-B1",
+      "original_text": "□ 每次模型升级前跑回归测试",
+      "source_line": 155,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L159-B1",
+      "original_text": "□ 设计\"能力降级熔断机制\"",
+      "source_line": 159,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L163-B1",
+      "original_text": "□ 保留模型版本回滚能力",
+      "source_line": 163,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L168",
+      "original_text": "### 3.4 黑盒不可解释：出了问题不知道\"为什么\"",
+      "source_line": 168,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L176",
+      "original_text": "| 模型层面 | 为什么输入A得到输出B？Transformer的注意力权重难以翻译成人话 | 技术团队也难以解释异常输出 |",
+      "source_line": 176,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L177",
+      "original_text": "| 系统层面 | 某个用户被推荐了不良内容，是模型问题还是召回策略问题？ | 责任界定困难 |",
+      "source_line": 177,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L178",
+      "original_text": "| 业务层面 | AI拒绝了用户的贷款申请，具体是因为哪些因素？ | 违反\"算法可解释性\"监管要求 |",
+      "source_line": 178,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L189",
+      "original_text": "## 四、数据风险：AI产品的\"生命线\"",
+      "source_line": 189,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L193",
+      "original_text": "### 4.1 数据泄露：训练数据的\"记忆效应\"",
+      "source_line": 193,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L216",
+      "original_text": "### 4.2 隐私侵犯：超出用户授权的数据使用",
+      "source_line": 216,
+      "source_type": "正文知识目标",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L229-B1",
+      "original_text": "□ 采集阶段",
+      "source_line": 229,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L230-B1",
+      "original_text": "□ 是否明确告知用户采集了哪些数据？",
+      "source_line": 230,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L231-B1",
+      "original_text": "□ 采集范围是否遵循\"最小必要原则\"？",
+      "source_line": 231,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L232-B1",
+      "original_text": "□ 敏感个人信息（生物识别、健康、金融等）是否获得单独同意？",
+      "source_line": 232,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L234-B1",
+      "original_text": "□ 使用阶段",
+      "source_line": 234,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L235-B1",
+      "original_text": "□ 数据使用目的是否与告知用户的一致？",
+      "source_line": 235,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L236-B1",
+      "original_text": "□ 是否将用户数据用于训练？如使用，是否获得单独授权？",
+      "source_line": 236,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L237-B1",
+      "original_text": "□ 是否存在数据共享给第三方的情况？",
+      "source_line": 237,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L239-B1",
+      "original_text": "□ 存储阶段",
+      "source_line": 239,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L240-B1",
+      "original_text": "□ 数据存储地点是否符合法规要求（境内/跨境）？",
+      "source_line": 240,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L241-B1",
+      "original_text": "□ 数据保留期限是否明确且合理？",
+      "source_line": 241,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L242-B1",
+      "original_text": "□ 是否采取加密等安全措施？",
+      "source_line": 242,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L244-B1",
+      "original_text": "□ 删除阶段",
+      "source_line": 244,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L245-B1",
+      "original_text": "□ 用户是否有便捷的删除/注销途径？",
+      "source_line": 245,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L246-B1",
+      "original_text": "□ 用户删除后，数据是否在合理时间内从所有系统清除？",
+      "source_line": 246,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L247-B1",
+      "original_text": "□ 已用于训练的数据，删除原始数据后模型是否仍\"记得\"？",
+      "source_line": 247,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L250",
+      "original_text": "### 4.3 数据投毒：污染模型的\"水源\"",
+      "source_line": 250,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L275",
+      "original_text": "### 4.4 训练数据版权争议",
+      "source_line": 275,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L296",
+      "original_text": "## 五、伦理风险：AI的\"道德边界\"",
+      "source_line": 296,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L300",
+      "original_text": "### 5.1 深度伪造（Deepfake）：真假难辨的信息灾难",
+      "source_line": 300,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L306",
+      "original_text": "*   产品是否具备生成\"真人形象\"内容的能力？",
+      "source_line": 306,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L307",
+      "original_text": "*   是否对生成内容添加了不可篡改的水印/标识？",
+      "source_line": 307,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L308",
+      "original_text": "*   是否建立了举报和快速下架机制？",
+      "source_line": 308,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L310",
+      "original_text": "### 5.2 诱导性内容：AI成为\"不良导师\"",
+      "source_line": 310,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L332",
+      "original_text": "### 5.3 自动化决策的公平性",
+      "source_line": 332,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L347",
+      "original_text": "## 六、合规风险：监管的红线",
+      "source_line": 347,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L351",
+      "original_text": "### 6.1 中国AI合规核心法规速览",
+      "source_line": 351,
+      "source_type": "正文知识目标",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L361",
+      "original_text": "### 6.2 算法备案：必须完成的\"入场券\"",
+      "source_line": 361,
+      "source_type": "正文知识目标",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L386",
+      "original_text": "### 6.3 AIGC内容标识要求",
+      "source_line": 386,
+      "source_type": "正文知识目标",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L396-B1",
+      "original_text": "□ 文本生成场景",
+      "source_line": 396,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L397-B1",
+      "original_text": "□ 是否在生成内容区域附近标注\"AI生成\"或类似提示？",
+      "source_line": 397,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L398-B1",
+      "original_text": "□ 用户分享至第三方平台时，标识是否跟随？",
+      "source_line": 398,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L400-B1",
+      "original_text": "□ 图片/视频生成场景",
+      "source_line": 400,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L401-B1",
+      "original_text": "□ 生成结果是否带有可见的\"AI生成\"水印？",
+      "source_line": 401,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L402-B1",
+      "original_text": "□ 文件元数据中是否嵌入了不可见的数字水印？",
+      "source_line": 402,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L403-B1",
+      "original_text": "□ 水印是否防篡改（简单裁剪无法去除）？",
+      "source_line": 403,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L405-B1",
+      "original_text": "□ 音频生成场景",
+      "source_line": 405,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L406-B1",
+      "original_text": "□ 音频开头/结尾是否有AI生成声明？",
+      "source_line": 406,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L407-B1",
+      "original_text": "□ 音频文件中是否嵌入了隐式标识？",
+      "source_line": 407,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L410",
+      "original_text": "### 6.4 跨境数据传输",
+      "source_line": 410,
+      "source_type": "正文知识目标",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L430",
+      "original_text": "## 七、安全风险：AI系统的\"阿喀琉斯之踵\"",
+      "source_line": 430,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L434",
+      "original_text": "### 7.1 Prompt注入攻击（Prompt Injection）",
+      "source_line": 434,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L464",
+      "original_text": "### 7.2 模型越狱（Jailbreak）",
+      "source_line": 464,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L481",
+      "original_text": "### 7.3 供应链攻击",
+      "source_line": 481,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L513",
+      "original_text": "## 八、商业风险：被忽视的\"慢性毒药\"",
+      "source_line": 513,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L517",
+      "original_text": "### 8.1 模型供应商依赖",
+      "source_line": 517,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L553",
+      "original_text": "### 8.2 API成本失控",
+      "source_line": 553,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L575",
+      "original_text": "### 8.3 竞争壁垒低",
+      "source_line": 575,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L591",
+      "original_text": "## 九、风险评估矩阵：从定性到定量",
+      "source_line": 591,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.matrix-residual.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L595",
+      "original_text": "### 9.1 风险矩阵构建方法",
+      "source_line": 595,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.matrix-residual.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L623",
+      "original_text": "### 9.2 AI产品风险评估表示例",
+      "source_line": 623,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.matrix-residual.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L643",
+      "original_text": "4.   **记录评估过程**：为什么评这个分数？便于后续复盘和持续改进",
+      "source_line": 643,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.matrix-residual.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L647",
+      "original_text": "## 十、风险应对策略：四种武器",
+      "source_line": 647,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.risk-treatment.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L651",
+      "original_text": "### 10.1 规避（Avoid）：不做就没有风险",
+      "source_line": 651,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.risk-treatment.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L661",
+      "original_text": "### 10.2 转移（Transfer）：让更能承担风险的一方来承担",
+      "source_line": 661,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.risk-treatment.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L671",
+      "original_text": "### 10.3 降低（Mitigate）：投入资源减少概率或影响",
+      "source_line": 671,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.risk-treatment.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L682",
+      "original_text": "### 10.4 接受（Accept）：准备好承受后果",
+      "source_line": 682,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.risk-treatment.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L703",
+      "original_text": "## 十一、兜底设计原则：当AI\"不靠谱\"时怎么办",
+      "source_line": 703,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L707",
+      "original_text": "### 11.1 Graceful Degradation：优雅降级",
+      "source_line": 707,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L715",
+      "original_text": "### 11.2 人工接管（Human-in-the-Loop）",
+      "source_line": 715,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L729",
+      "original_text": "### 11.3 安全护栏（Guardrails）",
+      "source_line": 729,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L739-B1",
+      "original_text": "□ 输入层",
+      "source_line": 739,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L739-B2",
+      "original_text": "□ 最大输入长度限制",
+      "source_line": 739,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L739-B3",
+      "original_text": "□ 敏感词/敏感语义检测",
+      "source_line": 739,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L739-B4",
+      "original_text": "□ Prompt注入特征检测",
+      "source_line": 739,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L739-B5",
+      "original_text": "□ 请求频率限制（防暴力破解）",
+      "source_line": 739,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L741-B1",
+      "original_text": "□ 输出层",
+      "source_line": 741,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L741-B2",
+      "original_text": "□ 输出长度限制",
+      "source_line": 741,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L741-B3",
+      "original_text": "□ 内容安全分类检测",
+      "source_line": 741,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L741-B4",
+      "original_text": "□ 与训练数据相似度检测（防泄露）",
+      "source_line": 741,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L741-B5",
+      "original_text": "□ 事实一致性校验（对结构化知识）",
+      "source_line": 741,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L741-B6",
+      "original_text": "□ 偏见检测（敏感话题额外检测）",
+      "source_line": 741,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L743-B1",
+      "original_text": "□ 业务层",
+      "source_line": 743,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L743-B2",
+      "original_text": "□ 输出格式schema校验",
+      "source_line": 743,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L743-B3",
+      "original_text": "□ 数值范围合理性检查",
+      "source_line": 743,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L743-B4",
+      "original_text": "□ 异常输出熔断（连续异常时降级）",
+      "source_line": 743,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L743-B5",
+      "original_text": "□ 完整审计日志",
+      "source_line": 743,
+      "source_type": "原生方框清单",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L747",
+      "original_text": "## 十二、案例一：AI招聘工具的风险评估",
+      "source_line": 747,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L751",
+      "original_text": "### 产品背景",
+      "source_line": 751,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L760",
+      "original_text": "### 风险识别与评估",
+      "source_line": 760,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L772",
+      "original_text": "### 重点风险应对方案",
+      "source_line": 772,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L828-B1",
+      "original_text": "□ 确认产品属于\"生成合成类\"算法，需要备案",
+      "source_line": 828,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L829-B1",
+      "original_text": "□ 准备算法安全自评估报告",
+      "source_line": 829,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L830-B1",
+      "original_text": "□ 整理算法原理说明（非技术细节，面向监管）",
+      "source_line": 830,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L831-B1",
+      "original_text": "□ 在官网添加\"算法公示\"页面",
+      "source_line": 831,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L832-B1",
+      "original_text": "□ 提交备案申请（预留2个月审批时间）",
+      "source_line": 832,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L833-B1",
+      "original_text": "□ 备案完成前，限制产品对外开放的范围",
+      "source_line": 833,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L836",
+      "original_text": "### 产品改进后的架构",
+      "source_line": 836,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L842",
+      "original_text": "## 十三、案例二：AI金融顾问的风险边界",
+      "source_line": 842,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L844",
+      "original_text": "### 产品背景",
+      "source_line": 844,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L853",
+      "original_text": "### 关键风险分析",
+      "source_line": 853,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L865",
+      "original_text": "### 风险边界划定",
+      "source_line": 865,
+      "source_type": "正文知识目标",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L871-B1",
+      "original_text": "□ 推荐具体的买入/卖出时点",
+      "source_line": 871,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L872-B1",
+      "original_text": "□ 承诺收益率或保本",
+      "source_line": 872,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L873-B1",
+      "original_text": "□ 代替用户执行交易",
+      "source_line": 873,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L874-B1",
+      "original_text": "□ 使用\"保证\"、\"一定\"、\"稳赚\"等词汇",
+      "source_line": 874,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L875-B1",
+      "original_text": "□ 推荐未经合规审核的金融产品",
+      "source_line": 875,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L878-B1",
+      "original_text": "□ 个性化投资组合建议",
+      "source_line": 878,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L879-B1",
+      "original_text": "□ 涉及用户具体持仓的分析",
+      "source_line": 879,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L880-B1",
+      "original_text": "□ 税务、法律相关的财务建议",
+      "source_line": 880,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L883-B1",
+      "original_text": "□ 市场资讯的整理和解读（注明来源）",
+      "source_line": 883,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L884-B1",
+      "original_text": "□ 金融知识科普教育",
+      "source_line": 884,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L885-B1",
+      "original_text": "□ 基于公开数据的统计分析",
+      "source_line": 885,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L886-B1",
+      "original_text": "□ 通用性的资产配置框架（非个性化）",
+      "source_line": 886,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L887-B1",
+      "original_text": "□ 投资理念和风险提示",
+      "source_line": 887,
+      "source_type": "原生方框清单",
+      "decision": "延期核实",
+      "reason": "法规适用、审批/权利义务或未经核实外部结论需第一方及专业复核；本轮不作法律事实必答",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L890",
+      "original_text": "### 产品架构设计",
+      "source_line": 890,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L907",
+      "original_text": "## 十四、案例三：AI医疗辅助诊断的风险边界",
+      "source_line": 907,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L909",
+      "original_text": "### 产品背景",
+      "source_line": 909,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L913",
+      "original_text": "### 核心风险识别",
+      "source_line": 913,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L925",
+      "original_text": "### 风险应对架构",
+      "source_line": 925,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L951",
+      "original_text": "### 特殊设计：防止医生过度依赖",
+      "source_line": 951,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m06.human-review-bias.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "5.6-L984",
+      "original_text": "## 写在最后",
+      "source_line": 984,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.risk-event-chain.001",
+      "original_text": "## 二、AI产品六大风险类型全景图",
+      "source_line": 38,
+      "source_type": "跨模块/编辑补题",
+      "decision": "采用",
+      "reason": "新增风险事件的产品登记结构，复用技术安全和权限卡。",
+      "card_keys": [
+        "ch05.interview.m06.risk-event-chain.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.matrix-residual.001",
+      "original_text": "## 九、风险评估矩阵：从定性到定量",
+      "source_line": 591,
+      "source_type": "跨模块/编辑补题",
+      "decision": "采用",
+      "reason": "补齐矩阵后的剩余风险与接受边界，非泛化准确率验收。",
+      "card_keys": [
+        "ch05.interview.m06.matrix-residual.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.risk-treatment.001",
+      "original_text": "## 十、风险应对策略：四种武器",
+      "source_line": 647,
+      "source_type": "跨模块/编辑补题",
+      "decision": "采用",
+      "reason": "保留本课风险策略机制与责任，避免法律无证断言。",
+      "card_keys": [
+        "ch05.interview.m06.risk-treatment.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.human-review-bias.001",
+      "original_text": "### 特殊设计：防止医生过度依赖",
+      "source_line": 951,
+      "source_type": "跨模块/编辑补题",
+      "decision": "采用",
+      "reason": "明确本课自动化偏见的产品验证，区别既有执行审批权卡。",
+      "card_keys": [
+        "ch05.interview.m06.human-review-bias.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.deletion-scope.001",
+      "original_text": "### 4.2 隐私侵犯：超出用户授权的数据使用",
+      "source_line": 216,
+      "source_type": "跨模块/编辑补题",
+      "decision": "采用",
+      "reason": "数据生命周期承诺是风险产品目标，不复刻RAG访问权限技术卡。",
+      "card_keys": [
+        "ch05.interview.m06.deletion-scope.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

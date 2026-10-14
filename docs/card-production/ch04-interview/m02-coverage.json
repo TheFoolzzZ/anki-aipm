@@ -1,0 +1,573 @@
+{
+  "module_id": "4.2",
+  "source_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+  "source_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+  "native_objectives": 0,
+  "registered": 0,
+  "non_checklist_registered": 27,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L1",
+      "original_text": "# 4.2 VibeCoding实战",
+      "source_line": 1,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L7",
+      "original_text": "## 一、成果展示",
+      "source_line": 7,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L24",
+      "original_text": "## 二、所用技术",
+      "source_line": 24,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L39",
+      "original_text": "## 三、实现思路",
+      "source_line": 39,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L11",
+      "original_text": "1.   **AI 一键填写** 智能识别网申表单，自动填充简历信息，告别重复输入，提升投递效率",
+      "source_line": 11,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L12",
+      "original_text": "2.   **AI 简历诊断** 智能分析简历内容，从项目经验、技能匹配等多维度提供专业优化建议",
+      "source_line": 12,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L13",
+      "original_text": "3.   **求职档案管理** 统一管理多份简历档案，智能解析 PDF/Word，快速切换不同版本",
+      "source_line": 13,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L14",
+      "original_text": "4.   **校招信息汇** 聚合全网校招职位信息，智能筛选，把握每一个投递机会",
+      "source_line": 14,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L15",
+      "original_text": "5.   **在线简历制作** 可视化编辑简历，实时预览效果，专业排版一键导出 PDF",
+      "source_line": 15,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L16",
+      "original_text": "6.   **简历模板下载** 精选优质简历模板，覆盖各行业岗位，一键下载快速套用",
+      "source_line": 16,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L41",
+      "original_text": "1.   首先熟悉git，json，Markdown",
+      "source_line": 41,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L42",
+      "original_text": "2.   通过Ai了解插件编程",
+      "source_line": 42,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L43",
+      "original_text": "3.   新建工程，分为后端工程，管理端前端，插件端",
+      "source_line": 43,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L44",
+      "original_text": "4.   使用比较完善的开源后端管理系统作为基建",
+      "source_line": 44,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L45",
+      "original_text": "5.   约束插件的技术规范和技术栈",
+      "source_line": 45,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.page-context.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L46",
+      "original_text": "6.   然后往复不断进行VibeCoding",
+      "source_line": 46,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L47",
+      "original_text": "7.   最终修复bug进行上线",
+      "source_line": 47,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001",
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L31",
+      "original_text": "*   Nginx",
+      "source_line": 31,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L28",
+      "original_text": "*   SpringBoot",
+      "source_line": 28,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L29",
+      "original_text": "*   Mysql",
+      "source_line": 29,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L30",
+      "original_text": "*   Oss",
+      "source_line": 30,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L37",
+      "original_text": "*   TS",
+      "source_line": 37,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L35",
+      "original_text": "*   Vue3",
+      "source_line": 35,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "4.2-L36",
+      "original_text": "*   ElementPlus",
+      "source_line": 36,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "ch04.interview.m02.three-surface-contract.001",
+      "original_text": "独立目标为浏览器产品三端协作；不是复写通用Agent工具契约。",
+      "source_line": 11,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "独立目标为浏览器产品三端协作；不是复写通用Agent工具契约。",
+      "card_keys": [
+        "ch04.interview.m02.three-surface-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "ch04.interview.m02.page-context.001",
+      "original_text": "原文实现提纲遗漏页面执行上下文，第一方补机制；不是给通用注入风险再造同义卡。",
+      "source_line": 11,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "原文实现提纲遗漏页面执行上下文，第一方补机制；不是给通用注入风险再造同义卡。",
+      "card_keys": [
+        "ch04.interview.m02.page-context.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.2",
+      "objective_id": "ch04.interview.m02.fill-versus-submit.001",
+      "original_text": "独立考页面状态到业务状态的证据链；通用幂等目标复用M12。",
+      "source_line": 11,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "独立考页面状态到业务状态的证据链；通用幂等目标复用M12。",
+      "card_keys": [
+        "ch04.interview.m02.fill-versus-submit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

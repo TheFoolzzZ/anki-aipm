@@ -1,0 +1,1175 @@
+{
+  "module_id": "3.21",
+  "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+  "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+  "native_objectives": 22,
+  "registered": 22,
+  "non_checklist_registered": 34,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O01",
+      "original_text": "*   [ ] 用本文的案例，向团队讲解 LangGraph 的核心概念（State、Node、Edge）",
+      "source_line": 534,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "讲解依核心机制卡；完整团队讲解仍需实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O02",
+      "original_text": "*   [ ] 找出现有产品中\"最像流程图\"的功能，讨论是否适合用 LangGraph 重构",
+      "source_line": 535,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "重构评估需对照现有流程与收益，不因像图就重写",
+      "card_keys": [
+        "ch03.interview.m21.workflow-coexistence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O03",
+      "original_text": "*   [ ] 让工程师跑一个 LangGraph 的 Hello World（官方示例），直观感受",
+      "source_line": 536,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "跑官方示例为执行任务，不以读卡代替",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O04",
+      "original_text": "*   [ ] 梳理产品中所有涉及\"多步骤 AI 处理\"的功能模块",
+      "source_line": 540,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "全量盘点是产品产物，短卡不能证明完成",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O05",
+      "original_text": "*   [ ] 对每个模块，用表格列出：当前痛点、LangGraph 能否解决、预期收益、实施成本",
+      "source_line": 541,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "四列表比较与选型机制关联，收益需实测",
+      "card_keys": [
+        "ch03.interview.m21.workflow-coexistence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O06",
+      "original_text": "*   [ ] 选择一个\"痛点明确、流程清晰\"的场景作为试点（推荐：智能客服、内容审核）",
+      "source_line": 542,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "试点依痛点与可验证边界，推荐场景不是强制",
+      "card_keys": [
+        "ch03.interview.m21.workflow-coexistence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O07",
+      "original_text": "*   [ ] 和工程师一起定义试点场景的 State 结构",
+      "source_line": 546,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "字段、合并与旧状态兼容均须产物",
+      "card_keys": [
+        "ch03.interview.m21.state-reducer.001",
+        "ch03.interview.m21.graph-evolution.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O08",
+      "original_text": "*   [ ] 画出完整的流程图（含正常分支、异常分支、人工节点）",
+      "source_line": 547,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "完整正常/异常/人工图留母题与实践，不只定义卡",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m21.conditional-routing.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O09",
+      "original_text": "*   [ ] 定义每个节点的输入输出、失败策略、超时处理",
+      "source_line": 548,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "输入输出/超时/副作用由独立节点责任设计承接",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O10",
+      "original_text": "*   [ ] 设计 Human-in-the-loop 的触发条件和交互界面",
+      "source_line": 549,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "真实交互需审批身份和恢复边界",
+      "card_keys": [
+        "ch03.interview.m21.interrupt-resume.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O11",
+      "original_text": "*   [ ] 搭建 LangSmith 监控环境，确保所有节点可观测",
+      "source_line": 553,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "复用trace目标；搭监控需真实运行证据",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O12",
+      "original_text": "*   [ ] 先实现主流程（Happy Path），再逐步增加异常分支",
+      "source_line": 554,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "逐步实现是实践，异常不会因主线成功消失",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O13",
+      "original_text": "*   [ ] 每个节点完成后，产品经理参与验收测试",
+      "source_line": 555,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "逐节点契约验收仍需执行",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O14",
+      "original_text": "*   [ ] 积累测试数据集，用于回归测试",
+      "source_line": 556,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "代表集与回归产物，不能读卡冒充",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O15",
+      "original_text": "*   [ ] 灰度发布，LangSmith 监控核心指标（准确率、耗时、成本）",
+      "source_line": 560,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "复用任务/路径指标；灰度流量和口径需定义",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O16",
+      "original_text": "*   [ ] 准备降级方案，一旦出问题可切回旧逻辑",
+      "source_line": 561,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "回退涉及在途状态兼容与不可逆副作用",
+      "card_keys": [
+        "ch03.interview.m21.graph-evolution.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O17",
+      "original_text": "*   [ ] 收集用户反馈，识别流程图中的优化点",
+      "source_line": 562,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "收用户反馈是实践任务",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O18",
+      "original_text": "*   [ ] 输出复盘报告，决定是否推广到其他场景",
+      "source_line": 563,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "推广需收益/故障证据，不照周计划承诺",
+      "card_keys": [
+        "ch03.interview.m21.workflow-coexistence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O19",
+      "original_text": "*   [ ] 每月复盘 LangSmith 数据，找到瓶颈节点",
+      "source_line": 567,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "复用trace机制，复盘需真实数据",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O20",
+      "original_text": "*   [ ] 用 A/B 测试验证 Prompt 和流程优化效果",
+      "source_line": 568,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "A/B分流与对照试验为实践，平台不自动保证因果",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O21",
+      "original_text": "*   [ ] 建立\"异常 case 库\"，持续补充边界场景",
+      "source_line": 569,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "异常集积累需执行与版本记录",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-O22",
+      "original_text": "*   [ ] 关注 LangGraph 版本更新，评估新功能价值",
+      "source_line": 570,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "版本升级看在途任务兼容，关注动作非已完成",
+      "card_keys": [
+        "ch03.interview.m21.graph-evolution.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q01",
+      "original_text": "## 四、LangGraph vs LangChain：是替代还是搭档？",
+      "source_line": 115,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "对比/适用场景合并为有条件选型，不复刻M15框架角色",
+      "card_keys": [
+        "ch03.interview.m21.workflow-coexistence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q02",
+      "original_text": "很多产品经理困惑：已经有了 LangChain，为什么还需要 LangGraph？它们是竞争关系吗？",
+      "source_line": 117,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "对比/适用场景合并为有条件选型，不复刻M15框架角色",
+      "card_keys": [
+        "ch03.interview.m21.workflow-coexistence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q03",
+      "original_text": "企业里已经有了 BPM（业务流程管理）系统、RPA（机器人流程自动化）工具，LangGraph 和它们有什么区别？",
+      "source_line": 140,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "对比/适用场景合并为有条件选型，不复刻M15框架角色",
+      "card_keys": [
+        "ch03.interview.m21.workflow-coexistence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q04",
+      "original_text": "## 六、产品应用场景：LangGraph 能做什么？",
+      "source_line": 159,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "对比/适用场景合并为有条件选型，不复刻M15框架角色",
+      "card_keys": [
+        "ch03.interview.m21.workflow-coexistence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q05",
+      "original_text": "| **确认节点** | AI 执行关键操作前，请求用户确认 | 自动扣款、删除数据、发送邮件 | \"即将为您办理退款 ￥2,580，是否确认？\" |",
+      "source_line": 251,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "HITL触发、通知、展示与回复界面留完整母题/实践；金额和置信度阈值是假设",
+      "card_keys": [
+        "ch03.interview.m21.interrupt-resume.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q06",
+      "original_text": "1.   **触发条件**：什么情况下进入人工？（金额 > 5000、资料模糊、高风险用户、AI 置信度 < 80%）",
+      "source_line": 258,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "HITL触发、通知、展示与回复界面留完整母题/实践；金额和置信度阈值是假设",
+      "card_keys": [
+        "ch03.interview.m21.interrupt-resume.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q07",
+      "original_text": "2.   **通知机制**：怎么通知审核员？（站内信、钉钉、邮件、短信）",
+      "source_line": 259,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "HITL触发、通知、展示与回复界面留完整母题/实践；金额和置信度阈值是假设",
+      "card_keys": [
+        "ch03.interview.m21.interrupt-resume.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q08",
+      "original_text": "3.   **超时处理**：审核员多久不响应怎么办？（转派、升级、自动通过/拒绝）",
+      "source_line": 260,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "HITL触发、通知、展示与回复界面留完整母题/实践；金额和置信度阈值是假设",
+      "card_keys": [
+        "ch03.interview.m21.interrupt-resume.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q09",
+      "original_text": "4.   **展示内容**：审核员看到什么？（原始资料、AI 分析结果、相似历史案例、风险提示）",
+      "source_line": 261,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "HITL触发、通知、展示与回复界面留完整母题/实践；金额和置信度阈值是假设",
+      "card_keys": [
+        "ch03.interview.m21.interrupt-resume.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q10",
+      "original_text": "5.   **操作选项**：审核员能做什么？（通过、驳回、要求补充、转上级、标注训练数据）",
+      "source_line": 262,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "HITL触发、通知、展示与回复界面留完整母题/实践；金额和置信度阈值是假设",
+      "card_keys": [
+        "ch03.interview.m21.interrupt-resume.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q11",
+      "original_text": "6.   **状态同步**：审核结果如何反馈给用户？（实时推送、短信通知、页面刷新）",
+      "source_line": 263,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "HITL触发、通知、展示与回复界面留完整母题/实践；金额和置信度阈值是假设",
+      "card_keys": [
+        "ch03.interview.m21.interrupt-resume.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q12",
+      "original_text": "*   流程开始时，我们知道什么？（用户输入、请求参数）",
+      "source_line": 382,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "状态输入输出/读取者/审计需求转状态契约产物",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m21.state-reducer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q13",
+      "original_text": "*   流程结束时，我们要输出什么？（最终结果、中间产物）",
+      "source_line": 383,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "状态输入输出/读取者/审计需求转状态契约产物",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m21.state-reducer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q14",
+      "original_text": "*   哪些节点需要读取什么信息才能工作？",
+      "source_line": 384,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "状态输入输出/读取者/审计需求转状态契约产物",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m21.state-reducer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q15",
+      "original_text": "*   审计和追溯需要记录什么？",
+      "source_line": 385,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "状态输入输出/读取者/审计需求转状态契约产物",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m21.state-reducer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q16",
+      "original_text": "*   这个步骤是否可以单独测试？",
+      "source_line": 391,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "独立测试/复用/失败策略用于节点粒度",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q17",
+      "original_text": "*   这个步骤是否可能在其他流程中复用？",
+      "source_line": 392,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "独立测试/复用/失败策略用于节点粒度",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q18",
+      "original_text": "*   这个步骤的失败/重试策略是否独立？",
+      "source_line": 393,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "独立测试/复用/失败策略用于节点粒度",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q19",
+      "original_text": "*   判断依据是什么？（State 里的哪个字段？）",
+      "source_line": 401,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "路由字段、未知兜底由本课，通用循环预算复用既有卡",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001",
+        "ch03.agent.loop-stop-budget.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q20",
+      "original_text": "*   有哪些可能的走向？",
+      "source_line": 402,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "路由字段、未知兜底由本课，通用循环预算复用既有卡",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001",
+        "ch03.agent.loop-stop-budget.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q21",
+      "original_text": "*   默认走向是什么？（兜底的 else 分支）",
+      "source_line": 403,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "路由字段、未知兜底由本课，通用循环预算复用既有卡",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001",
+        "ch03.agent.loop-stop-budget.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q22",
+      "original_text": "*   是否可能循环？循环次数是否有限制？",
+      "source_line": 404,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "路由字段、未知兜底由本课，通用循环预算复用既有卡",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001",
+        "ch03.agent.loop-stop-budget.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q23",
+      "original_text": "*   某个节点执行失败怎么办？（重试？降级？终止？）",
+      "source_line": 410,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "失败契约与未知副作用分层，真实恢复要实践验证",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q24",
+      "original_text": "*   外部 API 超时怎么办？",
+      "source_line": 411,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "失败契约与未知副作用分层，真实恢复要实践验证",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q25",
+      "original_text": "*   AI 输出格式不对怎么办？",
+      "source_line": 412,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "失败契约与未知副作用分层，真实恢复要实践验证",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q26",
+      "original_text": "*   用户中途退出怎么办？",
+      "source_line": 413,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "失败契约与未知副作用分层，真实恢复要实践验证",
+      "card_keys": [
+        "ch03.interview.m21.node-boundaries.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-Q27",
+      "original_text": "想测试\"AI 初审\"节点的新版 Prompt 是否更好？LangGraph + LangSmith 支持：",
+      "source_line": 450,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "A/B方案留对照试验任务，trace不能自动证明改善因果",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-B01",
+      "original_text": "*   **节点（Node）** = 一个具体的处理步骤（比如\"调用大模型生成回复\"、\"查询数据库\"、\"发送邮件通知\"）",
+      "source_line": 15,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "保留核心图对象而非画图即运行",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-B02",
+      "original_text": "### 3.1 State（状态）—— 流程的\"记事本\"",
+      "source_line": 67,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "共享状态正文需补字段更新机制",
+      "card_keys": [
+        "ch03.interview.m21.state-reducer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-B03",
+      "original_text": "### 3.3 Edge（边）—— 流程的\"红绿灯\"",
+      "source_line": 95,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "路由与节点职责区分",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-B04",
+      "original_text": "传统 AI 调用像放烟花——绚烂一下，没了。LangGraph 的 State 持久化（通过 Checkpoint 机制）让流程像录像带——**随时可以暂停、回放、从任意点恢复**。",
+      "source_line": 215,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "持久化回放保证需纠正重执行语义",
+      "card_keys": [
+        "ch03.interview.m21.interrupt-resume.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-B05",
+      "original_text": "| 版本兼容 | 流程图升级后，旧 State 能否恢复 | 设计 State 字段的版本号，支持向后兼容 |",
+      "source_line": 238,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "旧State版本兼容独立目标",
+      "card_keys": [
+        "ch03.interview.m21.graph-evolution.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-B06",
+      "original_text": "每个节点的输入、输出、耗时、Token 消耗，都在 LangSmith 的 Trace（追踪）里一目了然。产品经理可以：",
+      "source_line": 434,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "trace是记录可观测输入输出，不是模型真实思维",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.21",
+      "objective_id": "m21-B07",
+      "original_text": "LangGraph 深度绑定 LangChain 生态，如果未来需要迁移到其他框架（如 LlamaIndex、AutoGen），成本较高。",
+      "source_line": 510,
+      "source_path": "第3章-技术攻克/3.21-LangGraph.md",
+      "source_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "生态绑定断言纠错，不需LangChain依赖",
+      "card_keys": [
+        "ch03.interview.m21.workflow-coexistence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

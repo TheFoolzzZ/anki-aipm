@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-22",
+  "module_id": "3.6",
+  "relations": [
+    {
+      "from": "ch03.interview.m06.method-evidence.001",
+      "to": "ch03.finetune.lora-boundary.001",
+      "type": "compare",
+      "reason": "相同任务下比较适配范围与资源条件"
+    },
+    {
+      "from": "ch03.interview.m06.hyperparameter-experiment.001",
+      "to": "ch03.finetune.overfitting-diagnosis.001",
+      "type": "extension",
+      "reason": "从超参数试验推进到验证回归诊断"
+    },
+    {
+      "from": "ch03.finetune.acceptance.001",
+      "to": "ch03.finetune.split-leakage.001",
+      "type": "prerequisite",
+      "reason": "无独立测试集不能建立可信增益"
+    },
+    {
+      "from": "ch03.finetune.release-monitoring.001",
+      "to": "ch03.finetune.acceptance.001",
+      "type": "prerequisite",
+      "reason": "部署之前先满足质量验收"
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "batch_id": "ch03-interview-star-20261007-m21",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m21.graph-execution.001",
+      "lesson_source_key": "第3章-技术攻克/3.21-LangGraph.md",
+      "concept_keys": [
+        "interview.m21.graph-execution"
+      ],
+      "revision": 2,
+      "position": 3101,
+      "title": "沿理赔流程解释State、Node与Edge",
+      "kind": "机制",
+      "prompt": "请用理赔材料检查举例，解释LangGraph的State、Node、Edge怎样协作。节点一定要调用大模型吗？",
+      "answer_short": "一、State保存案件资料和检查结果，给后续处理提供当前输入，而不是图本身。\n二、Node读取State并返回更新；检查节点可用普通规则产出缺件清单，复杂文本也可调用模型。\n三、Edge决定下一步：有缺件去补充，齐全去初审；补件后回到检查。先实现节点与路由并编译图，画业务图不会自动生成可运行逻辑。",
+      "required_points": [
+        "说清State承载数据、Node处理并返回更新",
+        "用缺件清单解释分支和补件回路",
+        "说明节点可用普通代码，业务图仍需实现"
+      ],
+      "pitfalls": "把Node、Edge当成神经网络结构会错认作用；编译通过只说明结构可用，不证明理赔规则正确。",
+      "explanation": "假设检查节点产出missing_list=[身份证背面]，条件边读到非空值后转补件；它不负责识别照片，识别责任在节点。用户补齐后再次检查，结果为空才进入初审，数据和控制流因此分开。\n【面试追问】为什么不让边直接完成金额计算？参考答案：计算应有独立输入输出和测试，边只选择后续路径；明确公式可由普通代码执行。\n【评分】数据、处理、路由三种职责和一个分支走向都正确为合格；认为所有节点必须LLM属于核心错误。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 11,
+          "line_end": 29
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 63,
+          "line_end": 111
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "将三词定义改为沿缺件清单推进的口述链路；补出编译与业务实现的区别，避免只背类比。",
+          "来源与编辑边界：材料检查为假设例子；源文支持状态/节点/边职责，普通函数与编译边界经LangChain Graph API复核。",
+          "独立审校通过：保留State/Node/Edge分工与补件分支目标，编号沿missing_list解释数据、计算、路由及回路；普通代码节点和编译不证明业务规则均明确。Graph API支持机制，金额计算追问有契约/测试理由，未误背源文内建节点分类。",
+          "独立审校内容指纹：3db5eed1c1bd3cec9e32a8120e20ace2d77c318e24c5e2e14a29391a07f63b09"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m21.state-reducer.001",
+      "lesson_source_key": "第3章-技术攻克/3.21-LangGraph.md",
+      "concept_keys": [
+        "interview.m21.state-reducer"
+      ],
+      "revision": 2,
+      "position": 3102,
+      "title": "部分更新与reducer的合并含义",
+      "kind": "机制",
+      "prompt": "State原有risk=待定、notes=[受理]，节点只返回notes=[缺照片]。默认更新和追加reducer各得到什么？并行写notes要约定什么？",
+      "answer_short": "一、节点返回的是部分更新，risk没有被更新就保留；不是每次重新建立整个State。\n二、notes默认被新值替换为[缺照片]；若约定列表追加reducer，则合并为[受理,缺照片]，因为字段更新通过各自合并规则应用。\n三、并行节点写同一字段时，要定义冲突、顺序和去重语义，或分字段后汇总；不能靠到达先后猜最终值。",
+      "required_points": [
+        "部分更新保留risk，分别算出两种notes结果",
+        "解释reducer按字段决定替换或合并",
+        "并行写必须约定合并/冲突，不能假定最后写入获胜"
+      ],
+      "pitfalls": "列表追加不会自动去重；给最终金额配置加法合并，可能错误累加不同估算。reducer不提供外部数据库事务。",
+      "explanation": "State结构约定字段装什么，reducer约定更新怎样进入已有值，两者缺一都可能造成错误。假设两路审核都输出同一条缺件备注，直接追加会出现重复，须按业务ID去重或保留独立结果再汇总。无适合合并规则的普通字段并发更新可能冲突报错。\n【面试追问】追加字段返回[]能清空吗？参考答案：不能，仅旧列表加空列表；清空需要明确的覆盖操作或另一种更新契约。\n【评分】两组结果与并发边界都解释正确为合格；把未更新字段清空、把追加当自动去重均不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 67,
+          "line_end": 75
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 470,
+          "line_end": 476
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 326,
+          "line_end": 348
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "补出字段更新经reducer应用的因果，并区分追加、去重和并发冲突；保留原题实际数组计算。",
+          "来源与编辑边界：State与并发源段支持目标，默认替换/追加语义经Graph API核对；重复备注为编辑假设。",
+          "独立审校通过：保留原risk/notes数组计算和并发合并目标，明确部分更新保留risk，替换/追加分别给出实际结果；重复备注、错误金额累加和空列表不能清追加字段均有原因。Graph API核对一致，并发无reducer冲突不是最后到达者获胜。",
+          "独立审校内容指纹：5f3d0e117a0188df5210a5df30467d25f9641497cb8fa90f075ed39ec8630bbe"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m21.conditional-routing.001",
+      "lesson_source_key": "第3章-技术攻克/3.21-LangGraph.md",
+      "concept_keys": [
+        "interview.m21.conditional-routing"
+      ],
+      "revision": 2,
+      "position": 3103,
+      "title": "模型标签怎样进入条件路由",
+      "kind": "机制",
+      "prompt": "理赔初审输出“低风险”，条件边能否直接走支付？请说明校验与分支、未知值及反复补件的出口、批准事实的执行边界。",
+      "answer_short": "一、“低风险”是模型判断，先校验标签与必要字段并写入State，不能把它当付款批准。\n二、路由按已校验状态和业务规则选择分支，冲突设优先级，未知值走受控兜底；补件/重解析循环还要按进展、次数或等待时限停止并升级人工，触界不默认支付。\n三、支付前执行端核验材料、有效批准和金额；Edge选择了支付节点，不替代授权与业务校验。",
+      "required_points": [
+        "区分模型标签、校验状态与批准事实",
+        "分支有明确依据/优先级、未知值兜底及有限循环出口",
+        "支付仍须有效审批与业务条件，路由本身不授予权限"
+      ],
+      "pitfalls": "模型自报confidence不是自动校准概率；未知值兜底若反复回环仍需停止/升级，源文阈值不是生产标准。",
+      "explanation": "假设模型给出低风险但身份证缺失，应先补件；未知标签则按条件表重解析或人工处理。若补件反复没有新证据、重解析次数到界或等待超时，必须停止自动回路并升级，不能因兜底回到同一节点就声称安全。具体预算由业务风险与等待约束制定，不硬背固定次数。\n【面试追问】同时命中低风险和大金额条件怎么办？参考答案：预先明确人工复核等规则优先级，并用交叉组合和循环边界样例验证。\n【评分】状态/批准分层、有限分支出口、执行授权完整为合格；低风险直接支付、补件无限重试或触界默认通过均判未掌握。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 95,
+          "line_end": 105
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 311,
+          "line_end": 324
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 397,
+          "line_end": 413
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "将安全提醒展开成标签→State→条件表→业务批准的机制链；加入条件冲突的可执行解释。",
+          "来源与编辑边界：源文条件表与异常设计支持职责；缺身份证与交叉条件为显式假设，不采用原文数值阈值。",
+          "处理review-b：恢复原活动卡补件/重解析循环的进展、次数、等待时限与人工升级边界，并同步正面、核心、必答点和评分；达到边界不默认支付。",
+          "独立审校通过：定向复核修复：正面、核心第二点、必答点2及评分恢复进展/次数/等待时限、停止和人工升级，明确触界不默认支付；模型标签/状态/有效批准分层及执行端材料金额校验保留，来源397–413支持循环出口，不固定通用次数。",
+          "独立审校内容指纹：79c76000d133aa421af07c7d8f9b982002582a92552c0f2d2a982eeb64f5be8e"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m21.interrupt-resume.001",
+      "lesson_source_key": "第3章-技术攻克/3.21-LangGraph.md",
+      "concept_keys": [
+        "interview.m21.interrupt-resume"
+      ],
+      "revision": 2,
+      "position": 3104,
+      "title": "中断恢复为何重复发送短信",
+      "kind": "故障诊断",
+      "prompt": "LangGraph节点先发补件短信，再interrupt等待审核，恢复后又发一次。你会怎样修复重复通知，并核验恢复输入确实来自有权审批者、对应原案件与批准版本？",
+      "answer_short": "S｜题中短信在等待前发送，恢复出现重复通知。\nT｜安全接回原案件审核，防重复及无效批准。\nA｜一、按原thread核对持久化检查点，校验回复者身份、审批权限、案件与批准版本；二、检查短信是否在interrupt前，恢复会从节点开头重跑；三、分开通知与等待，用稳定业务幂等键核对已发送事实。\nR｜测试恢复、重启、无权限回复和发送成功但保存失败窗口，预期不重复通知；无有效批准不继续，resume/true只是输入。",
+      "required_points": [
+        "同thread/检查点接回输入，并核有效身份、审批权限、案件和批准版本",
+        "恢复重跑中断节点，interrupt前代码可能再次执行",
+        "拆分副作用并用幂等/业务事实核对覆盖失败窗口"
+      ],
+      "pitfalls": "仅拆节点不保证外部动作只执行一次；内存检查点不能承诺跨进程重启恢复，人工回复仍须核对授权。",
+      "explanation": "恢复不是CPU从某行继续，而是再次运行节点，到interrupt时取得恢复值，所以前面的短信代码会重跑。假设发送已成功但图状态保存失败，sent字段可能未留下；稳定通知ID与服务端幂等/查询需覆盖此窗口。恢复输入还必须与有权审批者及具体批准版本绑定，不让外部传入true直接放行。\n【面试追问】审核输入true代表有效批准吗？参考答案：不代表，必须核有效身份、审批权限、原案件及批准内容版本；不匹配就拒绝或重新审核。\n【评分】三项必答点都完整为合格；把true当批准、遗漏审批权限或认为检查点天然只发一次均不合格，具体API写法不是必背内容。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 213,
+          "line_end": 240
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 242,
+          "line_end": 269
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "改为紧凑诊断STAR，A逐步对应检查点、重跑位置、发送事实；R覆盖实际重复发生窗口，未编造成果。",
+          "来源与编辑边界：源文持久化与人工协作支持目标；节点重跑经Interrupts核对，短信故障按题面、保存失败为编辑假设。",
+          "处理review-b：身份、审批权限、案件和批准版本升级为恢复核心/必答条件；正面明确要求，追问与评分取消“身份核验加分”的降级。",
+          "独立审校通过：定向复核修复：题面/核心A/必答点1/追问/评分同步把有效身份、审批权限、原案件和批准版本设为恢复前提，true只输入而非批准；原thread/检查点、节点重跑、幂等及发送成功保存失败窗口均保留，R加入无权回复拒绝，无虚构实测。",
+          "独立审校内容指纹：4f4675e014be8f178ae510def0bb2f8a36dbc0222f8e1eeebbee6725ef1924e6"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m21.graph-evolution.001",
+      "lesson_source_key": "第3章-技术攻克/3.21-LangGraph.md",
+      "concept_keys": [
+        "interview.m21.graph-evolution"
+      ],
+      "revision": 2,
+      "position": 3105,
+      "title": "图升级怎样兼容在途任务",
+      "kind": "场景判断",
+      "prompt": "理赔任务停在人工复核，新版重命名该节点，并把estimated_amount改成嵌套对象。你会怎样安排升级，证明旧任务仍能安全恢复？",
+      "answer_short": "S｜题中在途任务保存的是旧图路径和旧State。\nT｜升级新流程，同时维持旧案件的可恢复性与原审批含义。\nA｜一、盘点旧检查点对应的节点和字段；二、检查改名后的入口、旧值读取及路由规则；三、保留兼容路径或显式迁移，必要时旧案件沿旧版完成，新案件进新版。\nR｜用真实旧检查点验证恢复、金额及下一步一致，失败即停止切换并回退；schema_version只识别版本，不自动迁移。",
+      "required_points": [
+        "区分新代码可运行与旧检查点路径/字段可恢复",
+        "说明节点改名、字段改名或不兼容类型的影响",
+        "选择兼容/迁移策略并核验旧案件业务结果和回退"
+      ],
+      "pitfalls": "代码回退不能撤销已发短信或已支付；只新增版本号而没有转换规则仍可能读不到旧金额。",
+      "explanation": "检查点既有数据也有后续执行位置，新图必须能解释两者。假设旧字段estimated_amount为3200，新版期待对象value与currency，不提供迁移就无法正确解释单位和金额；即使转换成功，新路由也可能改变原案件需人工复核的决定。\n【面试追问】只加可选字段是否一定安全？参考答案：结构可能兼容，但默认值被新路由读取后仍可能改变行为，需要验证旧任务。\n【评分】覆盖路径、数据、业务含义和恢复验证为合格；把部署成功或版本号当兼容证明不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 231,
+          "line_end": 239
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 350,
+          "line_end": 368
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 508,
+          "line_end": 516
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "升级题改为STAR，明确兼容策略的选择与业务审批含义，区分结构可读和恢复行为正确。",
+          "来源与编辑边界：原文版本兼容和状态支持目标；迁移限制经Graph API核对，3200仅是假设示例金额。",
+          "独立审校通过：保留节点身份、State名称/类型及业务兼容目标，STAR先盘旧检查点再保留路径/迁移/旧版完成，R使用真实旧检查点并要求回退；金额对象与可选字段追问解释结构兼容不等于业务兼容，代码回退不能撤销外部动作边界保留。",
+          "独立审校内容指纹：7cdb3b710684abda095fb99362e79dbe722cc8a3055a4c23c660664448c387db"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m21.workflow-coexistence.001",
+      "lesson_source_key": "第3章-技术攻克/3.21-LangGraph.md",
+      "concept_keys": [
+        "interview.m21.workflow-coexistence"
+      ],
+      "revision": 2,
+      "position": 3106,
+      "title": "AI编排与既有BPM怎样分工",
+      "kind": "场景判断",
+      "prompt": "企业已有可靠的理赔审批支付BPM，只想增加AI材料检查与多轮补件。你会如何判断是否引入LangGraph，怎样划分两套系统？",
+      "answer_short": "S｜已有审批支付可靠，新增痛点是资料理解与补件回路。\nT｜改善资料处理并控制迁移、恢复和维护成本。\nA｜一、先看现有流程能否承载检查与补件；二、确有多轮状态/人工等待痛点时，试让LangGraph处理AI环节，审批支付仍调用BPM/API；三、约定案件ID、资料版本、返回状态和失败责任，比较两种实现的维护负担。\nR｜用补件、退出恢复和接口失败验证分工；只有收益超过新增复杂度才扩大，简单链路不必引入图。",
+      "required_points": [
+        "按状态/分支痛点而非框架名称决定引入",
+        "AI资料处理与既有审批支付明确分工",
+        "定义跨系统契约并比较维护/恢复成本，有限验证"
+      ],
+      "pitfalls": "BPM也可调用模型；LangGraph不替跨系统事务或业务授权，不能把案例中的效率提升当实测承诺。",
+      "explanation": "假设一次材料检查就能结束，直接在既有BPM加一个受测接口可能更省维护；多轮补件需持续状态与人工恢复时，图编排才可能有价值。接口传“检查完成”还不够，应同时返回资料版本、缺件清单和处理状态，避免审批端拿过期资料放行。\n【面试追问】引入图是否要求替换LangChain或BPM？参考答案：不要求，图节点可复用普通函数与现有接口，按职责组合。\n【评分】说明真实痛点、系统分工和比较证据为合格；“理赔必须LangGraph”判错误。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 115,
+          "line_end": 155
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 273,
+          "line_end": 290
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 494,
+          "line_end": 516
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "将泛泛选型结论改为现有能力基线→局部图试点→接口契约的STAR，不扩大到审批支付重建。",
+          "来源与编辑边界：源文两类框架比较和过度设计支持目标；接口契约为编辑设计，未引用原文倍数业绩。",
+          "独立审校通过：保留AI补件与既有BPM审批支付分工，A先比较既有实现，再按状态/人工等待痛点试图编排，定义案件ID/版本/状态/失败责任；单次检查基线与追问支持可替代方案，R是条件性验证，无案例效率承诺，跨系统事务/授权边界明确。",
+          "独立审校内容指纹：f367c9036b2e6f7da0b2b17eda3a8ab6bb2ff50fa3cb594c2f397bf09b331dd5"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m21.node-boundaries.001",
+      "lesson_source_key": "第3章-技术攻克/3.21-LangGraph.md",
+      "concept_keys": [
+        "interview.m21.node-boundaries"
+      ],
+      "revision": 2,
+      "position": 3107,
+      "title": "怎样划分可恢复的图节点",
+      "kind": "场景判断",
+      "prompt": "一个LangGraph节点做资料提取、规则核验、短信和支付。你会按什么依据拆节点，怎样避免拆得过粗或过细？",
+      "answer_short": "S｜题中一个节点混合可重算处理与外部写入，失败会牵连全部步骤。\nT｜让错误能定位、重试能受控，且不过度增加状态维护。\nA｜一、按可独立验收的输入输出划界；二、将提取/核验与短信/支付的失败策略分开，写入接口保留幂等及结果核对；三、只在独立恢复、复用或观测有价值处拆分，不按模型调用数机械拆。\nR｜注入支付失败验证无需重发通知或无谓重算，简单处理仍能合并；拆节点不等于外部动作正好一次。",
+      "required_points": [
+        "以独立契约、测试与失败策略确定边界",
+        "区分可重算步骤和外部副作用，解释重试牵连",
+        "平衡故障隔离与状态/维护负担"
+      ],
+      "pitfalls": "节点不是唯一可观测单位，节点内仍可记录多段trace；支付失败不能无条件重跑整个节点。",
+      "explanation": "假设OCR输出文本与位置证据，规则核验产出差异清单，通知返回通知ID，支付返回流水；这些结果各自可验收，失败处理也不同。若全在一个节点，支付失败后重跑可能让同一用户收到多条短信。拆开便于定位，但发送成功、存状态失败仍靠业务幂等处理。\n【面试追问】两次模型调用一定要拆吗？参考答案：若输入输出紧密、重试责任一致且无独立恢复需求，可放一起并用函数或trace保持可读。\n【评分】边界依据、副作用和粒度取舍完整为合格；“每次调用一个节点”不足。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 77,
+          "line_end": 93
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 387,
+          "line_end": 413
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.21-LangGraph.md",
+          "content_hash": "27596c170f72f866aee2c74e38f6b75f9b6aa1658f603df8911c321363f7fea5",
+          "line_start": 494,
+          "line_end": 506
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "节点拆分改为设计STAR；用不同输出契约解释故障隔离，而非用调用数量决定粒度。",
+          "来源与编辑边界：源文节点拆分和过度设计支持依据；OCR/通知/支付输出为编辑假设，外部幂等为工程边界。",
+          "独立审校通过：保留按独立契约/验收/失败策略划界与粒度取舍，STAR解释可重算和写入分开及支付失败牵连短信；四类实际产物支撑解析，追问允许紧密调用合并。R注入失败验证，明确拆节点仍不能消除幂等和外部结果核对责任。",
+          "独立审校内容指纹：3a63b9209c7a83fccd46ac4c88039a631da375fb1527162b4188951e1e38b3a3"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-22",
+  "module_id": "3.8",
+  "relations": [
+    {
+      "from": "ch03.token.context-reservation.001",
+      "to": "ch03.token.unit-vs-character.001",
+      "type": "prerequisite",
+      "reason": "先理解编码资源单位，才能给完整请求预留容量"
+    },
+    {
+      "from": "ch03.token.usage-reconciliation.001",
+      "to": "ch03.token.request-monthly-cost.001",
+      "type": "extension",
+      "reason": "预算公式需进一步用逐请求用量对账"
+    },
+    {
+      "from": "ch03.token.long-context-verification.001",
+      "to": "ch03.token.context-reservation.001",
+      "type": "compare",
+      "reason": "容量合规与证据利用是两类验收"
+    },
+    {
+      "from": "ch03.token.unit-vs-character.001",
+      "to": "ch03.tokenization.language-measurement.001",
+      "type": "extension",
+      "reason": "由无固定字符倍率迁移到中英文同任务测量"
+    },
+    {
+      "from": "ch03.token.optimization-quality.001",
+      "to": "ch03.prompt.few-shot-selection.001",
+      "type": "extension",
+      "reason": "示例数量改变输入成本与分类质量"
+    }
+  ]
+}

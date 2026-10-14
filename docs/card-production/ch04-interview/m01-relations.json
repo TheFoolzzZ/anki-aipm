@@ -1,0 +1,14 @@
+[
+  {
+    "from": "ch04.interview.m01.executable-loop.001",
+    "to": "ch03.prompt.task-contract.001",
+    "type": "extension",
+    "reason": "软件事件验收依托明确输入/输出与约束，通用任务契约在3.9，不再复制模板卡"
+  },
+  {
+    "from": "ch04.interview.m01.reproduction-feedback.001",
+    "to": "ch03.prompt.regression-versioning.001",
+    "type": "extension",
+    "reason": "复现与修复后回归沿用版本/代表样例证据规范，检验对象由Prompt改为软件行为"
+  }
+]

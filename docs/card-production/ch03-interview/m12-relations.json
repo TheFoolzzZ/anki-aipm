@@ -1,0 +1,41 @@
+{
+  "module_id": "3.12",
+  "relations": [
+    {
+      "from": "ch03.interview.m12.agent-component-roles.001",
+      "to": "ch03.agent.task-fit.001",
+      "type": "extension",
+      "reason": "按任务路径确定是否需要反馈驱动系统，再分析组件职责"
+    },
+    {
+      "from": "ch03.agent.loop-stop-budget.001",
+      "to": "ch03.interview.m12.agent-component-roles.001",
+      "type": "prerequisite",
+      "reason": "理解观察和行动职责后制定继续/停止条件"
+    },
+    {
+      "from": "ch03.agent.ambiguous-tool-result.001",
+      "to": "C06",
+      "type": "prerequisite",
+      "reason": "请求与执行分离是理解超时未知状态的前提"
+    },
+    {
+      "from": "ch03.agent.reflection-evidence.001",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "compare",
+      "reason": "候选自检与可观察执行证据不能混同"
+    },
+    {
+      "from": "ch03.agent.tool-result-trust.001",
+      "to": "ch03.prompt.injection-boundary.001",
+      "type": "extension",
+      "reason": "指令边界延伸到跨工具数据外发"
+    },
+    {
+      "from": "ch03.interview.m12.agent-framework-roles.001",
+      "to": "ch03.agent.task-fit.001",
+      "type": "prerequisite",
+      "reason": "选择框架前先明确任务需要何种控制流"
+    }
+  ]
+}

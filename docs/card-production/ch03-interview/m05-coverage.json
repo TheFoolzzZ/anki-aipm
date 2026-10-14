@@ -1,0 +1,532 @@
+{
+  "module_id": "3.5",
+  "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+  "native_objectives": 25,
+  "registered": 25,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O01",
+      "original_text": "*   [ ] 我能解释什么是大模型，以及它和小模型的核心区别",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 981,
+      "decision": "核心卡",
+      "reason": "通用能力与专用任务选择，不把参数量当定义唯一条件",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.generalization.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O02",
+      "original_text": "*   [ ] 我能解释预训练、SFT、RLHF 三个训练阶段的作用",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 982,
+      "decision": "核心卡",
+      "reason": "三阶段主线与偏好路线比较",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.training-stages.001",
+        "ch03.interview.m05.preference-dpo.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O03",
+      "original_text": "*   [ ] 我知道 GPT 和 BERT 的核心区别（Decoder-only vs Encoder-only）",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 983,
+      "decision": "跨模块",
+      "reason": "复用3.4架构差异，避免重复",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.transformer.architecture-families.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O04",
+      "original_text": "*   [ ] 我知道涌现能力（Emergent Abilities）的概念和典型例子",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 984,
+      "decision": "核心卡",
+      "reason": "补齐涌现概念，并纠正固定参数门槛",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m05.emergence-measurement.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O05",
+      "original_text": "*   [ ] 我能解释 Scaling Law 的核心思想",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 985,
+      "decision": "核心卡",
+      "reason": "正文解释不足，按第一方论文补齐",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m05.scaling-budget.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O06",
+      "original_text": "*   [ ] 我能说出至少 3 个闭源大模型和 3 个开源大模型",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 989,
+      "decision": "实践",
+      "reason": "P1核对三种API模型与三种可获取权重模型；开放程度逐项判定，不预填六个永久有效名字",
+      "mother_question_id": "M1",
+      "card_keys": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_designed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O07",
+      "original_text": "*   [ ] 我知道国内主要大模型厂商及其特点",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 990,
+      "decision": "实践",
+      "reason": "P1另做国内供应商特点对照，必须注明版本和证据",
+      "mother_question_id": "M1",
+      "card_keys": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_designed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O08",
+      "original_text": "*   [ ] 我能根据任务类型推荐合适的模型规模（7B/13B/70B）",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 991,
+      "decision": "核心卡",
+      "reason": "将固定7B/13B/70B推荐改为同任务评测证据",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.selection-evidence.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O09",
+      "original_text": "*   [ ] 我知道 API 调用和私有化部署各自的优缺点",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 992,
+      "decision": "核心卡",
+      "reason": "部署取舍与许可准入分开",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.deployment-tradeoff.001",
+        "ch03.interview.m05.license-evidence.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O10",
+      "original_text": "*   [ ] 我能估算一个大模型产品的月度推理成本",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 993,
+      "decision": "跨模块",
+      "reason": "复用3.8预算卡，P2完成真实测算",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001"
+      ],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_designed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O11",
+      "original_text": "*   [ ] 我知道 Prompt Engineering 的核心技巧（Few-shot、CoT、角色扮演）",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 997,
+      "decision": "综合",
+      "reason": "M1解释技巧差异及限制；角色提示不授予权限",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m05.icl-vs-training.001",
+        "ch03.prompt.few-shot-selection.001",
+        "ch03.prompt.reasoning-tool-choice.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O12",
+      "original_text": "*   [ ] 我能解释 RAG 的原理和工作流程",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 998,
+      "decision": "综合",
+      "reason": "M1完整复述RAG链路，单卡只考职责边界",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.application-routing.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O13",
+      "original_text": "*   [ ] 我知道 Function Calling / Tool Use 的应用场景",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 999,
+      "decision": "核心卡",
+      "reason": "工具请求不等于真实执行",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.application-routing.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O14",
+      "original_text": "*   [ ] 我知道降低幻觉的主要方法",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1000,
+      "decision": "核心卡",
+      "reason": "核查主张及失败兜底",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.hallucination-controls.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O15",
+      "original_text": "*   [ ] 我知道模型压缩的主要方法（量化、蒸馏、剪枝）",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1001,
+      "decision": "跨模块",
+      "reason": "3.4统一比较量化、蒸馏、剪枝",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m04.compression-choice.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O16",
+      "original_text": "*   [ ] 我能解释什么是幻觉，以及如何在产品中降低幻觉风险",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1005,
+      "decision": "核心卡",
+      "reason": "与第14项同一目标合并",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.hallucination-controls.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O17",
+      "original_text": "*   [ ] 我知道知识截止（Knowledge Cutoff）问题及解决方案",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1006,
+      "decision": "综合",
+      "reason": "M1说明训练知识时效与外部事实更新，不声称联网自动正确",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.hallucination-controls.001",
+        "ch03.llm.application-routing.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O18",
+      "original_text": "*   [ ] 我能评估大模型在特定场景下的可行性",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1007,
+      "decision": "核心卡",
+      "reason": "评测、成本与失败边界",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.llm.selection-evidence.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O19",
+      "original_text": "*   [ ] 我知道对齐税（Alignment Tax）的概念",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1008,
+      "decision": "核心卡",
+      "reason": "解释可用性代价；拒答只是其中一种可观察表现",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m05.refusal-evaluation.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O20",
+      "original_text": "*   [ ] 我能识别大模型产品的安全风险和合规要求",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1009,
+      "decision": "实践",
+      "reason": "P3风险台账，卡片仅覆盖部分，不代表已完成法律审查",
+      "mother_question_id": "M1",
+      "card_keys": [
+        "ch03.interview.m05.license-evidence.001",
+        "ch03.llm.deployment-tradeoff.001"
+      ],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_designed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O21",
+      "original_text": "*   [ ] 我知道 Agent 的概念和核心能力（规划、工具使用、记忆、反思）",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1013,
+      "decision": "综合",
+      "reason": "M2串联四类能力，复用3.12",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.agent.task-fit.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.agent.memory-freshness.001",
+        "ch03.agent.reflection-evidence.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O22",
+      "original_text": "*   [ ] 我了解多模态大模型的发展趋势",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1014,
+      "decision": "综合",
+      "reason": "M2讨论输入能力与验收；P1核对当前趋势，不背版本时间线",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.interview.m04.multimodal-input.001"
+      ],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_designed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O23",
+      "original_text": "*   [ ] 我知道 MoE（混合专家）架构的基本思想",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1015,
+      "decision": "跨模块",
+      "reason": "由3.4覆盖稀疏激活与资源边界",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.interview.m04.moe-resources.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O24",
+      "original_text": "*   [ ] 我了解长上下文（Long Context）技术的演进",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1016,
+      "decision": "综合",
+      "reason": "M2讲清位置/上下文容量与有效利用，P1查演进证据",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.token.long-context-verification.001",
+        "ch03.transformer.position.001"
+      ],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_designed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.5",
+      "objective_id": "3.5-O25",
+      "original_text": "*   [ ] 我知道当前大模型成本下降的主要驱动因素",
+      "source_path": "第3章-技术攻克/3.5-LLM.md",
+      "source_hash": "2d71a74b96f9dd3e1599a4c8d996286917ad250dbda3350548337eddaa17391c",
+      "source_line": 1017,
+      "decision": "实践",
+      "reason": "P2区分技术降本、服务定价与业务总成本，不宣称当前市场价格已下降",
+      "mother_question_id": "M2",
+      "card_keys": [
+        "ch03.interview.m04.compression-choice.001",
+        "ch03.interview.m04.moe-resources.001",
+        "ch03.token.optimization-quality.001"
+      ],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_designed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "publication_status": "published_and_verified_2026-09-18"
+}

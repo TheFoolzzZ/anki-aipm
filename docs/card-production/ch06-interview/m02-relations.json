@@ -1,0 +1,17 @@
+{
+  "module_id": "6.2",
+  "relations": [
+    {
+      "from": "ch06.interview.m02.citation-location.001",
+      "to": "ch03.rag.conflicting-sources.001",
+      "type": "extension",
+      "reason": "冲突判断依赖来源适用性，引用入口进一步让用户打开回答使用的具体版本核对支持关系"
+    },
+    {
+      "from": "ch06.interview.m02.expert-knowledge.001",
+      "to": "ch06.interview.m02.vin-context.001",
+      "type": "prerequisite",
+      "reason": "维修经验入库的适用范围必须保留VIN关联配置及实车差异，否则个案会误推广给其他车辆"
+    }
+  ]
+}

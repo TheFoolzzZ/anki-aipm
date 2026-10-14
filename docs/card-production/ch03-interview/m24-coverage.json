@@ -1,0 +1,3062 @@
+{
+  "module_id": "3.24",
+  "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+  "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+  "source_line_count": 1202,
+  "native_objectives": 24,
+  "registered": 24,
+  "explicit_questions": 51,
+  "total_registered": 137,
+  "practice_completed": 0,
+  "publication_status": "local_author_checked_not_published",
+  "objectives": [
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O01",
+      "original_text": "*   [ ] 我能解释 Workflow 的核心特征：节点化、有向连接、确定性、可编排",
+      "source_line": 1124,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "基础节点/有向边/控制规则保留，结果确定性纠错；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O02",
+      "original_text": "*   [ ] 我能解释 ReAct 的核心循环：Thought → Action → Observation",
+      "source_line": 1125,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "行动观察循环已有，复用m09；本课用架构组合解释",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O03",
+      "original_text": "*   [ ] 我能区分 Workflow、ReAct、Agent、State Graph 四个概念",
+      "source_line": 1126,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "四对象为不同层次，可在同系统组合",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O04",
+      "original_text": "*   [ ] 我能说出企业为什么倾向 Workflow + LLM/ReAct 混合方案",
+      "source_line": 1127,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "SOP与不确定调查分层，合规/低成本不是框架保证",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O05",
+      "original_text": "*   [ ] 我能解释 LLM 节点的四种形态：单次调用、Few-shot、CoT、ReAct",
+      "source_line": 1128,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m24.llm-shapes.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文四种形态非互斥：调用结构、提示策略、工具循环分轴",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O06",
+      "original_text": "*   [ ] 我能根据任务特性判断用 Workflow 还是 ReAct",
+      "source_line": 1132,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "动态行动是否有价值已有；补外层工作流控制位置",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O07",
+      "original_text": "*   [ ] 我能设计一个包含规则节点、LLM 节点、人工节点的 Workflow",
+      "source_line": 1133,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点职责与审批短卡先掌握，完整规则/LLM/人工流程需画图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O08",
+      "original_text": "*   [ ] 我能描述四种混合架构模式及其适用场景",
+      "source_line": 1134,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.interview.m13.intent-routing.001",
+        "ch03.interview.m21.conditional-routing.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "模式一/二、路由、状态图分目标，完整四模式比较留M1参考；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O09",
+      "original_text": "*   [ ] 我能为 Workflow 设计状态管理和异常处理",
+      "source_line": 1135,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001",
+        "ch03.interview.m24.failure-policy.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "状态允许转换与错误语义拆开，异常矩阵/恢复需实作；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O10",
+      "original_text": "*   [ ] 我能设计节点输入输出 Schema 和边界条件",
+      "source_line": 1136,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.prompt.json-validation.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点前置/输出状态新目标，格式/业务校验已有；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O11",
+      "original_text": "*   [ ] 我了解 Dify、Coze 等低代码 Workflow 平台的能力边界",
+      "source_line": 1140,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.platform-proof.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "当前部署版本能力必须第一方及试验，未核对Coze全表，不沿用旧能力排名",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O12",
+      "original_text": "*   [ ] 我了解 LangGraph 的核心概念：State、Node、Edge",
+      "source_line": 1141,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.state-reducer.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "State/Node/Edge及reducer更新语义第一方核对，不笼统框架保证；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O13",
+      "original_text": "*   [ ] 我知道 RAG 节点在 Workflow 中的位置和作用",
+      "source_line": 1142,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.intent-routing.001",
+        "ch03.interview.m11.rag-lifecycle.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "RAG基础已有，本课聚焦路由与可执行控制边；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O14",
+      "original_text": "*   [ ] 我了解 API 节点设计的基本原则：幂等、超时、降级、审计",
+      "source_line": 1143,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.failure-policy.001",
+        "ch03.agent.ambiguous-tool-result.001",
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "通用写超时与服务授权已有；节点错误分流补具体流程语义",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O15",
+      "original_text": "*   [ ] 我能为智能客服设计 Workflow + LLM 混合流程",
+      "source_line": 1147,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.interview.m24.human-resume.001",
+        "ch03.interview.m24.failure-policy.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "客服完整流程、写入凭证和失败轨迹须交产物，短卡不代表已设计完整",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O16",
+      "original_text": "*   [ ] 我能为金融风控设计规则 + ReAct + 人工复核流程",
+      "source_line": 1148,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "金融规则/调查/复核需授权数据和责任边界，不造自动批准保证",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O17",
+      "original_text": "*   [ ] 我能为企业知识库设计 LLM 路由 + RAG 流程",
+      "source_line": 1149,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.intent-routing.001",
+        "ch03.interview.m11.rag-lifecycle.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "路由/RAG流程图与越权/错库/缺资料轨迹需产物；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O18",
+      "original_text": "*   [ ] 我能为医疗/政务等强监管场景设计重 Workflow 方案",
+      "source_line": 1150,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "强监管控制与人工不能等于合法/临床安全；专项责任方验证未做；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O19",
+      "original_text": "*   [ ] 我能定义 Workflow 的关键指标：完成率、节点成功率、人工介入率、延迟、成本",
+      "source_line": 1151,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.tech.evaluation-contract.001",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "整任务指标契约与轨迹已有，节点指标和分母写入M1参考及实践",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O20",
+      "original_text": "*   [ ] 我能识别 ReAct 节点的循环、成本、不可控风险",
+      "source_line": 1155,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "循环、预算、无进展终止已有，不重复新卡",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O21",
+      "original_text": "*   [ ] 我能设计异常处理和兜底策略",
+      "source_line": 1156,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.failure-policy.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "异常分支按语义定义，真实降级恢复试验未执行",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O22",
+      "original_text": "*   [ ] 我能设计人工介入节点和上下文传递",
+      "source_line": 1157,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "交接上下文、审批对象版本与恢复校验为独立目标",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O23",
+      "original_text": "*   [ ] 我能设计 Workflow 的可观测性方案",
+      "source_line": 1158,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "真实动作/状态轨迹已有，本课按节点与分支设计观测表，不新增泛化日志卡",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-O24",
+      "original_text": "*   [ ] 我能把技术方案翻译成业务价值和风险评估",
+      "source_line": 1159,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "原生勾选清单",
+      "origin": "原生勾选清单",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.tech.evaluation-contract.001",
+        "ch03.interview.m24.platform-proof.001"
+      ],
+      "practice_task_ids": [
+        "T1",
+        "T3"
+      ],
+      "reason": "技术→价值需基线、返工/风险和全成本产物，文档参考不能替代真实收益验证",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q001",
+      "original_text": "但如果你真的去企业里做落地，会发现完全是另一幅景象：**大多数企业根本不敢让模型随便乱跑**。他们更关心的是：这个流程能不能稳定复现？出错了能不能定位？成本能不能控制？合规能不能过审？",
+      "source_line": 7,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "不纳入",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "业务对白/背景问句仅说明情境，不作为本课独立可评分原题；能力在该节蓝图与母题保留",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q002",
+      "original_text": "## 一、为什么企业落地更倾向 Workflow + LLM/ReAct 混合方案？",
+      "source_line": 15,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "企业控制需求作设计条件而非主流统计；按步骤区分SOP与动态决策",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q003",
+      "original_text": "*   \"如果模型漏读了征信报告怎么办？\"",
+      "source_line": 35,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "不纳入",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "业务对白/背景问句仅说明情境，不作为本课独立可评分原题；能力在该节蓝图与母题保留",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q004",
+      "original_text": "*   \"如果模型把高风险用户批了，责任算谁的？\"",
+      "source_line": 36,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "不纳入",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "业务对白/背景问句仅说明情境，不作为本课独立可评分原题；能力在该节蓝图与母题保留",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q005",
+      "original_text": "*   \"每次审批成本是多少？能不能控制在 5 块钱以内？\"",
+      "source_line": 37,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "不纳入",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "业务对白/背景问句仅说明情境，不作为本课独立可评分原题；能力在该节蓝图与母题保留",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q006",
+      "original_text": "*   \"监管部门要求留痕审计，模型每一步决策能不能追溯？\"",
+      "source_line": 38,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "不纳入",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "业务对白/背景问句仅说明情境，不作为本课独立可评分原题；能力在该节蓝图与母题保留",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q007",
+      "original_text": "*   \"审批标准变了，我怎么快速修改流程？\"",
+      "source_line": 39,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "不纳入",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "业务对白/背景问句仅说明情境，不作为本课独立可评分原题；能力在该节蓝图与母题保留",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q008",
+      "original_text": "## 二、Workflow 到底是什么？用一个做菜流程理解",
+      "source_line": 84,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q009",
+      "original_text": "*   每一步出问题都能定位：是番茄没洗？还是蛋炒老了？",
+      "source_line": 130,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q010",
+      "original_text": "### （六）AI PM 如何设计 Workflow？",
+      "source_line": 193,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q011",
+      "original_text": "1.   **梳理业务 SOP**：现有的流程是什么？有哪些规则？有哪些例外？",
+      "source_line": 197,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q012",
+      "original_text": "2.   **识别确定性节点和智能节点**：哪些步骤可以规则化？哪些必须交给 LLM？",
+      "source_line": 198,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q013",
+      "original_text": "3.   **定义每个节点的输入输出**：上一个节点输出什么？下一个节点需要什么？",
+      "source_line": 199,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q014",
+      "original_text": "4.   **设计分支和异常处理**：遇到异常走哪条路？是否需要人工介入？",
+      "source_line": 200,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q015",
+      "original_text": "5.   **明确兜底策略**：模型节点失败时怎么办？",
+      "source_line": 201,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q016",
+      "original_text": "## 三、ReAct 到底是什么？用一个侦探破案理解",
+      "source_line": 207,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "ReAct行动观察基础已有，Thought不当事实或审计证明",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q017",
+      "original_text": "思考（Thought）：我需要做什么？",
+      "source_line": 244,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "ReAct行动观察基础已有，Thought不当事实或审计证明",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q018",
+      "original_text": "思考（Thought）：基于新信息，下一步做什么？",
+      "source_line": 253,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "ReAct行动观察基础已有，Thought不当事实或审计证明",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q019",
+      "original_text": "### （四）ReAct 为什么强大？",
+      "source_line": 262,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "ReAct行动观察基础已有，Thought不当事实或审计证明",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q020",
+      "original_text": "**任务**：\"用户问'我上周买的耳机怎么还没到货？'\"",
+      "source_line": 331,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "不纳入",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "业务对白/背景问句仅说明情境，不作为本课独立可评分原题；能力在该节蓝图与母题保留",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q021",
+      "original_text": "| **1. 哪些步骤是固定的？** | 必须由系统按固定顺序执行，不能由模型决定 |",
+      "source_line": 386,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q022",
+      "original_text": "| **2. 哪些步骤需要智能？** | 需要理解、推理、生成、判断的环节 |",
+      "source_line": 387,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q023",
+      "original_text": "| **3. 智能节点的边界在哪？** | LLM 可以调用哪些工具？可以循环多少次？超时多少？ |",
+      "source_line": 388,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q024",
+      "original_text": "| **4. 失败时怎么办？** | 模型节点失败、循环超次、工具不可用时如何兜底 |",
+      "source_line": 389,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q025",
+      "original_text": "| **5. 如何评估效果？** | 流程完成率、节点准确率、成本、延迟、用户满意度 |",
+      "source_line": 390,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q026",
+      "original_text": "*   必须给 ReAct 节点设置\"预算\"：最多调用几次工具？最多循环几步？超时多少？",
+      "source_line": 472,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模式一与二区别在自主性放置及子流程交付边界",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q027",
+      "original_text": "*   状态管理是关键。节点之间传递什么状态？状态如何更新？",
+      "source_line": 528,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "模式四是共享状态/条件转换，可以组合且不保证LLM自主；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q028",
+      "original_text": "*   这个流程现在跑到哪一步了？",
+      "source_line": 640,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "通用轨迹已发布，本课设计节点/分支分母与必要状态表，不记录Thought冒充事实",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q029",
+      "original_text": "*   上一步输出了什么？",
+      "source_line": 641,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "通用轨迹已发布，本课设计节点/分支分母与必要状态表，不记录Thought冒充事实",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q030",
+      "original_text": "*   为什么走了这条分支？",
+      "source_line": 642,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "通用轨迹已发布，本课设计节点/分支分母与必要状态表，不记录Thought冒充事实",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q031",
+      "original_text": "*   哪个节点耗时最长？",
+      "source_line": 643,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "通用轨迹已发布，本课设计节点/分支分母与必要状态表，不记录Thought冒充事实",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q032",
+      "original_text": "*   哪个节点失败最多？",
+      "source_line": 644,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "通用轨迹已发布，本课设计节点/分支分母与必要状态表，不记录Thought冒充事实",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q033",
+      "original_text": "这个节点要做什么？",
+      "source_line": 706,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.interview.m24.failure-policy.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "工具输入/输出、错误恢复/审计与幂等按真实业务合同，不通用模板保证；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q034",
+      "original_text": "### （一）为什么需要 LangGraph？",
+      "source_line": 725,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文明确问题",
+      "origin": "正文明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.state-reducer.001",
+        "ch03.interview.m24.platform-proof.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "状态更新/恢复第一方核对，平台能力排名须版本证据，未跑真实框架；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q035",
+      "original_text": "### 问题 1：企业级 AI Agent 落地，你选 Workflow 还是 ReAct？",
+      "source_line": 1009,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "从任务SOP、动态调查与错误代价选择组合，非二选一",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q036",
+      "original_text": "### 问题 2：Workflow 和 ReAct 的核心区别是什么？",
+      "source_line": 1021,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "从任务SOP、动态调查与错误代价选择组合，非二选一",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q037",
+      "original_text": "### 问题 3：如何判断一个任务该用 Workflow 还是 ReAct？",
+      "source_line": 1035,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "从任务SOP、动态调查与错误代价选择组合，非二选一",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q038",
+      "original_text": "1.   **是否有明确 SOP？** 有 → Workflow。",
+      "source_line": 1041,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "从任务SOP、动态调查与错误代价选择组合，非二选一",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q039",
+      "original_text": "2.   **输入输出是否可结构化？** 是 → Workflow。",
+      "source_line": 1042,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "从任务SOP、动态调查与错误代价选择组合，非二选一",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q040",
+      "original_text": "3.   **是否需要多步动态推理？** 是 → ReAct。",
+      "source_line": 1043,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "从任务SOP、动态调查与错误代价选择组合，非二选一",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q041",
+      "original_text": "4.   **出错成本是否高？** 高 → 优先 Workflow，ReAct 限制在节点内。",
+      "source_line": 1044,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "从任务SOP、动态调查与错误代价选择组合，非二选一",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q042",
+      "original_text": "### 问题 4：混合架构中，LLM 节点的边界怎么设计？",
+      "source_line": 1048,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模型上下文/Schema/工具/预算/失败受控，外层仍验证业务条件；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q043",
+      "original_text": "1.   **输入边界**：给模型什么上下文？不能给太多无关信息。",
+      "source_line": 1054,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模型上下文/Schema/工具/预算/失败受控，外层仍验证业务条件；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q044",
+      "original_text": "2.   **输出边界**：要求模型输出什么格式？用 JSON/Schema 约束。",
+      "source_line": 1055,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模型上下文/Schema/工具/预算/失败受控，外层仍验证业务条件；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q045",
+      "original_text": "3.   **工具边界**：ReAct 节点能调用哪些工具？不能调用哪些？",
+      "source_line": 1056,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模型上下文/Schema/工具/预算/失败受控，外层仍验证业务条件；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q046",
+      "original_text": "4.   **循环边界**：最多循环几次？超时多少？",
+      "source_line": 1057,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模型上下文/Schema/工具/预算/失败受控，外层仍验证业务条件；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q047",
+      "original_text": "5.   **失败边界**：模型输出不符合预期时如何兜底？",
+      "source_line": 1058,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模型上下文/Schema/工具/预算/失败受控，外层仍验证业务条件；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q048",
+      "original_text": "### 问题 5：如何评估一个 Workflow 设计得好不好？",
+      "source_line": 1062,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.tech.evaluation-contract.001",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "节点技术成功和业务完成分开，正常人工审批非坏设计",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q049",
+      "original_text": "### 问题 6：ReAct 节点一直循环出不来怎么办？",
+      "source_line": 1076,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m21.conditional-routing.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "循环/无进展/预算终止已有，退出仍保留真实状态与缺口；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q050",
+      "original_text": "### 问题 7：Dify/Coze 和 LangGraph 怎么选？",
+      "source_line": 1088,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.platform-proof.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "平台必须能力按目标版本部署和真实恢复试验，不按永久排名",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-Q051",
+      "original_text": "### 问题 8：企业落地 Agent，最大的风险是什么？",
+      "source_line": 1106,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "面试明确问题",
+      "origin": "面试明确问题",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.failure-policy.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "风险在具体授权/副作用/恢复和错误损失，不把不可控当唯一抽象答案",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0001",
+      "original_text": "# 3.24 WorkFlow",
+      "source_line": 1,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "企业控制需求作设计条件而非主流统计；按步骤区分SOP与动态决策",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0017",
+      "original_text": "### （一）一个真实的落地困境",
+      "source_line": 17,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "企业控制需求作设计条件而非主流统计；按步骤区分SOP与动态决策",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0043",
+      "original_text": "### （二）企业级 AI 的四个核心诉求",
+      "source_line": 43,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "企业控制需求作设计条件而非主流统计；按步骤区分SOP与动态决策",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0055",
+      "original_text": "### （三）混合方案的核心思想：可控的自主",
+      "source_line": 55,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "企业控制需求作设计条件而非主流统计；按步骤区分SOP与动态决策",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0068",
+      "original_text": "### （四）不同成熟度的企业，选择不同",
+      "source_line": 68,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "企业控制需求作设计条件而非主流统计；按步骤区分SOP与动态决策",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0086",
+      "original_text": "### （一）Workflow 的本质",
+      "source_line": 86,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0097",
+      "original_text": "### （二）用做菜类比 Workflow",
+      "source_line": 97,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0133",
+      "original_text": "### （三）AI 产品中的 Workflow",
+      "source_line": 133,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0166",
+      "original_text": "### （四）Workflow 不是简单的\"if-else 脚本\"",
+      "source_line": 166,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0183",
+      "original_text": "### （五）Workflow 的适用场景",
+      "source_line": 183,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "节点/边与预设控制不保证输出确定，完整流程图仍是实践；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0209",
+      "original_text": "### （一）ReAct 的本质",
+      "source_line": 209,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "ReAct行动观察基础已有，Thought不当事实或审计证明",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0219",
+      "original_text": "### （二）用侦探破案类比 ReAct",
+      "source_line": 219,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "ReAct行动观察基础已有，Thought不当事实或审计证明",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0236",
+      "original_text": "### （三）ReAct 的核心循环",
+      "source_line": 236,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "ReAct行动观察基础已有，Thought不当事实或审计证明",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0271",
+      "original_text": "### （五）ReAct 的局限性",
+      "source_line": 271,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "ReAct行动观察基础已有，Thought不当事实或审计证明",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0282",
+      "original_text": "### （六）ReAct 的适用场景",
+      "source_line": 282,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001",
+        "ch03.agent.loop-stop-budget.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "ReAct行动观察基础已有，Thought不当事实或审计证明",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0292",
+      "original_text": "### （七）ReAct 不是唯一选择",
+      "source_line": 292,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.llm-shapes.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "抽取/生成/路由不必ReAct，四形态非互斥分类",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0312",
+      "original_text": "## 四、Workflow vs ReAct：深度对比",
+      "source_line": 312,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0314",
+      "original_text": "### （一）两者不是竞争关系，而是互补关系",
+      "source_line": 314,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0329",
+      "original_text": "### （二）用一个例子说明两者差异",
+      "source_line": 329,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0359",
+      "original_text": "### （三）企业选择的连续光谱",
+      "source_line": 359,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0380",
+      "original_text": "### （四）混合方案的核心设计问题",
+      "source_line": 380,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按控制结构与节点自治划分，案例加急等操作不得虚构已完成",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0394",
+      "original_text": "## 五、混合架构的四种典型模式",
+      "source_line": 394,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模式一与二区别在自主性放置及子流程交付边界",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0398",
+      "original_text": "### （一）模式一：Workflow 为主，LLM 节点为辅",
+      "source_line": 398,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模式一与二区别在自主性放置及子流程交付边界",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0438",
+      "original_text": "### （二）模式二：Workflow 内嵌 ReAct 子流程",
+      "source_line": 438,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模式一与二区别在自主性放置及子流程交付边界",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0475",
+      "original_text": "### （三）模式三：LLM 作为路由器的 Workflow",
+      "source_line": 475,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.intent-routing.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "模式三路由必须限定合法分支，含不确定默认及权限；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0508",
+      "original_text": "### （四）模式四：State Graph + 节点级自主",
+      "source_line": 508,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "模式四是共享状态/条件转换，可以组合且不保证LLM自主；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0531",
+      "original_text": "### （五）四种模式选择速查表",
+      "source_line": 531,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001",
+        "ch03.interview.m24.concept-layers.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "模式四是共享状态/条件转换，可以组合且不保证LLM自主；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0542",
+      "original_text": "## 六、企业级 Workflow 设计的关键要素",
+      "source_line": 542,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "输入前提与输出语义可测试，完整Schema为设计产物；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0544",
+      "original_text": "### （一）节点设计：每个节点只干一件事",
+      "source_line": 544,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "输入前提与输出语义可测试，完整Schema为设计产物；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0564",
+      "original_text": "### （二）分支设计：条件判断要清晰",
+      "source_line": 564,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.intent-routing.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "规则/模型/异常分支有合法目标及默认，分数门槛需依据；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0580",
+      "original_text": "### （三）状态管理：节点之间如何传递上下文",
+      "source_line": 580,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.conditional-routing.001",
+        "ch03.interview.m21.state-reducer.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "持久事实/未决状态与覆盖/合并更新，不等于聊天历史；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0599",
+      "original_text": "### （四）异常处理：流程不能一崩就停",
+      "source_line": 599,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.failure-policy.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "异常按语义分层，未知写先核对，不无条件三次重试自动通过",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0617",
+      "original_text": "### （五）人工介入设计：人机协作的边界",
+      "source_line": 617,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "人工交接绑定审批对象版本和恢复入口，真实等待/恢复需验证",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0636",
+      "original_text": "### （六）可观测性：每个节点都要能被看见",
+      "source_line": 636,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "通用轨迹已发布，本课设计节点/分支分母与必要状态表，不记录Thought冒充事实",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0660",
+      "original_text": "## 七、常见 Workflow 节点类型与选型",
+      "source_line": 660,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m24.llm-shapes.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "任务形态与提示策略分层，简单问题优先最小调用或规则；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0662",
+      "original_text": "### （一）按功能分类的节点",
+      "source_line": 662,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m24.llm-shapes.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "任务形态与提示策略分层，简单问题优先最小调用或规则；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0676",
+      "original_text": "### （二）LLM 节点的四种形态",
+      "source_line": 676,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m24.llm-shapes.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "任务形态与提示策略分层，简单问题优先最小调用或规则；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0693",
+      "original_text": "### （三）工具节点的设计原则",
+      "source_line": 693,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.interview.m24.failure-policy.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "工具输入/输出、错误恢复/审计与幂等按真实业务合同，不通用模板保证；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0703",
+      "original_text": "### （四）节点选择决策树",
+      "source_line": 703,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001",
+        "ch03.interview.m24.failure-policy.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "工具输入/输出、错误恢复/审计与幂等按真实业务合同，不通用模板保证；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0723",
+      "original_text": "## 八、LangGraph：Workflow 和 ReAct 的融合",
+      "source_line": 723,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.state-reducer.001",
+        "ch03.interview.m24.platform-proof.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "状态更新/恢复第一方核对，平台能力排名须版本证据，未跑真实框架；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0735",
+      "original_text": "### （二）LangGraph 的三个核心概念",
+      "source_line": 735,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.state-reducer.001",
+        "ch03.interview.m24.platform-proof.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "状态更新/恢复第一方核对，平台能力排名须版本证据，未跑真实框架；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0743",
+      "original_text": "### （三）LangGraph 中的 ReAct 怎么实现",
+      "source_line": 743,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.state-reducer.001",
+        "ch03.interview.m24.platform-proof.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "状态更新/恢复第一方核对，平台能力排名须版本证据，未跑真实框架；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0777",
+      "original_text": "### （四）LangGraph vs 传统 Workflow 平台",
+      "source_line": 777,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.state-reducer.001",
+        "ch03.interview.m24.platform-proof.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "状态更新/恢复第一方核对，平台能力排名须版本证据，未跑真实框架；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0791",
+      "original_text": "## 九、典型企业落地场景案例分析",
+      "source_line": 791,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.interview.m24.human-resume.001",
+        "ch03.interview.m24.failure-policy.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "客服完整图和结果回执由综合任务，风控查询不必ReAct",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0793",
+      "original_text": "### （一）案例一：智能客服退款流程",
+      "source_line": 793,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.interview.m24.human-resume.001",
+        "ch03.interview.m24.failure-policy.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "客服完整图和结果回执由综合任务，风控查询不必ReAct",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0841",
+      "original_text": "### （二）案例二：智能销售助手",
+      "source_line": 841,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.interview.m21.conditional-routing.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "销售提取/研究/生成分层，缺信息等待；邮件草稿不等于已发送；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0885",
+      "original_text": "### （三）案例三：企业知识库问答",
+      "source_line": 885,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m13.intent-routing.001",
+        "ch03.interview.m11.rag-lifecycle.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "RAG基础复用，本课补路由控制和有限分支，完整图须产物；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0920",
+      "original_text": "### （四）案例四：金融信贷审批",
+      "source_line": 920,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "金融/医疗只是架构设计，数据授权、临床/法定要求与真实执行另验",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B0967",
+      "original_text": "### （五）案例五：医疗导诊助手",
+      "source_line": 967,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.interview.m24.human-resume.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "金融/医疗只是架构设计，数据授权、临床/法定要求与真实执行另验",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B1007",
+      "original_text": "## 十、常见面试问题与回答框架",
+      "source_line": 1007,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001",
+        "ch03.agent.task-fit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "从任务SOP、动态调查与错误代价选择组合，非二选一",
+      "mother_question_id": "M1",
+      "priority": "P0",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B1120",
+      "original_text": "## 十一、AI PM WorkFlow 自评清单",
+      "source_line": 1120,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联分层目标，不拿勾选评分宣称已掌握架构；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-B1122",
+      "original_text": "### 基础概念（必须掌握）",
+      "source_line": 1122,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "正文知识目标",
+      "origin": "正文知识目标",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联分层目标，不拿勾选评分宣称已掌握架构；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1174",
+      "original_text": "1.   **企业级 AI Agent 的主流范式是\"可控的自主\"**：用 Workflow 定义流程边界，在需要理解、推理、决策的节点引入 LLM/ReAct。",
+      "source_line": 1174,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1176",
+      "original_text": "2.   **Workflow 的本质**：把复杂任务拆成有顺序、有依赖、可复现的节点，保证确定性、可控性、可审计性。",
+      "source_line": 1176,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1178",
+      "original_text": "3.   **ReAct 的本质**：\"思考 → 行动 → 观察\"的循环，适合开放性、需要多步推理和工具调用的任务。",
+      "source_line": 1178,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1180",
+      "original_text": "4.   **Workflow 和 ReAct 不是竞争关系，而是互补关系**：Workflow 保下限，ReAct 提上限。",
+      "source_line": 1180,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1182",
+      "original_text": "5.   **四种混合架构模式**：",
+      "source_line": 1182,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1189",
+      "original_text": "6.   **企业级 Workflow 设计六要素**：节点设计、分支设计、状态管理、异常处理、人工介入、可观测性。",
+      "source_line": 1189,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1191",
+      "original_text": "7.   **LLM 节点有四种形态**：单次调用、Few-shot、Chain-of-Thought、ReAct，应按需选择，不要过度使用 ReAct。",
+      "source_line": 1191,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1193",
+      "original_text": "8.   **LangGraph 是 Workflow 和 ReAct 的融合方向**：用状态图组织流程，节点内部可以自主推理。",
+      "source_line": 1193,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1195",
+      "original_text": "9.   **典型场景**：智能客服、销售助手、知识库问答、金融风控、医疗导诊都适合混合 Workflow 方案。",
+      "source_line": 1195,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.24",
+      "objective_id": "m24-S1197",
+      "original_text": "10.   **面试核心竞争力**：能把\"用 Workflow 还是 ReAct\"的问题，转化为\"任务确定性感知和可控性需求\"的问题。",
+      "source_line": 1197,
+      "source_path": "第3章-技术攻克/3.24-WorkFlow.md",
+      "source_hash": "52f97ae2367616b0a959eb0847725c1ca308c986771f32c55187c513abb473d4",
+      "source_type": "章末总结",
+      "origin": "章末总结",
+      "decision": "复用/综合/实践",
+      "card_keys": [
+        "ch03.interview.m21.graph-execution.001",
+        "ch03.interview.m24.concept-layers.001",
+        "ch03.interview.m24.hybrid-placement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "总结串联已有分项目标，不作新增独立卡；细项映射见原生目标与正文蓝图；主编去重：图执行/有限路由/结果语义/状态合并已由3.21/3.13独立目标覆盖，复用原卡与M1，不换情境新建。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

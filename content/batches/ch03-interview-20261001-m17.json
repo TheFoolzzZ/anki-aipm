@@ -1,0 +1,331 @@
+{
+  "batch_id": "ch03-interview-20261001-m17",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "C06",
+      "lesson_source_key": "第3章-技术攻克/3.17-Function-Call.md",
+      "concept_keys": [
+        "tool-execution-boundary"
+      ],
+      "revision": 2,
+      "position": 6,
+      "title": "工具调用由谁执行",
+      "kind": "概念",
+      "prompt": "模型输出了工具名称和参数，是否代表业务操作已经完成？怎样判断真实完成？",
+      "answer_short": "没有。模型只是提出调用，执行端校验并调用真实业务工具，将成功或失败结果回传；完成依据是业务系统的真实状态或凭证，不能由模型宣称代替。返回调用建议、API执行与用户看到总结是不同阶段。",
+      "required_points": [
+        "生成调用与执行动作分离，由执行端校验并调用",
+        "以真实业务结果或状态判断完成，模型说完成不构成证据"
+      ],
+      "explanation": "【机制】Function Call把语言理解结果变成工具名和参数，让执行端按契约处理；只有工具真的运行才可能产生业务效果。客户端工具由应用执行，提供商托管工具也有独立执行端，不能概括成所有工具都在本地后端执行。\n【编辑情境】采购员说“提交退货单”，模型返回create_return参数但服务端拒绝，若助手仍说“已提交”就是虚假完成；应传回失败原因并保留可重试或人工处理入口。\n【面试追问】“API返回200一定完成了吗？”参考：可能仅接收异步任务，应读业务状态或单号及完成状态；响应不明时先查状态，恢复详见3.12已有卡。\n【第一方核对】https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview（2026-10-01）；客户端/托管执行差异已核对。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。\n【补充】工具调用形式也可仅承载提取数据，若应用只展示预填结果而未绑定并执行业务接口，就没有提交动作；两种结构化策略由3.15承接。",
+      "pitfalls": "不要以模型自然语言、参数已生成或传输成功替代业务完成；不改旧学习身份。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.17-Function-Call.md",
+          "content_hash": "737788e87984ba58f5eeceae6b5f1651ab2056418933933d5233ea44b6c099bd",
+          "line_start": 29,
+          "line_end": 47
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m17.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "C07",
+      "lesson_source_key": "第3章-技术攻克/3.17-Function-Call.md",
+      "concept_keys": [
+        "tool-authorization"
+      ],
+      "revision": 2,
+      "position": 7,
+      "title": "工具调用权限",
+      "kind": "场景判断",
+      "prompt": "只在Prompt里要求“用户只能查看自己的文件”，能否构成数据权限控制？执行端必须核对什么？",
+      "answer_short": "不能。执行工具的服务端必须用已验证身份核对函数和对象/数据范围；用户或模型传来的user_id不能替代身份。按角色筛可见工具可减少错误选择，但任何调用都应在执行端校验，不允许用Prompt或工具隐藏替代授权。",
+      "required_points": [
+        "服务端根据已验证身份检查执行权限",
+        "身份与对象/数据范围匹配，模型参数和可见列表不替代授权"
+      ],
+      "explanation": "【机制】模型生成是概率行为，工具列表限制可提示它有哪些选择，却不证明调用参数对应正确用户。越权也可能发生在合法工具内，如允许查订单但order_id属于另一租户；因此需在真实读取/写入之前检查范围。\n【编辑情境】销售员通过get_order查看其他公司的订单，名称合法也不应返回；user_id由认证上下文提供，不接受模型切换为管理员。敏感返回按最小必要字段提供并留适量审计记录。\n【面试追问】“工具不可见为何仍校验？”参考：旧请求、直接API调用、对象ID误选都可能绕过模型可见性；执行层是统一授权入口。\n【编辑修正】原文“看不到自然不会越权”只适合作减少误选的启发，不能作为安全保证。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "这是原C07同目标修订；高危确认和写操作幂等复用已有3.12卡，不重复加题。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.17-Function-Call.md",
+          "content_hash": "737788e87984ba58f5eeceae6b5f1651ab2056418933933d5233ea44b6c099bd",
+          "line_start": 551,
+          "line_end": 603
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m17.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m17.schema-contract.001",
+      "lesson_source_key": "第3章-技术攻克/3.17-Function-Call.md",
+      "concept_keys": [
+        "m17.schema-contract"
+      ],
+      "revision": 1,
+      "position": 2701,
+      "title": "工具描述如何减少误调用",
+      "kind": "场景判断",
+      "prompt": "售后助手只有query(type,keyword)，常把“查退货进度”误做“提交退货”。你会怎样改函数职责和Schema，让调用意图可校验？",
+      "answer_short": "按明确业务动作划分查询与提交；描述写清适用条件、能/不能做什么及返回内容。参数明确类型、必填、格式、单位和范围，执行端验证业务约束；不要通过模糊万能函数或让模型猜字段来隐藏契约。",
+      "required_points": [
+        "函数职责和description区分查询/提交及返回内容",
+        "参数写清必填/类型/单位/范围，执行端校验业务约束"
+      ],
+      "explanation": "【机制】模型从工具名、描述和参数Schema判断候选动作；query和submit分开减少同一类型字段携带不同副作用的歧义。Schema约束的是可接受输入，仍需业务校验：数量是整数不等于未超过可退量。拆分按明确职责，不机械要求每个字段一个工具。\n【编辑情境】search_return返回单号/状态，create_return需要订单行、数量和原因，描述明确会新建单据；金额单位为元还是分需写清，避免合法数字被错误放大。\n【面试追问】“描述越长越好吗？”参考：消除决策歧义比堆背景重要；保留动作差异和参数约束，用近似意图坏例测试。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "严格结构仅保障可表达的字段约束，不证明用户真有该意图，也不证明业务状态允许操作。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.17-Function-Call.md",
+          "content_hash": "737788e87984ba58f5eeceae6b5f1651ab2056418933933d5233ea44b6c099bd",
+          "line_start": 488,
+          "line_end": 547
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m17.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m17.missing-arguments.001",
+      "lesson_source_key": "第3章-技术攻克/3.17-Function-Call.md",
+      "concept_keys": [
+        "m17.missing-arguments"
+      ],
+      "revision": 1,
+      "position": 2702,
+      "title": "缺少参数时何时澄清",
+      "kind": "场景判断",
+      "prompt": "用户说“帮我订上海酒店”，工具必填入住日、离店日和酒店ID。模型生成了全部字段且格式正确。什么时候可使用默认值，什么时候应追问？",
+      "answer_short": "格式完整不证明参数来自用户。没有明确授权或业务约定的日期、酒店等会改变结果的关键参数应澄清；默认值仅用于已定义且可向用户说明的低风险偏好。服务端提供可信身份等运行参数，并记录用户确认的关键值，不让模型猜出可执行订单。",
+      "required_points": [
+        "区分用户已提供/约定默认与模型猜值，关键缺参先澄清",
+        "低风险默认须有明确规则、可向用户说明，关键日期和酒店选择不能凭猜测决定"
+      ],
+      "explanation": "【机制】required让工具请求必须有字段，但不能强制模型一定先提问；模型可能填一个看似合理的值。结构校验和意图来源校验因此分开，重要参数一旦缺失就不能把“补齐JSON”当需求补齐。\n【编辑情境】“预算500”还需确认是每晚还是总额、含税还是不含税；可以用已公布的币种默认，不能默认用户住两晚或选第一家酒店后直接下单。查询可先展示宽条件结果，预订须获得足以形成明确意图的信息。\n【面试追问】“提高必填数量一定更好吗？”参考：必要参数不缺，偏好可选；过多无用字段增加输入负担，关键在可执行性及风险而非字段数。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "默认值应来源于产品规则或已确认偏好；Schema合规不证明意图已澄清。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.17-Function-Call.md",
+          "content_hash": "737788e87984ba58f5eeceae6b5f1651ab2056418933933d5233ea44b6c099bd",
+          "line_start": 512,
+          "line_end": 533
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m17.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m17.rag-tool-composition.001",
+      "lesson_source_key": "第3章-技术攻克/3.17-Function-Call.md",
+      "concept_keys": [
+        "m17.rag-tool-composition"
+      ],
+      "revision": 1,
+      "position": 2704,
+      "title": "检索增强与工具调用属于哪一层",
+      "kind": "对比",
+      "prompt": "工程师说“RAG只能读文档，Function Call只调实时API，所以两者互斥”。为什么这个分类不成立？用政策检索工具说明两者怎样同时出现在一个流程里。",
+      "answer_short": "RAG是检索外部证据以增强生成的流程，Function Call是模型提出结构化外部能力请求的机制。检索器可作为工具被模型调用，检索结果再作为证据进入生成，因而同时使用二者；数据是否实时、结果是否结构化及是否产生写操作取决于来源与具体工具，不由两个名称决定。",
+      "required_points": [
+        "区分RAG检索增强流程与Function Call调用机制两个层级",
+        "检索可作为工具，实时/数据形态/副作用由具体来源和工具决定而非互斥标签"
+      ],
+      "explanation": "【机制】Function Call规定提出工具名与参数、执行和结果反馈，不限定工具只能查询数据库，也不限定结果为结构化实时数据；RAG描述先检索相关证据再生成，也不必只用向量库或静态文档。把检索服务注册为search_policy工具，模型调用后获取条款并据条款回答，就是两者同时成立。\n【编辑情境】供应商助手调用政策搜索工具，拿到带生效日期的退货条款，随后在回答中保留引用。该工具本轮只读且条款可及时更新；另一个提交工具才可能改变业务状态。不可因“用了Function Call”就称已经操作，也不能因“用了RAG”就称必然过期。\n【面试追问】“无需Function Call也能做RAG吗？”参考：可以由应用固定调用检索器再组装模型输入；是否让模型动态选择检索是控制流选择。\n【边界】政策/实时事实/动作三用途分工已有ch03.llm.application-routing.001，本卡只考模式与调用机制的关系。\n【自评】两必答点覆盖即可；完整订单方案由母题承接。",
+      "pitfalls": "原文向量文档/实时接口、只读/写操作对比是典型示例，不是两技术互斥的定义。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.17-Function-Call.md",
+          "content_hash": "737788e87984ba58f5eeceae6b5f1651ab2056418933933d5233ea44b6c099bd",
+          "line_start": 291,
+          "line_end": 327
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m17.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m17.call-result-correlation.001",
+      "lesson_source_key": "第3章-技术攻克/3.17-Function-Call.md",
+      "concept_keys": [
+        "m17.call-result-correlation"
+      ],
+      "revision": 1,
+      "position": 2705,
+      "title": "多工具返回如何正确续接",
+      "kind": "机制",
+      "prompt": "订单助手同一轮提出库存查询和价格查询，两结果异步返回；随后须依据库存仓库ID查询运费。执行端如何避免结果错配和提前查运费？",
+      "answer_short": "为每个调用保留唯一调用标识、工具名和参数，返回结果与对应标识关联后送回模型/编排状态，不能按返回先后顺序拼接。独立只读查询可并行；依赖库存仓库ID的运费调用须等待相应结果并校验，失败或缺失时明确状态，再继续或停止。",
+      "required_points": [
+        "调用与结果按标识关联，不按返回顺序或自然语言猜来源",
+        "独立调用可并行，依赖调用等待所需结果并处理失败/缺失"
+      ],
+      "explanation": "【机制】模型可一次产生多个调用；执行完成顺序和生成顺序不一定一致。工具结果消息中的调用ID让下一轮知道哪个请求获得了什么证据；ID是消息关联依据，不自动是防重复提交的业务幂等键。\n【编辑情境】库存返回仓库A，价格返回币种/单价，若顺序错配可能让运费拿到商品ID；先保存原调用并返回匹配结果，库存失败就不能猜仓库继续计算。是否还需调用由流程与实际结果判断，不默认一轮工具后任务完成。\n【面试追问】“两个写操作也可并行吗？”参考：需检查业务依赖、冲突与一致性，不能只因接口支持并行就同时执行。\n【第一方核对】https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview（2026-10-01）；tool_use_id示例支持对应关系，不要求记SDK字段。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "调用ID不等于业务幂等键；模型提出多个动作不代表无依赖。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.17-Function-Call.md",
+          "content_hash": "737788e87984ba58f5eeceae6b5f1651ab2056418933933d5233ea44b6c099bd",
+          "line_start": 89,
+          "line_end": 141
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m17.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m17.api-fit.001",
+      "lesson_source_key": "第3章-技术攻克/3.17-Function-Call.md",
+      "concept_keys": [
+        "m17.api-fit"
+      ],
+      "revision": 1,
+      "position": 2706,
+      "title": "工具调用适用性取决于接口能力",
+      "kind": "场景判断",
+      "prompt": "业务里只有10%的请求需要查实时库存，但这批请求价值很高；库存API又只按仓库返回汇总，没有SKU明细。能否按原文20%比例门槛或自检过半就决定上线？",
+      "answer_short": "不能。比例和“是”的数量只是原文启发，应按高价值任务、错误代价、接口可提供能力与集成成本判断。库存接口缺SKU明细时，工具调用不会创造该能力；先确认补接口或缩小任务边界，用真实代表任务POC与现有路径比较后决定。",
+      "required_points": [
+        "拒绝通用20%/过半门槛，按任务价值、风险、成本和替代方案判断",
+        "工具能力受真实API约束，先盘点能力缺口并验证可行边界"
+      ],
+      "explanation": "【机制】调用机制只能调度已实现的能力。某类请求占比小也可能贡献主要收益，反之多数请求需要操作但没有可靠接口，接模型仍不能形成可信闭环。接口盘点需看字段、状态、限制及失败语义，不能只登记一个“可用”勾。\n【编辑情境】缺SKU字段就不能准确计算具体商品可退量；可先做仓库总量查询助手或开发SKU接口，不能用模型把总量分摊后当真实事实。POC需包含低频高代价任务，而非只测最常见问法。\n【面试追问】“多个系统切换都值得上Agent吗？”参考：若顺序确定，普通集成或固定流程可能足够；只有动态选择有价值且可验证时再开放。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "“支持Function Call”不等于支持业务能力；比例和品牌推荐不是上线准则。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.17-Function-Call.md",
+          "content_hash": "737788e87984ba58f5eeceae6b5f1651ab2056418933933d5233ea44b6c099bd",
+          "line_start": 609,
+          "line_end": 615
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m17.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m17.poc-failure-layers.001",
+      "lesson_source_key": "第3章-技术攻克/3.17-Function-Call.md",
+      "concept_keys": [
+        "m17.poc-failure-layers"
+      ],
+      "revision": 1,
+      "position": 2707,
+      "title": "工具调用测试怎样分层归因",
+      "kind": "故障诊断",
+      "prompt": "模型POC中“调用成功率”很高，用户仍收到错误订单信息。怎样区分选错工具、参数错误、执行故障与最终回答错误，避免被单一成功率误导？",
+      "answer_short": "按每次任务保存预期动作及实际调用链，分别核对工具选择/缺参处理、参数语义与授权、执行状态/返回数据、最终回答是否忠实且任务完成。分层报告各项失败的分母，并用模糊/否定/多意图、无数据与故障样例复测；接口200不能作为端到端成功。",
+      "required_points": [
+        "按选择/参数、执行结果、结果使用与业务完成拆分失败责任",
+        "测试覆盖非happy path并固定分母，接口成功与任务成功分开"
+      ],
+      "explanation": "【机制】工具可以成功执行一个错选请求；合法参数也可能是猜出的日期；正确返回还可能被模型误读。因此只统计API无异常会掩盖其他失败。POC先固定同一组任务、可接受澄清和预期结果，让不同候选模型走同一契约再比较。\n【编辑情境】用户说“不查已关闭单据”，模型传closed=true，API成功却结果错误；应记参数语义失败，而不是后端失败。工具超时需要标清未获结果，不让模型补编订单。测试覆盖数根据场景风险，不把原文20+当充分证明。\n【面试追问】“把重试后成功计成功可以吗？”参考：可记最终任务成功，同时保留首轮错误、重试次数、成本和是否造成副作用，不能隐藏执行过程。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "评测器自身也会误判，关键错误抽样核对；不把“支持接口”替代业务POC。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.17-Function-Call.md",
+          "content_hash": "737788e87984ba58f5eeceae6b5f1651ab2056418933933d5233ea44b6c099bd",
+          "line_start": 625,
+          "line_end": 648
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m17.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m17.call-budget.001",
+      "lesson_source_key": "第3章-技术攻克/3.17-Function-Call.md",
+      "concept_keys": [
+        "m17.call-budget"
+      ],
+      "revision": 1,
+      "position": 2708,
+      "title": "工具任务成本与关键路径",
+      "kind": "机制",
+      "prompt": "差旅助手需一次模型选工具、并行查航班和酒店、再由模型总结。与一次纯文本回复相比，成本和延迟应如何分解？为什么只缩短Schema不一定是有效优化？",
+      "answer_short": "成本包含各轮输入输出Token（含Schema和结果）、外部API及失败重试；延迟包含模型往返、工具关键路径、排队和后处理。按真实完整任务测平均和尾部，先定位占比；精简Schema或缓存只在保留动作区分、身份/时效和质量的条件下验证收益，不能牺牲关键约束。",
+      "required_points": [
+        "按完整任务汇总各轮Token、API和重试，不只算最终回复",
+        "模型往返加工具关键路径，按占比验证优化且保留语义/时效约束"
+      ],
+      "explanation": "【机制】工具使用可能需多轮模型和执行交替，工具定义及返回会占输入Token。并行航班/酒店查询需等所需结果，耗时受最慢支路支配；减少可区分动作的描述可能增加选错工具和重试，净成本反而上升。\n【编辑情境】航班缓存过期会误报余票，写操作结果更不能作为任意可复用查询缓存；按同任务和同质量比较每成功任务成本，保留错误/重试样本。不背原文2/5/10秒目标或当年价格。\n【面试追问】“流式先说话会降低总延迟吗？”参考：可能降低可感等待，但工具完成时间仍需实测，不能把加载文案当业务成功。\n【第一方核对】https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview（2026-10-01）Token组成；优化规则为编辑推导。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "缓存查实时数据要定义有效期和身份范围；不能用训练知识降级成已查到实时结果。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.17-Function-Call.md",
+          "content_hash": "737788e87984ba58f5eeceae6b5f1651ab2056418933933d5233ea44b6c099bd",
+          "line_start": 651,
+          "line_end": 678
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m17.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

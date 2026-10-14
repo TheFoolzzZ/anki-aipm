@@ -1,0 +1,20 @@
+[
+  {
+    "from": "C07",
+    "to": "ch05.interview.m07.five-layer-trace.001",
+    "type": "prerequisite",
+    "reason": "业务控制与模型生成责任需要先理解本课层次视图"
+  },
+  {
+    "from": "ch05.interview.m07.async-product-contract.001",
+    "to": "ch05.interview.m07.five-layer-trace.001",
+    "type": "extension",
+    "reason": "长任务将五层协作延伸为持久化状态与异步交付"
+  },
+  {
+    "from": "ch05.interview.m07.review-capacity.001",
+    "to": "ch05.interview.m07.async-product-contract.001",
+    "type": "extension",
+    "reason": "人工审核队列也需等待状态与交付期限，不能只画接管箭头"
+  }
+]

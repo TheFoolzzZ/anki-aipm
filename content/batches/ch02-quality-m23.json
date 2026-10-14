@@ -1,0 +1,295 @@
+{
+  "batch_id": "ch02-quality-m23",
+  "status": "accepted",
+  "chapter_position": 2,
+  "cards": [
+    {
+      "canonical_key": "ch02.roles.classification.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+      "concept_keys": [
+        "roles.classification"
+      ],
+      "revision": 2,
+      "position": 14,
+      "title": "AI PM 岗位分类坐标",
+      "kind": "场景判断",
+      "prompt": "拿到一个 AI PM 招聘 JD，如何用“服务对象、技术层级、核心产出”三个维度分析它？信息不足时该追问什么？",
+      "answer_short": "职位名称不可靠，用三维定位：服务对象（企业/消费者/开发者）说明价值场景，技术层级（应用/技术/基础）说明知识深度要求，核心产出（PRD/评估报告/平台指标）说明真实责任。信息不足时追问：团队怎么考核这个岗位、日常和哪些角色协作、最近一个上线项目是什么。",
+      "required_points": [
+        "说出三维及各维度回答的问题",
+        "演示一次分析：给一个岗位描述能推出三维定位",
+        "信息不足时给出至少两个追问（考核方式、协作对象、近期项目）"
+      ],
+      "pitfalls": "只按职位名称判断会被误导：同样叫“AI产品经理”，可能是写Prompt的应用岗，也可能是管标注供应商的数据岗。三维之外还要警惕「什么都写」的JD——往往意味着岗位定义还没想清楚。",
+      "explanation": "原文按产业层级与场景拆解了七类 AI PM（13–43行起的岗位地图），每类用「典型一天+核心产出+能力边界」描述。编辑补充：这套结构本身就是分析工具——看 JD 时把职责逐条归入三维，归不进任何一维的条目（如“负责一切”）就是风险信号。三维分析同样适用于内部转岗：先定位目标岗位的三维，再对照自己2.2的三区地图算差距。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+          "content_hash": "b804499b8b17b807f7f42951148bc6cbe7b66035e6a6932bec5deb9283dd64a7",
+          "line_start": 13,
+          "line_end": 43
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：标准§1点名卡，补JD分析方法与追问清单"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.role.enterprise-application.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+      "concept_keys": [
+        "role.enterprise-application"
+      ],
+      "revision": 2,
+      "position": 15,
+      "title": "企业应用 AI PM 的任务",
+      "kind": "场景判断",
+      "prompt": "企业应用 AI PM 的一天围绕什么主线展开？在方案设计和上线验收中要守住什么？",
+      "answer_short": "主线是「和准确性死磕」：看 Badcase、和客户沟通、写 PRD、优化 Prompt。要守住：把业务问题转成可评测任务、数据与权限合规、高代价 Bad Case 分析、人工兜底设计、可量化的效率或质量价值。",
+      "required_points": [
+        "主线：准确性——Badcase 驱动日常迭代",
+        "守住：可评测任务定义、合规、兜底、量化价值",
+        "说出为什么：企业客户为结果付费、怕出错"
+      ],
+      "pitfalls": "企业场景的 Badcase 不是体验问题而是合同风险：一次高代价错误（如法律建议出错）可能直接丢单。所以这里的「准确率达标」通常比消费产品更严，且要留审计证据。",
+      "explanation": "原文（47–128行）给出企业应用 PM 的岗位画像与典型一天。编辑补充：这条主线与2.2的 ToB 逻辑闭环——因为客户为降本增效付费、最怕出错，所以 PM 的日常动作都围绕「证明可靠」展开：Badcase 周报是续约证据，兜底设计是签单条件，量化价值报告是涨价依据。看这类岗位的一天，本质上就是看一个企业如何建立对 AI 的信任。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+          "content_hash": "b804499b8b17b807f7f42951148bc6cbe7b66035e6a6932bec5deb9283dd64a7",
+          "line_start": 47,
+          "line_end": 128
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：主线+信任建立闭环为编辑补充，与2.2 ToB卡互证"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.role.consumer-application.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+      "concept_keys": [
+        "role.consumer-application"
+      ],
+      "revision": 2,
+      "position": 16,
+      "title": "消费应用 AI PM 的任务",
+      "kind": "场景判断",
+      "prompt": "消费应用 AI PM 的日常为什么更强调反馈速度与增长信号？和企业应用 PM 的一天差在哪？",
+      "answer_short": "因为用户切换成本低、需求变化快：必须快速观察使用、留存、分享和主观质量反馈，用小步实验持续调整。与企业 PM 的差异：一个和「用户情绪」打交道（增长数据、有梗的功能、竞品），一个和「准确性」死磕（Badcase、客户、PRD）。",
+      "required_points": [
+        "说出机制：低切换成本→快速反馈→小步实验",
+        "对比两类 PM 的日常主线：情绪/增长 vs 准确性/续约",
+        "说出消费侧仍要守住的底线：内容安全与隐私"
+      ],
+      "pitfalls": "增长信号好不等于产品好：拉新靠噱头、留存靠价值，只看分享量会被「一次性病毒传播」骗到。消费产品同样会有高代价错误（如向未成年人生成不当内容），只是容忍度结构不同。",
+      "explanation": "原文（184–241行）描述消费应用 PM 的一天：看增长数据、写 Prompt、设计有梗功能、分析竞品。编辑补充：「有梗」不是段子手需求，而是传播设计——消费 AI 的增长往往来自用户分享生成的内容，所以 PM 要把「输出值不值得被分享」当作设计目标。实验节奏快的前提是每次实验有明确假设和判读标准，否则快只是乱。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+          "content_hash": "b804499b8b17b807f7f42951148bc6cbe7b66035e6a6932bec5deb9283dd64a7",
+          "line_start": 184,
+          "line_end": 241
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：传播设计解读与增长陷阱为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.role.platform-pm.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+      "concept_keys": [
+        "role.platform-pm"
+      ],
+      "revision": 2,
+      "position": 17,
+      "title": "AI 平台 PM 的核心用户",
+      "kind": "概念",
+      "prompt": "AI 平台 PM 的用户是谁？如何判断平台能力是否真正有用？",
+      "answer_short": "用户是开发者和内部团队。判断标准是他们完成任务的效率与可靠性：接口一致性、可观测性、权限治理、文档质量、调试体验和复用成本——即开发者体验（DX）。",
+      "required_points": [
+        "说出用户是开发者/内部团队，不是终端消费者",
+        "说出 DX 的可观察指标：集成时间、调试体验、文档、一致性",
+        "说出平台价值的检验：能力是否可集成、可调试、可治理"
+      ],
+      "pitfalls": "平台 PM 最易陷入的错觉是把「能力上线」当成交付：API 能用但没人会用、文档过时、出错无法排查，都等于没交付。平台的价值由接入方的工作效率证明。",
+      "explanation": "原文（338–425行）描述平台 PM 的日常：设计 API、写文档、访谈开发者、看竞品。编辑补充：DX 的检验可以用「新开发者接入路径」走一遍——从注册到第一次成功调用花多久、卡在哪些文档缺口、报错信息能不能自助定位。平台 PM 的 Badcase 对应物是「开发者卡壳点」，同样要收集、归因、回流到文档和工具改进。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+          "content_hash": "b804499b8b17b807f7f42951148bc6cbe7b66035e6a6932bec5deb9283dd64a7",
+          "line_start": 338,
+          "line_end": 425
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：DX检验方法为编辑补充；卡壳点类比Badcase"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.role.model-strategy.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+      "concept_keys": [
+        "role.model-strategy"
+      ],
+      "revision": 2,
+      "position": 18,
+      "title": "模型策略 PM 的桥梁责任",
+      "kind": "场景判断",
+      "prompt": "模型策略 PM 如何把模型能力转化为可执行的产品决策？",
+      "answer_short": "建立与真实场景一致的评测，比较各模型的能力、成本、延迟和风险，解释模型边界，并把评测结果翻译成选型、路由、版本与上线建议。",
+      "required_points": [
+        "评测必须贴合真实业务场景，不是跑公开榜单",
+        "比较维度至少含：能力、成本、延迟、风险",
+        "产出是产品决策：选型、路由策略、版本节奏、上线建议"
+      ],
+      "pitfalls": "把公开评测分数当选型依据是最常见错误：榜单分布和你的业务分布不同。另一个陷阱是只看能力不看成本——模型升级带来的费用增长可能超过价值增长。",
+      "explanation": "原文（438–540行）描述模型策略 PM 的工作：看模型数据、分析 Badcase、设计评估体系、做 A/B 测试。编辑补充：「桥梁」的含义是双向翻译的决策版——往上把业务需求翻译成评测集，往下把评测差异翻译成产品取舍。一个典型产出是路由策略：简单请求走便宜模型、复杂请求走强模型，用分层成本换整体体验。这个岗位是1.5「方案选型」能力的高端版本。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+          "content_hash": "b804499b8b17b807f7f42951148bc6cbe7b66035e6a6932bec5deb9283dd64a7",
+          "line_start": 438,
+          "line_end": 540
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：榜单陷阱与路由策略为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.role.data-pm.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+      "concept_keys": [
+        "role.data-pm"
+      ],
+      "revision": 2,
+      "position": 19,
+      "title": "数据 PM 的质量责任",
+      "kind": "故障诊断",
+      "prompt": "AI 项目效果不稳时，数据 PM 应从哪些产品化问题入手，而不是直接要求增加数据量？",
+      "answer_short": "先查质量再谈数量：数据来源是否可靠、定义是否一致、场景覆盖是否全面、标注是否准确一致、权限与血缘是否清楚，并建立质量标准和反馈闭环。多数「数据不够」其实是「数据不对」。",
+      "required_points": [
+        "质量维度：来源、定义、覆盖、准确性、标注一致性、权限、血缘",
+        "诊断顺序：先质量后数量",
+        "机制建设：质量标准+反馈闭环，而非一次性清洗"
+      ],
+      "pitfalls": "「加数据」是最昂贵的想当然：标注有偏的数据越多，模型学错得越扎实。反过来，只清洗不建闭环，下一批数据还会带同样的问题进来。",
+      "explanation": "原文（545–637行）描述数据 PM 的日常：看质量报告、优化标注流程、审查合规、管理供应商。编辑补充：数据质量问题的症状通常在模型侧出现（某类场景效果差），但根因在数据侧——诊断时要沿「模型症状→数据切片→标注规范→采集来源」往回追。这与1.5数据质量四风险一脉相承，数据 PM 就是把那四条风险变成日常流程的人。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+          "content_hash": "b804499b8b17b807f7f42951148bc6cbe7b66035e6a6932bec5deb9283dd64a7",
+          "line_start": 545,
+          "line_end": 637
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：回溯诊断链为编辑补充；与1.5数据风险卡互证"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.role.agent-pm.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+      "concept_keys": [
+        "role.agent-pm"
+      ],
+      "revision": 2,
+      "position": 20,
+      "title": "Agent PM 的工作流责任",
+      "kind": "场景判断",
+      "prompt": "设计一个会自主执行多步任务的 Agent 时，PM 必须定义哪些控制点？Agent 策展 PM 的日常主线是什么？",
+      "answer_short": "控制点：目标与完成条件、任务分解方式、工具与权限边界、关键确认点、失败重试与回退、过程可见性、效果与成本监控。策展 PM 的日常主线是「和任务流博弈」：分析失败任务、设计 Skills、管理权限、优化完成率。",
+      "required_points": [
+        "控制点至少说出五个：目标、权限、确认点、回退、可见性、监控",
+        "说出日常主线：从失败任务分析出发迭代任务流",
+        "说出为什么 Agent 需要「完成条件」：自主系统不自报失败"
+      ],
+      "pitfalls": "把 Agent 完成率当成单一目标：不考核完成质量与副作用（多删了文件、多发了消息）的完成率是虚假繁荣。权限设计宁紧勿松——先小权限跑稳，再逐步放开。",
+      "explanation": "原文（742–845行）描述 Agent/Skills 策展 PM：分析失败任务、设计 Skills、管理权限、优化完成率。编辑补充：Agent 控制点可以按执行前/中/后分组——执行前（目标、权限、确认点），执行中（可见性、中断权），执行后（完成验证、回退、成本核算）。多步任务的错误会逐层放大：每步90%可靠，十步后只剩约35%，所以「完成条件验证」和「回退」不是可选项。这是3.12/3.13的详细展开预告。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+          "content_hash": "b804499b8b17b807f7f42951148bc6cbe7b66035e6a6932bec5deb9283dd64a7",
+          "line_start": 742,
+          "line_end": 845
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：控制点分组与错误放大机制为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.workflow.six-stages.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+      "concept_keys": [
+        "workflow.six-stages"
+      ],
+      "revision": 1,
+      "position": 42,
+      "title": "AI PM 通用工作流六阶段",
+      "kind": "机制",
+      "prompt": "所有 AI PM 都要经历的通用工作流是哪六个阶段？每个阶段的标志性产出物是什么？",
+      "answer_short": "需求（场景分析/需求文档/技术评估/价值评估）→设计（PRD/Prompt模板/评估标准/容错策略）→开发（评审纪要/优化后Prompt/数据集）→测试（测试集/评估报告/Badcase分析）→上线（评审报告/灰度监控）→运营（数据日报/Badcase周报/迭代计划）。",
+      "required_points": [
+        "说全六阶段：需求、设计、开发、测试、上线、运营",
+        "每阶段至少说出一个标志性产出物",
+        "指出 AI 特有产出：Prompt模板、测试集、Badcase报告、容错策略"
+      ],
+      "pitfalls": "不要只记阶段名：这个工作流的价值在「每阶段都有可检查的产出物」，跳过产出物（如没写评估标准就进开发）等于把风险后移。六阶段是通用骨架，不同层级 PM 在各阶段的权重不同。",
+      "explanation": "原文（865–924行）用六张表给出每阶段的任务与产出物。编辑补充：对比传统软件工作流，AI 版本多了四类产物——Prompt 模板（设计）、测试集与评估报告（测试）、容错策略（设计）、Badcase 周报（运营），这正是概率性交付在流程上的投影。用这个工作流复盘自己参与过的项目：哪个阶段没有产出物，哪里就是质量风险口。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.3-AI-PM-工作中的任务.md",
+          "content_hash": "b804499b8b17b807f7f42951148bc6cbe7b66035e6a6932bec5deb9283dd64a7",
+          "line_start": 865,
+          "line_end": 924
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "六阶段+产出物还原；AI特有产出物提炼为编辑补充"
+        ]
+      }
+    }
+  ]
+}

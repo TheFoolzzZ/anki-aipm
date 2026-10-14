@@ -1,0 +1,255 @@
+{
+  "module_id": "3.7",
+  "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+  "native_objectives": 12,
+  "registered": 12,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O01",
+      "original_text": "*   [ ] 我能解释为什么子词分词（Subword）是当前的主流方案",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 517,
+      "decision": "合并",
+      "reason": "词表和长度折中，不主张所有任务最优",
+      "mother_question_id": "M07-A",
+      "card_keys": [
+        "ch03.tokenization.subword-tradeoff.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O02",
+      "original_text": "*   [ ] 我知道空格分词、字符分词、子词分词各自的优缺点",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 518,
+      "decision": "采用",
+      "reason": "三类切分按固定维度比较",
+      "mother_question_id": "M07-A",
+      "card_keys": [
+        "ch03.tokenization.subword-tradeoff.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O03",
+      "original_text": "*   [ ] 我能说出 BPE 的核心思想（从小到大合并高频字符对）",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 519,
+      "decision": "采用",
+      "reason": "训练合并与编码分开",
+      "mother_question_id": "M07-A",
+      "card_keys": [
+        "ch03.tokenization.bpe-process.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O04",
+      "original_text": "*   [ ] 我知道 BPE 和 WordPiece 的核心区别（频率 vs 概率提升）",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 523,
+      "decision": "拆分",
+      "reason": "BPE频率与HF教学重构归一化配对评分作有条件比较；Google最长匹配编码有证据；仅原始训练目标细节延期",
+      "mother_question_id": "M07-A",
+      "card_keys": [
+        "ch03.tokenization.wordpiece-boundary.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_status": "partial_fact_deferred",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O05",
+      "original_text": "*   [ ] 我知道 SentencePiece 的核心创新（不依赖空格，语言无关）",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 524,
+      "decision": "采用",
+      "reason": "工具框架与算法分层",
+      "mother_question_id": "M07-A",
+      "card_keys": [
+        "ch03.tokenization.sentencepiece-layer.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O06",
+      "original_text": "*   [ ] 我能说出至少 3 种主流分词算法的代表模型",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 525,
+      "decision": "实践任务",
+      "reason": "保留至少3种算法代表模型要求，T2核验具体发行版，不能靠家族推断",
+      "mother_question_id": "M07-B",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_unperformed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O07",
+      "original_text": "*   [ ] 我知道中文分词的三大难点（无空格、歧义、新词）",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 529,
+      "decision": "采用",
+      "reason": "三难点与可编码不等于理解",
+      "mother_question_id": "M07-B",
+      "card_keys": [
+        "ch03.interview.m07.chinese-ambiguity.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O08",
+      "original_text": "*   [ ] 我理解为什么同样的内容，中文通常比英文消耗更多 Token",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 530,
+      "decision": "合并",
+      "reason": "纠正中文必然更长为条件性实测",
+      "mother_question_id": "M07-B",
+      "card_keys": [
+        "ch03.tokenization.language-measurement.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O09",
+      "original_text": "*   [ ] 我知道 Tokenization 对多语言公平性的影响",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 531,
+      "decision": "拆分",
+      "reason": "同任务长度与配额体验，T1做分层测量",
+      "mother_question_id": "M07-B",
+      "card_keys": [
+        "ch03.tokenization.language-measurement.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O10",
+      "original_text": "*   [ ] 我知道分词方式对模型数学能力和代码能力的影响",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 535,
+      "decision": "采用",
+      "reason": "切分仅候选原因，工具验证",
+      "mother_question_id": "M07-B",
+      "card_keys": [
+        "ch03.tokenization.number-code-diagnosis.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O11",
+      "original_text": "*   [ ] 我能使用工具查看一段文字的 Tokenization 结果",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 536,
+      "decision": "实践任务",
+      "reason": "实际操作不可由口述卡替代，T1交付编码记录",
+      "mother_question_id": "M07-B",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_unperformed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.7",
+      "objective_id": "3.7-O12",
+      "original_text": "*   [ ] 我能向非技术人员解释\"为什么中文用 AI 更贵\"",
+      "source_path": "第3章-技术攻克/3.7-Tokenization.md",
+      "source_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+      "source_line": 537,
+      "decision": "合并",
+      "reason": "用实测范围向业务解释，不沿用固定倍率",
+      "mother_question_id": "M07-B",
+      "card_keys": [
+        "ch03.tokenization.language-measurement.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "publication_status": "published_and_verified_2026-10-01",
+  "deferred_facts": [
+    "WordPiece原始词表训练目标，不由BERT编码源码反推；仅此子命题延期"
+  ]
+}

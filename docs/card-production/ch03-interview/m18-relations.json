@@ -1,0 +1,47 @@
+{
+  "module_id": "3.18",
+  "relations": [
+    {
+      "to": "ch03.interview.m18.delegation-boundary.001",
+      "type": "prerequisite",
+      "reason": "发现能力以前须分清发起Client与黑盒执行Server",
+      "from": "ch03.interview.m18.agent-discovery.001"
+    },
+    {
+      "to": "ch03.interview.m18.delegation-boundary.001",
+      "type": "prerequisite",
+      "reason": "委派后任务状态属于远程执行，不是本地会话状态",
+      "from": "ch03.interview.m18.task-lifecycle.001"
+    },
+    {
+      "to": "ch03.interview.m18.task-lifecycle.001",
+      "type": "prerequisite",
+      "reason": "增量产物是否完整需结合任务及输出语义",
+      "from": "ch03.interview.m18.message-artifact.001"
+    },
+    {
+      "to": "ch03.interview.m18.task-lifecycle.001",
+      "type": "prerequisite",
+      "reason": "断线恢复需知道可继续态与终态",
+      "from": "ch03.interview.m18.async-updates.001"
+    },
+    {
+      "to": "C08",
+      "type": "extension",
+      "reason": "从模型调用意图/MCP工具接入扩展到远程Agent委派",
+      "from": "ch03.interview.m18.protocol-composition.001"
+    },
+    {
+      "to": "ch03.interview.m18.message-artifact.001",
+      "type": "prerequisite",
+      "reason": "报价汇总依赖每个供应商任务的明确产物",
+      "from": "ch03.interview.m18.parallel-quote-aggregation.001"
+    },
+    {
+      "to": "ch03.interview.m18.async-updates.001",
+      "type": "prerequisite",
+      "reason": "子任务期限与部分结果汇总须正确理解更新和断线状态",
+      "from": "ch03.interview.m18.parallel-quote-aggregation.001"
+    }
+  ]
+}

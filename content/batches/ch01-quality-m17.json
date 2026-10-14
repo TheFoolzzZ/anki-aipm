@@ -1,0 +1,79 @@
+{
+  "batch_id": "ch01-quality-m17",
+  "status": "accepted",
+  "chapter_position": 1,
+  "cards": [
+    {
+      "canonical_key": "ch01.practice.reflective-loop.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.7-热爱和坚持是成事之法.md",
+      "concept_keys": [
+        "practice.reflective-loop"
+      ],
+      "revision": 2,
+      "position": 20,
+      "title": "经验如何沉淀成判断力",
+      "kind": "机制",
+      "prompt": "为什么持续工作本身不一定形成产品判断力？还需要补上什么循环？",
+      "answer_short": "因为工作只产生经历，不自动产生判断。需要补上「实践→总结提炼→反哺实践→检验修正」的循环：把经验提炼成自己的判断，再在后续实践中应用和修正。",
+      "required_points": [
+        "区分经历与判断：重复工作不等于判断力增长",
+        "说出循环：总结提炼→反哺工作→检验修正",
+        "指出循环可断裂：只干不思会原地踏步，只思不干会纸上谈兵"
+      ],
+      "pitfalls": "坚持不是机械重复；不复盘和迁移，同类经验只会被重复消耗。反过来，只看方法论不动手，得到的「判断」没有经历过真实约束，同样不可靠。",
+      "explanation": "原文的路径是：坚持学习、学以致用、将工作经验融入思考、总结提炼、再反哺工作。编辑补充：这个循环与1.2「实践证据」和1.6「产品嗅觉练习」是同构的——都要求输出一个可检查的中间产物（复盘结论、三点思考）。判断循环是否在转的简单指标：同一个问题，半年后的你是否能给出更有结构的回答。",
+      "estimated_seconds": 45,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.7-热爱和坚持是成事之法.md",
+          "content_hash": "c2c03b21d7fc1141d2bc49ab8d35efdcb8732b007ad617f77b519d585a24f60c",
+          "line_start": 5,
+          "line_end": 12
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补循环断裂两形态与自检指标；编辑补充已标识"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.career.role-value.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.7-热爱和坚持是成事之法.md",
+      "concept_keys": [
+        "career.role-value"
+      ],
+      "revision": 1,
+      "position": 69,
+      "title": "外界标签与岗位真实价值",
+      "kind": "场景判断",
+      "prompt": "面对“产品经理就是传声筒/画图工具人”的外界标签，原文的反驳思路是什么？判断一个岗位价值的可靠依据是什么？",
+      "answer_short": "原文用对照反驳：如果岗位真如标签所说，成功的企业家不会自诩为产品经理。更可靠的判断依据是看岗位实际承担的问题——洞察用户需求、精通业务逻辑、平衡各方利益——而不是外界标签。",
+      "required_points": [
+        "说出原文对照：贬低标签 vs 企业家自诩PM 的现象",
+        "给出判断依据：看岗位实际解决的问题与所需能力，而非标签",
+        "指出「企业家自诩」是现象佐证而非严格论证"
+      ],
+      "pitfalls": "两个方向都要防：被贬低标签劝退，或被「产品经理」光环吸引。岗位体验因公司和团队差异极大，标签（无论褒贬）都不是决策依据。",
+      "explanation": "原文（7–9行）的论证结构是：外界讽刺岗位是传声筒、工具人，但成功企业家自诩产品经理，说明岗位有未被标签覆盖的实质——洞察需求、精通业务、平衡利益。编辑补充：这个论证只能证明「标签不完整」，不能证明「岗位必然有价值」；更稳的判断方式是把岗位拆成日常活动（协调、定义、取舍、验收），问自己是否愿意长期做这些事。这也是1.3职业三问的现实主义版本。",
+      "estimated_seconds": 45,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.7-热爱和坚持是成事之法.md",
+          "content_hash": "c2c03b21d7fc1141d2bc49ab8d35efdcb8732b007ad617f77b519d585a24f60c",
+          "line_start": 7,
+          "line_end": 9
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "对照结构还原；论证强度边界与拆岗位方法为编辑补充"
+        ]
+      }
+    }
+  ]
+}

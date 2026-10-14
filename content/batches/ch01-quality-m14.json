@@ -1,0 +1,187 @@
+{
+  "batch_id": "ch01-quality-m14",
+  "status": "accepted",
+  "chapter_position": 1,
+  "cards": [
+    {
+      "canonical_key": "ch01.learning.tools-vs-capability.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+      "concept_keys": [
+        "learning.tools-vs-capability"
+      ],
+      "revision": 2,
+      "position": 9,
+      "title": "工具不是学习结果",
+      "kind": "场景判断",
+      "prompt": "为什么不能用“掌握了多少工具”来衡量 AI PM 的学习成果？应该用什么衡量？",
+      "answer_short": "工具只是完成任务的手段且更新极快；可迁移的产品思维、问题判断和交付证据才是学习结果。衡量标准是：面对真实问题，能否做出并讲清判断。",
+      "required_points": [
+        "区分工具与目标：工具是手段，学习结果是判断力和产出",
+        "说出工具清单会过时（半衰期短），方法与证据可迁移",
+        "给出替代衡量：真实问题的分析、方案取舍和验证证据"
+      ],
+      "pitfalls": "工具熟练度有价值，但不能替代对用户问题、方案取舍和结果验证的理解；简历上罗列工具名称，经不起任何一个“为什么这么做”的追问。",
+      "explanation": "原文第3节列出8类工具，但其结构本身说明了观点：工具按用途分类、随任务选用。编辑补充：为什么工具不能当衡量标准——①工具迭代以月计，具体技能快速贬值；②同样工具在不同人手里产出质量差异巨大，差异来自判断力；③面试和工作中被检验的是“遇到什么问题、怎么判断、结果如何”，不是“会不会某个按钮”。学习记录也应按“问题—判断—证据”组织，而不是按软件组织。",
+      "estimated_seconds": 45,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+          "content_hash": "2d186453958de270b7dacb104460fd4c08baec18d46ac0ef5b4b1fce557cd4de",
+          "line_start": 105,
+          "line_end": 107
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补三条「为什么不能当标准」的机制解释；双向边界"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.learning.model-intuition.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+      "concept_keys": [
+        "learning.model-intuition"
+      ],
+      "revision": 2,
+      "position": 10,
+      "title": "通过对比建立模型直觉",
+      "kind": "场景判断",
+      "prompt": "使用不同模型完成同一任务时，怎样练习才能形成产品直觉，而不只是比较主观喜好？",
+      "answer_short": "固定任务和评价维度做对比：同一输入在不同模型上运行，按输出质量、能力边界、稳定性、成本与交互差异记录，并标注各自适用条件。",
+      "required_points": [
+        "保持任务和评价口径一致，否则比较无意义",
+        "评价维度至少含：质量、边界、稳定性；成本与交互可加分",
+        "记录差异与适用条件，形成可回看的对比表"
+      ],
+      "pitfalls": "一次回答更顺眼不能证明某模型普遍更好：单次、单任务的印象受抽样波动影响；需要多样案例和事先定好的评价标准，否则只是在收集偏见。",
+      "explanation": "原文（145–153行）建议每天使用大模型、体验能力边界。编辑补充：把「体验」升级为「对比练习」的关键是控制变量——任务固定、维度事先定好、结果落表。例如同一个总结任务在两个模型上各跑三次，记录结构完整性、事实错误、风格稳定性。三次而不是一次，是因为1.2已经验证过输出的概率性。这样积累的对比表，就是后续做模型选型（3.5）时的个人证据库。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+          "content_hash": "2d186453958de270b7dacb104460fd4c08baec18d46ac0ef5b4b1fce557cd4de",
+          "line_start": 143,
+          "line_end": 153
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：练习方法控制变量化；与1.2概率实验衔接为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.learning.path.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+      "concept_keys": [
+        "learning.path"
+      ],
+      "revision": 2,
+      "position": 11,
+      "title": "AI PM 的渐进学习路径",
+      "kind": "场景判断",
+      "prompt": "AI PM 入门为什么应按“产品基础—AI基础—工具实践—项目验证”渐进推进？每个阶段靠什么证明完成了？",
+      "answer_short": "因为后一阶段依赖前一阶段的判断力：产品基础提供用户与问题视角，AI基础提供边界语言，工具实践形成操作能力，项目验证把知识转成可交付证据。完成标志是各阶段的产出物，不是学习时长。",
+      "required_points": [
+        "说出四阶段顺序及依赖关系：先判断力地基，再叠加技术与工具",
+        "每阶段有产出证据：原型/竞品分析、模型体验记录、搭建作品、可讲的项目",
+        "指出阶段不是严格串行，但每次实践都要回到用户问题与验收"
+      ],
+      "pitfalls": "只读理论会缺少真实判断，只追工具又容易失去问题与价值主线；跳过产品基础直接学AI工具，会做出“技术上好玩、没人需要”的东西。",
+      "explanation": "原文（234–266行）给出四阶段路径，并在总结（307–322行）补充日常节奏：每天30分钟行业动态、每周体验1-2个AI产品、每月一个实践小项目。编辑补充：这条路径与1.2的过关标准同构——每个阶段都要留下证据。阶段时长（1-2个月）是原文给0基础参考值，不必当作硬指标；判断能否进入下一阶段的依据是产出物质量，例如竞品分析是否有自己的判断，而不只是信息搬运。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+          "content_hash": "2d186453958de270b7dacb104460fd4c08baec18d46ac0ef5b4b1fce557cd4de",
+          "line_start": 234,
+          "line_end": 266
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补阶段依赖逻辑与完成判据；时长口径标注为参考值"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.ai-terms.precision-recall.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+      "concept_keys": [
+        "ai-terms.precision-recall"
+      ],
+      "revision": 1,
+      "position": 45,
+      "title": "精确率与召回率的取舍",
+      "kind": "对比",
+      "prompt": "精确率和召回率分别衡量什么？“宁可错杀不可漏掉”和“宁可漏掉不可错杀”各自对应哪个指标优先？",
+      "answer_short": "精确率=预测为正例中真正为正的比例（报了的对不对）；召回率=真正例中被找出的比例（该报的报全没）。“宁可错杀不可漏掉”是召回优先，“宁可漏掉不可错杀”是精确优先。选哪个看业务里两类错误谁的代价高。",
+      "required_points": [
+        "正确定义两个指标及分母差异（预测为正 vs 实际为正）",
+        "正确映射两句口诀到指标方向",
+        "说出选择依据：比较漏报与误报的业务代价，而不是背口诀"
+      ],
+      "pitfalls": "准确率（整体预测对的比例）在类别不均衡时会骗人：99%的负例场景下全猜负也有99%准确率。F1是精确率与召回率的调和平均，是折中而非免取舍。",
+      "explanation": "原文（211–220行）定义了这组评估术语。编辑补充：判断方法的实质是错误代价不对称——风控漏掉一个坏用户的损失远大于误伤一个好用户，所以召回优先；垃圾信息误删重要邮件代价高，所以精确优先。PM 不需要会算，但必须能在需求里写清“我们更怕哪种错”，因为这直接决定算法团队的优化方向和验收标准。这是1.3「问题定义+效果预期」沟通方式的指标层落地。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+          "content_hash": "2d186453958de270b7dacb104460fd4c08baec18d46ac0ef5b4b1fce557cd4de",
+          "line_start": 211,
+          "line_end": 220
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "口诀映射+代价判断方法；准确率陷阱作边界；与1.3衔接为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.ai-terms.hallucination.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+      "concept_keys": [
+        "ai-terms.hallucination"
+      ],
+      "revision": 1,
+      "position": 46,
+      "title": "幻觉与PM的设计责任",
+      "kind": "概念",
+      "prompt": "什么是大模型的“幻觉”？为什么说它对产品经理意味着设计责任而不只是技术问题？",
+      "answer_short": "幻觉是模型生成看似合理但实际错误的内容。因为幻觉无法被彻底消除，PM 必须设计机制降低它对用户的负面影响——如来源标注、人工复核、置信提示和纠错入口。",
+      "required_points": [
+        "定义：看似合理但实际错误的生成内容，且具有迷惑性",
+        "说出PM职责：设计机制降低幻觉对用户的负面影响",
+        "举出至少一种机制：来源标注、人工复核、置信提示或纠错入口"
+      ],
+      "pitfalls": "两个误区：认为幻觉可以通过换模型或调参数“解决”，从而不做产品层防护；或因为幻觉存在就否定所有生成式应用。正确立场是管理风险而非消灭风险。",
+      "explanation": "原文（198–209行）定义幻觉并明确“AI产品经理必须设计机制来降低幻觉对用户的负面影响”，同表还给出 RAG 作为减少幻觉的技术方向。编辑补充：幻觉的本质是模型按概率生成“像答案的文本”而非查证事实，所以它随模型能力变化但不会归零。PM 的设计杠杆在四处：给答案附来源便于核对、高风险操作前加人工确认、用提示管理用户预期、提供反馈纠错入口。这正是1.3「上线判断」中兜底与预期管理的具体化。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.4-AI产品经理如何快速入门.md",
+          "content_hash": "2d186453958de270b7dacb104460fd4c08baec18d46ac0ef5b4b1fce557cd4de",
+          "line_start": 198,
+          "line_end": 209
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "定义+PM职责对齐原文；四类设计杠杆为编辑补充"
+        ]
+      }
+    }
+  ]
+}

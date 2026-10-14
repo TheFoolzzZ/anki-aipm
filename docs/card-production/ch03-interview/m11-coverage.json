@@ -1,0 +1,654 @@
+{
+  "module_id": "3.11",
+  "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+  "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+  "native_objectives": 28,
+  "registered": 28,
+  "non_checklist_registered": 2,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O506",
+      "original_text": "*   [ ] 文档格式统一和清洗（去掉页眉页脚、水印、乱码）",
+      "source_line": 506,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "采用",
+      "reason": "加载质量沿原文/解析/块定位",
+      "card_keys": [
+        "ch03.rag.source-ingestion-loss.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O507",
+      "original_text": "*   [ ] 选择合适的切分策略（按段落/按语义/按标题）",
+      "source_line": 507,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "大小权衡复用C03，具体实验由旧卡补强",
+      "card_keys": [
+        "ch03.rag.chunk-experiment.001",
+        "C03"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O508",
+      "original_text": "*   [ ] 设置合理的 Chunk Size 和 Overlap",
+      "source_line": 508,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "参数是待验证候选，不背推荐值",
+      "card_keys": [
+        "ch03.rag.chunk-experiment.001",
+        "C03"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O509",
+      "original_text": "*   [ ] 处理特殊内容（表格、图片、代码块）",
+      "source_line": 509,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "表格/图像/代码分别检查信息和结构损失",
+      "card_keys": [
+        "ch03.rag.source-ingestion-loss.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O510",
+      "original_text": "*   [ ] 数据更新机制（新增/修改/删除文档如何同步）",
+      "source_line": 510,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "采用",
+      "reason": "新增修改删除传播与真实回读",
+      "card_keys": [
+        "ch03.rag.update-deletion.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O514",
+      "original_text": "*   [ ] 选择合适的 Embedding 模型",
+      "source_line": 514,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "复用3.10表示选型证据，不重复品牌排行",
+      "card_keys": [
+        "ch03.vector.training-objective.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O515",
+      "original_text": "*   [ ] 选择合适的向量数据库",
+      "source_line": 515,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "复用3.10负载选型，不用规模门槛",
+      "card_keys": [
+        "ch03.vector.database-selection.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O516",
+      "original_text": "*   [ ] 是否使用混合检索（向量 + 关键词）",
+      "source_line": 516,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "C02基础分工和3.10融合验证分别复用",
+      "card_keys": [
+        "C02",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O517",
+      "original_text": "*   [ ] 是否使用重排序（Re-ranking）",
+      "source_line": 517,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "复用3.10候选上限与重排计算机制",
+      "card_keys": [
+        "ch03.vector.rerank-candidate-ceiling.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O518",
+      "original_text": "*   [ ] 是否使用查询改写（Query Rewriting）",
+      "source_line": 518,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "采用",
+      "reason": "重写保留用户硬条件",
+      "card_keys": [
+        "ch03.rag.rewrite-constraint.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O519",
+      "original_text": "*   [ ] Top-K 值调优（5？10？20？）",
+      "source_line": 519,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "Top-K需联合候选覆盖、最终预算和成本实验",
+      "card_keys": [
+        "ch03.vector.rerank-candidate-ceiling.001",
+        "ch03.rag.context-compression.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O523",
+      "original_text": "*   [ ] Prompt 模板设计（角色、约束、格式）",
+      "source_line": 523,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "复用任务指令；来源冲突细化，不重复Prompt术语",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.rag.conflicting-sources.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O524",
+      "original_text": "*   [ ] 上下文长度管理（是否压缩？）",
+      "source_line": 524,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "预算复用3.8，压缩条件完整性本节负责",
+      "card_keys": [
+        "ch03.rag.context-compression.001",
+        "ch03.token.context-reservation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O525",
+      "original_text": "*   [ ] 引用来源标注",
+      "source_line": 525,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "引用必须支持主张，引用标题不是忠实证明",
+      "card_keys": [
+        "ch03.rag.conflicting-sources.001",
+        "C05"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O526",
+      "original_text": "*   [ ] 不知道时的兜底策略",
+      "source_line": 526,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "复用证据不足澄清拒答转人工，母题给RAG具体出口",
+      "card_keys": [
+        "ch03.llm.hallucination-controls.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O527",
+      "original_text": "*   [ ] 多轮对话的历史管理",
+      "source_line": 527,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "3.12记忆更新与多轮指代/硬条件互补",
+      "card_keys": [
+        "ch03.agent.memory-freshness.001",
+        "ch03.rag.rewrite-constraint.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O531",
+      "original_text": "*   [ ] 建立检索效果评估（Recall、MRR）",
+      "source_line": 531,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "复用Recall/MRR等口径，不复制指标卡",
+      "card_keys": [
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O532",
+      "original_text": "*   [ ] 建立生成效果评估（Faithfulness、Relevance）",
+      "source_line": 532,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "忠实与切题基础复用，补效力冲突判断",
+      "card_keys": [
+        "C05",
+        "ch03.rag.conflicting-sources.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O533",
+      "original_text": "*   [ ] 收集 Bad Case，持续优化",
+      "source_line": 533,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "失败样例按链路归因后入回归集",
+      "card_keys": [
+        "ch03.rag.source-ingestion-loss.001",
+        "ch03.rag.rewrite-constraint.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O534",
+      "original_text": "*   [ ] 监控延迟、成本、错误率",
+      "source_line": 534,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "单位任务费用结合通用告警闭环",
+      "card_keys": [
+        "ch03.rag.cost-quality-budget.001",
+        "ch03.tech.observability-response.001"
+      ],
+      "mother_question_id": "M2",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O540",
+      "original_text": "*   [ ] 我能解释 RAG 的核心原理和解决的问题（幻觉、知识截止）",
+      "source_line": 540,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "采用",
+      "reason": "解释知识接入机制与无保证边界",
+      "card_keys": [
+        "ch03.interview.m11.rag-lifecycle.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O541",
+      "original_text": "*   [ ] 我能画出 RAG 的完整架构图（加载→切分→Embedding→检索→生成）",
+      "source_line": 541,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "架构图留M1/T1，不以口述单卡替代真实绘图",
+      "card_keys": [
+        "ch03.interview.m11.rag-lifecycle.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O542",
+      "original_text": "*   [ ] 我知道文档切分的策略和推荐参数",
+      "source_line": 542,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "权衡复用，参数实验补强",
+      "card_keys": [
+        "C03",
+        "ch03.rag.chunk-experiment.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O543",
+      "original_text": "*   [ ] 我能说出至少 3 种检索优化方法（混合检索、重排序、查询改写）",
+      "source_line": 543,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "三种方法各自职责及失败边界不压成名词表",
+      "card_keys": [
+        "C02",
+        "ch03.vector.rerank-candidate-ceiling.001",
+        "ch03.rag.rewrite-constraint.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O544",
+      "original_text": "*   [ ] 我知道 RAG 和微调的取舍，以及何时组合使用",
+      "source_line": 544,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "资料更新/行为改变选型复用，组合不一定最好",
+      "card_keys": [
+        "C01",
+        "ch03.finetune.problem-selection.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O545",
+      "original_text": "*   [ ] 我能评估 RAG 系统的效果（检索准确率、回答忠实度）",
+      "source_line": 545,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "检索与生成分别评估，不能互相替代",
+      "card_keys": [
+        "C05",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O546",
+      "original_text": "*   [ ] 我知道 RAG 在不同场景（客服、法律、代码）的特殊考虑",
+      "source_line": 546,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "领域差异保留M2/T5完整实施对照",
+      "card_keys": [
+        "ch03.interview.m11.rag-lifecycle.001",
+        "ch03.rag.source-ingestion-loss.001"
+      ],
+      "mother_question_id": "M2",
+      "practice_task_ids": [
+        "T5"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-O547",
+      "original_text": "*   [ ] 我能估算 RAG 系统的成本（Embedding、向量数据库、大模型生成）",
+      "source_line": 547,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "native_checklist",
+      "decision": "采用",
+      "reason": "入库在线与成功任务分母清楚",
+      "card_keys": [
+        "ch03.rag.cost-quality-budget.001"
+      ],
+      "mother_question_id": "M2",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-B01",
+      "original_text": "**为什么需要切分？**",
+      "source_line": 114,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "正文为何切分由基础权衡与实验承接",
+      "card_keys": [
+        "ch03.rag.chunk-experiment.001",
+        "C03"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.11",
+      "objective_id": "m11-B02",
+      "original_text": "**核心思想**：不是所有问题都需要走 RAG。先判断问题类型，再决定检索策略。",
+      "source_line": 318,
+      "source_path": "第3章-技术攻克/3.11-讲透-RAG.md",
+      "source_hash": "9c2add983a59ec2ad244207a65fffedfae4ede2346f4178159ffd18ab8d650a7",
+      "source_type": "body_knowledge_target",
+      "decision": "合并",
+      "reason": "直接问答、API、文档与计算职责已在3.5覆盖",
+      "card_keys": [
+        "ch03.llm.application-routing.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "publication_status": "published_and_verified_2026-10-02",
+  "review_status": "editor_review_complete",
+  "published_cards": 12
+}

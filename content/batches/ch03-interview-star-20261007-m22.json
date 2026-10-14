@@ -1,0 +1,500 @@
+{
+  "batch_id": "ch03-interview-star-20261007-m22",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m22.event-semantic-layer.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.event-semantic-layer"
+      ],
+      "revision": 2,
+      "position": 3201,
+      "title": "AG-UI和SSE分别解决哪一层",
+      "kind": "对比",
+      "prompt": "同样通过SSE传数据，自定义文本流与AG-UI差在哪里？请说明各自职责，以及采用协议后仍需实现什么。",
+      "answer_short": "一、SSE解决如何把服务端事件送到客户端，可以传文本或JSON，并非只能传Token。\n二、AG-UI约定运行、消息、工具、状态等事件的含义与交互输入，前端据类型处理；它可以使用SSE作为通道，两者不在同一层。\n三、双方还需适配载荷、渲染和运行逻辑。统一语义有助于复用，但不会自动保证低延迟、工具成功或完整界面。",
+      "required_points": [
+        "区分SSE传输和AG-UI语义/输入契约",
+        "SSE可承载结构化事件，两者能组合",
+        "指出渲染、执行与性能仍需实现验证"
+      ],
+      "pitfalls": "不能把REST、SSE说成无法协作；自定义协议也能实现，只是团队需自行约定与维护语义。",
+      "explanation": "假设后端发status=done，客户端仍不知道是文字生成结束还是CRM已写入。约定事件类型减少这种歧义，但业务结果仍需具体契约，界面也必须消费事件才能更新。AG-UI价值是减少各团队重复解释同类交互的适配工作。\n【面试追问】简单FAQ需要迁移吗？参考答案：先保留可用方案；出现多步骤、工具状态或跨框架复用痛点，再比较适配收益与成本。\n【评分】能分开传输、语义、实现三层为合格；把协议支持等同即插即用全部界面不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 15,
+          "line_end": 33
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 45,
+          "line_end": 84
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 445,
+          "line_end": 461
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "按同一分层维度重写比较；解释统一语义解决done歧义的原因，纠正SSE只能发文本。",
+          "来源与编辑边界：源文事件协议与方案比较支持目标；SSE能力为已有纠错，AG-UI Events核对语义；done为假设。",
+          "独立审校通过：保留SSE传输与AG-UI语义层辨析，编号解释结构化载荷、事件含义及双方适配职责；status=done例子暴露业务含义歧义，FAQ追问给出迁移条件。WHATWG及AG-UI支持机制，未照搬原文“SSE只能文本”或即插即用保证。",
+          "独立审校内容指纹：eac710674c3675e5c1115849fc0efde6dab37af27f6298b501c712ca66c9c330"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m22.thread-run-lifecycle.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.thread-run-lifecycle"
+      ],
+      "revision": 2,
+      "position": 3202,
+      "title": "Thread与Run怎样关联事件",
+      "kind": "机制",
+      "prompt": "销售助手在同一会话中先准备材料，再按补充要求运行。threadId、runId和起止事件各有什么作用？RUN_FINISHED能否代表邮件已发或会话结束？",
+      "answer_short": "一、threadId关联持续会话与上下文，runId区分一次执行；同一thread可以有多次run，事件不能串到别轮。\n二、RUN_STARTED及RUN_FINISHED/RUN_ERROR描述该run的开始、结束或错误，帮助前端管理加载态，不自动结束整个会话。\n三、运行终态与邮件业务事实分开；必须核对对应工具结果或业务流水才能显示已发送。标识本身也不负责保存历史。",
+      "required_points": [
+        "一个thread可含多次run，正确关联各轮事件",
+        "解释运行起止/错误与会话生命周期不同",
+        "运行结束不证明业务写入，历史存储由应用实现"
+      ],
+      "pitfalls": "旧run迟到的结束事件不能关闭新run加载态；专门中断outcome需核对双方支持版本，不硬背成稳定必填字段。",
+      "explanation": "假设thread-X中run-A生成拜访材料，run-B补成本页，A的迟到终态只能关闭A。否则用户正在等B时页面会错误显示已完成。会话可以继续，邮件甚至从未被调用，所以“运行结束”与“邮件已发”是不同结论。\n【面试追问】刷新后只有runId能恢复材料吗？参考答案：不能，还要经授权读取thread历史或结果，存储和恢复是应用责任。\n【评分】两级标识、run终态、业务事实都正确为合格；把RUN_FINISHED当全会话结束或发送证明不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 134,
+          "line_end": 160
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 342,
+          "line_end": 390
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "补成两级标识→运行加载态→业务结果的口述机制，明确迟到事件作用范围。",
+          "来源与编辑边界：源文Thread与销售旅程支持目标；run标识经Events复核；run-A/B为假设，不依赖草案字段。",
+          "独立审校通过：保留thread多run、起止事件与业务事实区分，run-A迟到终态不能关run-B加载态的实例具体，刷新追问指出授权读取历史而非ID自动存储。中断outcome明确需核对双方版本，不把RUN_FINISHED当邮件已发或全会话结束。",
+          "独立审校内容指纹：ea23a231ed5ae23bc37bee6c35b34dab10e46d9f681e18459b0dc825d96b0c60"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m22.text-event-assembly.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.text-event-assembly"
+      ],
+      "revision": 2,
+      "position": 3203,
+      "title": "交错文本消息如何正确组装",
+      "kind": "机制",
+      "prompt": "同一AG-UI运行有两条文本消息交错到达，前端全部拼到一个字符串。错在哪里？应怎样处理文本起始、内容和结束事件？",
+      "answer_short": "一、先按messageId区分消息，TEXT_MESSAGE_START建立对应消息及角色，否则无法知道片段属于谁。\n二、TEXT_MESSAGE_CONTENT只追加到该消息的缓冲区；两条消息交错到达，也不能按到达顺序混成一段。\n三、TEXT_MESSAGE_END结束这一条消息，不结束整个run；后续工具或其他消息仍可能执行。重复和迟到片段还需应用容错约定。",
+      "required_points": [
+        "以messageId归属独立组装，不混拼",
+        "Start/Content/End对应建立、追加与消息结束",
+        "消息终态不同于run终态"
+      ],
+      "pitfalls": "不要每个Token生成一条消息；片段未完整时不能当成完整JSON或最终业务结论，标识也不自动去重。",
+      "explanation": "假设A消息介绍客户，B消息提出拜访建议；收到A半句、B半句、A后半句，单字符串会把介绍和建议混在一起。独立缓冲保留归属，再按界面约定展示，既保证内容完整，也让结束信号只作用于正确消息。\n【面试追问】收到END仍转圈一定是错误吗？参考答案：不一定，可能文本结束而工具仍在运行；要看当前run及步骤状态。\n【评分】消息归属与三类事件职责正确为合格；把消息END当任务成功判核心错误。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 144,
+          "line_end": 160
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 196,
+          "line_end": 235
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "不再只列事件名，补出交错消息为什么混串及各终态作用范围。",
+          "来源与编辑边界：源文流式文本与旅程支持目标；messageId及文本事件语义经Events核对；A/B消息是假设。",
+          "独立审校通过：保留messageId独立缓冲与START/CONTENT/END职责，交错A/B例子解释混拼错误，END不结束run及不自动去重边界清楚；追问允许工具继续加载，官方文本事件说明支持，无不适合的项目STAR。",
+          "独立审校内容指纹：d6b4bda4a35902be7551f8e565761abfeb0bd915cfb50fc0c0d4d53db8847eeb"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m22.tool-event-completion.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.tool-event-completion"
+      ],
+      "revision": 2,
+      "position": 3204,
+      "title": "工具调用结束为何不等于写入成功",
+      "kind": "机制",
+      "prompt": "前端收到TOOL_CALL_END就显示CRM写入成功，稍后却收到权限不足。这个事件应怎样理解，真正的成功展示要依据什么？",
+      "answer_short": "一、START/ARGS/END描述工具调用及参数组装；END说明指定工具和参数已结束，执行可能仍在进行，不能单独证明成功。\n二、用toolCallId把实际工具结果关联到调用，按事先约定的结果契约判断成功、失败或未知。\n三、显示CRM已保存，还需结果能定位更新对象及版本，必要时回读；权限不足显示失败，超时显示未确认，不能用模型总结补造事实。",
+      "required_points": [
+        "参数流结束与实际执行结果明确区分",
+        "按toolCallId关联结果并解释结果契约",
+        "依据业务结果/必要回读显示成功、失败或未知"
+      ],
+      "pitfalls": "TOOL_CALL_END不能替代TOOL_CALL_RESULT；RUN_FINISHED也不会补出缺失的保存证据。",
+      "explanation": "假设updateCustomer的参数已生成，客户端此时才调用CRM。END到达时业务请求可能尚未返回，所以界面应显示处理中。随后同一toolCallId返回权限不足，才更新失败状态。把“参数齐了”和“执行成了”分开，才能让加载态可信。\n【面试追问】工具只返回“完成”够吗？参考答案：看业务契约，保存类操作应能核对对象、版本和状态；含糊文本不能证明目标已更新。\n【评分】事件、结果归属、业务事实三层覆盖为合格；END直接判成功不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 148,
+          "line_end": 156
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 207,
+          "line_end": 218
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 351,
+          "line_end": 361
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "将工具生命周期展开为参数完成→执行结果→对象证据，保留技术事件含义而非泛化验收。",
+          "来源与编辑边界：源文工具流程为锚点；Tools与Events明确支持END不单独证明执行成功，CRM权限不足按题面。",
+          "独立审校通过：保留工具参数流与执行结果分离，按toolCallId关联结果并区分保存、权限失败及超时未知；客户端此时才调用CRM的明确假设解释END为何不证明成功。官方Events/Tools核对一致，追问要求对象/版本/状态，不用模型总结补造业务事实。",
+          "独立审校内容指纹：61edc4bae5ace0a66867ef8dacf75f90c019bbc385f2fff7e45fa312bd42623b"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m22.state-snapshot-delta.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.state-snapshot-delta"
+      ],
+      "revision": 2,
+      "position": 3205,
+      "title": "状态快照与增量为何依赖基线",
+      "kind": "机制",
+      "prompt": "STATE_SNAPSHOT建立议程，随后STATE_DELTA更新。断线漏了删除补丁，再续流导致议程错位。两类事件怎样应用，恢复时为什么要先校对基线？",
+      "answer_short": "一、SNAPSHOT给完整状态基线，替换对应本地State；DELTA是JSON Patch，按顺序修改既有基线，不是任意浅合并。\n二、增量只说明如何改，不重新给出完整状态；漏删除后，本地数组索引可能不同，后续替换就会改错项。\n三、恢复先用受支持的新快照或可靠补放达到一致状态，再续流；连接恢复只证明通道通了，不证明状态同步。",
+      "required_points": [
+        "快照替换基线，delta按JSON Patch有序应用",
+        "说明丢增量导致基线/数组位置偏离",
+        "恢复需校对快照或可靠补放，不假设自动恢复"
+      ],
+      "pitfalls": "合并渲染可以减少抖动，不能任意丢弃互相依赖的补丁；协议本身不保证离线补放或并发冲突解决。",
+      "explanation": "假设后端先删第2项，再替换现在的第2项；前端漏掉删除，就把原来的第2项误替换。快照和补丁不是两种随意可互换的数据包，而是完整基线与依赖基线的更新。补丁失败应提示不同步并刷新，不能继续伪装一致。\n【面试追问】只留最后一条delta可减少卡顿吗？参考答案：通常不行，补丁相互依赖；先按序应用，再批量渲染，或改发完整快照。\n【评分】两类语义、丢包因果、恢复责任讲清为合格；浅合并或任意弃补丁不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 162,
+          "line_end": 170
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 392,
+          "line_end": 400
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 427,
+          "line_end": 443
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "补出JSON Patch对数组基线的依赖，说明断线后通道恢复与状态恢复的差别。",
+          "来源与编辑边界：源文共享状态与异常支持目标；Events核对JSON Patch；数组错位为编辑假设，补放为应用设计。",
+          "独立审校通过：保留快照替换、JSON Patch有序更新与断线基线责任，删除再替换数组项例子解释漏补丁为何改错；追问给出先顺序应用再批量渲染，不能丢中间delta。官方State支持，未声称协议自带补放/离线事务。",
+          "独立审校内容指纹：d2b87c26b5878ffd7aea6d5b85c861b66c12a621a31a65bc9a27e70f4de3b03e"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m22.shared-state-authority.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.shared-state-authority"
+      ],
+      "revision": 2,
+      "position": 3206,
+      "title": "用户编辑与Agent更新冲突怎样处理",
+      "kind": "场景判断",
+      "prompt": "用户把草稿收件人改为甲，Agent旧快照覆盖成乙。你会如何设计共享State规则，使最终发送符合用户当前批准内容？",
+      "answer_short": "S｜题中用户编辑与旧Agent更新竞争同一收件人字段。\nT｜保留用户意图，避免发送未批准的版本。\nA｜一、分清用户草稿、Agent建议与已批准版本的写入责任；二、带版本校验，旧更新不直接覆盖，冲突时保留建议或提示合并；三、执行端核验最终收件人、内容版本和有效批准。\nR｜用旧快照迟到、改收件人后恢复等路径验证；未解决冲突先停发送。共享State提供同步机制，不替应用决定谁的修改有效。",
+      "required_points": [
+        "同步与并发冲突/授权是不同责任",
+        "说明字段写入责任及版本冲突处理",
+        "发送校验最终对象与批准版本，冲突时停止"
+      ],
+      "pitfalls": "用户能编辑前端不意味着能改所有业务字段；保留批准布尔值却换了内容，会造成批准与执行脱节。",
+      "explanation": "假设Agent用旧版本生成建议，而用户已经改收件人；将建议单独保存可避免静默覆盖，版本比较则能发现它已过时。即使页面暂时显示甲，后端也必须核验待发送版本，不能把显示状态当授权事实。\n【面试追问】只改主题还要重新确认吗？参考答案：按批准粒度决定，但最终执行内容必须在有效批准范围内，不能复用失效批准。\n【评分】写入责任、冲突处理、批准版本完整为合格；“共享状态自动合并”不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 162,
+          "line_end": 170
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 371,
+          "line_end": 390
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 416,
+          "line_end": 425
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "改为冲突治理STAR，A明确建议/草稿/批准三类数据，R检验旧更新迟到而不虚构发送成果。",
+          "来源与编辑边界：源文共享State及中断体验支持目标；字段所有权与版本策略为编辑设计，不宣称AG-UI内建事务算法。",
+          "独立审校通过：保留用户草稿、Agent建议、批准版本的写入责任及并发冲突目标，STAR用版本校验阻旧更新，执行端核最终对象和授权；追问按批准粒度处理主题变更，R覆盖迟到和恢复并在冲突未解决时停发送，未把同步当事务或授权。",
+          "独立审校内容指纹：f3dd3142a184e6c954515806213a39bb15d44163efe6b7a4f57e6404f547131e"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m22.confirmation-contract.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.confirmation-contract"
+      ],
+      "revision": 2,
+      "position": 3207,
+      "title": "确认交互怎样衔接后台暂停",
+      "kind": "机制",
+      "prompt": "团队自定义INTERRUPT事件，就承诺所有AG-UI客户端会弹窗并暂停邮件发送。为什么不成立？确认展示、回复和后台继续各应怎样约定？",
+      "answer_short": "一、自定义名称不等于通用事件；先核对双方协议与SDK支持，不能把单一INTERRUPT写成所有实现的稳定保证。\n二、可通过客户端确认工具承载：参数说明待发内容，应用展示批准/修改/取消，回复用toolCallId关联待办，后台据结果继续或停止。\n三、运行时实现真正等待、持久化及恢复，执行端验证批准范围；专门中断生命周期扩展需确认版本，弹窗本身不阻止后台发送。",
+      "required_points": [
+        "不能把自定义INTERRUPT视为通用稳定保证",
+        "确认工具/输入、界面和关联回复的责任清楚",
+        "等待恢复与有效批准由运行时/执行端落实，草案须核对"
+      ],
+      "pitfalls": "确认按钮变灰只是界面变化；未持久化批准就不等于可恢复审批，关闭窗口不能默认同意。",
+      "explanation": "假设confirmEmail参数包含收件人、主题和正文版本，前端返回同一toolCallId的取消结果，后台据此不发送。后台若不等待这个结果，弹窗只会变成装饰。官方Events将中断感知生命周期扩展列为Draft，不能把它当所有SDK通用行为。\n【面试追问】LangGraph interrupt能自动生成确认UI吗？参考答案：不能，后台暂停需适配到客户端支持的工具或事件，并实现回复关联与恢复。\n【评分】协议支持、回复关联、执行等待三层正确为合格；硬认INTERRUPT通用或弹窗自动授权不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 172,
+          "line_end": 182
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 226,
+          "line_end": 242
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 416,
+          "line_end": 434
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "保持机制题编号，解释自定义事件为何不互通及确认工具完整链路；不是落地方案题所以不强套STAR。",
+          "来源与编辑边界：源文中断概念为锚点；Tools确认模式与Events Draft状态本轮核对；邮件参数为假设，未固化草案字段。",
+          "独立审校通过：保留自定义INTERRUPT不等于全客户端支持的目标，编号给出确认工具参数、toolCallId回复和运行时等待/持久恢复职责；取消例子及LangGraph追问具体。官方Tools支持确认工具，Events确有Draft扩展，稿件未把草案字段写为稳定必填保证。",
+          "独立审校内容指纹：20f2a646e863b16652a7de7cc53624479179f43c517e453ca98de0e7f413740e"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m22.generative-ui-contract.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.generative-ui-contract"
+      ],
+      "revision": 2,
+      "position": 3208,
+      "title": "生成式UI提议怎样安全落地",
+      "kind": "场景判断",
+      "prompt": "Agent提议显示审批面板和“立即退款”按钮。你会怎样接入这类生成式UI，避免把模型输出直接变成可执行动作？",
+      "answer_short": "S｜题中Agent输出组件与退款动作提议，尚无可信执行事实。\nT｜让用户看懂建议，同时阻止错误或越权动作。\nA｜一、约定组件描述与参数Schema，只渲染允许组件；二、校验订单、金额单位和证据，未知组件降级成可读文本；三、按钮连接受控动作接口，退款经批准和服务端权限/业务校验。\nR｜用未知组件、错订单和无批准样例验证展示与拒绝路径；支持AG-UI只解决交互传递，不自动建立组件库或执行权限。",
+      "required_points": [
+        "组件格式/渲染仍需约定，协议不自动渲染全部UI",
+        "允许组件、参数校验及未知类型降级",
+        "展示与执行分离，退款走有效审批/授权"
+      ],
+      "pitfalls": "合法组件也可能带错订单；白名单不等于权限验证，不能执行模型提供的任意脚本或HTML。",
+      "explanation": "假设RefundPanel缺少金额单位，合法组件名仍不能让按钮直接退款，因为数字可能含义不明。先展示待补信息，再由固定界面和受控接口承载动作，减少模型决定执行语义的空间。展示还应有可读标签与键盘操作。\n【面试追问】白名单能阻止一切风险吗？参考答案：不能，错误业务参数与越权仍可能通过合法组件进入，执行端必须独立验证。\n【评分】组件契约、参数验证、动作授权均覆盖为合格；把协议或白名单当安全保证不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 184,
+          "line_end": 194
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 392,
+          "line_end": 400
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 488,
+          "line_end": 500
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "生成式UI题改STAR，用金额单位缺失解释组件合法与动作有效的区别。",
+          "来源与编辑边界：源文白名单与前端验证支持目标；退款面板为题面/编辑假设，服务端边界为工程设计。",
+          "独立审校通过：保留组件描述/渲染约定与展示不授权动作目标，STAR以允许组件、Schema、订单金额单位、降级及服务端校验建立完整链；缺单位例子和白名单追问有实际因果，无障碍及不执行任意脚本/HTML的安全边界保留。",
+          "独立审校内容指纹：67f5479a39bfedf4d8b2bc62077e259141a776b14dcf1d10c429195d4802836a"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m22.event-visibility.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.event-visibility"
+      ],
+      "revision": 2,
+      "position": 3209,
+      "title": "过程反馈怎样帮助用户行动",
+      "kind": "场景判断",
+      "prompt": "销售助手展示每个内部事件，用户反而难理解。你会怎样划分直接展示、轻提示和调试信息？能否承诺展示模型全部思考？",
+      "answer_short": "S｜题中事件逐条展示造成信息负担，关键待办被淹没。\nT｜让用户知道进度、结果和下一步，而非阅读全部日志。\nA｜一、直接展示影响判断的结果、失败和确认项；二、工具等待及高频状态更新合并成轻提示；三、调试载荷脱敏并限制访问，公开的是可记录过程与证据摘要，不承诺全部内部思维。\nR｜观察用户能否及时发现需补资料/确认发信；合并展示不得隐藏重要失败，流畅进度也不证明结果正确。",
+      "required_points": [
+        "按任务判断区分关键信息、轻提示与受控日志",
+        "高频合并不掩盖重要失败/待办",
+        "可见事件或解释摘要不等于全部思维/可信性"
+      ],
+      "pitfalls": "源文300ms和2秒仅为体验示例；不默认展示敏感输入、提示词或完整推理，透明也不能替代证据核查。",
+      "explanation": "假设销售只需知道CRM查询完成、资料缺失、议程可修改、何时确认发送，不需逐片看工具参数。加载提示解释“正在查什么”，结果摘要解释“依据是什么”，两者帮助不同决策，不能用忙碌动画代替失败通知。\n【面试追问】短暂错误都要弹窗吗？参考答案：不必；无影响自动重试可轻提示，影响结果、时限或需用户动作则明确告知并保留日志。\n【评分】三层可见性及隐藏边界清楚为合格；“过程透明所以可靠”不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 240,
+          "line_end": 242
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 392,
+          "line_end": 414
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 436,
+          "line_end": 443
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "从信息展示分类改为任务导向STAR，补出等待提示与结果证据各自用途。",
+          "来源与编辑边界：源文分层可见性支持目标；销售需求为假设，体验数字不进恒定评分，思维可见性不作承诺。",
+          "独立审校通过：保留直接展示/轻提示/受控日志三层目标，STAR按用户下一步判断合并高频信息但保留失败待办；CRM/议程/确认例子具体，追问按影响决定告知。未承诺全部内部思维、固定300ms/2秒普适指标或透明即可靠。",
+          "独立审校内容指纹：644a5b6ee0d8200a8c4bbe0a2e48fdd2517a8169e7edf7a3292600ea721d2b2c"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m22.event-render-diagnosis.001",
+      "lesson_source_key": "第3章-技术攻克/3.22-AG-UI.md",
+      "concept_keys": [
+        "interview.m22.event-render-diagnosis"
+      ],
+      "revision": 2,
+      "position": 3210,
+      "title": "后台结束但页面仍转圈怎样排查",
+      "kind": "故障诊断",
+      "prompt": "销售助手后台结束，页面仍处理中。你会怎样沿AG-UI事件链定位，安全保存/回放诊断证据，并验证页面与运行状态一致？",
+      "answer_short": "S｜后台终态与页面加载态不一致。\nT｜定位事件丢失或误读，让页面如实反映该run。\nA｜一、同thread/run核对发出与接收；二、检查终态归属、补丁错误和加载态规则；三、保存最小必要标识与载荷摘要，脱敏并限制访问，按证据修处理器/状态再回放，完整敏感载荷须另有授权。\nR｜测试真实断线、重进和旧事件迟到，预期加载态与结果一致；超时显示未确认，回放展示不再次执行写入。",
+      "required_points": [
+        "按thread/run对齐发出、接收、处理、渲染并区分错因",
+        "最小化、脱敏及受限访问保存诊断证据，完整敏感载荷另需授权",
+        "事件复现加真实异常路径验证，不伪造成功或重放副作用"
+      ],
+      "pitfalls": "后台日志成功不能代替页面验收；只改超时结束动画会遮住根因，换模型也不修事件错配。",
+      "explanation": "假设run-B已结束但终态被归到run-A，B仍转圈；若补丁已收到却解析失败，则要检查处理器与基线。事件日志可能包含客户输入、CRM资料和工具参数，先保存必要关联标识、错误类型和摘要，脱敏并控制保存/访问；需完整载荷时按授权范围处理，不默认复制全部内容。\n【面试追问】日志回放成功就算修好了吗？参考答案：仅证明该链处理通过，还需真实页面的断线/迟到路径；回放诊断不得触发再次发送或写CRM。\n【评分】诊断证据链、日志数据边界与真实复测均覆盖为合格；后台日志替代UI验收、无控制保存敏感载荷或回放写入不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 427,
+          "line_end": 443
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.22-AG-UI.md",
+          "content_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+          "line_start": 502,
+          "line_end": 519
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "诊断改STAR，按发出到渲染的责任链组织排查，R明确回放与真实异常验证区别。",
+          "来源与编辑边界：源文异常和事件回放支持目标；run错配/解析失败为假设，没有声称执行了浏览器验收。",
+          "处理review-b：恢复日志最小化、脱敏和受限访问，完整敏感载荷另需授权；题面、A、必答点与评分同步，保留回放不重执行业务写入。",
+          "独立审校通过：定向复核修复：题面、核心A、必答点2及评分恢复最小标识/载荷摘要、脱敏和受限访问，完整敏感载荷另受授权；终态错归属与补丁失败仍有分层证据，真实断线/迟到与回放不写入都保留，三个必答点与评分一致。",
+          "独立审校内容指纹：af0029db98b7e5466a913d3e9b827052a94df813139d691da9a1546c6fda94dd"
+        ]
+      }
+    }
+  ]
+}

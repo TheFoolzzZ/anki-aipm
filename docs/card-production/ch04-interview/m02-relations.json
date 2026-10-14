@@ -1,0 +1,14 @@
+[
+  {
+    "from": "ch04.interview.m02.three-surface-contract.001",
+    "to": "ch03.interview.m13.result-contract.001",
+    "type": "extension",
+    "reason": "三工程API需要明确成功、失败和部分结果语义，复用既有结果契约"
+  },
+  {
+    "from": "ch04.interview.m02.fill-versus-submit.001",
+    "to": "ch03.agent.ambiguous-tool-result.001",
+    "type": "extension",
+    "reason": "投递结果未知时按已发表写操作恢复目标核对事实，避免重复提交"
+  }
+]

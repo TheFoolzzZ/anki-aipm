@@ -1,0 +1,465 @@
+{
+  "module_id": "3.6",
+  "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+  "native_objectives": 22,
+  "registered": 22,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O01",
+      "original_text": "*   [ ] 明确微调目标（是风格？知识？格式？还是推理能力？）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 431,
+      "decision": "采用",
+      "reason": "按缺口决定是否微调",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.problem-selection.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O02",
+      "original_text": "*   [ ] 评估 Prompt Engineering 是否能解决问题（成本低，先尝试）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 432,
+      "decision": "合并",
+      "reason": "提示是可比较基线而非强制流程",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.problem-selection.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O03",
+      "original_text": "*   [ ] 评估 RAG 是否能解决问题（如果主要是知识问题，优先 RAG）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 433,
+      "decision": "合并",
+      "reason": "动态事实与行为分工",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.problem-selection.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O04",
+      "original_text": "*   [ ] 确认数据可获得性和数据量（LoRA 至少需要几百条）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 434,
+      "decision": "拆分",
+      "reason": "取消固定数量门槛，T1验证样本覆盖",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.data-contract.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O05",
+      "original_text": "*   [ ] 评估预算（包括数据标注成本、算力成本、人力成本）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 435,
+      "decision": "拆分",
+      "reason": "验收卡成本口径与T1预算表",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.acceptance.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O06",
+      "original_text": "*   [ ] 确定效果评估标准和验收条件",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 436,
+      "decision": "采用",
+      "reason": "基线与风险共同定义验收",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.acceptance.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O07",
+      "original_text": "*   [ ] 制定数据标注规范（格式、风格、质量标准）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 440,
+      "decision": "采用",
+      "reason": "标注规则可执行",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.data-contract.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O08",
+      "original_text": "*   [ ] 准备训练集 / 验证集 / 测试集（建议比例 8:1:1）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 441,
+      "decision": "采用",
+      "reason": "按事件分组防泄漏，不硬背8:1:1",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.split-leakage.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O09",
+      "original_text": "*   [ ] 建立数据质量检查机制",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 442,
+      "decision": "合并",
+      "reason": "抽检和拒收进入数据契约",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.data-contract.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O10",
+      "original_text": "*   [ ] 确保数据合规（隐私、版权、敏感信息）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 443,
+      "decision": "合并",
+      "reason": "授权敏感处理与可追溯",
+      "mother_question_id": "M06-A",
+      "card_keys": [
+        "ch03.finetune.data-contract.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O11",
+      "original_text": "*   [ ] 选择基座模型（通用模型 vs 领域模型）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 447,
+      "decision": "拆分",
+      "reason": "方法卡追问比较基座，T1完整选型",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.interview.m06.method-evidence.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O12",
+      "original_text": "*   [ ] 选择微调方法（LoRA / QLoRA / 全量）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 448,
+      "decision": "采用",
+      "reason": "按可训练参数与资源比较",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.interview.m06.method-evidence.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O13",
+      "original_text": "*   [ ] 设置合理的超参数",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 449,
+      "decision": "采用",
+      "reason": "超参数作用与对照实验",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.interview.m06.hyperparameter-experiment.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O14",
+      "original_text": "*   [ ] 监控训练过程（loss 曲线、验证集效果）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 450,
+      "decision": "合并",
+      "reason": "验证曲线与回归诊断",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.finetune.overfitting-diagnosis.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O15",
+      "original_text": "*   [ ] 定量评估（自动指标）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 454,
+      "decision": "合并",
+      "reason": "自动指标对应业务错误",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.finetune.acceptance.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O16",
+      "original_text": "*   [ ] 定性评估（人工判断）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 455,
+      "decision": "合并",
+      "reason": "人工核对高代价事实",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.finetune.acceptance.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O17",
+      "original_text": "*   [ ] 和基座模型对比（微调真的提升了吗？）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 456,
+      "decision": "合并",
+      "reason": "同集对照基座",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.finetune.acceptance.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O18",
+      "original_text": "*   [ ] 和 Prompt / RAG 方案对比（性价比如何？）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 457,
+      "decision": "拆分",
+      "reason": "替代路线成本比较，T1完整记录",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.finetune.acceptance.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O19",
+      "original_text": "*   [ ] 模型部署（推理服务化）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 461,
+      "decision": "拆分",
+      "reason": "版本与回退原则加T2服务验收",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.finetune.release-monitoring.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O20",
+      "original_text": "*   [ ] 性能测试（延迟、吞吐量）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 462,
+      "decision": "拆分",
+      "reason": "真实负载性能留T2",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.finetune.release-monitoring.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O21",
+      "original_text": "*   [ ] 监控机制（输出质量、异常检测）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 463,
+      "decision": "合并",
+      "reason": "质量异常与性能共同监控",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.finetune.release-monitoring.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.6",
+      "objective_id": "3.6-O22",
+      "original_text": "*   [ ] 迭代计划（持续收集 bad case，迭代优化）",
+      "source_path": "第3章-技术攻克/3.6-模型微调.md",
+      "source_hash": "032dcbe64ddcb1550610f88f862fbf40a849aa7e862706ed1977b21bb8d407c3",
+      "source_line": 464,
+      "decision": "拆分",
+      "reason": "坏例先归因再入库，T2写迭代流程",
+      "mother_question_id": "M06-B",
+      "card_keys": [
+        "ch03.finetune.release-monitoring.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "publication_status": "published_and_verified_2026-10-01",
+  "deferred_facts": []
+}

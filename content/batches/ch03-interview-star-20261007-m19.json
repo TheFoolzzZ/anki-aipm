@@ -1,0 +1,316 @@
+{
+  "batch_id": "ch03-interview-star-20261007-m19",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m19.server-primitives.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.server-primitives"
+      ],
+      "revision": 2,
+      "position": 2902,
+      "title": "MCP资源工具模板的职责",
+      "kind": "对比",
+      "prompt": "分析助手读指标定义、按日期查销售额、套月报模板，MCP Resource、Tool、Prompt怎样分工？为什么只读查询也可以是Tool？",
+      "answer_short": "一、Resource提供可读取上下文，如指标定义及分母口径；Host读取后还要选择组织，不自动成为完整RAG。\n二、Tool提供可调用操作，如query_sales按日期参数运行；执行可以只读，也可能写入，副作用由具体接口决定。\n三、Prompt提供可复用交互模板，如月报问题结构；模板进入输入，不自动执行查询或发送。Server可只暴露所需部分，Host按应用设计呈现。",
+      "required_points": [
+        "定义上下文可执行操作和交互模板三对象",
+        "指标定义日期查询月报模板对应正确",
+        "Tool可只读，模板非自动工作流"
+      ],
+      "pitfalls": "不能按读/写简单二分Resource和Tool；资源存在不保证已检索并正确组织。",
+      "explanation": "假设指标文档说明销售额含税，查询Tool返回日期范围数据，月报Prompt指导比较口径。三种原语分别提供信息、动作和输入模板；模板说“发月报”仍需应用选择数据、生成并授权执行。\n【面试追问】Server必须凑齐三种吗？参考答案：不必，按提供能力暴露相应部分并声明支持，Host核对。\n【评分】三职责、对应例子及执行边界必答；只读都算Resource不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 98,
+          "line_end": 142
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "编号将三原语映射到同一分析任务，保留技术分工。",
+          "具体业务例子、验证及迁移演练均为编辑假设/设计；未实际集成或恢复。",
+          "独立审校通过：保留Resource上下文/Tool操作/Prompt模板三原语，编号把指标定义、按日期查询、月报模板对应并说明只读Tool和模板不执行；Host仍组织资料不是自动完整RAG。追问无需凑齐能力，官方机制支持，无读写二分错误。",
+          "独立审校内容指纹：15bb6d459010cb06706826fca38c286584f49ded1b7570f9959ee62df583c9d5"
+        ]
+      }
+    },
+    {
+      "canonical_key": "C08",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "mcp-vs-function-call"
+      ],
+      "revision": 3,
+      "position": 8,
+      "title": "函数调用意图与MCP通信",
+      "kind": "对比",
+      "prompt": "Function Call和MCP各解决什么？模型已支持工具调用，为什么还需应用实现ERP的连接、执行和结果回传？",
+      "answer_short": "一、Function Call让模型提出工具名和参数，是结构化调用意图，模型输出本身不查库存或写ERP。\n二、MCP约定应用与Server能力发现和交互，工具/资源需真正连接；模型支持函数请求不自动具有MCP Client。\n三、应用把获准工具交模型，接收意图后校验，经Client调用Server及后端，再关联回传结果供回答使用。两层可组合，后端ERP API仍可保留。",
+      "required_points": [
+        "Function Call表达请求而非执行",
+        "MCP标准化能力发现交互，不自动替代应用或模型判断",
+        "应用连接校验执行关联回传的完整链路"
+      ],
+      "pitfalls": "没有实际Client连接与映射，JSON工具请求不会自动接到ERP；两者也不是二选一。",
+      "explanation": "假设模型输出get_stock(sku=ABC)，应用还须映射到允许的ERP工具。Server可调用已有API返回库存，Host再交给模型总结；任一环节丢失都可能令回答错误。开放协议已有授权规范，但业务对象权限仍须按真实身份在执行侧校验。\n【面试追问】实际库存0、模型说100先看什么？参考答案：查调用是否执行、结果是否正确关联解析进入输入，再看生成是否使用证据。\n【评分】请求层、协议层及应用执行层三项必答；支持模型即接通MCP不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 146,
+          "line_end": 189
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "编号重建意图→协议→业务执行链，保持C08身份及原分工目标。",
+          "具体业务例子、验证及迁移演练均为编辑假设/设计；未实际集成或恢复。",
+          "独立审校通过：保留Function Call意图、MCP发现交互和应用执行三层，核心沿Host获准工具、意图校验、Client/Server/ERP执行和关联回传讲完整链；get_stock例子及库存0却答100追问具体，协议授权不代对象权限，模型支持不等MCP已接通。",
+          "独立审校内容指纹：86232cda7deb5d5f04ae7ff946c67db06cd5d8703c90d6254aae9a1f67000994"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.server-admission.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.server-admission"
+      ],
+      "revision": 2,
+      "position": 2906,
+      "title": "关键能力不能被热度抵消",
+      "kind": "场景判断",
+      "prompt": "假设MCP Server覆盖80%接口且维护活跃、Star很多，却没有生产必需的撤销能力。你会怎样决定准入并组织试点？",
+      "answer_short": "S｜查询多数可用，但关键错误恢复缺失。\nT｜验证必需任务闭环，不让加权总分遮住硬缺口。\nA｜一、按本产品任务与故障代价设能力和恢复硬门槛，缺撤销先补或缩范围。二、核对版本、传输、部署和认证授权，执行侧仍验证真实身份及业务资源权限。三、复现发现、调用、失败及升级，业务方验对象语义，运维查支持证据。\nR｜代表路径及故障试点达标才准入；80%和活跃度只是题面假设，不作通用通过线。",
+      "required_points": [
+        "关键任务恢复是硬门槛，不被总分热度抵消",
+        "版本部署认证业务权限和运维证据核对",
+        "代表任务及失败试点证明适配，不以Star更新替代"
+      ],
+      "pitfalls": "文档更新不等于功能修复；第三方生产案例不证明本租户适配，自研也要同样验证。",
+      "explanation": "假设支持八个查询却不能撤回错误申请，计数覆盖很高也无法闭环。MCP存在HTTP授权规范，实施仍要检查目标Server支持及执行范围；令牌可连接不代表能撤销任意客户案件。许可按具体版本另核，不把原文法律断言当固定规则。\n【面试追问】自研可以跳过准入吗？参考答案：不能，同任务、故障恢复和权限证据仍要满足。\n【评分】硬门槛、兼容授权运维、试点三项必答；热度抵消关键缺口不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 398,
+          "line_end": 429
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 545,
+          "line_end": 559
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "STAR以必需撤销能力定义硬门槛，明确MCP授权存在与业务权限实施分层。",
+          "具体业务例子、验证及迁移演练均为编辑假设/设计；未实际集成或恢复。",
+          "独立审校通过：保留关键恢复能力硬门槛与准入试点目标，STAR按任务风险补撤销或缩范围，核版本传输部署认证/对象权限及运维；八查询却不能撤回例子解释覆盖率不替闭环。自研同样试点，80%/Star不通用，许可法律断言未继承。",
+          "独立审校内容指纹：fc24a89e8b90c9d433d3ae950807ef0aac880f3c3bbc7b4746d64ab9f92742b9"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.integration-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.integration-boundary"
+      ],
+      "revision": 2,
+      "position": 2905,
+      "title": "标准通信与跨系统事务",
+      "kind": "场景判断",
+      "prompt": "假设MCP连通CRM、项目与通知系统，项目已创建而合同同步失败。你会怎样处理，为什么不能说所有步骤已原子完成？",
+      "answer_short": "S｜部分系统成功，后续步骤失败。\nT｜如实保持业务中间态，避免错误通知和重复执行。\nA｜一、按对象ID记录各步状态与依赖，MCP统一交互不提供跨系统事务。二、停止依赖合同成功的通知，回读项目和合同真实状态。三、按后端支持及授权安全补偿，不能补偿就人工接管；恢复先查去重及已有结果。\nR｜用部分失败测试验证状态和恢复，不假装已创建项目不存在；整流程封装是额外业务实现，非协议自动保证。",
+      "required_points": [
+        "统一接口不保证跨系统原子性",
+        "对象步骤依赖及真实状态清楚，停止错误传播",
+        "补偿接管恢复依后端能力授权和事实"
+      ],
+      "pitfalls": "代码或通信回滚不会自动撤销外部记录；补偿也可能失败或不可逆。",
+      "explanation": "假设项目空间已经存在，合同同步未完成，发“合同就绪”通知会制造新错误。若项目后端允许安全关闭，可按业务规则补偿，否则保留状态等待处理；不必为了看上去干净强删成功产物。\n【面试追问】Server包装全部步骤会原子吗？参考答案：只有后端另外实现并证明相应事务或补偿，MCP外壳不提供该保证。\n【评分】事务边界、状态依赖、恢复三项必答；全用MCP即一致不合格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 259,
+          "line_end": 284
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 350,
+          "line_end": 384
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "STAR明确部分成功和依赖停止，保留跨系统事务边界。",
+          "具体业务例子、验证及迁移演练均为编辑假设/设计；未实际集成或恢复。",
+          "独立审校通过：保留MCP统一交互不供跨系统事务，STAR按对象记录成功/失败依赖、停合同就绪通知、回读再按授权补偿或接管；不能假装已创建不存在。追问封装仍须后端另实现证明事务，恢复去重与不可逆补偿边界完整。",
+          "独立审校内容指纹：e75b73cff14ce661a645a1286aaafd38527e6f417b0be48d97693ac63f47b7e6"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.host-client-server.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.host-client-server"
+      ],
+      "revision": 2,
+      "position": 2901,
+      "title": "Host Client Server的协作",
+      "kind": "概念",
+      "prompt": "分析应用连接数仓与文档两个MCP Server。Host、Client、Server分别负责什么？部署位置与维护者身份有什么关系？",
+      "answer_short": "一、Host是AI应用，协调用户、模型、上下文及多个Client，决定工具可见与业务流程；不是仅一条协议连接。\n二、Client是Host中连接对应Server的协议组件，处理通信而非等同LLM；数仓和文档连接各自有对应Client。\n三、Server提供工具、资源或模板，可自研或外部维护，本地或远程部署。部署位置不决定所有权，更不意味着多个用户共享数据权限。",
+      "required_points": [
+        "Host应用协调与用户模型交互",
+        "Client通信与Server能力职责分清",
+        "Server维护者与部署方式独立，可自研或第三方"
+      ],
+      "pitfalls": "不能把模型的工具选择与审批全部归Client；本地运行也需核数据和动作授权。",
+      "explanation": "假设数仓Server通过已有查询API取数，文档Server返回指标定义，Host组织信息并调用模型。Client管理各自协议交互，不负责定义销售指标。远程自研Server可服务多个连接，但隔离和资源授权需系统落实，不能从连通推出可共享所有资料。\n【面试追问】一个Server可多用户吗？参考答案：可由实现支持，身份、隔离和授权要真实校验，不由角色名称保证。\n【评分】三者职责及部署维护边界须齐全；Client等于模型不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 65,
+          "line_end": 96
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 331,
+          "line_end": 348
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "编号用双Server解释角色和部署轴，保留架构概念目标。",
+          "具体业务例子、验证及迁移演练均为编辑假设/设计；未实际集成或恢复。",
+          "独立审校通过：保留Host应用协调、Client通信、Server能力三个职责，编号有数仓和文档两Client分工，自研/第三方与本地/远程独立；追問多用户须身份隔离授权。模型选工具审批不都归Client，本地连通不扩权限，纠正源文固定维护者。",
+          "独立审校内容指纹：a9e5ba1998dcdf6778f8f6040d1b4baf0ea51f0d4de4ff219226baa0d17173a3"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.transport-compatibility.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.transport-compatibility"
+      ],
+      "revision": 2,
+      "position": 2904,
+      "title": "传输及授权方式的兼容边界",
+      "kind": "场景判断",
+      "prompt": "本机文件Server和远程报表Server为何不能都当网络调用？迁移旧SSE配置时须核对什么，授权方式有哪些边界？",
+      "answer_short": "一、本机Server可用stdio进程通信，远程常用Streamable HTTP；SSE可用于受支持的流式传输，不是MCP唯一入口。\n二、兼容要核对双方协议版本、传输、能力及配置，旧SDK或SSE方式不自动保证新实现可用。\n三、MCP已有可选授权规范，HTTP支持时按其要求实施；stdio不照搬HTTP授权流程，凭证由环境等配置取得。连接授权也不替代业务资源范围校验。",
+      "required_points": [
+        "区分stdio进程与HTTP传输，SSE非唯一入口",
+        "双方版本传输能力及旧配置支持实际核对",
+        "MCP有授权规范但分传输实施，业务资源权限仍校验"
+      ],
+      "pitfalls": "不读取或暴露凭证值；HTTP的授权机制不能仅因协议名照搬到stdio。",
+      "explanation": "假设本地Server没启动，先查进程路径与标准输入输出；远程报表认证失败则查连接和授权配置，不能都归因网络。当前授权页说明实现可选，HTTP支持时应遵循，stdio采用环境凭证路径；这是协议要求而不是所有部署自动具备。业务执行仍核租户、对象及动作。\n【面试追问】升级后工具减少只换模型吗？参考答案：先对比版本能力和列表，再查Host可见性缓存与映射，用原请求回归。\n【评分】传输、兼容、授权三项必答；MCP无任何授权规范不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 531,
+          "line_end": 543
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 577,
+          "line_end": 590
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "编号保留传输原理辨析，按本轮官方页面补授权实施边界，不强套STAR。",
+          "具体业务例子、验证及迁移演练均为编辑假设/设计；未实际集成或恢复。",
+          "独立审校通过：保留stdio进程与Streamable HTTP、SSE可选及版本兼容目标，编号新增HTTP可选授权规范与stdio环境配置路径，经第一方核对一致；进程失败/远程认证例子可定位，追问先工具列表缓存映射，授权不代资源范围且不读取凭证值。",
+          "独立审校内容指纹：7020b3d3e3adb38254823423578343b767aa3bd0b8c5c4afe69de42057e06aef"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.discovery-call-loop.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.discovery-call-loop"
+      ],
+      "revision": 2,
+      "position": 2903,
+      "title": "发现工具到使用结果的链路",
+      "kind": "机制",
+      "prompt": "Server有查订单工具，模型却说不能查。请沿MCP工具从连接、发现到执行回传解释关键环节，并说明各层应看什么证据。",
+      "answer_short": "一、确认连接、版本及能力兼容，枚举工具与Schema；Server有实现不等于实际列表已暴露。\n二、Host把获准工具交模型或应用逻辑，接收调用意图、校验参数权限，再经Client发给Server执行；看可见列表及真实请求。\n三、结果关联回传并进入后续状态/输入，回答才能使用订单数据；看执行状态与实际输入。缺哪层查哪层，协议响应正常仍不证明业务查询成功。",
+      "required_points": [
+        "连接能力后枚举工具Schema的证据",
+        "Host意图校验和Client真实调用的证据",
+        "执行结果关联回传并被应用使用，不以连接代替完成"
+      ],
+      "pitfalls": "模型不直接连数据库；名称存在不证明后端权限、业务范围或服务可用。",
+      "explanation": "假设枚举有query_order但未交给模型，先查Host可见性，不用重装Server。模型已提出而Server无请求，查映射与Client；结果已返回但答案说不能查，再查解析和实际输入。本卡解释分层链路，用编号保留机制目标。\n【面试追问】Schema全对仍会失败吗？参考答案：会，后端对象授权、参数语义或服务故障另需执行检查。\n【评分】发现、真实调用、回传使用三层齐全；配置一次即自动可用不合格。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 39,
+          "line_end": 58
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 86,
+          "line_end": 96
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 150,
+          "line_end": 189
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "独立审校B + 主编契约核验",
+        "notes": [
+          "编号用可见列表请求与输入三个证据解释链路，保持技术机制。",
+          "具体业务例子、验证及迁移演练均为编辑假设/设计；未实际集成或恢复。",
+          "独立审校通过：保留连接/版本能力→工具Schema发现→Host获准意图校验→Client真实调用→结果关联回传/使用链，编号每层明确证据；列表未交模型/Server没请求/输入遗漏各有排查。未硬背版本报文，Schema存在不证明后端权限或业务完成。",
+          "独立审校内容指纹：7de7273f10332a833f9f3d16dccc8e963dffabecb4a1c1bc1a3439e32e9a7cb3"
+        ]
+      }
+    }
+  ]
+}

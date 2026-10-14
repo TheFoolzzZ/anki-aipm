@@ -1,0 +1,20 @@
+[
+  {
+    "to": "ch07.interview.m01.network-effect.001",
+    "type": "compare",
+    "reason": "交互改进闭环与跨参与者外部性不同；不能把个人数据积累直接称网络效应",
+    "from": "ch07.interview.m01.data-loop.001"
+  },
+  {
+    "to": "ch07.interview.m01.data-loop.001",
+    "type": "prerequisite",
+    "reason": "检验数据壁垒先需要证明反馈治理到任务增益的有效闭环",
+    "from": "ch07.interview.m01.moat-test.001"
+  },
+  {
+    "to": "ch07.interview.m01.incremental-return.001",
+    "type": "compare",
+    "reason": "生命周期获客回收看客户持续贡献，模型升级看方案增量收益，期间和分母不同",
+    "from": "ch07.interview.m01.cohort-payback.001"
+  }
+]

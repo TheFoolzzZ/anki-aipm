@@ -1,0 +1,11 @@
+{
+  "module_id": "6.1",
+  "relations": [
+    {
+      "from": "ch06.interview.m01.video-continuity.001",
+      "to": "ch06.interview.m01.brief-control.001",
+      "type": "compare",
+      "reason": "静态商品约束与视频跨帧一致性都关心身份保持，但视频必须检查状态转移而不只输出单张图"
+    }
+  ]
+}

@@ -1,0 +1,1007 @@
+{
+  "module_id": "4.1",
+  "source_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+  "source_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+  "native_objectives": 0,
+  "registered": 0,
+  "non_checklist_registered": 49,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L1",
+      "original_text": "# 4.1 了解VibeCoding",
+      "source_line": 1,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L15",
+      "original_text": "## 一、VibeCoding是什么？",
+      "source_line": 15,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L17",
+      "original_text": "### （一）一个形象的定义",
+      "source_line": 17,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L27",
+      "original_text": "### （二）Andrej Karpathy的原话",
+      "source_line": 27,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L41",
+      "original_text": "### （三）为什么叫\"Vibe\"Coding？",
+      "source_line": 41,
+      "source_type": "正文明确问题",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L51",
+      "original_text": "## 二、VibeCoding的核心工作流",
+      "source_line": 51,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L53",
+      "original_text": "### （一）标准工作循环",
+      "source_line": 53,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.executable-loop.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L63",
+      "original_text": "#### 1. 描述意图（Prompt）",
+      "source_line": 63,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.executable-loop.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L75",
+      "original_text": "#### 2. AI生成（Generate）",
+      "source_line": 75,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.executable-loop.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L84",
+      "original_text": "#### 3. 运行验证（Verify）",
+      "source_line": 84,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.executable-loop.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L88",
+      "original_text": "#### 4. 反馈迭代（Iterate）",
+      "source_line": 88,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.executable-loop.001",
+        "ch04.interview.m01.reproduction-feedback.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L98",
+      "original_text": "### （二）一个完整的VibeCoding示例",
+      "source_line": 98,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.executable-loop.001",
+        "ch04.interview.m01.reproduction-feedback.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L122",
+      "original_text": "## 三、VibeCoding的主流工具",
+      "source_line": 122,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L124",
+      "original_text": "### （一）Cursor：当前最热门的VibeCoding工具",
+      "source_line": 124,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L138",
+      "original_text": "### （二）Windsurf：Cascade工作流",
+      "source_line": 138,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L150",
+      "original_text": "### （三）GitHub Copilot：代码补全之王",
+      "source_line": 150,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L162",
+      "original_text": "### （四）其他工具",
+      "source_line": 162,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L171",
+      "original_text": "### （五）工具选择建议",
+      "source_line": 171,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L181",
+      "original_text": "## 四、VibeCoding对AI产品经理的启发",
+      "source_line": 181,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L183",
+      "original_text": "### （一）AI PM为什么需要了解VibeCoding？",
+      "source_line": 183,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L185",
+      "original_text": "#### 1. 降低原型验证的成本",
+      "source_line": 185,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L197",
+      "original_text": "#### 2. 建立与技术团队的共同语言",
+      "source_line": 197,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L205",
+      "original_text": "#### 3. 洞察AI产品的设计机会",
+      "source_line": 205,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L210",
+      "original_text": "*   **能力边界**：AI什么时候能生成正确代码？什么时候会出错？这些边界就是产品设计要考虑的",
+      "source_line": 210,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L213",
+      "original_text": "### （二）VibeCoding带来的产品设计思考",
+      "source_line": 213,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L215",
+      "original_text": "#### 思考1：AI产品的\"确定性vs创造性\"平衡",
+      "source_line": 215,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L224",
+      "original_text": "#### 思考2：反馈闭环的设计",
+      "source_line": 224,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L234",
+      "original_text": "#### 思考3：信任与可控性",
+      "source_line": 234,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L236",
+      "original_text": "VibeCoding最大的争议是\"人不看代码，怎么保证安全？\"",
+      "source_line": 236,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L240",
+      "original_text": "*   **给用户多少控制权？**",
+      "source_line": 240,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L241",
+      "original_text": "*   **如何让AI的决策可解释、可审计？**",
+      "source_line": 241,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L242",
+      "original_text": "*   **出错时责任怎么划分？**",
+      "source_line": 242,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L246",
+      "original_text": "## 五、产品经理如何用VibeCoding提升效率",
+      "source_line": 246,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L248",
+      "original_text": "### （一）场景1：快速搭建产品原型",
+      "source_line": 248,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L260",
+      "original_text": "### （二）场景2：数据分析与可视化",
+      "source_line": 260,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L272",
+      "original_text": "### （三）场景3：自动化工具脚本",
+      "source_line": 272,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L284",
+      "original_text": "### （四）场景4：学习技术概念",
+      "source_line": 284,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L296",
+      "original_text": "## 六、VibeCoding的局限性与注意事项",
+      "source_line": 296,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L298",
+      "original_text": "### （一）当前的技术局限",
+      "source_line": 298,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L308",
+      "original_text": "### （二）产品经理需要警惕的误区",
+      "source_line": 308,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L310",
+      "original_text": "#### 误区1：\"有了VibeCoding，我完全不需要懂技术了\"",
+      "source_line": 310,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L318",
+      "original_text": "#### 误区2：\"VibeCoding生成的代码可以直接上生产环境\"",
+      "source_line": 318,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L327",
+      "original_text": "#### 误区3：\"VibeCoding会让程序员失业\"",
+      "source_line": 327,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L337",
+      "original_text": "### （三）给AI PM的实践建议",
+      "source_line": 337,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L346",
+      "original_text": "## 七、写在最后",
+      "source_line": 346,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "4.1-L360",
+      "original_text": "作为AI产品经理，你不需要成为VibeCoding的专家，但你需要理解它、体验它、思考它——因为**你正在设计的AI产品，很可能就是下一代的\"VibeX\"**（VibeDesigning？VibeAnalyzing？）。",
+      "source_line": 360,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.prompt.task-contract.001",
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "ch04.interview.m01.executable-loop.001",
+      "original_text": "本卡专考软件事件状态和改动验收；通用指令结构复用3.9，不另造Prompt模板卡。",
+      "source_line": 53,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "本卡专考软件事件状态和改动验收；通用指令结构复用3.9，不另造Prompt模板卡。",
+      "card_keys": [
+        "ch04.interview.m01.executable-loop.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "ch04.interview.m01.prototype-evidence.001",
+      "original_text": "本卡检验PM用原型得出何种产品结论，不重复3.25模型指标或笼统上线验收。",
+      "source_line": 191,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "本卡检验PM用原型得出何种产品结论，不重复3.25模型指标或笼统上线验收。",
+      "card_keys": [
+        "ch04.interview.m01.prototype-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "4.1",
+      "objective_id": "ch04.interview.m01.reproduction-feedback.001",
+      "original_text": "专考软件故障复现与验证闭环；区别3.9任务契约及Prompt版本实验。",
+      "source_line": 85,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "专考软件故障复现与验证闭环；区别3.9任务契约及Prompt版本实验。",
+      "card_keys": [
+        "ch04.interview.m01.reproduction-feedback.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

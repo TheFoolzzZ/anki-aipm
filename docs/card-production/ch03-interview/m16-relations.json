@@ -1,0 +1,41 @@
+{
+  "module_id": "3.16",
+  "relations": [
+    {
+      "from": "ch03.interview.m16.centroid-classification.001",
+      "to": "ch03.vector.training-objective.001",
+      "type": "prerequisite",
+      "reason": "分类距离是否有用依赖表示训练目标和标签语义"
+    },
+    {
+      "from": "ch03.interview.m16.semantic-dedup.001",
+      "to": "ch03.interview.m16.score-calibration.001",
+      "type": "prerequisite",
+      "reason": "去重门槛需理解分数不是概率和任务标注"
+    },
+    {
+      "from": "ch03.interview.m16.content-recommendation.001",
+      "to": "ch03.interview.m16.centroid-classification.001",
+      "type": "compare",
+      "reason": "推荐选择有用内容与分类选择类别使用不同任务目标"
+    },
+    {
+      "from": "ch03.interview.m16.cross-modal-alignment.001",
+      "to": "ch03.vector.training-objective.001",
+      "type": "prerequisite",
+      "reason": "跨模态对齐仍由匹配训练目标建立空间关系"
+    },
+    {
+      "from": "ch03.interview.m16.cross-modal-alignment.001",
+      "to": "ch03.interview.m10.embedding-migration.001",
+      "type": "compare",
+      "reason": "跨模态编码兼容与同模态模型迁移是相关但不同的条件"
+    },
+    {
+      "from": "ch03.interview.m16.score-calibration.001",
+      "to": "ch03.vector.metric-compatibility.001",
+      "type": "prerequisite",
+      "reason": "先分清距离的数学性质再解释业务门槛"
+    }
+  ]
+}

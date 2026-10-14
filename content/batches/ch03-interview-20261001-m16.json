@@ -1,0 +1,187 @@
+{
+  "batch_id": "ch03-interview-20261001-m16",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m16.centroid-classification.001",
+      "lesson_source_key": "第3章-技术攻克/3.16-Embedding.md",
+      "concept_keys": [
+        "m16.centroid-classification"
+      ],
+      "revision": 1,
+      "position": 2601,
+      "title": "最近类别为何不能强制归类",
+      "kind": "机制",
+      "prompt": "Embedding工单分类怎样用标注样本构造类别中心并分类新工单？“退款后App闪退”离技术故障最近，是否就该自动归到技术故障？",
+      "answer_short": "不一定。中心是已标注类别在表示空间的概括，最近只是相对排序，不保证单一标签或足够置信；应按业务定义允许多标签、拒识或人工路由，用多意图和未知类样本验证误分与漏分。",
+      "required_points": [
+        "说明标注样本编码/汇聚成中心、新样本距离分类的机制",
+        "最近不等于可信单一标签，用多标签/拒识及代表性评测处理边界"
+      ],
+      "explanation": "【机制】如果退款和技术词都存在，一个向量对整句话的压缩可能更靠近技术中心；中心还受样本覆盖、类别形状和编码器影响。即使所有中心都很远也能排出第一名，因此必须有未知类或低置信处理，不假设一个中心能描述所有复杂类别。\n【编辑情境】售后系统漏掉退款意图会让员工只处理闪退，导致资金诉求无人跟进。定义主辅标签或拆成两个待办，并按错误代价确定人工接管条件，而不是只算总体准确率。\n【面试追问】“新业务类来了怎么办？”参考：先确认标签定义并补标注，重新构造对应表示/分类规则，再回归其他类；不要从近邻名称猜新类。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "Embedding是表示，类别中心是下游设计；无需按距离强制分类，也没有通用接受阈值。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.16-Embedding.md",
+          "content_hash": "1c47767da080c6533760a7658f56ed00d767c29eb932b1c42c9b1b44c8083232",
+          "line_start": 134,
+          "line_end": 149
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m16.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m16.semantic-dedup.001",
+      "lesson_source_key": "第3章-技术攻克/3.16-Embedding.md",
+      "concept_keys": [
+        "m16.semantic-dedup"
+      ],
+      "revision": 1,
+      "position": 2602,
+      "title": "相似内容为何不能直接合并",
+      "kind": "场景判断",
+      "prompt": "企业政策库两段内容高度相似，一段“华东运费不报销”，另一段“华南运费可报销”。能否按固定向量相似度阈值自动删除其一？应怎样区分去重和聚类？",
+      "answer_short": "不能。语义近邻只提供重复候选，区域、否定及生效版本差异会改变政策；去重须确认关键条件和事实等价并保留来源，聚类只把同主题内容归组，不意味着可互相替代。用真实重复及相似但冲突的标注对校准规则，高风险合并需确认。",
+      "required_points": [
+        "近邻提供候选，去重须核对条件/否定/版本和事实等价",
+        "聚类同主题不等于重复删除；用冲突负例校准且保留来源"
+      ],
+      "explanation": "【机制】向量学习的相似性常突出共享主题，却不强制保证逻辑等价。原文“相似度>95%即重复”不是通用规则；分数不是重复概率。聚类按相近关系形成主题组，可同时容纳不同地区版本，而去重会改变可用证据，错误代价不同。\n【编辑情境】员工搜运费，两份政策在同组有助发现差异；删除华南版本却可能让正确政策不可达。先比较结构化条件和原文，再把真正同版本的重复件归并到保留来源的主记录。\n【面试追问】“调高阈值可以保证不误删吗？”参考：无法保证否定与限定条件被编码充分，阈值只能在本任务标注集检验。\n【第一方核对】https://sbert.net/examples/sentence_transformer/applications/paraphrase-mining/README.html（2026-10-01）仅支持近似文本对候选，不替代业务等价审查。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "同主题聚类、语义相似和事实相同是三种标准；模型相似度不是95%可信度。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.16-Embedding.md",
+          "content_hash": "1c47767da080c6533760a7658f56ed00d767c29eb932b1c42c9b1b44c8083232",
+          "line_start": 151,
+          "line_end": 167
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m16.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m16.content-recommendation.001",
+      "lesson_source_key": "第3章-技术攻克/3.16-Embedding.md",
+      "concept_keys": [
+        "m16.content-recommendation"
+      ],
+      "revision": 1,
+      "position": 2603,
+      "title": "语义近邻与推荐目标",
+      "kind": "场景判断",
+      "prompt": "B端培训平台把员工刚看完的课程编码，再推荐最近的课程。这能保证员工更愿意学、也最适合其岗位吗？应怎样验证？",
+      "answer_short": "不能。语义近邻是内容召回信号，表示主题接近；员工观看可能是必修或搜索失败，不能直接当偏好。后续按岗位权限、先修与学习目标筛选或排序，用有用性/完成情况等任务指标比较现有推荐基线，并检查重复与覆盖。",
+      "required_points": [
+        "区分内容相似召回与用户偏好/学习价值，解释观看信号的歧义",
+        "在岗位/先修约束下排序，并按任务效果与覆盖比较基线"
+      ],
+      "explanation": "【机制】把已看内容的向量作为查询能检索邻近主题，但目标函数未必学习了“下一门课对这位员工最有用”。推荐还需处理用户当前目标、履历与可访问范围；冷启动可以用岗位和明确需求，但不能因此宣称个性化已经成熟。\n【编辑情境】采购员完成强制安全课，近邻一直推荐安全课；真正当前任务是理解退供审批。对比按岗位课程路线及内容相似召回，观察被接受推荐、后续完成与重复曝光，不把点击增长当能力提升证明。\n【面试追问】“一直推近邻为何不好？”参考：可能过度重复和覆盖狭窄，可在候选中增加任务相关性与多样性约束，效果需验证。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "相似度不等于兴趣，更不等于业务收益；推荐学习价值不能只用点击率代替。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.16-Embedding.md",
+          "content_hash": "1c47767da080c6533760a7658f56ed00d767c29eb932b1c42c9b1b44c8083232",
+          "line_start": 115,
+          "line_end": 132
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m16.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m16.cross-modal-alignment.001",
+      "lesson_source_key": "第3章-技术攻克/3.16-Embedding.md",
+      "concept_keys": [
+        "m16.cross-modal-alignment"
+      ],
+      "revision": 1,
+      "position": 2604,
+      "title": "图文向量如何比较",
+      "kind": "机制",
+      "prompt": "商品助手计划把文本模型生成的768维描述向量，与另一个视觉模型生成的768维图片向量直接算距离。维度相同为何不足？要怎样获得可验证的图文检索？",
+      "answer_short": "维度相同只说明形状能计算，两编码器不一定共享语义坐标。应使用经过配对图文训练或明确对齐的兼容编码器/处理规范，在代表性图文对及相似非同款负例上验证检索；共享空间也不保证SKU、规格或材质精确一致。",
+      "required_points": [
+        "同维度不保证跨模态对齐，需兼容编码器和输入处理规范",
+        "以配对图文及相似非同款评测，精确属性另用业务字段验证"
+      ],
+      "explanation": "【机制】以CLIP为例，训练提高匹配图片/文本表示的相容性，并区分非匹配对；不是任意两个单模态模型自然互通。对齐让跨模态距离有任务含义，但距离仍是匹配信号，不证明图中商品编码与描述完全一致。\n【编辑情境】“蓝色长袖工服”可能检索到外观相近的不同防护等级工服；采购适配须把等级、尺码、SKU等条件作为独立字段核对，不能因图片相似就自动替代。\n【面试追问】“模型支持多模态即可做以图搜文吗？”参考：核对是否提供跨模态检索兼容表示及训练目的；能接收图片生成文本不等于提供对齐的Embedding。\n【第一方核对】https://arxiv.org/abs/2103.00020（2026-10-01）；不引用论文性能排名。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "“支持图像”不等于共享检索空间；场景与训练目标须匹配。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.16-Embedding.md",
+          "content_hash": "1c47767da080c6533760a7658f56ed00d767c29eb932b1c42c9b1b44c8083232",
+          "line_start": 169,
+          "line_end": 181
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m16.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m16.score-calibration.001",
+      "lesson_source_key": "第3章-技术攻克/3.16-Embedding.md",
+      "concept_keys": [
+        "m16.score-calibration"
+      ],
+      "revision": 1,
+      "position": 2605,
+      "title": "相似分数怎样变成拒答门槛",
+      "kind": "场景判断",
+      "prompt": "制度助手准备按原文“余弦>0.8就高度相关”设自动回答门槛。为什么不能直接照用？需要什么样的标注与验证？",
+      "answer_short": "余弦一般在[-1,1]，分数不是正确答案概率；不同模型、数据与任务的分布不同。应标注能支持回答、主题相近但不支持、无答案及冲突条件的样本，按误答/漏答代价校准门槛与拒答规则，变更模型或数据后复测。",
+      "required_points": [
+        "分数不是概率且不存在跨模型通用0.8门槛",
+        "用支持关系与困难负例标注，按错答代价校准和变更复测"
+      ],
+      "explanation": "【机制】余弦衡量两个非零向量的方向相近程度，和“该片段能否回答问题”不是同一对象。模型训练、归一化与语料分布会改变分数含义；最高分总会存在，即便库里没有正确答案。原文退款政策“不支持退款”可以是相关且直接有效的答案，不能因为不符合用户愿望而判不相关。\n【编辑情境】用户问华东运费，华南政策分数0.9为编辑假设，高分仍不适用；正确门槛设计同时检查地区、时效和答案证据，无答案时明确缺口。\n【面试追问】“门槛提高一定更安全吗？”参考：可能增加漏答且仍放过高分困难负例，要看错答类型及拒答结果，不能只看平均分。\n【自评】须独立覆盖全部必答点；追问为选答，不能靠展开解析才答出核心结论。",
+      "pitfalls": "理论范围与某模型实际分布不同；分数高、支持回答、用户满意不能互相替代。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.16-Embedding.md",
+          "content_hash": "1c47767da080c6533760a7658f56ed00d767c29eb932b1c42c9b1b44c8083232",
+          "line_start": 199,
+          "line_end": 211
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m16.md。",
+          "适用的交叉审阅意见已落实，见review-15-17.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

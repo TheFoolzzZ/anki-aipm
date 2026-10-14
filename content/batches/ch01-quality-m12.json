@@ -1,0 +1,193 @@
+{
+  "batch_id": "ch01-quality-m12",
+  "status": "accepted",
+  "chapter_position": 1,
+  "cards": [
+    {
+      "canonical_key": "ch01.practice.evidence.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.2-准备工作.md",
+      "concept_keys": [
+        "learning.practice-evidence"
+      ],
+      "revision": 2,
+      "position": 4,
+      "title": "实践证据比工具清单重要",
+      "kind": "场景判断",
+      "prompt": "学习 AI 产品开发时，什么样的结果比“我会使用某工具”更能证明能力？面试场景下这种证据怎么呈现？",
+      "answer_short": "完成一个真实小任务，并能讲清需求、遇到的问题、排查过程、修改和最终验证结果；面试时用“我做了什么、卡在哪、怎么解决”的真实故事呈现，而不是背概念。",
+      "required_points": [
+        "有可运行或可检查的任务结果，而不只是教程完成记录",
+        "能复述问题、排查过程与验证方式",
+        "能以第一人称讲出完整的实践故事，包含至少一次失败与修复"
+      ],
+      "pitfalls": "只完成教程复制、只列工具名或只展示成功截图，都不足以证明独立解决问题。原文强调：有真实故事可讲，比空口说“我会”强得多。",
+      "explanation": "原文（92–99行）把过关标准定为四件能讲清的事：描述需求、读懂并微调生成代码、借 AI 排错、讲出自己的实践故事。编辑补充：这条标准的底层逻辑是「可核验」——面试官能追问细节的只有真实经历。实践的价值在于形成可复现的决策与故障处理证据，而不是追求一次生成就成功；恰恰相反，卡点及解决过程是最有区分度的部分。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.2-准备工作.md",
+          "content_hash": "c4688e47a442f9918f9a81e82ee14a9aae55d1d0d89ec260e9ec55e45d35397a",
+          "line_start": 88,
+          "line_end": 115
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补面试叙事维度与「可核验」底层逻辑，对齐原文92–99"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.ai.probabilistic-experiment.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.2-准备工作.md",
+      "concept_keys": [
+        "ai.probabilistic-output"
+      ],
+      "revision": 2,
+      "position": 5,
+      "title": "亲手观察生成不确定性",
+      "kind": "机制",
+      "prompt": "为什么用完全相同的需求连续生成多次，是理解 AI 产品边界的有效实验？这个实验结论对产品设计的推论是什么？",
+      "answer_short": "它能直接暴露同一输入可能产生不同结构和质量的概率性输出。推论是：产品必须用更精准的 Prompt 提高稳定性，并设计兜底和容错机制，让 AI 出错时产品不崩。",
+      "required_points": [
+        "说出实验方法：相同输入、多次生成、记录并对比各次输出差异",
+        "指出结论：输出不确定性是概率生成的本质属性，不是 bug",
+        "给出设计推论：提高约束（Prompt/上下文）+ 设计兜底容错"
+      ],
+      "pitfalls": "输出不同不等于系统必然故障；真正的问题是产品是否能评估、控制并处理这种波动。反过来，只生成一次成功就宣称“AI 能做”同样是误判——单次成功不可复现。",
+      "explanation": "原文（117–132行）的实验设计：同一段话连续生成2～3次，观察结构、质量的差异，并指出“这不是 bug，是概率生成的本质”。原文同时给出两条工作推论：写更精准的 Prompt 让输出更稳定；设计兜底容错让出错时产品不崩。编辑补充：这个实验是第2章「概率性思维」和第3章评估模块的体感基础——先亲手看到波动，后面讲评估集和监控才有落点。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.2-准备工作.md",
+          "content_hash": "c4688e47a442f9918f9a81e82ee14a9aae55d1d0d89ec260e9ec55e45d35397a",
+          "line_start": 117,
+          "line_end": 132
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补实验方法要素与设计推论链；新增「单次成功不可复现」反向误区"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.learning.tool-constraints.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.2-准备工作.md",
+      "concept_keys": [
+        "learning.tool-constraints"
+      ],
+      "revision": 1,
+      "position": 29,
+      "title": "工具选择的第一约束",
+      "kind": "场景判断",
+      "prompt": "准备 AI 学习工具时，决定“该用什么”的第一约束是什么？为什么不该从“哪个模型最强”出发？",
+      "answer_short": "第一约束是可访问性与当前阶段需求：你的网络条件和预算决定了可选集合，先确认能用、够用，再谈优劣。具体工具清单会过时，选择原则不过时。",
+      "required_points": [
+        "说出第一约束：可访问性（网络条件）与成本，而非模型排名",
+        "说明原则：先确认能用、够用，再比较优劣；操作细节以官方文档为准",
+        "指出工具清单本身会过时，可迁移的是选择方法"
+      ],
+      "pitfalls": "原文的工具可用性表和版本号都有时效性，把它背下来没有意义；把“最强模型”当默认起点，容易卡在注册和付费环节，迟迟没有动手。",
+      "explanation": "原文的核心结论是：网络条件决定可用工具集合，国内方案已能覆盖学习需求（Q1 同理：没有翻墙条件不影响学习）。编辑补充：这是一个一般化的决策原则——工具选型的约束顺序是「能用→够用→好用」，而不是反过来从评测排名出发。原文也自证了这一点：工具年年换，能力带得走；操作指引一律以官方最新文档为准。",
+      "estimated_seconds": 45,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.2-准备工作.md",
+          "content_hash": "c4688e47a442f9918f9a81e82ee14a9aae55d1d0d89ec260e9ec55e45d35397a",
+          "line_start": 42,
+          "line_end": 44
+        },
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.2-准备工作.md",
+          "content_hash": "c4688e47a442f9918f9a81e82ee14a9aae55d1d0d89ec260e9ec55e45d35397a",
+          "line_start": 196,
+          "line_end": 203
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "只提炼选择原则，时效性工具表与版本号不入必答点"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.learning.staged-tooling.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.2-准备工作.md",
+      "concept_keys": [
+        "learning.staged-tooling"
+      ],
+      "revision": 1,
+      "position": 30,
+      "title": "分阶段配置工具",
+      "kind": "场景判断",
+      "prompt": "按原文的阶段化建议，学习初期的工具配置原则是什么？文中点名的两个坑分别是什么？",
+      "answer_short": "按学习阶段配「最低配置」而非一次买齐：第1周免费工具找感觉即可。两个坑：一开始就冲付费全家桶导致90%功能用不上；到做完整项目阶段（原文指第5周）还不升级，被免费额度卡住。",
+      "required_points": [
+        "原则：按阶段上最低配置，可选升级留到需求出现时",
+        "坑一：初期买全家桶，大部分功能闲置烧钱",
+        "坑二：进入完整项目阶段仍用免费版，速率和额度扛不住"
+      ],
+      "pitfalls": "把“配置工具”当成学习进展本身——原文提醒别在装软件上耗时间，多花时间做出能讲的项目。阶段与价格数字是原文写作时的参考，会过时，要记的是匹配原则。",
+      "explanation": "原文（169–195行）按周给出「最低配置+可选升级」表，并明确两个避坑点：第1周最大的坑是付费全家桶闲置；第5周必须升级，否则免费额度撑不住完整项目。编辑补充：这条原则与「工具选择第一约束」一脉相承——配置跟随任务复杂度走，而不是跟随焦虑走。判断信号很简单：当你实际撞上限制（额度、速率、功能）时，就是升级的时点。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.2-准备工作.md",
+          "content_hash": "c4688e47a442f9918f9a81e82ee14a9aae55d1d0d89ec260e9ec55e45d35397a",
+          "line_start": 169,
+          "line_end": 195
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "阶段表转为可判定原则；价格数字仅作背景，升级信号为编辑提炼"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.learning.readiness-checklist.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.2-准备工作.md",
+      "concept_keys": [
+        "learning.readiness-checklist"
+      ],
+      "revision": 1,
+      "position": 31,
+      "title": "1.2节的过关标准",
+      "kind": "场景判断",
+      "prompt": "按原文自查清单，怎样才算“过关”可以进入下一章？只注册了账号算不算？",
+      "answer_short": "过关的核心是动手证据：有可用账号、装好 AI 编程工具、并独立完成一次小任务。只注册账号不算过关——原文明确说只有这一项打勾建议回头补上。",
+      "required_points": [
+        "说出三档证据：账号可用、工具装好、独立完成一次任务",
+        "指出「独立完成一次任务」是核心项，其余是前提",
+        "明确只完成注册不算过关，原文建议回头补上"
+      ],
+      "pitfalls": "把「看过」「注册了」当成「会了」。清单里可选项目（如注册某个UI生成工具）不是过关条件；真正的分界线只有一个：有没有亲手做出东西并能讲清过程。",
+      "explanation": "原文（152–166行）自查清单6项，其中第3项「用 Claude Code 独立完成一次小任务」被标注为核心，并补了一句判断：只会说“我会用 ChatGPT 聊天”和能讲清“我用 AI 做过什么、怎么做的”的候选人，竞争力不在一个层级。编辑补充：这个清单可以泛化为任何技能学习的过关口径——账号、工具是前置条件，产出物加可复述过程才算掌握，与本模块「实践证据」卡互为印证。",
+      "estimated_seconds": 45,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.2-准备工作.md",
+          "content_hash": "c4688e47a442f9918f9a81e82ee14a9aae55d1d0d89ec260e9ec55e45d35397a",
+          "line_start": 152,
+          "line_end": 166
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "6项清单压缩为3个可判定条件；可选项明确排除；泛化口径为编辑补充"
+        ]
+      }
+    }
+  ]
+}

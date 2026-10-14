@@ -1,0 +1,133 @@
+{
+  "batch_id": "ch04-interview-20261002-m01",
+  "status": "accepted",
+  "chapter_position": 4,
+  "cards": [
+    {
+      "canonical_key": "ch04.interview.m01.executable-loop.001",
+      "lesson_source_key": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+      "concept_keys": [
+        "interview.ch04.m01.executable-loop"
+      ],
+      "revision": 1,
+      "position": 1101,
+      "title": "从自然语言到可验证的软件改动",
+      "kind": "场景判断",
+      "prompt": "AI把番茄钟页面做得很漂亮，但暂停后计时仍在后台减少。VibeCoding的一轮开发应如何结束？仅凭“看起来对”能否接受这次修改？",
+      "answer_short": "用明确行为验收完成一轮：描述暂停语义→生成改动→在运行中复现并验证→根据结果修正。审查相关改动及回归影响，确认暂停/继续/重置均符合约定，再保留可追踪版本；外观满意不能代替行为正确。",
+      "required_points": [
+        "将意图变为可执行验收并实际运行",
+        "用失败结果反馈迭代，同时验证相关路径",
+        "按改动风险检查代码与版本，不能只凭外观接受"
+      ],
+      "explanation": "原文循环是描述意图、生成、运行、反馈；生成不是证明。编辑补充：软件行为由代码与状态实现，局部修复可能影响其他事件，风险高时需工程审查，AI不会自动保证边界、可维护性或安全。\n【具体情境】假设初始剩余10秒，暂停后等待3秒应仍是10秒，继续后才递减；重置必须清理旧计时器。若只是隐藏动画，数值仍减少就未通过。\n【面试追问】是否每次都要读懂整个代码库？ 参考思路：不必；检查本次相关差异、接口和关键风险，有能力边界就请工程师审查；全量阅读也不是行为正确的证据。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "原文“看结果、不看代码”只能描述一种使用方式，不构成生产责任豁免；不承诺AI必然处理所有异常。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 53,
+          "line_end": 115
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "本卡专考软件事件状态和改动验收；通用指令结构复用3.9，不另造Prompt模板卡。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m01.prototype-evidence.001",
+      "lesson_source_key": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+      "concept_keys": [
+        "interview.ch04.m01.prototype-evidence"
+      ],
+      "revision": 1,
+      "position": 1102,
+      "title": "原型验证的结论能支持什么",
+      "kind": "场景判断",
+      "prompt": "AI做出了会议纪要整理的可点击原型，试用者能顺利完成三步操作。这个结果支持哪些结论？还缺什么才能声称系统可生产使用？",
+      "answer_short": "可以支持该样本下用户能理解和完成交互的初步证据。若纪要是模拟结果，不能推出真实摘要质量或后端可靠性；生产还需真实数据、持久化、权限及故障验证，并由更具代表性的使用证据检验需求价值。",
+      "required_points": [
+        "区分交互可用性证据与模型/后台真实效果",
+        "注明样本与模拟边界，不能推出生产能力",
+        "追加与实际数据、存储/权限/故障相关的验证"
+      ],
+      "explanation": "原文把可运行Demo用于降低验证成本，价值在更早观察行为。编辑补充：原型用于检验哪个假设，应由实现和任务明确；按钮有反馈不证明数据库保存，单次生成好结果也不能证明总体质量。\n【具体情境】假设纪要结果写死，用户找到了“修改责任人”；可记录操作完成率和困惑位置。刷新任务若消失，只能说明本次交互演示成功，尚未证明持久化。\n【面试追问】用户说“很好用”是否就是购买意愿？ 参考思路：不是；需观察真实任务中的持续使用、替代成本和后续需求，访谈称赞不能直接当付费数据。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "原文“当天”“2小时”是案例表述，不作为所有项目排期承诺。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 191,
+          "line_end": 209
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 225,
+          "line_end": 253
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "本卡检验PM用原型得出何种产品结论，不重复3.25模型指标或笼统上线验收。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m01.reproduction-feedback.001",
+      "lesson_source_key": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+      "concept_keys": [
+        "interview.ch04.m01.reproduction-feedback"
+      ],
+      "revision": 1,
+      "position": 1103,
+      "title": "把“按钮没反应”变成可复现反馈",
+      "kind": "场景判断",
+      "prompt": "你对AI说“暂停按钮没反应”，它连续改了三次CSS。怎样给出足够的反馈，使下一轮可以定位并验收问题？",
+      "answer_short": "提供运行环境、触发前状态、精确操作和预期/实际差异，附相关报错或观测；限定本次只修暂停行为。保留可复现步骤，修改后按同一输入重测并检查继续/重置，才能知道是否修好。",
+      "required_points": [
+        "反馈包含前置状态、操作及预期/实际差异",
+        "给出相关运行证据并限定修复范围",
+        "重复原复现和邻近路径验证，记录改动结果"
+      ],
+      "explanation": "编辑补充：定位需要重现失败，不是反复增加描述强度。原文即时、可视化、可修正的反馈闭环，应转成具体行为及可比较证据；将怀疑原因与已观察事实分开，避免把CSS猜测当结论。\n【具体情境】假设Chrome前台已启动计时，点击暂停后数字还在减少；控制台无报错不等于事件有效。录出点击前后值，检查事件绑定/计时器清理，修复后等待同样时长对照。\n【面试追问】如果AI仍不能复现？ 参考思路：先核对版本、浏览器、状态和最小步骤；提供最小可运行案例或相关日志，让工程师协助，不继续随机大改。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "不要仅说“优化一下”，也不要未经证据断定事件绑定就是根因。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 85,
+          "line_end": 115
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 225,
+          "line_end": 233
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "专考软件故障复现与验证闭环；区别3.9任务契约及Prompt版本实验。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    }
+  ]
+}

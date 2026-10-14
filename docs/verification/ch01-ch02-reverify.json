@@ -1,0 +1,93 @@
+{
+  "at": "2026-09-13T08:50:01.400Z",
+  "results": [
+    {
+      "batchId": "ch01-quality-002",
+      "cards": 11,
+      "revisions": 11,
+      "ledgerHash": "954567191f098281e759f26eb6dbf19a9642340bdad4a01356a76fad00654b9f",
+      "expectedHash": "954567191f098281e759f26eb6dbf19a9642340bdad4a01356a76fad00654b9f",
+      "passed": true
+    },
+    {
+      "batchId": "ch01-quality-m12",
+      "cards": 5,
+      "revisions": 5,
+      "ledgerHash": "a4aa0e5054b06a126cfb9643ec1a20f505fcac4e3b324d5a5a4e788ebbbbb8bc",
+      "expectedHash": "a4aa0e5054b06a126cfb9643ec1a20f505fcac4e3b324d5a5a4e788ebbbbb8bc",
+      "passed": true
+    },
+    {
+      "batchId": "ch01-quality-m13",
+      "cards": 6,
+      "revisions": 6,
+      "ledgerHash": "3cf128daa148943c7325af74863d581a72d70287905f755978eee77deb47c2e2",
+      "expectedHash": "3cf128daa148943c7325af74863d581a72d70287905f755978eee77deb47c2e2",
+      "passed": true
+    },
+    {
+      "batchId": "ch01-quality-m14",
+      "cards": 5,
+      "revisions": 5,
+      "ledgerHash": "06f85fd26167e7df9d3d2aaddee500248d29cb7e47e06a5d47296ef68c829273",
+      "expectedHash": "06f85fd26167e7df9d3d2aaddee500248d29cb7e47e06a5d47296ef68c829273",
+      "passed": true
+    },
+    {
+      "batchId": "ch01-quality-m15",
+      "cards": 8,
+      "revisions": 8,
+      "ledgerHash": "32035b5d5973f18bebe9c074c6c4067bbd028b98ce15753f7bfe169a3c5775f9",
+      "expectedHash": "32035b5d5973f18bebe9c074c6c4067bbd028b98ce15753f7bfe169a3c5775f9",
+      "passed": true
+    },
+    {
+      "batchId": "ch01-quality-m16",
+      "cards": 5,
+      "revisions": 5,
+      "ledgerHash": "3a8b0bd7b98e1cbbb8f6ded4bf93f4131496019bc1f72695636bffda3e6017eb",
+      "expectedHash": "3a8b0bd7b98e1cbbb8f6ded4bf93f4131496019bc1f72695636bffda3e6017eb",
+      "passed": true
+    },
+    {
+      "batchId": "ch01-quality-m17",
+      "cards": 2,
+      "revisions": 2,
+      "ledgerHash": "1bee33624ad62344c321affb273eb7ac606b58ca2141ac313a59e6ac1743e47e",
+      "expectedHash": "1bee33624ad62344c321affb273eb7ac606b58ca2141ac313a59e6ac1743e47e",
+      "passed": true
+    },
+    {
+      "batchId": "ch02-quality-m21",
+      "cards": 8,
+      "revisions": 8,
+      "ledgerHash": "df9d5109479a9a8d9253f51215324b2d7656be389d41beba793f3119f6813d1f",
+      "expectedHash": "df9d5109479a9a8d9253f51215324b2d7656be389d41beba793f3119f6813d1f",
+      "passed": true
+    },
+    {
+      "batchId": "ch02-quality-m22",
+      "cards": 9,
+      "revisions": 9,
+      "ledgerHash": "120ea7d6f2c2a0a77523a5feca631aeb52504b05dd19e50464d50a0ccd0fd1e4",
+      "expectedHash": "120ea7d6f2c2a0a77523a5feca631aeb52504b05dd19e50464d50a0ccd0fd1e4",
+      "passed": true
+    },
+    {
+      "batchId": "ch02-quality-m23",
+      "cards": 8,
+      "revisions": 8,
+      "ledgerHash": "eefdc83832bf097d7222a7343ff7f379e9a9158cbfb350a80c07afe1f3397634",
+      "expectedHash": "eefdc83832bf097d7222a7343ff7f379e9a9158cbfb350a80c07afe1f3397634",
+      "passed": true
+    },
+    {
+      "batchId": "ch02-quality-m24",
+      "cards": 6,
+      "revisions": 6,
+      "ledgerHash": "5c4b03361c0ffd945c7bee846701033e1ac8b3509b2a8072aa2b085bad36e880",
+      "expectedHash": "5c4b03361c0ffd945c7bee846701033e1ac8b3509b2a8072aa2b085bad36e880",
+      "passed": true
+    }
+  ]
+}

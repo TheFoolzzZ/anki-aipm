@@ -1,0 +1,90 @@
+{
+  "validation": "content-validate + exact LF objective/checkbox/question checks",
+  "configuration": "isolated empty .env.local in OS temporary directory; no workspace credentials read",
+  "modules": [
+    {
+      "batchId": "ch05-interview-20261003-m02",
+      "chapter": 5,
+      "cards": 4,
+      "contentHash": "fbd78927636583846c5a2280aac27745c7cdf5abd76cc31edc666004004b12fb",
+      "module_id": "5.2",
+      "objectives": 89,
+      "native_checklist": 0,
+      "box_items": 7,
+      "all_explicit_question_lines_registered": true,
+      "original_text_exact_lf": true,
+      "practice_completed": 0,
+      "published": false
+    },
+    {
+      "batchId": "ch05-interview-20261003-m03",
+      "chapter": 5,
+      "cards": 4,
+      "contentHash": "d60a0bd84ad3fe9fe6d92022c3651bd176d93b93cd83d6d0a955bcbdc6d4f2c6",
+      "module_id": "5.3",
+      "objectives": 120,
+      "native_checklist": 8,
+      "box_items": 0,
+      "all_explicit_question_lines_registered": true,
+      "original_text_exact_lf": true,
+      "practice_completed": 0,
+      "published": false
+    },
+    {
+      "batchId": "ch05-interview-20261003-m04",
+      "chapter": 5,
+      "cards": 4,
+      "contentHash": "290b784fdfe0570f6f71f9748d3b2994ca94e7e9a0e51c94dcf958ba6be1de1f",
+      "module_id": "5.4",
+      "objectives": 75,
+      "native_checklist": 5,
+      "box_items": 0,
+      "all_explicit_question_lines_registered": true,
+      "original_text_exact_lf": true,
+      "practice_completed": 0,
+      "published": false
+    },
+    {
+      "batchId": "ch05-interview-20261003-m05",
+      "chapter": 5,
+      "cards": 5,
+      "contentHash": "24782e8a0a8e7d9ff207712dfc1ef45205921f9f0c35d9d76dae70e4fb9e4229",
+      "module_id": "5.5",
+      "objectives": 80,
+      "native_checklist": 10,
+      "box_items": 0,
+      "all_explicit_question_lines_registered": true,
+      "original_text_exact_lf": true,
+      "practice_completed": 0,
+      "published": false
+    },
+    {
+      "batchId": "ch05-interview-20261003-m06",
+      "chapter": 5,
+      "cards": 5,
+      "contentHash": "6677acda1d0b53cecea1c457dffa2873520bf41c3797405ed31cd59f49b01db3",
+      "module_id": "5.6",
+      "objectives": 138,
+      "native_checklist": 0,
+      "box_items": 65,
+      "all_explicit_question_lines_registered": true,
+      "original_text_exact_lf": true,
+      "practice_completed": 0,
+      "published": false
+    },
+    {
+      "batchId": "ch05-interview-20261003-m07",
+      "chapter": 5,
+      "cards": 4,
+      "contentHash": "c938f51c93fb6c99aeba79a175e0b506a5770cf2d4912a29eef90506f76117f9",
+      "module_id": "5.7",
+      "objectives": 58,
+      "native_checklist": 0,
+      "box_items": 0,
+      "all_explicit_question_lines_registered": true,
+      "original_text_exact_lf": true,
+      "practice_completed": 0,
+      "published": false
+    }
+  ]
+}

@@ -1,50 +1,313 @@
 'use client';
-import {useState,useEffect,useRef,useCallback,createContext,useContext} from 'react';
+import { useState, useEffect, useRef, useCallback, createContext, useContext } from 'react';
 import Link from 'next/link';
-import {usePathname,useRouter,useSearchParams} from 'next/navigation';
-import {ArrowUpRight,ArrowRight,BookOpen,Layers,Orbit,ChartNoAxesCombined,Settings2,ChevronRight,Check,Search,ArrowLeft,RotateCcw,Volume2,Clock,Plus,X,LogOut,Menu,Sparkles} from 'lucide-react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { ArrowUpRight, ArrowRight, BookOpen, Layers, Orbit, Check, Search, ArrowLeft, RotateCcw, Volume2, Clock, X, LogOut, Menu, Sparkles } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import {studySummary,activeReviews,learningDay,selectNext} from '@/lib/learning';
-import {trustedLessonImageUrl} from '@/lib/lesson-images';
-import type {Bootstrap,CardMeta,CardDetail,Preview,ReviewEvent,ReviewResult,Settings} from '@/lib/types';
-async function api<T>(path:string,body?:unknown,method='POST'):Promise<T>{const r=await fetch(`/api/${path}`,body?{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{cache:'no-store'});const d=await r.json();if(!r.ok)throw new Error(r.status===401?'UNAUTHENTICATED':d.error||'请求失败');return d;}
-let bootstrapRequest:Promise<Bootstrap>|null=null;
-function loadBootstrap(){if(!bootstrapRequest)bootstrapRequest=api<Bootstrap>('bootstrap').finally(()=>{bootstrapRequest=null});return bootstrapRequest}
-const Context=createContext<{data:Bootstrap;refresh:()=>Promise<Bootstrap>;update:(change:(data:Bootstrap)=>Bootstrap)=>void}>(null!);
-function useData(){return useContext(Context)}
-const nav=[{path:'today',label:'今日学习',icon:Orbit},{path:'curriculum',label:'知识地图',icon:BookOpen},{path:'cards',label:'记忆卡片',icon:Layers},{path:'progress',label:'成长记录',icon:ChartNoAxesCombined}];
-function ErrorNote({error}:{error:string}){return error?<div role="alert" className="error-note">{error}</div>:null}
-function Heading({eyebrow,title,description,children}:{eyebrow:string;title:string;description:string;children?:React.ReactNode}){return <div className="page-heading"><div><span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{description}</p></div>{children}</div>}
-function LessonImage({src,alt}:{src?:string;alt?:string}){const [failed,setFailed]=useState(false);const url=trustedLessonImageUrl(src);const fallback=typeof src==='string'&&src.startsWith('https://')?src:null;if(!url||failed)return fallback?<a href={fallback} target="_blank" rel="noopener noreferrer">[查看原文图片：{alt||'图片'}]</a>:<span>[原文图片地址不可用]</span>;const caption=alt&&!/^image\s*\d*$/i.test(alt)?alt:null;return <figure className="lesson-image"><a href={url} target="_blank" rel="noopener noreferrer"><img src={url} alt={alt||'课程原文图片'} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={()=>setFailed(true)}/></a>{caption&&<figcaption>{caption}</figcaption>}</figure>}
-export default function Studio(){
- const pathname=usePathname();const route=pathname.split('/').filter(Boolean);if(!route.length)route.push('today');
- const router=useRouter();const [data,setData]=useState<Bootstrap|null>(null);const [error,setError]=useState('');const [menu,setMenu]=useState(false);const page=route[0];
- const refresh=useCallback(async()=>{setError('');const d=await loadBootstrap();setData(d);return d},[]);
- const update=useCallback((change:(data:Bootstrap)=>Bootstrap)=>setData(current=>current?change(current):current),[]);
- useEffect(()=>{if(page==='login'||data)return;refresh().catch(e=>{if(e.message==='UNAUTHENTICATED')router.replace('/login');else setError(e.message)})},[data,page,refresh,router]);
- if(page==='login')return <Login/>;
- if(!data)return <div className="loading-screen"><Brand/><p>{error||'正在展开你的知识地图…'}</p>{error&&<button onClick={()=>void refresh()} className="button">重新连接</button>}</div>;
- return <Context.Provider value={{data,refresh,update}}><div className="app-shell"><aside className={`sidebar ${menu?'open':''}`}><Brand/><div className="workspace-label">个人学习空间 <span>01</span></div><nav>{nav.map(n=><Link onClick={()=>setMenu(false)} className={page===n.path?'active':''} href={`/${n.path}`} key={n.path}><n.icon size={19}/>{n.label}{page===n.path&&<span className="nav-dot"/>}</Link>)}</nav><div className="sidebar-bottom"><Link href="/interview" className="interview-link"><Volume2 size={19}/><span>周末练习室<small>下一阶段</small></span></Link><div className="sidebar-note"><div className="tiny-orbit"/><p>一点一点，<br/>让知识成为直觉。</p></div><Link className={`profile ${page==='settings'?'active':''}`} href="/settings"><span className="avatar">{data.user.display_name.slice(0,1)}</span><span>{data.user.display_name}<small>AI Product Builder</small></span><Settings2 size={17}/></Link></div></aside><div className="main-wrap"><header className="topbar"><button className="icon-button mobile-menu" aria-label="切换导航" onClick={()=>setMenu(!menu)}><Menu size={21}/></button><span>学习空间 <ChevronRight size={13}/> {nav.find(n=>n.path===page)?.label||({study:'专注学习',lessons:'课程阅读',settings:'学习偏好',interview:'周末练习室'} as Record<string,string>)[page]||'探索'}</span><div><Link aria-label="搜索知识卡片" href="/cards"><Search size={18}/></Link><span className="date">{new Intl.DateTimeFormat('zh-CN',{month:'long',day:'numeric',weekday:'short',timeZone:data.settings.timezone}).format(new Date())}</span><span className="status-dot"/></div></header><main key={route.join('/')} className={page==='study'?'content study-content':'content'}>{page==='today'?<Today/>:page==='curriculum'?<Curriculum chapterId={route[1]}/>:page==='cards'?<Cards/>:page==='study'?<Study/>:page==='progress'?<Progress/>:page==='settings'?<Preferences/>:page==='lessons'?<LessonReader id={route[1]}/>:page==='interview'?<Interview/>:<div className="empty-state"><h1>这条路径还没有内容</h1><Link className="button" href="/today">回到今日学习</Link></div>}</main><footer className="footer"><span>Recall — A little, remembered.</span><span>为持续生长的 AI 产品经理而做</span></footer></div></div></Context.Provider>
+import { studySummary, activeReviews, learningDay, selectNext } from '@/lib/learning';
+import { trustedLessonImageUrl } from '@/lib/lesson-images';
+import { Breadcrumbs, WorkspaceSidebar, workspaceNav, LessonPagination, navigationContext } from '@/components/workspace-navigation';
+import { KnowledgeAtlas } from '@/components/knowledge-atlas';
+import { ThemePicker } from '@/components/theme-picker';
+import { orderedLessons, resolveStudyScope, practiceCards } from '@/lib/navigation';
+import type { Bootstrap, CardMeta, CardDetail, Preview, ReviewEvent, ReviewResult, Settings } from '@/lib/types';
+async function api<T>(path: string, body?: unknown, method = 'POST'): Promise<T> { const r = await fetch(`/api/${path}`, body ? { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : { cache: 'no-store' }); const d = await r.json(); if (!r.ok)
+    throw Object.assign(new Error(r.status === 401 ? 'UNAUTHENTICATED' : d.error || '请求失败'), { code: d.code, status: r.status }); return d; }
+let bootstrapRequest: Promise<Bootstrap> | null = null;
+function loadBootstrap() { if (!bootstrapRequest)
+    bootstrapRequest = api<Bootstrap>('bootstrap').finally(() => { bootstrapRequest = null; }); return bootstrapRequest; }
+const Context = createContext<{
+    data: Bootstrap;
+    refresh: () => Promise<Bootstrap>;
+    update: (change: (data: Bootstrap) => Bootstrap) => void;
+}>(null!);
+function useData() { return useContext(Context); }
+function ErrorNote({ error }: {
+    error: string;
+}) { return error ? <div role="alert" className="error-note">{error}</div> : null; }
+function Heading({ eyebrow, title, description, children }: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    children?: React.ReactNode;
+}) { return <div className="page-heading"><div><span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{description}</p></div>{children}</div>; }
+function LessonImage({ src, alt }: {
+    src?: string;
+    alt?: string;
+}) { const [failed, setFailed] = useState(false); const url = trustedLessonImageUrl(src); const fallback = typeof src === 'string' && src.startsWith('https://') ? src : null; if (!url || failed)
+    return fallback ? <a href={fallback} target="_blank" rel="noopener noreferrer">[查看原文图片：{alt || '图片'}]</a> : <span>[原文图片地址不可用]</span>; const caption = alt && !/^image\s*\d*$/i.test(alt) ? alt : null; return <figure className="lesson-image"><a href={url} target="_blank" rel="noopener noreferrer"><img src={url} alt={alt || '课程原文图片'} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(true)}/></a>{caption && <figcaption>{caption}</figcaption>}</figure>; }
+export default function Studio() {
+    const pathname = usePathname();
+    const route = pathname.split('/').filter(Boolean);
+    if (!route.length)
+        route.push('today');
+    const router = useRouter();
+    const search = useSearchParams();
+    const searchKey = search.toString();
+    const [data, setData] = useState<Bootstrap | null>(null);
+    const [error, setError] = useState('');
+    const [menu, setMenu] = useState(false);
+    const page = route[0];
+    const refresh = useCallback(async () => { setError(''); const d = await loadBootstrap(); setData(d); return d; }, []);
+    const update = useCallback((change: (data: Bootstrap) => Bootstrap) => setData(current => current ? change(current) : current), []);
+    const menuButton = useRef<HTMLButtonElement>(null);
+    const sidebarRef = useRef<HTMLElement>(null);
+    useEffect(() => { if (page === 'login' || data)
+        return; refresh().catch(e => { if (e.message === 'UNAUTHENTICATED')
+        router.replace('/login');
+    else
+        setError(e.message); }); }, [data, page, refresh, router]);
+    useEffect(() => { setMenu(false); }, [pathname, searchKey]);
+    useEffect(() => { const breakpoint = window.matchMedia('(min-width: 801px)'); function closeOnDesktop() { if (breakpoint.matches)
+        setMenu(false); } breakpoint.addEventListener('change', closeOnDesktop); return () => breakpoint.removeEventListener('change', closeOnDesktop); }, []);
+    useEffect(() => { if (!menu)
+        return; const previous = document.body.style.overflow; document.body.style.overflow = 'hidden'; sidebarRef.current?.querySelector<HTMLElement>('button,input,a')?.focus(); function keyboard(event: KeyboardEvent) { if (event.key === 'Escape') {
+        setMenu(false);
+        menuButton.current?.focus();
+    } if (event.key === 'Tab') {
+        const elements = Array.from(sidebarRef.current?.querySelectorAll<HTMLElement>('a,button,input,select') || []).filter(element => element.getClientRects().length && !element.hasAttribute('disabled'));
+        const first = elements[0];
+        const last = elements[elements.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last?.focus();
+        }
+        else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first?.focus();
+        }
+    } } window.addEventListener('keydown', keyboard); return () => { document.body.style.overflow = previous; window.removeEventListener('keydown', keyboard); }; }, [menu]);
+    if (page === 'login')
+        return <Login />;
+    if (!data)
+        return <div className="loading-screen"><Brand /><p>{error || '正在打开你的学习空间…'}</p>{error && <button onClick={() => { void refresh().catch(e => setError(e.message)); }} className="button">重新连接</button>}</div>;
+    const navigationProps = { data, route, lessonId: search.get('lesson'), cardId: search.get('card') };
+    const knowledge = navigationContext(data, route, navigationProps.lessonId, navigationProps.cardId).knowledge;
+    return <Context.Provider value={{ data, refresh, update }}><div className={`app-shell ${knowledge ? 'knowledge-space' : ''}`}>
+ <a className="skip-link" href="#main-content">跳到主要内容</a>
+ <header className="workspace-topbar"><Brand /><nav className="global-navigation" aria-label="全站导航">{workspaceNav.map(item => <Link key={item.path} href={`/${item.path}`} className={(page === item.path || (knowledge && item.path === 'curriculum') || (page === 'study' && !knowledge && item.path === 'today')) ? 'active' : ''} aria-current={(page === item.path || (knowledge && item.path === 'curriculum') || (page === 'study' && !knowledge && item.path === 'today')) ? 'page' : undefined}>{item.label}</Link>)}</nav><div className="workspace-topbar-right"><Link className="header-search" href="/curriculum" aria-label="查找课程"><Search size={17}/><span>查找课程</span></Link><Link className="header-avatar" href="/settings" aria-label="打开学习偏好">{data.user.display_name.slice(0, 1)}</Link></div></header>
+ {menu && <button className="sidebar-scrim" aria-label="关闭课程目录" onClick={() => { setMenu(false); menuButton.current?.focus(); }}/>}
+ <aside ref={sidebarRef} id="workspace-sidebar" className={`sidebar workspace-sidebar ${menu ? 'open' : ''}`} role={menu ? 'dialog' : undefined} aria-modal={menu ? true : undefined} aria-label="学习导航"><WorkspaceSidebar {...navigationProps} close={() => { setMenu(false); menuButton.current?.focus(); }}/></aside>
+ <div className="main-wrap"><div className="context-bar"><button ref={menuButton} className="icon-button mobile-menu" aria-label="打开学习导航" aria-expanded={menu} aria-controls="workspace-sidebar" onClick={() => setMenu(!menu)}><Menu size={20}/></button><Breadcrumbs {...navigationProps}/><span className="context-space-label">你的学习空间</span></div>
+ <main id="main-content" key={page === 'study' ? `${pathname}?${search.toString()}` : pathname} className={page === 'study' ? 'content study-content' : 'content'}>{page === 'today' ? <Today /> : page === 'curriculum' ? <KnowledgeAtlas data={data} chapterId={route[1]}/> : page === 'cards' ? <Cards /> : page === 'study' ? <Study /> : page === 'progress' ? <Progress /> : page === 'settings' ? <Preferences /> : page === 'lessons' ? <LessonReader id={route[1]}/> : page === 'interview' ? <Interview /> : <div className="empty-state"><h1>这条路径还没有内容</h1><Link className="button" href="/today">回到今日学习</Link></div>}</main><footer className="footer"><span>recall. <span>理解，然后记住。</span></span><Link href="/curriculum">随时选择你的下一课 <ArrowUpRight size={13}/></Link></footer></div></div></Context.Provider>;
 }
-function Brand(){return <Link href="/today" className="brand"><span className="brand-mark"><i/><i/><i/></span><span>recall<span className="brand-period">.</span></span></Link>}
-function Login(){const router=useRouter();const [local,setLocal]=useState(false);const [code,setCode]=useState('');const [error,setError]=useState('');const [busy,setBusy]=useState(false);useEffect(()=>{api<{enabled:boolean}>('auth/local').then(x=>setLocal(x.enabled)).catch(()=>{})},[]);async function enter(isLocal=false){setBusy(true);setError('');try{await api('auth',isLocal?{local:true}:{code});router.replace('/today')}catch(e){setError((e as Error).message)}finally{setBusy(false)}}return <div className="login"><div className="login-art"><Brand/><div className="login-copy"><span className="eyebrow">A place for what stays.</span><h1>把理解，<br/>变成你的<span>第二直觉。</span></h1><p>从第一次想起，到真正掌握。<br/>每天留一点时间给未来的自己。</p></div><MemorySculpture/><span className="login-foot">AI PM Learning Studio · 2026</span></div><div className="login-form"><span className="eyebrow">Welcome back</span><h2>进入你的学习空间</h2><p>课程、记忆与成长，都从这里继续。</p><form onSubmit={e=>{e.preventDefault();void enter()}}><label htmlFor="access-code">学习访问码</label><input id="access-code" type="password" autoComplete="current-password" value={code} onChange={e=>setCode(e.target.value)} placeholder="输入你的专属访问码" required/><button disabled={busy} className="button primary">{busy?'正在连接…':'进入学习空间'}<ArrowRight size={17}/></button></form>{local&&<button disabled={busy} onClick={()=>enter(true)} className="button ghost">打开本机学习空间 <ArrowUpRight size={16}/></button>}<ErrorNote error={error}/><small>你的学习记录会保存在专属空间中。</small></div></div>}
-function MemorySculpture(){return <div className="memory-sculpture" aria-hidden="true"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="sculpture-glow"/><div className="float-card back"><span>Understand.</span><div className="line-art"/></div><div className="float-card middle"><span>Connect.</span><div className="constellation"><i/><i/><i/><i/><i/></div></div><div className="float-card front"><div className="sculpture-card-top"><span>Knowledge, retained.</span><Sparkles size={16}/></div><div className="fold-art"><i/><i/><i/></div><span className="card-thought">每一次想起，<br/>都离直觉更近一点。</span><div className="sculpture-card-bottom"><span>AI × Product × You</span><ArrowUpRight size={20}/></div></div><span className="orbit-point p1"/><span className="orbit-point p2"/></div>}
-function Today(){const {data}=useData();const s=studySummary(data,new Date());const nextLesson=data.lessons.find(l=>!data.activity.some(a=>a.lesson_id===l.id))||data.lessons[0];const chapter=data.chapters.find(c=>c.id===nextLesson?.chapter_id);return <><div className="greeting"><span><span className="status-dot"/> 你的长期记忆，正在生长</span><span>每日 {data.settings.daily_minutes} 分钟的复利</span></div><section className="hero"><div className="hero-copy"><div className="eyebrow">Make room for what matters.</div><h1>今天的理解，<br/>明天的<span>直觉。</span></h1><p>给知识一点时间，给记忆一次相遇。<br/>从一个小问题开始，建立你的 AI 产品判断力。</p><div className="hero-actions"><Link className="button primary" href="/study">开始今日学习 <ArrowUpRight size={19}/></Link><span><Clock size={14}/> 约 {Math.max(1,Math.ceil(s.reviewMinutes+s.newCount*1.5))} 分钟卡片练习</span></div><div className="hero-caption"><span className="line"/> 先回忆，再理解，最后成为自己的一部分。</div></div><MemorySculpture/></section><div className="daily-strip"><div><span className="metric-number">{s.due.length.toString().padStart(2,'0')}</span><span>待复习<small>让记忆重新变清晰</small></span><span className="metric-dot blue"/></div><div><span className="metric-number">{s.newCount.toString().padStart(2,'0')}</span><span>今日新卡<small>留一点空间给新知</small></span><span className="metric-dot lilac"/></div><div><span className="metric-number">{s.today.length.toString().padStart(2,'0')}</span><span>已完成回忆<small>每一次，都算数</small></span><span className="metric-dot peach"/></div><Link href="/progress" className="strip-link">查看成长轨迹 <ArrowUpRight size={18}/></Link></div><div className="section-heading"><h2>继续向前</h2><Link href="/curriculum">展开知识地图 <ArrowRight size={16}/></Link></div><div className="home-grid"><Link href={`/lessons/${nextLesson.id}`} className="reading-panel"><div className="panel-top"><span className="pill">下一篇课程</span><BookOpen size={20}/></div><div className="reading-copy"><span className="muted">{chapter?.title} · {nextLesson.reading_minutes} 分钟阅读</span><h3>{nextLesson.title}</h3><p>{nextLesson.summary.slice(0,95)}…</p></div><div className="panel-bottom"><span>打开课程，建立理解</span><span className="round-arrow"><ArrowUpRight size={20}/></span></div></Link><div className="path-panel"><span className="eyebrow">Your learning journey</span><h3>从懂技术，<br/>到做出好产品。</h3><div className="mini-path">{['建立认知','技术攻克','产品判断'].map((x,i)=><div key={x}><span>{String(i+1).padStart(2,'0')}</span><p>{x}</p><i/></div>)}</div><Link href="/curriculum">探索 16 周学习路线 <ArrowRight size={16}/></Link></div></div><div className="library-note"><Layers size={18}/><span>你的知识库已就位：{data.chapters.length} 个章节 · {data.lessons.length} 篇课程 · {data.cards.length} 张首批样卡</span><Link href="/cards">看看卡片 <ArrowUpRight size={15}/></Link></div></>}
-const weeks=[['建立 AI 产品认知','职业方向、全局视野'],['理解大模型','模型能力、训练与推理'],['Prompt 与上下文','任务拆解、约束和结构化输出'],['Embedding 与检索','向量、分块与召回'],['搭建 RAG 判断框架','检索链路与质量诊断'],['Agent 的基本结构','工具、记忆与任务执行'],['工作流与多 Agent','协作边界、可靠性与成本'],['评测与可观测性','数据集、指标与线上监控'],['技术选型与成本','微调、延迟、预算与安全'],['需求与场景判断','从用户问题到产品假设'],['产品方案与交付','MVP、交互与验收'],['数据驱动迭代','实验、指标与产品闭环'],['商业化与增长','价值、定价与分发'],['项目复盘','提炼判断与实践证据'],['行业理解','案例与可迁移的经验'],['综合回顾','知识整合与薄弱点复习']];
-function Curriculum({chapterId}:{chapterId?:string}){const {data}=useData();const [view,setView]=useState('chapters');const chapter=data.chapters.find(c=>c.id===chapterId);if(chapter){const lessons=data.lessons.filter(l=>l.chapter_id===chapter.id);return <><Link className="back-link" href="/curriculum"><ArrowLeft size={16}/>全部章节</Link><Heading eyebrow={`Chapter ${String(chapter.position).padStart(2,'0')}`} title={chapter.title} description={chapter.description}/><div className="lesson-list">{lessons.map((l,i)=><Link href={`/lessons/${l.id}`} key={l.id}><span className="lesson-number">{String(i+1).padStart(2,'0')}</span><div><h3>{l.title}</h3><p>{l.summary.slice(0,120)}</p><small>{l.reading_minutes} 分钟 · {data.cards.filter(c=>c.lesson_id===l.id).length} 张卡片</small></div>{data.activity.some(a=>a.lesson_id===l.id)?<Check size={19}/>:<ArrowUpRight size={20}/>}</Link>)}</div></>}return <><Heading eyebrow="The knowledge atlas" title="给知识一张地图。" description="循序深入，也允许好奇心带你走一段岔路。"><span className="big-count">09<span>个知识章节</span></span></Heading><div className="tabs"><button className={view==='chapters'?'selected':''} onClick={()=>setView('chapters')}>按章节探索</button><button className={view==='weeks'?'selected':''} onClick={()=>setView('weeks')}>16 周学习路线</button></div>{view==='chapters'?<div className="chapter-grid">{data.chapters.map((c,i)=>{const lessons=data.lessons.filter(l=>l.chapter_id===c.id);const count=data.cards.filter(x=>x.chapter_id===c.id).length;const read=lessons.filter(l=>data.activity.some(a=>a.lesson_id===l.id)).length;return <Link className={`chapter-card chapter-${i%4}`} href={`/curriculum/${c.id}`} key={c.id}><div className="chapter-top"><span>{String(c.position).padStart(2,'0')}</span><ArrowUpRight size={20}/></div><div className="chapter-art"><span/><span/><span/></div><h2>{c.title}</h2><p>{c.description}</p><div className="chapter-meta"><span>{lessons.length} 篇课程</span><span>{count?`${count} 张样卡`:'卡片待制'}</span></div><div className="thin-progress"><i style={{width:`${lessons.length?read/lessons.length*100:0}%`}}/></div><small>{read} / {lessons.length} 篇已读</small></Link>})}</div>:<div className="week-list"><div className="info-note">工作日每天 30 分钟：先完成到期复习，再阅读和学习新卡。以下是课程路线；首批 14 张样卡用于验证学习闭环，其他卡片将逐章补齐。</div>{weeks.map(([title,desc],i)=><div className="week-row" key={title}><span>W{String(i+1).padStart(2,'0')}</span><div><h3>{title}</h3><p>{desc}</p></div><span className="muted">5 × 30 min</span></div>)}</div>}</>}
-function Cards(){const {data}=useData();const [search,setSearch]=useState('');const [chapter,setChapter]=useState('all');const [selected,setSelected]=useState<string|null>(null);const cards=data.cards.filter(c=>(chapter==='all'||c.chapter_id===chapter)&&`${c.title}${c.prompt}`.toLowerCase().includes(search.toLowerCase()));return <><Heading eyebrow="Small cards. Deep understanding." title="把知识，收进记忆。" description={`${data.cards.length} 张精选样卡。每张只问一件事，每次都多理解一点。`}/><div className="filter-bar"><label className="search-field"><Search size={18}/><input aria-label="搜索卡片" placeholder="搜索概念、问题或关键词…" value={search} onChange={e=>setSearch(e.target.value)}/></label><select aria-label="按章节筛选" value={chapter} onChange={e=>setChapter(e.target.value)}><option value="all">所有章节</option>{data.chapters.map(c=><option key={c.id} value={c.id}>{c.title}</option>)}</select><span className="muted">{cards.length} 张卡片</span></div><div className="card-grid">{cards.map(c=>{const s=data.states.find(x=>x.card_id===c.id);return <button className="library-card" key={c.id} onClick={()=>setSelected(c.id)}><div className="panel-top"><span>{data.chapters.find(x=>x.id===c.chapter_id)?.title}</span><span className={`pill ${s?.fsrs.reps?'learned':''}`}>{s?.fsrs.reps?'已学习':'待探索'}</span></div><h3>{c.title}</h3><p>{c.prompt}</p><div className="panel-bottom"><span>{c.canonical_key} · 主动回忆</span><ArrowUpRight size={18}/></div></button>})}</div>{!cards.length&&<div className="empty-state"><Layers size={30}/><h3>这里还没有匹配的卡片</h3><p>试试其他关键词，或前往章节阅读原始课程。</p><Link href="/curriculum" className="button ghost">浏览课程</Link></div>}{selected&&<CardDialog id={selected} close={()=>setSelected(null)}/>}</>}
-function Answer({card}:{card:CardDetail}){return <div className="answer"><span className="eyebrow">把答案和你的回忆对照</span><h3>核心答案</h3><p className="answer-short">{card.answer_short}</p><h4>回答要点</h4><ul>{card.required_points.map((p,i)=><li key={i}><Check size={15}/><span>{p}</span></li>)}</ul>{card.pitfalls&&<div className="pitfall"><span>容易混淆的地方</span><p>{card.pitfalls}</p></div>}<div className="sources"><span>回到知识出处</span>{card.source_refs.map((s,i)=><Link href={`/lessons/${s.lesson_id}`} key={i}><BookOpen size={14}/>{s.title}<ArrowUpRight size={13}/></Link>)}</div></div>}
-function CardDialog({id,close}:{id:string;close:()=>void}){const dialog=useRef<HTMLDialogElement>(null);const [card,setCard]=useState<CardDetail|null>(null);const [error,setError]=useState('');useEffect(()=>{dialog.current?.showModal();api<CardDetail>(`cards/${id}`).then(setCard).catch(e=>setError(e.message))},[id]);return <dialog ref={dialog} className="card-dialog" onCancel={close} onClick={e=>{if(e.target===dialog.current)close()}}><button className="icon-button close-dialog" aria-label="关闭卡片" onClick={close}><X size={21}/></button>{card?<><span className="eyebrow">{card.canonical_key} · Card preview</span><h2>{card.title}</h2><p className="dialog-question">{card.prompt}</p><Answer card={card}/><Link className="button primary" href={`/study?card=${id}`}>练习这张卡片 <ArrowRight size={17}/></Link></>:<p>{error||'正在打开卡片…'}</p>}</dialog>}
-function Study(){const {data,refresh,update}=useData();const search=useSearchParams();const [card,setCard]=useState<CardMeta|null>(null);const [detail,setDetail]=useState<CardDetail|null>(null);const [preview,setPreview]=useState<Preview|null>(null);const [loading,setLoading]=useState(true);const [busy,setBusy]=useState(false);const [error,setError]=useState('');const [draft,setDraft]=useState('');const [last,setLast]=useState<ReviewResult|null>(null);const [completed,setCompleted]=useState(0);const start=useRef(Date.now());const pending=useRef<{rating:number;clientEventId:string;durationMs:number}|null>(null);
- const load=useCallback((source:Bootstrap,id?:string)=>{setLoading(true);setDetail(null);setPreview(null);setDraft('');pending.current=null;setCard(id?source.cards.find(item=>item.id===id)||null:selectNext(source,new Date()));start.current=Date.now();setLoading(false)},[]);
- useEffect(()=>{load(data,search.get('card')||undefined)},[load,search]);
- async function reveal(){if(!card||busy)return;setBusy(true);setError('');try{const d=await api<{card:CardDetail;preview:Preview}>('study/reveal',{cardId:card.id});setDetail(d.card);setPreview(d.preview)}catch(e){setError((e as Error).message)}finally{setBusy(false)}}
- async function rate(rating:number){if(!preview||busy)return;setBusy(true);setError('');pending.current=pending.current||{rating,clientEventId:crypto.randomUUID(),durationMs:Math.min(1800000,Date.now()-start.current)};try{const result=await api<ReviewResult>('reviews',{...pending.current,token:preview.token});const event:ReviewEvent={id:result.eventId,card_id:result.cardId,kind:'review',rating:result.rating,state_before:result.before,state_after:result.state,received_at:result.receivedAt,reviewed_at:result.reviewedAt,duration_ms:result.durationMs,undone_event_id:null};const state={card_id:result.cardId,fsrs:result.state,due:result.state.due,version:result.version,suspended:false,last_event_id:result.eventId};const next={...data,states:[...data.states.filter(item=>item.card_id!==result.cardId),state],events:[event,...data.events]};update(()=>next);setLast(result);setCompleted(x=>x+1);load(next)}catch(e){setError((e as Error).message)}finally{setBusy(false)}}
- async function undo(){if(!last||busy)return;setBusy(true);setError('');try{await api('reviews/undo',{eventId:last.eventId,version:last.version,clientEventId:crypto.randomUUID()});const next=await refresh();load(next,last.cardId);setLast(null);setCompleted(x=>Math.max(0,x-1))}catch(e){setError((e as Error).message)}finally{setBusy(false)}}
- useEffect(()=>{function keyboard(e:KeyboardEvent){if((e.target as HTMLElement).closest('input,textarea,button,a,select'))return;if(e.code==='Space'&&!detail&&!loading){e.preventDefault();void reveal()}if(detail&&['1','2','3','4'].includes(e.key)){e.preventDefault();void rate(Number(e.key))}}window.addEventListener('keydown',keyboard);return()=>window.removeEventListener('keydown',keyboard)});
- const labels=['完全记不清','模糊记得','记得','很熟练'];return <><div className="study-top"><Link className="back-link" href="/today"><ArrowLeft size={16}/>退出专注</Link><span>本次已完成 <b>{completed}</b> 次回忆</span><button className="button text-button" disabled={!last||busy} onClick={undo}><RotateCcw size={15}/>撤销上一张</button></div><ErrorNote error={error}/>{loading?<div className="empty-state">正在准备下一次回忆…</div>:!card?<div className="session-complete"><div className="completion-orbit"><Check size={40}/></div><span className="eyebrow">A little more, remembered.</span><h1>这一轮，先到这里。</h1><p>当前没有可以学习的卡片。<br/>新的复习到期后再来，或去课程里建立更深的理解。</p><Link href="/curriculum" className="button primary">继续探索课程 <ArrowUpRight size={17}/></Link><button className="button ghost" onClick={()=>load(data)}>检查到期复习</button></div>:<><div className="study-label"><span>{data.chapters.find(x=>x.id===card.chapter_id)?.title}</span><span>{card.canonical_key} · 主动回忆</span></div><article className={`study-paper ${detail?'revealed':''}`}><div className="paper-corner"/><div className="paper-top"><span>先想一想，再翻开。</span><span className="paper-symbol">✳</span></div><h1>{card.prompt}</h1>{!detail?<><p className="recall-hint">试着用自己的话回答。想不起来也没关系，<br/>这是记忆开始加深的地方。</p><textarea aria-label="写下你的回忆" value={draft} onChange={e=>setDraft(e.target.value)} placeholder="在这里写下你的回忆（可选，不会保存）"/><div className="reveal-row"><span>给自己片刻思考</span><button className="button dark" disabled={busy} onClick={reveal}>{busy?'正在展开…':'显示答案'} <span className="keycap">Space</span></button></div></>:<Answer card={detail}/>}</article>{detail&&preview&&<div className="rating-area"><p>这一次，你记得有多清楚？<span>「模糊记得」指独立答对但费力；答错请选「完全记不清」。</span></p><div className="rating-buttons">{preview.options.map((o,i)=><button disabled={busy} key={o.rating} className={`rating rating-${i}`} onClick={()=>rate(o.rating)}><span><kbd>{o.rating}</kbd>{labels[i]}</span><small>{o.interval}后复习</small></button>)}</div>{error&&pending.current&&<p>重新点击评分会重试同一条记录，不会重复计入。</p>}</div>}</>}</>}
-function LessonReader({id}:{id:string}){const {data,update}=useData();const lesson=data.lessons.find(l=>l.id===id);const [body,setBody]=useState('');const [error,setError]=useState('');const [busy,setBusy]=useState(false);useEffect(()=>{api<{body_markdown:string}>(`lessons/${id}`).then(x=>setBody(x.body_markdown)).catch(e=>setError(e.message))},[id]);if(!lesson)return <div className="empty-state">没有找到这篇课程。</div>;const cards=data.cards.filter(c=>c.lesson_id===id);const done=data.activity.some(a=>a.lesson_id===id);async function complete(){setBusy(true);try{await api('activity',{lessonId:id});update(current=>({...current,activity:[...current.activity.filter(item=>item.lesson_id!==id),{lesson_id:id,completed_at:new Date().toISOString()}]}))}catch(e){setError((e as Error).message)}finally{setBusy(false)}}return <><Link className="back-link" href={`/curriculum/${lesson.chapter_id}`}><ArrowLeft size={16}/>返回章节</Link><div className="reading-layout"><article className="reading-article"><span className="eyebrow">{lesson.reading_minutes} 分钟阅读 · 知识库原文</span><h1>{lesson.title}</h1><p className="source-disclaimer">本页保留知识库原始内容；其中的时效性信息需结合当前情况判断。</p><ErrorNote error={error}/>{body?<div className="markdown"><ReactMarkdown remarkPlugins={[remarkGfm]} skipHtml components={{a:props=><a {...props} target="_blank" rel="noopener noreferrer"/>,img:props=><LessonImage src={typeof props.src==='string'?props.src:undefined} alt={props.alt}/>}}>{body}</ReactMarkdown></div>:<p>正在打开课程…</p>}</article><aside className="reading-aside"><span className="eyebrow">从理解到记忆</span><h3>读完，试着回忆。</h3><p>先读懂知识，再用卡片检查自己是否真正掌握。</p><button disabled={busy||done} className="button primary" onClick={complete}>{done?<><Check size={16}/>已标记读完</>:busy?'保存中…':'标记为已读'}</button><div className="related-cards"><h4>本课记忆卡片 · {cards.length}</h4>{cards.length?cards.map(c=><Link href={`/study?card=${c.id}`} key={c.id}>{c.title}<ArrowUpRight size={16}/></Link>):<p>本课暂未制卡，可先阅读课程。</p>}</div></aside></div></>}
-function Progress(){const {data}=useData();const s=studySummary(data,new Date());const reviews=activeReviews(data.events);const days=Array.from({length:35},(_,i)=>{const d=new Date();d.setDate(d.getDate()-34+i);const key=learningDay(d,data.settings).key;return {key,count:reviews.filter(e=>learningDay(new Date(e.received_at),data.settings).key===key).length}});const eligible=reviews.filter(e=>e.state_before.last_review&&new Date(e.reviewed_at).getTime()-new Date(e.state_before.last_review).getTime()>=86400000);const retention=eligible.length?Math.round(eligible.filter(e=>(e.rating||0)>1).length/eligible.length*100):null;return <><Heading eyebrow="Evidence of becoming" title="微小积累，自有回响。" description="让真实的学习痕迹，告诉你走了多远。"/><div className="progress-metrics"><div><span>已学习卡片</span><strong>{s.learned}<small> / {data.cards.length}</small></strong><p>从第一次回忆开始</p></div><div><span>已读课程</span><strong>{data.activity.length}<small> / {data.lessons.length}</small></strong><p>为判断力建立底座</p></div><div><span>跨日回忆成功率</span><strong>{retention===null?'—':`${retention}%`}</strong><p>{eligible.length?`基于 ${eligible.length} 次跨日复习`:'完成跨日复习后显示'}</p></div></div><section className="activity-panel"><div className="section-heading"><div><span className="eyebrow">Your rhythm</span><h2>过去五周的学习节奏</h2></div><span className="muted">每一格，都是一天</span></div><div className="heatmap">{days.map(d=><div key={d.key} tabIndex={0} title={`${d.key} · ${d.count} 次回忆`} aria-label={`${d.key}，${d.count} 次回忆`} className={`heat heat-${Math.min(3,d.count)}`}><span>{d.key.slice(8)}</span>{d.count>0&&<small>{d.count}</small>}</div>)}</div><div className="heatmap-legend"><span>{days[0].key}</span><span>少 <i/><i/><i/> 多</span><span>{days[34].key}</span></div></section><section className="chapter-progress"><div className="section-heading"><h2>每一章，都在生长</h2><Link href="/curriculum">回到课程 <ArrowRight size={16}/></Link></div>{data.chapters.map(c=>{const cards=data.cards.filter(x=>x.chapter_id===c.id);const learned=cards.filter(x=>data.states.some(s=>s.card_id===x.id&&s.fsrs.reps>0)).length;return <div className="progress-row" key={c.id}><span>{String(c.position).padStart(2,'0')}</span><Link href={`/curriculum/${c.id}`}>{c.title}</Link><div className="thin-progress"><i style={{width:`${cards.length?learned/cards.length*100:0}%`}}/></div><small>{cards.length?`${learned} / ${cards.length} 张已学习`:'卡片待制'}</small></div>})}</section>{data.historyLimited&&<p className="info-note">活动与成功率基于最近 1,000 条记录。</p>}</>}
-function Preferences(){const {data,update}=useData();const router=useRouter();const [form,setForm]=useState<Settings>({...data.settings});const [error,setError]=useState('');const [message,setMessage]=useState('');const [busy,setBusy]=useState(false);async function save(e:React.FormEvent){e.preventDefault();setBusy(true);setError('');setMessage('');try{const saved=await api<Settings>('settings',{daily_minutes:form.daily_minutes,new_cards_per_day:form.new_cards_per_day,retention:form.retention,timezone:form.timezone,route_mode:form.route_mode,familiarity:form.familiarity,version:form.version},'PATCH');const settings={...saved,retention:Number(saved.retention)};update(current=>({...current,settings}));setForm(settings);setMessage('学习偏好已保存，下一次复习将使用新设置。')}catch(e){setError((e as Error).message)}finally{setBusy(false)}}return <><Heading eyebrow="Find your own pace" title="按自己的节奏生长。" description="好的计划，应该适合你的生活。"/><form className="settings-form" onSubmit={save}><section><div><h2>每天一点，持续发生</h2><p>到期复习优先。复习量增加时，系统会自动减少新卡。</p></div><div className="form-grid"><label>每日学习预算<div className="input-unit"><input type="number" min="10" max="120" value={form.daily_minutes} onChange={e=>setForm({...form,daily_minutes:Number(e.target.value)})}/><span>分钟</span></div></label><label>每天最多新卡<div className="input-unit"><input type="number" min="0" max="30" value={form.new_cards_per_day} onChange={e=>setForm({...form,new_cards_per_day:Number(e.target.value)})}/><span>张</span></div></label><label>期望记忆保留率<select value={form.retention} onChange={e=>setForm({...form,retention:Number(e.target.value)})}>{[.8,.85,.9,.95,.97].map(x=><option value={x} key={x}>{x*100}%{x===.9?' · 推荐':''}</option>)}</select><small>越高通常需要越频繁地复习。</small></label><label>学习时区<select value={form.timezone} onChange={e=>setForm({...form,timezone:e.target.value})}>{['Asia/Shanghai','Asia/Hong_Kong','Asia/Tokyo','Europe/London','America/New_York','America/Los_Angeles','UTC'].map(x=><option key={x}>{x}</option>)}</select><small>每天凌晨 4 点开始新的学习日。</small></label></div></section><section><h2>从哪里开始</h2><div className="route-options">{[['guided','优先不熟悉的知识','根据你对章节的熟悉程度安排新卡。'],['chapter','按章节顺序推进','从已有卡片中，按照课程顺序学习。']].map(([v,t,d])=><label className={form.route_mode===v?'chosen':''} key={v}><input type="radio" name="route" checked={form.route_mode===v} onChange={()=>setForm({...form,route_mode:v as Settings['route_mode']})}/><span><b>{t}</b><small>{d}</small></span></label>)}</div><div className="familiarity-list">{data.chapters.map(c=><label key={c.id}><span>{c.title}</span><select value={form.familiarity[c.id]||'familiar'} onChange={e=>setForm({...form,familiarity:{...form.familiarity,[c.id]:e.target.value}})}><option value="new">刚刚接触</option><option value="familiar">了解一些</option><option value="experienced">比较熟悉</option></select></label>)}</div></section><ErrorNote error={error}/>{message&&<p role="status" className="success-note"><Check size={17}/>{message}</p>}<div className="settings-actions"><button disabled={busy} className="button primary">{busy?'保存中…':'保存学习偏好'}<Check size={17}/></button><button type="button" className="button ghost" onClick={async()=>{await api('auth/logout',{});router.replace('/login')}}><LogOut size={16}/>退出学习空间</button></div></form></>}
-function Interview(){return <div className="interview-page"><div className="voice-orbit"><Volume2 size={46}/><span/><span/></div><span className="eyebrow">The weekend room</span><h1>让理解，<br/>成为说得清的能力。</h1><p>周末练习室将在下一阶段开放。<br/>未来，你可以围绕本周所学，完成一场真实的语音模拟面试。</p><span className="pill">规划中 · 尚未开放</span><Link className="button primary" href="/cards">先用卡片练习表达 <ArrowUpRight size={17}/></Link></div>}
+function Brand() { return <Link href="/today" className="brand"><span className="brand-mark"><i /><i /><i /></span><span>recall<span className="brand-period">.</span></span></Link>; }
+function Login() { const router = useRouter(); const [local, setLocal] = useState(false); const [code, setCode] = useState(''); const [error, setError] = useState(''); const [busy, setBusy] = useState(false); useEffect(() => { api<{
+    enabled: boolean;
+}>('auth/local').then(x => setLocal(x.enabled)).catch(() => { }); }, []); async function enter(isLocal = false) { setBusy(true); setError(''); try {
+    await api('auth', isLocal ? { local: true } : { code });
+    router.replace('/today');
+}
+catch (e) {
+    setError((e as Error).message);
+}
+finally {
+    setBusy(false);
+} } return <div className="login"><div className="login-art"><Brand /><div className="login-copy"><span className="eyebrow">A place for what stays.</span><h1>把理解，<br />变成你的<span>第二直觉。</span></h1><p>从第一次想起，到真正掌握。<br />每天留一点时间给未来的自己。</p></div><MemorySculpture /><span className="login-foot">AI PM Learning Studio · 2026</span></div><div className="login-form"><span className="eyebrow">Welcome back</span><h2>进入你的学习空间</h2><p>课程、记忆与成长，都从这里继续。</p><form onSubmit={e => { e.preventDefault(); void enter(); }}><label htmlFor="access-code">学习访问码</label><input id="access-code" type="password" autoComplete="current-password" value={code} onChange={e => setCode(e.target.value)} placeholder="输入你的专属访问码" required/><button disabled={busy} className="button primary">{busy ? '正在连接…' : '进入学习空间'}<ArrowRight size={17}/></button></form>{local && <button disabled={busy} onClick={() => enter(true)} className="button ghost">打开本机学习空间 <ArrowUpRight size={16}/></button>}<ErrorNote error={error}/><small>你的学习记录会保存在专属空间中。</small></div></div>; }
+function MemorySculpture() { return <div className="memory-sculpture" aria-hidden="true"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="sculpture-glow"/><div className="float-card back"><span>Understand.</span><div className="line-art"/></div><div className="float-card middle"><span>Connect.</span><div className="constellation"><i /><i /><i /><i /><i /></div></div><div className="float-card front"><div className="sculpture-card-top"><span>Knowledge, retained.</span><Sparkles size={16}/></div><div className="fold-art"><i /><i /><i /></div><span className="card-thought">每一次想起，<br />都离直觉更近一点。</span><div className="sculpture-card-bottom"><span>AI × Product × You</span><ArrowUpRight size={20}/></div></div><span className="orbit-point p1"/><span className="orbit-point p2"/></div>; }
+function Today() {
+    const { data } = useData();
+    const s = studySummary(data, new Date());
+    const nextLesson = orderedLessons(data).find(lesson => !data.activity.some(activity => activity.lesson_id === lesson.id));
+    const chapter = data.chapters.find(item => item.id === nextLesson?.chapter_id);
+    return <>
+ <div className="today-welcome"><span>{new Intl.DateTimeFormat('zh-CN', { month: 'long', day: 'numeric', weekday: 'long', timeZone: data.settings.timezone }).format(new Date())}</span><span>每天留 {data.settings.daily_minutes} 分钟，给未来的自己。</span></div>
+ <section className="today-hero"><div><span className="atlas-label"><Orbit size={17}/>今日学习</span><h1>让理解留下来。</h1><p>选一门课程建立理解，<br />用一次回忆，让它成为自己的知识。</p><div className="today-hero-actions"><Link className="button primary" href="/study">开始今日复习 <ArrowRight size={18}/></Link><Link className="button ghost" href="/curriculum">自主选择课程 <BookOpen size={17}/></Link></div><span className="today-hero-note">到期卡片优先，新卡按你的每日预算安排。</span></div><div className="recall-diagram" aria-hidden="true"><svg viewBox="0 0 380 290" fill="none"><path d="M40 206C110 206 88 77 184 77S243 206 344 206" stroke="currentColor" strokeWidth="1.5"/><path d="M40 224C129 224 92 113 184 113S250 224 344 224" stroke="currentColor" strokeOpacity=".22"/><circle cx="184" cy="96" r="55" stroke="currentColor" strokeOpacity=".2"/><circle cx="184" cy="96" r="77" stroke="currentColor" strokeOpacity=".1"/><circle cx="40" cy="206" r="7" fill="currentColor"/><circle cx="184" cy="77" r="7" fill="currentColor"/><circle cx="344" cy="206" r="7" fill="currentColor"/><text x="40" y="251" textAnchor="middle">理解</text><text x="184" y="31" textAnchor="middle">回忆</text><text x="344" y="251" textAnchor="middle">记住</text><path d="m178 97 5 5 10-12" stroke="currentColor" strokeWidth="2"/></svg><span>Learning is a return journey.</span></div></section>
+ <div className="today-metrics"><div><span>到期复习</span><strong>{s.due.length}<small>张</small></strong><p>今天需要重新想起的知识</p></div><div><span>可安排新卡</span><strong>{s.newCount}<small>张</small></strong><p>按剩余时间与新卡额度估算</p></div><div><span>今日已回忆</span><strong>{s.today.length}<small>次</small></strong><p>包含主动选择的额外练习</p></div><Link href="/progress">查看学习足迹 <ArrowUpRight size={17}/></Link></div>
+ <div className="section-heading"><h2>选择下一步</h2><Link href="/curriculum">全部课程 <ArrowRight size={16}/></Link></div><div className="today-next-grid"><div className="continue-course"><span className="pill">{nextLesson ? '下一篇未读课程' : '课程阅读'}</span>{nextLesson ? <><span className="continue-course-chapter">{chapter?.title}</span><h3>{nextLesson.title}</h3><p>{nextLesson.summary}</p><Link className="button ghost" href={`/lessons/${nextLesson.id}`}>打开课程 <ArrowUpRight size={17}/></Link><span className="continue-course-time"><Clock size={13}/>{nextLesson.reading_minutes} 分钟阅读</span></> : <><h3>{data.lessons.length ? '所有课程都已标记读完' : '从一个主题开始'}</h3><p>按自己的兴趣选择课程，随时回来重新理解。</p><Link className="button ghost" href="/curriculum">浏览课程 <ArrowRight size={16}/></Link></>}</div><div className="today-explore"><div><span className="atlas-label"><BookOpen size={16}/>自主学习</span><h3>不必按顺序，<br />也能找到方向。</h3><p>课程目录一直在身边。选择章节，阅读课程，再练习本课卡片。</p><Link href="/curriculum">展开知识地图 <ArrowRight size={16}/></Link></div><div className="mini-knowledge-rings" aria-hidden="true"><i /><i /><i /><span /></div></div></div>
+ <div className="library-note"><Layers size={17}/><span>{data.chapters.length} 个章节 / {data.lessons.length} 篇课程 / {data.cards.length} 张记忆卡片</span><Link href="/cards">查找卡片 <ArrowUpRight size={14}/></Link></div>
+ </>;
+}
+function Cards() { const { data } = useData(); const [search, setSearch] = useState(''); const [chapter, setChapter] = useState('all'); const [selected, setSelected] = useState<string | null>(null); const cards = data.cards.filter(c => (chapter === 'all' || c.chapter_id === chapter) && `${c.title}${c.prompt}`.toLowerCase().includes(search.toLowerCase())); return <><Heading eyebrow="Small cards. Deep understanding." title="把知识，收进记忆。" description={`${data.cards.length} 张记忆卡片。查找问题，查看答案，或选择一张主动练习。`}/><div className="filter-bar"><label className="search-field"><Search size={18}/><input aria-label="搜索卡片" placeholder="搜索概念、问题或关键词…" value={search} onChange={e => setSearch(e.target.value)}/></label><select aria-label="按章节筛选" value={chapter} onChange={e => setChapter(e.target.value)}><option value="all">所有章节</option>{data.chapters.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}</select><span className="muted">{cards.length} 张卡片</span></div><div className="card-grid">{cards.map(c => { const s = data.states.find(x => x.card_id === c.id); return <button className="library-card" key={c.id} onClick={() => setSelected(c.id)}><div className="panel-top"><span>{data.chapters.find(x => x.id === c.chapter_id)?.title}</span><span className={`pill ${s?.fsrs.reps ? 'learned' : ''}`}>{s?.fsrs.reps ? '已学习' : '待探索'}</span></div><h3>{c.title}</h3><p>{c.prompt}</p><div className="panel-bottom"><span>{c.canonical_key} · 主动回忆</span><ArrowUpRight size={18}/></div></button>; })}</div>{!cards.length && <div className="empty-state"><Layers size={30}/><h3>这里还没有匹配的卡片</h3><p>试试其他关键词，或前往章节阅读原始课程。</p><Link href="/curriculum" className="button ghost">浏览课程</Link></div>}{selected && <CardDialog id={selected} close={() => setSelected(null)}/>}</>; }
+function Answer({ card }: {
+    card: CardDetail;
+}) { return <div className="answer"><span className="eyebrow">把答案和你的回忆对照</span><h3>核心答案</h3><p className="answer-short">{card.answer_short}</p><h4>回答要点</h4><ul>{card.required_points.map((p, i) => <li key={i}><Check size={15}/><span>{p}</span></li>)}</ul>{card.explanation?.trim() && <section className="answer-explanation"><h4>展开解析</h4><p className="explanation-hint">帮助理解，不要求逐字背诵。评分以回答要点为准。</p><div>{card.explanation}</div></section>}{card.pitfalls && <div className="pitfall"><span>容易混淆的地方</span><p>{card.pitfalls}</p></div>}<div className="sources"><span>回到知识出处</span>{card.source_refs.map((s, i) => <Link href={`/lessons/${s.lesson_id}`} key={i}><BookOpen size={14}/>{s.title}<ArrowUpRight size={13}/></Link>)}</div></div>; }
+function CardDialog({ id, close }: {
+    id: string;
+    close: () => void;
+}) { const dialog = useRef<HTMLDialogElement>(null); const [card, setCard] = useState<CardDetail | null>(null); const [error, setError] = useState(''); useEffect(() => { dialog.current?.showModal(); api<CardDetail>(`cards/${id}`).then(setCard).catch(e => setError(e.message)); }, [id]); return <dialog ref={dialog} className="card-dialog" aria-label="记忆卡片详情" onCancel={close} onClick={e => { if (e.target === dialog.current)
+    close(); }}><button className="icon-button close-dialog" aria-label="关闭卡片" onClick={close}><X size={21}/></button>{card ? <><span className="eyebrow">{card.canonical_key} · Card preview</span><h2>{card.title}</h2><p className="dialog-question">{card.prompt}</p><Answer card={card}/><Link className="button primary" href={`/study?card=${id}`}>练习这张卡片 <ArrowRight size={17}/></Link></> : <p>{error || '正在打开卡片…'}</p>}</dialog>; }
+function Study() {
+    const { data, refresh, update } = useData();
+    const search = useSearchParams();
+    const scope = resolveStudyScope(data, search.get('lesson'), search.get('card'));
+    const [practiceIds] = useState(() => practiceCards(data, scope).map(item => item.id));
+    const daily = scope.kind === 'daily';
+    const visited = useRef<string[]>([]);
+    const lesson = scope.kind === 'lesson' ? data.lessons.find(item => item.id === scope.lessonId) : scope.kind === 'card' ? data.lessons.find(item => item.id === data.cards.find(card => card.id === scope.cardId)?.lesson_id) : undefined;
+    const returnPath = daily ? '/today' : lesson ? `/lessons/${lesson.id}` : '/curriculum';
+    const mode = daily ? '今日复习' : scope.kind === 'lesson' ? '课程练习' : '单卡练习';
+    const [card, setCard] = useState<CardMeta | null>(null);
+    const [detail, setDetail] = useState<CardDetail | null>(null);
+    const [preview, setPreview] = useState<Preview | null>(null);
+    const [previewStale, setPreviewStale] = useState(false);
+    const [loading, setLoading] = useState(true);
+    const [busy, setBusy] = useState(false);
+    const [error, setError] = useState('');
+    const [draft, setDraft] = useState('');
+    const [last, setLast] = useState<ReviewResult | null>(null);
+    const [completed, setCompleted] = useState(0);
+    const start = useRef(Date.now());
+    const pending = useRef<{
+        rating: number;
+        clientEventId: string;
+        durationMs: number;
+        uncertain?: boolean;
+    } | null>(null);
+    const load = useCallback((source: Bootstrap, id?: string) => { setLoading(true); setDetail(null); setPreview(null); setPreviewStale(false); setDraft(''); pending.current = null; const selectedId = id || practiceIds.find(item => !visited.current.includes(item)); setCard(daily && !id ? selectNext(source, new Date()) : source.cards.find(item => item.id === selectedId) || null); start.current = Date.now(); setLoading(false); }, [daily, practiceIds]);
+    useEffect(() => { load(data); }, [load]);
+    async function reveal() { if (!card || busy)
+        return; setBusy(true); setError(''); try {
+        const result = await api<{
+            card: CardDetail;
+            preview: Preview;
+        }>('study/reveal', { cardId: card.id });
+        setDetail(result.card);
+        setPreview(result.preview);
+        setPreviewStale(false);
+    }
+    catch (e) {
+        setError((e as Error).message);
+    }
+    finally {
+        setBusy(false);
+    } }
+    async function rate(rating: number) {
+        if (!preview || previewStale || busy)
+            return;
+        setBusy(true);
+        setError('');
+        pending.current = pending.current || { rating, clientEventId: crypto.randomUUID(), durationMs: Math.min(1800000, Date.now() - start.current) };
+        try {
+            const result = await api<ReviewResult>('reviews', { rating: pending.current.rating, clientEventId: pending.current.clientEventId, durationMs: pending.current.durationMs, token: preview.token });
+            const event: ReviewEvent = { id: result.eventId, card_id: result.cardId, kind: 'review', rating: result.rating, state_before: result.before, state_after: result.state, received_at: result.receivedAt, reviewed_at: result.reviewedAt, duration_ms: result.durationMs, undone_event_id: null };
+            const state = { card_id: result.cardId, fsrs: result.state, due: result.state.due, version: result.version, suspended: false, last_event_id: result.eventId };
+            const next = { ...data, states: [...data.states.filter(item => item.card_id !== result.cardId), state], events: [event, ...data.events.filter(item => item.id !== event.id)] };
+            update(() => next);
+            setLast(result);
+            if (!daily)
+                visited.current = [...visited.current, result.cardId];
+            setCompleted(value => value + 1);
+            load(next);
+        }
+        catch (e) {
+            const failure = e as Error & {
+                code?: string;
+            };
+            if (failure.code === 'PREVIEW_EXPIRED' && !pending.current?.uncertain) {
+                pending.current = null;
+                setPreviewStale(true);
+            }
+            else if (pending.current) {
+                pending.current.uncertain = true;
+            }
+            setError(failure.message);
+        }
+        finally {
+            setBusy(false);
+        }
+    }
+    async function undo() { if (!last || busy)
+        return; setBusy(true); setError(''); try {
+        await api('reviews/undo', { eventId: last.eventId, version: last.version, clientEventId: crypto.randomUUID() });
+        const next = await refresh();
+        visited.current = visited.current.filter(id => id !== last.cardId);
+        load(next, last.cardId);
+        setLast(null);
+        setCompleted(value => Math.max(0, value - 1));
+    }
+    catch (e) {
+        setError((e as Error).message);
+    }
+    finally {
+        setBusy(false);
+    } }
+    useEffect(() => { function keyboard(event: KeyboardEvent) { if (event.repeat || (event.target as HTMLElement).closest('input,textarea,button,a,select'))
+        return; if (event.code === 'Space' && !detail && !loading) {
+        event.preventDefault();
+        void reveal();
+    } if (detail && ['1', '2', '3', '4'].includes(event.key)) {
+        event.preventDefault();
+        void rate(Number(event.key));
+    } } window.addEventListener('keydown', keyboard); return () => window.removeEventListener('keydown', keyboard); });
+    const labels = ['完全记不清', '模糊记得', '记得', '很熟练'];
+    if (scope.kind === 'invalid')
+        return <div className="empty-state"><h1>无法开始这次练习</h1><p>课程或卡片不存在，或者选择了冲突的练习范围。</p><Link href="/curriculum" className="button primary">重新选择课程</Link></div>;
+    return <>
+ <div className="study-top"><Link className="back-link" href={returnPath}><ArrowLeft size={16}/>{daily ? '返回今日学习' : '返回课程'}</Link><button className="button text-button" disabled={!last || busy} onClick={undo}><RotateCcw size={15}/>撤销上一张</button></div>
+ <div className="study-mode-heading"><div><span className="pill">{mode}</span><h1>{daily ? '把记忆再唤醒。' : lesson?.title || '专注这一张卡片'}</h1><p>{daily ? '到期复习优先，新卡根据每日预算安排。' : '自主练习会更新复习计划与今日统计，可超出今日新卡预算。'}</p></div><div className="session-counter" role="status"><strong>{completed}{!daily && <small> / {practiceIds.length}</small>}</strong><span>{daily ? '本次已完成回忆' : '张已练习'}</span></div></div>
+ {!daily && practiceIds.length > 0 && <div className="session-track" role="progressbar" aria-label="本课练习进度" aria-valuenow={completed} aria-valuemin={0} aria-valuemax={practiceIds.length}><i style={{ width: `${completed / practiceIds.length * 100}%` }}/></div>}
+ <ErrorNote error={error}/>
+ {loading ? <div className="empty-state">正在准备下一次回忆…</div> : !card ? <div className="session-complete"><div className="completion-orbit"><Check size={36}/></div><h1>{daily ? '这一轮，先到这里。' : practiceIds.length ? '本次练习完成。' : '这里暂无可练习的卡片。'}</h1><p>{daily ? '当前没有可安排的卡片，你也可以自主选择课程继续学习。' : practiceIds.length ? '本次评分已保存。回到课程继续阅读，或另选一课。' : (scope.kind === 'card' ? '这张卡片已暂停。你可以先阅读课程。' : '本课尚无卡片，或卡片已暂停。你可以先阅读原文。')}</p><Link href={returnPath} className="button primary">{daily ? '返回今日学习' : '返回本课'}<ArrowRight size={17}/></Link><Link href="/curriculum" className="button ghost">选择其他课程</Link>{daily && <button className="button ghost" onClick={() => load(data)}>检查到期复习</button>}{!daily && lesson && <LessonPagination data={data} lessonId={lesson.id}/>}</div> : <>
+ <div className="study-label"><Link href={`/lessons/${card.lesson_id}`}><BookOpen size={14}/>{data.lessons.find(item => item.id === card.lesson_id)?.title}</Link><span>{daily ? '按记忆间隔安排' : scope.kind === 'lesson' ? `本课第 ${completed + 1} / ${practiceIds.length} 张` : '单卡主动练习'}</span></div>
+ <article className={`study-paper ${detail ? 'revealed' : ''}`}><div className="paper-top"><span>{detail ? '对照答案，再判断回忆质量。' : '先回忆，再打开答案。'}</span><Layers size={17}/></div><h2>{card.prompt}</h2>{!detail ? <><p className="recall-hint">试着用自己的话回答。想不起来，也是一种有效练习。</p><textarea aria-label="写下你的回忆" value={draft} onChange={event => setDraft(event.target.value)} placeholder="写下你的回忆（可选，不会保存）"/><div className="reveal-row"><span>准备好了，就对照答案。</span><button className="button dark" disabled={busy} onClick={reveal}>{busy ? '正在展开…' : '显示答案'}<span className="keycap">Space</span></button></div></> : <Answer card={detail}/>}</article>
+ {detail && preview && <div className="rating-area"><p>这一次，你记得有多清楚？<span>「模糊记得」指独立答对但费力；答错请选「完全记不清」。</span></p><div className="rating-buttons">{preview.options.map((option, index) => <button disabled={busy || previewStale} key={option.rating} className={`rating rating-${index}`} onClick={() => rate(option.rating)}><span><kbd>{option.rating}</kbd>{labels[index]}</span><small>{option.interval}后复习</small></button>)}</div>{error && <div className="preview-recovery"><span>{pending.current ? '再次评分会重试同一条记录。' : '可重新载入评分选项。'}</span>{!pending.current && <button className="button ghost" disabled={busy} onClick={reveal}>重新载入评分选项</button>}</div>}</div>}
+ </>}
+ {!daily && <p className="session-footnote">刷新或离开会重置本轮位置，已经保存的复习记录会保留。</p>}
+ </>;
+}
+function LessonReader({ id }: {
+    id: string;
+}) {
+    const { data, update } = useData();
+    const lesson = data.lessons.find(item => item.id === id);
+    const chapter = data.chapters.find(item => item.id === lesson?.chapter_id);
+    const [body, setBody] = useState('');
+    const [error, setError] = useState('');
+    const [busy, setBusy] = useState(false);
+    const [loading, setLoading] = useState(true);
+    useEffect(() => { let active = true; setBody(''); setError(''); setLoading(true); api<{
+        body_markdown: string;
+    }>(`lessons/${id}`).then(result => { if (active)
+        setBody(result.body_markdown); }).catch(e => { if (active)
+        setError(e.message); }).finally(() => { if (active)
+        setLoading(false); }); return () => { active = false; }; }, [id]);
+    if (!lesson)
+        return <div className="empty-state"><h1>没有找到这篇课程</h1><Link href="/curriculum" className="button primary">返回知识地图</Link></div>;
+    const cards = data.cards.filter(card => card.lesson_id === id);
+    const available = practiceCards(data, { kind: 'lesson', lessonId: id });
+    const done = data.activity.some(activity => activity.lesson_id === id);
+    const headings: {
+        id: string;
+        title: string;
+    }[] = [];
+    let fenced = false;
+    body.split('\n').forEach((line, index) => { if (/^\s*(```|~~~)/.test(line)) {
+        fenced = !fenced;
+        return;
+    } const match = !fenced && /^##\s+(.+?)\s*#*\s*$/.exec(line); if (match)
+        headings.push({ id: `section-${index + 1}`, title: match[1].replace(/[*_`]/g, '') }); });
+    async function complete() { setBusy(true); setError(''); try {
+        await api('activity', { lessonId: id });
+        update(current => ({ ...current, activity: [...current.activity.filter(item => item.lesson_id !== id), { lesson_id: id, completed_at: new Date().toISOString() }] }));
+    }
+    catch (e) {
+        setError((e as Error).message);
+    }
+    finally {
+        setBusy(false);
+    } }
+    return <><div className="reader-heading"><div><span className="atlas-label"><BookOpen size={16}/>{chapter?.title}</span><h1>{lesson.title}</h1><div className="reader-metadata"><span><Clock size={14}/>{lesson.reading_minutes} 分钟阅读</span><span><Layers size={14}/>{cards.length} 张卡片</span>{done && <span className="read-badge"><Check size={13}/>已读</span>}</div></div>{available.length > 0 && <Link href={`/study?lesson=${id}`} className="button primary">练习本课 <ArrowRight size={17}/></Link>}</div>
+ <LessonPagination data={data} lessonId={id}/>
+ <div className="reading-layout"><article className="reading-article"><p className="source-disclaimer">知识库原文 · 时效性信息请结合当前情况判断。</p><ErrorNote error={error}/>{loading ? <p className="reader-loading">正在打开课程原文…</p> : body ? <div className="markdown"><ReactMarkdown remarkPlugins={[remarkGfm]} skipHtml components={{ h1: ({node,children,...props}) => <h2 {...props}>{children}</h2>, h2: ({ node, children, ...props }) => <h2 id={`section-${node?.position?.start.line}`} {...props}>{children}</h2>, a: ({ node, ...props }) => <a {...props} target={props.href?.startsWith('#') ? undefined : '_blank'} rel="noopener noreferrer"/>, img: props => <LessonImage src={typeof props.src === 'string' ? props.src : undefined} alt={props.alt}/> }}>{body}</ReactMarkdown></div> : !error && <p>这篇课程暂时没有正文。</p>}{error && !body && <button className="button ghost" onClick={() => { setError(''); setLoading(true); api<{
+        body_markdown: string;
+    }>(`lessons/${id}`).then(result => setBody(result.body_markdown)).catch(e => setError(e.message)).finally(() => setLoading(false)); }}>重新加载原文</button>}<div className="reading-complete-row"><span>{done ? '你已经标记读完，可以随时重读。' : '读完后，留下你的阅读标记。'}</span><button disabled={busy || done} className="button ghost" onClick={complete}>{done ? <><Check size={16}/>已标记读完</> : busy ? '保存中…' : '标记为已读'}</button></div><LessonPagination data={data} lessonId={id}/></article>
+ <aside className="reading-aside">{headings.length > 0 && <nav className="article-toc" aria-label="本页目录"><h2>本页内容</h2>{headings.map(heading => <a key={heading.id} href={`#${heading.id}`}>{heading.title}</a>)}</nav>}<div className="lesson-practice-panel"><span className="atlas-label"><Layers size={16}/>从理解到记忆</span><h3>读完，试着回忆。</h3><p>练习本课卡片，检查自己能否用自己的话说清楚。</p>{available.length ? <Link className="button primary" href={`/study?lesson=${id}`}>练习本课 {available.length} 张卡片<ArrowRight size={15}/></Link> : <span className="muted">本课暂无可练习卡片。</span>}<button disabled={busy || done} className="button ghost" onClick={complete}>{done ? <><Check size={15}/>已标记读完</> : busy ? '保存中…' : '标记为已读'}</button></div><div className="related-cards"><h4>本课卡片</h4>{cards.map(card => <Link href={`/study?card=${card.id}`} key={card.id}><span>{card.title}<small>单卡练习</small></span><ArrowUpRight size={14}/></Link>)}</div></aside></div>
+ </>;
+}
+function Progress() { const { data } = useData(); const s = studySummary(data, new Date()); const reviews = activeReviews(data.events); const days = Array.from({ length: 35 }, (_, i) => { const d = new Date(); d.setDate(d.getDate() - 34 + i); const key = learningDay(d, data.settings).key; return { key, count: reviews.filter(e => learningDay(new Date(e.received_at), data.settings).key === key).length }; }); const eligible = reviews.filter(e => e.state_before.last_review && new Date(e.reviewed_at).getTime() - new Date(e.state_before.last_review).getTime() >= 86400000); const retention = eligible.length ? Math.round(eligible.filter(e => (e.rating || 0) > 1).length / eligible.length * 100) : null; return <><Heading eyebrow="Evidence of becoming" title="微小积累，自有回响。" description="让真实的学习痕迹，告诉你走了多远。"/><div className="progress-metrics"><div><span>已学习卡片</span><strong>{s.learned}<small> / {data.cards.length}</small></strong><p>从第一次回忆开始</p></div><div><span>已读课程</span><strong>{data.activity.length}<small> / {data.lessons.length}</small></strong><p>为判断力建立底座</p></div><div><span>跨日回忆成功率</span><strong>{retention === null ? '—' : `${retention}%`}</strong><p>{eligible.length ? `基于 ${eligible.length} 次跨日复习` : '完成跨日复习后显示'}</p></div></div><section className="activity-panel"><div className="section-heading"><div><span className="eyebrow">Your rhythm</span><h2>过去五周的学习节奏</h2></div><span className="muted">每一格，都是一天</span></div><div className="heatmap">{days.map(d => <div key={d.key} tabIndex={0} title={`${d.key} · ${d.count} 次回忆`} aria-label={`${d.key}，${d.count} 次回忆`} className={`heat heat-${Math.min(3, d.count)}`}><span>{d.key.slice(8)}</span>{d.count > 0 && <small>{d.count}</small>}</div>)}</div><div className="heatmap-legend"><span>{days[0].key}</span><span>少 <i /><i /><i /> 多</span><span>{days[34].key}</span></div></section><section className="chapter-progress"><div className="section-heading"><h2>每一章，都在生长</h2><Link href="/curriculum">回到课程 <ArrowRight size={16}/></Link></div>{data.chapters.map(c => { const cards = data.cards.filter(x => x.chapter_id === c.id); const learned = cards.filter(x => data.states.some(s => s.card_id === x.id && s.fsrs.reps > 0)).length; return <div className="progress-row" key={c.id}><span>{String(c.position).padStart(2, '0')}</span><Link href={`/curriculum/${c.id}`}>{c.title}</Link><div className="thin-progress"><i style={{ width: `${cards.length ? learned / cards.length * 100 : 0}%` }}/></div><small>{cards.length ? `${learned} / ${cards.length} 张已学习` : '卡片待制'}</small></div>; })}</section>{data.historyLimited && <p className="info-note">活动与成功率基于最近 1,000 条记录。</p>}</>; }
+function Preferences() { const { data, update } = useData(); const router = useRouter(); const [form, setForm] = useState<Settings>({ ...data.settings }); const [error, setError] = useState(''); const [message, setMessage] = useState(''); const [busy, setBusy] = useState(false); async function save(e: React.FormEvent) { e.preventDefault(); setBusy(true); setError(''); setMessage(''); try {
+    const saved = await api<Settings>('settings', { daily_minutes: form.daily_minutes, new_cards_per_day: form.new_cards_per_day, retention: form.retention, timezone: form.timezone, route_mode: form.route_mode, familiarity: form.familiarity, version: form.version }, 'PATCH');
+    const settings = { ...saved, retention: Number(saved.retention) };
+    update(current => ({ ...current, settings }));
+    setForm(settings);
+    setMessage('学习偏好已保存，下一次复习将使用新设置。');
+}
+catch (e) {
+    setError((e as Error).message);
+}
+finally {
+    setBusy(false);
+} } return <><Heading eyebrow="Find your own pace" title="按自己的节奏生长。" description="好的计划，应该适合你的生活。"/><div className="settings-form"><ThemePicker/><form onSubmit={save}><section><div><h2>每天一点，持续发生</h2><p>到期复习优先。复习量增加时，系统会自动减少新卡。</p></div><div className="form-grid"><label>每日学习预算<div className="input-unit"><input type="number" min="10" max="120" value={form.daily_minutes} onChange={e => setForm({ ...form, daily_minutes: Number(e.target.value) })}/><span>分钟</span></div></label><label>每天最多新卡<div className="input-unit"><input type="number" min="0" max="30" value={form.new_cards_per_day} onChange={e => setForm({ ...form, new_cards_per_day: Number(e.target.value) })}/><span>张</span></div></label><label>期望记忆保留率<select value={form.retention} onChange={e => setForm({ ...form, retention: Number(e.target.value) })}>{[.8, .85, .9, .95, .97].map(x => <option value={x} key={x}>{x * 100}%{x === .9 ? ' · 推荐' : ''}</option>)}</select><small>越高通常需要越频繁地复习。</small></label><label>学习时区<select value={form.timezone} onChange={e => setForm({ ...form, timezone: e.target.value })}>{['Asia/Shanghai', 'Asia/Hong_Kong', 'Asia/Tokyo', 'Europe/London', 'America/New_York', 'America/Los_Angeles', 'UTC'].map(x => <option key={x}>{x}</option>)}</select><small>每天凌晨 4 点开始新的学习日。</small></label></div></section><section><h2>从哪里开始</h2><div className="route-options">{[['guided', '优先不熟悉的知识', '根据你对章节的熟悉程度安排新卡。'], ['chapter', '按章节顺序推进', '从已有卡片中，按照课程顺序学习。']].map(([v, t, d]) => <label className={form.route_mode === v ? 'chosen' : ''} key={v}><input type="radio" name="route" checked={form.route_mode === v} onChange={() => setForm({ ...form, route_mode: v as Settings['route_mode'] })}/><span><b>{t}</b><small>{d}</small></span></label>)}</div><div className="familiarity-list">{data.chapters.map(c => <label key={c.id}><span>{c.title}</span><select value={form.familiarity[c.id] || 'familiar'} onChange={e => setForm({ ...form, familiarity: { ...form.familiarity, [c.id]: e.target.value } })}><option value="new">刚刚接触</option><option value="familiar">了解一些</option><option value="experienced">比较熟悉</option></select></label>)}</div></section><ErrorNote error={error}/>{message && <p role="status" className="success-note"><Check size={17}/>{message}</p>}<div className="settings-actions"><button disabled={busy} className="button primary">{busy ? '保存中…' : '保存学习偏好'}<Check size={17}/></button><button type="button" className="button ghost" onClick={async () => { await api('auth/logout', {}); router.replace('/login'); }}><LogOut size={16}/>退出学习空间</button></div></form></div></>; }
+function Interview() { return <div className="interview-page"><div className="voice-orbit"><Volume2 size={46}/><span /><span /></div><span className="eyebrow">The weekend room</span><h1>让理解，<br />成为说得清的能力。</h1><p>周末练习室将在下一阶段开放。<br />未来，你可以围绕本周所学，完成一场真实的语音模拟面试。</p><span className="pill">规划中 · 尚未开放</span><Link className="button primary" href="/cards">先用卡片练习表达 <ArrowUpRight size={17}/></Link></div>; }

@@ -1,0 +1,24 @@
+{
+  "beforeAt": "2026-09-12T03:49:34.323Z",
+  "afterAt": "2026-09-13T08:49:36.245Z",
+  "before": {
+    "apm_cards": 87,
+    "apm_card_revisions": 132,
+    "apm_content_batches": 14,
+    "apm_review_states": 0,
+    "apm_review_events": 0
+  },
+  "after": {
+    "apm_cards": 172,
+    "apm_card_revisions": 217,
+    "apm_content_batches": 26,
+    "apm_review_states": 0,
+    "apm_review_events": 0
+  },
+  "newCards": 85,
+  "oldCardsCompared": 87,
+  "oldIdentityVersionPositionChapterUnchanged": true,
+  "newKeySetMatches12Batches": true,
+  "reviewCountsUnchanged": true,
+  "checks": "172 actual keys equal original 87 plus expected 85; compared original canonical_key, active_revision, position, chapter_id; active content of chapter1/2 additionally checked in ch01-ch02-reverify.json."
+}

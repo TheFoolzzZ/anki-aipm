@@ -1,0 +1,29 @@
+{
+  "module_id": "3.15",
+  "relations": [
+    {
+      "from": "ch03.interview.m15.model-adapter.001",
+      "to": "ch03.interview.m15.framework-boundary.001",
+      "type": "prerequisite",
+      "reason": "接口适配的取舍依赖框架与模型职责区别"
+    },
+    {
+      "from": "ch03.interview.m15.thread-memory.001",
+      "to": "ch03.agent.memory-freshness.001",
+      "type": "extension",
+      "reason": "线程恢复之外，跨会话偏好还需失效与当前指令规则"
+    },
+    {
+      "from": "ch03.interview.m15.fork-join-contract.001",
+      "to": "ch03.tech.observability-response.001",
+      "type": "extension",
+      "reason": "分支契约失败通过同run节点输入输出来定位"
+    },
+    {
+      "from": "ch03.tech.observability-response.001",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "compare",
+      "reason": "节点数据变换定位与整任务执行代价是不同观察粒度"
+    }
+  ]
+}

@@ -1,0 +1,3044 @@
+{
+  "module_id": "7.2",
+  "source_path": "第7章-商业必谈/7.2-AI行业现有商业模式分析.md",
+  "source_hash": "1a81b5b852ab76f38bc4dfeefe0abbcdb0a65fc69fe5b54a9735321379b605fd",
+  "line_convention": "LF split(\"\\n\")",
+  "source_line_count": 856,
+  "full_source_read": true,
+  "native_objectives": 0,
+  "registered": 0,
+  "non_checklist_registered": 167,
+  "practice_completed": 0,
+  "publication_coverage": "最终映射卡已发布回读；原生登记/短卡覆盖/综合任务/实践完成分别计数",
+  "objectives": [
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L1",
+      "original_text": "# 7.2 AI行业现有商业模式分析",
+      "source_line": 1,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "# 7.2 AI行业现有商业模式分析的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L5",
+      "original_text": "如果说技术是AI行业的\"引擎\"，那么商业模式就是驱动这个引擎持续运转的\"燃料系统\"。从2022年ChatGPT爆火至今，AI行业已经走过了\"技术惊艳期\"，正在快速进入\"商业验证期\"。作为AI产品经理，深刻理解行业的商业模式生态，不仅能帮助我们在设计产品时做出更明智的决策，还能让我们在与投资人、合作伙伴、客户的沟通中展现出更专业的商业洞察力。",
+      "source_line": 5,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L9",
+      "original_text": "## 一、AI商业生态全景图",
+      "source_line": 9,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 一、AI商业生态全景图的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L21",
+      "original_text": "## 二、基础设施层商业模式",
+      "source_line": 21,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 二、基础设施层商业模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L25",
+      "original_text": "### 2.1 云计算模式（IaaS/PaaS）",
+      "source_line": 25,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 2.1 云计算模式（IaaS/PaaS）的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L34",
+      "original_text": "| **成本结构** | 硬件采购（CAPEX占比60%+）、数据中心电力与冷却、网络带宽、运维人力 |",
+      "source_line": 34,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L35",
+      "original_text": "| **毛利率** | 25%-40%（GPU实例低于CPU实例） |",
+      "source_line": 35,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L36",
+      "original_text": "| **典型案例** | AWS EC2 P4d实例（$32.77/小时）、阿里云灵骏智算集群 |",
+      "source_line": 36,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L38",
+      "original_text": "**云厂商AI收入增速对比（2024年）：**",
+      "source_line": 38,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L42",
+      "original_text": "| Microsoft Azure | ~80% | OpenAI深度绑定，Copilot全家桶 |",
+      "source_line": 42,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L43",
+      "original_text": "| AWS | ~60% | Trainium/Inferentia自研芯片，Bedrock平台 |",
+      "source_line": 43,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L44",
+      "original_text": "| Google Cloud | ~50% | TPU生态，Gemini模型协同 |",
+      "source_line": 44,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L45",
+      "original_text": "| 阿里云 | ~30% | 通义千问+飞天智算平台 |",
+      "source_line": 45,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L49",
+      "original_text": "训练GPT-4级别的模型，单次训练成本约为**6300万-1亿美元**（约使用2.5万张A100训练90-100天）。这就是为什么只有云巨头和顶级AI公司能玩得起基础模型训练。",
+      "source_line": 49,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L51",
+      "original_text": "### 2.2 GPU算力租赁模式",
+      "source_line": 51,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 2.2 GPU算力租赁模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L59",
+      "original_text": "| **价格优势** | 标准化定价，溢价高 | 比AWS便宜30%-50% |",
+      "source_line": 59,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L61",
+      "original_text": "| **融资情况** | 自有资金 | CoreWeave估值已达$19B |",
+      "source_line": 61,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L71",
+      "original_text": "例如：H100采购价$30,000，3年折旧，月折旧 = $30,000 / 36 ≈ $833",
+      "source_line": 71,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L72",
+      "original_text": "      月租赁价$2,500 → 单GPU月毛利 ≈ $1,667（毛利率66%）",
+      "source_line": 72,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L77",
+      "original_text": "专业GPU云的核心风险在于**供应链依赖**。2023-2024年的H100芯片短缺让CoreWeave等企业\"有客户、没芯片\"。同时，NVIDIA正通过DGX Cloud直接下场竞争，中游算力租赁商的生存空间可能受到挤压。",
+      "source_line": 77,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L79",
+      "original_text": "### 2.3 模型训练平台（MLOps基础设施）",
+      "source_line": 79,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 2.3 模型训练平台（MLOps基础设施）的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L92",
+      "original_text": "## 三、模型层商业模式",
+      "source_line": 92,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 三、模型层商业模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L96",
+      "original_text": "### 3.1 API按量计费模式",
+      "source_line": 96,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 3.1 API按量计费模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L104",
+      "original_text": "| 2023.03 | $0.002/1K tokens | 输入$0.03 + 输出$0.06 | - | - |",
+      "source_line": 104,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L105",
+      "original_text": "| 2023.11 | $0.001/1K tokens | - | 输入$0.01 + 输出$0.03 | - |",
+      "source_line": 105,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L106",
+      "original_text": "| 2024.05 | $0.0005/1K tokens | - | - | 输入$0.005 + 输出$0.015 |",
+      "source_line": 106,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L107",
+      "original_text": "| 2024.08 | - | - | - | 输入$0.0025 + 输出$0.01 |",
+      "source_line": 107,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L111",
+      "original_text": "从GPT-3.5到GPT-4o，**API价格下降了约80%**。这不是简单的降价竞争，而是摩尔定律在AI领域的体现：模型效率提升、推理优化（量化、剪枝、蒸馏）、硬件成本下降共同推动了\"同样的智能，更低的价格\"。",
+      "source_line": 111,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L125",
+      "original_text": "  边际成本递减，毛利率可提升至60-70%",
+      "source_line": 125,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L132",
+      "original_text": "| Claude 3 Haiku | $0.25 | $1.25 | 200K |",
+      "source_line": 132,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L133",
+      "original_text": "| Claude 3 Sonnet | $3.00 | $15.00 | 200K |",
+      "source_line": 133,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L134",
+      "original_text": "| Claude 3.5 Sonnet | $3.00 | $15.00 | 200K |",
+      "source_line": 134,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L135",
+      "original_text": "| Claude 3 Opus | $15.00 | $75.00 | 200K |",
+      "source_line": 135,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L145",
+      "original_text": "### 3.2 模型订阅模式",
+      "source_line": 145,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 3.2 模型订阅模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L151",
+      "original_text": "| ChatGPT Plus | $20/月 | GPT-4o优先访问、联网、DALL·E | ~15M+ |",
+      "source_line": 151,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L152",
+      "original_text": "| ChatGPT Pro | $200/月 | o1模型、更高限额 | ~数十万 |",
+      "source_line": 152,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L153",
+      "original_text": "| Claude Pro | $20/月 | 更多消息数、优先带宽 | ~1M+ |",
+      "source_line": 153,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L154",
+      "original_text": "| Midjourney | $10-$120/月 | AI图像生成 | ~15M+ |",
+      "source_line": 154,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L155",
+      "original_text": "| Perplexity Pro | $20/月 | GPT-4/Claude 3 + 联网搜索 | ~数千万 |",
+      "source_line": 155,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L164",
+      "original_text": "  - 月流失率 < 5% 为健康",
+      "source_line": 164,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L168",
+      "original_text": "  - 月费$20，假设用户月均消耗$8的推理成本",
+      "source_line": 168,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L169",
+      "original_text": "  - 毛利率 ≈ (20 − 8) / 20 = 60%",
+      "source_line": 169,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L175",
+      "original_text": "OpenAI在2024年的年化收入约为$3.4B，但训练成本和推理成本极高，加上免费用户的\"补贴\"，公司整体仍处于亏损状态。这说明**订阅模式的规模化盈利**还需要更多付费用户和更低的推理成本。",
+      "source_line": 175,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L177",
+      "original_text": "### 3.3 开源模型+服务模式",
+      "source_line": 177,
+      "source_type": "正文知识目标",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理免费模型如何变成可收费服务；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.open-service.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L195",
+      "original_text": "### 3.4 模型微调与定制服务",
+      "source_line": 195,
+      "source_type": "正文知识目标",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理免费模型如何变成可收费服务；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.open-service.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L201",
+      "original_text": "| 标准微调（Fine-tuning） | $5,000-$50,000/项目 | 有标注数据的中型企业 |",
+      "source_line": 201,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L202",
+      "original_text": "| 领域预训练 | $50,000-$500,000/项目 | 金融、医疗、法律等强监管行业 |",
+      "source_line": 202,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L203",
+      "original_text": "| 持续训练服务 | $10,000-$100,000/月 | 数据高频更新的企业 |",
+      "source_line": 203,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L204",
+      "original_text": "| 模型评估与对齐 | $20,000-$100,000/项目 | 对安全性要求高的机构 |",
+      "source_line": 204,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L210",
+      "original_text": "## 四、应用层商业模式",
+      "source_line": 210,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 四、应用层商业模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L214",
+      "original_text": "### 4.1 订阅制（SaaS）模式",
+      "source_line": 214,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 4.1 订阅制（SaaS）模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L222",
+      "original_text": "| **Cursor** | 阶梯订阅 | 2000 completions/月 | Pro $20/月, Business $40/用户/月 | AI代码补全、自然语言编程 |",
+      "source_line": 222,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L223",
+      "original_text": "| **Midjourney** | 等级订阅 | 约25次生成 | Basic $10/月, Mega $120/月 | AI图像生成 |",
+      "source_line": 223,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L224",
+      "original_text": "| **Notion AI** | 附加订阅 | 基础功能免费 | AI附加$10/用户/月 | 写作辅助、内容生成 |",
+      "source_line": 224,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L225",
+      "original_text": "| **Jasper** | 按字数订阅 | 7天试用 | Creator $49/月, Pro $69/月 | 营销文案生成 |",
+      "source_line": 225,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L226",
+      "original_text": "| **Copilot** | 统一订阅 | 学生/开源免费 | $10/月（个人）$19/月（企业） | GitHub代码补全 |",
+      "source_line": 226,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L227",
+      "original_text": "| **Kimi** | 订阅+免费 | 基础功能免费 | $10/月（约） | 长文本处理 |",
+      "source_line": 227,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L240",
+      "original_text": "理想状态：NDR > 120%，说明老用户不断追加付费",
+      "source_line": 240,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L245",
+      "original_text": "1.   **PMF（产品-市场匹配）验证**：AI功能是否是用户付费的核心原因？",
+      "source_line": 245,
+      "source_type": "正文明确问题",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理收入留存增长是否来自老客户；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.revenue-retention.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L246",
+      "original_text": "2.   **留存设计**：AI功能的\"魔法时刻\"是否足够明显？",
+      "source_line": 246,
+      "source_type": "正文明确问题",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理收入留存增长是否来自老客户；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.revenue-retention.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L247",
+      "original_text": "3.   **扩展收入路径**：能否从个人→团队→企业逐步升级？",
+      "source_line": 247,
+      "source_type": "正文明确问题",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理收入留存增长是否来自老客户；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.revenue-retention.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L253",
+      "original_text": "### 4.2 按量付费模式",
+      "source_line": 253,
+      "source_type": "正文知识目标",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理计费单位怎样改变行为；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.billing-incentive.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L261",
+      "original_text": "| 智能客服 | 按对话轮次 | 每轮对话$0.01-$0.05 |",
+      "source_line": 261,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L262",
+      "original_text": "| 内容审核 | 按审核条数 | 每千条$1-$5 |",
+      "source_line": 262,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L263",
+      "original_text": "| 文档解析 | 按页数 | 每页$0.01-$0.03 |",
+      "source_line": 263,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L264",
+      "original_text": "| OCR识别 | 按调用次数 | 每千次$1-$3 |",
+      "source_line": 264,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L265",
+      "original_text": "| 语音合成 | 按字符数 | 每百万字符$4-$16 |",
+      "source_line": 265,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L266",
+      "original_text": "| 翻译服务 | 按字符数 | 每百万字符$10-$50 |",
+      "source_line": 266,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L279",
+      "original_text": "### 4.3 免费增值（Freemium）模式",
+      "source_line": 279,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 4.3 免费增值（Freemium）模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L291",
+      "original_text": "| 免费→付费转化率 | 2%-5% | >10% | 提高免费额度紧迫感 |",
+      "source_line": 291,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L292",
+      "original_text": "| 付费用户月流失率 | 5%-10% | ❤️% | 增加使用场景嵌入 |",
+      "source_line": 292,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L293",
+      "original_text": "| 免费用户激活率 | 20%-40% | >60% | 优化新手引导 |",
+      "source_line": 293,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L302",
+      "original_text": "### 4.4 广告模式",
+      "source_line": 302,
+      "source_type": "正文知识目标",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理赞助推荐如何影响答案可信度；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.sponsor-trust.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L317",
+      "original_text": "Perplexity在2024年开始尝试\"相关问题赞助\"（Sponsored Related Questions），即在回答底部显示由广告主赞助的追问。这种模式的创新之处在于：",
+      "source_line": 317,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L325",
+      "original_text": "AI搜索广告：用户问\"什么跑鞋适合马拉松\"→ AI给出专业回答 → 相关追问\"Nike ZoomX值不值得买？\"（赞助）→ 用户追问 → 深度种草 → 转化",
+      "source_line": 325,
+      "source_type": "正文明确问题",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理赞助推荐如何影响答案可信度；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.sponsor-trust.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L332",
+      "original_text": "### 4.5 交易抽佣模式",
+      "source_line": 332,
+      "source_type": "正文知识目标",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理交易抽佣的结算基数；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.commission-base.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L338",
+      "original_text": "| **AI电商** | AI导购推荐→成交抽佣 | GMV的5%-20% | Amazon Rufus、淘宝问问 |",
+      "source_line": 338,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L339",
+      "original_text": "| **AI招聘** | AI匹配候选人→入职抽佣 | 年薪的15%-25% | LinkedIn AI、脉脉 |",
+      "source_line": 339,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L340",
+      "original_text": "| **AI房产** | AI推荐房源→成交抽佣 | 佣金的20%-30% | 各房产平台AI助手 |",
+      "source_line": 340,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L341",
+      "original_text": "| **AI教育** | AI匹配老师/课程 | 学费的10%-30% | 各在线教育AI顾问 |",
+      "source_line": 341,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L342",
+      "original_text": "| **AI金融** | AI推荐理财产品 | AUM的0.5%-2% | 智能投顾 |",
+      "source_line": 342,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L355",
+      "original_text": "  传统模式：1000个岗位 × 10%匹配率 × 20万年薪 × 20%佣金 = 400万",
+      "source_line": 355,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L356",
+      "original_text": "  AI模式：10000个岗位 × 25%匹配率 × 20万年薪 × 15%佣金 = 7500万",
+      "source_line": 356,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L363",
+      "original_text": "### 4.6 企业定制与私有化部署",
+      "source_line": 363,
+      "source_type": "正文知识目标",
+      "decision": "采用",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理定制订单怎样避免收入越大交付越重；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.custom-delivery.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L369",
+      "original_text": "| **私有化部署** | 授权费+实施费 | $50万-$500万/套 | 金融、政务、医疗 |",
+      "source_line": 369,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L370",
+      "original_text": "| **行业解决方案** | 项目制 | $30万-$300万/项目 | 制造业、零售业 |",
+      "source_line": 370,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L372",
+      "original_text": "| **运维服务** | 年服务费（AMC） | 合同额的15%-20%/年 | 所有私有化客户 |",
+      "source_line": 372,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L387",
+      "original_text": "## 五、数据层商业模式",
+      "source_line": 387,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 五、数据层商业模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L391",
+      "original_text": "### 5.1 数据标注服务",
+      "source_line": 391,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 5.1 数据标注服务的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L397",
+      "original_text": "| **图像标注**（分类/检测/分割） | $0.01-$0.5/张 | 低 | Scale AI、Appen、海天瑞声 |",
+      "source_line": 397,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L398",
+      "original_text": "| **语音标注**（转写/切分/韵律） | $0.1-$2/分钟 | 中 | 标贝科技、SpeechOcean |",
+      "source_line": 398,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L399",
+      "original_text": "| **文本标注**（NER/情感/意图） | $0.05-$0.5/条 | 中 | Scale AI、龙猫数据 |",
+      "source_line": 399,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L400",
+      "original_text": "| **3D点云标注**（自动驾驶） | $1-$10/帧 | 高 | Scale AI、CloudWalk |",
+      "source_line": 400,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L401",
+      "original_text": "| **RLHF标注**（人类反馈） | $5-$50/小时 | 高 | Scale AI、InnoVen |",
+      "source_line": 401,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L422",
+      "original_text": "Scale AI是数据标注领域的独角兽（估值$13.8B），其成功密码在于：",
+      "source_line": 422,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L424",
+      "original_text": "1.   **自动化+人工的混合模式**：先用AI预标注，再由人工校准，成本降低70%",
+      "source_line": 424,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L432",
+      "original_text": "### 5.2 数据集销售与授权",
+      "source_line": 432,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 5.2 数据集销售与授权的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L438",
+      "original_text": "| 通用预训练语料 | 按token量授权 | $1-$10/百万token | 大模型厂商 |",
+      "source_line": 438,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L439",
+      "original_text": "| 行业专业语料 | 按领域/年限授权 | $5万-$500万 | 行业模型厂商 |",
+      "source_line": 439,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L440",
+      "original_text": "| 多模态数据集 | 按用途授权 | $10万-$1000万 | 研究机构 |",
+      "source_line": 440,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L441",
+      "original_text": "| 合成数据 | 按生成量计费 | $0.01-$1/样本 | 自动驾驶、医疗 |",
+      "source_line": 441,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L456",
+      "original_text": "### 5.3 数据清洗与增强服务",
+      "source_line": 456,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 5.3 数据清洗与增强服务的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L466",
+      "original_text": "  - 数据质量提升10% ≈ 模型参数量增加2倍的效果",
+      "source_line": 466,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L467",
+      "original_text": "  - 数据清洗+去重可提升训练效率30%-50%",
+      "source_line": 467,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L472",
+      "original_text": "*   **项目制**：一次性数据清洗项目，$5万-$50万",
+      "source_line": 472,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L473",
+      "original_text": "*   **SaaS订阅**：持续的数据管道服务，$2000-$20000/月",
+      "source_line": 473,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L478",
+      "original_text": "## 六、工具层商业模式",
+      "source_line": 478,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 六、工具层商业模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L482",
+      "original_text": "### 6.1 向量数据库",
+      "source_line": 482,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 6.1 向量数据库的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L514",
+      "original_text": "月收入 = 存储费用($/GB/月) + 查询费用($/千次查询) + 高级功能费",
+      "source_line": 514,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L517",
+      "original_text": "  - 存储：$0.10/GB/月",
+      "source_line": 517,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L518",
+      "original_text": "  - 查询：$0.10/千次查询",
+      "source_line": 518,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L520",
+      "original_text": "  - 月收入 ≈ $10 + $1000 = $1010",
+      "source_line": 520,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L531",
+      "original_text": "### 6.2 MLOps与LLMOps平台",
+      "source_line": 531,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 6.2 MLOps与LLMOps平台的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L537",
+      "original_text": "| **Weights & Biases** | 实验追踪、模型管理 | $50-$500/用户/月 | 实验管理标杆 |",
+      "source_line": 537,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L539",
+      "original_text": "| **LangSmith** | LLM应用追踪与评估 | $0.005/次追踪 | LangChain官方 |",
+      "source_line": 539,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L563",
+      "original_text": "### 6.3 Prompt管理与评估工具",
+      "source_line": 563,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 6.3 Prompt管理与评估工具的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L569",
+      "original_text": "| **PromptLayer** | Prompt版本管理、A/B测试 | $49-$499/月 |",
+      "source_line": 569,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L587",
+      "original_text": "## 七、商业模式创新趋势",
+      "source_line": 587,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 七、商业模式创新趋势的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L591",
+      "original_text": "### 7.1 模型即商品（Model-as-a-Product）",
+      "source_line": 591,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 7.1 模型即商品（Model-as-a-Product）的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L606",
+      "original_text": "### 7.2 Agent即服务（Agent-as-a-Service）",
+      "source_line": 606,
+      "source_type": "正文知识目标",
+      "decision": "拆分",
+      "reason": "考查稳定机制，保持原问目标；相关卡分别处理计费单位怎样改变行为、结果收费的失败成本由谁承担；不采纳未经核实的厂商结论",
+      "card_keys": [
+        "ch07.interview.m02.billing-incentive.001",
+        "ch07.interview.m02.outcome-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L608",
+      "original_text": "AI Agent（智能体）是2024-2025年的最热方向，其商业模式正在形成。",
+      "source_line": 608,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L630",
+      "original_text": "### 7.3 AI原生应用（AI-Native）",
+      "source_line": 630,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 7.3 AI原生应用（AI-Native）的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L647",
+      "original_text": "作为AI PM，你需要判断：你的产品是\"AI-Native\"还是\"AI-Embedded\"？这直接决定了你的商业策略。",
+      "source_line": 647,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "### 7.3 AI原生应用（AI-Native）的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L649",
+      "original_text": "### 7.4 模型性能与成本的「摩尔定律」",
+      "source_line": 649,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 7.4 模型性能与成本的「摩尔定律」的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L656",
+      "original_text": "2020年：$0.06/1K tokens（GPT-3 Davinci）",
+      "source_line": 656,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L657",
+      "original_text": "2022年：$0.002/1K tokens（GPT-3.5） → 30倍下降",
+      "source_line": 657,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L658",
+      "original_text": "2023年：$0.001/1K tokens（GPT-3.5-Turbo） → 2倍下降",
+      "source_line": 658,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L659",
+      "original_text": "2024年：$0.0005/1K tokens（GPT-4o-mini等效） → 2倍下降",
+      "source_line": 659,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L661",
+      "original_text": "预计2025-2026：同等能力降至$0.0001/1K tokens以下",
+      "source_line": 661,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L675",
+      "original_text": "## 八、商业模式优劣对比矩阵",
+      "source_line": 675,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 八、商业模式优劣对比矩阵的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L681",
+      "original_text": "| **云计算** | ⭐⭐⭐⭐⭐ | 极高 | 中 | 25-40% | 低 | 中 |",
+      "source_line": 681,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L682",
+      "original_text": "| **GPU算力租赁** | ⭐⭐⭐⭐ | 高 | 低 | 40-60% | 低 | 高 |",
+      "source_line": 682,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L683",
+      "original_text": "| **API按量计费** | ⭐⭐⭐⭐⭐ | 极高 | 高 | 60-70% | 中 | 高 |",
+      "source_line": 683,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L684",
+      "original_text": "| **模型订阅** | ⭐⭐⭐⭐⭐ | 极高 | 高 | 50-70% | 中 | 高 |",
+      "source_line": 684,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L685",
+      "original_text": "| **开源+服务** | ⭐⭐⭐ | 高 | 中 | 30-50% | 高 | 低 |",
+      "source_line": 685,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L686",
+      "original_text": "| **模型微调** | ⭐⭐⭐ | 高 | 低 | 40-60% | 低 | 中 |",
+      "source_line": 686,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L687",
+      "original_text": "| **SaaS订阅** | ⭐⭐⭐⭐ | 中 | 高 | 70-85% | 高 | 低 |",
+      "source_line": 687,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L688",
+      "original_text": "| **按量付费（应用）** | ⭐⭐⭐ | 中 | 中 | 50-70% | 高 | 中 |",
+      "source_line": 688,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L689",
+      "original_text": "| **Freemium** | ⭐⭐⭐⭐ | 中 | 高 | 60-80% | 高 | 低 |",
+      "source_line": 689,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L690",
+      "original_text": "| **广告模式** | ⭐⭐⭐⭐ | 高 | 高 | 80-90% | 中 | 中 |",
+      "source_line": 690,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L691",
+      "original_text": "| **交易抽佣** | ⭐⭐⭐⭐⭐ | 高 | 中 | 10-30% | 低 | 高 |",
+      "source_line": 691,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L692",
+      "original_text": "| **企业定制** | ⭐⭐⭐ | 中 | 低 | 30-50% | 低 | 低 |",
+      "source_line": 692,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L693",
+      "original_text": "| **数据标注** | ⭐⭐⭐ | 低 | 高 | 20-40% | 高 | 中 |",
+      "source_line": 693,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L694",
+      "original_text": "| **向量数据库** | ⭐⭐⭐ | 中 | 高 | 70-85% | 高 | 中 |",
+      "source_line": 694,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L695",
+      "original_text": "| **MLOps平台** | ⭐⭐⭐ | 中 | 中 | 70-85% | 中 | 高 |",
+      "source_line": 695,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L706",
+      "original_text": "## 九、AI产品经理如何选择商业模式",
+      "source_line": 706,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 九、AI产品经理如何选择商业模式的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L710",
+      "original_text": "### 9.1 决策四象限",
+      "source_line": 710,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 9.1 决策四象限的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L714",
+      "original_text": "### 9.2 关键决策因素",
+      "source_line": 714,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 9.2 关键决策因素的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L750",
+      "original_text": "### 9.3 定价策略实战指南",
+      "source_line": 750,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 9.3 定价策略实战指南的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L759",
+      "original_text": "❌ 差定价：Pro版 $20/月",
+      "source_line": 759,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L760",
+      "original_text": "✅ 好定价：Basic $10/月 | Pro $20/月 | Enterprise $50/月",
+      "source_line": 760,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L791",
+      "original_text": "❌ 成本定价：\"我们的API调用成本$0.01，卖你$0.02\"",
+      "source_line": 791,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L792",
+      "original_text": "✅ 价值定价：\"使用我们的AI客服，每月节省3个人工，价值$6000，只收$500\"",
+      "source_line": 792,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L797",
+      "original_text": "### 9.4 商业模式组合策略",
+      "source_line": 797,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "### 9.4 商业模式组合策略的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L831",
+      "original_text": "## 十、写在最后",
+      "source_line": 831,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "## 十、写在最后的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L843",
+      "original_text": "1.   **没有最好的商业模式，只有最适合的商业模式**。同样的AI能力，面向C端可以是$20/月的订阅，面向B端可以是$50万的私有化部署。",
+      "source_line": 843,
+      "source_type": "时效/争议子断言",
+      "decision": "延期核实",
+      "reason": "原文数字、排行、价格、政策或预测未当前核实；只保留原断言，相关卡采用明确编辑假设/稳定机制而不背此结论",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L852",
+      "original_text": "1.   我们的成本结构是什么？毛利率有多少提升空间？",
+      "source_line": 852,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "## 十、写在最后的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L853",
+      "original_text": "2.   我们的定价是否合理？是否符合用户的心理预期？",
+      "source_line": 853,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "## 十、写在最后的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L854",
+      "original_text": "3.   有没有被我们忽略的变现路径？",
+      "source_line": 854,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "## 十、写在最后的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "7.2-L855",
+      "original_text": "4.   如果推理成本再降10倍，我们的商业模式应该如何调整？",
+      "source_line": 855,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "## 十、写在最后的全景/开放目标在M1完整串联与T1–T3交付物处理；不把小标题或厂商清单各变一张短卡",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "ch07.interview.m02.billing-incentive.001",
+      "original_text": "客服助手可按席位、对话轮次或解决工单收费。分别说明收费单位与客户价值的关系，以及最需防范的激励偏差。",
+      "source_line": 253,
+      "source_type": "编辑补题",
+      "decision": "采用",
+      "reason": "补齐稳定商业机制与反例，区别既有底层技术/成本卡；编辑情境不作实测",
+      "card_keys": [
+        "ch07.interview.m02.billing-incentive.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "ch07.interview.m02.revenue-retention.001",
+      "original_text": "合成假设：期初同一客户群月经常性收入10万，扩展2万、收缩1万、流失2万；同期新客户贡献5万。净收入留存率是多少，为什么新客户不进入分子？",
+      "source_line": 229,
+      "source_type": "编辑补题",
+      "decision": "采用",
+      "reason": "补齐稳定商业机制与反例，区别既有底层技术/成本卡；编辑情境不作实测",
+      "card_keys": [
+        "ch07.interview.m02.revenue-retention.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "ch07.interview.m02.outcome-contract.001",
+      "original_text": "客户要求采购Agent“只有任务成功才付费”，但失败任务仍调用模型并可能需要人工修复。供应商接受前需约定哪三类合同条件？",
+      "source_line": 606,
+      "source_type": "编辑补题",
+      "decision": "采用",
+      "reason": "补齐稳定商业机制与反例，区别既有底层技术/成本卡；编辑情境不作实测",
+      "card_keys": [
+        "ch07.interview.m02.outcome-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "ch07.interview.m02.sponsor-trust.001",
+      "original_text": "AI搜索用赞助推荐变现。为什么点击率提高仍可能损害商业价值？给出一个利益冲突机制与一项必要设计。",
+      "source_line": 302,
+      "source_type": "编辑补题",
+      "decision": "采用",
+      "reason": "补齐稳定商业机制与反例，区别既有底层技术/成本卡；编辑情境不作实测",
+      "card_keys": [
+        "ch07.interview.m02.sponsor-trust.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "ch07.interview.m02.commission-base.001",
+      "original_text": "合成假设：AI导购促成且已结算的成交额10万元，佣金率5%。是否还要乘购买转化率？还需核对哪些收入边界？",
+      "source_line": 332,
+      "source_type": "编辑补题",
+      "decision": "采用",
+      "reason": "补齐稳定商业机制与反例，区别既有底层技术/成本卡；编辑情境不作实测",
+      "card_keys": [
+        "ch07.interview.m02.commission-base.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "ch07.interview.m02.custom-delivery.001",
+      "original_text": "企业AI方案每签一单收入高，但每家都需不同集成。为什么规模增长可能不改善利润，产品与交付团队如何分工？",
+      "source_line": 363,
+      "source_type": "编辑补题",
+      "decision": "采用",
+      "reason": "补齐稳定商业机制与反例，区别既有底层技术/成本卡；编辑情境不作实测",
+      "card_keys": [
+        "ch07.interview.m02.custom-delivery.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "7.2",
+      "objective_id": "ch07.interview.m02.open-service.001",
+      "original_text": "团队开放模型权重后计划销售托管与企业支持。免费用户为什么可能付费，哪些条件会让该模式失效？",
+      "source_line": 177,
+      "source_type": "编辑补题",
+      "decision": "采用",
+      "reason": "补齐稳定商业机制与反例，区别既有底层技术/成本卡；编辑情境不作实测",
+      "card_keys": [
+        "ch07.interview.m02.open-service.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

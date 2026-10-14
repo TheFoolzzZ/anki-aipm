@@ -1,0 +1,814 @@
+{
+  "batch_id": "ch03-interview-20261002-m23",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "C04",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "recall-at-k"
+      ],
+      "revision": 2,
+      "position": 4,
+      "title": "Recall@K的分母与标注边界",
+      "kind": "场景判断",
+      "prompt": "某查询有5个已标注相关文档，Top-10找出其中3个。Recall@10与Precision@10分别是多少？为什么相关文档标注不全会影响结论？",
+      "answer_short": "Recall@10=3/5=60%，Precision@10=3/10=30%；两者分母分别是相关全集与返回前10项。标注漏掉相关项时，测得的是相对当前标注集的结果，不能声称真实召回已知。",
+      "required_points": [
+        "算出60%与30%并说明各自分母",
+        "相关全集须按查询和一致的标注规则确定",
+        "标注不全可能改变分子或分母，不能当线上全部相关项"
+      ],
+      "explanation": "【机制】Recall@K检查相关集合被覆盖多少，Precision@K检查返回结果中相关比例；K固定的是检索窗口，不是相关全集。旧C04计算目标不变，增加测量前提。\n【编辑情境】企业政策查询的Top-10有3份适用制度，其余7份无关；人工确认该查询共有5份适用制度，算得60%和30%。\n【边界】未标注不必然不相关；返回重复文档应按约定去重，不能凑命中数。\n【面试追问】只标过Top-10能否估计全库Recall？参考：只能得有限标注口径，需补充候选池判断或注明不完整。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "未标注不必然不相关；返回重复文档应按约定去重，不能凑命中数。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 723,
+          "line_end": 740
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：C04既有计算目标补强；保留key/position/concept_keys；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.roc-pr-threshold.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.roc-pr-threshold"
+      ],
+      "revision": 1,
+      "position": 3301,
+      "title": "ROC、PR与业务工作点",
+      "kind": "对比",
+      "prompt": "欺诈样本很少，模型ROC-AUC很高。ROC曲线与PR曲线分别画什么？为什么还需在选定阈值下报告误报量和召回？",
+      "answer_short": "ROC画FPR与TPR，PR画Recall与Precision，都是遍历得分阈值。AUC概括跨阈值排序，不能替代实际拦截工作点；稀少正类下低FPR也可能产生大量误报。",
+      "required_points": [
+        "说明两条曲线的横纵轴和阈值扫描",
+        "跨阈值面积不能证明选定阈值达标",
+        "结合正类比例、Precision/Recall、误报数和复核容量"
+      ],
+      "explanation": "【机制】TPR=TP/(TP+FN)，FPR=FP/(FP+TN)；负类多时FPR的分母巨大。PR对正类命中和误报更直接；AP与梯形PR面积计算约定也可能不同，比较须同口径。\n【编辑情境】10万交易仅100笔欺诈；即便FPR=1%，仍约有999笔正常交易被误拦，须看复核承载。\n【边界】原文“全预测负所以AUC也可能不错”混淆硬标签与连续分数：同分常量排序ROC-AUC为0.5；硬阈值后的全负不能推断原始得分AUC。\n【面试追问】AUC=0.5是否证明概率已校准？参考：不证明；排序与概率质量是不同问题。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "原文“全预测负所以AUC也可能不错”混淆硬标签与连续分数：同分常量排序ROC-AUC为0.5；硬阈值后的全负不能推断原始得分AUC。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 330,
+          "line_end": 398
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O04/O05/O22：曲线机制与不平衡边界；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.probability-quality.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.probability-quality"
+      ],
+      "revision": 1,
+      "position": 3302,
+      "title": "排序好为何概率仍不可信",
+      "kind": "机制",
+      "prompt": "一个风险模型AUC不变，但把所有预测概率推向0或1。为什么Log Loss可能变差？它能否单独证明概率校准？",
+      "answer_short": "AUC依赖排序；Log Loss用真实类别的预测概率计算负对数，对自信错判惩罚更重。Log Loss是概率质量指标，单值还混合区分能力等影响，校准需对预测概率区间核对实际发生率。",
+      "required_points": [
+        "排序不变可保持AUC",
+        "真实类别概率越小，负对数损失越大",
+        "用概率分组实际发生率检验校准，不凭单个loss下结论"
+      ],
+      "explanation": "【机制】二分类单样本loss=-[y log p+(1-y)log(1-p)]；坏账为0而预测p=0.99会被重罚，排序正确也不代表“90%风险”有90%坏账。\n【编辑情境】客服升级风险排位没变，但把中风险全部改报99%；业务据此增加复核，需查概率分桶及复核收益。\n【边界】Log Loss低不自动意味着每个人群已校准；不能把AUC和概率校准混称准确率。\n【面试追问】如何验证校准修复？参考：独立留出集看分桶频率及loss，并复测业务阈值，不在测试集反复调参。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "Log Loss低不自动意味着每个人群已校准；不能把AUC和概率校准混称准确率。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 400,
+          "line_end": 427
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.multiclass-average.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.multiclass-average"
+      ],
+      "revision": 1,
+      "position": 3303,
+      "title": "宏微平均如何掩盖小类",
+      "kind": "对比",
+      "prompt": "退款工单很多、账户安全工单很少。Macro、Weighted和Micro平均分别怎样汇总分类指标？为何仍要报告账户安全类召回？",
+      "answer_short": "Macro先逐类计算再等权平均，Weighted按类别支持数加权，Micro先合计TP/FP/FN再算。大类可能主导Weighted/Micro；任何总体平均都不能保证高风险小类达标。",
+      "required_points": [
+        "区分逐类等权、支持数加权与先合计计数",
+        "小类错误可被大类表现掩盖",
+        "单独检查高风险小类及支持数"
+      ],
+      "explanation": "【机制】平均方法改变各类别的贡献；Macro给小类同等权重，仍会把失败类与优秀类平均，因此必须保留每类指标。\n【编辑情境】990条退款与10条账户安全工单；后者全漏时，整体指标可能仍高，需检查漏报、标签与抽样置信区间。\n【边界】Micro-F1等于Accuracy只在单标签多分类且计算包含全部类别等条件下成立，不能推广多标签。\n【面试追问】Macro高但安全类全漏能否上线？参考：应看风险门槛，增加样例复核与人工兜底，不能凭平均决定。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "Micro-F1等于Accuracy只在单标签多分类且计算包含全部类别等条件下成立，不能推广多标签。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 483,
+          "line_end": 502
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.regression-error-scale.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.regression-error-scale"
+      ],
+      "revision": 1,
+      "position": 3304,
+      "title": "MSE、RMSE与MAE的量纲",
+      "kind": "对比",
+      "prompt": "销量预测两天误差分别为0件和10件。MSE、RMSE、MAE分别是多少，为什么RMSE更容易受大误差影响？",
+      "answer_short": "MSE=(0²+10²)/2=50件²，RMSE=√50≈7.07件，MAE=(0+10)/2=5件。平方使大误差更有权重，RMSE开根回原单位，但仍保留平方惩罚。",
+      "required_points": [
+        "正确计算50件²、约7.07件、5件",
+        "解释平方放大大误差及开根恢复量纲"
+      ],
+      "explanation": "【机制】先逐样本误差再聚合；RMSE是均方误差的平方根，不能说它是普通平均绝对偏差。原文“MAE不区分大小”应改为线性惩罚，大误差仍比小误差贡献大。\n【编辑情境】补货两天一天下单准确、另一天严重少订；MAE报5件而RMSE约7.07件，提醒大偏差，但缺货损失还需另算。\n【边界】不同指标量纲或聚合方式不同，不能直接横比数值；真实零销量的MAPE限制复用m02卡。\n【面试追问】低估比高估贵时怎么评价？参考：再报告方向与实际缺货/积压损失，三个对称误差指标不表达这项偏好。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "不同指标量纲或聚合方式不同，不能直接横比数值；真实零销量的MAPE限制复用m02卡。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 540,
+          "line_end": 621
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O06：补齐回归误差机制；MAPE复用已发布m02；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.r2-baseline.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.r2-baseline"
+      ],
+      "revision": 1,
+      "position": 3305,
+      "title": "R²比较的基线与负值",
+      "kind": "机制",
+      "prompt": "销量预测R²=-0.2意味着什么？R²=0.9是否就能证明补货有价值？",
+      "answer_short": "R²=1-SSE/SST；非恒定目标下-0.2表示残差平方和为评估集均值基线的1.2倍。0.9只描述该数据口径下的平方误差比例，业务价值仍需和可用基线及缺货/积压成本比较。",
+      "required_points": [
+        "解释SSE/SST及负值相对均值基线",
+        "R²可小于0，通常不限定0–1",
+        "高R²不代替时间留出、实际基线和业务损失"
+      ],
+      "explanation": "【机制】SST是各真实值相对该评估集均值的平方和；R²参照不是任意业务基线。真实值恒定时分母为0，需声明处理约定。\n【编辑情境】仓库已有上周销量预测；新模型R²虽高，却未胜过可部署的季节基线，不能声称减少缺货。\n【边界】增加特征不保证留出集R²升高；原文气温示例不能推成高R²必然无预测能力。\n【面试追问】R²=-2可能吗？参考：可能，SSE可大于SST任意倍；需查泄漏、漂移和预测偏差。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "增加特征不保证留出集R²升高；原文气温示例不能推成高R²必然无预测能力。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 650,
+          "line_end": 675
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 687,
+          "line_end": 699
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.ndcg-gain.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.ndcg-gain"
+      ],
+      "revision": 1,
+      "position": 3306,
+      "title": "NDCG为什么奖励重要结果排前",
+      "kind": "机制",
+      "prompt": "商品搜索相关性分为0、1、3级。NDCG@K如何结合等级和位置？为什么与MAP、搜索成功率不能互换？",
+      "answer_short": "DCG把相关度增益按位置折损，NDCG除以同一口径理想DCG。它可用等级相关性；MAP常用二值相关，搜索成功率则看用户任务。NDCG高不证明用户完成目标。",
+      "required_points": [
+        "说明等级增益、位置折损、理想归一",
+        "增益函数、K、候选集合和零IDCG约定须一致",
+        "等级排序质量不同于二值AP或业务完成"
+      ],
+      "explanation": "【机制】本课用gain=2^rel-1、discount=log2(rank+1)；3级商品前移获得更大增益，低位折损增大。也有线性增益实现，不能混算。\n【编辑情境】采购搜索将可满足规格的3级商品从第5位移至第1位，DCG上升；但若实际无库存，用户仍下不了单。\n【边界】[0,1]依赖非负增益和可定义的IDCG；无相关项时声明0或排除的约定。NDCG不是满意度必要条件的普遍证明。\n【面试追问】为何两个库算的NDCG不同？参考：先查gain、K、候选全集、标签和并列处理。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "[0,1]依赖非负增益和可定义的IDCG；无相关项时声明0或排除的约定。NDCG不是满意度必要条件的普遍证明。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 819,
+          "line_end": 872
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1998,
+          "line_end": 2020
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O07/O21：排序机制与业务边界；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.rank-objectives.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.rank-objectives"
+      ],
+      "revision": 1,
+      "position": 3307,
+      "title": "Hit、MRR与MAP各关注什么",
+      "kind": "对比",
+      "prompt": "企业搜索一条正确资料就能答导航问题，另一问题要收齐多个依据。Hit@K、MRR、MAP分别衡量什么，为什么不能只挑数值最高的指标？",
+      "answer_short": "Hit看前K是否至少命中；MRR平均首个相关项排名倒数；MAP平均查询的AP，关注多个相关项及其位置。先按任务确定目标及标注全集，再固定截断与未命中的处理。",
+      "required_points": [
+        "区分任一命中、首个相关位置与多个相关项排序",
+        "按首项或多项证据目标选度量，未命中不能隐藏",
+        "不同度量不能按数值大小相互比较"
+      ],
+      "explanation": "【机制】二值AP累加相关位置的Precision再除以定义的相关总数，MAP跨查询平均；漏检相关项不能从分母偷偷删除。指标不要求用户真的读完所有结果。\n【编辑情境】导航查询只需第1条入口，MRR合适；审查合同要找齐三条条款，即使命中一条Hit=1仍不足。\n【边界】原文“MAP假设用户看完全部”非数学定义；有限pool标注、AP@K和检测AP插值约定须说明。\n【面试追问】首条正确但其余错误，MRR会怎样？参考：可能很高，必须另测多项召回或完整性。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "原文“MAP假设用户看完全部”非数学定义；有限pool标注、AP@K和检测AP插值约定须说明。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 742,
+          "line_end": 817
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.text-metric-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.text-metric-boundary"
+      ],
+      "revision": 1,
+      "position": 3308,
+      "title": "文本相似度为什么不证明正确",
+      "kind": "对比",
+      "prompt": "制度摘要与参考答案措辞不同却意思相近，另一个摘要只多了“保证批准”。BLEU、ROUGE、BERTScore分别测什么，为什么还需核对事实？",
+      "answer_short": "BLEU以裁剪n-gram精度和长度惩罚为主，ROUGE以n-gram/LCS覆盖等方式比较参考，BERTScore匹配上下文词向量。字面或语义相似都不能保证事实、否定和条件正确。",
+      "required_points": [
+        "区别n-gram精度、参考覆盖/LCS、上下文向量匹配",
+        "参考、分词、聚合及变体影响分数",
+        "对无依据承诺和例外单独核查"
+      ],
+      "explanation": "【机制】词汇替换可能拉低重叠却不改含义；只加“保证”也可能保留多数词并得高分。ROUGE可以报告Precision、Recall或F1，非只能召回。\n【编辑情境】参考为“符合条件可申请”，模型写“符合条件保证批准”；即使重叠高，承诺越界必须计错误。\n【边界】原文猫句BLEU匹配算术错误不复用；BERTScore是相似度评估，不是事实裁判。\n【面试追问】无参考的开放问答怎么办？参考：制定任务rubric与事实证据，用人工校准的评估器，不能硬套参考重叠。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "原文猫句BLEU匹配算术错误不复用；BERTScore是相似度评估，不是事实裁判。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 986,
+          "line_end": 1047
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1108,
+          "line_end": 1131
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O08：三个文本指标机制及核心边界；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.perplexity-comparison.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.perplexity-comparison"
+      ],
+      "revision": 1,
+      "position": 3309,
+      "title": "困惑度低不等于更有用",
+      "kind": "概念",
+      "prompt": "团队说模型A困惑度更低，所以客服一定更好。Perplexity衡量什么，跨模型比较需什么条件？",
+      "answer_short": "Perplexity是测试文本平均负对数预测概率的指数化，反映模型给真实序列分配的概率。比较需一致数据、分词及计算口径；它不直接衡量服务任务完成、安全或事实正确。",
+      "required_points": [
+        "说明从真实文本预测概率到交叉熵指数",
+        "比较数据、分词器和归一化口径",
+        "不由低PPL推出业务、安全或事实效果"
+      ],
+      "explanation": "【机制】模型给实际后续Token更高概率时平均负log下降；指数化后的值可理解为等效不确定程度，仍依赖语料分布。\n【编辑情境】客服模型能顺畅续写历史话术，困惑度低，但旧话术含过期退款规则；必须核对现行任务。\n【边界】所谓“不依赖参考”指不需配对参考答案，仍需真实测试文本；不同分词器每Token困惑度不能直接排名。\n【面试追问】生成更流畅为何仍能幻觉？参考：续写概率并不是外部事实验证。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "所谓“不依赖参考”指不需配对参考答案，仍需真实测试文本；不同分词器每Token困惑度不能直接排名。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1077,
+          "line_end": 1106
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 2079,
+          "line_end": 2110
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.detection-protocol.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.detection-protocol"
+      ],
+      "revision": 1,
+      "position": 3310,
+      "title": "IoU与检测AP必须带协议",
+      "kind": "机制",
+      "prompt": "质检模型A报mAP@0.5，B报mAP@[0.5:0.95]。为什么不能直接据分数选模型，IoU与AP各检验什么？",
+      "answer_short": "IoU量框重叠；按类别、IoU匹配规则和置信度扫描计算Precision/Recall并求AP，mAP再平均。两个报告的匹配阈值与聚合不同，应在同数据、协议与业务工作点比较。",
+      "required_points": [
+        "IoU为交集/并集，区别定位与置信度排序",
+        "AP依匹配、阈值扫描、插值/积分及聚合协议",
+        "同口径再看重要缺陷漏检及误检成本"
+      ],
+      "explanation": "【机制】高分预测框需与真实目标匹配；重复框、错类别或定位不足可能算FP。IoU门槛提高会改变匹配和PR曲线，不能把0.5当所有业务正确线。\n【编辑情境】仓库缺陷小且易漏，A高mAP@0.5不代表小缺陷召回高；需按缺陷尺寸和类型下钻。\n【边界】学术mAP不是业务安全证明，自动驾驶或医疗也没有统一IoU上线阈值。\n【面试追问】AP很高能否不看实际阈值？参考：仍需看部署置信度下的漏检、误检与处置能力。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "学术mAP不是业务安全证明，自动驾驶或医疗也没有统一IoU上线阈值。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1261,
+          "line_end": 1320
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.segmentation-overlap.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.segmentation-overlap"
+      ],
+      "revision": 1,
+      "position": 3311,
+      "title": "像素准确率如何掩盖小目标",
+      "kind": "机制",
+      "prompt": "质检图中缺陷仅占1%的像素，系统全部判背景。Pixel Accuracy为何仍很高？IoU与Dice如何检查前景重叠？",
+      "answer_short": "全背景会得约99%像素准确率却全漏缺陷。前景IoU=交集/并集，Dice=2×交集/(预测面积+真实面积)，空前景预测但真实非空时二者为0。",
+      "required_points": [
+        "解释背景占比主导准确率",
+        "给出IoU/Dice重叠分母及该情境结果",
+        "按目标/类别聚合并声明空集合约定"
+      ],
+      "explanation": "【机制】重叠指标聚焦指定前景，而非只数背景猜对；同一二值集合Dice=2IoU/(1+IoU)，两者单调对应，不能声称Dice必然救小目标。\n【编辑情境】裂纹占1%面积时全背景模型被Pixel Accuracy粉饰；另查每类IoU、漏检件数和尺寸分组。\n【边界】小区域真实为空时分母可能为0，须固定约定；分割重叠也不直接等于每件缺陷检出率。\n【面试追问】为什么不能只报全图平均？参考：背景/大区域可掩盖小缺陷，需按业务单位与类别报告。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "小区域真实为空时分母可能为0，须固定约定；分割重叠也不直接等于每件缺陷检出率。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1322,
+          "line_end": 1335
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.ocr-field-metric.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.ocr-field-metric"
+      ],
+      "revision": 1,
+      "position": 3312,
+      "title": "OCR字符准为何金额还会错",
+      "kind": "场景判断",
+      "prompt": "发票OCR字符准确率很高，金额却经常被录错。应怎样区分字符/编辑距离指标与关键字段正确率？",
+      "answer_short": "字符匹配或归一化编辑距离反映文字误差；字段正确率按整个金额/税号等字段是否满足匹配与校验口径统计。关键字段的一处错也可造成业务失败，需单独衡量。",
+      "required_points": [
+        "字符级与字段整值正确的单位不同",
+        "金额/税号逐字段固定格式和匹配约定",
+        "同时看业务损失和人工复核，不能凭全文字符分通过"
+      ],
+      "explanation": "【机制】编辑距离按插入、删除、替换次数衡量；平均少量错字可能集中在最危险字段，全文平均会稀释错误。\n【编辑情境】金额1000.00被识成100.00，只错一个字符但报销金额差十倍；应判金额字段失败并拦截待核。\n【边界】格式统一不等于真实正确；真值文本为空时归一化分母需约定，不能用识别结果当标签。\n【面试追问】金额格式可解析为何仍要验证？参考：需对原票据与业务字段，解析只是语法。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "格式统一不等于真实正确；真值文本为空时归一化分母需约定，不能用识别结果当标签。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1337,
+          "line_end": 1352
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.verification-rates.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.verification-rates"
+      ],
+      "revision": 1,
+      "position": 3313,
+      "title": "身份验证的误接受与误拒绝",
+      "kind": "对比",
+      "prompt": "仓库门禁误放陌生人与拒绝员工是两类错误。FAR、FRR、TAR分别以什么为分母，为什么要同时报阈值？",
+      "answer_short": "FAR是冒名/不同身份尝试被接受的比例，FRR是真实同身份尝试被拒绝的比例，TAR是真实同身份尝试被接受的比例。同一二值决策口径下TAR=1-FRR；改变阈值会影响两类错误。",
+      "required_points": [
+        "按冒名与真实本人两类尝试区分分母",
+        "说明TAR与FRR互补的条件",
+        "固定阈值、场景和样本构成，结合错误代价"
+      ],
+      "explanation": "【机制】提高相似度门槛通常减少误接受并增加误拒绝；比较TAR@FAR前须确认相同协议和有足够冒名样本支持低概率估计。\n【编辑情境】门禁为降FRR放宽门槛后外来人员误通过增加；用同一阈值看安全和通行体验。\n【边界】1:1验证和1:N识别是不同评估；未观察到误放不证明误放率为零，不能套金融统一0.001%门槛。\n【面试追问】阈值能不能直接沿用供应商报告？参考：需现场光线、人员与设备数据验证，并保留其他验证路径。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "1:1验证和1:N识别是不同评估；未观察到误放不证明误放率为零，不能套金融统一0.001%门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1354,
+          "line_end": 1391
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.cluster-validity.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.cluster-validity"
+      ],
+      "revision": 1,
+      "position": 3314,
+      "title": "聚类分高如何仍不可用",
+      "kind": "概念",
+      "prompt": "无标签客户分群轮廓系数高，业务却无法行动。轮廓系数与ARI各需什么信息，怎样确认分群有用？",
+      "answer_short": "轮廓系数比较簇内平均距离a与最近其他簇距离b，通常为(b-a)/max(a,b)，不需标签；ARI比较两种分组的样本对一致性并校正偶然一致，需要参考分组。两者都不证明业务价值。",
+      "required_points": [
+        "内部几何紧密/分离与外部参考一致性不同",
+        "解释轮廓a/b及ARI需参考分组",
+        "检查群体稳定、可解释和可采取的运营动作"
+      ],
+      "explanation": "【机制】内部距离依赖特征缩放和距离定义；标签只是指定参考，不必天然真理，分得像标签也可能无行动价值。\n【编辑情境】用订单额分出大小客户几何分离好，但销售仍不知道该触达谁；需定义响应策略并验证增量效果。\n【边界】ARI不是简单准确率；单个簇或每个点一簇时轮廓系数不可按一般定义计算；不能只增K追低SSE。\n【面试追问】Purity升高就选更多簇吗？参考：每点独簇可刷高，应看复杂度、稳定和可用性。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "ARI不是简单准确率；单个簇或每个点一簇时轮廓系数不可按一般定义计算；不能只增K追低SSE。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1406,
+          "line_end": 1445
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：正文补题；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.drift-types.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.drift-types"
+      ],
+      "revision": 1,
+      "position": 3315,
+      "title": "输入变与规律变如何区分",
+      "kind": "对比",
+      "prompt": "促销后客户结构改变，或同样行为对退货的含义改变。协变量漂移、标签漂移、概念漂移分别改变什么，能否仅凭输入直方图判定模型失效？",
+      "answer_short": "协变量漂移关注P(X)，标签漂移关注P(Y)，概念漂移关注P(Y|X)。严格的label shift还假定P(X|Y)稳定；仅观察输入变化不能证明条件关系已变或业务效果已下降。",
+      "required_points": [
+        "区分输入、标签边际与条件关系",
+        "标签漂移需标签/估计及明确条件，概念漂移需效果/标签证据",
+        "输入漂移是调查信号，不自动触发重训上线"
+      ],
+      "explanation": "【机制】分布变化可来自正常季节性、采集改动或客群；效果下降还可能来自服务故障、标签定义变更。先核对版本、窗口、采集与延迟标签，再验证候选修复。\n【编辑情境】大促新客变多是输入构成变化；同样催单行为在新政策下更易触发退款可能是条件关系变，需标签验证。\n【边界】原文“口罩类别变”可能是标签定义变更，不能作为概念漂移唯一证据；相关变化不等于因果根因。\n【面试追问】无实时标签如何监控？参考：先看输入/输出分布与数据质量，待成熟标签回填质量，不谎称已测真实概念漂移。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "原文“口罩类别变”可能是标签定义变更，不能作为概念漂移唯一证据；相关变化不等于因果根因。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1451,
+          "line_end": 1475
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 2177,
+          "line_end": 2188
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O14/O26：分布对象机制和延迟标签边界；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.drift-detection.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.drift-detection"
+      ],
+      "revision": 1,
+      "position": 3316,
+      "title": "PSI、KS与KL各比较什么",
+      "kind": "对比",
+      "prompt": "订单评分分布变了，团队准备PSI>0.25就自动换模型。PSI、KS、KL怎样检查变化，为什么这个阈值不能直接证明必须重训？",
+      "answer_short": "PSI比较固定分箱占比，KS比较一维经验累积分布最大差异，KL比较离散化/密度分布的非对称差异。它们衡量分布变化，受窗口、样本量和计算约定影响，应结合质量与业务损失。",
+      "required_points": [
+        "区分分箱占比、CDF差异与非对称分布差异",
+        "固定基线/窗口、样本量、分箱及零频处理",
+        "阈值是调查或预案触发点，不是模型失败证明"
+      ],
+      "explanation": "【机制】PSI常写Σ(q-p)ln(q/p)，空箱须约定平滑；KS的p值受样本量影响；KL遇p>0但q=0可无穷。监测前先查采集缺失和编码变动。\n【编辑情境】新店订单导致PSI报警，核对确认正常客群变化且任务质量稳定；可先分群跟踪而非立即替换模型。\n【边界】0.1/0.25是原文经验示例，不是普适保证；单特征稳定也不证明联合分布或P(Y|X)稳定。\n【面试追问】漂移报警很多怎么办？参考：校准样本窗口、分层、持续时间与可行动预案，保留真正高损失事件。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "0.1/0.25是原文经验示例，不是普适保证；单特征稳定也不证明联合分布或P(Y|X)稳定。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1464,
+          "line_end": 1484
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1866,
+          "line_end": 1885
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O15/O13：漂移方法机制，阈值纠错；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.ab-guardrails.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.ab-guardrails"
+      ],
+      "revision": 1,
+      "position": 3317,
+      "title": "点击提升怎样由护栏制约",
+      "kind": "场景判断",
+      "prompt": "推荐实验CTR提高但留存、投诉恶化。应如何定义主指标、护栏及分流单位，避免宣布实验成功？",
+      "answer_short": "主指标应对齐已定目标，CTR可为代理；留存、投诉、安全和成本等按任务作护栏。选适合干扰结构的随机分流单位并固定指标窗口，比较效应及不确定性；护栏越界不能只凭CTR获胜。",
+      "required_points": [
+        "主指标与代理指标、护栏各负责什么",
+        "分流单位和窗口预先确定，避免会话/用户交叉污染",
+        "联合看效应区间、业务收益与护栏门槛"
+      ],
+      "explanation": "【机制】实验分流需让同一用户持续进入合适版本，比较同周期可减轻季节影响；统计显著不等于值得投入，短期点击可能伤害长期目标。\n【编辑情境】标题更夸张提高点击，却增加举报与回访下降；应依据预定护栏停止或修订，不事后换成只看点击。\n【边界】不是所有产品都可随意随机有风险行为；实际开展前需业务授权及相应风险审查，案例仅为编辑设计。\n【面试追问】CTR有显著提升且绝对只增0.1%怎么办？参考：评估收益、成本和区间，显著性不决定商业价值。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "不是所有产品都可随意随机有风险行为；实际开展前需业务授权及相应风险审查，案例仅为编辑设计。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1633,
+          "line_end": 1658
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1957,
+          "line_end": 1996
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O11/O20/O27：代理目标、归因与长期护栏；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.serving-metrics.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.serving-metrics"
+      ],
+      "revision": 1,
+      "position": 3318,
+      "title": "流式服务延迟与吞吐口径",
+      "kind": "对比",
+      "prompt": "客服流式回答首Token很快，完整答案很慢；供应商同时报QPS和TPS。应怎样明确延迟、吞吐与可用性口径？",
+      "answer_short": "分开首Token、完整响应及端到端耗时，按窗口和负载报分位数；QPS是请求/查询数，TPS必须说明是事务还是Token及统计范围。可用性定义可用服务或合格请求的口径，HTTP成功不等于答案或任务成功。",
+      "required_points": [
+        "区分首Token、完整及端到端时间和分位数",
+        "吞吐单位、负载、请求/Token长度需明确",
+        "可用性与内容/业务成功分开，不能直接套固定门槛"
+      ],
+      "explanation": "【机制】排队、模型推理、工具和网络都影响用户等待；P99只定位第99百分位，并非最慢请求。批量吞吐提升也可能增加排队延迟，需同负载比较。\n【编辑情境】首字0.3秒、完整退款解释12秒，两者都需报告；不能凭“<500ms客服阈值”认定整体达标。\n【边界】原文QPS/TPS混用、医疗5s/10s与500ms等是示例；门槛由业务关键路径、峰值和失败代价制定。\n【面试追问】每次调用更便宜但每个成功任务更贵怎么办？参考：汇总重试、工具、失败和人工成本，用任务级分母核对。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "原文QPS/TPS混用、医疗5s/10s与500ms等是示例；门槛由业务关键路径、峰值和失败代价制定。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1679,
+          "line_end": 1780
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 2079,
+          "line_end": 2099
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：工程正文补题：防单位与时间口径误判；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m23.dashboard-alert.001",
+      "lesson_source_key": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+      "concept_keys": [
+        "interview.m23.dashboard-alert"
+      ],
+      "revision": 1,
+      "position": 3319,
+      "title": "看板分层与可行动报警",
+      "kind": "场景判断",
+      "prompt": "老板、PM和运维都在看同一张数十项指标表。怎样区分战略、战术、运营看板，并把一次延迟报警变成行动？",
+      "answer_short": "战略看价值与继续投入，战术看质量/版本/场景取舍，运营看实时健康与恢复。共用一致定义并支持下钻；报警需对象、窗口/阈值、负责人、排查证据和恢复预案。",
+      "required_points": [
+        "分层服务不同决策，非重复堆同一指标",
+        "口径、目标、刷新窗口和切片可追溯",
+        "报警绑定风险、负责人和处理/恢复预案"
+      ],
+      "explanation": "【机制】看板分层与模型/产品/工程指标分类是两个轴，不能认为三层完全一一对应。基线、峰值、误报代价与持续窗口共同决定报警策略。\n【编辑情境】退款助手P99异常：运营定位订单查询瓶颈并降级，战术比较各流程失败与返工，战略看净节约和投诉损失。\n【边界】原文PSI0.25或持续3小时下降5%不是行业统一线；刷新频率按决策时间需求调整。\n【面试追问】老板问F1涨0.03节约多少？参考：需任务结构、可替代工时、返工和全成本及实验归因，不能乘固定系数。\n【自评】全部必答点正确且逻辑一致即掌握；追问为可选迁移练习。",
+      "pitfalls": "原文PSI0.25或持续3小时下降5%不是行业统一线；刷新频率按决策时间需求调整。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.23-衡量AI产品的技术指标.md",
+          "content_hash": "510e7290202b28f7e0a19aaf47a240dc4d3092a34e5ab91c1794d725d325cacb",
+          "line_start": 1801,
+          "line_end": 1920
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "作者逐卡八维依据见docs/card-production/ch03-interview/m23.md；accepted仅为本地schema门槛，不代表独立审校或发布。",
+          "目标：O12/O13/O18：看板决策与行动闭环；机制、情境与边界均列明，全部必答点正确为掌握。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    }
+  ]
+}

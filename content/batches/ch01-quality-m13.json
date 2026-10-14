@@ -1,0 +1,235 @@
+{
+  "batch_id": "ch01-quality-m13",
+  "status": "accepted",
+  "chapter_position": 1,
+  "cards": [
+    {
+      "canonical_key": "ch01.ai-pm.capability-stack.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+      "concept_keys": [
+        "ai-pm.capability-stack"
+      ],
+      "revision": 2,
+      "position": 6,
+      "title": "AI PM 的能力叠加",
+      "kind": "概念",
+      "prompt": "AI 产品经理相对传统产品经理，新增的两类关键能力是什么？共同的能力底座又包括什么？",
+      "answer_short": "在产品经理能力底座（用户价值、需求分析、沟通协调、数据驱动、商业敏感度）之上，叠加 AI 技术边界理解与 AI 场景洞察。原文的口径是：先是一个好的产品经理，再叠加 AI 专业能力。",
+      "required_points": [
+        "说出底座不变：用户价值、需求分析、协作、数据驱动等传统PM核心能力",
+        "说出新增两项：AI技术边界理解 + AI场景洞察（判断哪些需求适合用AI解决）",
+        "说出叠加顺序：先有产品底座，再叠加AI能力，缺底座不算合格AI PM"
+      ],
+      "pitfalls": "AI PM 不是只会模型术语的人，也不是在普通功能上简单加一个 AI 标签；反过来，只懂产品不懂 AI 能力边界，会把 demo 效果当成可交付能力。",
+      "explanation": "原文（52–62行）给出公式：AI PM = 产品经理能力底座 + AI技术理解 + AI场景洞察，并在共同点一节列出底座四项：用户价值、沟通协调、数据驱动、商业敏感度。编辑补充：两类新能力各有可观察行为——技术理解表现为能判断任务能不能用AI做、错误代价多大；场景洞察表现为能从业务场景识别适合 AI 的环节，而不是为了用 AI 而用 AI。",
+      "estimated_seconds": 45,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+          "content_hash": "514c7fa8480d1984d11a820971855a19926ff3b6f0154a1e8d1e745ecc3d6510",
+          "line_start": 50,
+          "line_end": 73
+        },
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+          "content_hash": "514c7fa8480d1984d11a820971855a19926ff3b6f0154a1e8d1e745ecc3d6510",
+          "line_start": 127,
+          "line_end": 138
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补底座四项与叠加顺序；新增能力的可观察行为为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.ai-pm.core-responsibility.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+      "concept_keys": [
+        "ai-pm.core-responsibility"
+      ],
+      "revision": 2,
+      "position": 7,
+      "title": "AI PM 不替代算法工程师",
+      "kind": "对比",
+      "prompt": "数据标注、模型训练由算法和数据团队负责时，AI PM 仍必须承担哪些核心责任？划分依据是什么？",
+      "answer_short": "定义问题、设定可测试的验收标准、设计产品化方案与兜底、验收效果并驱动迭代。划分依据是决策与交付责任，而不是是否写训练代码。",
+      "required_points": [
+        "说出 PM 侧五环：定义问题→设定标准→产品化与兜底设计→验收→驱动迭代",
+        "说出放手侧：数据标注、模型训练、算法调优属算法/数据团队",
+        "说明划分依据是决策与交付责任；PM 还需了解对方工作的难度和周期以做合理规划"
+      ],
+      "pitfalls": "不亲自训练模型不代表可以把问题定义、质量标准和上线判断交给算法团队；反过来，PM 越界指挥训练细节，既拖慢协作也模糊责任。",
+      "explanation": "原文（86–101行）把工作重心划为两条链路，并明确「数据标注、模型训练、算法调优是算法工程师和数据工程师的工作，AI PM 的核心职责是定义问题、设定标准、设计方案、验收效果、驱动迭代」。编辑补充：这条边界的实质是「谁对结果负责」——模型效果不达标时，PM 要回答的是标准定得对不对、兜底设计够不够，而不是模型该怎么调。了解训练难度和周期的目的，是排期和预期管理，不是上手调参。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+          "content_hash": "514c7fa8480d1984d11a820971855a19926ff3b6f0154a1e8d1e745ecc3d6510",
+          "line_start": 84,
+          "line_end": 101
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补划分判据与责任实质；双向边界"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.ai-product.launch-readiness.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+      "concept_keys": [
+        "ai-product.launch-readiness"
+      ],
+      "revision": 2,
+      "position": 8,
+      "title": "AI 功能的上线判断",
+      "kind": "场景判断",
+      "prompt": "一个 AI 功能没有传统 Bug 且交互流畅，为什么仍不足以上线？还需回答哪几个问题？",
+      "answer_short": "因为 AI 功能的正确性是概率性的。上线前还需回答：模型效果是否达到约定标准、边界场景怎么处理、高代价错误有没有人工兜底、用户预期如何管理。",
+      "required_points": [
+        "说出传统标准不足的原因：无Bug+流畅只证明确定性部分，不证明概率性输出质量",
+        "说出至少三个追加问题：效果达标、边界场景、误触发代价与人工兜底",
+        "说出预期管理手段：如“AI生成仅供参考”提示、纠错反馈入口"
+      ],
+      "pitfalls": "不能把单一平均准确率或一次演示成功当作上线充分条件：平均数掩盖高代价错误，演示样例不等于真实分布。",
+      "explanation": "原文（117–125行）把上线标准拆成四问：模型效果达标了吗、边界场景处理了吗、误触发代价是什么、有没有人工审核兜底。编辑补充：为什么平均准确率不够——一个总体90%准确的模型，可能在某个高代价场景（如金额、医疗建议）上错得集中；上线判断要看分场景的错误分布和代价，配合回退路径与上线后持续监测。这与3.25评估模块的「准入标准」一脉相承。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+          "content_hash": "514c7fa8480d1984d11a820971855a19926ff3b6f0154a1e8d1e745ecc3d6510",
+          "line_start": 117,
+          "line_end": 125
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：四问展开+平均准确率为何不足的机制解释，编辑补充已标识"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.ai-pm.probabilistic-difference.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+      "concept_keys": [
+        "ai-pm.probabilistic-difference"
+      ],
+      "revision": 1,
+      "position": 37,
+      "title": "确定性与概率性之别",
+      "kind": "对比",
+      "prompt": "原文用一句话概括传统 PM 与 AI PM 的核心差异，是什么？它在需求、协作、上线、预期四个维度分别如何体现？",
+      "answer_short": "传统 PM 设计确定性的功能流程，AI PM 设计基于概率的智能系统。体现为：需求从明确变为概率性、协作从“做什么”变为“问题定义+效果预期”、上线从“无Bug”变为“效果+兜底”、用户预期从可控变为需要管理。",
+      "required_points": [
+        "说出核心差异：确定性功能流程 vs 基于概率的智能系统",
+        "四个维度逐维对应，至少说全需求与上线两维",
+        "举例：智能客服90%答对、10%胡说时，PM要定义可接受错误率并设计兜底"
+      ],
+      "pitfalls": "不要以为 AI 产品里全是概率问题：登录、支付等环节仍是确定性逻辑，混合系统中要分清哪些部分适用哪套标准。也不能把“概率性”当成质量差的借口。",
+      "explanation": "原文（54–62行）给出核心差异一句话，（103–125行）展开为四个维度：需求的不确定性（智能客服90/10的例子）、协作方式（从功能描述到问题定义与效果预期）、上线标准（从“没Bug”到效果与兜底）、用户预期管理（从“点了就该跳转”到需要主动管理预期）。编辑补充：四个维度是同一条主线的投影——因为输出是概率性的，所以需求要写成效果标准、协作要对齐指标、上线要看错误分布、用户要被提前告知边界。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+          "content_hash": "514c7fa8480d1984d11a820971855a19926ff3b6f0154a1e8d1e745ecc3d6510",
+          "line_start": 54,
+          "line_end": 62
+        },
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+          "content_hash": "514c7fa8480d1984d11a820971855a19926ff3b6f0154a1e8d1e745ecc3d6510",
+          "line_start": 103,
+          "line_end": 125
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "核心差异+四维逐维对应；混合系统边界为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.ai-pm.collaboration-language.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+      "concept_keys": [
+        "ai-pm.collaboration-language"
+      ],
+      "revision": 1,
+      "position": 38,
+      "title": "与算法团队的沟通语言",
+      "kind": "对比",
+      "prompt": "AI PM 与技术团队沟通的内容，和传统 PM 相比发生了什么变化？用原文的情感分析例子说明。",
+      "answer_short": "从沟通“做什么、怎么做（功能层面）”变为沟通“问题定义和效果预期”。原文示例：不说“加个筛选按钮”，而是说“做情感分析识别评论正负面，准确率目标85%以上、误杀率5%以内，数据量够不够、要补哪些场景”。",
+      "required_points": [
+        "说出变化：从功能指令到问题定义+可测试的效果预期",
+        "复现原文示例的结构：任务定义、目标指标、误差约束、数据缺口",
+        "指出示例数字是原文演示口径，真实阈值由业务风险与基线决定"
+      ],
+      "pitfalls": "两个极端：仍用“加个按钮”式的功能语言描述 AI 需求，导致无法验收；或把指标当成许愿，脱离数据基础和错误代价空谈“准确率99%”。",
+      "explanation": "原文（110–115行）用两组对照话术展示差异：传统 PM 说“这里加一个筛选按钮，点击后按时间倒序排列”；AI PM 说“识别评论正负面，准确率85%以上、误杀率5%以内，数据量够不够？需要补哪些场景的数据？”。编辑补充：这个示例的可迁移结构是「任务+指标+约束+数据缺口」四件套——它把需求从“实现什么”改写成“什么算做对”，这正是 AI 需求可验收的前提。85%/5% 是示例数字，不是通用标准。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+          "content_hash": "514c7fa8480d1984d11a820971855a19926ff3b6f0154a1e8d1e745ecc3d6510",
+          "line_start": 110,
+          "line_end": 115
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "示例结构提炼为四件套；数字口径明确标注"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.ai-pm.career-fit.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+      "concept_keys": [
+        "ai-pm.career-fit"
+      ],
+      "revision": 1,
+      "position": 39,
+      "title": "转型适配的三问自测",
+      "kind": "场景判断",
+      "prompt": "原文在结尾给出判断自己是否适合（转型）做 AI PM 的三个自测问题，分别是什么？这类自测应该怎么用？",
+      "answer_short": "三问：我真的适合做产品吗（扛压推进）？我对 AI 技术有好奇心吗（不写代码但理解原理并持续跟踪）？我能接受不确定性吗（效果不100%可控仍能决策）？用法是识别意愿与倾向，不是能力鉴定。",
+      "required_points": [
+        "说全三问：产品适配、技术好奇心、不确定性容忍",
+        "说出每问背后的行为含义，如“效果不可控时仍能做出合理决策”",
+        "明确这是倾向性自测，答“不”不等于不能做，只是提示要补的课"
+      ],
+      "pitfalls": "把自测当筛选门槛或能力证明——它测的是意愿和倾向，不是当前能力；三问都答“是”也不代表能胜任，胜任要靠1.2所说的实践证据。",
+      "explanation": "原文（165–173行）在结尾给出三个自测问题，分别对应：抗压与推进（遇到困难能否排除万难）、技术好奇心（不需写代码，但要理解基本原理并持续跟踪演进）、不确定性容忍（AI 效果不是100%可控，要在不确定中做合理决策）。编辑补充：三问与前文结构呼应——好奇心对应能力叠加，不确定性容忍对应概率性差异，抗压对应 PM 的无授权推进日常。自测的正确用法是定位自己要先补哪块，而不是给自己打分排名。",
+      "estimated_seconds": 45,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.3-产品经理与AI产品经理区别.md",
+          "content_hash": "514c7fa8480d1984d11a820971855a19926ff3b6f0154a1e8d1e745ecc3d6510",
+          "line_start": 165,
+          "line_end": 173
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "三问还原+用法边界；与前文呼应为编辑补充"
+        ]
+      }
+    }
+  ]
+}

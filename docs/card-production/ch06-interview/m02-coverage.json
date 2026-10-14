@@ -1,0 +1,1030 @@
+{
+  "module_id": "6.2",
+  "source": {
+    "relative_path": "第6章-行业案例/6.2-企业级知识库.md",
+    "absolute_path": "/Users/klein/Documents/AI-PM-guide/第6章-行业案例/6.2-企业级知识库.md",
+    "content_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+    "line_count": 1130
+  },
+  "native_checklist_count": 9,
+  "registered_native_count": 9,
+  "objectives": [
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O001",
+      "original_text": "*   [ ] **格式支持**：至少覆盖 PDF、Word（.doc/.docx）、PPT、Excel、TXT、Markdown、HTML",
+      "source_line": 530,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "格式列表是候选支持范围；T1用业务实际文件设计格式测试集和不支持反馈，不把接入状态卡当已考全部格式。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O002",
+      "original_text": "*   [ ] **解析质量**：表格能否正确识别？扫描件（图片 PDF）是否支持 OCR？复杂排版（双栏、图文混排）能否处理？",
+      "source_line": 531,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "拆分",
+      "reason": "ingestion-release只覆盖解析失败可见和负责人；OCR/复杂版式/表格解析效果须T1设计样本核对，未声称已测试支持。",
+      "card_keys": [
+        "ch06.interview.m02.ingestion-release.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O003",
+      "original_text": "*   [ ] **增量更新**：文档修改后，能否自动检测到变化并更新索引？（不是全量重建，而是增量更新）",
+      "source_line": 532,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "文档变更到新索引生效复用已发表update-deletion；接入状态卡没有评分增量检测。",
+      "card_keys": [
+        "ch03.rag.update-deletion.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O004",
+      "original_text": "*   [ ] **接入方式**：除了手动上传，是否支持自动同步（从钉钉文档、飞书文档、SharePoint、Confluence 自动拉取）？",
+      "source_line": 533,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "T1设计实际数据源连接与自动同步范围/失败状态；ingestion-release只讲文件接收解析审核，不能充作同步机制覆盖。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O005",
+      "original_text": "*   [ ] **接入审批**：谁可以上传文档到知识库？是否需要审核流程？",
+      "source_line": 534,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "与同一案例任务的控制/交付/治理目标合并；不背清单每项功能或原文固定阈值。",
+      "card_keys": [
+        "ch06.interview.m02.ingestion-release.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O006",
+      "original_text": "*   [ ] **显性标注**：回答中的每个事实性陈述，都应在原文中找到出处，并以 `[1]`, `[2]` 等形式标注。",
+      "source_line": 597,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "与同一案例任务的控制/交付/治理目标合并；不背清单每项功能或原文固定阈值。",
+      "card_keys": [
+        "ch06.interview.m02.citation-location.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O007",
+      "original_text": "*   [ ] **来源展示**：鼠标悬停或点击引用标号，应显示来源文档名称、页码/段落、原文片段。",
+      "source_line": 598,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "与同一案例任务的控制/交付/治理目标合并；不背清单每项功能或原文固定阈值。",
+      "card_keys": [
+        "ch06.interview.m02.citation-location.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O008",
+      "original_text": "*   [ ] **原文跳转**：用户应能一键跳转到原始文档的对应位置。",
+      "source_line": 599,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "与同一案例任务的控制/交付/治理目标合并；不背清单每项功能或原文固定阈值。",
+      "card_keys": [
+        "ch06.interview.m02.citation-location.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O009",
+      "original_text": "*   [ ] **多源整合**：如果多个来源对同一问题的表述不一致，AI 应提示\"不同来源存在差异\"，而不是强行给出一个\"标准答案\"。",
+      "source_line": 600,
+      "source_type": "原生自查",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "复用已发表冲突来源卡：适用性/权威/时点与呈现冲突已覆盖，不因制度案例重做同目标。",
+      "card_keys": [
+        "ch03.rag.conflicting-sources.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O010",
+      "original_text": "### 1.1 为什么传统搜索不够了？",
+      "source_line": 13,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O011",
+      "original_text": "*   法务同学上传一份 100 页的合同，问\"第三条的违约条款有哪些？\"",
+      "source_line": 106,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O012",
+      "original_text": "*   HR 上传员工手册，新员工问\"年假怎么休？\"",
+      "source_line": 107,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "延期核实",
+      "reason": "原文具体法律/医疗/历史商业前提未作第一方逐项验证；保留原句与出处，不给未经核实的必答结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O013",
+      "original_text": "*   销售上传产品白皮书，问\"我们相比竞品的三个核心优势是什么？\"",
+      "source_line": 108,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O014",
+      "original_text": "*   询问\"本周有哪些项目风险？\"→ 自动读取项目管理系统、会议纪要，生成风险报告",
+      "source_line": 157,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O015",
+      "original_text": "*   **搜索答案**：问\"上周产品会上关于定价的讨论结论是什么？\"，AI 在聊天记录中找到答案",
+      "source_line": 293,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O016",
+      "original_text": "用户：销售部门的提成政策是什么？",
+      "source_line": 576,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O017",
+      "original_text": "用户：那和技术部门一样吗？",
+      "source_line": 578,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O018",
+      "original_text": "4.   **会话持久化**：用户刷新页面或第二天再来，是否保留历史会话？这涉及到产品定位——是\"搜索工具\"还是\"对话助手\"。",
+      "source_line": 589,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O019",
+      "original_text": "*   \"新资本管理办法对零售风险暴露的权重有什么调整？\"",
+      "source_line": 677,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O020",
+      "original_text": "*   \"我行当前理财产品的信息披露是否符合最新监管要求？\"",
+      "source_line": 678,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "延期核实",
+      "reason": "原文具体法律/医疗/历史商业前提未作第一方逐项验证；保留原句与出处，不给未经核实的必答结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O021",
+      "original_text": "*   \"对比去年和今年的反洗钱制度，有哪些新增义务？\"",
+      "source_line": 679,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O022",
+      "original_text": "*   \"近期上海地区关于竞业限制违约金的判例趋势如何？\"",
+      "source_line": 701,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O023",
+      "original_text": "*   \"这个案由在浦东法院，哪位法官审理过类似案件？\"",
+      "source_line": 703,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O024",
+      "original_text": "*   \"糖尿病患者合并肾功能不全时，二甲双胍是否需要调整剂量？\"",
+      "source_line": 725,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "延期核实",
+      "reason": "原文具体法律/医疗/历史商业前提未作第一方逐项验证；保留原句与出处，不给未经核实的必答结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O025",
+      "original_text": "*   \"根据最新 NCCN 指南，III 期肺癌的治疗方案有什么更新？\"",
+      "source_line": 726,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O026",
+      "original_text": "*   \"这个 CT 影像与院内历史病例中的哪些案例相似？\"",
+      "source_line": 727,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O027",
+      "original_text": "*   \"三号产线注塑机的模具更换步骤是什么？\"",
+      "source_line": 760,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O028",
+      "original_text": "*   \"这个报警代码 E-3047 代表什么意思？怎么解决？\"",
+      "source_line": 761,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O029",
+      "original_text": "*   \"本周质量抽检中，这批产品的不良率超标，可能和哪些工艺参数有关？\"",
+      "source_line": 762,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O030",
+      "original_text": "企业最担心的问题是：\"我的数据上传到你们的系统，会不会被用来训练大模型？会不会泄露给竞争对手？\"",
+      "source_line": 772,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O031",
+      "original_text": "企业采购知识库系统时，CFO 一定会问：\"投入 100 万，能产出多少价值？\"",
+      "source_line": 848,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O032",
+      "original_text": "*   员工找资料快了 30%，这值多少钱？",
+      "source_line": 852,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O033",
+      "original_text": "*   少犯了一个合规错误，避免了潜在罚款，怎么估算？",
+      "source_line": 853,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O034",
+      "original_text": "*   新员工培训周期从 2 周缩短到 1 周，这算多少 ROI？",
+      "source_line": 854,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "实践任务",
+      "reason": "原文是情境输入或开放追问，T1要求明确对象、证据及任务限制后回答；不编造原题的唯一结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O035",
+      "original_text": "当医生查询\"这个糖尿病患者肾功能不好，能用二甲双胍吗？\"时，系统不仅能检索文档，还能通过图谱推理出\"肾功能不全 → 评估 eGFR → 判断禁忌\"的逻辑链。",
+      "source_line": 1024,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "延期核实",
+      "reason": "原文具体法律/医疗/历史商业前提未作第一方逐项验证；保留原句与出处，不给未经核实的必答结论。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O036",
+      "original_text": "用户提问：\"P0A3F 故障码怎么处理？\"",
+      "source_line": 1069,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "原文明确问题在本任务母题串联；相应子卡只评分稳定判断，不要求复述案例厂商故事。",
+      "card_keys": [
+        "ch06.interview.m02.vin-context.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O037",
+      "original_text": "### 5.1 文档接入与预处理",
+      "source_line": 524,
+      "source_type": "正文补题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "采用",
+      "reason": "新增管理员到内容负责人的接入发布状态，非重复RAG离线链路；原句仅为证据锚点，正面情境和细化处置为编辑设计。",
+      "card_keys": [
+        "ch06.interview.m02.ingestion-release.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "管理员上传了扫描版维修手册，界面显示“成功”，技师却搜不到表格内容。应如何拆分接入状态并指定处理角色，避免让上传成功等于可问答？"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O038",
+      "original_text": "### 5.4 引用溯源与可解释性",
+      "source_line": 591,
+      "source_type": "正文补题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "采用",
+      "reason": "新增可变文档下证据入口产品契约，不重复RAG忠实度评测；原句仅为证据锚点，正面情境和细化处置为编辑设计。",
+      "card_keys": [
+        "ch06.interview.m02.citation-location.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "员工点击制度回答里的[1]，只打开整份上百页PDF，还发现文件已更新。一个可核对的引用入口应保留哪些信息，更新后怎样避免指向错误条款？"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O039",
+      "original_text": "**产品设计亮点**：",
+      "source_line": 1060,
+      "source_type": "正文补题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "采用",
+      "reason": "新增实车配置依赖与维修知识适用，非泛权限卡；原句仅为证据锚点，正面情境和细化处置为编辑设计。",
+      "card_keys": [
+        "ch06.interview.m02.vin-context.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "同一故障码在两种电池配置、两个软件版本的车辆上对应不同方案。技师只报故障码，助手直接给出维修步骤。缺了哪些输入依赖，应怎样推进任务？"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O040",
+      "original_text": "**3. 专家闭环机制**",
+      "source_line": 1089,
+      "source_type": "正文补题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "采用",
+      "reason": "新增技师专家个案到通用知识的审核发布，非通用badcase入库；原句仅为证据锚点，正面情境和细化处置为编辑设计。",
+      "card_keys": [
+        "ch06.interview.m02.expert-knowledge.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "一次车间专家通话解决了当前车辆问题。团队准备把转写直接加入通用知识库供所有车型检索。应经过哪些知识化步骤，谁负责确认？"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O041",
+      "original_text": "#### 3.1.1 Glean —— 企业搜索的新标杆",
+      "source_line": 182,
+      "source_type": "正文补题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "采用",
+      "reason": "新增统一查询入口的连接生命周期及源/运维职责，去掉摘要不等于业务写入的已覆盖目标；原句仅为证据锚点，正面情境和细化处置为编辑设计。",
+      "card_keys": [
+        "ch06.interview.m02.knowledge-action.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "企业资料分散在CRM、邮件和项目系统。知识服务计划把原系统替换为一个新库；另一方案只接入查询。若业务团队继续在原系统工作，应如何决定连接范围，并明确源负责人和入口运维职责？"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O042",
+      "original_text": "| 大模型温度 | 0.0 vs 0.3 vs 0.7 | 知识库问答建议 0.0-0.3，保证回答稳定、不 hallucination |",
+      "source_line": 472,
+      "source_type": "待核实子断言",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "延期核实",
+      "reason": "原文强断言、时效产品参数、效果数字或法律/医疗规则未独立证实；不纳入恒定必答，不因引用本地来源视为已核实。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O043",
+      "original_text": "很多初级 RAG 系统上线后用户反馈\"答非所问\"，70% 的原因出在**召回阶段**。要么检索到的片段不相关，要么遗漏了关键信息。加入重排序通常能把回答准确率提升 15-30%。",
+      "source_line": 498,
+      "source_type": "待核实子断言",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "延期核实",
+      "reason": "原文强断言、时效产品参数、效果数字或法律/医疗规则未独立证实；不纳入恒定必答，不因引用本地来源视为已核实。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O044",
+      "original_text": "*   **审计日志**：记录每一次查询的\"用户、问题、引用文档、回答内容\"，保存 10 年",
+      "source_line": 922,
+      "source_type": "待核实子断言",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "延期核实",
+      "reason": "原文强断言、时效产品参数、效果数字或法律/医疗规则未独立证实；不纳入恒定必答，不因引用本地来源视为已核实。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O045",
+      "original_text": "[严重肾功能不全] --定义为--> [eGFR < 30]",
+      "source_line": 1019,
+      "source_type": "待核实子断言",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "延期核实",
+      "reason": "原文强断言、时效产品参数、效果数字或法律/医疗规则未独立证实；不纳入恒定必答，不因引用本地来源视为已核实。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O046",
+      "original_text": "⚠️ 注意：该车软件版本为 v2.3.1，升级至 v2.4.0 后可彻底规避此故障。\"",
+      "source_line": 1078,
+      "source_type": "待核实子断言",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "延期核实",
+      "reason": "原文强断言、时效产品参数、效果数字或法律/医疗规则未独立证实；不纳入恒定必答，不因引用本地来源视为已核实。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O047",
+      "original_text": "| 时效性 | 政策文件必须标注生效日期，旧版本自动归档但保留历史查询能力 |",
+      "source_line": 671,
+      "source_type": "主要知识目标",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "删除effective-policy重复候选；制度生效/权威/旧版冲突复用前30课已发表目标。",
+      "card_keys": [
+        "ch03.rag.conflicting-sources.001",
+        "ch03.interview.m14.context-record-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O048",
+      "original_text": "### 4.3 RAG 架构设计",
+      "source_line": 460,
+      "source_type": "主要知识目标",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "离线接入/在线查询已有架构卡；本课仅新增接入产品状态",
+      "card_keys": [
+        "ch03.interview.m11.rag-lifecycle.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O049",
+      "original_text": "| 切片策略 | 固定 500 token vs 语义切片 | 固定切片简单但可能切断语义；语义切片效果更好但实现复杂 |",
+      "source_line": 468,
+      "source_type": "主要知识目标",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "分块/重叠参数依任务实验，已有能力覆盖，不照抄固定500 Token",
+      "card_keys": [
+        "ch03.rag.chunk-experiment.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O050",
+      "original_text": "| 大模型温度 | 0.0 vs 0.3 vs 0.7 | 知识库问答建议 0.0-0.3，保证回答稳定、不 hallucination |",
+      "source_line": 472,
+      "source_type": "主要知识目标",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "低温不能保证忠实，已有一致性边界可反驳保证",
+      "card_keys": [
+        "ch03.prompt.consistency-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O051",
+      "original_text": "### 4.5 权限控制与数据隔离",
+      "source_line": 500,
+      "source_type": "主要知识目标",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "权限必须执行，不再新建定义卡；本课实践检查原系统一致性",
+      "card_keys": [
+        "C07"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O052",
+      "original_text": "3.   **人工标注后台**：运营/产品同学可以在后台查看所有低分回答，进行人工纠正，并一键加入\"训练集\"。",
+      "source_line": 649,
+      "source_type": "主要知识目标",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "合并",
+      "reason": "反馈需核验后入库，不自动把点踩当真值",
+      "card_keys": [
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "6.2",
+      "objective_id": "m02-O053",
+      "original_text": "text = \"如何申请年假？\"",
+      "source_line": 418,
+      "source_type": "正文明确问题",
+      "source_path": "第6章-行业案例/6.2-企业级知识库.md",
+      "source_hash": "8e0f995da5885d801f5616050603732585ce59266598c4df8a49a757dba9ed7c",
+      "decision": "不纳入",
+      "reason": "代码中Embedding输入的示例问句，不是本课独立学习目标；不据例子推断具体年假政策。",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "T1",
+      "description": "30–45分钟：选本课具体任务，提交任务/角色/输入依赖表、核心状态与失败处置、引用或交付证据，以及对原文清单每项的适用/不适用理由。产品功能、价格与合约若使用须另查第一方。没有调用模型、运行工程或生成截图。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "practices_completed": 0,
+  "local_cards": 5,
+  "publication_status": "local_candidate_not_published",
+  "review_status": "author_self_check_complete_pending_editor",
+  "publication_coverage": "最终映射卡已发布回读；原生登记/短卡覆盖/综合任务/实践完成分别计数"
+}

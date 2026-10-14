@@ -1,0 +1,848 @@
+{
+  "module_id": "5.1",
+  "source_path": "第5章-AI产品设计/5.1-Token成本.md",
+  "source_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+  "native_objectives": 0,
+  "registered": 0,
+  "non_checklist_registered": 41,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L1",
+      "original_text": "# 5.1 Token成本",
+      "source_line": 1,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L20",
+      "original_text": "## 一、Token 成本的构成：你的钱花在哪了？",
+      "source_line": 20,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "C12"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L22",
+      "original_text": "### （一）API 计费的基本单元",
+      "source_line": 22,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "C12"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L41",
+      "original_text": "### （二）隐藏的成本杀手",
+      "source_line": 41,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L45",
+      "original_text": "#### 1. 系统 Prompt 的固定开销",
+      "source_line": 45,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L63",
+      "original_text": "#### 2. 多轮对话的\"滚雪球\"效应",
+      "source_line": 63,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L75",
+      "original_text": "#### 3. RAG 检索结果的\"附加重量\"",
+      "source_line": 75,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L89",
+      "original_text": "#### 4. 重试和失败请求的沉没成本",
+      "source_line": 89,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L95",
+      "original_text": "## 二、主流模型的 Token 定价全景图",
+      "source_line": 95,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L97",
+      "original_text": "### （一）国际主流模型定价（2025-2026 参考）",
+      "source_line": 97,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L115",
+      "original_text": "### （二）国产主流模型定价（2025-2026 参考）",
+      "source_line": 115,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L132",
+      "original_text": "### （三）一张图看懂\"成本差异\"",
+      "source_line": 132,
+      "source_type": "正文知识目标",
+      "decision": "延期",
+      "reason": "历史引语/厂商详情/排行/价格作材料导航；未逐项第一方验证，延期时效事实，不进必答点",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L150",
+      "original_text": "## 三、AI PM 如何计算产品的 Token 成本？",
+      "source_line": 150,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "C12"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L152",
+      "original_text": "### （一）单用户单次请求的成本公式",
+      "source_line": 152,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "C12"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L164",
+      "original_text": "| 用户问题 | 80 | \"我的订单为什么还没发货？\" |",
+      "source_line": 164,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "C12"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L190",
+      "original_text": "### （二）月度总成本的估算方法",
+      "source_line": 190,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch05.interview.m01.concurrency-billing.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L218",
+      "original_text": "### （三）不同业务场景的成本特征",
+      "source_line": 218,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L230",
+      "original_text": "## 四、降低 Token 成本的 10 个实战策略",
+      "source_line": 230,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L232",
+      "original_text": "### 策略 1：精简系统 Prompt",
+      "source_line": 232,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L244",
+      "original_text": "### 策略 2：多轮对话压缩",
+      "source_line": 244,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L256",
+      "original_text": "### 策略 3：RAG 结果去重与截断",
+      "source_line": 256,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L268",
+      "original_text": "### 策略 4：模型分层调度",
+      "source_line": 268,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L280",
+      "original_text": "### 策略 5：输出长度控制",
+      "source_line": 280,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L292",
+      "original_text": "### 策略 6：Prompt Caching（缓存复用）",
+      "source_line": 292,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch05.interview.m01.cache-economics.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L304",
+      "original_text": "### 策略 7：Batch 批处理",
+      "source_line": 304,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch05.interview.m01.batch-deadline.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L316",
+      "original_text": "### 策略 8：本地/私有化部署",
+      "source_line": 316,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L333",
+      "original_text": "### 策略 9：用户输入预处理",
+      "source_line": 333,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L345",
+      "original_text": "### 策略 10： Fallback 降级机制",
+      "source_line": 345,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L357",
+      "original_text": "## 五、Token 成本如何影响产品决策",
+      "source_line": 357,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L359",
+      "original_text": "### （一）产品功能设计",
+      "source_line": 359,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L378",
+      "original_text": "### （二）商业模式选择",
+      "source_line": 378,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "与本节机制/场景卡合并；完整串联与产物在M1/T1–T3，登记不表示执行",
+      "card_keys": [
+        "ch05.interview.m01.paid-cohort.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L387",
+      "original_text": "### （三）技术方案选型",
+      "source_line": 387,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L399",
+      "original_text": "1.   先定义\"效果达标线\"——准确率需要达到多少？",
+      "source_line": 399,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L400",
+      "original_text": "2.   再评估各方案的成本——单用户月均成本是多少？",
+      "source_line": 400,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L401",
+      "original_text": "3.   最后结合商业模式——这个成本结构能否盈利？",
+      "source_line": 401,
+      "source_type": "正文明确问题",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "5.1-L405",
+      "original_text": "## 六、写在最后",
+      "source_line": 405,
+      "source_type": "正文知识目标",
+      "decision": "合并/实践",
+      "reason": "完整主题由M1与实践方案承接；通用任务/预算/质量目标复用既有卡，不为标题独立堆卡",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001",
+        "ch03.token.optimization-quality.001",
+        "ch03.token.usage-reconciliation.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "C12",
+      "original_text": "保持原学习目标C12补强；不再新增同义基础成本卡。",
+      "source_line": 20,
+      "source_type": "跨模块/编辑补题",
+      "decision": "旧卡补强",
+      "reason": "保持原学习目标C12补强；不再新增同义基础成本卡。",
+      "card_keys": [
+        "C12"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05.interview.m01.concurrency-billing.001",
+      "original_text": "纠正原文明显口径错误；区别3.8通用月度请求计算，核心是并发/容量与计费解耦。",
+      "source_line": 190,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "纠正原文明显口径错误；区别3.8通用月度请求计算，核心是并发/容量与计费解耦。",
+      "card_keys": [
+        "ch05.interview.m01.concurrency-billing.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05.interview.m01.paid-cohort.001",
+      "original_text": "独立补齐付费分母与成本分布；不是重复单次Token算术。",
+      "source_line": 199,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "独立补齐付费分母与成本分布；不是重复单次Token算术。",
+      "card_keys": [
+        "ch05.interview.m01.paid-cohort.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05.interview.m01.cache-economics.001",
+      "original_text": "新增缓存写入/命中经济性机制；前20节未有此计费目标。",
+      "source_line": 292,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "新增缓存写入/命中经济性机制；前20节未有此计费目标。",
+      "card_keys": [
+        "ch05.interview.m01.cache-economics.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05.interview.m01.batch-deadline.001",
+      "original_text": "新增异步计费服务与逐项交付边界；区别3.24通用工作流调度。",
+      "source_line": 304,
+      "source_type": "跨模块/编辑补题",
+      "decision": "补题",
+      "reason": "新增异步计费服务与逐项交付边界；区别3.24通用工作流调度。",
+      "card_keys": [
+        "ch05.interview.m01.batch-deadline.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1",
+        "T2"
+      ],
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

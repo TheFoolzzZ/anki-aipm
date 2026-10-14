@@ -1,0 +1,20 @@
+[
+  {
+    "from": "ch04.interview.m03.task-fit.001",
+    "to": "ch04.interview.m01.executable-loop.001",
+    "type": "extension",
+    "reason": "编码工具候选需完成同一可运行行为验收，先理解软件改动结束条件"
+  },
+  {
+    "from": "ch04.interview.m03.provider-cost.001",
+    "to": "C12",
+    "type": "extension",
+    "reason": "免费工具仍需模型调用预算，C12提供假设单价及Token计费算术"
+  },
+  {
+    "from": "ch04.interview.m03.data-flow.001",
+    "to": "ch03.interview.m19.transport-compatibility.001",
+    "type": "compare",
+    "reason": "本地/远程连接形式和索引、推理、回传数据流是不同层次，不能从前者推出不出域"
+  }
+]

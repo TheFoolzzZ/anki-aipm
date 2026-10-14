@@ -1,0 +1,2083 @@
+{
+  "module_id": "5.3",
+  "source_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+  "source_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+  "lf_line_count": 817,
+  "native_objectives": 8,
+  "registered": 8,
+  "native_box_items": 0,
+  "explicit_question_lines": 75,
+  "registered_box_items": 0,
+  "non_checklist_registered": 112,
+  "practice_completed": 0,
+  "publication_coverage": "最终映射卡已发布回读；原生登记/短卡覆盖/综合任务/实践完成分别计数",
+  "objectives": [
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L9",
+      "original_text": "为什么？因为AI产品的核心竞争力，往往不在界面上，而在**模型里**——你看不到它的模型架构，摸不准它的效果上限，甚至同一个功能，今天的体验和明天的体验可能都不一样（模型迭代了嘛）。更别提，AI产品的交互范式正在以月为单位快速变化：今天大家都在做聊天机器人，明天可能就都在做Agent了，后天又不知道会冒出什么新形态。",
+      "source_line": 9,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L11",
+      "original_text": "所以，AI产品的竞品分析，需要一套全新的方法论。这一节，我就把这套方法论完整教给你。咱们不仅要\"看热闹\"，更要\"看门道\"——透过产品表层，看清竞品的底层逻辑。Ready? Go!",
+      "source_line": 11,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L13",
+      "original_text": "## 一、AI产品竞品分析的特殊性",
+      "source_line": 13,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L15",
+      "original_text": "在讲具体方法之前，我们必须先理解：AI产品竞品分析，到底特殊在哪里？",
+      "source_line": 15,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L17",
+      "original_text": "### 1.1 模型黑盒：你看到的不是全部",
+      "source_line": 17,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.blackbox-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L39",
+      "original_text": "> 但你知道为什么吗？",
+      "source_line": 39,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.blackbox-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L54",
+      "original_text": "### 1.2 交互范式变化快：今天的标杆，明天就过时",
+      "source_line": 54,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L83",
+      "original_text": "2025年：？",
+      "source_line": 83,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L89",
+      "original_text": "做AI竞品分析时，**不要只盯着当前的功能对比**。要思考：这个竞品的交互范式代表了什么趋势？它是在优化现有的范式，还是在开创全新的范式？如果是后者，即使它现在的功能还不完善，也值得高度关注。",
+      "source_line": 89,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L91",
+      "original_text": "### 1.3 数据飞轮效应：先发优势可能被放大",
+      "source_line": 91,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L95",
+      "original_text": "**什么是数据飞轮？**",
+      "source_line": 95,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L111",
+      "original_text": "1.   **这个竞品有多少用户/数据了？** 数据飞轮转起来了吗？",
+      "source_line": 111,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L112",
+      "original_text": "2.   **它的数据是从哪来的？** 是公开数据还是独家数据？",
+      "source_line": 112,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L113",
+      "original_text": "3.   **这个领域的数据壁垒高吗？** 后来者容易获取同类数据吗？",
+      "source_line": 113,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L114",
+      "original_text": "4.   **如果我们要追赶，数据准备需要多长时间、多少成本？**",
+      "source_line": 114,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L116",
+      "original_text": "## 二、AI竞品分析的六大维度",
+      "source_line": 116,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L120",
+      "original_text": "### 维度1：模型能力维度",
+      "source_line": 120,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.matched-task.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L128",
+      "original_text": "| **底层模型** | 自研模型？调用第三方API？第三方用了什么模型？ | 看官方公告、技术博客、API返回信息、行业报道 |",
+      "source_line": 128,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.matched-task.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L129",
+      "original_text": "| **模型版本** | 用的是最新版还是旧版？更新频率如何？ | 定期测试同一问题，观察回答变化；关注官方更新日志 |",
+      "source_line": 129,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.matched-task.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L130",
+      "original_text": "| **核心指标** | 公开了哪些评测数据？在权威榜单排名如何？ | 查论文、技术报告、公开Benchmark（如MMLU、HumanEval） |",
+      "source_line": 130,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.matched-task.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L131",
+      "original_text": "| **垂直优化** | 是否针对特定领域做了微调/RAG/知识增强？ | 测试专业领域问题，对比通用知识和专业知识的表现差异 |",
+      "source_line": 131,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.matched-task.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L164",
+      "original_text": "| 逻辑推理：如果A>B, B>C, 那么A和C的关系？ | ... | ... | ... | A:5 B:5 C:4 |",
+      "source_line": 164,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.matched-task.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L170",
+      "original_text": "不要只关注\"谁得分高\"，更要关注**\"谁在什么类型的题目上表现好\"**。这能帮你发现竞品的定位策略——它是走\"全才\"路线，还是走\"专才\"路线？它的能力短板在哪里？这些短板是不是你的机会？",
+      "source_line": 170,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.matched-task.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L172",
+      "original_text": "### 维度2：功能场景维度",
+      "source_line": 172,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L180",
+      "original_text": "| **场景覆盖** | 竞品覆盖了多少个使用场景？ | 场景清单 |",
+      "source_line": 180,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L181",
+      "original_text": "| **场景深度** | 每个场景下有多少细分功能？流程是否闭环？ | 功能拆解表 |",
+      "source_line": 181,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L182",
+      "original_text": "| **场景优先级** | 竞品的主打场景是什么？资源倾斜在哪里？ | 场景优先级判断 |",
+      "source_line": 182,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L183",
+      "original_text": "| **场景创新** | 有没有竞品独创的场景？ | 创新场景清单 |",
+      "source_line": 183,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L208",
+      "original_text": "**从这个表格能读出什么？**",
+      "source_line": 208,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L231",
+      "original_text": "1.   竞品的功能布局反映了什么战略选择？",
+      "source_line": 231,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L232",
+      "original_text": "2.   哪些功能是\"必备\"的（大家都做），哪些功能是\"差异化\"的（只有它做）？",
+      "source_line": 232,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L233",
+      "original_text": "3.   差异化功能是\"真差异\"还是\"伪差异\"？用户真的在乎吗？",
+      "source_line": 233,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L235",
+      "original_text": "### 维度3：交互体验维度",
+      "source_line": 235,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L256",
+      "original_text": "├── 是否支持多模态输入（文字/语音/图片/文件）？",
+      "source_line": 256,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L257",
+      "original_text": "├── 输入框是否支持富文本（加粗、列表、代码块）？",
+      "source_line": 257,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L258",
+      "original_text": "├── 是否有快捷输入/提示词推荐？",
+      "source_line": 258,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L259",
+      "original_text": "├── 是否支持语音输入？识别准确率如何？",
+      "source_line": 259,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L260",
+      "original_text": "├── 是否支持上传附件？支持哪些格式？大小限制？",
+      "source_line": 260,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L263",
+      "original_text": "├── 输出速度如何？首字响应时间？",
+      "source_line": 263,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L264",
+      "original_text": "├── 是否流式输出（逐字显示）？",
+      "source_line": 264,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L265",
+      "original_text": "├── 输出格式是否丰富（代码高亮、表格、公式）？",
+      "source_line": 265,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L266",
+      "original_text": "├── 是否支持输出后编辑/复制/分享？",
+      "source_line": 266,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L267",
+      "original_text": "├── 是否支持重新生成/追问/否定？",
+      "source_line": 267,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L270",
+      "original_text": "├── AI答错时，用户怎么反馈？（点赞/点踩/举报？）",
+      "source_line": 270,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L271",
+      "original_text": "├── AI拒绝回答时，理由是否清晰？",
+      "source_line": 271,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L272",
+      "original_text": "├── 网络超时/服务器繁忙时，提示是否友好？",
+      "source_line": 272,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L273",
+      "original_text": "├── 生成长内容中断时，是否支持\"继续\"？",
+      "source_line": 273,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L276",
+      "original_text": "├── 是否显示对话历史？",
+      "source_line": 276,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L277",
+      "original_text": "├── 是否支持新建/切换会话？",
+      "source_line": 277,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L278",
+      "original_text": "├── 上下文窗口有多大？长对话会不会\"失忆\"？",
+      "source_line": 278,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L279",
+      "original_text": "├── 是否支持引用之前的对话内容？",
+      "source_line": 279,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L295",
+      "original_text": "建议你亲自作为\"深度用户\"使用竞品至少一周。每天记录使用日志：什么时候用了？用来做什么？体验好的地方？体验差的地方？惊喜时刻？抓狂时刻？这些一手体验比任何功能对比表都更有价值。",
+      "source_line": 295,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L297",
+      "original_text": "### 维度4：数据资产维度",
+      "source_line": 297,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L305",
+      "original_text": "| **数据规模** | 有多少用户？产生了多少数据？ | 公开数据（融资报告、发布会）、第三方估计（SimilarWeb、App Annie） |",
+      "source_line": 305,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L306",
+      "original_text": "| **数据质量** | 数据是否高质量、有标注？ | 从输出质量反推；看是否有专业团队/合作方 |",
+      "source_line": 306,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L307",
+      "original_text": "| **数据独特性** | 是否有竞品无法获取的独家数据？ | 看行业壁垒、合作关系、数据积累时间 |",
+      "source_line": 307,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L308",
+      "original_text": "| **数据更新** | 数据更新频率？时效性如何？ | 测试实时信息类问题，看知识截止日期 |",
+      "source_line": 308,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L309",
+      "original_text": "| **飞轮状态** | 是否已形成正向循环？ | 看产品迭代速度、用户增长趋势、效果改进速度 |",
+      "source_line": 309,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L329",
+      "original_text": "*   竞品的招聘方向（招标注团队？招数据工程师？）",
+      "source_line": 329,
+      "source_type": "正文明确问题",
+      "decision": "合并",
+      "reason": "复用已有/本轮其他模块的实际目标；分工控制或数据闭环/壁垒不另建同义卡，母题保留竞品应用",
+      "card_keys": [
+        "ch07.interview.m01.data-loop.001",
+        "ch07.interview.m01.moat-test.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L331",
+      "original_text": "### 维度5：成本效率维度",
+      "source_line": 331,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L339",
+      "original_text": "| **推理成本** | 每次请求的成本是多少？ | 如果调用第三方API，查公开定价；自研模型则需要估算 |",
+      "source_line": 339,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L340",
+      "original_text": "| **响应速度** | 平均响应时间？高峰期是否变慢？ | 实测（用脚本测100次取平均） |",
+      "source_line": 340,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L341",
+      "original_text": "| **资源效率** | 同样效果下，谁的模型更小/更快？ | 技术报告中的参数规模、推理速度对比 |",
+      "source_line": 341,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L342",
+      "original_text": "| **商业模式** | 如何覆盖成本？免费额度？订阅制？按量计费？ | 直接看定价页面 |",
+      "source_line": 342,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L343",
+      "original_text": "| **成本趋势** | 成本在上升还是下降？ | 模型优化、量化、蒸馏等技术趋势 |",
+      "source_line": 343,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L366",
+      "original_text": "分析竞品的成本效率，能帮你判断：它能不能长期维持当前的服务质量？如果市场打起价格战，它有没有余地？",
+      "source_line": 366,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L368",
+      "original_text": "### 维度6：生态壁垒维度",
+      "source_line": 368,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L376",
+      "original_text": "| **开放平台** | 是否开放API？开发者生态规模？ | API文档质量、开发者数量、第三方应用数 |",
+      "source_line": 376,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L377",
+      "original_text": "| **插件/扩展生态** | 是否支持插件？有多少可用插件？ | 插件数量、质量、活跃度 |",
+      "source_line": 377,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L378",
+      "original_text": "| **硬件绑定** | 是否和特定硬件深度集成？ | 独家合作、预装、芯片优化 |",
+      "source_line": 378,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L379",
+      "original_text": "| **内容/数据生态** | 是否有独占的内容或数据源？ | 独家合作、UGC规模、专业内容库 |",
+      "source_line": 379,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L380",
+      "original_text": "| **企业生态** | B端客户粘性？集成深度？ | 企业客户数、续约率、集成系统数 |",
+      "source_line": 380,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L412",
+      "original_text": "*   如果竞品明天关闭API，多少开发者会受影响？（开发者生态深度）",
+      "source_line": 412,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L413",
+      "original_text": "*   竞品的数据/内容，别人能不能轻易复制？（数据壁垒）",
+      "source_line": 413,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L414",
+      "original_text": "*   用户切换到竞品的成本有多高？（迁移成本）",
+      "source_line": 414,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L418",
+      "original_text": "## 三、竞品分析工具和方法",
+      "source_line": 418,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L422",
+      "original_text": "### 工具1：AI竞品功能拆解表",
+      "source_line": 422,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L424",
+      "original_text": "## 竞品功能拆解表模板",
+      "source_line": 424,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L426",
+      "original_text": "### 基本信息",
+      "source_line": 426,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L437",
+      "original_text": "### 模型能力",
+      "source_line": 437,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L448",
+      "original_text": "### 功能场景",
+      "source_line": 448,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L456",
+      "original_text": "### 交互体验",
+      "source_line": 456,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L466",
+      "original_text": "### 数据与生态",
+      "source_line": 466,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L476",
+      "original_text": "### 工具2：AI产品用户体验地图",
+      "source_line": 476,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L484",
+      "original_text": "| 准备 | 打开AI助手 | \"希望今天能快一点\" | 显示欢迎语 | 欢迎语能否更个性化？ |",
+      "source_line": 484,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L485",
+      "original_text": "| 输入 | 输入本周工作内容 | \"不知道该怎么组织语言\" | 理解意图，可能提示模板 | 是否有周报模板推荐？ |",
+      "source_line": 485,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L486",
+      "original_text": "| 生成 | 等待AI生成 | \"有点慢...\" | 处理中，生成内容 | 响应速度？是否有进度提示？ |",
+      "source_line": 486,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L487",
+      "original_text": "| 查看 | 阅读AI生成的周报 | \"整体还行，但数据部分不对\" | 输出完整周报 | 数据准确性如何保证？ |",
+      "source_line": 487,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L488",
+      "original_text": "| 编辑 | 手动修改数据部分 | \"还是要自己改\" | 无（等待用户输入） | 能否对接数据源自动填充？ |",
+      "source_line": 488,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L489",
+      "original_text": "| 优化 | 让AI调整语气 | \"希望更正式一点\" | 按指令改写 | 语气调整是否精准？ |",
+      "source_line": 489,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L490",
+      "original_text": "| 完成 | 复制到邮件发送 | \"比从零写快多了\" | 无 | 能否直接集成邮件发送？ |",
+      "source_line": 490,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L492",
+      "original_text": "### 工具3：AI竞品SWOT分析",
+      "source_line": 492,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L503",
+      "original_text": "### 工具4：竞品追踪表",
+      "source_line": 503,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L507",
+      "original_text": "## 竞品追踪表模板",
+      "source_line": 507,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L509",
+      "original_text": "### 追踪维度",
+      "source_line": 509,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L518",
+      "original_text": "### 追踪渠道清单",
+      "source_line": 518,
+      "source_type": "正文知识目标",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L520",
+      "original_text": "*   [ ] 竞品官方博客/公众号",
+      "source_line": 520,
+      "source_type": "原生勾选",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L521",
+      "original_text": "*   [ ] 竞品更新日志（Changelog）",
+      "source_line": 521,
+      "source_type": "原生勾选",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L522",
+      "original_text": "*   [ ] 竞品社交媒体（Twitter/X、LinkedIn）",
+      "source_line": 522,
+      "source_type": "原生勾选",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L523",
+      "original_text": "*   [ ] 行业媒体（36氪、极客公园、机器之心）",
+      "source_line": 523,
+      "source_type": "原生勾选",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L524",
+      "original_text": "*   [ ] 技术社区（Hacker News、Reddit、知乎）",
+      "source_line": 524,
+      "source_type": "原生勾选",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L525",
+      "original_text": "*   [ ] 应用商店更新说明",
+      "source_line": 525,
+      "source_type": "原生勾选",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L526",
+      "original_text": "*   [ ] 第三方数据平台（Sensor Tower、点点数据）",
+      "source_line": 526,
+      "source_type": "原生勾选",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L527",
+      "original_text": "*   [ ] 竞品用户社群（微信群、Discord）",
+      "source_line": 527,
+      "source_type": "原生勾选",
+      "decision": "合并",
+      "reason": "原文目标落在本课子卡的证据范围；机制由子卡检验，完整任务仍由M1与T1承接",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L538",
+      "original_text": "## 四、AI竞品分析的三大难点",
+      "source_line": 538,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L542",
+      "original_text": "### 难点1：模型效果难以客观量化",
+      "source_line": 542,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L556",
+      "original_text": "### 难点2：交互体验主观性强",
+      "source_line": 556,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L566",
+      "original_text": "| **任务完成度** | 不要问\"好不好用\"，问\"你完成这个任务了吗？花了多少时间？遇到了什么问题？\" |",
+      "source_line": 566,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L569",
+      "original_text": "### 难点3：技术路线差异大",
+      "source_line": 569,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L581",
+      "original_text": "> 怎么比？哪个更好？取决于你的目标场景是什么。",
+      "source_line": 581,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L601",
+      "original_text": "## 五、完整案例解析",
+      "source_line": 601,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L603",
+      "original_text": "### 案例1：通用大模型产品对比分析（ChatGPT vs Claude vs 文心一言）",
+      "source_line": 603,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L716",
+      "original_text": "### 案例2：垂直领域AI产品对比分析（AI法律助手）",
+      "source_line": 716,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L800",
+      "original_text": "## 写在最后",
+      "source_line": 800,
+      "source_type": "正文知识目标",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L802",
+      "original_text": "哇，这一节的内容密度不小吧？咱们来做个快速回顾：",
+      "source_line": 802,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "5.3-L816",
+      "original_text": "下一节，我们将继续AI产品设计的旅程，探讨**《如何合理评估AI产品的需求》**。需求挖了、竞品看了，但哪些需求值得做？AI能做到什么程度才算\"达标\"？如何设定合理的验收标准？这些都是AI产品经理必须回答的问题。下节见！",
+      "source_line": 816,
+      "source_type": "正文明确问题",
+      "decision": "实践任务",
+      "reason": "此原句要求综合观察/方案或调查产物，保留M1/T1；不以一张泛化卡替代其全部要求",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05.interview.m03.matched-task.001",
+      "original_text": "### 维度1：模型能力维度",
+      "source_line": 120,
+      "source_type": "跨模块/编辑补题",
+      "decision": "采用",
+      "reason": "新增竞品任务和产品路径比较，区别既有通用评测定义。",
+      "card_keys": [
+        "ch05.interview.m03.matched-task.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05.interview.m03.blackbox-evidence.001",
+      "original_text": "### 1.1 模型黑盒：你看到的不是全部",
+      "source_line": 17,
+      "source_type": "跨模块/编辑补题",
+      "decision": "采用",
+      "reason": "修正原文由输出反推技术/数据的过强结论，新增证据层级判断。",
+      "card_keys": [
+        "ch05.interview.m03.blackbox-evidence.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05.interview.m03.workflow-gap.001",
+      "original_text": "### 维度2：功能场景维度",
+      "source_line": 172,
+      "source_type": "跨模块/编辑补题",
+      "decision": "采用",
+      "reason": "聚焦竞品场景深度与产品完成链，非重复泛化质量验收。",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05.interview.m03.tracking-decision.001",
+      "original_text": "### 工具4：竞品追踪表",
+      "source_line": 503,
+      "source_type": "跨模块/编辑补题",
+      "decision": "采用",
+      "reason": "将八渠道清单交付为跟踪实践，核心卡考查事件到产品决策。",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "review_status": "主编复核通过；独立审校见第31–44课验收",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

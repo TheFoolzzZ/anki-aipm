@@ -1,0 +1,303 @@
+{
+  "batch_id": "ch03-interview-20260922-m07",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "title": "子词切分的取舍",
+      "kind": "对比",
+      "prompt": "处理大量中文新词和英文词形变化时，整词、字符与子词切分分别牺牲什么？为什么子词常作为折中，却不能保证每个 Token 都有完整语义？",
+      "answer_short": "整词切分容易扩大词表并遇到未收录词，字符切分减少词表压力但增加序列长度，子词用可复用片段在两者之间折中。片段来自切分规则和训练语料，不保证恰好对应词根或完整含义；陌生字符能否表示还取决于覆盖与回退机制。",
+      "required_points": [
+        "逐维解释整词的词表/未登录词代价、字符的长度代价和子词折中",
+        "指出 Token 不等于语义单位，能切分不等于已经理解",
+        "说明未知字符处理有实现条件，不承诺任何子词器永无未登录词"
+      ],
+      "explanation": "原文从整词到字符再到子词描述词表规模与序列长度的矛盾。编辑修正与扩展：例如一个新出现的产品名可能不在完整词表里，却可以拆成已有片段，避免为每个新名称单独扩充词表；相应代价是模型要从更多片段学习组合关系。切分是否像人类的词根分析不能单独判断质量，模型可以在上下文中学习跨片段联系，完整词也可能存在多义。若基础字符未覆盖且没有相应回退，仍可能产生未知符号，因此不能从“子词”名称推导通用无损保证。PM 的判断应兼顾代表性文本的长度、覆盖和实际任务结果，不把看起来工整的切分当成理解能力证据。\n\n面试追问：供应商名称被切成五段，该换模型吗？参考思路：先看实体提取准确率和输入长度；碎片多可能增加预算，但不构成理解失败证据。核心自评：必答点完整且无关键误解为掌握；追问为拓展，不要求逐字背诵。",
+      "pitfalls": "不认定字符被切开就必然丢失语义；算法名不等于完整 tokenizer 的预处理、词表与回退配置。",
+      "canonical_key": "ch03.tokenization.subword-tradeoff.001",
+      "lesson_source_key": "第3章-技术攻克/3.7-Tokenization.md",
+      "concept_keys": [
+        "tokenization.subword-tradeoff"
+      ],
+      "revision": 2,
+      "position": 49,
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.7-Tokenization.md",
+          "content_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+          "line_start": 53,
+          "line_end": 127
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m07.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "title": "BPE 的训练与使用",
+      "kind": "机制",
+      "prompt": "在简化 BPE 教学情境中，语料初始只有 a b 出现3次、a c出现2次，且不跨词合并。第一步应合并什么？训练完成后编码新文本时是否重新统计整套语料词频？",
+      "answer_short": "第一步合并出现3次的相邻对 a+b，形成片段 ab，再基于更新后的序列继续统计和合并。训练完成会保留词表与合并规则；编码新输入时应用已学规则，不为每次请求重新训练一套词频，也不按该请求即时造词。",
+      "required_points": [
+        "按给定频率合并相邻 a+b，并说明合并后更新序列继续训练",
+        "区分训练得到规则与使用规则编码新文本",
+        "说明词频合并不是语义证明，实际结果依赖语料和预处理"
+      ],
+      "explanation": "原文用逐步合并高频相邻片段说明 BPE 的基本机制，但其小例子存在并列频率未说明等细节，故此处换用无并列的编辑教学情境。初始两类序列共贡献 a+b 三次、a+c 两次，因此先合并 ab，之后统计的是新片段之间的相邻关系，不能始终把原字符频率表重复使用。编码阶段使用已经训练好的合并顺序和词表，这使同一 tokenizer 配置下的处理可复现。新产品名即使被拆成多个片段，也不必然意味着模型读不懂；更换词表或合并规则却可能改变输入编号与序列长度，需要与模型配套评估。本卡关注训练和使用的区别，费用和上下文配额另见3.8。\n\n面试追问：产品新增一个名称，会自动成为一个Token吗？参考思路：不会；固定词表按既有规则编码，只有重新训练或变更词表才可能新增项，且需评估与模型配套。核心自评：必答点完整且无关键误解为掌握；追问为拓展，不要求逐字背诵。",
+      "pitfalls": "不沿用原文 toy 数据里未经说明的“唯一最高频”；BPE 不保证每次合并都产生有语义的词。",
+      "canonical_key": "ch03.tokenization.bpe-process.001",
+      "lesson_source_key": "第3章-技术攻克/3.7-Tokenization.md",
+      "concept_keys": [
+        "tokenization.bpe-process"
+      ],
+      "revision": 2,
+      "position": 50,
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.7-Tokenization.md",
+          "content_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+          "line_start": 131,
+          "line_end": 221
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m07.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "title": "WordPiece 与 BPE 的比较边界",
+      "kind": "对比",
+      "prompt": "同事把 BPE 和 WordPiece 都解释成“每次合并最高频片段”，并把 WordPiece 的 ## 当作用户原文字符。应怎样纠正这两个理解？",
+      "answer_short": "BPE 经典训练按相邻片段频率合并；WordPiece 的词表学习准则不能简单等同最高频合并，应结合具体实现说明。常见 BERT WordPiece 中 ## 标记非词首的子词位置，属于词表表示约定，不是用户输入里真的写了两个井号。",
+      "required_points": [
+        "区分 BPE 频率合并与 WordPiece 词表学习准则，不把二者说成同一算法",
+        "解释 ## 是常见 WordPiece 的续接标记而非原文文字",
+        "说明算法、已训练词表和编码过程须分开看，不能只靠家族名称预测具体切分"
+      ],
+      "explanation": "原文正确指出两种方法的学习准则有区别，却在“从单词开始拆分”和“从小到大合并”之间出现冲突，也把概率改进类比为下一个词预测，容易与大模型训练混淆。编辑修正：本题保留能用于沟通的稳定边界，不要求背未经限定的唯一 WordPiece 训练公式。以教学表示 play 与 ##ing 为例，续接标记帮助编码器区分词内片段，解码时不应把标记照抄进正文；实际单词是否如此切分仍取决于所用词表。若要比较两个模型，必须记录 tokenizer 版本并实测文本，不能用算法名推导精确 Token 数。完整数值训练细节留待实现文档核对。\n\n面试追问：BERT遇到无法匹配的片段怎么办？参考思路：已核对Google BERT实现，按给定词表最长优先匹配，匹配失败可返回[UNK]；这是编码行为，不据此推导WordPiece词表训练目标。核心自评：必答点完整且无关键误解为掌握；追问为拓展，不要求逐字背诵。\n第一方补充（2026-09-22核对HF课程）：其教学重构用“相邻对频率÷两片段各自频率乘积”评分，故高频对不一定优先；课程明确不是已公开的Google原始训练实现。这里只作有条件比较，不能把它说成BERT预测下一个词的目标。",
+      "pitfalls": "## 是常见实现约定，不是所有子词算法的统一规则；WordPiece 的词表学习与模型自回归预测不是同一过程。",
+      "canonical_key": "ch03.tokenization.wordpiece-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.7-Tokenization.md",
+      "concept_keys": [
+        "tokenization.wordpiece-boundary"
+      ],
+      "revision": 2,
+      "position": 51,
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.7-Tokenization.md",
+          "content_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+          "line_start": 223,
+          "line_end": 250
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m07.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "title": "工具与算法层级",
+      "kind": "概念",
+      "prompt": "选型表把 SentencePiece、BPE 和 Unigram 当成三个互斥分词算法。这个分类有什么问题？SentencePiece 的“不依赖空格预分词”对中文意味着什么？",
+      "answer_short": "SentencePiece 是可训练和使用分词模型的工具框架，支持 BPE、Unigram 等方法，不能与其内部算法简单并列为互斥项。它可从文本流学习而不要求先按空格划好词，便于处理无空格语言；这不等于自动消除中文歧义，也不保证所有配置都逐字无损。",
+      "required_points": [
+        "区分工具框架与内部算法，说明可以采用 SentencePiece+BPE 或 Unigram",
+        "解释无需预先按空格分词对无空格语言的意义",
+        "保留歧义、词表覆盖与文本规范化边界，不把语言无关当质量保证"
+      ],
+      "explanation": "原文在正文写明 SentencePiece 可使用 BPE 或 Unigram，但总表又把工具和算法放在同一层级；编辑修正将这两层分开。对“乒乓球拍卖完了”这样的中文文本，系统不必依赖人工词典先决定词界，但模型理解仍需上下文，切成某种片段并不能单独证明语义解析正确。Unigram 可以从较大的候选词表逐步裁减，BPE 则逐步合并，两者都可在工具框架内训练。还应核对文本规范化设置：若输入在分词前被归一化，不能笼统声称解码必然恢复原始字节。PM 在比较方案时要记录框架、算法、词表和配置，而不是只填写一个混杂层级的名称。\n\n面试追问：解码文本看起来一样就证明原始字节没变吗？参考思路：不一定；检查规范化、空白及特殊符号处理。订单号和代码等精确字段应另有原值校验。核心自评：必答点完整且无关键误解为掌握；追问为拓展，不要求逐字背诵。",
+      "pitfalls": "不采信“所有现代多语言模型都用 SentencePiece”；支持多语言不保证所有语言效果相同。",
+      "canonical_key": "ch03.tokenization.sentencepiece-layer.001",
+      "lesson_source_key": "第3章-技术攻克/3.7-Tokenization.md",
+      "concept_keys": [
+        "tokenization.sentencepiece-layer"
+      ],
+      "revision": 2,
+      "position": 52,
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.7-Tokenization.md",
+          "content_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+          "line_start": 252,
+          "line_end": 330
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m07.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "title": "多语言切分效率的证据",
+      "kind": "场景判断",
+      "prompt": "团队说“中文调用一定比英文贵20%–50%”，准备按这个比例设计用户配额。为什么证据不足？怎样测出可以用于产品判断的语言差异？",
+      "answer_short": "差异依赖 tokenizer 词表、文本领域及表达方式，不能把固定比例用于所有模型。选语义和任务复杂度可比的多语言样本，在同一指定 tokenizer 版本下测量切分数与分布，再结合价格和任务质量判断配额影响。",
+      "required_points": [
+        "说明语言差异依赖词表和文本分布，固定比例不是普适事实",
+        "在记录版本的同一 tokenizer 下测可比样本，并看分布而非一句话",
+        "把切分效率与业务质量、计费条件分开，不直接据 Token 比例推断整体优劣"
+      ],
+      "explanation": "原文指出不同语言在词表中的覆盖可能不均，这能解释某类内容为何被拆得更碎，却不能证明中文在任何模型和句子中都更长。编辑测量情境：比较同一类售后问题的中文与英文版本，保留实体、限制和表达目的，分别记录普通短句、专业术语、混合语言的 Token 数。若只挑一个常用短语，其整块词表覆盖可能使中文反而更短，因此需要查看中位与高分位样本和异常切分。Token 较多在相同按量价格下会增加该部分费用，也会压缩同一窗口可放的文本，但真实账单还受输出、重试和模型单价影响。配额策略应依据测量及任务成功体验，不把语言名称作为粗略惩罚依据。\n\n面试追问：如何向运营解释语言配额差异？参考思路：同一任务在指定词表下可能被切成更多片段，影响费用和可装内容；用测量范围说明条件，不能说中文天生更贵。核心自评：必答点完整且无关键误解为掌握；追问为拓展，不要求逐字背诵。",
+      "pitfalls": "不能用字符数当相同信息量的可靠代理；切分更碎不是中文能力一定更差，仍须业务评测。",
+      "canonical_key": "ch03.tokenization.language-measurement.001",
+      "lesson_source_key": "第3章-技术攻克/3.7-Tokenization.md",
+      "concept_keys": [
+        "tokenization.language-measurement"
+      ],
+      "revision": 2,
+      "position": 53,
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.7-Tokenization.md",
+          "content_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+          "line_start": 332,
+          "line_end": 411
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m07.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "title": "数字与代码失败的归因",
+      "kind": "故障诊断",
+      "prompt": "模型做错金额计算或生成了错误缩进，能否仅凭数字和空格被拆成多个 Token 就断定 tokenizer 是根因？该收集什么证据并如何验证？",
+      "answer_short": "不能。切分方式可能影响学习和序列表示，但错误还可能来自模型任务能力、输入缺失或生成约束。保存原始输入、实际 Token 序列与输出，检查数字和空白是否完整保留，再用受控样本复测；需要精确计算或可执行代码时还应调用计算与语法校验。",
+      "required_points": [
+        "把分词影响视为候选原因，不凭碎片数建立唯一因果",
+        "检查输入到切分及解码的实际内容并保留失败样本",
+        "用受控样本与计算/语法验证检验改动，不把加入空格当万能修复"
+      ],
+      "explanation": "原文举数字和缩进切分差异说明输入表示可能影响任务表现，但将具体切分写成整个模型家族的固定行为会误导诊断。编辑情境：金额小数点在模型实际输入前已被清洗掉，那么优先修复预处理，换模型或加提示无法恢复丢失事实；若字符完整而计算错误，则需要继续检查任务能力和使用计算工具的流程。代码同理，应比较原始缩进、模型输入、解码结果和编译或语法检查，识别是内容丢失还是生成逻辑出错。对几个等价数字或格式作受控测试有助于检验假设，但不代表只改 token 边界就能保证正确。精确结果应由可执行验证确认，而非模型自述。\n\n面试追问：把数字间加空格后一次答对，可以全量修复吗？参考思路：不能；语义、长度和输入分布同时变化，须固定其他条件复测多类金额并用计算工具核验。核心自评：必答点完整且无关键误解为掌握；追问为拓展，不要求逐字背诵。",
+      "pitfalls": "Tokenizer 通常与模型训练时的词表配套，不能把随意替换分词器当成无需重训的普通修复。",
+      "canonical_key": "ch03.tokenization.number-code-diagnosis.001",
+      "lesson_source_key": "第3章-技术攻克/3.7-Tokenization.md",
+      "concept_keys": [
+        "tokenization.number-code-diagnosis"
+      ],
+      "revision": 2,
+      "position": 54,
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.7-Tokenization.md",
+          "content_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+          "line_start": 413,
+          "line_end": 477
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m07.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "title": "分词不能代替中文歧义判断",
+      "kind": "场景判断",
+      "prompt": "采购助手把“乒乓球拍卖完了”理解成球被拍卖。中文无空格、歧义和新词各带来什么问题？改成子词分词就能保证理解正确吗？应如何验证并处理剩余歧义？",
+      "answer_short": "无空格使词界不能直接按空白确定；歧义使同一字符串有多种解释；新商品名可能不在已有词表。子词可组合已知片段表达新词，却不自动确定业务含义；应结合库存语境、实体信息和任务验证，证据不足时澄清。",
+      "required_points": [
+        "分别说清无空格、歧义、新词的影响",
+        "区分可编码与理解正确，子词不自动消歧或覆盖任意字符",
+        "用具体业务上下文和实体证据验证，需要时向用户澄清"
+      ],
+      "explanation": "原文三项难点属于不同层次。编辑情境：“拍卖完了”可能描述拍卖结束，“球拍卖完了”也可能表示商品缺货；仅看词表中有没有“球拍”不能排除另一含义。采购系统可以结合商品目录、当前对话与库存状态提取候选含义，再由业务规则决定是否执行查询或请求澄清。新品牌被拆成多个片段并不意味着不能识别；反过来，整块Token也不证明理解了实体。面试追问：直接把新品牌加入词表如何？参考思路：词表编号需要与模型表示配套，新增不是普通词典维护；先尝试可靠实体资料与任务评测，再决定是否投入模型适配。核心自评：三项必答点完整、无关键误解为掌握；追问属加分。",
+      "pitfalls": "不要将人类语义分词、token编码与模型实体理解当成同一环节；本情境非真实客户案例。",
+      "canonical_key": "ch03.interview.m07.chinese-ambiguity.001",
+      "lesson_source_key": "第3章-技术攻克/3.7-Tokenization.md",
+      "concept_keys": [
+        "interview.m07.chinese-ambiguity"
+      ],
+      "revision": 1,
+      "position": 1701,
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.7-Tokenization.md",
+          "content_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+          "line_start": 334,
+          "line_end": 388
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m07.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "title": "Unigram为什么不等于反向BPE",
+      "kind": "机制",
+      "prompt": "BPE逐步合并片段，Unigram逐步裁减候选词表。为什么不能把Unigram简单说成“倒着做BPE”，多种切分路径又有什么意义？",
+      "answer_short": "Unigram为子词建立概率模型，在候选词表中评估保留或删去片段对语料表示的影响，逐步缩减；并非把某条BPE合并记录逆序撤销。同一文本可能有多条切分路径，可按概率选择或在训练中采样，具体行为取决于实现配置。",
+      "required_points": [
+        "区分频率合并与概率词表裁减，说明不是逆序撤销BPE",
+        "说明同一文本可有多条路径及选择/采样的条件",
+        "不把概率更优等同业务语义或所有模型效果更优"
+      ],
+      "explanation": "原文描述从大词表到小词表的直觉，补充核对Kudo的Subword Regularization论文：概率子词模型使训练能使用多种分段，而不是把单一边界当唯一输入表达。编辑情境：供应商英文名称可由较长片段或多个短片段组成；两条路径都可重建同一规范化文本，但模型训练看到的序列不同。训练中的采样可用于检验对分段变化的稳健性，不意味着每个线上请求都必须随机切分，也不意味着少数民族语言必然更好。面试追问：词表裁减后怎么验收？参考思路：检查覆盖与长度、固定编码配置，并在供应商实体匹配任务上测误识别；只看词表更小不足以放行。核心自评：三项必答点完整、无关键误解为掌握；追问属加分。",
+      "pitfalls": "SentencePiece可承载Unigram，但工具名不是算法或采样设置；不沿用Unigram天然比BPE更准确的结论。",
+      "canonical_key": "ch03.interview.m07.unigram-mechanism.001",
+      "lesson_source_key": "第3章-技术攻克/3.7-Tokenization.md",
+      "concept_keys": [
+        "interview.m07.unigram-mechanism"
+      ],
+      "revision": 1,
+      "position": 1702,
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.7-Tokenization.md",
+          "content_hash": "c9389794d386155662b1993705bc41fd48051c72d15ddfa0d26cc08e72869b1a",
+          "line_start": 294,
+          "line_end": 316
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-01）",
+        "notes": [
+          "逐卡题答、机制、案例、边界及跨模块去重复核通过，见docs/card-production/ch03-interview/m07.md。",
+          "最终审校和发布证据见docs/verification/ch03-six-ten-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

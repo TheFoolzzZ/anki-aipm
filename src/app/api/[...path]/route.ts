@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { db } from '@/lib/db';
 import { sign, verify, sha256 } from '@/lib/crypto';
+import { isSameOrigin } from '@/lib/request-origin';
 import { bootstrap, cardDetail, reviewContext } from '@/lib/repository';
 import { selectNext } from '@/lib/learning';
 import { previewSchedule } from '@/lib/scheduler';
@@ -26,8 +27,7 @@ function errorResponse(error:unknown){
  return json({error:'暂时无法连接学习数据，请稍后重试。',code:'SERVICE_UNAVAILABLE'},503);
 }
 function sameOrigin(req:NextRequest){
- const origin=req.headers.get('origin');
- if(!origin||origin!==new URL(req.url).origin)throw new Error('FORBIDDEN');
+ if(!isSameOrigin(req.headers.get('origin'),req.url,req.headers.get('host'),process.env.NODE_ENV==='development'))throw new Error('FORBIDDEN');
 }
 async function body(req:NextRequest){
  const text=await req.text();if(text.length>32000)throw new Error('FORBIDDEN');
@@ -55,7 +55,7 @@ async function handle(req:NextRequest,{params}:{params:Promise<{path:string[]}>}
    const local=input.local&&process.env.NODE_ENV==='development'&&process.env.APM_DEV_AUTO_LOGIN==='true'&&['127.0.0.1','localhost'].includes(req.nextUrl.hostname);
    let query=db().from('apm_users').select('id,display_name').eq('active',true);
    if(local)query=query.eq('id',process.env.APM_OWNER_ID||'');
-   else {if(!input.code||input.code.length<20)return json({error:'请输入完整的学习访问码。'},401);query=query.eq('access_code_hash',sha256(input.code.trim()));}
+   else {const code=input.code?.trim();if(!code)return json({error:'请输入学习访问码。'},401);query=query.eq('access_code_hash',sha256(code));}
    const r=await query.single();
    if(r.error||!r.data)return json({error:'访问码无效，或学习空间尚未初始化。'},401);
    const res=json({user:r.data});res.cookies.set(cookieName,sign({userId:r.data.id,expires:Date.now()+7*86400000},'session'),{httpOnly:true,sameSite:'lax',secure:process.env.NODE_ENV==='production',path:'/',maxAge:7*86400});return res;

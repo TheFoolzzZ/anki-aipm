@@ -1,0 +1,41 @@
+{
+  "module_id": "3.17",
+  "relations": [
+    {
+      "from": "ch03.interview.m17.call-result-correlation.001",
+      "to": "C06",
+      "type": "prerequisite",
+      "reason": "结果消息续接以模型请求与独立执行的分工为前提"
+    },
+    {
+      "from": "ch03.interview.m17.schema-contract.001",
+      "to": "ch03.interview.m17.missing-arguments.001",
+      "type": "extension",
+      "reason": "清晰字段契约还需要辨别参数来源和缺参澄清"
+    },
+    {
+      "from": "ch03.interview.m17.rag-tool-composition.001",
+      "to": "C01",
+      "type": "extension",
+      "reason": "知识证据之外还需实时业务接口及动作结果"
+    },
+    {
+      "from": "ch03.interview.m17.poc-failure-layers.001",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "compare",
+      "reason": "模型工具选择/参数层与整任务成功及执行轨迹分层观察"
+    },
+    {
+      "from": "ch03.interview.m17.call-budget.001",
+      "to": "ch03.interview.m15.fork-join-contract.001",
+      "type": "prerequisite",
+      "reason": "工具并行的关键路径与分支汇总契约一致"
+    },
+    {
+      "from": "C07",
+      "to": "ch03.agent.tool-result-trust.001",
+      "type": "extension",
+      "reason": "执行端授权还需防工具返回引发跨工具泄露链"
+    }
+  ]
+}

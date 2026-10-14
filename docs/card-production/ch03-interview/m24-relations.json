@@ -1,0 +1,71 @@
+{
+  "module_id": "3.24",
+  "relations": [
+    {
+      "from": "ch03.interview.m24.concept-layers.001",
+      "to": "ch03.interview.m21.graph-execution.001",
+      "type": "prerequisite",
+      "reason": "先理解节点与控制边，再解释工作流/状态图和节点内部循环分层"
+    },
+    {
+      "from": "ch03.interview.m24.hybrid-placement.001",
+      "to": "ch03.agent.task-fit.001",
+      "type": "extension",
+      "reason": "已有是否需要动态行动判断，本课加外层SOP与受限子流程控制位置"
+    },
+    {
+      "from": "ch03.interview.m24.llm-shapes.001",
+      "to": "ch03.prompt.reasoning-tool-choice.001",
+      "type": "extension",
+      "reason": "提示策略可以组合，不能把Few-shot与行动观察循环当互斥等级"
+    },
+    {
+      "from": "ch03.interview.m13.intent-routing.001",
+      "to": "ch03.interview.m11.rag-lifecycle.001",
+      "type": "extension",
+      "reason": "先路由到获准知识域，再执行已有检索生成链路，错库不能靠库内召回修复"
+    },
+    {
+      "from": "ch03.interview.m13.result-contract.001",
+      "to": "ch03.prompt.json-validation.001",
+      "type": "extension",
+      "reason": "业务前置和空/错/部分状态比格式解析更进一步，决定下游允许执行"
+    },
+    {
+      "from": "ch03.interview.m21.conditional-routing.001",
+      "to": "ch03.interview.m21.graph-execution.001",
+      "type": "extension",
+      "reason": "允许边需要业务状态/终态/等待前提，聊天文本不足"
+    },
+    {
+      "from": "ch03.interview.m24.human-resume.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "extension",
+      "reason": "审批恢复可能重放副作用，必须保留已执行/未知状态并查业务事实"
+    },
+    {
+      "from": "ch03.interview.m24.failure-policy.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "prerequisite",
+      "reason": "写结果未知不是普通暂态读取失败，恢复分流先理解已发布机制"
+    },
+    {
+      "from": "ch03.interview.m21.state-reducer.001",
+      "to": "ch03.interview.m21.conditional-routing.001",
+      "type": "extension",
+      "reason": "图状态转换契约在LangGraph中还要定义字段覆盖/合并更新"
+    },
+    {
+      "from": "ch03.interview.m24.platform-proof.001",
+      "to": "ch03.interview.m24.human-resume.001",
+      "type": "extension",
+      "reason": "目标平台必须通过具体暂停/审批改动/恢复试验，不以有人工节点宣称完成"
+    },
+    {
+      "from": "ch03.interview.m24.failure-policy.001",
+      "to": "ch03.interview.m15.fork-join-contract.001",
+      "type": "extension",
+      "reason": "错误语义决定部分支路失败是否阻断汇总，复用既有fork-join机制"
+    }
+  ]
+}

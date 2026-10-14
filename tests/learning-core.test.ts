@@ -94,6 +94,8 @@ test('signed preview data is purpose-bound, expires, and rejects any tampering',
   assert.deepEqual(verify<typeof payload>(token, 'review', key), payload);
   assert.equal(verify(token, 'session', key), null);
   const [body, signature] = token.split('.');
-  assert.equal(verify(`${body}.${signature.slice(0, -1)}A`, 'review', key), null);
+  const changedSignature = `${signature[0] === 'A' ? 'B' : 'A'}${signature.slice(1)}`;
+  assert.notEqual(changedSignature, signature);
+  assert.equal(verify(`${body}.${changedSignature}`, 'review', key), null);
   assert.equal(verify(sign({ ...payload, expires: Date.now() - 1 }, 'review', key), 'review', key), null);
 });

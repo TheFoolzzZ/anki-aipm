@@ -1,0 +1,47 @@
+{
+  "module_id": "3.19",
+  "relations": [
+    {
+      "to": "C08",
+      "type": "extension",
+      "reason": "将调用意图/协议分层落实为应用及通信组件职责",
+      "from": "ch03.interview.m19.host-client-server.001"
+    },
+    {
+      "to": "ch03.interview.m19.host-client-server.001",
+      "type": "prerequisite",
+      "reason": "先确定Server和Host职责，再划分上下文/动作/模板",
+      "from": "ch03.interview.m19.server-primitives.001"
+    },
+    {
+      "to": "ch03.interview.m19.server-primitives.001",
+      "type": "prerequisite",
+      "reason": "工具发现与执行前须区分工具与上下文模板",
+      "from": "ch03.interview.m19.discovery-call-loop.001"
+    },
+    {
+      "to": "C08",
+      "type": "prerequisite",
+      "reason": "调用链依赖模型意图与实际执行不同",
+      "from": "ch03.interview.m19.discovery-call-loop.001"
+    },
+    {
+      "to": "ch03.interview.m19.host-client-server.001",
+      "type": "extension",
+      "reason": "角色不变而本地进程与远程服务接入条件不同",
+      "from": "ch03.interview.m19.transport-compatibility.001"
+    },
+    {
+      "to": "C08",
+      "type": "extension",
+      "reason": "统一接入仍需应用承担业务编排和执行事实",
+      "from": "ch03.interview.m19.integration-boundary.001"
+    },
+    {
+      "to": "ch03.interview.m19.discovery-call-loop.001",
+      "type": "extension",
+      "reason": "准入用完整调用及失败轨迹验证实际适配",
+      "from": "ch03.interview.m19.server-admission.001"
+    }
+  ]
+}

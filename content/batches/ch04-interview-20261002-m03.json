@@ -1,0 +1,145 @@
+{
+  "batch_id": "ch04-interview-20261002-m03",
+  "status": "accepted",
+  "chapter_position": 4,
+  "cards": [
+    {
+      "canonical_key": "ch04.interview.m03.task-fit.001",
+      "lesson_source_key": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+      "concept_keys": [
+        "interview.ch04.m03.task-fit"
+      ],
+      "revision": 1,
+      "position": 1301,
+      "title": "工具分类重叠时怎样选型",
+      "kind": "场景判断",
+      "prompt": "一个工具既是IDE又有Agent模式，另一个在浏览器里生成项目。你要修已有仓库的跨文件Bug，该怎样比较两者，而不是按“Agent比编辑器高级”排序？",
+      "answer_short": "类别是交互与场景标签，会重叠。用同一个现有仓库任务比较能否读取真实结构、修改多个文件、运行项目检查并呈现可审查差异；还要核对运行环境和导出/协作方式。选能完成受控任务的路径，不按类别或热度替代验证。",
+      "required_points": [
+        "类别重叠，不构成单一能力等级",
+        "以相同真实任务检验上下文、修改、运行与差异审查",
+        "核对环境和代码导出/协作成本再判断适配"
+      ],
+      "explanation": "原文全景表混合能力、交互、场景与地域，不能视作互斥分类。编辑补充：工具在现有仓库的任务成功证据，比新项目演示更能回答本题。厂商版本和套餐会变，先小范围实测再定，不复述原文“首选”“90%覆盖”的无证据结论。\n【具体情境】假设A能导入仓库但不能跑数据库相关检查；B能在团队环境执行测试且展示diff。不能仅凭A的漂亮Demo判它更适合本次Bug，需让两者完成同一复现/修复与回归。\n【面试追问】浏览器构建平台永远不能改旧仓库吗？ 参考思路：不能这样概括；具体产品能力会变化，按当前支持的导入、运行和导出条件验证，不用形态推断限制。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "团队人数不自动推出某厂商；不背固定排名或价格。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+          "content_hash": "efa733b263f86825b210191452610e3a4eccf658e3fe9672fb08e8757cc8d759",
+          "line_start": 13,
+          "line_end": 24
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+          "content_hash": "efa733b263f86825b210191452610e3a4eccf658e3fe9672fb08e8757cc8d759",
+          "line_start": 424,
+          "line_end": 460
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "专考类别与任务适配；工具名称存台账，不把厂商比较写死。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m03.provider-cost.001",
+      "lesson_source_key": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+      "concept_keys": [
+        "interview.ch04.m03.provider-cost"
+      ],
+      "revision": 1,
+      "position": 1302,
+      "title": "开源工具为什么不等于零使用成本",
+      "kind": "场景判断",
+      "prompt": "某编码工具开源且允许自选模型，团队因此写预算“工具免费，总成本为0，迁移无成本”。两处推断分别错在哪里？",
+      "answer_short": "开源许可不免除模型API、算力、托管和维护费用；按实际提供商与用量估算完整成本。可切模型也不免除工具配置、上下文/工作流、部署和数据迁移工作，需验证导出和替换路径。",
+      "required_points": [
+        "区分工具许可费用与模型/基础设施/维护开销",
+        "按真实用量和供应商计费核对预算",
+        "可切模型不消除平台/流程/数据迁移成本"
+      ],
+      "explanation": "编辑补充：[OpenCode providers](https://opencode.ai/docs/providers/)（核对2026-10-02）区分自选提供商、API凭据及本地模型；本地运行仍需硬件和运维，付费API仍由供应商计费。原文“零vendor lock-in”“每月2–5美元接近另一工具”不能作为固定结论。\n【具体情境】假设工具许可0元、模型调用800元、运行服务器200元，每月直接费用至少1000元，尚未计维护工时；这是假设预算，不是当前报价。切模型后工具调用/提示习惯可能变，需回归同一任务。\n【面试追问】选本地模型是否必然更便宜？ 参考思路：不一定；结合利用率、硬件/维护、质量和延迟总成本比较，不能只看API费消失。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "没有用量与服务范围的月费比较无法说明单位任务成本；开源不自动满足团队数据政策。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+          "content_hash": "efa733b263f86825b210191452610e3a4eccf658e3fe9672fb08e8757cc8d759",
+          "line_start": 223,
+          "line_end": 243
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+          "content_hash": "efa733b263f86825b210191452610e3a4eccf658e3fe9672fb08e8757cc8d759",
+          "line_start": 424,
+          "line_end": 479
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "专考工具许可与模型/迁移边界；Token单价计算复用C12。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m03.data-flow.001",
+      "lesson_source_key": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+      "concept_keys": [
+        "interview.ch04.m03.data-flow"
+      ],
+      "revision": 1,
+      "position": 1303,
+      "title": "本地执行为何不等于数据不出域",
+      "kind": "场景判断",
+      "prompt": "编码Agent命令在公司电脑执行，供应商承诺不训练代码。是否足以认定代码完全不出公司网络？应把哪些处理环节分开核对？",
+      "answer_short": "不足。核对代码读取/索引、模型推理与规划、工具执行及日志/结果回传各自在哪里发生、传哪些数据。不同训练/保存政策不等于不传输；只有整个所需链路满足公司的出域和保留要求，才可作相应判断。",
+      "required_points": [
+        "分别核对索引、推理、执行、回传的处理位置和数据",
+        "不训练/不保存与不传输是不同承诺",
+        "以当前方案的数据流和合同/配置证据判断边界"
+      ],
+      "explanation": "编辑补充：[Cursor self-hosted machines](https://cursor.com/help/ai-features/self-hosted-machines)（核对2026-10-02）说明工具可本地运行，Agent规划/推理仍在云端，工具结果回传；具体保留/上传内容以所用方案为准。这个例子反驳“本地命令=完全不外传”，不能推断所有工具都相同。\n【具体情境】假设Agent本地测试后把失败堆栈及文件片段交远端模型；原文件仍在本地，却已发生片段传输。不训练承诺可以减少一种使用风险，但未回答地域、保留、子处理商和访问范围。\n【面试追问】有隐私模式是不是一定支持离线？ 参考思路：不是；隐私承诺和运行拓扑分别核对，离线能力要真实断网任务及官方方案证据。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "不从国内品牌、开源、私有worker或企业套餐名称推断完全本地化。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+          "content_hash": "efa733b263f86825b210191452610e3a4eccf658e3fe9672fb08e8757cc8d759",
+          "line_start": 65,
+          "line_end": 85
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+          "content_hash": "efa733b263f86825b210191452610e3a4eccf658e3fe9672fb08e8757cc8d759",
+          "line_start": 223,
+          "line_end": 243
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.3-市面上VibeCoding工具.md",
+          "content_hash": "efa733b263f86825b210191452610e3a4eccf658e3fe9672fb08e8757cc8d759",
+          "line_start": 412,
+          "line_end": 423
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "独立目标为编码工具数据流拓扑，不复写通用权限/模型注入卡。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    }
+  ]
+}

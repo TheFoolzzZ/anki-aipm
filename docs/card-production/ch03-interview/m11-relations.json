@@ -1,0 +1,35 @@
+{
+  "module_id": "3.11",
+  "relations": [
+    {
+      "from": "ch03.interview.m11.rag-lifecycle.001",
+      "to": "ch03.rag.source-ingestion-loss.001",
+      "type": "extension",
+      "reason": "完整链路确定数据丢失的排查位置"
+    },
+    {
+      "from": "ch03.rag.chunk-experiment.001",
+      "to": "C03",
+      "type": "prerequisite",
+      "reason": "先理解块大小的完整性与噪声取舍再设计实验"
+    },
+    {
+      "from": "ch03.rag.cost-quality-budget.001",
+      "to": "ch03.token.request-monthly-cost.001",
+      "type": "extension",
+      "reason": "模型调用预算扩展到入库、检索及单位成功任务成本"
+    },
+    {
+      "from": "ch03.rag.rewrite-constraint.001",
+      "to": "ch03.vector.hybrid-evaluation.001",
+      "type": "extension",
+      "reason": "融合只能在查询硬条件被保留后评估"
+    },
+    {
+      "from": "ch03.rag.conflicting-sources.001",
+      "to": "C05",
+      "type": "extension",
+      "reason": "忠实于文本还须判断资料效力与适用范围"
+    }
+  ]
+}

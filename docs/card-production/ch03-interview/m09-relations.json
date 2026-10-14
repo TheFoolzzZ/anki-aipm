@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-22",
+  "module_id": "3.9",
+  "relations": [
+    {
+      "from": "ch03.interview.m09.message-responsibility.001",
+      "to": "ch03.prompt.injection-boundary.001",
+      "type": "extension",
+      "reason": "消息组织清楚仍要在执行端阻止不可信资料自授权限"
+    },
+    {
+      "from": "ch03.prompt.json-validation.001",
+      "to": "ch03.prompt.task-contract.001",
+      "type": "prerequisite",
+      "reason": "先有字段与未知值约定才能做结构和语义校验"
+    },
+    {
+      "from": "ch03.prompt.regression-versioning.001",
+      "to": "ch03.prompt.few-shot-selection.001",
+      "type": "extension",
+      "reason": "示例更新也需独立样本回归及版本追踪"
+    },
+    {
+      "from": "ch03.prompt.optimization-stop.001",
+      "to": "ch03.token.optimization-quality.001",
+      "type": "extension",
+      "reason": "停止堆提示需要比较完整成功任务的收益成本"
+    },
+    {
+      "from": "ch03.prompt.consistency-limit.001",
+      "to": "ch03.prompt.reasoning-tool-choice.001",
+      "type": "compare",
+      "reason": "重复生成的一致性不能替代外部工具观察与核验"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "from": "ch05.interview.m03.blackbox-evidence.001",
+    "to": "ch05.interview.m03.matched-task.001",
+    "type": "compare",
+    "reason": "同任务实测描述产品表现，黑盒证据卡限制对内部路线的归因"
+  },
+  {
+    "from": "ch05.interview.m03.workflow-gap.001",
+    "to": "ch05.interview.m03.matched-task.001",
+    "type": "extension",
+    "reason": "把回答比较扩为输入到交付的场景闭环"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-18",
+  "relations": [
+    {
+      "from": "ch03.tech.api-contract.001",
+      "to": "ch03.interview.m01.auth-boundary.001",
+      "type": "extension",
+      "reason": "接口业务合同必须补上服务端资源授权边界。"
+    },
+    {
+      "from": "ch03.tech.capacity-latency.001",
+      "to": "ch03.interview.m01.infra-boundaries.001",
+      "type": "extension",
+      "reason": "容量证据帮助判断应优化内容分发、实例或服务拆分。"
+    },
+    {
+      "from": "ch03.tech.feasibility-evidence.001",
+      "to": "ch03.token.request-monthly-cost.001",
+      "type": "extension",
+      "reason": "可行性还需用实际调用单位核算成本，复用3.8不重复制卡。"
+    },
+    {
+      "from": "ch03.tech.api-contract.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "extension",
+      "reason": "接口超时需区分未响应与未执行，复用工具恢复卡。"
+    },
+    {
+      "from": "ch03.interview.m01.retrieval-ranking.001",
+      "to": "ch03.interview.m02.cold-start.001",
+      "type": "extension",
+      "reason": "推荐链路发现新实体缺失后，再制定冷启动信号与探索方案。"
+    }
+  ]
+}

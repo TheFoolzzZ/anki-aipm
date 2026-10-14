@@ -1,0 +1,139 @@
+{
+  "batch_id": "ch04-interview-20261002-m02",
+  "status": "accepted",
+  "chapter_position": 4,
+  "cards": [
+    {
+      "canonical_key": "ch04.interview.m02.three-surface-contract.001",
+      "lesson_source_key": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+      "concept_keys": [
+        "interview.ch04.m02.three-surface-contract"
+      ],
+      "revision": 1,
+      "position": 1201,
+      "title": "后端、管理端、插件如何接起来",
+      "kind": "场景判断",
+      "prompt": "原文将求职助手拆成后端、管理端和浏览器插件三工程。以“选简历档案→填网页”为例，三者各负责什么，接通时最少要约定什么？",
+      "answer_short": "插件负责当前网页识别、档案选择及填写交互；后端提供经授权的档案/诊断服务和存储；管理端维护配置与业务管理。三者通过明确的身份、档案/字段数据格式、API成功/失败状态连接；不能把三个页面分别跑通当作集成完成。",
+      "required_points": [
+        "区分网页插件、服务/存储与管理界面职责",
+        "定义身份、档案/字段格式和接口结果契约",
+        "沿完整任务验证跨工程数据与错误流转"
+      ],
+      "explanation": "原文只列三工程与技术栈，未提供接口实现。编辑补充：以上是一种可行职责设计，不是原案例源码事实。管理端不能把文件存储/业务服务全替代，插件也不应直接拥有后台数据库管理凭据。\n【具体情境】假设插件选择档案A调用服务，服务返回带版本的字段映射；插件预览并填入当前页面，失败应显示具体失败而不是成功提示；管理端修改映射后须验证实际插件读到了新配置。\n【面试追问】是否必须选原文SpringBoot和Vue3？ 参考思路：不必；核心是分工、契约与团队能力，技术名录不是完成集成的证据，也不是唯一合法组合。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "原文截图及功能列表只能作为目标资料，未读取源码/运行系统，不声明其真实架构已验证。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 11,
+          "line_end": 16
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 24,
+          "line_end": 47
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "独立目标为浏览器产品三端协作；不是复写通用Agent工具契约。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m02.page-context.001",
+      "lesson_source_key": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+      "concept_keys": [
+        "interview.ch04.m02.page-context"
+      ],
+      "revision": 1,
+      "position": 1202,
+      "title": "浏览器插件为什么需要页面上下文",
+      "kind": "场景判断",
+      "prompt": "求职插件后台已解析简历JSON，为什么还不能直接填写任意招聘页？content script在这一流程中提供什么能力，又不能假设拥有什么权限？",
+      "answer_short": "后台JSON没有当前页面的字段语义与DOM访问上下文。content script可在获准注入的页面读写DOM，通常在隔离执行环境中运行，再通过消息与插件其他部分协作；需要注入/站点权限，也不能把隔离环境等同于页面脚本共享变量或任意站点访问。",
+      "required_points": [
+        "简历数据不等于当前网页字段映射与DOM上下文",
+        "content script在页面读写DOM并与插件其他部分消息协作",
+        "注入/站点权限及隔离环境有边界，不默认任意访问"
+      ],
+      "explanation": "编辑补充，原文仅要求学习插件编程。第一方 [Chrome content scripts](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts)（核对2026-10-02） 支持DOM访问、默认isolated world与消息协作；本题是补齐实现原理，不声称原案例采用某个manifest/API版本。\n【具体情境】同一简历字段“学校”在A站是输入框，在B站是下拉框；插件需识别字段并选择合适操作，不能把所有value统一赋字符串。页面自己的JavaScript变量也不自动在隔离content script中可见。\n【面试追问】isolated world意味着DOM完全隔离吗？ 参考思路：不是；与页面共享DOM，但JavaScript执行环境/变量隔离，页面行为仍可能影响填写结果。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "权限名称与具体注入方式依实现版本核对；不要求背API签名，不编造已完成的插件代码。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 11,
+          "line_end": 16
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 41,
+          "line_end": 45
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "原文实现提纲遗漏页面执行上下文，第一方补机制；不是给通用注入风险再造同义卡。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m02.fill-versus-submit.001",
+      "lesson_source_key": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+      "concept_keys": [
+        "interview.ch04.m02.fill-versus-submit"
+      ],
+      "revision": 1,
+      "position": 1203,
+      "title": "自动填写和投递成功的证据边界",
+      "kind": "场景判断",
+      "prompt": "求职插件把学校和手机号写进输入框，界面显示“已投递”。为什么这个成功提示可能是错的？应沿哪些状态验收，并怎样让用户决定提交？",
+      "answer_short": "写入DOM只证明填写动作发生，页面可能未接受数据、校验不通过或保存失败，投递更需要提交及服务器确认。区分候选映射、已填、校验/保存和投递结果，用页面实际接受与服务回执核验；用户应可预览修改并决定提交。",
+      "required_points": [
+        "DOM赋值不证明页面接受/保存，更不证明已投递",
+        "分别验证字段映射、页面校验和提交后的确认",
+        "提供预览修改及明确提交控制，显示真实失败/未知"
+      ],
+      "explanation": "编辑补充：网页表单有控件状态、校验与提交过程，受控控件或动态页面未必接受简单赋值；源文“一键填写”不等于授权一键投递。content script共享DOM的边界见 [Chrome content scripts](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts)（核对2026-10-02）。\n【具体情境】假设手机号填入但框架状态没同步，提交后仍提示必填；或者页面响应超时，不应自动标成功，也不能直接重复投递，先确认业务结果。提交结果未知的通用副作用处理复用已有3.12卡。\n【面试追问】如何测试网站改版？ 参考思路：用代表字段和页面变体检查映射、受控输入、必填及回执，记录不支持的页面并提示用户手工操作，不能保证任意网页通用。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "不把仅填写后的界面提示或截图当保存/投递证明；可信业务回执可作为证据，仍核对对象、状态与时点。不自动越过用户提交决定。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 11,
+          "line_end": 16
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 39,
+          "line_end": 47
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "独立考页面状态到业务状态的证据链；通用幂等目标复用M12。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "batch_id": "ch02-quality-m22",
+  "status": "accepted",
+  "chapter_position": 2,
+  "cards": [
+    {
+      "canonical_key": "ch02.boundary.three-zones.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+      "concept_keys": [
+        "boundary.three-zones"
+      ],
+      "revision": 2,
+      "position": 7,
+      "title": "能力边界的三区",
+      "kind": "概念",
+      "prompt": "如何用舒适区、协作区和盲区描述 AI PM 的能力边界？为什么说清晰识别边界比“什么都懂”更重要？",
+      "answer_short": "舒适区=能独立负责的范围，协作区=理解原理并与专家共同决策的范围，盲区=无需亲自掌握但要知道责任人的范围。边界清晰才能正确分工：舒适区做决策，协作区提好问题，盲区找到人。",
+      "required_points": [
+        "说出三区定义并各给一例",
+        "说出划界依据：决策责任与协作方式，而不是知识多少",
+        "说出边界的价值：知道“怎么补”比假装会更能成事"
+      ],
+      "pitfalls": "把盲区当耻辱而硬装懂，会在关键决策上给出错误判断；把协作区当盲区完全甩手，则会失去验收能力。边界是动态的，要定期重画。",
+      "explanation": "原文（13–39行）定义能力边界=能独立负责的范围+需依赖他人的范围+完全不懂的范围，并强调它比“能力清单”更重要。编辑补充：三区的行动含义不同——舒适区要产出决策质量，协作区要能提出好问题并验收答案，盲区只需知道“该找谁、最坏情况是什么”。检验自己是否清晰的方法：被问到一个具体技术决策时，能否立刻说出这属于哪一区、下一步动作是什么。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+          "content_hash": "40b4d8cfe570909421eca3143e8d699476c10a9246a66f7b6c15bfb72bfd420f",
+          "line_start": 13,
+          "line_end": 39
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：三区行动含义与自检方法为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.boundary.industry-layers.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+      "concept_keys": [
+        "boundary.industry-layers"
+      ],
+      "revision": 2,
+      "position": 8,
+      "title": "AI 产业分层决定知识深度",
+      "kind": "机制",
+      "prompt": "为什么 AI PM 需要先判断产品处于基础、技术还是应用层，再决定技术学习深度？",
+      "answer_short": "因为不同层的核心用户、关键决策和协作对象不同：越靠基础层越要理解算力与技术供给，越靠应用层越要聚焦场景、体验和价值闭环。学习深度应服务所在层的决策需要，而不是平均用力。",
+      "required_points": [
+        "说出三层及各自核心问题：基础层=供给，技术层=封装，应用层=场景价值",
+        "说出层级→知识深度的推导：学习服务决策，不是越深越好",
+        "说出层级也决定协作对象：芯片/云厂商、算法团队、业务与用户"
+      ],
+      "pitfalls": "两个错误：应用层 PM 花大量时间啃底层数学（投入产出比低）；或基础层 PM 不懂技术供给（无法做决策）。原文「应用层岗位最多」是写作时的市场观察，会随时间变化。",
+      "explanation": "原文（41–70行）把产业分为基础层（算力/芯片/云）、技术层（模型/平台）、应用层（场景产品），并指出层级决定能力边界：基础层边界最深但岗位最少，应用层边界最宽、岗位最多。编辑补充：这给学习排了一个优先级算法——先问“我所在的层，什么决策最贵”，再倒推要学什么。层的判断看产品的价值来源：卖算力/工具的是基础与技术层，卖场景结果的是应用层。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+          "content_hash": "40b4d8cfe570909421eca3143e8d699476c10a9246a66f7b6c15bfb72bfd420f",
+          "line_start": 41,
+          "line_end": 70
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：层级→决策→学习的推导链；市场观察标注时效"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.tob.product-priority.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+      "concept_keys": [
+        "tob.product-priority"
+      ],
+      "revision": 2,
+      "position": 9,
+      "title": "企业 AI 产品的优先级",
+      "kind": "场景判断",
+      "prompt": "面向企业的 AI 产品做取舍时，通常应优先证明哪些价值与约束？背后的生意逻辑是什么？",
+      "answer_short": "优先证明可量化的业务价值（降本增效）、准确性与稳定性、数据安全合规、系统集成与长期服务能力。底层逻辑：企业为结果付费，最怕 AI 出错带来的法律与数据风险。",
+      "required_points": [
+        "价值要可量化：帮企业省多少钱或赚多少钱",
+        "硬约束：准确稳定、数据安全、集成能力、持续服务",
+        "说出核心痛点：怕出错（法律风险、数据泄露），所以准确性把控优先于体验花哨"
+      ],
+      "pitfalls": "用 ToC 的增长打法做 ToB：企业客户不为“好玩”付费，一次数据事故或效果不稳就可能终止续约；低价抢单但无持续服务能力同样致命。",
+      "explanation": "原文（73–153行）对比两种生意：ToB 核心关键词是私有化、准确性、可控性，核心价值是降本增效，核心痛点是怕出错。编辑补充：这推出 ToB AI PM 的决策顺序——先证明不出错（准确率+安全），再证明有价值（量化收益），最后才谈体验亮点。验收证据也随之不同：POC 的试点数据、安全合规清单、与现有系统的集成成本，都是签单的前置条件。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+          "content_hash": "40b4d8cfe570909421eca3143e8d699476c10a9246a66f7b6c15bfb72bfd420f",
+          "line_start": 73,
+          "line_end": 153
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：生意逻辑→决策顺序推导为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.toc.product-priority.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+      "concept_keys": [
+        "toc.product-priority"
+      ],
+      "revision": 2,
+      "position": 10,
+      "title": "消费 AI 产品的优先级",
+      "kind": "场景判断",
+      "prompt": "面向消费者的 AI 产品与企业产品相比，产品决策通常更关注什么？什么底线不因 ToC 而放松？",
+      "answer_short": "更关注低门槛体验、即时价值、情绪或创意满足、留存传播和快速迭代——因为 ToC 的核心痛点是“怕无聊”，没有情绪共鸣用户就流失。但隐私与内容安全底线不因面向消费者而消失。",
+      "required_points": [
+        "说出 ToC 核心痛点：怕无聊，价值以情绪/创意满足为主",
+        "说出决策侧重：低摩擦、即时反馈、增长与迭代速度",
+        "说出不变的底线：隐私与内容安全"
+      ],
+      "pitfalls": "把 ToB 的严谨流程搬进 ToC 会拖死迭代速度；把 ToC 的宽松带进安全领域则会造成事故。两种产品的错误代价结构不同，不能用同一套验收节奏。",
+      "explanation": "原文（154–221行）对比：ToC 核心关键词是好玩的、陪伴、低门槛，核心价值是情绪价值。编辑补充：两种产品的差异本质是「错误代价」与「价值来源」不同——ToB 错一次可能丢合同，价值来自效率；ToC 错一次用户笑笑划走，但无聊一次就流失，价值来自持续吸引。所以 ToC 的容错设计更偏「优雅的失败体验」，ToB 更偏「不让错误发生」。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+          "content_hash": "40b4d8cfe570909421eca3143e8d699476c10a9246a66f7b6c15bfb72bfd420f",
+          "line_start": 154,
+          "line_end": 221
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：错误代价结构对比为编辑补充；底线保留"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.role.application-pm.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+      "concept_keys": [
+        "role.application-pm"
+      ],
+      "revision": 2,
+      "position": 11,
+      "title": "应用层 AI PM 的边界",
+      "kind": "概念",
+      "prompt": "应用层 AI PM 应独立负责什么，又应与算法团队协作什么？",
+      "answer_short": "独立负责：用户问题定义、场景判断、交互与体验、价值验证与效果验收。协作完成：模型能力评估、数据方案、评测方法与优化路径。边界按「谁对结果负责」划分。",
+      "required_points": [
+        "独立侧：问题、场景、交互、价值、验收",
+        "协作侧：模型、数据、评测、优化路径",
+        "说出划界依据：决策责任而非技能有无"
+      ],
+      "pitfalls": "应用层 PM 把“验收”也委托给算法团队是最常见的越界让渡——指标是对方算的，但标准和通过与否必须是产品判断。原文称应用层是“传统PM转型最佳入口”，这是其市场观察，非定论。",
+      "explanation": "原文（240–256行）将应用层 PM 定位为传统 PM 转型的主要入口，职责围绕产品化展开。编辑补充：独立与协作的分界线可以用一个问题划出——“这件事做错了，谁向用户和业务解释？”解释责任在 PM 的（场景错了、验收放水）必须独立负责；解释责任在技术的（模型为什么这样表现）进入协作区，PM 的职责是提出问题并验收答案。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+          "content_hash": "40b4d8cfe570909421eca3143e8d699476c10a9246a66f7b6c15bfb72bfd420f",
+          "line_start": 240,
+          "line_end": 256
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：划界问题法为编辑补充；原文定位标注为观点"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.role.technical-vs-foundation.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+      "concept_keys": [
+        "role.technical-vs-foundation"
+      ],
+      "revision": 2,
+      "position": 12,
+      "title": "技术型与基础层 AI PM",
+      "kind": "对比",
+      "prompt": "技术型 AI PM 与基础层 AI PM 的产品责任有何区别？共同点是什么？",
+      "answer_short": "技术型 PM 把模型、数据或平台能力封装成可用产品（用户是业务方或开发者）；基础层 PM 贴近算力、训练平台和工具链（用户是算法与工程团队）。共同点是仍以用户和产品决策为核心，只是“用户”不同。",
+      "required_points": [
+        "技术型：能力产品化，用户是业务/开发者",
+        "基础层：基础设施产品化，用户是算法/工程团队",
+        "共同点：产品判断仍为核心，技术深度是手段不是目标"
+      ],
+      "pitfalls": "这两类 PM 最大的风险是把技术深度当成产品成果：平台性能指标再好，也要回答“用户的工作因此变快了吗”。反过来，完全没有技术理解则无法与工程师用户对话。",
+      "explanation": "原文（265–307行）区分平台PM、模型/算法策略PM、数据PM、基础设施PM等角色。编辑补充：这两类 PM 的产品方法不变（用户-问题-价值-验收），变的是用户画像与证据形式——基础层 PM 的“用户体验”是开发者体验（DX），验收证据是集成时间、训练稳定性和成本曲线，而不是留存率。选择这两层的前提通常是有技术或工程背景，否则协作成本很高。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+          "content_hash": "40b4d8cfe570909421eca3143e8d699476c10a9246a66f7b6c15bfb72bfd420f",
+          "line_start": 265,
+          "line_end": 307
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：用户不同而方法不变；DX证据形式为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.boundary.growth-method.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+      "concept_keys": [
+        "boundary.growth-method"
+      ],
+      "revision": 2,
+      "position": 13,
+      "title": "扩展能力边界的方法",
+      "kind": "场景判断",
+      "prompt": "AI PM 应怎样扩展技术边界，同时避免陷入无目标的技术学习？",
+      "answer_short": "从当前决策和协作卡点出发学习：补足能解释原理、提出问题、比较方案和定义验收的知识，再用项目复盘检验是否有效。路径是巩固舒适区→进入协作区→拓展协作区→管理盲区。",
+      "required_points": [
+        "学习由真实决策/协作卡点驱动，不是按教程目录驱动",
+        "检验标准：能否解释、提问、比较、验收，而非“学过”",
+        "说出拓展顺序：先巩固舒适区，再拓展协作区，盲区只需管理"
+      ],
+      "pitfalls": "无目标技术学习的典型症状：收藏课很多、能聊名词很多，但遇到真实决策仍然无法比较方案。另一个极端是“用到再学”变成永远临时抱佛脚——要有6-12个月的拓展方向。",
+      "explanation": "原文（341–460行）给出拓展路径四步，并强调按层级选择深度。编辑补充：卡点驱动学习的工作机制是——每次协作中记下「听不懂、问不出、验不了」的具体时刻，这些时刻就是学习清单；学完后回到同类决策验证是否补上。这比按课程体系学习慢在开头、快在应用，因为每个知识点都挂在真实问题上。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+          "content_hash": "40b4d8cfe570909421eca3143e8d699476c10a9246a66f7b6c15bfb72bfd420f",
+          "line_start": 341,
+          "line_end": 460
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：卡点清单机制为编辑补充；拓展顺序还原原文"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.boundary.interview-display.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+      "concept_keys": [
+        "boundary.interview-display"
+      ],
+      "revision": 1,
+      "position": 34,
+      "title": "面试中展示能力边界",
+      "kind": "场景判断",
+      "prompt": "面试中展示能力边界的正确方式是什么？原文给的错误示范和正确示范差在哪？",
+      "answer_short": "错误示范是“我什么都会”（Prompt、RAG、微调、训练都懂）；正确示范是说清舒适区（核心能力与来源）、协作区（已掌握什么、怎么协作）、盲区（坦诚承认+正在拓展）。三原则：诚实说舒适区建立信任，清晰描述协作区展示能力，坦诚承认盲区展示学习意愿。",
+      "required_points": [
+        "复现错误与正确示范的结构差异",
+        "说出三原则：诚实、清晰、坦诚",
+        "指出“什么都会”为什么反而减分：不可信且无分工意识"
+      ],
+      "pitfalls": "别把坦诚盲区理解成自暴其短：盲区表述要配套「怎么补」的计划。面试官考察边界不是要你示弱，而是判断你在团队里能否被正确放置。",
+      "explanation": "原文（421–447行）先给面试官的五个隐藏考察点（自我认知、赛道理解、技术理解、产品判断、学习能力），再给正误示范。编辑补充：正确示范的话术结构是「核心能力+证据来源」「已掌握+能独立做什么」「边界+协作方式+拓展计划」三段；它之所以加分，是因为展示了三区认知——这本身就是2.2的核心能力。准备好的三区地图（见本模块实践任务）在这里直接复用。",
+      "estimated_seconds": 50,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+          "content_hash": "40b4d8cfe570909421eca3143e8d699476c10a9246a66f7b6c15bfb72bfd420f",
+          "line_start": 421,
+          "line_end": 447
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "正误示范还原；话术结构提炼为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch02.boundary.direction-choice.001",
+      "lesson_source_key": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+      "concept_keys": [
+        "boundary.direction-choice"
+      ],
+      "revision": 1,
+      "position": 35,
+      "title": "双维度选择方向",
+      "kind": "场景判断",
+      "prompt": "原文给出的 AI PM 方向选择框架包含哪两个维度、两个步骤？",
+      "answer_short": "两个维度：产业层级（纵向：应用/技术/基础层）和客户类型（横向：ToB/ToC）。两个步骤：先按背景选层级（无技术背景从应用层入手，有算法/云背景可直上技术层或基础层），再按性格、背景、能力、目标评估 ToB 还是 ToC。",
+      "required_points": [
+        "说出两维度与两步骤",
+        "说出层级选择依据：已有背景的可迁移性",
+        "说出 ToB/ToC 评估的四要素：性格、背景、能力、目标"
+      ],
+      "pitfalls": "框架是参考不是算命：性格维度尤其容易自我误判，建议用过往项目证据而非自我感觉填写。层级和赛道也不是终身绑定，原文建议不确定时先从应用层验证兴趣。",
+      "explanation": "原文（384–419行）给出 Step1 按背景选层级、Step2 按四要素选 ToB/ToC 的框架，并附综合决策建议表（行业积累→应用层ToB、C端经验→应用层ToC 等）。编辑补充：这个框架的价值在于把「选方向」从情绪决策变成匹配决策——每个建议背后是可迁移资产（行业经验、用户洞察、技术背景）。使用时先盘点自己的资产，再查表；表里没有的组合（如「有技术背景想做ToC」）就回到四要素逐条评估。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第2章-深度了解AI PM/2.2-深入-AI-PM-能力边界.md",
+          "content_hash": "40b4d8cfe570909421eca3143e8d699476c10a9246a66f7b6c15bfb72bfd420f",
+          "line_start": 384,
+          "line_end": 419
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "框架两步还原；资产评估用法与性格误判边界为编辑补充"
+        ]
+      }
+    }
+  ]
+}

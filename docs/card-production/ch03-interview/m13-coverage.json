@@ -1,0 +1,260 @@
+{
+  "module_id": "3.13",
+  "source_path": "第3章-技术攻克/3.13-SKILL.md",
+  "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+  "native_objectives": 10,
+  "registered": 10,
+  "non_checklist_registered": 2,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O486",
+      "original_text": "*   [ ] 我能解释 Skill 和 Function Calling 的关系",
+      "source_line": 486,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "采用",
+      "reason": "明确本课泛化封装与开放格式语境，不把Skill等同单函数",
+      "card_keys": [
+        "ch03.interview.m13.skill-layers.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O487",
+      "original_text": "*   [ ] 我能画出 Skill 调用的完整流程（意图识别→参数提取→执行→结果处理）",
+      "source_line": 487,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "完整调用流程留M1/T1，子卡独立评分路由、参数和结果",
+      "card_keys": [
+        "ch03.interview.m13.intent-routing.001",
+        "ch03.interview.m17.missing-arguments.001",
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O488",
+      "original_text": "*   [ ] 我知道意图识别的三种方法（规则匹配、模型理解、混合策略）",
+      "source_line": 488,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "采用",
+      "reason": "规则/模型/混合各有边界，不保留关键词命中直接写入",
+      "card_keys": [
+        "ch03.interview.m13.intent-routing.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O489",
+      "original_text": "*   [ ] 我能根据功能领域对 Skill 进行分类",
+      "source_line": 489,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "功能与渠道/风险为多轴分类，分类结果服务能力规划",
+      "card_keys": [
+        "ch03.interview.m13.skill-portfolio.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O490",
+      "original_text": "*   [ ] 我知道 Skill 权限分级的设计原则（只读/写操作/敏感/高危）",
+      "source_line": 490,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "风险/实际授权原则复用3.12，反例纠正只读极低风险",
+      "card_keys": [
+        "ch03.agent.autonomy-release.001",
+        "ch03.agent.tool-result-trust.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O491",
+      "original_text": "*   [ ] 我能说出至少 3 个主流平台的 Skill 设计（OpenAI/Coze/Dify/LangChain）",
+      "source_line": 491,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "采用",
+      "reason": "三个平台形态经第一方核对；不把旧API或品牌排行当稳定事实",
+      "card_keys": [
+        "ch03.interview.m13.platform-vocabulary.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O492",
+      "original_text": "*   [ ] 我知道如何设计好的 Skill 描述和参数",
+      "source_line": 492,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "跨节复用3.17接口描述及缺参数语义，不再新造同评分目标",
+      "card_keys": [
+        "ch03.interview.m17.schema-contract.001",
+        "ch03.interview.m17.missing-arguments.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O493",
+      "original_text": "*   [ ] 我了解 Skill 的组合编排方式（串行/并行/条件/循环）",
+      "source_line": 493,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "采用",
+      "reason": "四控制类型按依赖、真实结果和停止条件解释",
+      "card_keys": [
+        "ch03.interview.m13.orchestration-dependencies.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O494",
+      "original_text": "*   [ ] 我能规划一个 Agent 的 Skill 体系（场景分析→Skill 拆分→优先级→安全评审）",
+      "source_line": 494,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "体系规划先场景产出和契约，复杂矩阵保留M2/T2",
+      "card_keys": [
+        "ch03.interview.m13.skill-portfolio.001"
+      ],
+      "mother_question_id": "M2",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-O495",
+      "original_text": "*   [ ] 我知道 Skill 冷启动的解决方案",
+      "source_line": 495,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "native_checklist",
+      "decision": "合并",
+      "reason": "冷启动先查注册/可见/路由，再复用3.17描述与3.9示例；UI入口和真实对照留T3",
+      "card_keys": [
+        "ch03.interview.m13.intent-routing.001",
+        "ch03.interview.m17.schema-contract.001",
+        "ch03.prompt.few-shot-selection.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-B01",
+      "original_text": "### （四）Skill 的错误处理设计",
+      "source_line": 342,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "结构化成功/失败让后续控制有据，不套统一重试",
+      "card_keys": [
+        "ch03.interview.m13.result-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.13",
+      "objective_id": "m13-B02",
+      "original_text": "### （二）Skill 数量的权衡",
+      "source_line": 455,
+      "source_path": "第3章-技术攻克/3.13-SKILL.md",
+      "source_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+      "source_type": "body_knowledge_target",
+      "decision": "合并",
+      "reason": "数量经验不得当通用最优，改按职责/覆盖/成本决定",
+      "card_keys": [
+        "ch03.interview.m13.skill-portfolio.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "publication_status": "published_and_verified_2026-10-02",
+  "review_status": "editor_review_complete",
+  "published_cards": 6
+}

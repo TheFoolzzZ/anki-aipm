@@ -1,0 +1,295 @@
+{
+  "batch_id": "ch01-quality-m15",
+  "status": "accepted",
+  "chapter_position": 1,
+  "cards": [
+    {
+      "canonical_key": "ch01.requirement.five-questions.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+      "concept_keys": [
+        "requirement.five-questions"
+      ],
+      "revision": 2,
+      "position": 12,
+      "title": "AI 需求的五个核心问题",
+      "kind": "场景判断",
+      "prompt": "评估一个 AI 需求时，原文要求先问哪五个问题？跳过它们直接讨论选型会漏掉什么？",
+      "answer_short": "五问：必须用AI解决吗、技术成熟度如何、数据从哪里来、用户对错误的容忍度是多少、效果不达标的Plan B是什么。跳过它们会把「该不该做、能不能做、失败了怎么办」混进「用什么模型做」，风险全部后置。",
+      "required_points": [
+        "说全五问：必要性、技术成熟度、数据、错误容忍度、Plan B",
+        "说出必要性排第一的原因：很多需求用规则或人工更低成本，别为了AI而AI",
+        "指出每问对应的决策：做不做、风险多大、能不能做、标准怎么定、失败怎么办"
+      ],
+      "pitfalls": "直接讨论模型选型，会跳过需求是否成立和失败是否可承受。第五问最容易被省：没有兜底方案的 AI 需求，本质是把所有鸡蛋放进一个概率性篮子。",
+      "explanation": "原文（80–90行）把五问定义为「接到需求时先问」的前置评估。每问都有明确的失败后果：不问必要性，做出没人需要的AI功能；不问成熟度，把前沿探索当成熟方案排期；不问数据，做到一半发现没米下锅；不问错误容忍度，上线后才发现代价承受不起；不问Plan B，效果不达标时产品直接瘫。编辑补充：这五问与5.4需求评估框架（用户价值/技术/商业/风险）是同构的，是本课程反复出现的「先判断再动手」主线的第一次出现。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+          "content_hash": "f045636222e70dce9872de4026565414e9aaaae94f2503c4cb1dbd9216ffab6b",
+          "line_start": 78,
+          "line_end": 90
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：五问逐项配失败后果；与5.4框架的衔接为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.prd.ai-specific.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+      "concept_keys": [
+        "prd.ai-specific"
+      ],
+      "revision": 2,
+      "position": 13,
+      "title": "AI PRD 的特殊内容",
+      "kind": "概念",
+      "prompt": "AI 产品 PRD 相比传统 PRD 必须额外明确哪些内容？其中原文称最关键的部分之一是什么？",
+      "answer_short": "八项：AI能力定义与不适用边界、可测试的模型目标与验收标准、数据需求、技术选型与理由、兜底策略、边界场景、用户预期管理、效果评估方案。其中兜底策略是原文点名的最关键部分之一。",
+      "required_points": [
+        "至少说出八项中的五项，且必须含兜底策略",
+        "模型目标要量化且可测试，不是写模型名加一个准确率数字",
+        "兜底策略要分级：如按置信度分「直接回答/人工审核/转人工」"
+      ],
+      "pitfalls": "只写模型名称和一个准确率数字，仍无法指导实现或验收。注意原文的置信度阈值（90%/60%）是示例口径，真实分级线要按业务错误代价定。",
+      "explanation": "原文（108–131行）列出八项，并用智能客服给出兜底三级示例：高置信度AI直接答、中置信度人工审核后展示、低置信度直接转人工。编辑补充：八项的共同逻辑是把「不确定性」写进需求——传统PRD描述必然发生的行为，AI PRD必须描述「可能做错时怎么办」。兜底分级的本质是按置信度分配人机分工，这与6.4人机协同三模式（生成+编辑、推荐+决策、预审+终审）是同一种设计思想。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+          "content_hash": "f045636222e70dce9872de4026565414e9aaaae94f2503c4cb1dbd9216ffab6b",
+          "line_start": 108,
+          "line_end": 131
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：八项展开+兜底三级示例并入；阈值口径已标注"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.collaboration.problem-first.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+      "concept_keys": [
+        "collaboration.problem-first"
+      ],
+      "revision": 2,
+      "position": 14,
+      "title": "向算法团队定义问题",
+      "kind": "对比",
+      "prompt": "与算法团队协作时，为什么应描述问题、数据和目标，而不是直接指定模型？原文的正反话术对比是什么？",
+      "answer_short": "因为问题、数据和验收目标是产品责任，模型只是候选实现。原文对比：错误说法是“你们用BERT做个情感分析吧”；正确说法是“要识别评论情感倾向，有10万条已标注数据，目标准确率85%以上，你们评估什么方案最合适”。",
+      "required_points": [
+        "先给问题、数据和目标，把技术方案保留为可比较的选项",
+        "复现正反话术差异：指定模型 vs 定义任务+数据+指标后请对方评估",
+        "说出协作定位：算法同学是问题专家不是需求专家，PM负责双向翻译"
+      ],
+      "pitfalls": "问题优先不等于 PM 不参与技术判断——PM 仍要理解方案代价并负责验收；预设方案还有两个代价：暴露外行、堵死更优实现路径。",
+      "explanation": "原文（135–166行）给出协作定位与四条方法：用数据说话（“推荐点击率下降15%，流失用户62%反馈内容不相关”而非“用户不喜欢”）、明确问题定义不预设方案、设定合理预期（不说“能不能100%准确”）、参与模型验收（看Bad Case、看分布、看趋势）。编辑补充：四条方法共同服务于一个目标——把模糊的抱怨变成可定位的问题。数据话术的结构是「指标变化+分群证据+假设提问」，这与1.1说服力卡的三层证据一致。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+          "content_hash": "f045636222e70dce9872de4026565414e9aaaae94f2503c4cb1dbd9216ffab6b",
+          "line_start": 133,
+          "line_end": 166
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：正反话术与四方法全保留；数据话术结构为编辑提炼"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.evaluation.continuous-loop.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+      "concept_keys": [
+        "evaluation.continuous-loop"
+      ],
+      "revision": 2,
+      "position": 15,
+      "title": "AI 效果持续优化闭环",
+      "kind": "机制",
+      "prompt": "AI 功能上线后，效果评估如何形成持续优化闭环？为什么上线不是终点？",
+      "answer_short": "因为模型效果会随数据分布和用户行为变化而衰减。闭环是：定义标准并监测模型与业务指标→收集并归因 Bad Case 与用户反馈→转化为优化需求→新版本重新验收。",
+      "required_points": [
+        "说出衰减原因：用户行为、数据分布、业务场景随时间变化",
+        "说出闭环四环：标准与监测→归因→优化需求→再验收",
+        "说出 PM 定位：不训练模型，但是效果把关者和优化方向决策者"
+      ],
+      "pitfalls": "只看单一离线指标，或只收集反馈而不归因，都不能形成闭环。传统产品「上线后功能正常跑就行」的经验在AI产品上失效。",
+      "explanation": "原文（186–262行）先讲为什么（效果随时间衰减），再给三类评估方法：A/B测试（样本量与周期要足够、同时看正负面影响）、Bad Case分析（找规律：哪类输入易错、边界是否覆盖、数据是否有偏，是驱动优化最直接的方式）、用户反馈分析（点踩场景、纠正内容、期望能力）。编辑补充：闭环的关键转译动作是「把用户视角的错」转成「算法可执行的优化方向」——例如把“回答太官方”转为“补充口语化语料”或“调整风格Prompt”，这正是PM在闭环里的独特价值。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+          "content_hash": "f045636222e70dce9872de4026565414e9aaaae94f2503c4cb1dbd9216ffab6b",
+          "line_start": 184,
+          "line_end": 262
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "rev2：补衰减机制与三方法要点；PM转译价值为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.ai-pm.understanding-depth.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+      "concept_keys": [
+        "ai-pm.understanding-depth"
+      ],
+      "revision": 1,
+      "position": 53,
+      "title": "技术理解的四个深度",
+      "kind": "概念",
+      "prompt": "原文把 AI PM 的技术理解分为哪四个深度层级？目标深度是哪层？",
+      "answer_short": "四层：知道（概念与场景）、理解（原理与优缺点）、判断（方案可行性）、沟通（与算法团队平等对话）。目标是达到「理解」和「判断」层。",
+      "required_points": [
+        "说全四层并各给可观察行为，如「判断」=能选规则/传统ML/大模型",
+        "说出目标层：理解和判断，能平等对话即可",
+        "说明不要求「实现」层：不写代码不等于不理解"
+      ],
+      "pitfalls": "两个极端：停在「知道」层（会背名词但无法判断可行性）；或把目标定成「能亲手实现」，既无必要也挤占产品基本功的时间。",
+      "explanation": "原文（25–34行）用表格定义四层，并举例：知道=知道什么是LLM；理解=理解幻觉源于概率生成机制；判断=能判断需求用规则/传统ML/大模型哪个更合适；沟通=能讨论“用RAG还是Fine-tuning解决知识时效问题”。编辑补充：这四层是递进的验收标准——检验自己是否到「判断」层的方法，就是拿一个真实需求试着做方案选型并说明理由，答不上来就还在前两层。",
+      "estimated_seconds": 45,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+          "content_hash": "f045636222e70dce9872de4026565414e9aaaae94f2503c4cb1dbd9216ffab6b",
+          "line_start": 25,
+          "line_end": 34
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "四层+目标层还原原文；自测方法为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.solution.selection-ladder.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+      "concept_keys": [
+        "solution.selection-ladder"
+      ],
+      "revision": 1,
+      "position": 54,
+      "title": "技术方案选型阶梯",
+      "kind": "场景判断",
+      "prompt": "一个需求可选规则、传统机器学习、大模型API、微调、自研五种实现。原文给出的选型思路和各自适用场景是什么？",
+      "answer_short": "按「逻辑明确度、数据条件、壁垒需求」递进选择：逻辑明确用规则；数据中等特征明确用传统ML；通用语言任务求快用大模型API；有独家数据要领域专业化用微调；核心壁垒且有算力数据优势才自研。",
+      "required_points": [
+        "说出五方案及各自最关键的适用条件",
+        "说出选型看三个变量：逻辑明确度、数据、壁垒/成本",
+        "默认从简单方案起步，复杂度需要被需求证明"
+      ],
+      "pitfalls": "默认上大模型是最常见错误：规则能解决的场景用大模型，会白白引入成本、隐私依赖和不可控性；反过来该用大模型的开放语言任务硬写规则，会陷入规则爆炸。",
+      "explanation": "原文（92–106行）给出五方案对比表：规则（可控可解释低成本，但处理不了模糊情况）、传统ML（训练快，但需特征工程、天花板明显）、大模型API（上线快，但成本高、有数据隐私风险、依赖第三方）、微调（效果好、数据本地，但需标注数据与训练成本）、自研（完全自主，但投入巨大风险高）。编辑补充：这张表可以读成一条「复杂度阶梯」——每一级都引入新的能力和新的代价，选型的问法是「当前这一步，哪一级的能力恰好够用」。这也预告了3.6「提示/RAG/微调」的更细选型。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+          "content_hash": "f045636222e70dce9872de4026565414e9aaaae94f2503c4cb1dbd9216ffab6b",
+          "line_start": 92,
+          "line_end": 106
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "五方案保留；阶梯读法与默认克制原则为编辑提炼"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.evaluation.metric-layers.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+      "concept_keys": [
+        "evaluation.metric-layers"
+      ],
+      "revision": 1,
+      "position": 55,
+      "title": "模型指标与业务指标分层",
+      "kind": "对比",
+      "prompt": "AI 产品的效果评估为什么要分模型指标和业务指标两层？各举两个例子并说明产品含义。",
+      "answer_short": "模型指标衡量「答得对不对」（准确率、精确率/召回率、AUC），业务指标衡量「有没有用」（功能使用率、完成率、人工介入率、幻觉率、反馈参与率）。模型好不等于产品好，两层要同时看。",
+      "required_points": [
+        "说出两层的测量对象不同：输出质量 vs 用户价值",
+        "业务指标至少举两个并解释产品含义，如人工介入率高=AI没解放人力",
+        "说出只看模型指标的风险：离线分数好但没人用或没解决问题"
+      ],
+      "pitfalls": "把模型指标当最终目标——模型准确率高但功能使用率低，等于白做；反过来只看业务指标不看模型指标，定位不了问题是出在模型还是产品设计。",
+      "explanation": "原文（199–219行）分列两类指标：模型效果指标（准确率/精确率召回率/AUC/BLEU等，关注适用场景与侧重点），产品业务指标（功能使用率——没人用=白做；功能完成率——用了没解决=体验差；人工介入率——太高说明没解放人力；幻觉率——直接影响信任；反馈参与率——反馈是优化的燃料）。编辑补充：两层之间是假设关系——「模型好」只是「产品好」的必要条件；诊断问题时先分层定位，再决定是优化模型还是改产品设计，这正是3.23指标体系的入门版。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+          "content_hash": "f045636222e70dce9872de4026565414e9aaaae94f2503c4cb1dbd9216ffab6b",
+          "line_start": 199,
+          "line_end": 219
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "两层区分+业务指标产品含义还原原文；分层诊断为编辑补充"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch01.data.quality-risks.001",
+      "lesson_source_key": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+      "concept_keys": [
+        "data.quality-risks"
+      ],
+      "revision": 1,
+      "position": 56,
+      "title": "数据质量的四类风险",
+      "kind": "故障诊断",
+      "prompt": "原文指出“数据质量差=模型效果差=产品体验差”。哪四类常见数据问题会导致这条传导链？PM 的职责是什么？",
+      "answer_short": "四类：数据有偏（只对某类用户有效）、标注错误（学到错误规律）、场景覆盖不足（边界场景就懵）、数据过时（行为变了模型没变）。PM 的职责是在需求阶段识别数据风险，并在规划中预留数据优化的迭代空间。",
+      "required_points": [
+        "说全四类问题及各自症状",
+        "说出传导链：数据→模型→体验，问题会放大而非消失",
+        "说出PM职责时点：需求期识别风险+规划预留迭代空间，不是上线后才发现"
+      ],
+      "pitfalls": "把数据问题当成纯技术问题甩给算法团队：数据来源、标注方案、场景覆盖都来自产品定义，PM不定清楚，团队只能拿到什么用什么。",
+      "explanation": "原文（344–357行）给出传导链和四类问题：有偏（训练数据主要是某类用户→其他用户效果差）、标注错误（模型学到错误规律）、覆盖不足（没覆盖的边界场景遇到就错）、过时（用户行为变了模型还用老数据）。编辑补充：四类问题对应四种检查动作——看数据分布与真实用户分布是否一致、抽检验证标注质量、对照边界场景清单查覆盖、建立数据时效监控。这也解释了为什么「效果评估闭环」里要看分人群分场景的效果分布。",
+      "estimated_seconds": 55,
+      "source_refs": [
+        {
+          "relative_path": "第1章-入门Ai产品经理/1.5-AI产品经理基本功修炼.md",
+          "content_hash": "f045636222e70dce9872de4026565414e9aaaae94f2503c4cb1dbd9216ffab6b",
+          "line_start": 344,
+          "line_end": 357
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex editorial review",
+        "notes": [
+          "四类问题+传导链还原原文；检查动作为编辑补充"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "module_id": "3.22",
+  "relations": [
+    {
+      "from": "ch03.interview.m22.event-semantic-layer.001",
+      "to": "ch03.interview.m18.protocol-composition.001",
+      "type": "extension",
+      "reason": "加入Agent到用户界面的事件接口，与Agent委派/工具接入分边"
+    },
+    {
+      "from": "ch03.interview.m22.text-event-assembly.001",
+      "to": "ch03.interview.m22.thread-run-lifecycle.001",
+      "type": "prerequisite",
+      "reason": "消息组装先区分会话和一次运行归属"
+    },
+    {
+      "from": "ch03.interview.m22.tool-event-completion.001",
+      "to": "C06",
+      "type": "prerequisite",
+      "reason": "理解参数事件结束不是执行事实，依赖工具请求与真实结果分离"
+    },
+    {
+      "from": "ch03.interview.m22.state-snapshot-delta.001",
+      "to": "ch03.interview.m22.thread-run-lifecycle.001",
+      "type": "prerequisite",
+      "reason": "状态增量须归到正确运行/会话并在有效基线上应用"
+    },
+    {
+      "from": "ch03.interview.m22.shared-state-authority.001",
+      "to": "ch03.interview.m22.state-snapshot-delta.001",
+      "type": "prerequisite",
+      "reason": "双写冲突处理先理解快照/增量同步"
+    },
+    {
+      "from": "ch03.interview.m22.confirmation-contract.001",
+      "to": "ch03.interview.m21.interrupt-resume.001",
+      "type": "compare",
+      "reason": "前端确认契约与后台中断节点重执行分属不同责任"
+    },
+    {
+      "from": "ch03.interview.m22.generative-ui-contract.001",
+      "to": "ch03.interview.m22.confirmation-contract.001",
+      "type": "extension",
+      "reason": "渲染一个操作按钮还须单独建立确认/授权执行链"
+    },
+    {
+      "from": "ch03.interview.m22.event-render-diagnosis.001",
+      "to": "ch03.interview.m22.state-snapshot-delta.001",
+      "type": "prerequisite",
+      "reason": "不同步诊断依赖知道补丁应用与快照重建的边界"
+    }
+  ]
+}

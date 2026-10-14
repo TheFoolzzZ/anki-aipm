@@ -1,0 +1,20 @@
+[
+  {
+    "from": "ch05.interview.m05.release-contract.001",
+    "to": "C13",
+    "type": "extension",
+    "reason": "将可测质量标准延伸为目标/最低值/关键切片的发布判断"
+  },
+  {
+    "from": "ch05.interview.m05.data-delivery.001",
+    "to": "C13",
+    "type": "prerequisite",
+    "reason": "质量验收需要可交付且用途明确的数据范围"
+  },
+  {
+    "from": "ch05.interview.m05.failure-state.001",
+    "to": "ch05.interview.m05.release-contract.001",
+    "type": "extension",
+    "reason": "发布契约同时需要可测试的失效状态与用户感知"
+  }
+]

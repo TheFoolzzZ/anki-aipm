@@ -1,0 +1,762 @@
+{
+  "module_id": "3.14",
+  "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+  "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+  "native_objectives": 0,
+  "registered": 0,
+  "non_checklist_registered": 37,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B01",
+      "original_text": "| **给什么？（What）** | 从海量信息源中，筛选出与当前任务最相关的信息 |",
+      "source_line": 42,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_explicit_question",
+      "decision": "采用",
+      "reason": "筛选当前任务所需信息，定义信息责任",
+      "card_keys": [
+        "ch03.interview.m14.context-scope.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B02",
+      "original_text": "| **怎么给？（How）** | 以什么格式、什么顺序、什么粒度组织这些信息 |",
+      "source_line": 43,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_explicit_question",
+      "decision": "采用",
+      "reason": "格式/关系/来源明示，如何组织由契约承接",
+      "card_keys": [
+        "ch03.interview.m14.context-record-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B03",
+      "original_text": "| **给多少？（How much）** | 在上下文窗口的限制内，平衡信息量和信息密度 |",
+      "source_line": 44,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "预算复用3.8，压缩保真复用3.11，不造同义卡",
+      "card_keys": [
+        "ch03.token.context-reservation.001",
+        "ch03.rag.context-compression.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B04",
+      "original_text": "| 维度 | Prompt Engineering | Context Engineering |",
+      "source_line": 50,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "Prompt与Context关注点不同但存在重叠",
+      "card_keys": [
+        "ch03.interview.m14.context-scope.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B05",
+      "original_text": "*   **长上下文 ≠ 高利用率**：研究表明，模型对长上下文中间部分的信息提取能力会下降（\"Lost in the Middle\"问题）",
+      "source_line": 88,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "合并",
+      "reason": "长上下文真实利用率复用3.8，位置损失随任务验证",
+      "card_keys": [
+        "ch03.token.long-context-verification.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B06",
+      "original_text": "我们在《讲透 RAG》一节学过，RAG 通过检索外部知识来增强模型能力。但 RAG 只管\"把相关文档找出来\"，不管\"怎么把这些文档组织成最优上下文\"。",
+      "source_line": 96,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "RAG整体包含组装和生成，拒绝只找不组织绝对定义",
+      "card_keys": [
+        "ch03.interview.m14.context-scope.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B07",
+      "original_text": "Agent 在执行多步骤任务时，每一步都需要依赖之前步骤的结果。这些历史信息构成了 Agent 的\"工作记忆\"。",
+      "source_line": 111,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "工作记忆保留任务状态，区别跨会话偏好",
+      "card_keys": [
+        "ch03.interview.m14.context-task-state.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B08",
+      "original_text": "1.   **保留语义完整性**：不要把一个完整的流程拆得七零八落",
+      "source_line": 143,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "语义完整性由条件关系与切分实验承接",
+      "card_keys": [
+        "ch03.interview.m14.context-record-contract.001",
+        "ch03.rag.chunk-experiment.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B09",
+      "original_text": "2.   **标注信息来源**：让模型知道这段信息来自哪里、是否可信",
+      "source_line": 144,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "来源和证据范围可回查",
+      "card_keys": [
+        "ch03.interview.m14.context-record-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B10",
+      "original_text": "3.   **处理时效性**：明确标注信息的生成时间，避免模型用过期信息做判断",
+      "source_line": 145,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "获取/事件/生效时间分清，最新不总是适用",
+      "card_keys": [
+        "ch03.interview.m14.context-record-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B11",
+      "original_text": "把长文档压缩成简短摘要，只保留关键信息。",
+      "source_line": 174,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "合并",
+      "reason": "摘要风险已有3.11充分卡，复用而不复制",
+      "card_keys": [
+        "ch03.rag.context-compression.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B12",
+      "original_text": "根据与当前问题的相关度，只保留最相关的段落。",
+      "source_line": 185,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "合并",
+      "reason": "选择性保留仍需必要约束，不能按输出未引用删除",
+      "card_keys": [
+        "ch03.rag.context-compression.001",
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B13",
+      "original_text": "用更紧凑的格式表达同样的信息。",
+      "source_line": 196,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "合并",
+      "reason": "结构化简写保留条件、例外、关系和来源",
+      "card_keys": [
+        "ch03.rag.context-compression.001",
+        "ch03.interview.m14.context-record-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B14",
+      "original_text": "用向量表示替代原始文本，在需要时再解码。这是更前沿的研究方向。",
+      "source_line": 214,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "普通Embedding不提供原文无损恢复保证，专门方法单独验证",
+      "card_keys": [
+        "ch03.interview.m14.embedding-codec-boundary.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B15",
+      "original_text": "先粗粒度定位，再细粒度深挖：",
+      "source_line": 250,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "粗到细定位必要证据，粗层漏失和补查边界",
+      "card_keys": [
+        "ch03.interview.m14.context-on-demand.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B16",
+      "original_text": "对有时间线的信息（如对话历史、版本变更），优先检索最近的内容：",
+      "source_line": 260,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "时间衰减仅启发，适用/授权不是最近优先",
+      "card_keys": [
+        "ch03.interview.m14.context-record-contract.001",
+        "ch03.agent.memory-freshness.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B17",
+      "original_text": "先给概览，再给细节。模型和人类的阅读理解习惯一致——先看到\"地图\"，再看\"街道\"。",
+      "source_line": 272,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "先总后分是组织候选，不采纳模型阅读习惯与人完全一致",
+      "card_keys": [
+        "ch03.interview.m14.context-on-demand.001",
+        "ch03.interview.m14.context-record-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B18",
+      "original_text": "把最相关的信息放在上下文的开头和结尾（模型对中间部分的注意力较弱）。",
+      "source_line": 290,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "合并",
+      "reason": "开头/结尾位置经验需任务实测，无全模型统一最优",
+      "card_keys": [
+        "ch03.token.long-context-verification.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B19",
+      "original_text": "不要让模型\"猜\"信息之间的关系，要显式标注：",
+      "source_line": 301,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "显式标注前置/时间/例外关系，不虚构原文关系",
+      "card_keys": [
+        "ch03.interview.m14.context-record-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B20",
+      "original_text": "如果上下文中有矛盾的信息（如新旧版本的政策），要显式标注：",
+      "source_line": 316,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "冲突记录与制度适用决策分工",
+      "card_keys": [
+        "ch03.rag.conflicting-sources.001",
+        "ch03.interview.m14.context-record-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B21",
+      "original_text": "| **短期记忆** | 当前任务的最近 3-5 步操作 | 完整保留，直接放入上下文 |",
+      "source_line": 375,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "最近3–5步不等于所有重要状态，目标/结果长期锚定",
+      "card_keys": [
+        "ch03.interview.m14.context-task-state.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B22",
+      "original_text": "在上下文中始终保留用户的核心约束，防止 Agent\"遗忘\"：",
+      "source_line": 381,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "稳定硬约束与确认选择不能在压缩中被遗忘",
+      "card_keys": [
+        "ch03.interview.m14.context-task-state.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B23",
+      "original_text": "当某一步出现错误时，不要让错误信息污染后续决策：",
+      "source_line": 396,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "隔离错误内容不能抹去真实执行/未知状态",
+      "card_keys": [
+        "ch03.interview.m14.context-task-state.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B24",
+      "original_text": "| **代码图谱索引** | 构建函数/类/模块的调用关系图，只把\"相关的依赖\"塞进上下文 |",
+      "source_line": 412,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "代码依赖与接口按需获取，品牌实现断言不沿用",
+      "card_keys": [
+        "ch03.interview.m14.context-on-demand.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B25",
+      "original_text": "| **相关性** | 上下文里的信息和当前问题相关吗？ | 抽样检查：随机抽取 10 个问答，看检索到的内容是否真能回答问题 |",
+      "source_line": 435,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_explicit_question",
+      "decision": "采用",
+      "reason": "相关性看任务支持，不照固定10题抽样当门槛",
+      "card_keys": [
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B26",
+      "original_text": "| **完整性** | 回答这个问题，需要的信息都在上下文里吗？ | 故意问一些需要跨文档关联的问题，看模型能不能答对 |",
+      "source_line": 436,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_explicit_question",
+      "decision": "采用",
+      "reason": "完整性按必要信息基线而非只看答对单例",
+      "card_keys": [
+        "ch03.interview.m14.context-record-contract.001",
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B27",
+      "original_text": "| **简洁性** | 上下文里有无关的噪声信息吗？ | 检查上下文长度，分析其中有多大比例的内容与最终答案无关 |",
+      "source_line": 437,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_explicit_question",
+      "decision": "采用",
+      "reason": "简洁不能删未显式引用的关键约束",
+      "card_keys": [
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B28",
+      "original_text": "| **时效性** | 上下文里的信息是最新的吗？ | 检查时序敏感的问题（如\"最新价格\"\"本周排期\"） |",
+      "source_line": 438,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_explicit_question",
+      "decision": "采用",
+      "reason": "时效以任务所需时间和当前适用性核对",
+      "card_keys": [
+        "ch03.interview.m14.context-record-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B29",
+      "original_text": "| **一致性** | 上下文里的信息互相矛盾吗？ | 检查新旧版本文档混用、不同来源数据冲突的情况 |",
+      "source_line": 439,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_explicit_question",
+      "decision": "采用",
+      "reason": "一致性保留未解决分歧，不能随意合并",
+      "card_keys": [
+        "ch03.interview.m14.context-record-contract.001",
+        "ch03.rag.conflicting-sources.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B30",
+      "original_text": "为你的核心场景，人工整理一份\"理想上下文\"，作为评估基准：",
+      "source_line": 483,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "人工基线需要事实/限制和独立复核，真实实践另记",
+      "card_keys": [
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B31",
+      "original_text": "对同一批问题，用不同的上下文构建策略，对比回答质量：",
+      "source_line": 500,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "固定问题比较策略，再决定是否需在线AB",
+      "card_keys": [
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B32",
+      "original_text": "*   上下文里的信息有多少被\"浪费\"了（未引用）",
+      "source_line": 514,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "未引用不代表浪费，比例只作诊断线索",
+      "card_keys": [
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B33",
+      "original_text": "**给模型\"恰好足够\"的信息——不多不少、不早不晚、不乱不散。**",
+      "source_line": 528,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "chapter_end_knowledge_target",
+      "decision": "采用",
+      "reason": "章末恰好足够改为可验证充分性，不设每条引用目标",
+      "card_keys": [
+        "ch03.interview.m14.context-scope.001",
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B34",
+      "original_text": "1.   **70%**：在 RAG 和 Agent 系统中，回答质量的瓶颈 70% 出在上下文上，而不是模型能力上",
+      "source_line": 532,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "chapter_end_claim",
+      "decision": "不纳入",
+      "reason": "70%瓶颈缺证据不作为必修事实；用逐链路证据定位",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B35",
+      "original_text": "2.   **3 步**：优化上下文的三个步骤——找到对的信息、压缩到合适的长度、组织成清晰的结构",
+      "source_line": 533,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "chapter_end_knowledge_target",
+      "decision": "采用",
+      "reason": "三步是作者简化方法，与正文四环节不同不当统一规范",
+      "card_keys": [
+        "ch03.interview.m14.context-scope.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-B36",
+      "original_text": "3.   **1 个测试**：每次上线前，用\"理想上下文\"做基线测试，确保系统交付的信息质量达标",
+      "source_line": 534,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "chapter_end_knowledge_target",
+      "decision": "采用",
+      "reason": "理想上下文测试是诊断基线，不是一例测试足以放行",
+      "card_keys": [
+        "ch03.interview.m14.context-utilization-limit.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.14",
+      "objective_id": "m14-E01",
+      "original_text": "用向量表示替代原始文本，在需要时再解码。这是更前沿的研究方向。",
+      "source_line": 214,
+      "source_path": "第3章-技术攻克/3.14-ContextEngineering.md",
+      "source_hash": "9d0265df67758d06ff42134fcf787c9ef12ca512632537b1b1c2270f39217ae6",
+      "source_type": "editorial_target_from_body",
+      "decision": "合并",
+      "reason": "编辑可评分目标：能区分检索表示与可解码压缩；不是原文问题",
+      "card_keys": [
+        "ch03.interview.m14.embedding-codec-boundary.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "publication_status": "published_and_verified_2026-10-02",
+  "review_status": "editor_review_complete",
+  "published_cards": 6
+}

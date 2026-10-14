@@ -1,0 +1,901 @@
+{
+  "module_id": "3.22",
+  "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+  "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+  "native_objectives": 22,
+  "registered": 22,
+  "non_checklist_registered": 21,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O01",
+      "original_text": "*   [ ] 用本文的\"销售助手\"案例，向团队讲解 AG-UI 的核心价值",
+      "source_line": 528,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "案例讲解要明确协议语义及非保证",
+      "card_keys": [
+        "ch03.interview.m22.event-semantic-layer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O02",
+      "original_text": "*   [ ] 找出产品中\"用户等待 Agent 执行\"时间最长的 3 个场景",
+      "source_line": 529,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "等待最长三场景需实测盘点，非卡片记忆目标",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O03",
+      "original_text": "*   [ ] 让工程师演示一个 AG-UI 的 Hello World 示例",
+      "source_line": 530,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "官方示例演示是实践，不能伪称已运行",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O04",
+      "original_text": "*   [ ] 梳理产品中所有涉及\"多步骤 AI 处理 + 用户界面\"的功能模块",
+      "source_line": 534,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "模块全量盘点与收益表属于产物",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O05",
+      "original_text": "*   [ ] 对每个模块，评估：当前痛点、AG-UI 能否解决、预期收益、实施成本",
+      "source_line": 535,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "以事件互操作与交互痛点对照适配成本",
+      "card_keys": [
+        "ch03.interview.m22.event-semantic-layer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O06",
+      "original_text": "*   [ ] 选择一个\"流程清晰、用户痛点明确\"的场景作为试点",
+      "source_line": 536,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "有明确痛点的单场景试点，非协议必选",
+      "card_keys": [
+        "ch03.interview.m22.event-semantic-layer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O07",
+      "original_text": "*   [ ] 定义试点场景的 Thread 生命周期和 State 结构",
+      "source_line": 540,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "会话/运行标识与State同步/写入责任分开设计",
+      "card_keys": [
+        "ch03.interview.m22.thread-run-lifecycle.001",
+        "ch03.interview.m22.state-snapshot-delta.001",
+        "ch03.interview.m22.shared-state-authority.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O08",
+      "original_text": "*   [ ] 列出所有需要暴露给用户的事件类型",
+      "source_line": 541,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "事件必须映射前端响应，文本/工具流区别",
+      "card_keys": [
+        "ch03.interview.m22.text-event-assembly.001",
+        "ch03.interview.m22.tool-event-completion.001",
+        "ch03.interview.m22.event-visibility.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O09",
+      "original_text": "*   [ ] 设计中断触发条件和对应的用户界面",
+      "source_line": 542,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "稳定确认工具与草案中断分开，设计等待/回复",
+      "card_keys": [
+        "ch03.interview.m22.confirmation-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O10",
+      "original_text": "*   [ ] 确定生成式 UI 的组件白名单",
+      "source_line": 543,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "组件白名单、参数Schema及动作安全契约",
+      "card_keys": [
+        "ch03.interview.m22.generative-ui-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O11",
+      "original_text": "*   [ ] 搭建事件流日志和调试环境",
+      "source_line": 547,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "日志链路需真实发出/接收/处理/渲染证据",
+      "card_keys": [
+        "ch03.interview.m22.event-render-diagnosis.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O12",
+      "original_text": "*   [ ] 先实现主流程（Happy Path），再处理异常分支",
+      "source_line": 548,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "主线之后需错误、退出与旧事件异常路径",
+      "card_keys": [
+        "ch03.interview.m22.thread-run-lifecycle.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O13",
+      "original_text": "*   [ ] 每个事件都要有明确的前端响应策略",
+      "source_line": 549,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "每事件响应表和真实消费测试，不只列事件名称",
+      "card_keys": [
+        "ch03.interview.m22.text-event-assembly.001",
+        "ch03.interview.m22.tool-event-completion.001",
+        "ch03.interview.m22.state-snapshot-delta.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3",
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O14",
+      "original_text": "*   [ ] 产品经理参与验收，重点测试中断和恢复体验",
+      "source_line": 550,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "中断/恢复须具体版本与断线后的同步证据",
+      "card_keys": [
+        "ch03.interview.m22.state-snapshot-delta.001",
+        "ch03.interview.m22.confirmation-contract.001",
+        "ch03.interview.m22.event-render-diagnosis.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O15",
+      "original_text": "*   [ ] 灰度发布，监控核心指标（响应时间、中断率、任务完成率）",
+      "source_line": 554,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "响应时间、中断率及任务成功需分别定义分母，真实灰度未做",
+      "card_keys": [
+        "ch03.interview.m22.event-visibility.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O16",
+      "original_text": "*   [ ] 收集用户反馈，优化事件可见性设计",
+      "source_line": 555,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "可见性优化要用户反馈，不默认所有事件都展示",
+      "card_keys": [
+        "ch03.interview.m22.event-visibility.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O17",
+      "original_text": "*   [ ] 准备降级方案，必要时可切回传统 API 模式",
+      "source_line": 556,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "降级为API须保留未完成/待审批事实",
+      "card_keys": [
+        "ch03.interview.m22.event-semantic-layer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O18",
+      "original_text": "*   [ ] 输出复盘报告，决定是否推广到其他场景",
+      "source_line": 557,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "复盘推广决定需真实运行与业务证据",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O19",
+      "original_text": "*   [ ] 每月复盘事件流日志，找到用户卡住的节点",
+      "source_line": 561,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "卡住节点要对齐全链事件，不只后台trace",
+      "card_keys": [
+        "ch03.interview.m22.event-render-diagnosis.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O20",
+      "original_text": "*   [ ] 优化 State 同步策略，减少界面抖动",
+      "source_line": 562,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "状态正确应用与减少渲染抖动分开",
+      "card_keys": [
+        "ch03.interview.m22.state-snapshot-delta.001",
+        "ch03.interview.m22.shared-state-authority.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O21",
+      "original_text": "*   [ ] 积累异常 case，完善错误处理",
+      "source_line": 563,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "实践任务",
+      "reason": "积累异常case为执行任务",
+      "card_keys": [],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-O22",
+      "original_text": "*   [ ] 关注 AG-UI 协议更新和生态发展",
+      "source_line": 564,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "native_checklist",
+      "decision": "拆分",
+      "reason": "协议/SDK草案支持变动需版本测试，不承诺默认升级兼容",
+      "card_keys": [
+        "ch03.interview.m22.confirmation-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q01",
+      "original_text": "**产品经理关注点**：事件类型决定了前端能呈现什么样的交互。设计产品时，你要想清楚：哪些节点需要让用户看见？哪些需要让用户参与？",
+      "source_line": 160,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "可见性与用户参与由响应设计决定",
+      "card_keys": [
+        "ch03.interview.m22.event-visibility.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q02",
+      "original_text": "| **确认型** | \"我即将执行 XX 操作，你同意吗？\" | 发送邮件、扣款、删除数据 |",
+      "source_line": 180,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "场景对白保留确认意图，INTERRUPT固定事件断言需纠错，草案细节不作稳定必答",
+      "card_keys": [
+        "ch03.interview.m22.confirmation-contract.001",
+        "ch03.interview.m22.shared-state-authority.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q03",
+      "original_text": "| **选择型** | \"有多个方案，你选哪个？\" | 选择报价、选择供应商 |",
+      "source_line": 182,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "场景对白保留确认意图，INTERRUPT固定事件断言需纠错，草案细节不作稳定必答",
+      "card_keys": [
+        "ch03.interview.m22.confirmation-contract.001",
+        "ch03.interview.m22.shared-state-authority.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q04",
+      "original_text": "  → 发送 INTERRUPT：\"是否需要我进一步分析客户流失原因？\"",
+      "source_line": 226,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "场景对白保留确认意图，INTERRUPT固定事件断言需纠错，草案细节不作稳定必答",
+      "card_keys": [
+        "ch03.interview.m22.confirmation-contract.001",
+        "ch03.interview.m22.shared-state-authority.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q05",
+      "original_text": "*   哪些事件应该展示给用户，哪些应该静默处理？",
+      "source_line": 240,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "可见性与用户参与由响应设计决定",
+      "card_keys": [
+        "ch03.interview.m22.event-visibility.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q06",
+      "original_text": "*   事件之间的间隔多久算\"卡顿\"？需要设计骨架屏和进度提示",
+      "source_line": 241,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "卡顿阈值据实测环境与预算，300ms/2秒不是通用规则",
+      "card_keys": [
+        "ch03.interview.m22.event-visibility.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T4"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q07",
+      "original_text": "*   用户在中断时能否修改指令、补充信息、取消任务？",
+      "source_line": 242,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "场景对白保留确认意图，INTERRUPT固定事件断言需纠错，草案细节不作稳定必答",
+      "card_keys": [
+        "ch03.interview.m22.confirmation-contract.001",
+        "ch03.interview.m22.shared-state-authority.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q08",
+      "original_text": "## 六、产品应用场景：AG-UI 能做什么产品？",
+      "source_line": 246,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "应用/选型按实际多步骤UI痛点与成本判断",
+      "card_keys": [
+        "ch03.interview.m22.event-semantic-layer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q09",
+      "original_text": "*   `INTERRUPT`：\"是否需要我生成对应的 PPT 介绍材料？\"",
+      "source_line": 371,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "场景对白保留确认意图，INTERRUPT固定事件断言需纠错，草案细节不作稳定必答",
+      "card_keys": [
+        "ch03.interview.m22.confirmation-contract.001",
+        "ch03.interview.m22.shared-state-authority.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q10",
+      "original_text": "## 九、AG-UI vs 传统方案：什么时候用它？",
+      "source_line": 445,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "应用/选型按实际多步骤UI痛点与成本判断",
+      "card_keys": [
+        "ch03.interview.m22.event-semantic-layer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-Q11",
+      "original_text": "*   安全风险（Agent 生成恶意按钮？）",
+      "source_line": 494,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_explicit_question",
+      "decision": "合并",
+      "reason": "恶意按钮风险由组件与动作边界分别控制",
+      "card_keys": [
+        "ch03.interview.m22.generative-ui-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [
+        "T3"
+      ],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B01",
+      "original_text": "AG-UI 是一个**开放、轻量级、基于事件流**的协议。它标准化了 Agent 后端向前端应用发送什么、前端如何理解并响应。",
+      "source_line": 15,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "开放事件协议而非自带UI引擎",
+      "card_keys": [
+        "ch03.interview.m22.event-semantic-layer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B02",
+      "original_text": "*   只能展示文本，无法展示\"Agent 正在调用工具\"",
+      "source_line": 63,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "原文SSE只能文本纠错",
+      "card_keys": [
+        "ch03.interview.m22.event-semantic-layer.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B03",
+      "original_text": "### 4.1 Thread（会话线程）—— 一次完整的\"工作流\"",
+      "source_line": 134,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "Thread不等于仅一次run",
+      "card_keys": [
+        "ch03.interview.m22.thread-run-lifecycle.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B04",
+      "original_text": "| `TOOL_CALL_START` | Agent 开始调用工具 | 显示\"正在查询数据库...\" | 工具调用反馈 |",
+      "source_line": 153,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "工具END误作结果纠错",
+      "card_keys": [
+        "ch03.interview.m22.tool-event-completion.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B05",
+      "original_text": "### 4.3 State（共享状态）—— 前后端共同的\"记事本\"",
+      "source_line": 162,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "共享状态需快照/补丁及写入责任",
+      "card_keys": [
+        "ch03.interview.m22.state-snapshot-delta.001",
+        "ch03.interview.m22.shared-state-authority.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B06",
+      "original_text": "### 4.4 Interrupt（中断）—— Agent 也会\"请示\"",
+      "source_line": 172,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "专门中断不是稳定INTERRUPT固定事件",
+      "card_keys": [
+        "ch03.interview.m22.confirmation-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B07",
+      "original_text": "### 4.5 Generative UI（生成式 UI）—— Agent 不止会聊天",
+      "source_line": 184,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "生成式UI须组件约定与渲染实现",
+      "card_keys": [
+        "ch03.interview.m22.generative-ui-contract.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B08",
+      "original_text": "| Agent 输出异常 | 展示原始输出，允许用户手动纠正 |",
+      "source_line": 432,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "自动断点恢复原文过强",
+      "card_keys": [
+        "ch03.interview.m22.state-snapshot-delta.001",
+        "ch03.interview.m22.event-render-diagnosis.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B09",
+      "original_text": "*   **流式体验**：文本输出建议按 Token 流式展示",
+      "source_line": 439,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "300ms时限是设计示例非协议SLA",
+      "card_keys": [
+        "ch03.interview.m22.event-visibility.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.22",
+      "objective_id": "m22-B10",
+      "original_text": "1.   **你可以设计出更有信任感的产品**——用户不再面对黑盒，而是看到 Agent 每一步的思考",
+      "source_line": 574,
+      "source_path": "第3章-技术攻克/3.22-AG-UI.md",
+      "source_hash": "f33564c0d0faee1072e92233582bcb7c64c4c55397c3540133f94702f77a041a",
+      "source_type": "body_knowledge_target",
+      "decision": "采用",
+      "reason": "看到全部思考的可靠性承诺需纠错",
+      "card_keys": [
+        "ch03.interview.m22.event-visibility.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

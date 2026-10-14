@@ -1,0 +1,91 @@
+{
+  "method": "全文Markdown勾选目标枚举，与模块台账逐字（仅规范空白标记）及行号匹配；登记分流不等于学习掌握或实践完成。",
+  "modules": [
+    {
+      "module": "3.1",
+      "registered": 36,
+      "sourceCheckboxes": 36,
+      "unregisteredCheckboxLines": [],
+      "cards": 6
+    },
+    {
+      "module": "3.2",
+      "registered": 36,
+      "sourceCheckboxes": 36,
+      "unregisteredCheckboxLines": [],
+      "cards": 8
+    },
+    {
+      "module": "3.3",
+      "registered": 29,
+      "sourceCheckboxes": 29,
+      "unregisteredCheckboxLines": [],
+      "cards": 8
+    },
+    {
+      "module": "3.4",
+      "registered": 26,
+      "sourceCheckboxes": 26,
+      "unregisteredCheckboxLines": [],
+      "cards": 7
+    },
+    {
+      "module": "3.5",
+      "registered": 25,
+      "sourceCheckboxes": 25,
+      "unregisteredCheckboxLines": [],
+      "cards": 6
+    },
+    {
+      "module": "3.6",
+      "registered": 22,
+      "sourceCheckboxes": 22,
+      "unregisteredCheckboxLines": [],
+      "cards": 7
+    },
+    {
+      "module": "3.7",
+      "registered": 12,
+      "sourceCheckboxes": 12,
+      "unregisteredCheckboxLines": [],
+      "cards": 6
+    },
+    {
+      "module": "3.8",
+      "registered": 16,
+      "sourceCheckboxes": 16,
+      "unregisteredCheckboxLines": [],
+      "cards": 6
+    },
+    {
+      "module": "3.9",
+      "registered": 15,
+      "sourceCheckboxes": 15,
+      "unregisteredCheckboxLines": [],
+      "cards": 8
+    },
+    {
+      "module": "3.10",
+      "registered": 18,
+      "sourceCheckboxes": 18,
+      "unregisteredCheckboxLines": [],
+      "cards": 8
+    },
+    {
+      "module": "3.11",
+      "registered": 28,
+      "sourceCheckboxes": 28,
+      "unregisteredCheckboxLines": [],
+      "cards": 7
+    },
+    {
+      "module": "3.12",
+      "registered": 8,
+      "sourceCheckboxes": 8,
+      "unregisteredCheckboxLines": [],
+      "cards": 8
+    }
+  ],
+  "textMismatch": [],
+  "registeredTotal": 271
+}

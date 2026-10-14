@@ -1,0 +1,346 @@
+{
+  "module_id": "3.8",
+  "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+  "native_objectives": 16,
+  "registered": 16,
+  "practice_completed": 0,
+  "local_cards": 6,
+  "revised_cards": 6,
+  "new_cards": 0,
+  "publication_status": "published_and_verified_2026-10-01",
+  "objectives": [
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O01",
+      "original_text": "*   [ ] 我能解释 Token 是什么，以及为什么大模型用 Token 而不是直接用字/词",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 418,
+      "decision": "合并",
+      "reason": "Token定义与字数边界共用一张，分词折中机制跨3.7承接",
+      "mother_question_id": "M08-A",
+      "card_keys": [
+        "ch03.token.unit-vs-character.001",
+        "ch03.tokenization.subword-tradeoff.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O02",
+      "original_text": "*   [ ] 我知道 Token 和\"字\"\"词\"的区别",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 419,
+      "decision": "合并",
+      "reason": "与418行同一资源单位辨析，不重复定义卡",
+      "mother_question_id": "M08-A",
+      "card_keys": [
+        "ch03.token.unit-vs-character.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O03",
+      "original_text": "*   [ ] 我能说出至少两种主流的分词方法（BPE、SentencePiece 等）",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 420,
+      "decision": "拆分",
+      "reason": "BPE与Unigram是算法，SentencePiece是工具层，纠正原文并列分类",
+      "mother_question_id": "M08-A",
+      "card_keys": [
+        "ch03.tokenization.bpe-process.001",
+        "ch03.interview.m07.unigram-mechanism.001",
+        "ch03.tokenization.sentencepiece-layer.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O04",
+      "original_text": "*   [ ] 我知道 API 计费是按输入 Token + 输出 Token 计算的",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 424,
+      "decision": "合并",
+      "reason": "与单次月费合并，保留两类单价和单位",
+      "mother_question_id": "M08-A",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O05",
+      "original_text": "*   [ ] 我能估算一个产品功能的单次调用成本",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 425,
+      "decision": "合并",
+      "reason": "单次是月度计算的中间步骤，紧密同一预算目标",
+      "mother_question_id": "M08-A",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O06",
+      "original_text": "*   [ ] 我能估算一个月度的 Token 消耗和费用",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 426,
+      "decision": "合并",
+      "reason": "月费要求保留，示例完整核算",
+      "mother_question_id": "M08-A",
+      "card_keys": [
+        "ch03.token.request-monthly-cost.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O07",
+      "original_text": "*   [ ] 我知道降低 Token 成本的几种方法",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 427,
+      "decision": "采用",
+      "reason": "避免只省首轮输入而增总任务成本",
+      "mother_question_id": "M08-A",
+      "card_keys": [
+        "ch03.token.optimization-quality.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O08",
+      "original_text": "*   [ ] 我知道常见模型的上下文长度（4K/32K/128K/1M）",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 431,
+      "decision": "实践任务",
+      "reason": "固定品牌窗口会过时；保留具体模型窗口核验能力，由T2填真实版本与日期",
+      "mother_question_id": "M08-B",
+      "card_keys": [],
+      "practice_task_ids": [
+        "M08-T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "coverage_status": "practice_designed_not_completed",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O09",
+      "original_text": "*   [ ] 我知道上下文长度的产品限制（Lost in the Middle）",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 432,
+      "decision": "采用",
+      "reason": "区分可接收窗口与有效利用，不泛化中段效应",
+      "mother_question_id": "M08-B",
+      "card_keys": [
+        "ch03.token.long-context-verification.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O10",
+      "original_text": "*   [ ] 我知道超长文本的处理策略（RAG、摘要、分段）",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 433,
+      "decision": "拆分",
+      "reason": "卡比较方法边界，T1实际设计分段/检索/摘要保留证据方案",
+      "mother_question_id": "M08-B",
+      "card_keys": [
+        "ch03.token.long-context-verification.001"
+      ],
+      "practice_task_ids": [
+        "M08-T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O11",
+      "original_text": "*   [ ] 我知道中文和英文的 Token 数量差异",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 437,
+      "decision": "合并",
+      "reason": "语言差异已由3.7同语义同模型测量承接",
+      "mother_question_id": "M08-B",
+      "card_keys": [
+        "ch03.tokenization.language-measurement.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O12",
+      "original_text": "*   [ ] 我知道同样的内容，中文通常比英文消耗更多 Token",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 438,
+      "decision": "合并",
+      "reason": "原文中文必然更贵推断须纠偏，同语义实测取代固定比例",
+      "mother_question_id": "M08-B",
+      "card_keys": [
+        "ch03.tokenization.language-measurement.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O13",
+      "original_text": "*   [ ] 我知道 Emoji、数字、代码的特殊 Token 处理",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 439,
+      "decision": "拆分",
+      "reason": "数字代码根因复用3.7，Emoji等具体计数在T2验证不背常数",
+      "mother_question_id": "M08-B",
+      "card_keys": [
+        "ch03.tokenization.number-code-diagnosis.001",
+        "ch03.token.unit-vs-character.001"
+      ],
+      "practice_task_ids": [
+        "M08-T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O14",
+      "original_text": "*   [ ] 我能根据 Token 限制设计合理的 Prompt 长度",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 443,
+      "decision": "拆分",
+      "reason": "卡能计算容量，T1写出真实可审核请求预算",
+      "mother_question_id": "M08-B",
+      "card_keys": [
+        "ch03.token.context-reservation.001"
+      ],
+      "practice_task_ids": [
+        "M08-T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O15",
+      "original_text": "*   [ ] 我知道如何在 Prompt 中优化 Token 使用",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 444,
+      "decision": "采用",
+      "reason": "与降本目标共用质量和费用口径",
+      "mother_question_id": "M08-B",
+      "card_keys": [
+        "ch03.token.optimization-quality.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.8",
+      "objective_id": "3.8-O16",
+      "original_text": "*   [ ] 我能向非技术人员解释为什么\"同样的服务中文更贵\"",
+      "source_path": "第3章-技术攻克/3.8-Token-详解.md",
+      "source_hash": "f549ba653f27bb2e92dc4d79fa68a9a5babe42947cc7fc0a0ef329badee2f9e2",
+      "source_line": 445,
+      "decision": "拆分",
+      "reason": "纠正带偏前提，保留向非技术人员解释的口头产出",
+      "mother_question_id": "M08-B",
+      "card_keys": [
+        "ch03.tokenization.language-measurement.001",
+        "ch03.token.request-monthly-cost.001"
+      ],
+      "practice_task_ids": [
+        "M08-T3"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

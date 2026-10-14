@@ -1,0 +1,2195 @@
+{
+  "module_id": "3.25",
+  "source": {
+    "relative_path": "第3章-技术攻克/3.25-Evals.md",
+    "absolute_path": "/Users/klein/Documents/AI-PM-guide/第3章-技术攻克/3.25-Evals.md",
+    "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+    "line_count": 729
+  },
+  "native_checklist_count": 24,
+  "registered_native_count": 24,
+  "objectives": [
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O001",
+      "original_text": "*   [ ] 我能清晰向团队解释学术 Benchmark 与企业生产 Evals 的本质区别",
+      "source_line": 662,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.production-benchmark.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O002",
+      "original_text": "*   [ ] 我能区分代码硬断言、语义向量匹配、LLM 裁判与人工评估的适用边界",
+      "source_line": 663,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.grader-selection.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O003",
+      "original_text": "*   [ ] 我深刻理解大模型非确定性特点，坚决不在没有测试集的情况下凭感觉改 Prompt",
+      "source_line": 664,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O004",
+      "original_text": "*   [ ] 我们的产品拥有一套独立且版本化管理的 Golden Dataset（至少 100 条）",
+      "source_line": 668,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.dataset-representation.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文至少100条非通用门槛；保留独立版本化能力，T1要求实际提交数据集，不声称拥有已完成。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O005",
+      "original_text": "*   [ ] 测试集中真实生产 Badcase 的占比保持在 30% 以上",
+      "source_line": 669,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.dataset-representation.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "30%不是科学通用配比；风险挑战集与流量代表集分开，实际配比由覆盖与代价决定。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O006",
+      "original_text": "*   [ ] 建立了防止测试集被刷题污染的公开集（Dev）与隐藏盲测集（Holdout）隔离机制",
+      "source_line": 670,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.ml.evaluation-split.001",
+        "ch03.finetune.split-leakage.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O007",
+      "original_text": "*   [ ] 每条测试用例都打上了清晰的场景分类、难度级别与关键事实约束标签",
+      "source_line": 671,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.dataset-representation.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O008",
+      "original_text": "*   [ ] 熟练掌握 LLM-as-a-Judge 的四大偏见（位置、冗长、自恋、格式）及工程防范手段",
+      "source_line": 675,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "C11",
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "位置目标修订C11；冗长/同家族/格式与有限推理盲点在M2完整串联，不重复生成四种偏见术语卡。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O009",
+      "original_text": "*   [ ] 在两两比对（Pairwise）评测中严格落地了双向位置对调（Swap Position）机制",
+      "source_line": 676,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "C11"
+      ],
+      "practice_task_ids": [],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O010",
+      "original_text": "*   [ ] 能编写具备明确逐项扣分逻辑的结构化工业级 Rubric 细则模板",
+      "source_line": 677,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O011",
+      "original_text": "*   [ ] 了解 G-Eval 连续期望得分原理，能有效降低打分方差",
+      "source_line": 678,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.g-eval-expectation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "论文核对概率加权机制，纠正“必降低方差”；实现需合法评分概率。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O012",
+      "original_text": "*   [ ] 定期检验人类专家标注一致性（Cohen's Kappa 系数）",
+      "source_line": 679,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.kappa-calibration.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "计算及解释Kappa，0.7/80%不当普适可信线，真实一致性实验留T1。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O013",
+      "original_text": "*   [ ] 熟练运用 RAG Triad（检索相关度、检索召回率、回答忠实度、回答相关度）",
+      "source_line": 683,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C05",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "Triad关系与四项指标不能混同唯一标准；忠实/相关复用C05，检索指标复用3.10。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O014",
+      "original_text": "*   [ ] 能从指标上精确定位 RAG 事故究竟是\"检索模块漏召回\"还是\"大模型在胡编\"",
+      "source_line": 684,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "C10"
+      ],
+      "practice_task_ids": [],
+      "reason": "修订C10保留原有错因目标，补最终输入检查，不新建同义RAG卡。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O015",
+      "original_text": "*   [ ] 掌握 Agent 轨迹评估方法，能量化工具选型准确率、步骤效率比与死循环率",
+      "source_line": 685,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "C14",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "修订C14并复用轨迹指标；3次调用/最短步骤/所有4xx重试不作普遍规范。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O016",
+      "original_text": "*   [ ] 能对结构化 JSON 输出、代码执行生成、安全合规注入设计自动化断言",
+      "source_line": 686,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.grader-selection.001",
+        "ch03.prompt.injection-boundary.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O017",
+      "original_text": "*   [ ] 将 Evals 自动化嵌入到了 Git PR 研发流程中，具备核心指标不退步的阻断门禁",
+      "source_line": 690,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O018",
+      "original_text": "*   [ ] 建立了按场景切片（Slice）分析的能力，避免大盘平均分掩盖局部灾难",
+      "source_line": 691,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001",
+        "ch03.tech.evaluation-contract.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O019",
+      "original_text": "*   [ ] 生产环境具备用户显式点踩与隐式异常交互行为的捕获机制",
+      "source_line": 692,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "点踩和重问只是候选信号，核对真值后入库；真实埋点/管道未执行。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O020",
+      "original_text": "*   [ ] 实现了从线上 Badcase 提取、脱敏、打标到回归测试集入库的自动化闭环飞轮",
+      "source_line": 693,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "本地只设计管道；自动化与匿名处理不等于真实已运行。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O021",
+      "original_text": "*   [ ] 建立了分层评估金字塔与缓存机制，有效管控评测本身的算力成本",
+      "source_line": 694,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.cache-identity.001",
+        "ch03.interview.m25.cascade-audit.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "按计算身份设计失效、审计每个级联出口；省70%/50%折扣不作长期答案。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O022",
+      "original_text": "*   [ ] 能为主管和业务部门设计模型选型与平替的量化准入门禁报告",
+      "source_line": 698,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001",
+        "ch03.interview.m25.production-benchmark.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "模型切换完整报告为T2；不复制泛泛质量/成本验收卡。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O023",
+      "original_text": "*   [ ] 能把底层 Evals 技术指标翻译成业务方听得懂的成本、满意度与效率回报",
+      "source_line": 699,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.tech.evaluation-contract.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "业务指标映射复用已有验收契约，业务收益须真实基线与归因，报告T2。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O024",
+      "original_text": "*   [ ] 具备指标怀疑论，能敏锐识别指标选择不当带来的虚假繁荣",
+      "source_line": 700,
+      "source_type": "原生自查",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001",
+        "C05",
+        "ch03.tech.evaluation-contract.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "按原生目标采用/合并已有机制卡；实施项另留实践，不把理论正确当工程已运行。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O025",
+      "original_text": "### 问题 1：如何从 0 到 1 搭建一个大模型应用的 Evals 体系？",
+      "source_line": 550,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "C09",
+        "ch03.interview.m25.production-benchmark.001",
+        "ch03.interview.m25.dataset-representation.001",
+        "ch03.interview.m25.grader-selection.001",
+        "ch03.interview.m25.rubric-atomic.001",
+        "ch03.interview.m25.paired-regression.001",
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文综合面试问保留为母题，短卡只检查可独立评分的机制；固定比例、厂商成本和绝对线不沿用。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O026",
+      "original_text": "### 问题 2：LLM-as-a-Judge 有哪些典型偏见？工程上如何解决？",
+      "source_line": 562,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "C11",
+        "ch03.interview.m25.rubric-atomic.001",
+        "ch03.interview.m25.kappa-calibration.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文综合面试问保留为母题，短卡只检查可独立评分的机制；固定比例、厂商成本和绝对线不沿用。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O027",
+      "original_text": "### 问题 3：离线评估得分提升了，上线后客诉反而暴涨，可能是什么原因？如何排查？",
+      "source_line": 575,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001",
+        "ch03.interview.m25.dataset-representation.001",
+        "ch03.ml.evaluation-split.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文综合面试问保留为母题，短卡只检查可独立评分的机制；固定比例、厂商成本和绝对线不沿用。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O028",
+      "original_text": "### 问题 4：RAG 系统回答不准确，如何从指标上区分是检索模块问题还是生成模型幻觉？",
+      "source_line": 586,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "C10",
+        "C05",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文综合面试问保留为母题，短卡只检查可独立评分的机制；固定比例、厂商成本和绝对线不沿用。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O029",
+      "original_text": "### 问题 5：为什么 Agent 的评估比单轮问答难得多？你们如何做轨迹评估？",
+      "source_line": 599,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "C14",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文综合面试问保留为母题，短卡只检查可独立评分的机制；固定比例、厂商成本和绝对线不沿用。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O030",
+      "original_text": "### 问题 6：评估集规模变大后，跑一次又慢又贵，如何做成本与时延优化？",
+      "source_line": 615,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.cache-identity.001",
+        "ch03.interview.m25.cascade-audit.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文综合面试问保留为母题，短卡只检查可独立评分的机制；固定比例、厂商成本和绝对线不沿用。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O031",
+      "original_text": "### 问题 7：人类专家打分与 LLM 裁判不一致时听谁的？如何量化与校准人机一致性？",
+      "source_line": 626,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.kappa-calibration.001",
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文综合面试问保留为母题，短卡只检查可独立评分的机制；固定比例、厂商成本和绝对线不沿用。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O032",
+      "original_text": "### 问题 8：老板要求把闭源模型（如 GPT-4o）切换为开源模型（如 DeepSeek/Qwen），如何用 Evals 建立准入门禁？",
+      "source_line": 640,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001",
+        "ch03.interview.m25.production-benchmark.001",
+        "ch03.tech.evaluation-contract.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文综合面试问保留为母题，短卡只检查可独立评分的机制；固定比例、厂商成本和绝对线不沿用。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O033",
+      "original_text": "## 一、为什么大模型产品必须有 Evals？",
+      "source_line": 21,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O034",
+      "original_text": "### （一）一个真实的线上灾难案例：Prompt 负优化惨案",
+      "source_line": 23,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O035",
+      "original_text": "### （二）传统软件测试 vs 大模型评估：从确定性到概率分布",
+      "source_line": 45,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O036",
+      "original_text": "### （三）学术 Benchmark vs 企业级生产评估的鸿沟",
+      "source_line": 61,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.production-benchmark.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O037",
+      "original_text": "### （四）Evals 解决的四个核心商业难题",
+      "source_line": 84,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.production-benchmark.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O038",
+      "original_text": "## 二、Evals 体系的\"三层模型\"与核心组件",
+      "source_line": 95,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C09"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O039",
+      "original_text": "### （一）三层评估模型：组件层、链路层、业务层",
+      "source_line": 120,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C09"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O040",
+      "original_text": "### （二）Evals 的四个核心支柱：Dataset、Grader、Runner、Reporter",
+      "source_line": 130,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C09"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O041",
+      "original_text": "### （三）大模型全生命周期的评估流水线（SDLC）",
+      "source_line": 139,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C09"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O042",
+      "original_text": "## 三、评估集（Golden Dataset）：如何科学编制一张\"考卷\"？",
+      "source_line": 153,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.dataset-representation.001",
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O043",
+      "original_text": "### （一）黄金测试集的四大来源与科学配比",
+      "source_line": 157,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.dataset-representation.001",
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O044",
+      "original_text": "### （二）从线上海量 Trace 到评估集的构建管道",
+      "source_line": 178,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.dataset-representation.001",
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O045",
+      "original_text": "### （三）合成数据（Synthetic Data）与防\"近亲繁殖\"陷阱",
+      "source_line": 198,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.dataset-representation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O046",
+      "original_text": "### （四）测试集防污染与动态轮转机制",
+      "source_line": 208,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.ml.evaluation-split.001",
+        "ch03.finetune.split-leakage.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O047",
+      "original_text": "### （五）有参考（Reference-based）vs 无参考（Reference-free）评估",
+      "source_line": 219,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.reference-evidence.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O048",
+      "original_text": "## 四、评分器（Graders）：四大评估方法详解",
+      "source_line": 226,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.grader-selection.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O049",
+      "original_text": "### （一）代码与规则评估（Code-based Graders）",
+      "source_line": 242,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.grader-selection.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O050",
+      "original_text": "### （二）语义与模型评估（Embedding & Model-based）",
+      "source_line": 253,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.grader-selection.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O051",
+      "original_text": "### （三）LLM-as-a-Judge 深度拆解（核心重点）",
+      "source_line": 262,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C11",
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O052",
+      "original_text": "#### 1. 打分模式：Pointwise（单样本独立打分）vs Pairwise（两两打擂台）",
+      "source_line": 266,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C11",
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O053",
+      "original_text": "#### 2. LLM 裁判的四大偏见及工程对策",
+      "source_line": 275,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C11",
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O054",
+      "original_text": "#### 3. 为什么必须先 CoT 推理再打分",
+      "source_line": 286,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O055",
+      "original_text": "#### 4. G-Eval 连续期望得分原理",
+      "source_line": 292,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.g-eval-expectation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O056",
+      "original_text": "#### 5. 工业级评分细则（Rubric）设计规范",
+      "source_line": 302,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O057",
+      "original_text": "### （四）人工评估（Human Evaluation）与一致性检验（Cohen's Kappa）",
+      "source_line": 313,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.kappa-calibration.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O058",
+      "original_text": "### （五）四种评估方式的级联混合策略（Cascade Grading）",
+      "source_line": 326,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.cascade-audit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O059",
+      "original_text": "## 五、专项评估（一）：RAG 系统的评估与 Ragas 框架",
+      "source_line": 346,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C05",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O060",
+      "original_text": "### （一）RAG Triad（三元组）的核心逻辑",
+      "source_line": 368,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C05",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O061",
+      "original_text": "### （二）检索层指标：Context Relevance 与 Context Recall",
+      "source_line": 372,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C05",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O062",
+      "original_text": "### （三）生成层指标：Faithfulness 与 Answer Relevance",
+      "source_line": 381,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C05",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O063",
+      "original_text": "### （四）进阶指标：抗噪鲁棒性与拒答准确率",
+      "source_line": 389,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C05",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O064",
+      "original_text": "### （五）精准归因：如何区分是检索问题还是生成幻觉？",
+      "source_line": 394,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C10"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O065",
+      "original_text": "## 六、专项评估（二）：Agent 智能体的轨迹评估（Trajectory Evals）",
+      "source_line": 414,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C14",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O066",
+      "original_text": "### （一）为什么评估 Agent 不能只看最终结果？",
+      "source_line": 418,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C14",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O067",
+      "original_text": "### （二）工具调用评估：选型准确率与参数合规率",
+      "source_line": 427,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C14",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O068",
+      "original_text": "### （三）规划与执行轨迹评估：步骤效率比、死循环检测、自愈恢复率",
+      "source_line": 432,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C14",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O069",
+      "original_text": "### （四）多轮会话状态与长期记忆评估",
+      "source_line": 438,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C14",
+        "ch03.agent.trace-task-metrics.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O070",
+      "original_text": "## 七、企业级 Evals 工程流水线与数据闭环飞轮",
+      "source_line": 447,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O071",
+      "original_text": "### （一）嵌入 CI/CD 研发流水线的门禁机制",
+      "source_line": 451,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O072",
+      "original_text": "### （二）Badcase 驱动的自动化闭环飞轮（Flywheel）",
+      "source_line": 468,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O073",
+      "original_text": "### （三）Evals 系统的性能与成本优化（分层金字塔、缓存、Batch API）",
+      "source_line": 491,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.cache-identity.001",
+        "ch03.interview.m25.cascade-audit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O074",
+      "original_text": "## 八、主流评估工具与开源生态选型",
+      "source_line": 501,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O075",
+      "original_text": "## 九、典型场景案例深度分析",
+      "source_line": 516,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C10"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O076",
+      "original_text": "### 案例 1：某头部金融科技机构 RAG 合规客服评估与幻觉治理",
+      "source_line": 518,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C10"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O077",
+      "original_text": "### 案例 2：跨境电商售后 Agent 轨迹评估与死循环根治",
+      "source_line": 526,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C14"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O078",
+      "original_text": "### 案例 3：核心业务商业模型平替迁移评估（GPT-4o 换国产开源）",
+      "source_line": 535,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "正文原小节登记；框架/证据/实验分流，不以标题冒称原文问句；品牌工具表及匿名案例效果未核实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O079",
+      "original_text": "1.   **Evals 是大模型工程的分水岭**：区分玩具 Demo 与工业级产品的根本标准，就是看它是否拥有一套客观、量化、自动化的 Evals 体系。",
+      "source_line": 715,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C09"
+      ],
+      "practice_task_ids": [],
+      "reason": "总结是原文观点，稳定机制由对应卡/母题承接；分水岭/数据壁垒类强叙事不作事实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O080",
+      "original_text": "2.   **三层模型与四根支柱**：从微观的组件层、到宏观的链路层、再到生产的业务层；以考卷（Dataset）、考官（Grader）、考场（Runner）、体检单（Reporter）为核心支柱。",
+      "source_line": 716,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.dataset-representation.001",
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "总结是原文观点，稳定机制由对应卡/母题承接；分水岭/数据壁垒类强叙事不作事实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O081",
+      "original_text": "3.   **考卷质量决定评估上限**：黄金测试集要坚持真实 Badcase 占主导，建立公开 Dev 集与隐藏 Holdout 集隔离，防止针对考卷过拟合。",
+      "source_line": 717,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C11",
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "总结是原文观点，稳定机制由对应卡/母题承接；分水岭/数据壁垒类强叙事不作事实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O082",
+      "original_text": "4.   **治理 LLM 裁判的任性偏见**：用双向位置对调克制位置偏见，用字数惩罚克制冗长偏见，用跨模型陪审克制自恋偏见，用先推理后打分的 CoT 规范逻辑。",
+      "source_line": 718,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C10"
+      ],
+      "practice_task_ids": [],
+      "reason": "总结是原文观点，稳定机制由对应卡/母题承接；分水岭/数据壁垒类强叙事不作事实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O083",
+      "original_text": "5.   **专项场景重点攻坚**：RAG 场景依靠 RAG Triad 分清检索责任与生成责任；Agent 场景必须评估思考轨迹，监控步骤效率与死循环率。",
+      "source_line": 719,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "总结是原文观点，稳定机制由对应卡/母题承接；分水岭/数据壁垒类强叙事不作事实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O084",
+      "original_text": "6.   **飞轮是核心数据壁垒**：将线上真实事故与点踩数据自动化沉淀为回归测试用例，让系统在每次犯错中持续进化。",
+      "source_line": 720,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "合并",
+      "card_keys": [
+        "C09"
+      ],
+      "practice_task_ids": [],
+      "reason": "总结是原文观点，稳定机制由对应卡/母题承接；分水岭/数据壁垒类强叙事不作事实。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O085",
+      "original_text": "某金融科技公司在 2024 年上线了一款\"智能投顾研报解读助手\"。上线初期效果不错，日活用户很快突破 10 万。",
+      "source_line": 25,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "匿名金融案例及真实商业数字无一手证据，保留编辑风险示例而不当历史事实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O086",
+      "original_text": "*   **没有标准考卷**：仅凭 PM 和研发手工测几十个用例，覆盖率连 1% 都不到。",
+      "source_line": 39,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "覆盖1%/99%无可定义分母，不纳入事实。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O087",
+      "original_text": "企业级黄金测试集（Golden Dataset）建议遵循以下科学配比：",
+      "source_line": 159,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "固定四种比例没有普遍科学证据；覆盖框架已采用。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O088",
+      "original_text": "*   **解决原则**：**造数据的模型、被测模型、当裁判的模型，三者技术架构必须尽可能异构解耦**。",
+      "source_line": 206,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "异构技术架构必须解耦不保证独立盲点；合成来源标注与真实验证已采用。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O089",
+      "original_text": "#### 3. 为什么必须先 CoT 推理再打分",
+      "source_line": 286,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "必须CoT再打分的工程铁律无普遍保证；只要求可核验依据，不索取隐藏思维。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O090",
+      "original_text": "*   $P_o$：标注者之间的实际一致比例。",
+      "source_line": 321,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "0.4/0.7/80%不是通用行业准入规则；Kappa机制已采用。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O091",
+      "original_text": "这种级联策略能在保持高严谨度的同时，**降低 70% 以上的评测 Token 成本**。",
+      "source_line": 342,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "节省70%未有可复现实验，延期效果断言。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O092",
+      "original_text": "业界公认的评估标准是 **RAG Triad（三元组）**，在开源框架 Ragas 中被具象化为四个核心指标：",
+      "source_line": 366,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "Triad不等同Ragas四指标唯一公认标准；相关职责已用C05/C10覆盖。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O093",
+      "original_text": "     *   **RAG 系统最重要的指标**。衡量回答中的每一句话，是否都能在检索出的 Context 中找到依据。",
+      "source_line": 384,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "忠实度1.0不保证资料真、裁判对或无其他错误。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O094",
+      "original_text": "工程师提交 Prompt / 模型改动 (Git PR)",
+      "source_line": 456,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "任何核心得分下降就阻断的固定规则需波动和风险口径，非普遍门禁。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O095",
+      "original_text": "3.   **批量推理 API（Batch API）**：非实时的离线评测统一调用厂商的 Batch 接口，享受官方 50% 的价格折扣与更高并发限流额度。",
+      "source_line": 497,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "Batch价格折扣/限流是厂商与时间属性，未查当前价，保留T2查询。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O096",
+      "original_text": "    1.  引入 Ragas 指标解构后发现，`Context Recall` 仅为 55%，说明检索模块漏掉了一半核心条款；而大模型在拿不到上下文时习惯自由发挥编造答案。",
+      "source_line": 522,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "匿名企业指标/监管验收无第一方证据，延期商业成效。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O097",
+      "original_text": "*   **业务成效**：彻底消除死循环，单会话平均 Token 消耗下降 58%，一次性问题解决率提升 25%。",
+      "source_line": 533,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "彻底消除死循环和收益百分比无一手证据，不采。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O098",
+      "original_text": "*   **业务成效**：量化验证平替后整体效果无感，顺利完成切换，实现年化 80% 的推理成本节省。",
+      "source_line": 542,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "模型替换节省80%匿名效果不采。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O099",
+      "original_text": "*   0-12 分：Evals 基础薄弱，处于凭肉眼测试的作坊阶段，建议系统研读本文补齐短板",
+      "source_line": 704,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文24项却评分55分，量表未定义，不能用于成熟度评分。",
+      "mother_question_id": "M4",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O100",
+      "original_text": "### （一）代码与规则评估（Code-based Graders）",
+      "source_line": 242,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.grader-selection.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "系统输出退款JSON和自然语言理由。Schema通过、理由与参考答案很相似，却把“不允许”写成“允许”。各类评分器应怎样分工？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O101",
+      "original_text": "### （三）学术 Benchmark vs 企业级生产评估的鸿沟",
+      "source_line": 61,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.production-benchmark.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "通用榜单更高的模型要替换企业售后助手。Benchmark与生产Evals分别测什么，为什么排名不够支持这个替换？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O102",
+      "original_text": "### （一）黄金测试集的四大来源与科学配比",
+      "source_line": 157,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.dataset-representation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "大量测试都来自投诉，客服版本在这批题上进步了。能否认为线上整体质量同样提高？怎样组织有代表性的评估集？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O103",
+      "original_text": "### （五）有参考（Reference-based）vs 无参考（Reference-free）评估",
+      "source_line": 219,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.reference-evidence.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "摘要任务没有唯一标准答案，团队准备用无参考评估让裁判自由打分。Reference-free意味着无需原文或事实标准吗？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O104",
+      "original_text": "#### 5. 工业级评分细则（Rubric）设计规范",
+      "source_line": 302,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.rubric-atomic.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "退款回答的Rubric只写“专业、准确、友好，1–5分”。如何改成两个审阅者能据同一依据执行的评分规则？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O105",
+      "original_text": "#### 4. G-Eval 连续期望得分原理",
+      "source_line": 292,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.g-eval-expectation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "G-Eval式评分中，合法评分4与5的归一化概率分别为0.7和0.3。结果是多少，它能否说明回答有4.3分的真实质量？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O106",
+      "original_text": "### （四）人工评估（Human Evaluation）与一致性检验（Cohen's Kappa）",
+      "source_line": 313,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.kappa-calibration.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "两位标注者观察一致率Po=0.9，按各自类别边际估计偶然一致率Pe=0.8。Cohen’s Kappa是多少？怎样解释？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O107",
+      "original_text": "### （二）传统软件测试 vs 大模型评估：从确定性到概率分布",
+      "source_line": 45,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.paired-regression.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "旧Prompt本次通过90题，新Prompt通过92题，测试各跑了一次且有部分超时。能否断言新版本更好，最小比较应保留什么？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O108",
+      "original_text": "### （三）Evals 系统的性能与成本优化（分层金字塔、缓存、Batch API）",
+      "source_line": 491,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.cache-identity.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "评测只按“问题+Prompt”命中旧分数；知识政策、模型或裁判已更新，报告仍很高。错误在哪里，缓存怎么失效？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O109",
+      "original_text": "### （五）四种评估方式的级联混合策略（Cascade Grading）",
+      "source_line": 326,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.cascade-audit.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "为省费用，用小模型将“大多数合格答案”直接判通过，仅争议题送强裁判。怎样验证这条级联没有漏掉严重错误？"
+    },
+    {
+      "module_id": "3.25",
+      "objective_id": "m25-O110",
+      "original_text": "### （二）从线上海量 Trace 到评估集的构建管道",
+      "source_line": 178,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.25-Evals.md",
+      "source_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m25.badcase-curation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "系统自动把点踩、重问和提前退出都收入Badcase，给当前回答判错后进入黄金集。为什么不可靠，正确的入库链路是什么？"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "T1",
+      "description": "30–45分钟：选退款问答，建立代表流量与风险挑战两个版本化小集，列脱敏输入/证据/必须和禁止行为；设计Rubric及规则、对调比较与人类校准；计算Kappa例、G-Eval例并标概率假设，审计级联早期通过/拒绝样本，定义输出/评分两种缓存身份。提交样本表和实验计划；未运行模型或人工标注实验。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T2",
+      "description": "30–45分钟：以旧/新模型迁移为例，写同题运行与评分版本、超时分母、重复次数依据、关键切片、上线/回退及总成本报告；设计线上反馈→脱敏→核验→去重→回归入库链路和发布监控。当前厂商价格/SDK若需使用另查第一方；未做真实迁移或生产埋点。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "practices_completed": 0,
+  "local_cards": 15,
+  "publication_status": "local_candidate_not_published",
+  "review_status": "author_self_check_complete_pending_editor"
+}

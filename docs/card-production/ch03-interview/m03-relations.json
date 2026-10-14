@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "module_id": "3.3",
+  "updated_at": "2026-09-18",
+  "relations": [
+    {
+      "from": "ch03.interview.m03.batchnorm-deployment.001",
+      "to": "ch03.dl.training-inference.001",
+      "type": "prerequisite",
+      "reason": "先分清训练与推理，才能检查BatchNorm统计模式。"
+    },
+    {
+      "from": "ch03.interview.m03.dropout-modes.001",
+      "to": "ch03.dl.training-inference.001",
+      "type": "prerequisite",
+      "reason": "Dropout的模式切换以训练/推理职责区分为前提。"
+    },
+    {
+      "from": "ch03.interview.m03.residual-path.001",
+      "to": "ch03.dl.gradient-diagnosis.001",
+      "type": "extension",
+      "reason": "从梯度不稳定的诊断扩展到残差直接路径机制。"
+    },
+    {
+      "from": "ch03.interview.m03.augmentation-contract.001",
+      "to": "ch03.dl.selection-validation.001",
+      "type": "extension",
+      "reason": "将少样本选型中的数据增强细化为标签与隔离契约。"
+    },
+    {
+      "from": "ch03.ml.release-recovery.001",
+      "to": "ch03.interview.m03.monitoring-evidence.001",
+      "type": "extension",
+      "reason": "上线门槛需要持续的质量和业务监控提供回退证据。"
+    },
+    {
+      "from": "ch03.tech.capacity-latency.001",
+      "to": "ch03.dl.selection-validation.001",
+      "type": "extension",
+      "reason": "把选型中的延迟约束落实到端到端负载测试。"
+    },
+    {
+      "from": "ch03.interview.m03.loss-business.001",
+      "to": "ch03.dl.training-inference.001",
+      "type": "extension",
+      "reason": "训练损失的职责继续延伸到业务代理目标偏差。"
+    },
+    {
+      "from": "ch03.dl.recurrent-memory.001",
+      "to": "ch03.transformer.parallel-boundary.001",
+      "type": "compare",
+      "reason": "比较循环时间步依赖和Transformer训练并行，避免误认为生成可一次并行完成。"
+    }
+  ]
+}

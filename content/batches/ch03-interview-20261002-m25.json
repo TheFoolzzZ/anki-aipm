@@ -1,0 +1,655 @@
+{
+  "batch_id": "ch03-interview-20261002-m25",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "C09",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "eval-core-components"
+      ],
+      "revision": 2,
+      "position": 9,
+      "title": "Evals 的四个组件怎样交接",
+      "kind": "机制",
+      "prompt": "Evals 中 Dataset、Grader、Runner、Reporter 分别负责什么？一次退款问答回归测试如何经过这四者？",
+      "answer_short": "Dataset固定测试任务与可判断依据；Runner运行待测系统并记录输出、版本和异常；Grader按规则判分；Reporter汇总比较与失败切片。职责可在小脚本中实现，不取决于用了几个平台。",
+      "required_points": [
+        "区分考卷、执行、判分与分析职责",
+        "说明输出和运行记录交给评分器，评分结果交给报告",
+        "测试任务及系统/评分版本要能对应同一次运行"
+      ],
+      "explanation": "【原理】考题是输入及判断条件；运行器执行被测系统，评分器消费运行产物，报告解释差异。四者职责分离才能知道坏分来自系统还是评测执行故障。\n【编辑情境】考卷给出订单状态与退款限制；执行器记录两版答复和超时；规则检查不能保证退款，裁判核对依据，报告列出超时与错误承诺切片。\n【边界】只有问题列表不等于可复现评测；Runner超时不能悄悄删掉样本再算分。\n【面试追问】一个文件能完成吗？参考：能，先保证职责与证据清楚，不为组件名拆四个服务。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "只有问题列表不等于可复现评测；Runner超时不能悄悄删掉样本再算分。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 130,
+          "line_end": 148
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确Evals 的四个组件怎样交接的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "C10",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "rag-failure-attribution"
+      ],
+      "revision": 2,
+      "position": 10,
+      "title": "RAG 错答怎样检查实际证据",
+      "kind": "故障诊断",
+      "prompt": "RAG 回答错了，为什么先检查进入模型的实际上下文？证据缺失、误用与过期资料分别怎样定位？修复后怎样验证？",
+      "answer_short": "先固定问题、知识版本、检索候选及最终上下文。候选或最终输入缺关键事实，查解析、召回和组装；有效事实已送入而被误用，查生成；资料过期冲突，查知识治理。自动分数仅提供线索。",
+      "required_points": [
+        "检查最终输入而非只看召回列表",
+        "区分证据缺失、生成误用和知识源错误",
+        "用同一坏例及相关回归样例验证修复"
+      ],
+      "explanation": "【原理】最终输出的依据来自实际送入的内容，检索曾召回不代表模型看到了。忠实地复述过期资料仍可能业务错误，忠实度也受裁判误差影响。\n【编辑情境】退款条款在候选第8段，却被预算截断；应修组装。条款已完整送入但回答保证批准，是误用；条款本身已废止则更新知识版本。\n【边界】不把Recall达标或Faithfulness=1当精确免责；temperature=0不保证无幻觉。\n【面试追问】能直接换模型吗？参考：可以作为对照候选，但应先明确错因并在同资料和样例上验证。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "不把Recall达标或Faithfulness=1当精确免责；temperature=0不保证无幻觉。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 394,
+          "line_end": 410
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 586,
+          "line_end": 596
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确RAG 错答怎样检查实际证据的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "C11",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "judge-position-bias"
+      ],
+      "revision": 2,
+      "position": 11,
+      "title": "比较答案时如何检查位置偏差",
+      "kind": "机制",
+      "prompt": "裁判先看A后看B时选A，交换顺序后又选先展示的B。这说明什么，怎样汇总这次比较？",
+      "answer_short": "比较结果受展示位置影响，不能把两个“第一项赢”当A或B稳定获胜。隐藏来源标签、用同一标准运行(A,B)/(B,A)，按预先约定把冲突列为不确定并复核；一致也只减少一种偏差。",
+      "required_points": [
+        "交换后按候选身份对齐胜负",
+        "把顺序冲突标为不确定，按约定复核而非挑有利结果",
+        "一致不证明事实正确，仍需依据和校准"
+      ],
+      "explanation": "【原理】对调是控制展示顺序的敏感性检查。其余变量应尽量固定；两次输出仍可能随机且有共同事实盲点，冲突如何计分必须事先定义。\n【编辑情境】两版退货答复A短而正确、B长但多承诺。无论哪版在前都被判好，表明本次评分不能支持替换结论；回到条款做盲审。\n【边界】原文“冲突一律平局”可作一种规则，但不能把平局当两版等质；不宣称偏差被消除。\n【面试追问】对调一致就能上线吗？参考：还要看内容真值、关键切片和裁判可靠性。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "原文“冲突一律平局”可作一种规则，但不能把平局当两版等质；不宣称偏差被消除。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 266,
+          "line_end": 284
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 562,
+          "line_end": 572
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确比较答案时如何检查位置偏差的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "C14",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "agent-trajectory-evaluation"
+      ],
+      "revision": 2,
+      "position": 14,
+      "title": "Agent 的终点与轨迹怎样分工",
+      "kind": "机制",
+      "prompt": "Agent 最后给出正确结果，为什么仍要看工具调用轨迹？工具故障时又应如何区分任务结果与过程诊断？",
+      "answer_short": "终点正确可能伴随越权、重复收费或错误参数；可观察调用、状态和结果帮助诊断代价与风险。外部超时可能导致任务未交付，也要单独判断工具选择与恢复行为，不把过程合理改记为任务成功。",
+      "required_points": [
+        "正确终点不能证明过程安全高效",
+        "轨迹指可观察工具调用、状态与返回结果",
+        "区分任务成功判定与过程/环境故障归因"
+      ],
+      "explanation": "【原理】端到端交付和执行过程是不同评价对象。工具异常需记录实际响应和后续行为，不能凭“规划看起来对”豁免失败，也不能仅用失败分数解释所有根因。\n【编辑情境】采购报告算对总价，但曾调用未授权供应商接口；终点合格不能放过越界。最终库存接口超时，则任务失败，同时可记录其澄清/停止而非盲重试的行为。\n【边界】不要求读取模型隐藏思维；最短路径不是唯一正确路径，必要澄清与安全检查不应算无效绕路。\n【面试追问】同参数调用三次必为死循环吗？参考：不是；结合状态进展、轮询契约、重试预算和副作用判断。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "不要求读取模型隐藏思维；最短路径不是唯一正确路径，必要澄清与安全检查不应算无效绕路。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 414,
+          "line_end": 445
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 599,
+          "line_end": 613
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确Agent 的终点与轨迹怎样分工的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.grader-selection.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.grader-selection"
+      ],
+      "revision": 1,
+      "position": 3501,
+      "title": "评分器按可验证对象选择",
+      "kind": "场景判断",
+      "prompt": "系统输出退款JSON和自然语言理由。Schema通过、理由与参考答案很相似，却把“不允许”写成“允许”。各类评分器应怎样分工？",
+      "answer_short": "确定字段类型和业务不变量用规则；语义相似只作候选线索，不能证明否定和事实正确；有依据的复杂判断用Rubric与模型或人工，争议和高风险样本复核。",
+      "required_points": [
+        "硬断言检查结构和明确可计算约束",
+        "相似分高不证明事实正确",
+        "复杂语义结合依据判分并保留人工复核"
+      ],
+      "explanation": "【原理】评分器能力由检查对象决定。Schema看结构，执行测试看实际结果；词向量近邻容忍改写也可能把相反命题看得近。语义蕴含或裁判仍是可犯错模型。\n【编辑情境】JSON金额字段类型正确但超出可退金额，可写规则拦截；理由否定被反转则对照政策逐事实检查，不能用关键词“退款”通过。\n【边界】规则也有编写、计算和维护成本；不能把敏感词出现一律等同违规，例如引用举报内容。\n【面试追问】代码生成怎样判？参考：在隔离环境执行有真值的测试，另查权限与副作用，不只比较代码文本。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "规则也有编写、计算和维护成本；不能把敏感词出现一律等同违规，例如引用举报内容。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 242,
+          "line_end": 260
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 326,
+          "line_end": 341
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确评分器按可验证对象选择的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.production-benchmark.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.production-benchmark"
+      ],
+      "revision": 1,
+      "position": 3502,
+      "title": "通用榜单为何不能代替应用评测",
+      "kind": "对比",
+      "prompt": "通用榜单更高的模型要替换企业售后助手。Benchmark与生产Evals分别测什么，为什么排名不够支持这个替换？",
+      "answer_short": "榜单测特定公开任务与设置下的模型表现；生产评测测实际知识、Prompt、工具、权限和用户分布中的应用行为。榜单可筛候选，替换需要本业务任务、失效代价与资源约束证据。",
+      "required_points": [
+        "说明评估对象与任务分布不同",
+        "生产系统包含模型以外的知识和工具条件",
+        "排名是候选信息，不能直接推断业务可靠性"
+      ],
+      "explanation": "【原理】测试结论只在其任务与执行条件下成立。即便公开榜单没有污染，选择题成绩也不等于会按公司退款状态操作；企业内部高分也不能代表所有未来流量。\n【编辑情境】模型算术榜单更高，却在售后工具调用时漏传订单地区。应用迁移先对照真实状态和约束，避免只拿榜单作准入。\n【边界】不把Benchmark描述为“通用智力上限”或都只有单行题，也不认为所有公开集必已污染。\n【面试追问】什么时候可以用榜单？参考：初筛能力方向，再用目标任务验证排序是否可迁移。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "不把Benchmark描述为“通用智力上限”或都只有单行题，也不认为所有公开集必已污染。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 61,
+          "line_end": 91
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确通用榜单为何不能代替应用评测的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.dataset-representation.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.dataset-representation"
+      ],
+      "revision": 1,
+      "position": 3503,
+      "title": "黄金集如何同时反映流量与风险",
+      "kind": "场景判断",
+      "prompt": "大量测试都来自投诉，客服版本在这批题上进步了。能否认为线上整体质量同样提高？怎样组织有代表性的评估集？",
+      "answer_short": "投诉集适合测已知风险，不能代表总体流量。保留高频真实分布集和风险挑战集，标注来源、场景、事实约束与版本，分开报告或按明确权重汇总；合成样本需人工核对并与真实任务验证。",
+      "required_points": [
+        "区分风险挑战集与总体代表集",
+        "样本记录场景、依据、来源和版本",
+        "不把坏例或合成数据分数直接外推线上总体"
+      ],
+      "explanation": "【原理】有意超采样高风险题可避免遗漏，但改变样本比例会改变平均分含义。语义去重应保留地区、否定、时间等不同约束，合成题也可能共享生成器盲点。\n【编辑情境】80条都是退货投诉，不能估计全部咨询解决率；另采正常咨询并报告地区/状态切片，风险集保留撤权及已发货等边界。\n【边界】100条、35/35/20/10及坏例30%是原文建议，不是科学通用门槛；异构模型不能自动消除合成偏差。\n【面试追问】没线上流量怎么办？参考：用业务流程和专家构造初始集，标明合成来源，试点后检验真实分布差距。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "100条、35/35/20/10及坏例30%是原文建议，不是科学通用门槛；异构模型不能自动消除合成偏差。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 157,
+          "line_end": 206
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确黄金集如何同时反映流量与风险的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.reference-evidence.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.reference-evidence"
+      ],
+      "revision": 1,
+      "position": 3504,
+      "title": "无参考答案评估仍要有判断依据",
+      "kind": "对比",
+      "prompt": "摘要任务没有唯一标准答案，团队准备用无参考评估让裁判自由打分。Reference-free意味着无需原文或事实标准吗？",
+      "answer_short": "无参考通常是不依赖一条标准答案，仍可需要输入文档、事实约束和Rubric。摘要可核对关键事实、遗漏和无依据主张；有参考评估也应接受等价表达，不把字面匹配当唯一正确。",
+      "required_points": [
+        "区分无标准答案与无证据",
+        "开放输出仍可按源文事实和任务规则评价",
+        "有参考允许语义等价和多个有效表达"
+      ],
+      "explanation": "【原理】参考答案是评价材料之一，任务证据与判据并不因此消失。不同表述可以同样忠实，漂亮摘要若新增未经支持的结论仍是不合格。\n【编辑情境】采购会议摘要没有标准全文，但原录音和明确“不得编造交期”的约束足以检查；漏掉取消订单决定要扣相关维度分。\n【边界】Reference-free不等于裁判仅凭常识补事实；唯一标准答案也不一定适合开放任务。\n【面试追问】参考答案本身错了怎么办？参考：核对权威输入和约束，修订真值版本并重算受影响结果。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "Reference-free不等于裁判仅凭常识补事实；唯一标准答案也不一定适合开放任务。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 219,
+          "line_end": 222
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 302,
+          "line_end": 311
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确无参考答案评估仍要有判断依据的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.rubric-atomic.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.rubric-atomic"
+      ],
+      "revision": 1,
+      "position": 3505,
+      "title": "把评分形容词变成可核查判据",
+      "kind": "机制",
+      "prompt": "退款回答的Rubric只写“专业、准确、友好，1–5分”。如何改成两个审阅者能据同一依据执行的评分规则？",
+      "answer_short": "先规定任务与证据，拆成可观察事实及禁用承诺；给各档行为锚点和扣分/否决条件；要求指出具体证据与缺失项，用校准样本检验分歧后修订。",
+      "required_points": [
+        "判据对应可观察事实及任务约束",
+        "分值档位、扣分与否决条件明确",
+        "用同样校准样本检验执行一致性"
+      ],
+      "explanation": "【原理】形容词容易因个人风格偏好漂移。行为锚点让分数追溯到具体主张，硬性约束可单独判定，避免平均分抵消严重错误；判据有效性仍需实际校准。\n【编辑情境】编辑规则：必须说明退款需按订单状态判断；保证必退即严重错误；正确说明且无承诺为合格。不因多写三段客套话加准确分。\n【边界】先写核验依据再给分可作输出设计，不能要求披露隐藏思维或宣称这样一定正确。\n【面试追问】JSON评分结构正确就可信？参考：只证明可解析；还要抽查证据引用与判据是否真正执行。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "先写核验依据再给分可作输出设计，不能要求披露隐藏思维或宣称这样一定正确。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 302,
+          "line_end": 324
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 626,
+          "line_end": 638
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确把评分形容词变成可核查判据的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.g-eval-expectation.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.g-eval-expectation"
+      ],
+      "revision": 1,
+      "position": 3506,
+      "title": "概率加权评分能解释什么",
+      "kind": "机制",
+      "prompt": "G-Eval式评分中，合法评分4与5的归一化概率分别为0.7和0.3。结果是多少，它能否说明回答有4.3分的真实质量？",
+      "answer_short": "期望分是4×0.7+5×0.3=4.3，反映这个裁判在该评分尺度上的概率加权输出。它比单次整数更细，不表示事实正确概率，也不能修复Rubric偏差或保证降低所有任务的方差。",
+      "required_points": [
+        "正确计算4.3",
+        "概率需对应合法评分并规范化解释",
+        "加权分不等于真值或消除裁判偏差"
+      ],
+      "explanation": "【原理】G-Eval提出按评分词项概率加权获得更细的数值。若只拿到截断的top-token概率，不能把未归一化数直接当完整分布；多Token标签也需一致处理。\n【编辑情境】两份回答裁判都偏爱长文，即使期望分很平滑，错承诺仍可能被高评。该例计算为编辑示例，方法以论文核对。\n【边界】logprobs能力和评分标签影响实现；4.3不是“回答正确概率43%”，也不保证排序与人类一致。\n【面试追问】没有logprobs能照算吗？参考：不能捏造概率；可采用普通评分并校准，重复采样是另一方法。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "logprobs能力和评分标签影响实现；4.3不是“回答正确概率43%”，也不保证排序与人类一致。",
+      "estimated_seconds": 60,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 292,
+          "line_end": 300
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 678,
+          "line_end": 678
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确概率加权评分能解释什么的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.kappa-calibration.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.kappa-calibration"
+      ],
+      "revision": 1,
+      "position": 3507,
+      "title": "一致性为何不能证明标注正确",
+      "kind": "机制",
+      "prompt": "两位标注者观察一致率Po=0.9，按各自类别边际估计偶然一致率Pe=0.8。Cohen’s Kappa是多少？怎样解释？",
+      "answer_short": "Kappa=(Po−Pe)/(1−Pe)=0.5，扣除了类别分布导致的偶然一致。它描述两人的分类一致性，不能证明两人都对；结合混淆表、类别与分歧依据校准Rubric，而非套统一发布线。",
+      "required_points": [
+        "算出0.5并解释偶然一致修正",
+        "类别边际分布会影响Pe",
+        "高一致不证明真值，需核验分歧和错误类型"
+      ],
+      "explanation": "【原理】当大多数样本都属于“合格”，全部判合格就可能产生高表面一致。Kappa适用于明确类别和两位评价者，序数评分可考虑适合的加权形式；选择方法要匹配评分任务。\n【编辑情境】编辑例：两人都极少标“越权”，90%一致掩盖越权漏报。看关键类的争议样本及依据，比只盯总体数值更有用。\n【边界】原文0.7/80%不是通用可信门槛；人类也会共同误判，Kappa不是准确率。\n【面试追问】Pe=1怎么办？参考：公式分母为零，不能报告普通Kappa；查看类别退化并补充更有信息的样本。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "原文0.7/80%不是通用可信门槛；人类也会共同误判，Kappa不是准确率。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 313,
+          "line_end": 324
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 626,
+          "line_end": 638
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确一致性为何不能证明标注正确的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.paired-regression.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.paired-regression"
+      ],
+      "revision": 1,
+      "position": 3508,
+      "title": "非确定输出如何做同题回归",
+      "kind": "场景判断",
+      "prompt": "旧Prompt本次通过90题，新Prompt通过92题，测试各跑了一次且有部分超时。能否断言新版本更好，最小比较应保留什么？",
+      "answer_short": "先固定数据、证据、运行配置及评分版本，逐题配对比较新增改善与退化；超时单列并保持分母，必要时重复运行评估波动。关键切片与硬约束按预定准入规则判断，小幅总分变化不能单次断言。",
+      "required_points": [
+        "在同任务条件下逐题对照",
+        "记录运行波动和异常，不能删失败样本",
+        "区分总分变化与关键切片/红线"
+      ],
+      "explanation": "【原理】概率系统一次得分受采样和执行环境影响。相同平均分也可能是一批修好、一批退化；可通过同题配对、重复与差异区间区分趋势和噪声，不直接把任何下降都当必退。\n【编辑情境】编辑情境：多答对2道闲聊，却新增1道退款承诺错误；即使总分升高，也应按该风险的准入规则处理，并复测关联场景。\n【边界】没有统计与风险口径，不能宣称90→92显著；合规集零错误不证明未来零风险。\n【面试追问】模型迁移要完全相同Prompt吗？参考：先做可比基线；若需适配，再把适配作为独立变量记录与验证。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "没有统计与风险口径，不能宣称90→92显著；合规集零错误不证明未来零风险。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 45,
+          "line_end": 59
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 451,
+          "line_end": 466
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 640,
+          "line_end": 652
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确非确定输出如何做同题回归的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.cache-identity.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.cache-identity"
+      ],
+      "revision": 1,
+      "position": 3509,
+      "title": "评测缓存必须识别哪些变化",
+      "kind": "故障诊断",
+      "prompt": "评测只按“问题+Prompt”命中旧分数；知识政策、模型或裁判已更新，报告仍很高。错误在哪里，缓存怎么失效？",
+      "answer_short": "输出缓存须区分完整输入、知识/工具环境、模型和运行配置；评分缓存还须区分实际输出、参考依据、Rubric与裁判版本。任一影响结果的条件变化应失效，相同条件复用旧输出也不能测新的随机波动。",
+      "required_points": [
+        "输出缓存键包括影响生成的版本和环境",
+        "评分缓存还包括输出、判据及裁判身份",
+        "变化要重算；复用历史输出不等于重新测可靠性"
+      ],
+      "explanation": "【原理】缓存只在待复用计算的输入和契约相同才有效。模型别名、外部库存、时间等隐藏变化会让同一文本问题产生不同有效答案；生产访问权限变化也不能被缓存绕过。\n【编辑情境】退款政策从14天改为7天，问题和Prompt未改但依据已变；旧“可退”及旧判分应失效。裁判Rubric变更只重判已有输出，可与重生成分开。\n【边界】原文仅hash输入/Prompt不足；不缓存权限拒绝再跨用户共享，也不把缓存省钱当回归执行证据。\n【面试追问】不能固定外部系统版本怎么办？参考：记录快照/工具模拟或实时状态，承认不可比范围并触发失效。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "原文仅hash输入/Prompt不足；不缓存权限拒绝再跨用户共享，也不把缓存省钱当回归执行证据。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 491,
+          "line_end": 499
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 615,
+          "line_end": 624
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确评测缓存必须识别哪些变化的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.cascade-audit.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.cascade-audit"
+      ],
+      "revision": 1,
+      "position": 3510,
+      "title": "级联评分怎样防止错误被提前放过",
+      "kind": "机制",
+      "prompt": "为省费用，用小模型将“大多数合格答案”直接判通过，仅争议题送强裁判。怎样验证这条级联没有漏掉严重错误？",
+      "answer_short": "每层只按已验证判据路由；对提前通过和拒绝都抽取审计样本，检查假通过、假拒绝及关键切片；节省成本需连同漏判代价比较，变化后重校准，不能只看最终争议队列。",
+      "required_points": [
+        "每层出口都需要可靠性证据",
+        "抽检提前通过与拒绝以发现选择性漏判",
+        "同时报告成本与关键错误，不用任意比例保证省钱"
+      ],
+      "explanation": "【原理】级联改变了后层看到的样本分布。如果只复核低置信样本，早期模型的自信错误永远不进入仲裁；硬格式错误能直接失败，语义通过需要更谨慎的证据。\n【编辑情境】小模型认为写得流畅的退款答复合格，但有保证赔付承诺；从自动通过池抽查发现漏判后，增加相应判据并重跑相关集。\n【边界】“低置信”不自动可靠；原文5%人工/70%节省不是承诺，不能用只看争议集的准确率描述全链路。\n【面试追问】是不是必须四层？参考：不必；可用规则+人工，按已观察规模和收益增加层次。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "“低置信”不自动可靠；原文5%人工/70%节省不是承诺，不能用只看争议集的准确率描述全链路。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 326,
+          "line_end": 343
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 615,
+          "line_end": 624
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确级联评分怎样防止错误被提前放过的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m25.badcase-curation.001",
+      "lesson_source_key": "第3章-技术攻克/3.25-Evals.md",
+      "concept_keys": [
+        "interview.m25.badcase-curation"
+      ],
+      "revision": 1,
+      "position": 3511,
+      "title": "投诉信号怎样变成有真值的回归用例",
+      "kind": "机制",
+      "prompt": "系统自动把点踩、重问和提前退出都收入Badcase，给当前回答判错后进入黄金集。为什么不可靠，正确的入库链路是什么？",
+      "answer_short": "这些是待调查信号，可能来自网络、任务完成或偏好。保留必要环境并脱敏，人工或可验证依据确认失效与期望行为，标签化去重并版本入库；修复后测该例与相关回归，不能把未核实反馈当真值。",
+      "required_points": [
+        "显式/隐式反馈是线索而非自动真值",
+        "保留脱敏证据，核验原因与期望行为",
+        "有约束标签、版本和回归验证后再入库"
+      ],
+      "explanation": "【原理】信号到用例之间需要质量控制。脱敏不能删掉地区/时间等决定答案的条件；去重也不能合并相似但约束相反的请求。回归样本应可重复执行并可判定。\n【编辑情境】用户退出可能已经找到退款入口；实际坏例是助手把已发货订单直接取消。用脱敏订单状态和动作日志建立期望拒绝/澄清的用例。\n【边界】自动入库并不自动形成可靠“飞轮”；真实用户样本不得连同身份和凭证裸存评测库。\n【面试追问】修好一个case就删掉吗？参考：保留有代表性的历史回归，另补近似反例；更新集时版本化说明取舍。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "自动入库并不自动形成可靠“飞轮”；真实用户样本不得连同身份和凭证裸存评测库。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 178,
+          "line_end": 195
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.25-Evals.md",
+          "content_hash": "8a072b63fcd8a30f6b7524ae3ba65efe92a531a7dc36b8e57f46e98656fe8674",
+          "line_start": 468,
+          "line_end": 489
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确投诉信号怎样变成有真值的回归用例的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m25.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    }
+  ]
+}

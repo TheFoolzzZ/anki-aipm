@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-22",
+  "module_id": "3.7",
+  "relations": [
+    {
+      "from": "ch03.interview.m07.unigram-mechanism.001",
+      "to": "ch03.tokenization.bpe-process.001",
+      "type": "compare",
+      "reason": "概率裁减与频率合并不同"
+    },
+    {
+      "from": "ch03.tokenization.sentencepiece-layer.001",
+      "to": "ch03.interview.m07.unigram-mechanism.001",
+      "type": "extension",
+      "reason": "框架支持Unigram但不等于算法"
+    },
+    {
+      "from": "ch03.interview.m07.chinese-ambiguity.001",
+      "to": "ch03.tokenization.subword-tradeoff.001",
+      "type": "extension",
+      "reason": "把子词边界用于中文业务歧义"
+    },
+    {
+      "from": "ch03.tokenization.language-measurement.001",
+      "to": "ch03.tokenization.subword-tradeoff.001",
+      "type": "prerequisite",
+      "reason": "先理解词表与序列长度取舍再测语言差异"
+    }
+  ]
+}

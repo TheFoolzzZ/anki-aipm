@@ -1,0 +1,247 @@
+{
+  "batch_id": "ch03-interview-20261001-m13",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m13.skill-layers.001",
+      "lesson_source_key": "第3章-技术攻克/3.13-SKILL.md",
+      "concept_keys": [
+        "skill-layers"
+      ],
+      "revision": 1,
+      "position": 2301,
+      "title": "Skill的语境与工具调用层级",
+      "kind": "对比",
+      "prompt": "有人把“查询订单函数”和“含SKILL.md、参考资料、脚本的操作手册包”都称为Skill。两者如何区分？为什么加载Skill不代表执行了业务操作？",
+      "answer_short": "本模块主要把Skill用作可调度能力封装，描述输入、执行和输出，可由函数/插件实现；Agent Skills开放格式则用SKILL.md及可选资源组织知识和工作流程，可能调用多个工具，也可只指导阅读分析。加载说明进入上下文；工具调用请求与真正执行、业务完成仍是不同事件。",
+      "required_points": [
+        "分别说清泛化能力封装与SKILL.md流程/资源包的语境",
+        "Skill可能组合多个工具或只含知识指引，不与单个Function Call一一对应",
+        "加载说明、生成调用与业务执行分开，按真实结果确认完成"
+      ],
+      "explanation": "原文L37–61将Skill定义为原子能力、Function Calling的产品化封装，这是本课的分析语境，不是统一标准或全部品牌的命名约定。2026-10-01核对Agent Skills第一方格式：目录以SKILL.md的元数据和说明为入口，可按需包含脚本、参考和资源；发现时只暴露名称描述，匹配后才加载完整指引，再按需执行或读取。编辑情境中，“退货调查”包可以指导先查订单、取制度、核对条件，并调用不同工具；它没有因被加载就生成真实退货单。查询函数是可执行接口，而流程包提供怎么完成任务的知识，二者可搭配也可独立。执行和授权由宿主与业务系统处理，不因包自述允许就获得更大权限。\n【面试追问】流程包没有脚本还能是Agent Skill吗？参考：可以，脚本是可选资源；它也可能仅提供规范、模板和操作步骤。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "不把所有Skill当单个函数；不把Agent Skills包装称为训练模型新参数，也不把开放格式等同某一家独占功能。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.13-SKILL.md",
+          "content_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+          "line_start": 35,
+          "line_end": 61
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.13-SKILL.md",
+          "content_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+          "line_start": 67,
+          "line_end": 71
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m13.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m13.intent-routing.001",
+      "lesson_source_key": "第3章-技术攻克/3.13-SKILL.md",
+      "concept_keys": [
+        "intent-routing"
+      ],
+      "revision": 1,
+      "position": 2302,
+      "title": "意图路由怎样避免误动作",
+      "kind": "机制",
+      "prompt": "用户说“别发邮件，先帮我写封草稿”。关键词规则命中“邮件”便调发送工具。如何比较规则、模型和混合意图识别，并修正这条路由？",
+      "answer_short": "规则在明确格式或稳定条件下快速可控，模型可处理灵活表达但也会误判；混合策略用确定信号缩小候选，歧义交模型或澄清，不能关键词命中就执行写操作。该请求的目标是写草稿、禁止发送；还要验证参数和授权，路由正确也不代表动作合法。",
+      "required_points": [
+        "说明规则、模型、混合的职责及局限，混合不必固定规则优先",
+        "保留否定、生成/发送动作区别，不把关键词当完整意图",
+        "意图不确定时澄清，选择能力后仍独立检查参数与授权"
+      ],
+      "explanation": "原文给出关键词、模型和混合方法。编辑修正：规则也能编码明确否定，模型理解不要求唯一某种Function Calling接口，原文“命中则直接调用”只适合经定义的安全范围。编辑情境的“邮件”同时出现在写草稿、检索已发邮件和发送邮件中，动作差异决定副作用；先区分请求要生成文本还是发往外部，不能用同一词触发写接口。模型路由可利用完整句子和候选描述，但并不因此获得授权，执行器仍核对目标和禁止事项。可保留草稿、发送、禁止发送和多意图对照例，检查选错工具与错误动作，不能只看最终回复自称未发送。混合策略是组合确定规则与语义判断，具体次序按任务选择。\n【面试追问】规则效率高是否所有任务先规则？参考：取决于规则覆盖和误动作代价；脆弱关键词可能增加错误，需分层对照。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "路由标签正确不保证参数正确或权限合法；少量提示词示例不能覆盖所有否定和多意图。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.13-SKILL.md",
+          "content_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+          "line_start": 73,
+          "line_end": 141
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m13.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m13.result-contract.001",
+      "lesson_source_key": "第3章-技术攻克/3.13-SKILL.md",
+      "concept_keys": [
+        "result-contract"
+      ],
+      "revision": 1,
+      "position": 2305,
+      "title": "结果契约怎样驱动后续决策",
+      "kind": "机制",
+      "prompt": "天气工具有时返回一句“没有找到”，有时返回空JSON。为什么稳定的成功/失败返回契约有用？缺城市和服务暂不可用应引导Agent怎样做？",
+      "answer_short": "返回需区分成功数据、失败代码和可安全展示的信息，并关联原调用。城市不存在应澄清/纠正输入，服务暂不可用按明确策略有限重试或降级；输出契约让后续决策依据状态，而不是把空对象误认成成功。能否重试还取决于动作副作用和执行状态。",
+      "required_points": [
+        "成功与失败状态及错误类别稳定可解析，结果能关联原调用",
+        "区分输入问题与暂时服务故障，据错误类别澄清/有限重试/降级",
+        "失败和未知执行状态不同，写动作不能套用读请求重试策略"
+      ],
+      "explanation": "原文建议success、data、error_code、error_message与suggestions帮助Agent决策。编辑补充：字段名不是统一协议，重点是输入输出契约稳定、可判定，应用既可用JSON也可采用其他已明确格式。城市查不到属于信息缺口，反复发送相同参数不会变正确；服务暂时故障可以在预算内重试并说明暂不可用。可展示的建议也要来自可验证数据，不能把错误对象中未经检查的内容当新指令。编辑情境保留请求标识，避免并行北京/上海查询错配结果；失败不能返回貌似正常的默认天气。若是订单提交超时，需要先查业务状态，详细恢复复用3.12卡，本卡只考结果契约如何给控制流信号。\n【面试追问】统一返回success=false足够吗？参考：还需区分错误原因和执行状态以决定恢复；否则看起来结构化，实际无法安全分流。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "HTTP成功不一定业务成功；错误码需要明确含义，不能所有失败都叫未知错误并无限重试。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.13-SKILL.md",
+          "content_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+          "line_start": 261,
+          "line_end": 269
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.13-SKILL.md",
+          "content_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+          "line_start": 342,
+          "line_end": 366
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m13.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m13.orchestration-dependencies.001",
+      "lesson_source_key": "第3章-技术攻克/3.13-SKILL.md",
+      "concept_keys": [
+        "orchestration-dependencies"
+      ],
+      "revision": 1,
+      "position": 2306,
+      "title": "按依赖选择串行并行条件循环",
+      "kind": "场景判断",
+      "prompt": "任务是比较北京和上海天气，并在用户选定城市后创建日程。如何安排独立查询与依赖动作？四类编排各解决什么控制问题？",
+      "answer_short": "两地查询输入已知且相互独立时可并行；创建日程依赖用户选定城市，应在结果和选择确定后串行。条件决定满足何种业务条件才能进入分支，循环用于尚缺结果的再次尝试并有停止/预算边界。编排必须保留数据依赖和失败状态，不能为提速并发有依赖的写动作。",
+      "required_points": [
+        "串行用于前一步结果依赖，并行只用于输入明确且无冲突的独立工作",
+        "条件分支依据实际返回和业务规则，用户选择不能用模型臆测替代",
+        "循环设完成/无进展/预算停止，汇总部分失败并守住用户硬条件"
+      ],
+      "explanation": "原文列串行、并行、条件和循环，但类型不是按任务文本出现顺序机械选择。编辑情境中两地天气不依赖彼此，所以同时查可降低等待；订在哪座城市却必须等待明确选择，不能一边查一边创建两个日程再删其中一个。条件分支把真实状态与规则连接，如服务失败时提示待查询，而不是用默认晴天继续后续安排。循环搜索有位餐厅时，需要检查新增信息与可接受范围；没有用户授权就不能为凑结果扩大预算、变更日期或地点。部分分支失败时可报告已核实的北京数据及上海缺口，再决定继续或交接，不能把缺失写成不需要。并行增加并发负载，费用和上限也必须统一计量。\n【面试追问】北京查到、上海超时就整批重做吗？参考：保留已成功结果和获取时间，按时效/任务需要重查失败部分，避免重复动作。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "并行不是万能提速；循环不准默默放宽用户硬条件；补偿操作本身可能有副作用，需要规则与授权。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.13-SKILL.md",
+          "content_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+          "line_start": 372,
+          "line_end": 423
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m13.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m13.skill-portfolio.001",
+      "lesson_source_key": "第3章-技术攻克/3.13-SKILL.md",
+      "concept_keys": [
+        "skill-portfolio"
+      ],
+      "revision": 1,
+      "position": 2307,
+      "title": "能力拆分怎样对齐场景与职责",
+      "kind": "场景判断",
+      "prompt": "客服Agent要答产品政策、查订单、提交退货及汇总销售。如何分类并拆成可维护能力，为什么不能照“成熟期15–30个Skill”确定数量？",
+      "answer_short": "先按场景产出区分知识问答、只读订单查询、退货写动作和销售汇总，再定义每项的输入输出、失败和权限边界；执行方式可用检索/API/数据库，与功能分类是不同维度。按核心用户价值、错误代价和依赖排优先级，数量与粒度依真实场景和选择/维护成本决定。",
+      "required_points": [
+        "按功能/用户产出分类，执行渠道与风险等级分别登记，不混为一张互斥名单",
+        "拆分明确职责、参数、结果错误与权限边界，复杂任务通过编排组合",
+        "先看价值、风险和依赖优先级，数量/原子粒度不是固定最优"
+      ],
+      "explanation": "原文按功能、执行方式和权限三个轴分类，并给场景→拆分→优先级→接口→安全→验证流程。编辑情境的政策问答属于信息与内容服务，订单查询是读业务状态，退货是写业务记录，销售汇总又有聚合口径；不能因都在客服界面就合为一个“处理所有问题”的工具。也不能把每个数据库字段拆一个Skill，导致每步缺少完整业务语义。优先定义调用契约与责任，授权/事务需要一致的动作可以由安全业务接口封装；在Agent侧仍把独立选择和审批步骤分清。先交付核心高频或高代价缺口，并验证误选、参数、结果与实际动作，真实证据再决定是否分组或动态暴露候选。功能多不一定有价值，数字门槛不能替代场景覆盖和维护证据。\n【面试追问】只读查询能定为零风险吗？参考：不能；客户隐私、跨租户访问和组合外发仍受权限与数据边界约束，复用3.12跨工具安全卡。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "“一个Skill只做一件事”是职责原则，不要求只调用一个函数；原文固定数量没有通用实证依据。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.13-SKILL.md",
+          "content_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+          "line_start": 145,
+          "line_end": 176
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.13-SKILL.md",
+          "content_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+          "line_start": 429,
+          "line_end": 467
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m13.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m13.platform-vocabulary.001",
+      "lesson_source_key": "第3章-技术攻克/3.13-SKILL.md",
+      "concept_keys": [
+        "platform-vocabulary"
+      ],
+      "revision": 1,
+      "position": 2308,
+      "title": "平台工具和Skill格式怎样区分",
+      "kind": "对比",
+      "prompt": "团队称OpenAI Function、LangChain Tool、Dify工具节点都是同一种SKILL.md包。请指出三个平台提供的能力形态，并说明哪些契约需要重新适配。",
+      "answer_short": "OpenAI函数工具把名称/参数定义交给模型并由应用执行请求；LangChain Tool把可调用函数及输入输出接入Agent；Dify工具节点把工具行动接入工作流及凭证配置。它们都是能力接入形态，却不自动等同SKILL.md流程包；迁移时要核对参数、结果、错误、身份与执行责任，而非只改显示名称。",
+      "required_points": [
+        "正确列举三种工具/节点形态，区分Agent Skills指引资源包",
+        "比较定义和执行责任，不能把应用执行与平台节点托管混为一谈",
+        "迁移逐项核对输入输出错误与身份凭证，不能只改工具名"
+      ],
+      "explanation": "原文列平台名称和方式，但品牌术语与API会演变。第一方核对（2026-10-01）：OpenAI函数调用描述可用功能并返回请求，应用执行后回传结果；LangChain工具可用函数包装，描述与类型信息参与接口定义；Dify工具节点选择可用工具动作，并配置需要的凭证。编辑情境中，同一个查订单后端可以在三种宿主暴露，但会话、调用关联、授权和错误如何传递仍要由集成实现，不能复制名称就宣称协议兼容。Agent Skills包可能提供调用这些工具的步骤、模板和参考资料，其文件目录属于知识/流程封装层，工具才是执行入口。此卡只学三个代表和责任边界，具体版本代码需另查文档；不背旧Assistants或BaseTool作为唯一设计方式。\n【面试追问】Coze插件也一定是SKILL.md吗？参考：不能根据名称推断；需核对所指产品版本和定义。本文不对未完整读到的Coze细节下结论。\n【自评】三项必答点均独立说清且不犯误区为掌握；追问为拓展，不增加必答范围。",
+      "pitfalls": "同叫Tool或Plugin不代表字段或认证协议相同；文档存在功能不证明本项目集成已运行。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.13-SKILL.md",
+          "content_hash": "df20b62f4687d52956b233054f30d897635ae7b9f95e207ea9ee0848a3f81316",
+          "line_start": 189,
+          "line_end": 255
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m13.md。",
+          "适用的交叉审阅意见已落实，见review-11-14.md。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

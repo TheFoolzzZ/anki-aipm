@@ -1,0 +1,53 @@
+{
+  "module": "3.5",
+  "relations": [
+    {
+      "from": "ch03.interview.m05.scaling-budget.001",
+      "to": "ch03.llm.selection-evidence.001",
+      "type": "extension",
+      "reason": "训练预算规律需回到业务选型评测"
+    },
+    {
+      "from": "ch03.interview.m05.emergence-measurement.001",
+      "to": "ch03.llm.selection-evidence.001",
+      "type": "extension",
+      "reason": "能力跳变测量影响模型采购证据"
+    },
+    {
+      "from": "ch03.interview.m05.preference-dpo.001",
+      "to": "ch03.llm.training-stages.001",
+      "type": "prerequisite",
+      "reason": "比较偏好路线前先理解训练阶段"
+    },
+    {
+      "from": "ch03.interview.m05.icl-vs-training.001",
+      "to": "ch03.llm.generalization.001",
+      "type": "prerequisite",
+      "reason": "上下文示例说明通用能力如何指定任务"
+    },
+    {
+      "from": "ch03.interview.m05.license-evidence.001",
+      "to": "ch03.llm.deployment-tradeoff.001",
+      "type": "extension",
+      "reason": "部署方案还需具体版本许可证据"
+    },
+    {
+      "from": "ch03.interview.m05.refusal-evaluation.001",
+      "to": "ch03.llm.training-stages.001",
+      "type": "extension",
+      "reason": "后训练可用性代价需分层评估"
+    },
+    {
+      "from": "ch03.llm.application-routing.001",
+      "to": "ch03.llm.hallucination-controls.001",
+      "type": "extension",
+      "reason": "外部检索和执行仍需核查事实支持"
+    },
+    {
+      "from": "ch03.interview.m05.scaling-budget.001",
+      "to": "ch03.interview.m04.moe-resources.001",
+      "type": "compare",
+      "reason": "总参数规模与稀疏激活资源不是同一口径"
+    }
+  ]
+}

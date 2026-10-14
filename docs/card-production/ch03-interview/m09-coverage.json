@@ -1,0 +1,326 @@
+{
+  "module_id": "3.9",
+  "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+  "native_objectives": 15,
+  "registered": 15,
+  "practice_completed": 0,
+  "local_cards": 9,
+  "revised_cards": 8,
+  "new_cards": 1,
+  "publication_status": "published_and_verified_2026-10-01",
+  "objectives": [
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O01",
+      "original_text": "- [ ] 我能写出结构清晰的 Prompt（包含背景、任务、约束、格式）",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 629,
+      "decision": "拆分",
+      "reason": "卡给任务契约，T1实际写出可验收模板",
+      "mother_question_id": "M09-A",
+      "card_keys": [
+        "ch03.prompt.task-contract.001"
+      ],
+      "practice_task_ids": [
+        "M09-T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O02",
+      "original_text": "- [ ] 我知道 System Prompt 和 User Prompt 的区别和用法",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 630,
+      "decision": "采用",
+      "reason": "补消息职责独立目标，注入卡只做风险延伸",
+      "mother_question_id": "M09-A",
+      "card_keys": [
+        "ch03.interview.m09.message-responsibility.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O03",
+      "original_text": "- [ ] 我能用 Few-shot 示例教会模型特定任务",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 631,
+      "decision": "拆分",
+      "reason": "卡检查示例选择，T1制作与测试边界示例",
+      "mother_question_id": "M09-A",
+      "card_keys": [
+        "ch03.prompt.few-shot-selection.001"
+      ],
+      "practice_task_ids": [
+        "M09-T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O04",
+      "original_text": "- [ ] 我知道 CoT（Chain-of-Thought）的适用场景",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 632,
+      "decision": "合并",
+      "reason": "CoT与ReAct在同一已知/外部事实对照中辨析",
+      "mother_question_id": "M09-A",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O05",
+      "original_text": "- [ ] 我能使用 CO-STAR 或 RTF 框架设计 Prompt",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 636,
+      "decision": "拆分",
+      "reason": "框架是组织工具；T1分别用CO-STAR/RTF表达同一任务",
+      "mother_question_id": "M09-A",
+      "card_keys": [
+        "ch03.prompt.task-contract.001"
+      ],
+      "practice_task_ids": [
+        "M09-T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O06",
+      "original_text": "- [ ] 我知道如何让模型输出稳定的 JSON",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 637,
+      "decision": "采用",
+      "reason": "稳定JSON分语法、结构、语义三层验收",
+      "mother_question_id": "M09-A",
+      "card_keys": [
+        "ch03.prompt.json-validation.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O07",
+      "original_text": "- [ ] 我能用角色设定（Role Prompting）调整输出风格",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 638,
+      "decision": "拆分",
+      "reason": "角色效用由字段/依据验收，T1另比较面向采购与管理层的风格",
+      "mother_question_id": "M09-A",
+      "card_keys": [
+        "ch03.prompt.task-contract.001"
+      ],
+      "practice_task_ids": [
+        "M09-T1"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O08",
+      "original_text": "- [ ] 我知道 ReAct 框架的基本思想",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 639,
+      "decision": "合并",
+      "reason": "观察驱动决策循环与632行同卡，不复制Agent架构",
+      "mother_question_id": "M09-A",
+      "card_keys": [
+        "ch03.prompt.reasoning-tool-choice.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O09",
+      "original_text": "- [ ] 我能建立 Prompt 版本管理机制",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 643,
+      "decision": "拆分",
+      "reason": "版本记录方法由卡，T2产出实际变更和回退记录",
+      "mother_question_id": "M09-B",
+      "card_keys": [
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "practice_task_ids": [
+        "M09-T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O10",
+      "original_text": "- [ ] 我知道如何评估 Prompt 效果",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 644,
+      "decision": "合并",
+      "reason": "复用回归评估链路，不另造泛评测卡",
+      "mother_question_id": "M09-B",
+      "card_keys": [
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O11",
+      "original_text": "- [ ] 我能通过 Bad Case 分析持续优化 Prompt",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 645,
+      "decision": "拆分",
+      "reason": "坏例不能兼作全部验收集；T2执行归因与回测",
+      "mother_question_id": "M09-B",
+      "card_keys": [
+        "ch03.prompt.regression-versioning.001"
+      ],
+      "practice_task_ids": [
+        "M09-T2"
+      ],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_plus_unperformed_task",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O12",
+      "original_text": "- [ ] 我了解 Prompt 注入的风险和防御措施",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 646,
+      "decision": "采用",
+      "reason": "直接与间接注入强调真实执行轨迹",
+      "mother_question_id": "M09-B",
+      "card_keys": [
+        "ch03.prompt.injection-boundary.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O13",
+      "original_text": "- [ ] 我能判断一个问题是否可以通过 Prompt Engineering 解决",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 650,
+      "decision": "合并",
+      "reason": "可解性与升级决策同一因果诊断",
+      "mother_question_id": "M09-B",
+      "card_keys": [
+        "ch03.prompt.optimization-stop.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O14",
+      "original_text": "- [ ] 我知道什么时候该从 Prompt 优化升级到 RAG 或微调",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 651,
+      "decision": "合并",
+      "reason": "保留按资料/行为缺口分流，无强制升级微调",
+      "mother_question_id": "M09-B",
+      "card_keys": [
+        "ch03.prompt.optimization-stop.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.9",
+      "objective_id": "3.9-O15",
+      "original_text": "- [ ] 我能平衡 Prompt 复杂度与 Token 成本",
+      "source_path": "第3章-技术攻克/3.9-Prompt-Engineering.md",
+      "source_hash": "a2e15497b88e90cc6cc8b1a56dd6d3f531bc8763acab715ba8802d879e16478d",
+      "source_line": 652,
+      "decision": "采用",
+      "reason": "示例收益由本模块检查，总任务成本跨3.8复用",
+      "mother_question_id": "M09-B",
+      "card_keys": [
+        "ch03.prompt.few-shot-selection.001",
+        "ch03.token.optimization-quality.001"
+      ],
+      "practice_task_ids": [],
+      "origin": "原题拆分/改写",
+      "priority": "P0",
+      "review_status": "主编复核通过",
+      "coverage_status": "card_mapping_ready",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ]
+}

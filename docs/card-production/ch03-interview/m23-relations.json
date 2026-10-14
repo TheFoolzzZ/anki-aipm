@@ -1,0 +1,71 @@
+{
+  "module_id": "3.23",
+  "relations": [
+    {
+      "from": "ch03.interview.m23.roc-pr-threshold.001",
+      "to": "ch03.ml.confusion-cost.001",
+      "type": "prerequisite",
+      "reason": "先理解TP/FP/FN/TN分母，再比较跨阈值曲线与选定工作点"
+    },
+    {
+      "from": "ch03.interview.m23.probability-quality.001",
+      "to": "ch03.interview.m23.roc-pr-threshold.001",
+      "type": "compare",
+      "reason": "AUC排序保持不变时，真实标签预测概率仍会改变Log Loss"
+    },
+    {
+      "from": "ch03.interview.m23.r2-baseline.001",
+      "to": "ch03.interview.m23.regression-error-scale.001",
+      "type": "prerequisite",
+      "reason": "R²用残差平方和相对均值基线，先理解平方误差与量纲"
+    },
+    {
+      "from": "ch03.interview.m23.regression-error-scale.001",
+      "to": "ch03.interview.m02.regression-metrics.001",
+      "type": "extension",
+      "reason": "绝对误差与量纲补齐已有零销量MAPE及补货损失"
+    },
+    {
+      "from": "ch03.interview.m23.ndcg-gain.001",
+      "to": "C04",
+      "type": "extension",
+      "reason": "检索集合覆盖之外，还要考等级与位置，不替代Recall分母"
+    },
+    {
+      "from": "ch03.interview.m23.rank-objectives.001",
+      "to": "C04",
+      "type": "compare",
+      "reason": "任一命中、首个位置、多个相关项排序与全相关集合覆盖分工"
+    },
+    {
+      "from": "ch03.interview.m23.text-metric-boundary.001",
+      "to": "C05",
+      "type": "compare",
+      "reason": "文本相似度不证明回答忠实于证据且切题"
+    },
+    {
+      "from": "ch03.interview.m23.drift-detection.001",
+      "to": "ch03.interview.m23.drift-types.001",
+      "type": "prerequisite",
+      "reason": "先明确监测的分布对象，再解释PSI/KS/KL只能提供变化信号"
+    },
+    {
+      "from": "ch03.interview.m23.dashboard-alert.001",
+      "to": "ch03.tech.evaluation-contract.001",
+      "type": "prerequisite",
+      "reason": "指标口径先冻结，受众分层和报警才可行动"
+    },
+    {
+      "from": "ch03.interview.m23.serving-metrics.001",
+      "to": "ch03.agent.trace-task-metrics.001",
+      "type": "extension",
+      "reason": "节点/服务负载单位补充整任务成功与执行代价的评估"
+    },
+    {
+      "from": "ch03.interview.m23.ab-guardrails.001",
+      "to": "ch03.ml.release-recovery.001",
+      "type": "extension",
+      "reason": "扩展已有灰度/A-B证据为推荐代理目标与长期护栏"
+    }
+  ]
+}

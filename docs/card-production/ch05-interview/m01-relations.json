@@ -1,0 +1,32 @@
+[
+  {
+    "from": "C12",
+    "to": "ch03.token.request-monthly-cost.001",
+    "type": "compare",
+    "reason": "两张旧卡原有基础算术重叠；本轮仅兼容修订C12而非新增覆盖，不退役或重设学习状态"
+  },
+  {
+    "from": "ch05.interview.m01.concurrency-billing.001",
+    "to": "ch03.token.request-monthly-cost.001",
+    "type": "extension",
+    "reason": "真实调用用量预算基础上，纠正并发不是Token固定乘数"
+  },
+  {
+    "from": "ch05.interview.m01.paid-cohort.001",
+    "to": "ch03.token.request-monthly-cost.001",
+    "type": "extension",
+    "reason": "完整月度费用后仍需付费人数、免费/重度群体收入和成本，MAU不是收入分母"
+  },
+  {
+    "from": "ch05.interview.m01.cache-economics.001",
+    "to": "ch03.interview.m25.cache-identity.001",
+    "type": "compare",
+    "reason": "Prompt前缀计费缓存与评测输出/评分结果缓存是不同层次与失效条件"
+  },
+  {
+    "from": "ch05.interview.m01.batch-deadline.001",
+    "to": "ch03.interview.m24.failure-policy.001",
+    "type": "extension",
+    "reason": "异步批次须按受理/成功/失败/过期结果处理，折扣不免除业务失败分流"
+  }
+]

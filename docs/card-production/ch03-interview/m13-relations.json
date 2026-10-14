@@ -1,0 +1,35 @@
+{
+  "module_id": "3.13",
+  "relations": [
+    {
+      "from": "ch03.interview.m13.skill-layers.001",
+      "to": "ch03.interview.m12.agent-component-roles.001",
+      "type": "compare",
+      "reason": "能力知识封装与运行系统组件是不同分析层级"
+    },
+    {
+      "from": "ch03.interview.m13.result-contract.001",
+      "to": "ch03.agent.ambiguous-tool-result.001",
+      "type": "compare",
+      "reason": "稳定返回契约与实际执行未知状态需要不同处理"
+    },
+    {
+      "from": "ch03.interview.m13.orchestration-dependencies.001",
+      "to": "ch03.agent.loop-stop-budget.001",
+      "type": "prerequisite",
+      "reason": "循环编排先理解停止与总预算边界"
+    },
+    {
+      "from": "ch03.interview.m13.platform-vocabulary.001",
+      "to": "ch03.interview.m13.skill-layers.001",
+      "type": "prerequisite",
+      "reason": "辨清泛化能力与Agent Skills格式后再比较平台术语"
+    },
+    {
+      "from": "ch03.interview.m13.skill-portfolio.001",
+      "to": "ch03.agent.tool-result-trust.001",
+      "type": "extension",
+      "reason": "能力分类之后还要检查组合数据流风险"
+    }
+  ]
+}

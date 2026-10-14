@@ -1,0 +1,215 @@
+{
+  "batch_id": "ch05-interview-20261002-m01",
+  "status": "accepted",
+  "chapter_position": 5,
+  "cards": [
+    {
+      "canonical_key": "C12",
+      "lesson_source_key": "第5章-AI产品设计/5.1-Token成本.md",
+      "concept_keys": [
+        "token-cost-calculation"
+      ],
+      "revision": 2,
+      "position": 12,
+      "title": "一次文本请求的成本",
+      "kind": "场景判断",
+      "prompt": "假设输入价格为2元/百万Token，输出为8元/百万Token。一次请求输入4,000、输出1,000 Token，费用是多少？忽略缓存、推理及其他计费项，并说明计算口径。",
+      "answer_short": "0.016元：4,000×2÷1,000,000=0.008，1,000×8÷1,000,000=0.008，两项相加。输入应按完整实际请求Token计数；本题价格与排除项是假设，不能拿该结果当实际供应商账单。",
+      "required_points": [
+        "输入和输出按各自单价计费且统一百万单位",
+        "算得0.008+0.008=0.016元",
+        "限定假设计价/排除项，实际应以usage与账单核对"
+      ],
+      "explanation": "沿用C12原题与参数，增强单位、请求边界和计费例外。原文系统Prompt、历史和RAG会计入输入；真实缓存、推理或工具费用须按对应供应商规则分别核对，不用文本字数代替Token。\n【具体情境】若同一次请求已包含历史，把历史再另算会重复；若重试产生第二次实际计费调用，也不能只统计用户点击的一次。数字为练习设定，不代表任何当前模型报价。\n【面试追问】月活能直接乘这个费用当月预算吗？ 参考思路：不能；还需每人请求数、每任务调用/重试、用量分布及其他费用，复用3.8月度预算卡。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "旧卡位置12及token-cost-calculation概念键保留；不同模型不能只按原文旧价格断言等质九倍便宜。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+          "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+          "line_start": 20,
+          "line_end": 39
+        },
+        {
+          "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+          "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+          "line_start": 150,
+          "line_end": 188
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "保持原学习目标C12补强；不再新增同义基础成本卡。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch05.interview.m01.concurrency-billing.001",
+      "lesson_source_key": "第5章-AI产品设计/5.1-Token成本.md",
+      "concept_keys": [
+        "interview.ch05.m01.concurrency-billing"
+      ],
+      "revision": 1,
+      "position": 1102,
+      "title": "并发为什么不是Token账单乘数",
+      "kind": "场景判断",
+      "prompt": "10万月活、人均20次计费调用，每次0.01元；其中全部计费重试已包含在20次中。并发翻倍但总Token和单价不变，API月账单应如何估算？为何不能再乘并发系数？",
+      "answer_short": "API用量费用为100,000×20×0.01=20,000元。按题设并发只改变请求在时间上的分布，不改变Token用量，不能额外翻倍；并发可能引起吞吐/排队限制或额外容量、重试费用，须有实际变动依据并分别计入。",
+      "required_points": [
+        "按实际调用/Token估算20,000元，已含重试不重复加",
+        "相同用量与单价下并发不是固定乘数",
+        "额外容量/重试等仅在实际发生或有方案依据时计入"
+      ],
+      "explanation": "原文月度公式乘“并发系数”，案例再加20%高峰冗余，两者不能视作按Token API的通用收费。编辑补充：容量规划的峰值要求与用量账单分开；预留吞吐/自建固定容量可能有独立合约费用，应列出来而不是藏在系数。\n【具体情境】两百万请求集中白天会产生高峰限制，但若排队后全部完成且计费量不变，用量账单仍是2万元。若超时让调用重试而重复计费，新增实际Token才提高这部分费用。\n【面试追问】如果20次原本只含用户任务而每任务调用两次？ 参考思路：必须先换成实际计费调用或逐请求Token，用题目的单位边界重新算；不能混用任务数与调用数。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "不能把预算预留当已发生费用；失败计费条件依供应商usage核对。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+          "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+          "line_start": 190,
+          "line_end": 217
+        },
+        {
+          "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+          "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+          "line_start": 417,
+          "line_end": 419
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "纠正原文明显口径错误；区别3.8通用月度请求计算，核心是并发/容量与计费解耦。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch05.interview.m01.paid-cohort.001",
+      "lesson_source_key": "第5章-AI产品设计/5.1-Token成本.md",
+      "concept_keys": [
+        "interview.ch05.m01.paid-cohort"
+      ],
+      "revision": 1,
+      "position": 1103,
+      "title": "平均用户成本为何不能证明订阅盈利",
+      "kind": "场景判断",
+      "prompt": "假设10万月活，月API总费用20,000元，只有1,000人付费且每人9.9元，费用全部由本产品承担。原文按平均每用户费用较低就说“有很大毛利空间”，这里可怎样检验？",
+      "answer_short": "月订阅收入1,000×9.9=9,900元，减API费用后为−10,100元，尚未计支付、服务器、支持等费用；不能用月活替代付费人数。应分付费/免费及轻重使用群体估算费用与收入，检查重度尾部、权益和增长假设。",
+      "required_points": [
+        "收入分母是付费人数，算得9,900−20,000=−10,100元",
+        "这只是扣API后的贡献，其他费用未计，不能声称整体利润",
+        "分付费/免费与使用分布估算，评估重度尾部和权益"
+      ],
+      "explanation": "编辑补充：这是单位经济性教学情境，所有金额是假设，不给实际定价建议。原文平均成本只说明总体用量平均，无法推出每个付费用户盈利；免费用户的服务成本也需收入覆盖。\n【具体情境】即使整体平均0.2元/MAU，免费用户占99%时收入不足；若少数付费用户产生大量长对话，也需看每群体费用及权益，而非直接承诺无限用量。\n【面试追问】限制输出到最短是否就能解决？ 参考思路：不一定；费用还含输入和重试，过度压缩可能损害完成率。先量化成本与价值，质量优化复用3.8卡。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "扣API后的贡献不是会计毛利或净利；不把合成例子当真实产品财务状况。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+          "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+          "line_start": 199,
+          "line_end": 217
+        },
+        {
+          "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+          "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+          "line_start": 378,
+          "line_end": 385
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "独立补齐付费分母与成本分布；不是重复单次Token算术。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch05.interview.m01.cache-economics.001",
+      "lesson_source_key": "第5章-AI产品设计/5.1-Token成本.md",
+      "concept_keys": [
+        "interview.ch05.m01.cache-economics"
+      ],
+      "revision": 1,
+      "position": 1104,
+      "title": "Prompt缓存的省钱条件",
+      "kind": "场景判断",
+      "prompt": "客服每次都发送同一段长知识背景。为什么“支持Prompt缓存”不等于这段输入以后免费？怎样判断是否值得采用？",
+      "answer_short": "区分未缓存输入、缓存写入、命中读取和输出的计费，按供应商规则估算总费用。只有满足前缀/长度/有效期等命中条件、复用足够频繁时，读取节省才可能超过写入及失效成本；核对usage命中，不用固定节省比例替代实测。",
+      "required_points": [
+        "缓存写/读/未缓存及输出可能各有收费，非免费",
+        "核对前缀、长度、有效期及复用频率决定命中",
+        "比较完整费用并以usage验证，不写死省钱比例"
+      ],
+      "explanation": "编辑补充：[Claude prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)（核对2026-10-02）区分缓存写入和命中收费，并要求可复用前缀；具体费率/最小长度依模型规则。原文“避免重复计费”过强，输出和新增输入仍应核对。\n【具体情境】假设首次建立缓存后很久才有第二次请求，缓存已失效，可能两次都付建立成本；高频且稳定前缀更可能摊薄写入。把每次变化的用户内容放在前缀前，会影响复用，需按供应商的匹配规则验证。\n【面试追问】Prompt改一个字段会怎样？ 参考思路：视其位置和匹配边界可能使部分或全部缓存失效；检查usage，重新估算，不能用旧命中率保证新版本省钱。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "Prompt缓存与把完整回答缓存给用户是不同方案；不要求背TTL或百分比。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+          "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+          "line_start": 292,
+          "line_end": 302
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "新增缓存写入/命中经济性机制；前20节未有此计费目标。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch05.interview.m01.batch-deadline.001",
+      "lesson_source_key": "第5章-AI产品设计/5.1-Token成本.md",
+      "concept_keys": [
+        "interview.ch05.m01.batch-deadline"
+      ],
+      "revision": 1,
+      "position": 1105,
+      "title": "批处理折扣和交付时限的取舍",
+      "kind": "场景判断",
+      "prompt": "供应商Batch API有折扣。实时聊天客服和次日交付的商品描述各能否直接改为Batch？如何定义一次批次“完成”，避免把提交成功当任务成功？",
+      "answer_short": "实时客服通常不能用异步批次替代即时响应；允许延迟的商品描述可比较Batch。提交只说明受理，要按逐请求ID核对成功、失败/过期、结果可取和交付时限；算完整费用与失败处理后再采用，不把折扣当按时成功保证。",
+      "required_points": [
+        "按业务响应时限区分实时与可异步任务",
+        "受理不等于完成，逐请求核对结果/失败/过期和期限",
+        "用完整费用与交付能力比较，不只看折扣"
+      ],
+      "explanation": "编辑补充：[Claude batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing)（核对2026-10-02）提供异步请求处理，可能过期，结果与请求按ID匹配；时限与模型支持随服务规则核对。原文只说打包折扣，没有说明失败和交付边界。\n【具体情境】假设夜间提交1000条描述，截止前998条成功、2条过期；业务完成率是998/1000，不能因为批次已结束就显示1000全部完成，缺失条目应单独处理并避免重生成成功项。\n【面试追问】把实时用户积攒一小时提交是否划算？ 参考思路：即使单位价低也可能违反响应承诺导致用户流失；先满足产品时限，离线场景再比较节省。\n【自评】必答点全部正确且无核心误区即记得，情境/追问供理解，不要求逐字背诵。",
+      "pitfalls": "普通HTTP并发/客户端拼批不自动获得供应商Batch折扣；不背固定25–50%。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+          "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+          "line_start": 304,
+          "line_end": 314
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "新增异步计费服务与逐项交付边界；区别3.24通用工作流调度。",
+          "机制、案例和追问为编辑补充时已标明，原文不等于事实正确",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-course27-30.md；实践及UI未执行"
+        ]
+      }
+    }
+  ]
+}

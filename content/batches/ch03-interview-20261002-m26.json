@@ -1,0 +1,539 @@
+{
+  "batch_id": "ch03-interview-20261002-m26",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m26.fde-delivery.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.fde-delivery"
+      ],
+      "revision": 1,
+      "position": 3601,
+      "title": "FDE 如何把现场问题转成可运行交付",
+      "kind": "概念",
+      "prompt": "客户说“经常缺货”，FDE 与 PM、客户业务负责人怎样协作把它变成可运行方案？FDE是否只是配置本体的岗位？",
+      "answer_short": "FDE贴近客户问题并承担工程落地，将业务流程、数据和平台能力连接成可运行方案；PM协作明确价值、范围与验收，客户确认业务规则和责任。职位边界因组织而异，本体只是可能手段。",
+      "required_points": [
+        "FDE连接客户问题与工程实现",
+        "需求、数据、运行方案及交付证据形成闭环",
+        "本体不是FDE唯一工作，职责需按组织确认"
+      ],
+      "explanation": "【原理】原文前言是角色入口；Palantir招聘第一方说明该角色理解客户痛点并设计端到端方案。把具体交接物列出来是编辑扩展，不把品牌岗位叙事当唯一职业定义。\n【编辑情境】从“缺货”追问门店/商品/时间口径，核对库存与订单权威源，做最小补货流程，验证异常、操作责任和实际效果，再交接运行和变更说明。\n【边界】不把FDE当销售演示、万能PM或“装上Ontology就成功”；无需所有项目都用Foundry。\n【面试追问】谁负责业务正确性？参考：工程与业务共同明确责任，业务规则和真实验收不能由平台名称代替。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "不把FDE当销售演示、万能PM或“装上Ontology就成功”；无需所有项目都用Foundry。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 3,
+          "line_end": 9
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 79,
+          "line_end": 94
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确FDE 如何把现场问题转成可运行交付的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.ontology-layer.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.ontology-layer"
+      ],
+      "revision": 1,
+      "position": 3602,
+      "title": "本体如何连接业务语义与动作",
+      "kind": "对比",
+      "prompt": "采购系统已有数据表、知识图谱和向量检索。企业操作本体还解决什么，为什么不能把它等同于图数据库或向量库？",
+      "answer_short": "操作本体定义有业务含义的对象、属性、关系和可执行动作，并连接数据与治理。图谱侧重关系知识，向量库侧重相似检索；它们可参与实现，但存储和检索本身不定义订单状态转换、权限与责任。",
+      "required_points": [
+        "本体包含业务对象/关系及动作治理语义",
+        "图关系或向量相似不等于动作契约",
+        "逻辑模型可以跨物理数据源，不绑定一种数据库"
+      ],
+      "explanation": "【原理】语义层让“门店”“订单”成为可一致引用的业务对象；动作层规定何种条件下能改变什么。Foundry官方区分语义与动态元素；本地Mongo/TuGraph/Event Bus是示例实现。\n【编辑情境】向量检索找到补货政策，仍不知道订单是否已审批、谁可修改；本体建模Store、SKU、PurchaseOrder及提交/审批动作，把执行约束接到权威数据。\n【边界】知识图谱也可以带规则，不把产品类别划成绝对隔离；本体不是LLM准确性或安全的自动保证。\n【面试追问】已有API是否必须重建？参考：可以映射已有模型与受控动作，按语义不一致和治理需求决定投入。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "知识图谱也可以带规则，不把产品类别划成绝对隔离；本体不是LLM准确性或安全的自动保证。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 98,
+          "line_end": 141
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 761,
+          "line_end": 772
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确本体如何连接业务语义与动作的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.object-identity.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.object-identity"
+      ],
+      "revision": 1,
+      "position": 3603,
+      "title": "对象类型与身份怎样稳定对齐",
+      "kind": "场景判断",
+      "prompt": "ERP与采购平台都返回订单ID“123”，租户A/B也可能重复。Agent跨系统引用订单时，Object Type、实例与引用要怎样区分？",
+      "answer_short": "Object Type定义某类业务对象的属性与含义，实例是具体订单。引用需稳定区分类型、来源/租户命名空间及主键，并映射权威记录；不能仅凭裸ID或相似文本合并不同订单。",
+      "required_points": [
+        "类型定义与对象实例分开",
+        "引用包含足以唯一定位的类型与身份命名空间",
+        "跨源映射和去重按业务身份，不能按文本相似随意合并"
+      ],
+      "explanation": "【原理】类型相同不说明同一实例，ID唯一范围也可能只在一系统或租户内。原文ObjectRef{type,id}在单范围成立；跨租户/系统需额外身份约束是编辑扩展。\n【编辑情境】ERP/123映射到采购平台/PO-123需要已确认对照；A/Order/123与B/Order/123保持不同。返回类型化引用方便下一次调用，不意味着客户端可自称租户。\n【边界】Object不必仅是物理实体，也能是交易/概念；“只有AI直接操作才建类型”不是普遍建模规则。\n【面试追问】SKU是类型还是对象？参考：SKU通常是某商品类型的具体实例，不能因名字大写就当Object Type。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "Object不必仅是物理实体，也能是交易/概念；“只有AI直接操作才建类型”不是普遍建模规则。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 115,
+          "line_end": 157
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 286,
+          "line_end": 308
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 2512,
+          "line_end": 2568
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确对象类型与身份怎样稳定对齐的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.link-semantics.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.link-semantics"
+      ],
+      "revision": 1,
+      "position": 3604,
+      "title": "关系类型不是文本相似边",
+      "kind": "场景判断",
+      "prompt": "订单“由门店创建”和“配送到门店”连接同样两类对象。为什么要用不同Link Type？关系权重能否直接当权限？",
+      "answer_short": "Link Type规定关系业务语义、端点类型与基数，实例连接具体对象。创建者与收货方职责不同，需分别建模；边权重可以是推荐特征，但授权应依据明确成员/委派关系及现行策略，不按高相似或高权重授予。",
+      "required_points": [
+        "关系类型表达语义、端点与基数",
+        "同样端点不代表同样业务关系",
+        "推荐强度不替代授权证据"
+      ],
+      "explanation": "【原理】一条边的意义决定查询、动作和审计用途。权重只是可选属性；本地交互衰减模型是推荐设计，不是所有Foundry链接必有方向/权重的统一限制。\n【编辑情境】创建门店可以查询自身订货，但收货门店不一定能改采购审批；多次联系供应商增加相似/强度也不自动获得付款权。\n【边界】不能从先后发生推出因果；不是所有业务关系都需要图存储，但AI不推理的关系也可能有工作流价值。\n【面试追问】需要反向边吗？参考：先确定查询语义与平台可反向遍历能力，避免为展示重复存同一事实。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "不能从先后发生推出因果；不是所有业务关系都需要图存储，但AI不推理的关系也可能有工作流价值。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 123,
+          "line_end": 127
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 499,
+          "line_end": 539
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 1028,
+          "line_end": 1061
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确关系类型不是文本相似边的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.action-function.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.action-function"
+      ],
+      "revision": 1,
+      "position": 3605,
+      "title": "Action Type 与 Function 如何配合",
+      "kind": "对比",
+      "prompt": "Foundry中的取消订单Action Type与执行取消逻辑的Function分别是什么？为什么不能沿用原文“Function=Action Type”作为定义？",
+      "answer_short": "Action Type描述一次可提交的对象/属性/关系变化及相关条件和副作用；Function承载可复用业务逻辑，可能读或计算，也可为Action提供修改逻辑。二者可组合，动作权限/提交条件不能被函数代码名称代替。",
+      "required_points": [
+        "区分动作定义与业务逻辑实现",
+        "Function可用于查询/计算，不都等于修改动作",
+        "Function-backed Action连接逻辑与动作治理"
+      ],
+      "explanation": "【原理】原文自建注册表把操作统一称Function，属于本地设计。Foundry第一方将Action Type和Function分开；修改逻辑通过函数支持Action只是实现选择，不是二者同义。\n【编辑情境】cancelOrder函数计算是否可取消；CancelOrder Action配置订单参数、提交条件、修改状态及通知。一个Action可用规则而不必一个专用函数。\n【边界】不宣称函数只可绑定动态对象或每个Action恰有一个Function；不要把自建ConfirmLevel枚举当官方API。\n【面试追问】一个函数能给多个动作复用吗？参考：可以按平台约束复用逻辑，动作提交契约仍各自定义。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "不宣称函数只可绑定动态对象或每个Action恰有一个Function；不要把自建ConfirmLevel枚举当官方API。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 128,
+          "line_end": 135
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 323,
+          "line_end": 363
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 813,
+          "line_end": 856
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确Action Type 与 Function 如何配合的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.intent-granularity.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.intent-granularity"
+      ],
+      "revision": 1,
+      "position": 3606,
+      "title": "动作按完整意图封装仍要定义失败边界",
+      "kind": "场景判断",
+      "prompt": "“创建会议并邀请三人”被拆成四次模型调用，用户收到重复通知。应怎样调整动作粒度，又怎样处理邀请部分失败？",
+      "answer_short": "可将用户的完整意图封装为受控复合动作，在内部完成创建与邀请并统一通知；仍需明确校验、授权、幂等与部分失败状态，跨系统步骤不能因一次调用就声称原子成功。",
+      "required_points": [
+        "减少模型自行串联底层细碎步骤",
+        "复合动作有明确参数、结果与通知语义",
+        "内部步骤仍需幂等及部分失败/补偿契约"
+      ],
+      "explanation": "【原理】意图级接口把可确定编排交给后端，降低模型遗漏步骤的机会。一次调用不等于一个数据库事务；邀请API结果和会议创建状态需分别记录。\n【编辑情境】会议创建成功，两人邀请成功、一人邮箱无效；返回会议引用与逐项结果，只重试失败邀请，避免重复建会议或重复推送。\n【边界】“一个意图=一个Function”是启发式；差异权限或不可回滚步骤可能需要分阶段确认，不能无限合并。\n【面试追问】合并后还需预览吗？参考：如影响他人，应展示准确参与人/时间/动作范围并绑定实际参数。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "“一个意图=一个Function”是启发式；差异权限或不可回滚步骤可能需要分阶段确认，不能无限合并。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 159,
+          "line_end": 171
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 398,
+          "line_end": 410
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 712,
+          "line_end": 720
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确动作按完整意图封装仍要定义失败边界的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.projection-authority.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.projection-authority"
+      ],
+      "revision": 1,
+      "position": 3607,
+      "title": "对象投影与权威状态怎样分工",
+      "kind": "故障诊断",
+      "prompt": "对象浏览器缓存显示订单未发货，权威订单系统刚变为已发货。Agent据缓存取消订单，为什么错？读写责任应怎样安排？",
+      "answer_short": "投影可服务浏览和上下文，决定取消是否允许须读受信任的当前权威状态并在写入时校验。成功写入后同步或可靠更新投影，记录版本和延迟；本地Object Store为缓存的设计不代表所有Foundry对象都非权威。",
+      "required_points": [
+        "区分上下文投影与该业务事实的权威来源",
+        "执行时依据当前状态并校验并发变化",
+        "更新投影的滞后要可观察和修复"
+      ],
+      "explanation": "【原理】缓存过期会让语义正确的请求在当前状态无效。读取后到写入间仍可能变化，需要状态条件/版本检查；Resolver统一入口本身不能保证缓存总新鲜。\n【编辑情境】预览时未发货，确认时已出库；后端拒绝旧条件取消并说明新状态，不能只检查用户点过确认。\n【边界】不把缓存投影用于过期权限判断；Foundry对象可接受用户编辑，权威归属须按数据契约明确。\n【面试追问】投影更新失败怎么办？参考：保持真实写入结果，记录同步待修复并防止过期数据继续驱动高风险动作。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "不把缓存投影用于过期权限判断；Foundry对象可接受用户编辑，权威归属须按数据契约明确。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 298,
+          "line_end": 319
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 374,
+          "line_end": 384
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 698,
+          "line_end": 710
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确对象投影与权威状态怎样分工的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.object-data-permissions.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.object-data-permissions"
+      ],
+      "revision": 1,
+      "position": 3608,
+      "title": "看见类型不等于能访问或修改实例",
+      "kind": "场景判断",
+      "prompt": "员工能看见“订单”Object Type和取消Action，但不该读其他租户订单。权限需要在哪些对象和路径上生效？",
+      "answer_short": "分别控制类型/动作资源的可见与管理权限、对象实例/属性的数据访问范围，以及提交动作的资格和业务前提。租户来自可信身份，约束查询、关系遍历、执行、缓存及审计；前端隐藏或角色名都不足以授权具体订单。",
+      "required_points": [
+        "区分资源/Schema权限、实例数据权限和动作提交权限",
+        "可信租户/操作者与对象范围在后端校验",
+        "关系遍历、缓存及异步消费不能绕过范围"
+      ],
+      "explanation": "【原理】Foundry第一方区分Ontology资源与对象数据安全。自建系统的RBAC只是第一层，角色还需和具体对象/指派关系、当前策略组合；缓存权限不能过期后继续放行。\n【编辑情境】采购员可浏览订单Schema，不因此看见医院B的订单；知道Order/123也不能取消。事件消费者和搜索缓存沿用可信租户，避免跨路径泄漏。\n【边界】管理员不必默认拥有所有数据权限；客户端传入tenant_id不得作为授权依据；关系本身也可能暴露敏感信息。\n【面试追问】已登录就够吗？参考：登录证明身份，仍需每次对应的动作及对象数据范围授权。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "管理员不必默认拥有所有数据权限；客户端传入tenant_id不得作为授权依据；关系本身也可能暴露敏感信息。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 474,
+          "line_end": 480
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 2444,
+          "line_end": 2568
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确看见类型不等于能访问或修改实例的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.reference-operational.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.reference-operational"
+      ],
+      "revision": 1,
+      "position": 3609,
+      "title": "参考规则与业务实例为何分层",
+      "kind": "对比",
+      "prompt": "补货政策库与实时门店缺货记录应怎样关联？“政策规定低库存可补货”能否直接当某门店已获采购批准？",
+      "answer_short": "参考层存版本化政策与术语，业务层存具体门店、库存观察和采购记录；通过明确类型/身份关系引用，运行时用适用版本和当前实例条件判断。规则描述不等于实例事实或已执行批准。",
+      "required_points": [
+        "区分通用规则/术语与具体业务事实",
+        "实例按身份和适用版本引用参考内容",
+        "规则命中不是执行成功或授权已成立"
+      ],
+      "explanation": "【原理】语义模型可以统一而物理存储与ACL分离。参考层不一定永久只读，必须有受控更新；观察记录需时间、来源和不确定性，不能因文字提到就当事实。\n【编辑情境】政策对A类门店适用，B店不能照套；缺货报告引用SKU但仍要核对库存和订单状态。新政策生效需记录适用范围，而非覆盖全部历史记录。\n【边界】原文临床双图是示例；不要求所有系统恰好两图，也不限定Action只能作用Operational对象。\n【面试追问】个体异常能直接改通用政策吗？参考：先汇总验证和审批，避免把单个带噪观察当通用规则。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "原文临床双图是示例；不要求所有系统恰好两图，也不限定Action只能作用Operational对象。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 785,
+          "line_end": 811
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 856,
+          "line_end": 888
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 1744,
+          "line_end": 1822
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确参考规则与业务实例为何分层的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.extracted-rule-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.extracted-rule-boundary"
+      ],
+      "revision": 1,
+      "position": 3610,
+      "title": "文档提取的动作不是可运行权限",
+      "kind": "场景判断",
+      "prompt": "LLM从采购制度提取“超额订单通知负责人”和一段function_code。为什么不能把它直接注册为可执行Action？",
+      "answer_short": "提取产物是带来源的规则/动作草稿，需要核对语义、适用条件与版本；实际执行器由受控实现提供，并配置参数、权限、审计及失败处理。文本代码不自动获得执行权限，更不能绕过已有业务审批。",
+      "required_points": [
+        "提取规则和动作描述属于候选知识/元数据",
+        "受控执行实现与权限是独立交付",
+        "经来源核验、测试和治理后才接入运行"
+      ],
+      "explanation": "【原理】文档说明应做什么，不说明哪组凭证可以安全执行。知识抽取可能漏否定、阈值、条件和例外；生成代码还需检查副作用，不能从“关系已抽取”推导“动作可上线”。\n【编辑情境】文本“不得未经批准付款”被抽取成“付款”动作，会颠倒制度。核对原段落后，保留批准条件并调用现有付款服务，权限由后端判断。\n【边界】来源有链接不保证抽取正确；不把指南actions字段与Foundry Action Type或已注册Function混同。\n【面试追问】没有代码就不能自动化吗？参考：可用已有受控规则/接口，仍需明确动作执行契约与验证。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "来源有链接不保证抽取正确；不把指南actions字段与Foundry Action Type或已注册Function混同。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 826,
+          "line_end": 836
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 1545,
+          "line_end": 1625
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 1965,
+          "line_end": 2060
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确文档提取的动作不是可运行权限的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m26.draft-state-provenance.001",
+      "lesson_source_key": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "concept_keys": [
+        "interview.m26.draft-state-provenance"
+      ],
+      "revision": 1,
+      "position": 3611,
+      "title": "AI 草稿怎样进入正式业务记录",
+      "kind": "机制",
+      "prompt": "AI生成审批记录，负责人编辑并确认后AI又重生成覆盖了该记录。对象状态、版本和来源应怎样设计？",
+      "answer_short": "区分草稿、已确认与后续归档状态；保留段落原始证据和AI/人工来源、确认人及版本，执行器禁止覆盖已确认版本。需要变化时走修订/追加，归档交付另按回执确认。",
+      "required_points": [
+        "草稿和正式确认记录有不同状态与写权限",
+        "保留输入证据、生成/编辑来源与确认版本",
+        "已确认内容变更走修订而非静默覆盖"
+      ],
+      "explanation": "【原理】状态机是允许操作集合的契约，不是页面颜色。模型生成、人工修改与责任确认需要不同证据；手工编辑字段不等于整份文档已核对，界面须明确。\n【编辑情境】审批依据段落链接采购合同和会议记录；人工修改金额后确认v2，模型补跑只产v3候选，不覆盖v2。外部写回失败则另有待重试状态。\n【边界】未录入的信息不能被自动补成“无”；本卡迁移到业务记录，不采医学字段、保留年限或水印即安全结论。\n【面试追问】有来源边就无幻觉吗？参考：关联有助溯源，仍需核对该证据是否实际支持段落主张。\n【自评】核心答案与全部必答点正确即掌握；追问不增加必答。",
+      "pitfalls": "未录入的信息不能被自动补成“无”；本卡迁移到业务记录，不采医学字段、保留年限或水印即安全结论。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 2248,
+          "line_end": 2319
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+          "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+          "line_start": 2409,
+          "line_end": 2442
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过；2026-10-02",
+        "notes": [
+          "明确AI 草稿怎样进入正式业务记录的单一评分目标；机制、编辑案例、反例和追问逐项对应必答点。",
+          "本地来源锚点与编辑扩展分列，逐卡八维记录见docs/card-production/ch03-interview/m26.md；当前未独立审校、未发布。",
+          "最终题答/评分/机制/实例/边界通过；审校证据：review-23-26.md；实践及UI未执行"
+        ]
+      }
+    }
+  ]
+}

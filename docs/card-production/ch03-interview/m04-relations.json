@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-18",
+  "module_id": "3.4",
+  "relations": [
+    {
+      "to": "ch03.transformer.qkv-aggregation.001",
+      "type": "prerequisite",
+      "reason": "先理解QK匹配与V汇聚，再理解多组投影",
+      "from": "ch03.transformer.multihead.001"
+    },
+    {
+      "to": "ch03.transformer.block-roles.001",
+      "type": "prerequisite",
+      "reason": "MoE通常替换FFN子层，须先区分FFN与注意力",
+      "from": "ch03.interview.m04.moe-resources.001"
+    },
+    {
+      "to": "ch03.interview.m04.moe-resources.001",
+      "type": "compare",
+      "reason": "压缩改变精度或模型结构，MoE选择性激活，资源收益不能混算",
+      "from": "ch03.interview.m04.compression-choice.001"
+    },
+    {
+      "to": "ch03.transformer.attention-cost.001",
+      "type": "extension",
+      "reason": "位置可表达之外，还需评估长序列计算成本",
+      "from": "ch03.transformer.position.001"
+    },
+    {
+      "to": "ch03.transformer.position.001",
+      "type": "prerequisite",
+      "reason": "Patch序列也需要保留位置关系",
+      "from": "ch03.interview.m04.multimodal-input.001"
+    },
+    {
+      "to": "ch03.transformer.architecture-families.001",
+      "type": "extension",
+      "reason": "由三架构信息流理解统一生成接口的取舍",
+      "from": "ch03.interview.m04.decoder-tradeoff.001"
+    }
+  ]
+}

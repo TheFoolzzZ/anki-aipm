@@ -1,0 +1,302 @@
+{
+  "batch_id": "ch03-interview-20261001-m18",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "ch03.interview.m18.delegation-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.18-A2A.md",
+      "concept_keys": [
+        "interview.m18.delegation-boundary"
+      ],
+      "revision": 1,
+      "position": 2801,
+      "title": "跨 Agent 委派的角色边界",
+      "kind": "概念",
+      "prompt": "采购应用把询价交给供应商的自主 Agent。A2A Client 与 Server 分别负责什么？协议能否规定供应商内部如何调用模型和工具？",
+      "answer_short": "Client代表用户发起请求、接收进度与结果；Server是暴露A2A接口的远程Agent或Agent系统，负责执行委派工作。协议统一协作接口，远程内部模型、工具和决策过程可保持不透明。",
+      "required_points": [
+        "区分发起方Client和执行方Server",
+        "说明委派工作与暴露内部工具的差别",
+        "协议不保证内部智能、业务正确性或自动编排"
+      ],
+      "explanation": "本地原文强调异构Agent互联和非框架边界；第一方补充明确Client/Server角色。编辑情境：采购应用要求供应商给出可供数量与交期，供应商可自行查库存并安排排产，客户端只看到协议约定的状态和报价。共同接口让换实现有机会降低对接成本，仍需业务语义对齐；“支持A2A”不等于接受所有任务。若只需要一个固定库存查询接口，现有API可能足够。\n【面试追问】每个远程Agent都需把工具清单给采购方吗？参考思路：不需要；公开委派能力与必要交付契约即可，内部工具属于实现细节。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "会通信不等于会正确履约；A2A本身不生成采购编排规则。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 34,
+          "line_end": 53
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 246,
+          "line_end": 260
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m18.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m18.agent-discovery.001",
+      "lesson_source_key": "第3章-技术攻克/3.18-A2A.md",
+      "concept_keys": [
+        "interview.m18.agent-discovery"
+      ],
+      "revision": 1,
+      "position": 2802,
+      "title": "能力名片用于发现而非担保",
+      "kind": "机制",
+      "prompt": "一个供应商Agent Card声明支持报价。采购应用在发起任务前要从名片确认哪类信息？为何不能把该声明当成报价质量担保？",
+      "answer_short": "确认能力/技能与输入输出适用范围、可访问接口和通信能力、认证要求。名片帮助选择和连接服务；业务可靠性仍需样例测试、准入与运行证据。",
+      "required_points": [
+        "确认技能及输入输出适用范围",
+        "确认接口、通信能力和认证要求",
+        "自报元数据不是服务质量、权限或履约担保"
+      ],
+      "explanation": "原文用Agent Card解释能力发现；第一方纠错：名片字段随协议版本演进，不应背旧endpoint/authentication字段为固定完整Schema。编辑情境：名片支持“物料报价”，仍要核对是否支持人民币含税报价、指定交期和采购单位，避免对价格口径产生误会。客户端读声明选择共同支持的接口和能力，再做代表任务；目录维护、服务地址更新与信任准入属于产品运营。\n【面试追问】有名片就会自动进入所有市场吗？参考思路：不会；目录注册、发现规则和商业准入由平台定义，协议不自动分发流量。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "Agent Card不应存明文凭证；能力描述准确不代表结果正确。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 61,
+          "line_end": 76
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 262,
+          "line_end": 290
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m18.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m18.task-lifecycle.001",
+      "lesson_source_key": "第3章-技术攻克/3.18-A2A.md",
+      "concept_keys": [
+        "interview.m18.task-lifecycle"
+      ],
+      "revision": 1,
+      "position": 2803,
+      "title": "补充信息与终态后的再请求",
+      "kind": "机制",
+      "prompt": "供应商收到询价后缺少数量，随后报价完成。A2A如何区分等待补充和失败？完成后要求改成双倍数量，是否应直接把原任务改回working？",
+      "answer_short": "缺信息可进入input-required，客户端关联原任务补齐后继续。completed/failed/canceled/rejected等是终态；后续调整需新任务并关联同一上下文或既有结果，不能重新启动终态任务。",
+      "required_points": [
+        "input-required是可继续的等待，不等于失败",
+        "补充信息须关联正确task/context，避免另起无关询价",
+        "终态不可重启，完成后改需求创建关联新任务"
+      ],
+      "explanation": "原文状态箭头是示意，不能理解为每个Task必经全部状态；第一方明确中断态与终态的区别。编辑情境：数量未知时供应商保留当前询价并请求补充，采购方补齐数量后收到报价；数量从500kg改1000kg会改变报价条件，应保留旧报价、新建关联任务，便于解释版本和审计。即时、自包含的回答也可返回Message，不必每次都创建长期Task。\n【面试追问】历史完整保留是否必然？参考思路：否；协议支持关联和可选历史信息，保留策略、隐私与业务审计另定，不能依赖无限历史。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "不能把input-required视为终态；任务完成也不证明报价已获业务批准。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 78,
+          "line_end": 93
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 187,
+          "line_end": 203
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m18.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m18.message-artifact.001",
+      "lesson_source_key": "第3章-技术攻克/3.18-A2A.md",
+      "concept_keys": [
+        "interview.m18.message-artifact"
+      ],
+      "revision": 1,
+      "position": 2804,
+      "title": "沟通轮次与任务交付物",
+      "kind": "对比",
+      "prompt": "供应商回复“还缺交货地点”，随后分批生成报价表。Message、Part与Artifact各承载什么？报价表只能在任务完成时一次返回吗？",
+      "answer_short": "Message承载一次沟通轮次；Part承载文本、文件内容/引用或结构化数据；Artifact是任务产物，可由多个Part组成并增量交付。是否完整要结合任务状态及产物更新语义判断。",
+      "required_points": [
+        "Message是沟通轮次，Part是内容单元",
+        "Artifact是可识别的任务产物，区别于过程消息",
+        "产物可增量输出，收到一块不等于全部完成"
+      ],
+      "explanation": "原文“最终性，任务结束才产生”过强，第一方明确Artifact可流式增量更新；原文列form为核心类型也不准确，表单需求可通过结构化数据或扩展表达，需确认版本。编辑情境：缺地址的问题是Message；第一批20行报价数据属于Artifact更新，后续还可能追加其他行。消费方根据产物标识和增量语义拼接，避免把每批视为独立完整报价。\n【面试追问】一条“处理完了”的文本能替代报价表吗？参考思路：只有业务约定本来就是文本成果时才可能；结构化报价需要具体条目、单位和条件，不能从聊天状态推断交付正确。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "把Artifact等同最终附件会丢失增量数据；Message也可包含结构化内容。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 95,
+          "line_end": 122
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m18.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m18.async-updates.001",
+      "lesson_source_key": "第3章-技术攻克/3.18-A2A.md",
+      "concept_keys": [
+        "interview.m18.async-updates"
+      ],
+      "revision": 1,
+      "position": 2805,
+      "title": "长任务进度与断线后的跟踪",
+      "kind": "场景判断",
+      "prompt": "询价要持续数小时，采购应用不能一直保持连接。A2A有哪些任务更新方式？断线后如何判断任务是否继续，能否直接重发一张询价？",
+      "answer_short": "按双方能力选择任务查询/轮询、流式更新或推送通知。断线只说明通信中断；保留任务标识，恢复时先查原任务状态与结果，再决定继续跟踪、取消或新建任务。",
+      "required_points": [
+        "说出查询/轮询、流式和推送通知三种模式及选择条件",
+        "区分连接状态和远程任务状态",
+        "用任务标识查询确认后续动作，避免无依据重发"
+      ],
+      "explanation": "原文“轮询未采用”错误；第一方规范含Get Task及多种更新交付方式，传输绑定也不限“只能HTTP+SSE”。编辑情境：短询价可直接等响应，需要即时进度的请求用双方支持的流式更新，跨小时且应用离线可使用受支持的推送或恢复后查询。流断了不意味着供应商停止报价，重新提交可能形成两张询价；产品需记住原任务、显示未知状态并核对。\n【面试追问】收到取消请求就能宣称业务已回滚吗？参考思路：不能；查取消结果和业务副作用，已执行的业务动作是否撤销由执行服务与业务流程决定。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "SSE单向推送不意味着客户端不能再发请求；推送、取消与重订阅均需能力支持。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 168,
+          "line_end": 203
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 485,
+          "line_end": 493
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m18.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m18.protocol-composition.001",
+      "lesson_source_key": "第3章-技术攻克/3.18-A2A.md",
+      "concept_keys": [
+        "interview.m18.protocol-composition"
+      ],
+      "revision": 1,
+      "position": 2806,
+      "title": "委派 Agent 和读取系统的接口",
+      "kind": "场景判断",
+      "prompt": "采购助手要让供应商Agent自主核价，并读取自家ERP库存。A2A与MCP各放在哪条接口边？两者能否保证审批和下单自动完成？",
+      "answer_short": "与供应商Agent的任务委派可用A2A；内部应用通过MCP连接ERP提供的工具/资源，也可保留既有API。协议统一接口，业务编排、审批和订单事实确认仍需产品与执行系统负责。",
+      "required_points": [
+        "A2A承接对远程Agent的工作委派",
+        "MCP承接应用与工具/数据源接入，可与既有API配合",
+        "审批、编排和履约不是协议自动提供的结果"
+      ],
+      "explanation": "原文“横向/纵向”适合记忆，但不能据此认定MCP永远单次无状态、A2A只能聊天。第一方将它们视为互补接口；实际支持能力以版本和实现为准。编辑情境：供应商Agent内部分别调用它自己的库存和价格工具，采购方无须控制那些工具；采购助手通过本企业MCP Server读ERP数据。报价回来后检查单位、有效期和授权审批，之后执行下单流程。选择两种协议的前提是现有接口与互操作收益值得，不能为了标准名词重写所有系统。\n【面试追问】仅有普通ERP API能用A2A询库存吗？参考思路：要有实现Agent委派语义的服务；固定查询直接API或MCP封装即可，不能把所有系统强行称为Agent。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "协议互补不意味着每个产品都必须同时上两种。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 126,
+          "line_end": 160
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 311,
+          "line_end": 329
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 357,
+          "line_end": 363
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m18.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m18.parallel-quote-aggregation.001",
+      "lesson_source_key": "第3章-技术攻克/3.18-A2A.md",
+      "concept_keys": [
+        "interview.m18.parallel-quote-aggregation"
+      ],
+      "revision": 1,
+      "position": 2807,
+      "title": "并行询价的汇总边界",
+      "kind": "场景判断",
+      "prompt": "三家供应商并行询价，两家按时回复且税费口径不同，第三家未响应。主控应怎样组织任务与报价汇总，才能给出可解释建议？",
+      "answer_short": "每家询价独立跟踪任务/供应商身份，主控定义截止时间与部分结果策略；统一数量、税费、币种、交期和有效期后比较，保留缺失报价与不确定性，不能把未响应当成最低价或完整覆盖。",
+      "required_points": [
+        "每供应商独立任务，主控负责期限及部分失败策略",
+        "汇总前按同一业务口径校验Artifact",
+        "建议明确已获得/缺失报价及条件，不宣称比较了全部供应商"
+      ],
+      "explanation": "原文采购案例指出并行、超时与多维比价；此卡为编辑简化情境，48小时和评分权重都不是通用标准。A2A统一任务与产物接口，主控仍需定义分支、等待期限和汇总规则；收到两份报价不能自动推出最佳全市场方案。先标明含税/未税、运费、数量单位与到货时点，口径缺失就补问，不能由模型猜数字。预算重要时可等待第三家或转人工，时限紧时可用已确认报价给有条件建议。\n【面试追问】为何一张总Task不能替代所有子任务记录？参考思路：总任务可管理流程，但必须能定位每家状态、结果和失败；否则无法追责或重试具体分支。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "A2A不内置采购评分体系；并行提速需付出状态汇总与部分失败处理成本。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.18-A2A.md",
+          "content_hash": "75689cf06945a0c3594bb9159f29385d16cd0a1e9dbfd7b91bb637148028d9ec",
+          "line_start": 331,
+          "line_end": 374
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m18.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

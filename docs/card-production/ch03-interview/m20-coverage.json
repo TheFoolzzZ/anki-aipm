@@ -1,0 +1,396 @@
+{
+  "module_id": "3.20",
+  "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+  "source_line_count": 449,
+  "native_objectives": 11,
+  "registered": 11,
+  "practice_completed": 0,
+  "publication_status": "published_and_verified_2026-10-02",
+  "objectives": [
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O01",
+      "original_text": "*   [ ] **摸清现状**：统计你们产品当前/未来 1 年的非结构化数据量（文档数、图片数、视频时长）。",
+      "source_line": 421,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.vector.capacity-arithmetic.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按块/帧/向量重算真实容量，复用3.10预算而非重复造卡",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O02",
+      "original_text": "*   [ ] **明确场景**：你们真的需要语义搜索吗？还是关键词搜索就够了？先验证需求真伪。",
+      "source_line": 422,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "用现有混合检索基线判断语义需求，需求真伪仍需任务实验",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O03",
+      "original_text": "*   [ ] **调研竞品**：看看同行业头部产品是怎么做检索的，用户体验好在哪里。",
+      "source_line": 423,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "竞品体验调研时效性强，是资料产出而非稳定结论",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O04",
+      "original_text": "*   [ ] **组建选型小组**：拉上 1 名后端 + 1 名算法，成立\"向量数据库选型\"虚拟小组。",
+      "source_line": 427,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "组建跨职能选型组为协作动作，本轮不宣称会议完成",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O05",
+      "original_text": "*   [ ] **制定 POC 计划**：列出 3 个候选产品，设计测试用例（召回率、延迟、写入速度）。",
+      "source_line": 428,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.vector.database-selection.001",
+        "ch03.vector.ann-quality-budget.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "质量/延迟/写入POC复用已有选型和ANN机制，实际负载留实践",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O06",
+      "original_text": "*   [ ] **评估 Embedding 模型**：调研你们领域是否有专门的开源 Embedding 模型（搜 HuggingFace）。",
+      "source_line": 429,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.vector.training-objective.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "语言/领域模型评估已有完整目标，品牌需实查",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O07",
+      "original_text": "*   [ ] **搭建监控体系**：上线后监控查询延迟 P99、召回率、索引构建时间、存储增长率。",
+      "source_line": 433,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.vector.ann-quality-budget.001",
+        "ch03.rag.update-deletion.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "监控写入可见与索引质量复用已有目标，指标面板为实践",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O08",
+      "original_text": "*   [ ] **建立 badcase 反馈闭环**：每周收集用户搜索失败的 case，反哺模型和索引优化。",
+      "source_line": 434,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "每周反馈与归因闭环不是一张静态卡完成，指标口径已有",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O09",
+      "original_text": "*   [ ] **规划混合搜索**：如果只做向量搜索，设计加入标量过滤和重排序的二期方案。",
+      "source_line": 435,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m10.filtered-recall.001",
+        "ch03.vector.rerank-candidate-ceiling.001",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "过滤、候选、排序/多路融合各复用，不接受固定预过滤最佳或Top100阈值",
+      "mother_question_id": "M1",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O10",
+      "original_text": "*   [ ] **成本复盘**：对比实际支出和预算，评估是否需要从托管迁到自建，或反之。",
+      "source_line": 439,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "实践任务",
+      "card_keys": [
+        "ch03.vector.database-selection.001",
+        "ch03.vector.capacity-arithmetic.001"
+      ],
+      "practice_task_ids": [
+        "T4"
+      ],
+      "reason": "实际支出与人员成本决定迁移，已发布预算/选型原则不重复",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.20",
+      "objective_id": "m20-O11",
+      "original_text": "*   [ ] **技术债管理**：制定索引重建策略、版本升级计划、灾难恢复演练。",
+      "source_line": 440,
+      "source_path": "第3章-技术攻克/3.20-VectorDB.md",
+      "source_hash": "239929c7d2a13a9f73de95acd468378ef15412c66a559fcae2f38a76a591c446",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.interview.m20.recovery-exit.001",
+        "ch03.rag.update-deletion.001"
+      ],
+      "practice_task_ids": [
+        "T4"
+      ],
+      "reason": "新增固定编码下的引擎退出与恢复证据，更新可见性已有卡；升级重建需按实现核对",
+      "mother_question_id": "M2",
+      "origin": "原生自查",
+      "priority": "P1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "T1",
+      "description": "统计文档/图片/视频及切块/帧采样后的对象量，区分资料条数和实际向量条数；以代表查询比较关键词/语义/精确条件，记录竞品任务体验及对照证据。多模态与推荐分别列业务目标，不把相似度当全部成功。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T2",
+      "description": "产品、后端与算法共同定义检索标注、过滤选择性、并发、增量写入、恢复和成本条件，比较现有平台与候选；复用3.10卡的ANN/模型/过滤/预算原则，核对候选当前版本与测试，不复制品牌阈值。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T3",
+      "description": "制定badcase闭环：保存查询条件、数据/编码/索引版本、授权范围、候选与最终输出，分知识缺失/表示/索引/排序/服务可见性归因；监控尾延迟、写入可见延迟与存储增长。真实标签评测与治理改动未运行，不能声称质量提高。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T4",
+      "description": "在固定Embedding前提下设计迁移包、增量追平、隔离恢复演练和切换回退；复核实际云费/机器/人员/迁移成本。声明数据损失及恢复时间目标，保存数量/版本/删除/查询/计时证据；升级/快照兼容需查目标引擎版本，演练未执行。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "additional_objectives": [
+    {
+      "objective_id": "m20-B01",
+      "original_text": "L13–35：向量库定义",
+      "source_line": 13,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.database-selection.001"
+      ],
+      "reason": "Embedding负责表示，库负责存储/检索；传统关系库可具向量扩展，不按高维必失效或200ms用户极限造卡。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m20-B02",
+      "original_text": "L37–81：ANN/量化",
+      "source_line": 37,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.ann-quality-budget.001",
+        "ch03.vector.compression-choice.001"
+      ],
+      "reason": "全复用3.10；Flat并非只能万级，固定召回损失/量化百分比拒作稳定事实。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m20-B03",
+      "original_text": "L83–166/L212–243：搜索与产品/决策树",
+      "source_line": 83,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.database-selection.001",
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "reason": "复用选型和多路评估，不背2025品牌能力表及固定规模门槛。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m20-B04",
+      "original_text": "L170–187：RAG/语义搜索",
+      "source_line": 170,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.rerank-candidate-ceiling.001",
+        "ch03.vector.training-objective.001"
+      ],
+      "reason": "切分/召回/重排职责已有，20%收益未有可靠测试不采纳。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m20-B05",
+      "original_text": "L189–196：推荐",
+      "source_line": 189,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m02.cold-start.001",
+        "ch03.interview.m16.content-recommendation.001"
+      ],
+      "reason": "主编去重后复用3.2冷启动与3.16内容推荐，拒绝新用户无信号即个性化。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m20-B06",
+      "original_text": "L198–209：多模态",
+      "source_line": 198,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m16.cross-modal-alignment.001"
+      ],
+      "reason": "主编与3.16交叉核对，同对齐评分目标不换商品情境再造卡。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m20-B07",
+      "original_text": "L245–348：法律POC与成本",
+      "source_line": 245,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.capacity-arithmetic.001",
+        "ch03.vector.database-selection.001"
+      ],
+      "reason": "数据/延迟/价格属于原文示例而非可复验测量，T2/T4按本业务证据再选。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m20-B08",
+      "original_text": "L350–407：混合检索、更新",
+      "source_line": 350,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m10.filtered-recall.001",
+        "ch03.rag.update-deletion.001"
+      ],
+      "reason": "过滤/重排/ANN/更新可见目标已有；“必须预过滤”、固定重排Top100和总定时重建不采纳。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m20-B09",
+      "original_text": "L409–413：退出成本",
+      "source_line": 409,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m20.recovery-exit.001"
+      ],
+      "reason": "新增固定编码迁移包和隔离恢复证据，与换Embedding区别清楚。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    },
+    {
+      "objective_id": "m20-B10",
+      "original_text": "L444–449：结语",
+      "source_line": 444,
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.database-selection.001"
+      ],
+      "reason": "最佳取决于当前任务、负载和团队，复用数据库选型，不增口号卡。",
+      "origin": "正文目标/总结编辑登记",
+      "review_status": "作者自检，待主编复核"
+    }
+  ],
+  "review_status": "editor_review_complete",
+  "published_cards": 1
+}

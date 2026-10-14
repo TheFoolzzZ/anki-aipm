@@ -1,0 +1,4500 @@
+{
+  "module_id": "3.26",
+  "source": {
+    "relative_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+    "absolute_path": "/Users/klein/Documents/AI-PM-guide/第3章-技术攻克/3.26-FDE-Ontology.md",
+    "content_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+    "line_count": 2737
+  },
+  "native_checklist_count": 0,
+  "registered_native_count": 0,
+  "objectives": [
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O001",
+      "original_text": "## 1. 为什么要用这个架构",
+      "source_line": 79,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.ontology-layer.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O002",
+      "original_text": "## 2. 五个核心概念",
+      "source_line": 98,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O003",
+      "original_text": "### Object",
+      "source_line": 115,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O004",
+      "original_text": "### Link",
+      "source_line": 123,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.link-semantics.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O005",
+      "original_text": "### Function（= Action Type）",
+      "source_line": 128,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O006",
+      "original_text": "### Governance",
+      "source_line": 133,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07",
+        "ch03.interview.m19.integration-boundary.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O007",
+      "original_text": "### Event Bus",
+      "source_line": 137,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07",
+        "ch03.interview.m19.integration-boundary.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O008",
+      "original_text": "## 3. 开始之前：三个关键决策",
+      "source_line": 143,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O009",
+      "original_text": "### 决策 1：你的 Object 类型是什么？",
+      "source_line": 147,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O010",
+      "original_text": "### 决策 2：你的 Function 边界在哪里？",
+      "source_line": 159,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.intent-granularity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O011",
+      "original_text": "### 决策 3：ConfirmLevel 如何划分？",
+      "source_line": 173,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O012",
+      "original_text": "### 决策 4：数据采集的 Consent 边界是什么？（医疗 / 健康场景必选）",
+      "source_line": 188,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O013",
+      "original_text": "## 4. 数据层设计",
+      "source_line": 205,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O014",
+      "original_text": "### `ontology_objects`（Object Store）",
+      "source_line": 209,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.projection-authority.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O015",
+      "original_text": "### `graph_edges`（Link Store）",
+      "source_line": 235,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.link-semantics.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O016",
+      "original_text": "### `function_runs`（审计表，也叫 `action_runs`）",
+      "source_line": 256,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O017",
+      "original_text": "### `ontology_function_configs`（Ontology Manager 配置表）",
+      "source_line": 270,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O018",
+      "original_text": "## 5. Object 系统",
+      "source_line": 284,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O019",
+      "original_text": "### ObjectRef 设计",
+      "source_line": 286,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O020",
+      "original_text": "### Resolver：联邦读路径",
+      "source_line": 298,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.projection-authority.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O021",
+      "original_text": "### 投影与权威数据",
+      "source_line": 310,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.projection-authority.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O022",
+      "original_text": "## 6. Function / Action 系统",
+      "source_line": 323,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O023",
+      "original_text": "### 定义与实现分离",
+      "source_line": 325,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O024",
+      "original_text": "### 命名规范",
+      "source_line": 365,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O025",
+      "original_text": "### Function 执行的完整写路径",
+      "source_line": 374,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.projection-authority.001",
+        "ch03.interview.m19.integration-boundary.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O026",
+      "original_text": "### 向后兼容：别名",
+      "source_line": 386,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.projection-authority.001",
+        "ch03.interview.m19.integration-boundary.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O027",
+      "original_text": "### Composite Function（合并意图）",
+      "source_line": 398,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.intent-granularity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O028",
+      "original_text": "### Observation Function（对话提取型）",
+      "source_line": 412,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O029",
+      "original_text": "## 7. Governance 治理层",
+      "source_line": 427,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07",
+        "ch03.interview.m26.object-data-permissions.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O030",
+      "original_text": "### ConfirmLevel 枚举",
+      "source_line": 429,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07",
+        "ch03.interview.m26.object-data-permissions.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "确认/参数绑定/时效/授权复用C07并留综合实践；新增权限卡仅考Schema资源、实例数据和Action权限分层。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O031",
+      "original_text": "### 执行流",
+      "source_line": 449,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07",
+        "ch03.interview.m26.object-data-permissions.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "确认/参数绑定/时效/授权复用C07并留综合实践；新增权限卡仅考Schema资源、实例数据和Action权限分层。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O032",
+      "original_text": "### Validate 分层",
+      "source_line": 474,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07",
+        "ch03.interview.m26.object-data-permissions.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "确认/参数绑定/时效/授权复用C07并留综合实践；新增权限卡仅考Schema资源、实例数据和Action权限分层。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O033",
+      "original_text": "### BuildSummary",
+      "source_line": 485,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07",
+        "ch03.interview.m26.object-data-permissions.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "确认/参数绑定/时效/授权复用C07并留综合实践；新增权限卡仅考Schema资源、实例数据和Action权限分层。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O034",
+      "original_text": "## 8. Graph / Links 系统",
+      "source_line": 499,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.link-semantics.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O035",
+      "original_text": "### 什么时候建边",
+      "source_line": 501,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.link-semantics.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O036",
+      "original_text": "### 权重设计",
+      "source_line": 515,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.link-semantics.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O037",
+      "original_text": "### 何时写边",
+      "source_line": 528,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.link-semantics.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O038",
+      "original_text": "## 9. Event Bus",
+      "source_line": 543,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.integration-boundary.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "重复目标复用3.19跨系统边界和3.12未知结果恢复；本体模块母题明确requested≠archived，不再造同义卡。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O039",
+      "original_text": "### 核心原则",
+      "source_line": 545,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.integration-boundary.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "重复目标复用3.19跨系统边界和3.12未知结果恢复；本体模块母题明确requested≠archived，不再造同义卡。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O040",
+      "original_text": "### 事件设计",
+      "source_line": 557,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.integration-boundary.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "重复目标复用3.19跨系统边界和3.12未知结果恢复；本体模块母题明确requested≠archived，不再造同义卡。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O041",
+      "original_text": "### 订阅者职责",
+      "source_line": 573,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.integration-boundary.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "重复目标复用3.19跨系统边界和3.12未知结果恢复；本体模块母题明确requested≠archived，不再造同义卡。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O042",
+      "original_text": "## 10. Ontology Manager（运营侧）",
+      "source_line": 586,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O043",
+      "original_text": "### 三个层次，按需建设",
+      "source_line": 588,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O044",
+      "original_text": "## 11. 实施顺序建议",
+      "source_line": 613,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O045",
+      "original_text": "## 12. 测试策略",
+      "source_line": 646,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O046",
+      "original_text": "### 单元测试：用内存 Fake 替代 DB",
+      "source_line": 648,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O047",
+      "original_text": "### 必测场景",
+      "source_line": 664,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O048",
+      "original_text": "### 不需要在单元测试里覆盖的",
+      "source_line": 676,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O049",
+      "original_text": "## 13. 常见陷阱",
+      "source_line": 684,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O050",
+      "original_text": "### 陷阱 1：switch 用字符串字面量而不是常量",
+      "source_line": 686,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O051",
+      "original_text": "### 陷阱 2：Object Store 当权威数据源用",
+      "source_line": 698,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.projection-authority.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O052",
+      "original_text": "### 陷阱 3：Function 粒度太细",
+      "source_line": 712,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.intent-granularity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O053",
+      "original_text": "### 陷阱 4：在事件订阅者里写 Graph 边",
+      "source_line": 722,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.integration-boundary.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O054",
+      "original_text": "### 陷阱 5：FunctionResult.Output 返回裸 ID",
+      "source_line": 737,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O055",
+      "original_text": "### 陷阱 6：Record 结构体没有 `_id` 字段",
+      "source_line": 747,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O056",
+      "original_text": "## 14. 与传统架构的对比",
+      "source_line": 761,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.ontology-layer.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O057",
+      "original_text": "## 15. 扩展场景：基于对话的知识提取与推理",
+      "source_line": 776,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.ontology-layer.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O058",
+      "original_text": "### 场景描述",
+      "source_line": 781,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.ontology-layer.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O059",
+      "original_text": "### Foundry 对齐：Reference vs Operational 分层",
+      "source_line": 785,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O060",
+      "original_text": "#### 为什么 Function 不能绑在 clinical 实体上",
+      "source_line": 813,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "官方未限制Function只能绑Operational，纠正原文绝对前提；Action/Function区分保留。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O061",
+      "original_text": "#### 文档提取的 logic_rules / actions ≠ Foundry Function",
+      "source_line": 826,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O062",
+      "original_text": "#### Event Bus 驱动的规则评估（Foundry 标准模式）",
+      "source_line": 838,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O063",
+      "original_text": "### 双图协作：如何使用 patient_graph 与 clinical_kb",
+      "source_line": 870,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O064",
+      "original_text": "### Object 设计",
+      "source_line": 1010,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001",
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O065",
+      "original_text": "### Link 设计",
+      "source_line": 1028,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.link-semantics.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O066",
+      "original_text": "### Observation Function 设计",
+      "source_line": 1063,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O067",
+      "original_text": "### 对话 → 图的提取机制",
+      "source_line": 1094,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O068",
+      "original_text": "### 症状规范化：对齐 clinical_kb 的 canonical_id",
+      "source_line": 1121,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001",
+        "ch03.interview.m16.score-calibration.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O069",
+      "original_text": "### 推理层：图 → 筛查结论",
+      "source_line": 1213,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O070",
+      "original_text": "### 对话引导：如何有针对性地问问题",
+      "source_line": 1243,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O071",
+      "original_text": "### 三层漏斗的三个盲区",
+      "source_line": 1331,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O072",
+      "original_text": "#### 盲区 1：危机信号不能走漏斗",
+      "source_line": 1335,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O073",
+      "original_text": "#### 盲区 2：Observation Function 提取失败的兜底",
+      "source_line": 1355,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O074",
+      "original_text": "#### 盲区 3：多方向共病的优先级排序",
+      "source_line": 1380,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O075",
+      "original_text": "### 与企业协作场景的关键差异",
+      "source_line": 1415,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O076",
+      "original_text": "### 实施建议",
+      "source_line": 1426,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O077",
+      "original_text": "### 临床知识图：Objects / Links 设计",
+      "source_line": 1451,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001",
+        "ch03.interview.m26.link-semantics.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O078",
+      "original_text": "### 文档提取产物：logic_rules / actions 如何落位",
+      "source_line": 1545,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O079",
+      "original_text": "### 存储选型：MongoDB 还是图数据库",
+      "source_line": 1627,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "Mongo优先/三跳/千万边/副本<1s是本地设计或猜测，选型按真实访问负载验证，T1设计不代表测试完成。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O080",
+      "original_text": "### 两图分离与反哺架构",
+      "source_line": 1678,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001",
+        "ch03.interview.m26.object-data-permissions.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O081",
+      "original_text": "#### 为什么患者图和知识图必须是两个独立图实例",
+      "source_line": 1696,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001",
+        "ch03.interview.m26.object-data-permissions.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O082",
+      "original_text": "#### 患者数据 → 知识库的反哺回路",
+      "source_line": 1743,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O083",
+      "original_text": "### 生产级上线 Checklist",
+      "source_line": 1831,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O084",
+      "original_text": "#### 产品定位（上线前必须明确）",
+      "source_line": 1835,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O085",
+      "original_text": "#### 二、临床有效性（P0，最大风险）",
+      "source_line": 1863,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O086",
+      "original_text": "#### 三、安全与危机响应（P0，一票否决）",
+      "source_line": 1876,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O087",
+      "original_text": "#### 四、合规与隐私（P0）",
+      "source_line": 1889,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "临床量表推理、风险阈值、法规/标准和效果需独立第一方核对，本轮延期该子命题；通用对象/动作/数据权限核心已由卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O088",
+      "original_text": "### nano-ontoprompt 与筛查场景的分工",
+      "source_line": 1965,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O089",
+      "original_text": "#### 能否不做文档提取",
+      "source_line": 2021,
+      "source_type": "正文明确问题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O090",
+      "original_text": "## 16. S1 扩展：多模态采集与分流路径建模",
+      "source_line": 2062,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m16.cross-modal-alignment.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S1实际输入模态及缺失降级只保留T2，复用跨模态边界，不新增同义降级验收卡；医疗融合有效性延期。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O091",
+      "original_text": "### ScreeningSession 状态机",
+      "source_line": 2066,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m16.cross-modal-alignment.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S1实际输入模态及缺失降级只保留T2，复用跨模态边界，不新增同义降级验收卡；医疗融合有效性延期。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O092",
+      "original_text": "### 新增 Object 设计（S1 Operational 层）",
+      "source_line": 2089,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m16.cross-modal-alignment.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S1实际输入模态及缺失降级只保留T2，复用跨模态边界，不新增同义降级验收卡；医疗融合有效性延期。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O093",
+      "original_text": "### Link 设计（S1 专用）",
+      "source_line": 2118,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m16.cross-modal-alignment.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S1实际输入模态及缺失降级只保留T2，复用跨模态边界，不新增同义降级验收卡；医疗融合有效性延期。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O094",
+      "original_text": "### Function 设计（S1 专用）",
+      "source_line": 2129,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m16.cross-modal-alignment.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S1实际输入模态及缺失降级只保留T2，复用跨模态边界，不新增同义降级验收卡；医疗融合有效性延期。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O095",
+      "original_text": "### 降级规则",
+      "source_line": 2156,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m16.cross-modal-alignment.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S1实际输入模态及缺失降级只保留T2，复用跨模态边界，不新增同义降级验收卡；医疗融合有效性延期。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O096",
+      "original_text": "### Event Schema：screening.submitted / screening.crisis",
+      "source_line": 2172,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m16.cross-modal-alignment.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S1实际输入模态及缺失降级只保留T2，复用跨模态边界，不新增同义降级验收卡；医疗融合有效性延期。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O097",
+      "original_text": "### 与 patient_graph 的关系",
+      "source_line": 2222,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m16.cross-modal-alignment.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S1实际输入模态及缺失降级只保留T2，复用跨模态边界，不新增同义降级验收卡；医疗融合有效性延期。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O098",
+      "original_text": "## 17. S4 扩展：病历草稿工作流建模",
+      "source_line": 2238,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O099",
+      "original_text": "### 两个状态机：EncounterSession / MedicalRecordDraft",
+      "source_line": 2248,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O100",
+      "original_text": "### 新增 Object 设计（S4 Operational 层）",
+      "source_line": 2280,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O101",
+      "original_text": "### Link 设计（S4 专用）",
+      "source_line": 2312,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O102",
+      "original_text": "### Function 设计（S4 专用）",
+      "source_line": 2325,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O103",
+      "original_text": "### `encounter.archiveDraft()` 的 HIS 写回路径",
+      "source_line": 2352,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.integration-boundary.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "重复目标复用3.19跨系统边界和3.12未知结果恢复；本体模块母题明确requested≠archived，不再造同义卡。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O104",
+      "original_text": "### Event Schema（emr.note.*）",
+      "source_line": 2377,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m19.integration-boundary.001",
+        "ch03.agent.ambiguous-tool-result.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "重复目标复用3.19跨系统边界和3.12未知结果恢复；本体模块母题明确requested≠archived，不再造同义卡。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O105",
+      "original_text": "### Diff 视图的数据依据",
+      "source_line": 2409,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O106",
+      "original_text": "### 生产上线硬约束（S4）",
+      "source_line": 2429,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O107",
+      "original_text": "## 18. Actor 体系与租户隔离",
+      "source_line": 2444,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-data-permissions.001",
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O108",
+      "original_text": "### 7 类角色定义",
+      "source_line": 2448,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-data-permissions.001",
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O109",
+      "original_text": "### 扩展权限矩阵",
+      "source_line": 2464,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-data-permissions.001",
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O110",
+      "original_text": "### authorizeFunction() 实现模式",
+      "source_line": 2482,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-data-permissions.001",
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O111",
+      "original_text": "### tenant_id 贯穿全链路",
+      "source_line": 2512,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.object-data-permissions.001",
+        "C07"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "原文小节作为知识锚点登记，评分目标为编辑细化；模型/数据库/临床行为并非Foundry官方固定限制。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O112",
+      "original_text": "## 19. S2 扩展：干预方案建模",
+      "source_line": 2570,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S2方案/任务实例与版本只保留综合实践T2，避免为示例子系统分别新增泛化状态卡；文档状态/证据链由draft-state-provenance承接。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O113",
+      "original_text": "### 两个状态机：CarePlan / CareTask",
+      "source_line": 2574,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S2方案/任务实例与版本只保留综合实践T2，避免为示例子系统分别新增泛化状态卡；文档状态/证据链由draft-state-provenance承接。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O114",
+      "original_text": "### 新增 Object 设计（S2 Operational 层）",
+      "source_line": 2604,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S2方案/任务实例与版本只保留综合实践T2，避免为示例子系统分别新增泛化状态卡；文档状态/证据链由draft-state-provenance承接。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O115",
+      "original_text": "### Link 设计（S2 专用）",
+      "source_line": 2640,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S2方案/任务实例与版本只保留综合实践T2，避免为示例子系统分别新增泛化状态卡；文档状态/证据链由draft-state-provenance承接。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O116",
+      "original_text": "### Function 设计（S2 专用）",
+      "source_line": 2655,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S2方案/任务实例与版本只保留综合实践T2，避免为示例子系统分别新增泛化状态卡；文档状态/证据链由draft-state-provenance承接。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O117",
+      "original_text": "### Event Schema（S2）",
+      "source_line": 2673,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S2方案/任务实例与版本只保留综合实践T2，避免为示例子系统分别新增泛化状态卡；文档状态/证据链由draft-state-provenance承接。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O118",
+      "original_text": "### S1 → S2 完整数据流",
+      "source_line": 2706,
+      "source_type": "正文知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "S2方案/任务实例与版本只保留综合实践T2，避免为示例子系统分别新增泛化状态卡；文档状态/证据链由draft-state-provenance承接。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O119",
+      "original_text": "  ├── 定义 ObjectType 和 ObjectRef",
+      "source_line": 617,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O120",
+      "original_text": "  ├── 创建 ontology_objects 表 + Store 接口（Upsert/Get/List）",
+      "source_line": 618,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O121",
+      "original_text": "  ├── 创建 graph_edges 表 + 接口（Upsert/GetTopByFrom/List）",
+      "source_line": 619,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O122",
+      "original_text": "  └── 实现 Resolver（联邦读，lazy cache）",
+      "source_line": 620,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O123",
+      "original_text": "  ├── FunctionDef + FunctionRegistry（registerRunner + defaultFunctionDefs + LoadFunctionDefinitions）",
+      "source_line": 623,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O124",
+      "original_text": "  ├── 实现前 2-3 个核心 Function（包含完整写路径：DB → Store → Graph → Event）",
+      "source_line": 624,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O125",
+      "original_text": "  ├── validateFunction（参数校验 + 权限校验）",
+      "source_line": 625,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O126",
+      "original_text": "  └── LLMTools() 导出",
+      "source_line": 626,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O127",
+      "original_text": "  ├── ConfirmLevel 枚举",
+      "source_line": 629,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O128",
+      "original_text": "  ├── Executor（validate → confirm → run → audit）",
+      "source_line": 630,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O129",
+      "original_text": "  ├── function_runs 表",
+      "source_line": 631,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O130",
+      "original_text": "  ├── BuildSummary（各函数的确认文案）",
+      "source_line": 632,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O131",
+      "original_text": "  └── Event Bus + 第一批订阅者",
+      "source_line": 633,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O132",
+      "original_text": "  ├── 补齐剩余 Function",
+      "source_line": 636,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O133",
+      "original_text": "  ├── alias 兼容层",
+      "source_line": 637,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O134",
+      "original_text": "  ├── 测试覆盖",
+      "source_line": 638,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O135",
+      "original_text": "  └── Ontology Manager API（按需）",
+      "source_line": 639,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O136",
+      "original_text": "| 场景 | 要点 |",
+      "source_line": 666,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O137",
+      "original_text": "| nil guard | Graph/Store 为 nil 时不 panic，返回空结果 |",
+      "source_line": 668,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O138",
+      "original_text": "| 参数透传 | from/to/rel 正确传到底层 |",
+      "source_line": 669,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O139",
+      "original_text": "| 过滤逻辑 | 各 Filter 字段独立生效 |",
+      "source_line": 670,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O140",
+      "original_text": "| 分页边界 | 结果数 == limit → NextCursor 为空；> limit → 截断 + NextCursor 非空 |",
+      "source_line": 671,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O141",
+      "original_text": "| alias 解析 | 旧名 → 新名，自身 → 自身，均正确 |",
+      "source_line": 672,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O142",
+      "original_text": "| LLMTools 完整性 | 所有已注册函数都出现在 tools 列表里 |",
+      "source_line": 673,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O143",
+      "original_text": "| Composite 路径 | NotifyIM=false 时不触发 IM 推送 |",
+      "source_line": 674,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O144",
+      "original_text": "- Webhook 触发路径（依赖外部系统，做 E2E 测试）",
+      "source_line": 678,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O145",
+      "original_text": "- Mongo cursor 的分页正确性（做集成测试）",
+      "source_line": 679,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O146",
+      "original_text": "- 事件订阅者的 IM 推送（做集成测试）",
+      "source_line": 680,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O147",
+      "original_text": "| 1 | patient_graph 最小闭环 | `recordSymptom` → MongoDB 写入 → `getAssessmentFocus` 可读 |",
+      "source_line": 1853,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O148",
+      "original_text": "| 2 | 跨会话 Upsert | 同一 Person 多次对话，症状边正确合并（`reported_count`、时间戳更新） |",
+      "source_line": 1854,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O149",
+      "original_text": "| 3 | canonical_id 规范化 | 口语 → SNOMED canonical_id，保留 `raw_text` 溯源 |",
+      "source_line": 1855,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O150",
+      "original_text": "| 4 | clinical_kb 版本管理 | 知识图有版本号，更新可回滚，变更有 changelog |",
+      "source_line": 1856,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O151",
+      "original_text": "| 5 | 跨图推理在应用层 | patient canonical_ids + clinical_kb Disorder 匹配，不跨库 join |",
+      "source_line": 1857,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O152",
+      "original_text": "| 6 | function_runs 全量审计 | 每次 Observation / 推理调用有完整记录 |",
+      "source_line": 1858,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O153",
+      "original_text": "| 7 | user_id 隔离 | patient_graph 所有查询强制带 user_id 过滤 |",
+      "source_line": 1859,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O154",
+      "original_text": "| 8 | 对话提取准确率 | 人工标注 ≥ 100 例对话，Symptom 提取 F1 ≥ 0.80 才开放自动路由 |",
+      "source_line": 1867,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O155",
+      "original_text": "| 9 | 规范化准确率 | 口语 → canonical_id 映射，临床专家抽检 ≥ 50 例，准确率 ≥ 0.90 |",
+      "source_line": 1868,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O156",
+      "original_text": "| 10 | clinical_kb 临床审核 | 每条 Disorder–Symptom 关系经持证精神科医师 sign-off |",
+      "source_line": 1869,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O157",
+      "original_text": "| 11 | 量表对照验证 | 系统 PHQ-9 估计分 vs 用户自填 PHQ-9，Pearson r ≥ 0.75 |",
+      "source_line": 1870,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O158",
+      "original_text": "| 12 | 方向判断验证 | `possible_concerns` 排序 vs 临床医生判断，Top-3 命中率 ≥ 0.70 |",
+      "source_line": 1871,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O159",
+      "original_text": "| 13 | 提取监控 | 生产环境持续采样，提取准确率下降 > 5% 自动告警 |",
+      "source_line": 1872,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O160",
+      "original_text": "| 14 | 危机独立旁路 | `flagCrisisSignal()` 不依赖漏斗路由，每轮常驻检测 |",
+      "source_line": 1880,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O161",
+      "original_text": "| 15 | 规则引擎兜底 | LLM 不可用或超时时，关键词规则层仍可触发危机告警 |",
+      "source_line": 1881,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O162",
+      "original_text": "| 16 | 人工 escalation SLA | urgent 级别 → 5 分钟内人工坐席响应或转接危机热线 |",
+      "source_line": 1882,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O163",
+      "original_text": "| 17 | PHQ-9 第 9 项优先 | 自伤/自杀意念维度未覆盖时，不受漏斗顺序约束，优先补充 |",
+      "source_line": 1883,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O164",
+      "original_text": "| 18 | 危机误报/漏报复盘 | 每月统计 crisis 触发率、人工确认率、漏报案例 |",
+      "source_line": 1884,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O165",
+      "original_text": "| 19 | 降级策略 | LLM 整体不可用时，系统仍可完成基础量表引导（非纯对话模式） |",
+      "source_line": 1885,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O166",
+      "original_text": "| 20 | 知情同意（Consent） | 用户明确 consent：数据类型、保留期、AI 推断声明、非诊断免责 |",
+      "source_line": 1893,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O167",
+      "original_text": "| 20a | Consent 与 AutoExecute 挂钩 | Observation Function 上线前确认 consent 覆盖该数据类型（见决策 4） |",
+      "source_line": 1894,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O168",
+      "original_text": "| 20b | Consent 版本管理 | 已 consent 版本有记录；consent 内容变更需重新获取同意 |",
+      "source_line": 1895,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O169",
+      "original_text": "| 21 | 数据加密 | patient_graph 静态加密（AES-256）+ 传输 TLS 1.2+ |",
+      "source_line": 1896,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O170",
+      "original_text": "| 22 | 访问审计 | 谁、何时、为何访问了哪个用户的数据，日志不可篡改 |",
+      "source_line": 1897,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O171",
+      "original_text": "| 23 | 数据留存与删除 | 明确保留期限；用户撤回 consent 后 30 天内删除 PII |",
+      "source_line": 1898,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O172",
+      "original_text": "| 24 | 跨境评估 | 若 LLM 调用境外 API，患者对话出境需完成合规评估 |",
+      "source_line": 1899,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O173",
+      "original_text": "| 25 | 等保 / 分级 | 按《数据安全法》完成医疗健康数据分类分级 |",
+      "source_line": 1900,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O174",
+      "original_text": "| 26 | 器械监管评估（SaMD） | 安全措辞：「识别到相关信号，建议咨询专业医生」「评估工具，非诊断」。以下措辞会触发监管：「诊断」「筛查结果表明你患有X」「建议用药」 |",
+      "source_line": 1901,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "原文临床/法规/时效及固定阈值未核实，不宣称达到。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O175",
+      "original_text": "| 27 | clinical_kb 热更新 | 知识图更新不影响正在进行的对话会话 |",
+      "source_line": 1909,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O176",
+      "original_text": "| 28 | Symptom 词表内存索引 | 服务启动预加载，规范化延迟 < 50ms（P99） |",
+      "source_line": 1910,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O177",
+      "original_text": "| 29 | 推理延迟 | `getAssessmentFocus()` P99 < 200ms |",
+      "source_line": 1911,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O178",
+      "original_text": "| 30 | review 队列工作台 | 临床歧义 case 有人工审核界面，SLA ≤ 24h |",
+      "source_line": 1912,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O179",
+      "original_text": "| 31 | 模型版本管理 | LLM 模型切换有 A/B 对比，可一键回滚 |",
+      "source_line": 1913,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O180",
+      "original_text": "| 32 | 灾难恢复 | MongoDB 每日备份，RPO ≤ 24h，RTO ≤ 4h |",
+      "source_line": 1914,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O181",
+      "original_text": "| 33 | staging 质量门控 | 样本量 < 50 的发现不进入 staging |",
+      "source_line": 1920,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O182",
+      "original_text": "| 34 | 反哺审核流程 | 临床医生 approve/reject，reject 有原因记录 |",
+      "source_line": 1921,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O183",
+      "original_text": "| 35 | prevalence 更新可追溯 | 每次 clinical_kb 边权重变更关联 staging 记录 |",
+      "source_line": 1922,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O184",
+      "original_text": "  recordSymptom / recordLifeEvent → MongoDB",
+      "source_line": 1943,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O185",
+      "original_text": "  getAssessmentFocus → 驱动对话",
+      "source_line": 1944,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O186",
+      "original_text": "  flagCrisisSignal → 规则兜底 + 告警",
+      "source_line": 1945,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O187",
+      "original_text": "  100 例标注对话 → 提取准确率评估",
+      "source_line": 1948,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O188",
+      "original_text": "  clinical_kb v1 → 精神科医生审核",
+      "source_line": 1949,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O189",
+      "original_text": "  PHQ-9 对照实验",
+      "source_line": 1950,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O190",
+      "original_text": "  加密 / 审计 / consent 流程",
+      "source_line": 1953,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O191",
+      "original_text": "  小范围灰度（≤ 500 用户）",
+      "source_line": 1954,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O192",
+      "original_text": "  危机响应 SLA 验证",
+      "source_line": 1955,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O193",
+      "original_text": "  开放自动路由（提取 F1 ≥ 0.80 后）",
+      "source_line": 1958,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O194",
+      "original_text": "  clinical_staging 反哺回路",
+      "source_line": 1959,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O195",
+      "original_text": "  多量表扩展（GAD-7、PCL-5……）",
+      "source_line": 1960,
+      "source_type": "原文实践目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "实践任务",
+      "card_keys": [],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "原文要求真实实现/实验/证据，本轮只设计T1，不记录为完成；架构/对象/动作稳定核心由上方短卡覆盖。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O196",
+      "original_text": "- **一个 Ontology，两类 Object**：分离的是 MongoDB/TuGraph 存储，不是概念模型。Link 类型（如 `REFERS_TO`）在 Ontology 层统一定义。",
+      "source_line": 1002,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O197",
+      "original_text": "- **clinical_kb 不记用户**：只有 Reference Object，不知道「小王是谁」。",
+      "source_line": 1003,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O198",
+      "original_text": "- **Function 只绑 Person/Session**：文档提取的 `actions` 是 Function 元数据，不是绑在 Disorder 上的 executable。",
+      "source_line": 1004,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O199",
+      "original_text": "- **ClinicalRule ≠ Function**：规则是 consult 用的指南条文；Function 是 Person 上的 runner。",
+      "source_line": 1005,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O200",
+      "original_text": "- **规范化 = 写 REFERS_TO 边**：口语 → `canonical_id` → SymptomReport 关联 ClinicalSymptom，是正式 Link，不是应用层 ad-hoc 映射。",
+      "source_line": 1006,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O201",
+      "original_text": "- **对话引导靠 Operational 层**：Coverage 缺口、duration 缺失等，查 patient_graph 即可，不必查 clinical_kb。",
+      "source_line": 1007,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O202",
+      "original_text": "- **反哺是离线回路**：patient_graph 聚合 → clinical_staging → 审核 → 更新 clinical_kb，不影响当次对话。",
+      "source_line": 1008,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O203",
+      "original_text": "| 提取的本体在对话里直接用 | 只在构建期用；运行时 consult 导出后的 KB |",
+      "source_line": 2054,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O204",
+      "original_text": "| 362 条实体驱动每一轮提问 | 驱动对话的是 patient_graph + Coverage；KB 做方向/consult |",
+      "source_line": 2055,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O205",
+      "original_text": "| 动作 Tab 的 Function 绑 Disease 执行 | Action 元数据 → 绑 Person 的 FunctionDef |",
+      "source_line": 2056,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O206",
+      "original_text": "| 筛查不需要 nano-ontoprompt | 需要 **KB 构建能力**；可以是本平台，也可以是 SNOMED + 手工替代 |",
+      "source_line": 2057,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O207",
+      "original_text": "| 对话中应再跑 LLM 文档提取 | 对话中是 Observation Function 写 patient_graph，不是文档提取 |",
+      "source_line": 2058,
+      "source_type": "原文总结知识目标",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001",
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原文总结逐行登记；Reference/Operational是示例组织，不把其Function绑定绝对规则延伸到官方Foundry。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O208",
+      "original_text": "#### 盲区 1：危机信号不能走漏斗",
+      "source_line": 1335,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "危机信号独立旁路是原文安全设计；具体危机判定和处置需专业方案，本轮不生成医疗指导卡。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O209",
+      "original_text": "#### 盲区 3：多方向共病的优先级排序",
+      "source_line": 1380,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "所谓NICE排序未指向具体指南，无法确认，延期临床优先序。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O210",
+      "original_text": "### 推理层：图 → 筛查结论",
+      "source_line": 1213,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "两次报告日期不能证明连续症状；自然对话不能直接替代标准量表计分与临床诊断。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O211",
+      "original_text": "### 决策 4：数据采集的 Consent 边界是什么？（医疗 / 健康场景必选）",
+      "source_line": 188,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "Consent例外和强制启用不能从本文推导法律许可，需场景与司法辖区评估。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O212",
+      "original_text": "#### canonical_id 的来源：直接用 SNOMED-CT，不从文档提取",
+      "source_line": 1125,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "SNOMED术语ID、许可和临床语义未独立核对；保留标准身份机制，不背具体编码。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O213",
+      "original_text": "| 26 | 器械监管评估（SaMD） | 安全措辞：「识别到相关信号，建议咨询专业医生」「评估工具，非诊断」。以下措辞会触发监管：「诊断」「筛查结果表明你患有X」「建议用药」 |",
+      "source_line": 1901,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "仅改措辞不决定医疗器械监管范围；不可用免责声明当合规充分条件。",
+      "mother_question_id": "M2",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O214",
+      "original_text": "```",
+      "source_line": 2307,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "未提过敏信息不等于无过敏，不能AI填“无已知药物过敏”。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O215",
+      "original_text": "  ▼  encounter.archiveDraft()    ExplicitConfirm（仅 confirmed 状态可触发）",
+      "source_line": 2276,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "30年保留是原文PRD/法规混写，本轮不声称通用法定要求。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O216",
+      "original_text": "HIS 调用失败不回滚 `archived` 状态（已写入平台侧），但触发告警并写补偿记录，由运维手动重推。",
+      "source_line": 2375,
+      "source_type": "待核实子命题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "延期核实",
+      "card_keys": [],
+      "practice_task_ids": [],
+      "reason": "本地archived先写而HIS失败的示例存在交付事实混淆，母题复用既有恢复卡纠正。",
+      "mother_question_id": "M3",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "documented_only; deferred_or_practice_not_completed"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O217",
+      "original_text": "前言",
+      "source_line": 3,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.fde-delivery.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "客户说“经常缺货”，FDE 与 PM、客户业务负责人怎样协作把它变成可运行方案？FDE是否只是配置本体的岗位？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O218",
+      "original_text": "在 Palantir 体系中，**FDE（Forward Deployed Engineer，前线部署工程师）** 是连接客户复杂混乱的现实业务与技术平台的核心枢纽。FDE 的核心看家本领，就是将分散在各业务系统、数据库和数据湖里的异构数据，抽象映射为统一的**本体模型（Ontology）**——通过数据对象化（Object）、语义图关联（Link）、业务动作受控执行（Function / Action）以及全链路治理与审计（Governance），构建起支撑企业业务运营与 AI Agent 自主决策的\"数字孪生中枢\"。",
+      "source_line": 5,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.ontology-layer.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "采购系统已有数据表、知识图谱和向量检索。企业操作本体还解决什么，为什么不能把它等同于图数据库或向量库？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O219",
+      "original_text": "### Object",
+      "source_line": 115,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.object-identity.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "ERP与采购平台都返回订单ID“123”，租户A/B也可能重复。Agent跨系统引用订单时，Object Type、实例与引用要怎样区分？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O220",
+      "original_text": "### Link",
+      "source_line": 123,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.link-semantics.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "订单“由门店创建”和“配送到门店”连接同样两类对象。为什么要用不同Link Type？关系权重能否直接当权限？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O221",
+      "original_text": "### Function（= Action Type）",
+      "source_line": 128,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.action-function.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "Foundry中的取消订单Action Type与执行取消逻辑的Function分别是什么？为什么不能沿用原文“Function=Action Type”作为定义？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O222",
+      "original_text": "### 决策 2：你的 Function 边界在哪里？",
+      "source_line": 159,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.intent-granularity.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "“创建会议并邀请三人”被拆成四次模型调用，用户收到重复通知。应怎样调整动作粒度，又怎样处理邀请部分失败？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O223",
+      "original_text": "### Resolver：联邦读路径",
+      "source_line": 298,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.projection-authority.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "对象浏览器缓存显示订单未发货，权威订单系统刚变为已发货。Agent据缓存取消订单，为什么错？读写责任应怎样安排？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O224",
+      "original_text": "### Validate 分层",
+      "source_line": 474,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.object-data-permissions.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "员工能看见“订单”Object Type和取消Action，但不该读其他租户订单。权限需要在哪些对象和路径上生效？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O225",
+      "original_text": "### Foundry 对齐：Reference vs Operational 分层",
+      "source_line": 785,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.reference-operational.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "补货政策库与实时门店缺货记录应怎样关联？“政策规定低库存可补货”能否直接当某门店已获采购批准？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O226",
+      "original_text": "#### 文档提取的 logic_rules / actions ≠ Foundry Function",
+      "source_line": 826,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.extracted-rule-boundary.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "LLM从采购制度提取“超额订单通知负责人”和一段function_code。为什么不能把它直接注册为可执行Action？"
+    },
+    {
+      "module_id": "3.26",
+      "objective_id": "m26-O227",
+      "original_text": "### 两个状态机：EncounterSession / MedicalRecordDraft",
+      "source_line": 2248,
+      "source_type": "跨模块/编辑补题",
+      "source_path": "第3章-技术攻克/3.26-FDE-Ontology.md",
+      "source_hash": "bc06c7d23e21ef7d7097a8b9f4b6a2e76dc343110adec7722fa661e93ea76086",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m26.draft-state-provenance.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "原行只作出处锚点；题目、业务实例、反例与操作判据是编辑设计，非原文逐字题。",
+      "mother_question_id": "M1",
+      "priority": "P1",
+      "review_status": "主编复核通过；独立审校见验收报告",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed",
+      "edited_objective": "AI生成审批记录，负责人编辑并确认后AI又重生成覆盖了该记录。对象状态、版本和来源应怎样设计？"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "T1",
+      "description": "30–45分钟：以供应链补货为例，画Object Type/实例/Link Type/Action Type/Function/权威系统与投影/权限层图，列来源映射、身份命名空间、租户及ACL、动作条件与错误结果。选两个受控动作设计完整读写及异常路径，记录原文假设与实际验证项；未实现、未压测、未部署。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T2",
+      "description": "30–45分钟：把S1/S4/S2仅当结构设计练习：区分输入资产/缺失状态、草稿/确认/外部写回回执、方案版本/任务实例，画业务状态机和角色权限表；模拟设计拒绝授权、重复请求、外部执行后丢回执、旧投影与已确认版本重生成。只采用通用工程机制；医学阈值、标准、法规、临床结果需专项核实，实践执行0。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "practices_completed": 0,
+  "local_cards": 11,
+  "publication_status": "local_candidate_not_published",
+  "review_status": "author_self_check_complete_pending_editor"
+}

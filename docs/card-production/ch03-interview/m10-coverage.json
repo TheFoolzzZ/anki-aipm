@@ -1,0 +1,339 @@
+{
+  "module_id": "3.10",
+  "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+  "native_objectives": 18,
+  "registered": 18,
+  "practice_completed": 0,
+  "objectives": [
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O01",
+      "original_text": "*   [ ] 我能解释 Embedding 从 Word2Vec → BERT → 对比学习的演进路线",
+      "source_line": 692,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.training-objective.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "比较静态词、上下文表示与匹配目标，不背唯一历史路线",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O02",
+      "original_text": "*   [ ] 我能解释双塔模型（Bi-Encoder）和单塔模型（Cross-Encoder）的区别",
+      "source_line": 693,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.rerank-candidate-ceiling.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "双塔预计算与交叉编码逐对交互，进入重排前先验候选",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O03",
+      "original_text": "*   [ ] 我知道为什么需要向量数据库（ANN 算法 vs 暴力搜索）",
+      "source_line": 694,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.vector.ann-quality-budget.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "说明减少搜索工作与近似漏失，Flat也能在合适负载下服务",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O04",
+      "original_text": "*   [ ] 我能解释余弦相似度、欧氏距离、点积的适用场景",
+      "source_line": 695,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.vector.metric-compatibility.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "单位向量等价条件与实际索引误差分开",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O05",
+      "original_text": "*   [ ] 我能根据数据量选择合适的向量数据库（Chroma/pgvector/Milvus/Pinecone）",
+      "source_line": 699,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.vector.database-selection.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "条数改为负载/过滤/更新/恢复证据，品牌版本用T1核对",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O06",
+      "original_text": "*   [ ] 我能根据语言场景选择合适的 Embedding 模型（BGE/GTE/E5/OpenAI）",
+      "source_line": 700,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "拆分",
+      "card_keys": [
+        "ch03.vector.training-objective.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "同语种与跨语种分层；品牌适用性用当前实测确定",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O07",
+      "original_text": "*   [ ] 我知道 HNSW 的三个关键参数（M、efConstruction、efSearch）如何影响性能",
+      "source_line": 701,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.ann-quality-budget.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "M/efConstruction是建图，efSearch是查询预算；五个参数的逐项复述由T3参数练习承接，短卡仅强制机制和预算层次",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O08",
+      "original_text": "*   [ ] 我了解 IVF 的 nlist 和 nprobe 参数的含义",
+      "source_line": 702,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.ann-quality-budget.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "nlist和nprobe区分聚类桶数与探测桶数；五个参数的逐项复述由T3参数练习承接，短卡仅强制机制和预算层次",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O09",
+      "original_text": "*   [ ] 我知道什么时候该用 PQ 量化（数据量极大、内存受限）",
+      "source_line": 703,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.vector.compression-choice.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "PQ按子向量量化，压缩不保证质量与端到端收益",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O10",
+      "original_text": "*   [ ] 我知道文档切分的 Chunk Size 和 Overlap 如何设置",
+      "source_line": 707,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "跨模块",
+      "card_keys": [
+        "ch03.rag.chunk-experiment.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "已有切分实验卡复用，实际Chunk与Overlap需任务验证",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O11",
+      "original_text": "*   [ ] 我了解完整的 RAG 向量检索流程（入库 → 查询 → 重排序 → 生成）",
+      "source_line": 708,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "综合",
+      "card_keys": [
+        "ch03.vector.rerank-candidate-ceiling.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "M1完整入库到生成流程，单卡只覆盖召回重排职责",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O12",
+      "original_text": "*   [ ] 我知道如何评估向量检索的效果（召回率@K、MRR、NDCG）",
+      "source_line": 709,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "指标口径已讲清，标注集与手算实践尚未执行",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O13",
+      "original_text": "*   [ ] 我了解重排序（Cross-Encoder）为什么能提升精度",
+      "source_line": 710,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "合并",
+      "card_keys": [
+        "ch03.vector.rerank-candidate-ceiling.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "交互可提供细信号，但不保证所有任务收益",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O14",
+      "original_text": "*   [ ] 我能估算向量数据库的存储成本和 Embedding API 成本",
+      "source_line": 711,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.vector.capacity-arithmetic.001"
+      ],
+      "practice_task_ids": [
+        "T1"
+      ],
+      "reason": "按块/Token复算并明确假设，实价预算另查",
+      "mother_question_id": "M1",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O15",
+      "original_text": "*   [ ] 我知道稀疏向量（SPLADE）和密集向量的区别",
+      "source_line": 715,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m10.sparse-representation.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "新增词项稀疏表示机制，不让混合检索评分卡代替概念",
+      "mother_question_id": "M2",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O16",
+      "original_text": "*   [ ] 我了解 ColBERT 的多向量表示思路",
+      "source_line": 716,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.interview.m10.colbert-late-interaction.001"
+      ],
+      "practice_task_ids": [],
+      "reason": "新增每查询项MaxSim再求和，纠正原文遗漏",
+      "mother_question_id": "M2",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O17",
+      "original_text": "*   [ ] 我知道混合搜索（向量 + BM25 + RRF）的实现方式",
+      "source_line": 717,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "采用",
+      "card_keys": [
+        "ch03.vector.hybrid-evaluation.001"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "reason": "保留BM25/向量单路基线，解释RRF及融合验证",
+      "mother_question_id": "M2",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    },
+    {
+      "module_id": "3.10",
+      "objective_id": "m10-O18",
+      "original_text": "*   [ ] 我能设计向量数据库的监控和性能调优方案",
+      "source_line": 718,
+      "source_path": "第3章-技术攻克/3.10-向量数据库与嵌入模型.md",
+      "source_hash": "d1cbe69cae70d5c95b748ee575ff5df8c00ee5a311d29d118ac717b15ca5dfe7",
+      "decision": "综合",
+      "card_keys": [
+        "ch03.vector.ann-quality-budget.001",
+        "ch03.vector.database-selection.001",
+        "ch03.interview.m10.filtered-recall.001",
+        "ch03.interview.m10.embedding-migration.001"
+      ],
+      "practice_task_ids": [
+        "T2"
+      ],
+      "reason": "用M2串联监控诊断、过滤、更新迁移与恢复；实践不算完成",
+      "mother_question_id": "M2",
+      "review_status": "主编复核通过",
+      "publication_status": "mapped_cards_published_and_verified; practice_not_completed"
+    }
+  ],
+  "publication_status": "published_and_verified_2026-10-01"
+}

@@ -1,0 +1,302 @@
+{
+  "batch_id": "ch03-interview-20261001-m19",
+  "status": "accepted",
+  "chapter_position": 3,
+  "cards": [
+    {
+      "canonical_key": "C08",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "mcp-vs-function-call"
+      ],
+      "revision": 2,
+      "position": 8,
+      "title": "MCP 与 Function Call 的分工",
+      "kind": "对比",
+      "prompt": "Function Call与MCP各解决什么问题？已有支持Function Call的模型接入ERP，为什么仍需应用实现连接与执行链？",
+      "answer_short": "Function Call让模型输出结构化调用意图和参数；MCP标准化应用与工具/资源的发现和交互。应用负责将工具信息交给模型、接收意图、校验并调用执行端，再把结果送回；支持模型调用不等于已实现MCP。",
+      "required_points": [
+        "Function Call输出调用意图/参数，不直接执行ERP操作",
+        "MCP提供标准工具/资源发现及交互，不替代模型判断",
+        "应用连接、校验、执行和结果回传仍需实现"
+      ],
+      "explanation": "沿用C08既有跨协议目标和position8，仅补强为rev2。原文能力层/协议层比较是有用框架，但“所有Function Call模型自动发现并使用MCP”过强。编辑情境：模型提出get_stock(sku=ABC)，应用须把它映射到已连接的ERP工具并实际执行；模型输出JSON本身不是库存结果。MCP Server可再调用既有ERP API，协议没有把后端业务重写掉。\n【面试追问】ERP报库存0，模型为何说100？参考思路：查真实调用结果是否回传、类型是否解析、模型是否忽略结果；先分清意图生成、连接执行和答案生成。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "Function Call与MCP不是互斥选项；没有MCP Client的应用不会因模型支持工具调用而自动获得MCP。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 146,
+          "line_end": 189
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m19.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.host-client-server.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.host-client-server"
+      ],
+      "revision": 1,
+      "position": 2901,
+      "title": "MCP 三种参与者的职责",
+      "kind": "概念",
+      "prompt": "数据分析应用同时连接数仓和文档两个MCP Server。Host、Client与Server各负责什么？Server必须由外部供应商维护吗？",
+      "answer_short": "Host是协调模型、用户交互和多个Client的AI应用；Client是Host内连接对应Server的协议组件；Server暴露数据、工具或模板，可本地/远程部署，也可自研。两个Server通常对应各自Client连接。",
+      "required_points": [
+        "Host负责应用协调和用户交互",
+        "Client与对应Server交互，Server提供能力",
+        "Server可以本地或远程、自研或外部维护"
+      ],
+      "explanation": "原文遗漏Host并把Client说成决策者、Server来源固定为工具方；第一方架构明确Host–Client–Server。编辑情境：分析应用Host决定当前分析任务使用数仓和文档上下文，两个Client分别处理协议交互，数仓Server通过现有查询API返回数据，文档Server返回资料。模型的工具选择、审批和上下文组装属于Host应用流程，不能都归给通信组件。部署位置也不同于维护者身份，自研Server既能本地运行也能远程服务。\n【面试追问】一个Server能服务多个用户吗？参考思路：远程实现可以支持多个Client，但隔离与授权需要服务端和Host共同落实，不从“一个连接”推出全部用户共享权限。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "MCP Client不是LLM；服务端不必由第三方提供。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 65,
+          "line_end": 96
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 331,
+          "line_end": 348
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m19.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.server-primitives.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.server-primitives"
+      ],
+      "revision": 1,
+      "position": 2902,
+      "title": "资料、动作与模板如何分工",
+      "kind": "对比",
+      "prompt": "分析助手需要读指标定义、查询销售额、套用月报模板。MCP Resource、Tool、Prompt各适合承载什么？只读查询为何也可以是Tool？",
+      "answer_short": "Resource暴露可读上下文，Tool暴露可调用函数，Prompt提供可复用交互模板。读指标定义可用Resource，参数化查销售额可用只读Tool，月报模板可用Prompt；是否写数据不是划分Tool与Resource的唯一标准。",
+      "required_points": [
+        "区分上下文、可执行函数、交互模板三个对象",
+        "为指标定义/销售查询/月报模板给出对应实例",
+        "Tool可只读，Prompt不是自动执行工作流"
+      ],
+      "explanation": "原文把Tool主要写成修改外部状态，需纠正为可执行操作，查询同样可以是Tool。第一方对Server三原语区分清楚；默认交互模型是资源由应用管理、工具可由模型选择、提示模板常由用户选择，实际Host如何呈现需确认。编辑情境：指标定义文档Resource提供分母口径，query_sales(date_range)作为Tool按参数运行，Prompt组织月报提问格式。Server可只暴露其中部分能力，不要求每家凑齐三种。\n【面试追问】把“写周报并发送”写进Prompt就完成自动化了吗？参考思路：没有；模板只是输入，实际检索、生成、执行及确认仍由应用和后端完成。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "Resource不是自动完成RAG；Tool只读/写入性质需查具体接口。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 98,
+          "line_end": 142
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m19.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.discovery-call-loop.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.discovery-call-loop"
+      ],
+      "revision": 1,
+      "position": 2903,
+      "title": "工具从被发现到产生结果",
+      "kind": "机制",
+      "prompt": "Server里有查订单工具，模型却一直说不能查。MCP接入一项工具，从连接到模型使用再到返回结果，需要经过哪些关键步骤？",
+      "answer_short": "先确认通信和版本/能力兼容，再发现当前工具及输入Schema；Host把获准工具提供给模型或应用逻辑，校验调用后由Client发往Server执行，结果回传并进入后续回答。在哪一段缺失就检查对应证据。",
+      "required_points": [
+        "通信及版本/能力兼容后发现工具与Schema",
+        "Host提供工具并处理调用意图/参数，Client发起真实调用",
+        "Server执行结果须回传且被后续应用使用"
+      ],
+      "explanation": "原文强调统一发现，但不等于配置一次就自动接入所有能力。第一方提供工具枚举与调用操作；具体协议发现/初始化方式随版本变化，卡片只要求稳定链路。编辑情境：日志显示Server连通但工具枚举没返回query_order，先查能力暴露；枚举有却没交给模型，查Host工具可见性；模型已提出调用但Server没收请求，查映射和Client交互；后端返回订单后模型仍说无法查询，查回传与生成。\n【面试追问】工具名称与Schema都对，仍可能失败吗？参考思路：可能；后端鉴权、订单业务范围、参数语义和服务故障不是Schema存在就解决。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "发现是协议操作，模型不直接连数据库；协议响应成功不等于业务查询成功。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 39,
+          "line_end": 58
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 86,
+          "line_end": 96
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 150,
+          "line_end": 189
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m19.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.transport-compatibility.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.transport-compatibility"
+      ],
+      "revision": 1,
+      "position": 2904,
+      "title": "本地进程与远程连接的区别",
+      "kind": "场景判断",
+      "prompt": "一个分析助手接本机文件Server和企业远程报表Server。为什么不能说“每次MCP都是网络调用”或按旧SSE配置直接保证兼容？",
+      "answer_short": "本地Server可走stdio进程通信，远程常用Streamable HTTP；连接方式、协议版本与能力须双方匹配。迁移旧配置时查实现支持的版本、传输、认证和功能，不把历史SDK方法当永久契约。",
+      "required_points": [
+        "区分stdio本地进程与远程HTTP通信",
+        "核对双方版本、传输及能力匹配",
+        "旧SSE/SDK配置不可自动保证当前兼容"
+      ],
+      "explanation": "原文“每次MCP调用都是网络请求”不适用于stdio。第一方当前架构给出stdio与Streamable HTTP，HTTP可按实现使用SSE流式输出，SSE不是所有MCP的唯一入口。编辑情境：本机文件Server启动失败可查进程、路径和标准输入输出；企业报表Server认证失败查远程地址及凭证获取配置，不能把两类问题都归因网络。核心卡只要求版本兼容原则；具体发现报文、初始化方式及SDK接口放T1按目标实现版本核对。\n【面试追问】Server升级后可见工具变少是否只能换模型？参考思路：先对比版本、能力与工具列表，检查Host缓存及映射，再以原请求回归。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "不能把stdio的凭证方式照搬HTTP OAuth流程；旧版本仍可存在，须记录双方实现。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 531,
+          "line_end": 543
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 577,
+          "line_end": 590
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m19.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.integration-boundary.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.integration-boundary"
+      ],
+      "revision": 1,
+      "position": 2905,
+      "title": "标准接入不能消除业务事务",
+      "kind": "场景判断",
+      "prompt": "MCP已连通CRM、项目系统、通知系统；创建项目成功，合同同步失败。为什么“都使用MCP”仍不能保证一条指令全部原子完成？",
+      "answer_short": "MCP统一各能力交互，不建立跨系统业务事务。应用要记录步骤结果、依赖和业务对象标识，停止依赖失败步骤的后续动作；按业务能力补偿或人工接管，核对真实状态后再恢复。",
+      "required_points": [
+        "统一接口不等于跨系统原子事务",
+        "按业务步骤记录对象/结果和依赖，失败后停止错误传播",
+        "依据真实系统状态设计补偿/人工接管及恢复"
+      ],
+      "explanation": "原文企业系统集成要求编排与补偿；此卡只考MCP接入责任边界，不重复制卡通用最小权限。编辑情境：项目空间已创建而合同未同步，不能发送“合同已就绪”通知，也不能凭协议错误把已创建空间视为不存在。如果项目系统支持安全关闭可补偿；否则保留中间态并转人工，修复合同后从明确步骤继续。协议规范化参数传递减少连接适配，业务依赖、动作幂等和事实确认仍属执行设计。\n【面试追问】MCP Server能包装整条流程吗？参考思路：可以，但那是Server/后端额外实现的业务流程与事务，不是协议天然保证。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "并发调用多个Server不建立一致事务；强制回滚所有系统可能不可行。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 259,
+          "line_end": 284
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 350,
+          "line_end": 384
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m19.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch03.interview.m19.server-admission.001",
+      "lesson_source_key": "第3章-技术攻克/3.19-MCP.md",
+      "concept_keys": [
+        "interview.m19.server-admission"
+      ],
+      "revision": 1,
+      "position": 2906,
+      "title": "接入方如何证明业务适配",
+      "kind": "场景判断",
+      "prompt": "候选MCP Server覆盖80%接口、三个月内有更新且Star很多，但缺少生产必需的撤销接口。能否用原文五维加权总分直接决定上线？",
+      "answer_short": "不能。按当前必需任务、协议/传输兼容、故障恢复和部署边界设硬门槛；缺关键撤销能力不能用热度抵消。用代表任务与失败样例验证维护/支持/文档证据，原文权重和80%不是通用通过线。",
+      "required_points": [
+        "关键任务与故障恢复有硬门槛，不能被总分抵消",
+        "核对版本/部署/认证及运维支持证据",
+        "用真实业务路径与失败样例试点，不把Star或提交频次当可用证明"
+      ],
+      "explanation": "原文五维权重、三个月更新和Star100是作者筛选启发，不是协议认证标准。编辑情境：采购审批要求能撤回错误申请，候选支持八个查询却不支持撤回，接口计数80%掩盖关键缺口。维护活跃可降低风险但不能证明当前版本适合企业系统；技术负责人复现发现、调用、失败和升级，业务方验证对象语义与撤销条件，运营确认故障联系人和恢复说明。许可条款按具体版本另行核对，不背“GPL一定不能用”等法律结论。\n【面试追问】自研就能跳过准入吗？参考思路：不能；相同业务门槛和失败测试仍适用，代码归属不能替代质量证据。\n【自评】核心结论与全部必答点正确即掌握；追问是迁移练习，不额外强制背诵。",
+      "pitfalls": "最新提交可能只是文档更新；生产案例也不能证明本租户适配。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 398,
+          "line_end": 429
+        },
+        {
+          "relative_path": "第3章-技术攻克/3.19-MCP.md",
+          "content_hash": "a7959f9a23295e2baed7b8bdd29ea7fe7abed12a452b5fbb32912a96bbe87bde",
+          "line_start": 545,
+          "line_end": 559
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "主编复核通过（2026-10-02）",
+        "notes": [
+          "题答、机制、案例、边界与跨模块去重复核通过，逐卡依据见docs/card-production/ch03-interview/m19.md。",
+          "主编独立复核协议角色/生命周期/版本边界及跨模块重复，见本轮总验收。发布回读见docs/verification/ch03-eleven-twenty-interview-20261001.md。"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "from": "ch05.interview.m06.matrix-residual.001",
+    "to": "ch05.interview.m06.risk-event-chain.001",
+    "type": "prerequisite",
+    "reason": "剩余风险判断需要先登记具体事件及后果"
+  },
+  {
+    "from": "ch05.interview.m06.risk-treatment.001",
+    "to": "ch05.interview.m06.matrix-residual.001",
+    "type": "extension",
+    "reason": "矩阵评审后选择改变活动/损失/概率的策略"
+  },
+  {
+    "from": "ch05.interview.m06.human-review-bias.001",
+    "to": "ch05.interview.m06.risk-treatment.001",
+    "type": "extension",
+    "reason": "人工审核作为降低策略还要验证实际纠错能力"
+  },
+  {
+    "from": "ch05.interview.m06.deletion-scope.001",
+    "to": "ch05.interview.m06.risk-event-chain.001",
+    "type": "extension",
+    "reason": "数据承诺的风险沿生命周期登记触发与派生副本"
+  }
+]

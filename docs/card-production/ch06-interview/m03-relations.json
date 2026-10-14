@@ -1,0 +1,11 @@
+{
+  "module_id": "6.3",
+  "relations": [
+    {
+      "from": "ch06.interview.m03.page-completeness.001",
+      "to": "ch06.interview.m03.comparable-price.001",
+      "type": "compare",
+      "reason": "可比价格要确认字段语义，页面完整性要确认目标范围：记录采对与记录采全分别是交付所需证据"
+    }
+  ]
+}

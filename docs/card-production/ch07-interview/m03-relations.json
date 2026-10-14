@@ -1,0 +1,26 @@
+[
+  {
+    "to": "ch07.interview.m03.chain-flow.001",
+    "type": "prerequisite",
+    "reason": "先辨每层交付对象，再追溯看似独立供应商共用的上游瓶颈",
+    "from": "ch07.interview.m03.bottleneck.001"
+  },
+  {
+    "to": "ch07.interview.m03.bottleneck.001",
+    "type": "extension",
+    "reason": "可用替代还需支付算子与工具链迁移验证成本，不能只数供应商",
+    "from": "ch07.interview.m03.migration-economics.001"
+  },
+  {
+    "to": "ch07.interview.m03.bottleneck.001",
+    "type": "extension",
+    "reason": "真正替代与议价能力决定上游节省在应用、客户和竞品间如何传导",
+    "from": "ch07.interview.m03.price-transmission.001"
+  },
+  {
+    "to": "ch07.interview.m03.chain-flow.001",
+    "type": "extension",
+    "reason": "层间服务边界确定供应商声明覆盖范围，应用仍需自己的责任证据",
+    "from": "ch07.interview.m03.responsibility-map.001"
+  }
+]
