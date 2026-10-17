@@ -12,12 +12,14 @@ export function activeReviews(events:ReviewEvent[]){
 }
 export function studySummary(data:Bootstrap,now=new Date(data.now)){
  const start=learningDay(now,data.settings).start.getTime();
+ const nowMs=now.getTime();
  const reviews=activeReviews(data.events);
  const today=reviews.filter(e=>new Date(e.received_at).getTime()>=start);
  const newToday=new Set(today.filter(e=>e.state_before.reps===0).map(e=>e.card_id)).size;
- const available=data.cards.filter(c=>!data.states.find(s=>s.card_id===c.id)?.suspended);
- const due=available.filter(c=>{const s=data.states.find(x=>x.card_id===c.id);return s&&s.fsrs.reps>0&&new Date(s.due)<=now;});
- const unseen=available.filter(c=>!data.states.find(s=>s.card_id===c.id)?.fsrs.reps);
+ const stateMap=new Map(data.states.map(s=>[s.card_id,s]));
+ const available=data.cards.filter(c=>!stateMap.get(c.id)?.suspended);
+ const due=available.filter(c=>{const s=stateMap.get(c.id);return s&&s.fsrs.reps>0&&new Date(s.due).getTime()<=nowMs;});
+ const unseen=available.filter(c=>!stateMap.get(c.id)?.fsrs.reps);
  const spentMs=today.reduce((n,e)=>n+e.duration_ms,0);
  const remainingMinutes=Math.max(0,data.settings.daily_minutes-spentMs/60000);
  const reviewMinutes=due.length*0.5;
@@ -27,12 +29,16 @@ export function studySummary(data:Bootstrap,now=new Date(data.now)){
 }
 export function selectNext(data:Bootstrap,now=new Date(data.now),skip:string[]=[]){
  const summary=studySummary(data,now);
- const due=summary.due.filter(c=>!skip.includes(c.id)).sort((a,b)=>new Date(data.states.find(s=>s.card_id===a.id)!.due).getTime()-new Date(data.states.find(s=>s.card_id===b.id)!.due).getTime());
+ const skipSet=new Set(skip);
+ const stateMap=new Map(data.states.map(s=>[s.card_id,s]));
+ const due=summary.due.filter(c=>!skipSet.has(c.id)).sort((a,b)=>new Date(stateMap.get(a.id)!.due).getTime()-new Date(stateMap.get(b.id)!.due).getTime());
  if(due.length)return due[0];
  if(!summary.newCount)return null;
- const practicedConcepts=new Set(summary.today.flatMap(e=>data.cards.find(c=>c.id===e.card_id)?.concept_keys||[]));
- const candidates=summary.unseen.filter(c=>!skip.includes(c.id)&&!c.concept_keys.some(k=>practicedConcepts.has(k)));
+ const cardMap=new Map(data.cards.map(c=>[c.id,c]));
+ const chapterPosition=new Map(data.chapters.map(c=>[c.id,c.position]));
+ const practicedConcepts=new Set(summary.today.flatMap(e=>cardMap.get(e.card_id)?.concept_keys||[]));
+ const candidates=summary.unseen.filter(c=>!skipSet.has(c.id)&&!c.concept_keys.some(k=>practicedConcepts.has(k)));
  const rank=(chapterId:string)=>{const f=data.settings.familiarity[chapterId];return f==='new'?0:f==='experienced'?2:1;};
- candidates.sort((a,b)=>data.settings.route_mode==='chapter'?(data.chapters.find(c=>c.id===a.chapter_id)!.position-data.chapters.find(c=>c.id===b.chapter_id)!.position)||a.position-b.position:rank(a.chapter_id)-rank(b.chapter_id)||a.position-b.position);
+ candidates.sort((a,b)=>data.settings.route_mode==='chapter'?((chapterPosition.get(a.chapter_id)??0)-(chapterPosition.get(b.chapter_id)??0))||a.position-b.position:rank(a.chapter_id)-rank(b.chapter_id)||a.position-b.position);
  return candidates[0]||null;
 }

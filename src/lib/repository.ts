@@ -16,7 +16,8 @@ export async function bootstrap(user:{id:string;display_name:string}):Promise<Bo
  for(const r of result)if(r.error)throw new Error(`DATABASE_READ_FAILED:${r.error.code}`);
  const [s,ch,l,c,cr,st,e,a]=result;
  const settings=s.data as unknown as Settings;
- const cards=(c.data||[]).map(card=>({...card,...cr.data?.find(r=>r.card_id===card.id&&r.revision===card.active_revision)})) as CardMeta[];
+ const revisionMap=new Map((cr.data||[]).map(r=>[`${r.card_id}:${r.revision}`,r]));
+ const cards=(c.data||[]).map(card=>({...card,...revisionMap.get(`${card.id}:${card.active_revision}`)})) as CardMeta[];
  return {user,settings:{...settings,retention:Number(settings.retention)},chapters:ch.data as Bootstrap['chapters'],lessons:l.data as Bootstrap['lessons'],cards,states:st.data as Bootstrap['states'],events:e.data as Bootstrap['events'],activity:a.data as Bootstrap['activity'],now:new Date().toISOString(),historyLimited:e.data?.length===1000};
 }
 export async function cardDetail(id:string):Promise<CardDetail>{
@@ -29,6 +30,11 @@ export async function cardDetail(id:string):Promise<CardDetail>{
  const revision=revisions.data?.find(item=>item.revision===card.data.active_revision);
  if(!revision)throw new Error('CARD_NOT_FOUND');
  return {...card.data,...revision};
+}
+export async function lessonSource(lessonId:string){
+ const r=await db().from('apm_source_revisions').select('id,body_markdown,content_hash').eq('lesson_id',lessonId).order('imported_at',{ascending:false}).limit(1).single();
+ if(r.error||!r.data)throw new Error('LESSON_NOT_FOUND');
+ return r.data;
 }
 export async function reviewContext(userId:string,cardId:string){
  const client=db();

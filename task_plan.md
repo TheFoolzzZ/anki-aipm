@@ -79,3 +79,10 @@
 状态complete（2026-10-14）。先第一章1.1–1.7，再第二章2.1–2.4，沿答案标准1.1逐题补强为面试可回答的STAR/编号结构；先核对实际活动卡和源文，再决定缺口。现有目标保留稳定身份、位置、概念键，修订用新批次revision+1，不修改冻结批次、不覆盖学习记录。每章依次通过逐卡事实/教学独立审校、结构与来源检查、diff→publish→verify，并核对全库/历史修订/旧批次/学习摘要。不机械凑卡量，不把母题或实践登记当完成。证据保存artifacts/ch01-ch02-interview-20261011；当前阶段：只读基线。
 
 2026-10-14完成证据：章1 44（22 STAR/22编号），章2 32（18 STAR/14编号），76全部独立审校pass；11批按章顺序事务发布/逐字段回读；全库408/875/107，旧修订/账本/身份/学习记录保护通过。第三章250/26本次再读回；前三章326张新版均可供学习。Chrome408列表、三章答案与来源导航抽验通过。详见docs/verification/ch01-ch02-interview-20261011.md。
+
+## 2026-10-17 零延迟交互架构升级（SPEC-003）与多用户进度追踪方案设计（SPEC-004）
+
+| 阶段 | 状态 | 说明 |
+| --- | --- | --- |
+| SPEC-003 零延迟客户端浅路由与预取缓存架构 | completed | 规格 `docs/specs/v0.2-instant-interaction-architecture.md`、决策 `docs/decisions/003-instant-interaction-architecture.md`、验证 `docs/verification/v0.2-instant-interaction.md` 及代码实现已全部落库 |
+

@@ -247,3 +247,14 @@
 ## 2026-10-14 第一、二章发布及前三章页面验收完成
 
 章1 44、章2 32全部审校并发布（40 STAR/36编号，73旧卡修订+3新），11批publish/verify与章间/最终audit通过；全库408卡/875修订/107批次，799旧修订、96旧账本/旧批次和学习0/0/1摘要均保持。第三章250卡26批本次逐字段复核通过。Chrome页面刷新实际408；C01、章1人机协同、章2基础设施PM核心/评分/解析展示正确，1.5来源原文及10卡导航打开。制卡任务complete，实际页面为当前3210，未新部署前端、未评分或标读。证据docs/verification/ch01-ch02-interview-20261011.md及publication-summary/browser-acceptance-20261014。
+
+## 2026-10-17 零延迟客户端交互与分层预取缓存架构升级（SPEC-003）
+
+- 撰写并落盘 `docs/specs/v0.2-instant-interaction-architecture.md`，完成“跳页前 1~2 秒 + 进页后拉取 Supabase 1~2 秒”的四层根因归因。
+- 升级 `src/lib/db.ts` 为配置感知的单例 Supabase 客户端；升级 `src/lib/repository.ts`（`Map` 索引组装卡片修订，抽离 `lessonSource`）与 `src/app/api/[...path]/route.ts`（`lessons/[id]`、`cards/[id]`、`study/reveal` 中会话用户核验与业务查询 `Promise.all` 并行执行，消除串行 RTT）。
+- 优化 `src/lib/learning.ts` 与 `src/lib/navigation.ts`，用 `Map`/`Set` O(1) 查找替代 O(N×M) 线性 `.find()`。
+- 新建 `src/lib/client-cache.ts`：实现课程 Markdown 缓存与预取、卡片详情缓存与预取、`study/reveal` 签名预览缓存与自动预取（带版本键与过期失效）、Markdown 二级标题缓存解析，以及 `sessionStorage` Bootstrap SWR 快照。
+- 升级 `src/components/workspace-navigation.tsx`、`src/components/knowledge-atlas.tsx`、`src/components/studio.tsx`：引入 `InstantLink`。点击不再走 Next 改写后的 `history.pushState`（该补丁会为动态路由等待 RSC），改为 `History.prototype` 写入 URL，并用 `useInstantLocation` 在下一帧切换视图。目录悬停、聚焦和指针按下预取课程，阅读时预取上下课，学习页预取答案预览。
+
+- 扩充 `tests/performance-contract.test.ts` 至 31 项全量测试；`npm run typecheck`、`npm test`（31/31 通过）、`npm run build` 生产构建全部通过。
+

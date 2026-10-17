@@ -1,8 +1,10 @@
 # Recall 项目交接
 
-更新：2026-10-14。以下路径均相对项目根目录；下方早期记录保留当时的状态，以最新完成记录为准。
+更新：2026-10-17。以下路径均相对项目根目录；下方早期记录保留当时的状态，以最新完成记录为准。
 
-最新内容结果：第一章44张、第二章32张通过独立审校并实际发布，第三章250张新版再次回读通过，前三章共326张新版题卡。全库408张卡、875个修订、107个批次；身份、旧版和学习记录保持。已检查真实页面的新版答案及来源跳转，详见[本轮验收](verification/ch01-ch02-interview-20261011.md)与文末2026-10-14完成记录；前端部署和实际学习实验没有计作完成。
+最新架构与内容结果：
+1. **2026-10-17 零延迟交互架构升级（SPEC-003 已完成）**：已完成并落盘 [v0.2-instant-interaction-architecture.md](specs/v0.2-instant-interaction-architecture.md)、[ADR-003](decisions/003-instant-interaction-architecture.md) 与 [验证报告](verification/v0.2-instant-interaction.md)。`InstantLink` 用 `History.prototype.pushState` 更新地址栏，并用客户端 location store（`useInstantLocation`）立即切换 `Studio` 视图，避免 Next.js 16 对 `window.history.pushState` 的补丁把动态路由卡住等 RSC Flight。`src/lib/client-cache.ts` 缓存课程正文、卡片详情与 `study/reveal` 预览，并在悬停、聚焦、指针按下和相邻课程时预取；API 将会话核验与课程/卡片/揭示查询 `Promise.all` 并行。前端派生状态用 `Map`/`Set` 与 `useMemo`。
+2. **最新题卡内容（2026-10-14）**：第一章44张、第二章32张通过独立审校并实际发布，第三章250张新版再次回读通过，前三章共326张新版题卡。全库408张卡、875个修订、107个批次；身份、旧版和学习记录保持。详见[本轮验收](verification/ch01-ch02-interview-20261011.md)与文末完成记录。
 
 ## 早期发布授权边界（2026-09）
 

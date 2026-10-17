@@ -25,5 +25,7 @@ export function practiceCards(data: Bootstrap, scope: StudyScope): CardMeta[] {
 
 export function searchLessons(data: Pick<Bootstrap, 'chapters' | 'lessons'>, query: string, chapterId?: string) {
   const term = query.trim().toLocaleLowerCase();
-  return orderedLessons(data, chapterId).filter(lesson => `${lesson.title} ${lesson.summary} ${data.chapters.find(chapter => chapter.id === lesson.chapter_id)?.title ?? ''}`.toLocaleLowerCase().includes(term));
+  if (!term) return orderedLessons(data, chapterId);
+  const chaptersById = new Map(data.chapters.map(chapter => [chapter.id, chapter.title]));
+  return orderedLessons(data, chapterId).filter(lesson => `${lesson.title} ${lesson.summary} ${chaptersById.get(lesson.chapter_id) ?? ''}`.toLocaleLowerCase().includes(term));
 }

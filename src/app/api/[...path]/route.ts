@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { db } from '@/lib/db';
 import { sign, verify, sha256 } from '@/lib/crypto';
 import { isSameOrigin } from '@/lib/request-origin';
-import { bootstrap, cardDetail, reviewContext } from '@/lib/repository';
+import { bootstrap, cardDetail, lessonSource, reviewContext } from '@/lib/repository';
 import { selectNext } from '@/lib/learning';
 import { previewSchedule } from '@/lib/scheduler';
 import type { SavedCard } from '@/lib/types';
@@ -33,10 +33,13 @@ async function body(req:NextRequest){
  const text=await req.text();if(text.length>32000)throw new Error('FORBIDDEN');
  try{return JSON.parse(text);}catch{throw new Error('INVALID_INPUT');}
 }
-async function user(req:NextRequest){
+function sessionUserId(req:NextRequest):string{
  const session=verify<Session>(req.cookies.get(cookieName)?.value||'','session');
  if(!session||!uuid.safeParse(session.userId).success)throw new Error('UNAUTHENTICATED');
- const r=await db().from('apm_users').select('id,display_name').eq('id',session.userId).eq('active',true).single();
+ return session.userId;
+}
+async function userById(userId:string){
+ const r=await db().from('apm_users').select('id,display_name').eq('id',userId).eq('active',true).single();
  if(r.error||!r.data)throw new Error('UNAUTHENTICATED');return r.data;
 }
 async function handle(req:NextRequest,{params}:{params:Promise<{path:string[]}>}){
@@ -53,30 +56,41 @@ async function handle(req:NextRequest,{params}:{params:Promise<{path:string[]}>}
   if(path==='auth'&&req.method==='POST'){
    const input=z.object({code:z.string().max(256).optional(),local:z.boolean().optional()}).parse(await body(req));
    const local=input.local&&process.env.NODE_ENV==='development'&&process.env.APM_DEV_AUTO_LOGIN==='true'&&['127.0.0.1','localhost'].includes(req.nextUrl.hostname);
-   let query=db().from('apm_users').select('id,display_name').eq('active',true);
-   if(local)query=query.eq('id',process.env.APM_OWNER_ID||'');
-   else {const code=input.code?.trim();if(!code)return json({error:'请输入学习访问码。'},401);query=query.eq('access_code_hash',sha256(code));}
+   let query=db().from('apm_users').select('id,display_name').eq('id',process.env.APM_OWNER_ID||'');
+   if(!local){const code=input.code?.trim();if(!code)return json({error:'请输入学习访问码。'},401);query=db().from('apm_users').select('id,display_name').eq('active',true).eq('access_code_hash',sha256(code));}
+   else query=query.eq('active',true);
    const r=await query.single();
    if(r.error||!r.data)return json({error:'访问码无效，或学习空间尚未初始化。'},401);
    const res=json({user:r.data});res.cookies.set(cookieName,sign({userId:r.data.id,expires:Date.now()+7*86400000},'session'),{httpOnly:true,sameSite:'lax',secure:process.env.NODE_ENV==='production',path:'/',maxAge:7*86400});return res;
   }
   if(path==='auth/local'&&req.method==='GET')return json({enabled:process.env.NODE_ENV==='development'&&process.env.APM_DEV_AUTO_LOGIN==='true'&&['127.0.0.1','localhost'].includes(req.nextUrl.hostname)});
   if(path==='auth/logout'&&req.method==='POST'){const res=json({ok:true});res.cookies.delete(cookieName);return res;}
-  const current=await user(req);
+  const uid=sessionUserId(req);
+  if(path.startsWith('cards/')&&req.method==='GET'){
+   const cardId=uuid.parse(path.split('/')[1]);
+   const [,detail]=await Promise.all([userById(uid),cardDetail(cardId)]);
+   return json(detail);
+  }
+  if(path.startsWith('lessons/')&&req.method==='GET'){
+   const lessonId=uuid.parse(path.split('/')[1]);
+   const [,source]=await Promise.all([userById(uid),lessonSource(lessonId)]);
+   return json(source);
+  }
+  if(path==='study/reveal'&&req.method==='POST'){
+   const input=z.object({cardId:uuid}).parse(await body(req));
+   const [current,context]=await Promise.all([userById(uid),reviewContext(uid,input.cardId)]);
+   if(context.state?.suspended)throw new Error('STATE_CONFLICT');
+   const now=new Date();const schedule=previewSchedule(context.state?.fsrs||null,context.settings,now);
+   const payload:PreviewToken={userId:current.id,cardId:context.detail.id,revision:context.detail.active_revision,version:context.state?.version||0,settingsVersion:context.settings.version,before:schedule.before,candidates:schedule.candidates,at:now.toISOString(),expires:now.getTime()+600000};
+   return json({card:context.detail,preview:{token:sign(payload,'review'),options:schedule.options}});
+  }
+  const current=await userById(uid);
   if(path==='bootstrap'&&req.method==='GET')return json(await bootstrap(current));
   if(path==='study'&&req.method==='GET'){
    const data=await bootstrap(current);const requested=req.nextUrl.searchParams.get('card');
    const selected=requested?data.cards.find(c=>c.id===uuid.parse(requested)):selectNext(data,new Date());
    if(!selected)return json({card:null,complete:true});
    return json({card:selected,state:data.states.find(s=>s.card_id===selected.id)||null,settingsVersion:data.settings.version});
-  }
-  if(path==='study/reveal'&&req.method==='POST'){
-   const input=z.object({cardId:uuid}).parse(await body(req));
-   const context=await reviewContext(current.id,input.cardId);
-   if(context.state?.suspended)throw new Error('STATE_CONFLICT');
-   const now=new Date();const schedule=previewSchedule(context.state?.fsrs||null,context.settings,now);
-   const payload:PreviewToken={userId:current.id,cardId:context.detail.id,revision:context.detail.active_revision,version:context.state?.version||0,settingsVersion:context.settings.version,before:schedule.before,candidates:schedule.candidates,at:now.toISOString(),expires:now.getTime()+600000};
-   return json({card:context.detail,preview:{token:sign(payload,'review'),options:schedule.options}});
   }
   if(path==='reviews'&&req.method==='POST'){
    const input=z.object({rating:z.number().int().min(1).max(4),token:z.string().max(24000),clientEventId:uuid,durationMs:z.number().int().min(0).max(1800000)}).parse(await body(req));
@@ -88,11 +102,6 @@ async function handle(req:NextRequest,{params}:{params:Promise<{path:string[]}>}
    const input=z.object({eventId:uuid,version:z.number().int().min(1),clientEventId:uuid}).parse(await body(req));
    const r=await db().rpc('apm_undo_review',{p_user:current.id,p_event:input.eventId,p_expected:input.version,p_client_event:input.clientEventId,p_hash:sha256(`${input.eventId}:${input.version}`)});
    if(r.error)throw new Error(r.error.message);return json(r.data);
-  }
-  if(path.startsWith('cards/')&&req.method==='GET')return json(await cardDetail(uuid.parse(path.split('/')[1])));
-  if(path.startsWith('lessons/')&&req.method==='GET'){
-   const id=uuid.parse(path.split('/')[1]);const r=await db().from('apm_source_revisions').select('id,body_markdown,content_hash').eq('lesson_id',id).order('imported_at',{ascending:false}).limit(1).single();
-   if(r.error)throw new Error('LESSON_NOT_FOUND');return json(r.data);
   }
   if(path==='activity'&&req.method==='POST'){
    const input=z.object({lessonId:uuid}).parse(await body(req));const r=await db().from('apm_study_activity').upsert({user_id:current.id,lesson_id:input.lessonId,completed_at:new Date().toISOString()},{onConflict:'user_id,lesson_id'});

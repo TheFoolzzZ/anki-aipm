@@ -1,5 +1,21 @@
 # 实施发现
 
+## 2026-10-17 两阶段交互延迟归因分析与架构升级
+
+- **问题现象**：用户反馈在不同模块间跳转以及在学习目录下点击不同文章时，先有 1~2 秒才跳到文章页，进入文章页后又要 1~2 秒从 Supabase 拉取内容再渲染，整体交互不跟手。
+- **阶段一（点击到页面切换 1~2 秒）根因**：
+  1. **App Router `<Link>` 隐式服务端 Flight 往返**：虽然 `Studio` 已挂在 `src/app/layout.tsx` 且 `page.tsx` 返回 `null`，但标准 `<Link>` 在动态路由 `/[[...slug]]` 下仍会等待向服务端请求 RSC Flight payload 并完成 React Transition 后才提交 URL，导致点击后界面停顿。
+  2. **渲染期 O(N×M) 同步重计算**：全库已扩展至 408 张卡、875 个修订、70 篇课程。`WorkspaceSidebar`、`KnowledgeAtlas`、`Today`、`Cards`、`Progress` 在每次渲染时直接同步调用未缓存的 `studySummary`、`orderedLessons` 和线性 `.find()`，阻塞主线程。
+- **阶段二（进入页面后内容渲染 1~2 秒）根因**：
+  1. **零客户端缓存与零预取**：`LessonReader` 与 `CardDialog` 每次挂载都清空状态并重新请求 `/api/lessons/[id]` 或 `/api/cards/[id]`，目录悬停、上下课、当前学习卡均无预取。
+  2. **API 鉴权与业务数据串行查库（2×RTT）**：`src/app/api/[...path]/route.ts` 先 `await user(req)` 跨公网查 `apm_users`（~500ms），完成后才查 `apm_source_revisions` 或 `reviewContext`（~500ms），每次请求被迫承受两次串行 Mumbai Supabase 往返。
+  3. **每次请求新建 Supabase Client & Bootstrap O(N×M) 组装**：`src/lib/db.ts` 未复用客户端实例；`bootstrap()` 用数组 `.find()` 嵌套匹配 408 张卡与 875 条修订。
+- **架构升级效果**：
+  1. 新增 `InstantLink`。第一版调用 `window.history.pushState`，但 Next.js 16 会改写这个实例方法并派发 `ACTION_RESTORE`，动态 `[[...slug]]` 仍要等 RSC Flight 返回后 `usePathname` 才提交，点击停顿还在。现改为调用未被改写的 `History.prototype.pushState` / `replaceState`，并由客户端 location store 在同一轮点击里切换视图。
+
+  2. 新增 `src/lib/client-cache.ts`：提供课程原文、卡片详情、`study/reveal` 预览的内存缓存、并发请求去重、悬停/聚焦/相邻课程/下一未读课自动预取，以及 `sessionStorage` Bootstrap SWR 快照。
+  3. 服务端 `/api/lessons/[id]`、`/api/cards/[id]`、`/api/study/reveal` 将 `userById(uid)` 与业务查询改为 `Promise.all` 并行执行，单次请求数据库 RTT 直接减半；`db()` 升级为单例复用；`repository.ts` 与 `learning.ts` 全面改为 `Map`/`Set` O(1) 索引。
+
 ## 2026-09-07 课程原文图片
 
 - Lessons 运行时原文来自 Supabase `apm_source_revisions.body_markdown`；原 renderer 主动把所有 Markdown 图片替换成“查看原文图片”链接，并非 Supabase 或 Cloudinary 无法显示。
