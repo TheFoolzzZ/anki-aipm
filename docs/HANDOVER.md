@@ -3,7 +3,7 @@
 更新：2026-10-17。以下路径均相对项目根目录；下方早期记录保留当时的状态，以最新完成记录为准。
 
 最新架构与内容结果：
-1. **2026-10-17 多用户独立进度追踪（SPEC-004，T1–T4）**：规格见 [v0.3-multi-user-progress-tracking.md](specs/v0.3-multi-user-progress-tracking.md) 与 [ADR-004](decisions/004-multi-user-identity-and-isolation.md)。已增加迁移 `supabase/migrations/202610170001_multi_user_profiles.sql`（邀请码可共享、`username_normalized` 唯一、`apm_register_user`）、按用户名登录/注册/改名/切换的 API、登录页分流与设置页学习者名录，以及按 `userId` 隔离的复习预览和 Bootstrap 快照。单元测试已覆盖用户名规则与缓存隔离。远端库还没有应用这条迁移，`npm run db:verify` 需在迁移执行后再跑。
+1. **2026-10-17 多用户独立进度追踪（SPEC-004，T1–T4）**：规格见 [v0.3-multi-user-progress-tracking.md](specs/v0.3-multi-user-progress-tracking.md) 与 [ADR-004](decisions/004-multi-user-identity-and-isolation.md)。已增加迁移 `supabase/migrations/202610170001_multi_user_profiles.sql`（邀请码可共享、`username_normalized` 唯一、`apm_register_user`），并已在当前学习项目的数据库执行。按用户名登录/注册/改名/切换的 API、登录页分流、设置页学习者名录，以及按 `userId` 隔离的复习预览和 Bootstrap 快照都已接上。
 2. **2026-10-17 零延迟交互架构升级（SPEC-003 已完成）**：已完成并落盘 [v0.2-instant-interaction-architecture.md](specs/v0.2-instant-interaction-architecture.md)、[ADR-003](decisions/003-instant-interaction-architecture.md) 与 [验证报告](verification/v0.2-instant-interaction.md)。`InstantLink` 用 `History.prototype.pushState` 更新地址栏，并用客户端 location store（`useInstantLocation`）立即切换 `Studio` 视图，避免 Next.js 16 对 `window.history.pushState` 的补丁把动态路由卡住等 RSC Flight。`src/lib/client-cache.ts` 缓存课程正文、卡片详情与 `study/reveal` 预览，并在悬停、聚焦、指针按下和相邻课程时预取；API 将会话核验与课程/卡片/揭示查询 `Promise.all` 并行。前端派生状态用 `Map`/`Set` 与 `useMemo`。
 3. **最新题卡内容（2026-10-14）**：第一章44张、第二章32张通过独立审校并实际发布，第三章250张新版再次回读通过，前三章共326张新版题卡。全库408张卡、875个修订、107个批次；身份、旧版和学习记录保持。详见[本轮验收](verification/ch01-ch02-interview-20261011.md)与文末完成记录。
 
