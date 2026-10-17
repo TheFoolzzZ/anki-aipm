@@ -80,14 +80,16 @@ async function main() {
     p_rating: 3, p_before: before, p_after: after, p_reviewed_at: now.toISOString(), p_duration: 1000,
   };
 
+  const secondUserId = randomUUID();
   try {
     const accessCode = randomUUID();
-    const { error: userError } = await db.from('apm_users').insert({
-      id: testUserId, display_name: 'APM database verification',
-      access_code_hash: createHash('sha256').update(accessCode).digest('hex'),
-    });
+    const sharedHash = createHash('sha256').update(accessCode).digest('hex');
+    const { error: userError } = await db.from('apm_users').insert([
+      { id: testUserId, display_name: 'APM Verify A', username_normalized: `apm-verify-a-${testUserId.slice(0, 8)}`, access_code_hash: sharedHash },
+      { id: secondUserId, display_name: 'APM Verify B', username_normalized: `apm-verify-b-${secondUserId.slice(0, 8)}`, access_code_hash: sharedHash },
+    ]);
     if (userError) fail(`create verification user: ${userError.message}`);
-    const { error: settingsError } = await db.from('apm_settings').insert({ user_id: testUserId });
+    const { error: settingsError } = await db.from('apm_settings').insert([{ user_id: testUserId }, { user_id: secondUserId }]);
     if (settingsError) fail(`create verification settings: ${settingsError.message}`);
 
     const first = await rpc<{ eventId: string; version: number; state: Json }>('apm_commit_review', reviewArgs);
@@ -108,17 +110,21 @@ async function main() {
     const undoReplay = await rpc<{ eventId: string; version: number }>('apm_undo_review', undoArgs);
     assert(undoReplay.eventId === undone.eventId && undoReplay.version === undone.version, 'undo RPC did not replay idempotently');
     (verification.checks as Json).undoAndIdempotency = true;
+
+    const { count: otherProgress, error: otherError } = await db.from('apm_review_states').select('*', { count: 'exact', head: true }).eq('user_id', secondUserId);
+    if (otherError || otherProgress !== 0) fail(`second learner inherited review state: ${otherError?.message ?? otherProgress}`);
+    (verification.checks as Json).learnerProgressIsolated = true;
   } finally {
-    const { error } = await db.from('apm_users').delete().eq('id', testUserId);
+    const { error } = await db.from('apm_users').delete().in('id', [testUserId, secondUserId]);
     if (error) fail(`cleanup verification user: ${error.message}`);
-    const { count: remaining, error: remainingError } = await db.from('apm_users').select('*', { count: 'exact', head: true }).eq('id', testUserId);
+    const { count: remaining, error: remainingError } = await db.from('apm_users').select('*', { count: 'exact', head: true }).in('id', [testUserId, secondUserId]);
     if (remainingError || remaining !== 0) fail(`verification user cleanup failed: ${remainingError?.message ?? 'row remains'}`);
   }
 
   verification.completedAt = new Date().toISOString();
   verification.passed = true;
   writeFileSync('docs/verification/database-result.json', `${JSON.stringify(verification, null, 2)}\n`);
-  writeFileSync('docs/verification/database-verification.md', `# 数据库验证\n\n验证时间：${verification.completedAt}\n\n- 已回读隔离 \`apm_\` 表；内容基线为 9 章、70 篇来源、14 张试点卡及其修订。\n- 匿名角色无法读取全部 11 张 \`apm_\` 表。\n- 使用临时独立用户验证评分 RPC 的幂等重放、状态版本冲突、设置版本冲突及撤销回滚；脚本结束后已通过级联删除该测试用户及其状态和事件。\n- 机器可读证据见 [database-result.json](./database-result.json)。\n`);
+  writeFileSync('docs/verification/database-verification.md', `# 数据库验证\n\n验证时间：${verification.completedAt}\n\n- 已回读隔离 \`apm_\` 表；内容基线为 9 章、70 篇来源、14 张试点卡及其修订。\n- 匿名角色无法读取全部 11 张 \`apm_\` 表。\n- 使用同一邀请码下的两名临时用户验证评分 RPC 的幂等重放、状态版本冲突、设置版本冲突、撤销回滚，以及一名用户的复习不会写入另一名用户；脚本结束后已通过级联删除这两名测试用户及其状态和事件。\n- 机器可读证据见 [database-result.json](./database-result.json)。\n`);
   console.log(JSON.stringify(verification, null, 2));
 }
 

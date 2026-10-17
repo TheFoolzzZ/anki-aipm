@@ -39,12 +39,13 @@ npm run content:verify -- --batch content/batches/ch01-foundations-001.json
 1. [交接与下一步](docs/HANDOVER.md)
 2. [实现规格与验收标准](docs/specs/v0.1-learning-core.md)
 3. [零延迟交互与缓存架构规格（v0.2 已实现）](docs/specs/v0.2-instant-interaction-architecture.md) / [验证记录](docs/verification/v0.2-instant-interaction.md)
-4. [制卡与入库规范](docs/specs/card-production-and-publishing.md)
-5. [运行与部署](docs/operations.md)
-6. [Vercel发布手册](docs/deployment/vercel.md)
-7. [设计决策 ADR-001](docs/decisions/001-learning-core.md) / [ADR-002](docs/decisions/002-contextual-course-navigation.md) / [ADR-003](docs/decisions/003-instant-interaction-architecture.md)
-8. [阶段计划](task_plan.md) / [执行日志](progress.md)
-9. [数据库实测](docs/verification/database-verification.md) / [第1、2章发布验证](docs/verification/ch01-ch02-card-publishing.md) / [核心审查](docs/verification/core-review.md)
+4. [邀请码与多用户独立进度追踪规格（v0.3 待实施）](docs/specs/v0.3-multi-user-progress-tracking.md)
+5. [制卡与入库规范](docs/specs/card-production-and-publishing.md)
+6. [运行与部署](docs/operations.md)
+7. [Vercel发布手册](docs/deployment/vercel.md)
+8. [设计决策 ADR-001](docs/decisions/001-learning-core.md) / [ADR-002](docs/decisions/002-contextual-course-navigation.md) / [ADR-003](docs/decisions/003-instant-interaction-architecture.md) / [ADR-004](docs/decisions/004-multi-user-identity-and-isolation.md)
+9. [阶段计划](task_plan.md) / [执行日志](progress.md)
+10. [数据库实测](docs/verification/database-verification.md) / [第1、2章发布验证](docs/verification/ch01-ch02-card-publishing.md) / [核心审查](docs/verification/core-review.md)
 
 原始设计保存在 docs/plans。新增决定以当前 spec、ADR 和 handover 为准，旧设计不是已实现能力清单。
 

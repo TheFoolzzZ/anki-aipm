@@ -8,5 +8,6 @@ export type ReviewState = { card_id:string; fsrs:SavedCard; due:string; version:
 export type ReviewEvent = { id:string; card_id:string; kind:'review'|'undo'; rating:number|null; state_before:SavedCard; state_after:SavedCard; received_at:string; reviewed_at:string; duration_ms:number; undone_event_id:string|null };
 export type Settings = { daily_minutes:number; new_cards_per_day:number; retention:number; timezone:string; day_start_hour:number; route_mode:'guided'|'chapter'; familiarity:Record<string,string>; version:number };
 export type Bootstrap = { user:{id:string;display_name:string}; settings:Settings; chapters:Chapter[]; lessons:Lesson[]; cards:CardMeta[]; states:ReviewState[]; events:ReviewEvent[]; activity:{lesson_id:string;completed_at:string}[]; now:string; historyLimited:boolean };
+export type LearnerSummary = { id:string; display_name:string; last_active_at:string; created_at?:string };
 export type Preview = { token:string; options:{rating:number;due:string;interval:string}[] };
 export type ReviewResult = { eventId:string;cardId:string;version:number;state:SavedCard;before:SavedCard;rating:number;reviewedAt:string;receivedAt:string;durationMs:number };

@@ -88,17 +88,23 @@ export function prefetchCardDetail(
   void loadCardDetailCached(cardId, fetcher).catch(() => {});
 }
 
-function revealKey(cardId: string, stateVersion: number, settingsVersion: number) {
-  return `${cardId}:${stateVersion}:${settingsVersion}`;
+function revealKey(userId: string, cardId: string, stateVersion: number, settingsVersion: number) {
+  return `${userId}:${cardId}:${stateVersion}:${settingsVersion}`;
+}
+
+function revealMatches(key: string, cardId: string, userId?: string) {
+  const [keyUser, keyCard] = key.split(':');
+  return keyCard === cardId && (!userId || keyUser === userId);
 }
 
 export function getCachedReveal(
+  userId: string,
   cardId: string,
   stateVersion: number,
   settingsVersion: number,
   now = Date.now(),
 ): RevealPayload | null {
-  const key = revealKey(cardId, stateVersion, settingsVersion);
+  const key = revealKey(userId, cardId, stateVersion, settingsVersion);
   const cached = revealCache.get(key);
   if (!cached) return null;
   if (now - cached.fetchedAt > REVEAL_MAX_AGE_MS) {
@@ -108,29 +114,29 @@ export function getCachedReveal(
   return cached;
 }
 
-export function invalidateReveal(cardId?: string): void {
+export function invalidateReveal(cardId?: string, userId?: string): void {
   if (!cardId) {
     revealCache.clear();
     revealInFlight.clear();
     return;
   }
-  for (const key of revealCache.keys()) {
-    if (key.startsWith(`${cardId}:`)) revealCache.delete(key);
-  }
-  for (const key of revealInFlight.keys()) {
-    if (key.startsWith(`${cardId}:`)) revealInFlight.delete(key);
+  for (const map of [revealCache, revealInFlight]) {
+    for (const key of map.keys()) {
+      if (revealMatches(key, cardId, userId)) map.delete(key);
+    }
   }
 }
 
 export function loadRevealCached(
+  userId: string,
   cardId: string,
   stateVersion: number,
   settingsVersion: number,
   fetcher: (cardId: string) => Promise<{ card: CardDetail; preview: Preview }>,
 ): Promise<RevealPayload> {
-  const fresh = getCachedReveal(cardId, stateVersion, settingsVersion);
+  const fresh = getCachedReveal(userId, cardId, stateVersion, settingsVersion);
   if (fresh) return Promise.resolve(fresh);
-  const key = revealKey(cardId, stateVersion, settingsVersion);
+  const key = revealKey(userId, cardId, stateVersion, settingsVersion);
   const existing = revealInFlight.get(key);
   if (existing) return existing;
   const req = fetcher(cardId)
@@ -152,26 +158,31 @@ export function loadRevealCached(
 }
 
 export function prefetchReveal(
+  userId: string | undefined | null,
   cardId: string | undefined | null,
   stateVersion: number,
   settingsVersion: number,
   fetcher: (cardId: string) => Promise<{ card: CardDetail; preview: Preview }>,
 ): void {
-  if (!cardId) return;
-  if (getCachedReveal(cardId, stateVersion, settingsVersion)) return;
-  const key = revealKey(cardId, stateVersion, settingsVersion);
+  if (!userId || !cardId) return;
+  if (getCachedReveal(userId, cardId, stateVersion, settingsVersion)) return;
+  const key = revealKey(userId, cardId, stateVersion, settingsVersion);
   if (revealInFlight.has(key)) return;
-  void loadRevealCached(cardId, stateVersion, settingsVersion, fetcher).catch(() => {});
+  void loadRevealCached(userId, cardId, stateVersion, settingsVersion, fetcher).catch(() => {});
 }
+
+type BootstrapEnvelope = { userId: string; data: Bootstrap };
 
 export function readBootstrapSnapshot(): Bootstrap | null {
   if (typeof window === 'undefined') return null;
   try {
     const raw = window.sessionStorage.getItem(BOOTSTRAP_STORAGE_KEY);
     if (!raw) return null;
-    const parsed = JSON.parse(raw) as Bootstrap;
-    if (!parsed || !parsed.user?.id || !Array.isArray(parsed.chapters) || !Array.isArray(parsed.lessons)) return null;
-    return parsed;
+    const parsed = JSON.parse(raw) as BootstrapEnvelope;
+    const data = parsed?.data;
+    if (!parsed?.userId || !data?.user?.id || parsed.userId !== data.user.id) return null;
+    if (!Array.isArray(data.chapters) || !Array.isArray(data.lessons)) return null;
+    return data;
   } catch {
     return null;
   }
@@ -184,10 +195,17 @@ export function writeBootstrapSnapshot(data: Bootstrap | null): void {
       window.sessionStorage.removeItem(BOOTSTRAP_STORAGE_KEY);
       return;
     }
-    window.sessionStorage.setItem(BOOTSTRAP_STORAGE_KEY, JSON.stringify(data));
+    const envelope: BootstrapEnvelope = { userId: data.user.id, data };
+    window.sessionStorage.setItem(BOOTSTRAP_STORAGE_KEY, JSON.stringify(envelope));
   } catch {
     // Ignore storage quota or privacy mode errors
   }
+}
+
+export function clearUserSessionCaches(): void {
+  revealCache.clear();
+  revealInFlight.clear();
+  writeBootstrapSnapshot(null);
 }
 
 export function clearAllClientCaches(): void {
@@ -195,9 +213,7 @@ export function clearAllClientCaches(): void {
   lessonInFlight.clear();
   cardDetailCache.clear();
   cardDetailInFlight.clear();
-  revealCache.clear();
-  revealInFlight.clear();
-  writeBootstrapSnapshot(null);
+  clearUserSessionCaches();
 }
 
 const headingsCache = new Map<string, { id: string; title: string }[]>();

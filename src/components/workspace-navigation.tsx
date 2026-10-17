@@ -140,7 +140,7 @@ export function WorkspaceSidebar({ data, route, lessonId, cardId, close, onPrefe
       <div className="sidebar-explainer"><span className="mini-route"><i /><i /><i /></span><h3>理解，然后记住。</h3><p>在知识地图里选择课程，阅读后练习本课卡片。今日复习会按记忆间隔安排下一次回忆。</p></div>
       <InstantLink className="sidebar-text-link" href="/cards" onClick={close}><Search size={15} />查找知识卡片</InstantLink>
     </div>}
-    <div className="sidebar-profile"><span className="avatar">{data.user.display_name.slice(0, 1)}</span><span>{data.user.display_name}<small>个人学习空间</small></span><InstantLink href="/settings" aria-label="学习偏好" onClick={close}><Settings2 size={18} /></InstantLink></div>
+    <div className="sidebar-profile"><span className="avatar">{data.user.display_name.slice(0, 1)}</span><span>{data.user.display_name}<small><InstantLink href="/settings" onClick={close}>切换用户 / 管理</InstantLink></small></span><InstantLink href="/settings" aria-label="管理学习者" onClick={close}><Settings2 size={18} /></InstantLink></div>
   </>;
 }
 

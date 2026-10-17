@@ -36,7 +36,7 @@ test('content publishing RPC is atomic, idempotent, and cannot write review prog
 
 test('deployment health checks every required schema migration without exposing credentials', async () => {
   const route = await source('src/app/api/[...path]/route.ts');
-  assert.match(route, /const required=\['202609050001','202609060001'\]/);
+  assert.match(route, /const required=\['202609050001','202609060001','202610170001'\]/);
   assert.match(route, /requiredMigrations:required\.length/);
   assert.doesNotMatch(route, /SUPABASE_SECRET_KEY.*return json/);
 });

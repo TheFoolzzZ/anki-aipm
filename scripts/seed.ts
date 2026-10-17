@@ -12,7 +12,7 @@ async function upsert(table:string,rows:unknown[],conflict='id'){
  report[table]=rows.length;
 }
 if(!env.APM_OWNER_ID||!env.APM_OWNER_ACCESS_CODE)throw new Error('Owner configuration missing');
-await upsert('apm_users',[{id:env.APM_OWNER_ID,display_name:'Klein',access_code_hash:createHash('sha256').update(env.APM_OWNER_ACCESS_CODE).digest('hex')}]);
+await upsert('apm_users',[{id:env.APM_OWNER_ID,display_name:'Klein',username_normalized:'klein',access_code_hash:createHash('sha256').update(env.APM_OWNER_ACCESS_CODE).digest('hex')}]);
 const settings=await db.from('apm_settings').upsert({user_id:env.APM_OWNER_ID},{onConflict:'user_id',ignoreDuplicates:true});
 if(settings.error)throw settings.error;
 await upsert('apm_chapters',seed.chapters);

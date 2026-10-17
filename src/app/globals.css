@@ -127,6 +127,20 @@ button { border: 0; background: transparent; }
 .button.ghost:hover { background: var(--paper); border-color: #90b1bb; }
 .button.text-button { padding: 8px 10px; color: var(--muted); font-size: 11px; }
 .pill { display: inline-flex; align-items: center; gap: 5px; border-radius: 5px; padding: 5px 8px; background: var(--surface); color: var(--muted); font-size: 11px; line-height: 1.5; }
+.login-modes { display: flex; gap: 8px; }
+.login-modes .button { flex: 1; justify-content: center; }
+.login-actions { display: flex; flex-direction: column; gap: 8px; }
+.login-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.login-chips button { border: 1px solid var(--line); background: var(--surface); border-radius: 5px; padding: 6px 10px; }
+.confirm-note { margin-top: 14px; padding: 12px; border: 1px solid var(--line); border-radius: 7px; }
+.confirm-note p { margin-bottom: 10px; }
+.learner-rename { display: flex; gap: 12px; align-items: end; margin-top: 16px; }
+.learner-rename label { flex: 1; color: var(--muted); font-size: 12px; }
+.learner-rename input { display: block; width: 100%; margin-top: 8px; }
+.learner-directory { margin-top: 22px; }
+.learner-directory h3 { font-size: 16px; margin-bottom: 8px; }
+.learner-row { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line); }
+.learner-row small { display: block; color: var(--muted); margin-top: 4px; }
 .pill.learned { color: #217668; background: #e3f1ec; }
 .muted { color: var(--muted); font-size: 12px; }
 .status-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #49ad9f; }

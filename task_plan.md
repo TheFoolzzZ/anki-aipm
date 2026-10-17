@@ -84,5 +84,6 @@
 
 | 阶段 | 状态 | 说明 |
 | --- | --- | --- |
-| SPEC-003 零延迟客户端浅路由与预取缓存架构 | completed | 规格 `docs/specs/v0.2-instant-interaction-architecture.md`、决策 `docs/decisions/003-instant-interaction-architecture.md`、验证 `docs/verification/v0.2-instant-interaction.md` 及代码实现已全部落库 |
+| SPEC-003 零延迟客户端浅路由与预取缓存架构 | completed | 规格 `docs/specs/v0.2-instant-interaction-architecture.md`、决策 `docs/decisions/003-instant-interaction-architecture.md`、验证 `docs/verification/v0.2-instant-interaction.md` 及代码实现已全部落库，31项测试与构建通过 |
+| SPEC-004 邀请码准入、用户名管理与多用户独立进度追踪 | implemented | T1–T4 已落地。迁移文件待在 Supabase 执行后再跑 `npm run db:verify`。登录、设置页和缓存隔离见规格与 `tests/multi-user.test.ts` |
 

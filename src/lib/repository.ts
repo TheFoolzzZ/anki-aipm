@@ -1,6 +1,7 @@
 import 'server-only';
 import { db } from './db';
-import type { Bootstrap, CardDetail, CardMeta, Settings } from './types';
+import { usernameKey, validateUsername } from './username';
+import type { Bootstrap, CardDetail, CardMeta, LearnerSummary, Settings } from './types';
 export async function bootstrap(user:{id:string;display_name:string}):Promise<Bootstrap>{
  const client=db();
  const result=await Promise.all([
@@ -46,4 +47,46 @@ export async function reviewContext(userId:string,cardId:string){
  if(settings.error||state.error)throw new Error('DATABASE_READ_FAILED');
  const value=settings.data as unknown as Settings;
  return {settings:{...value,retention:Number(value.retention)},state:state.data,detail};
+}
+function learnerError(error:{message?:string;code?:string}|null){
+ const message=error?.message||'';
+ if(message.includes('USERNAME_TAKEN')||error?.code==='23505')throw new Error('USERNAME_TAKEN');
+ if(message.includes('INVALID_USERNAME'))throw new Error('INVALID_USERNAME');
+ throw new Error(message||'DATABASE_WRITE_FAILED');
+}
+export async function listLearners(accessCodeHash:string):Promise<LearnerSummary[]>{
+ const r=await db().from('apm_users').select('id,display_name,created_at,last_active_at').eq('active',true).eq('access_code_hash',accessCodeHash).order('last_active_at',{ascending:false});
+ if(r.error)throw new Error('DATABASE_READ_FAILED');
+ return (r.data||[]) as LearnerSummary[];
+}
+export async function findLearnerByUsername(username:string){
+ const clean=validateUsername(username);
+ const r=await db().from('apm_users').select('id,display_name').eq('username_normalized',usernameKey(clean)).eq('active',true).maybeSingle();
+ if(r.error)throw new Error('DATABASE_READ_FAILED');
+ return r.data;
+}
+export async function touchLearner(userId:string){
+ await db().from('apm_users').update({last_active_at:new Date().toISOString()}).eq('id',userId);
+}
+export async function registerLearner(displayName:string,accessCodeHash:string){
+ const clean=validateUsername(displayName);
+ const r=await db().rpc('apm_register_user',{p_display_name:clean,p_access_code_hash:accessCodeHash});
+ if(r.error||!r.data)learnerError(r.error);
+ const row=Array.isArray(r.data)?r.data[0]:r.data;
+ return {id:row.id as string,display_name:row.display_name as string};
+}
+export async function renameLearner(userId:string,displayName:string){
+ const clean=validateUsername(displayName);
+ const norm=usernameKey(clean);
+ const taken=await db().from('apm_users').select('id').eq('username_normalized',norm).neq('id',userId).maybeSingle();
+ if(taken.error)throw new Error('DATABASE_READ_FAILED');
+ if(taken.data)throw new Error('USERNAME_TAKEN');
+ const r=await db().from('apm_users').update({display_name:clean,username_normalized:norm}).eq('id',userId).eq('active',true).select('id,display_name').single();
+ if(r.error||!r.data)learnerError(r.error);
+ return r.data;
+}
+export async function learnerInviteHash(userId:string){
+ const r=await db().from('apm_users').select('access_code_hash').eq('id',userId).eq('active',true).single();
+ if(r.error||!r.data)throw new Error('UNAUTHENTICATED');
+ return r.data.access_code_hash as string;
 }

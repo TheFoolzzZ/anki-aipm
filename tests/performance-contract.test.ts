@@ -181,21 +181,21 @@ test('client cache deduplicates in-flight lesson, card, and reveal requests and 
 
   let revealCalls = 0;
   const samplePreview: Preview = { token: 'signed-token', options: [{ rating: 3, due: '2026-10-18T00:00:00Z', interval: '1 天' }] };
-  prefetchReveal('card-1', 2, 1, async () => {
+  prefetchReveal('learner-a', 'card-1', 2, 1, async () => {
     revealCalls += 1;
     return { card: sampleCard, preview: samplePreview };
   });
-  const revealed = await loadRevealCached('card-1', 2, 1, async () => {
+  const revealed = await loadRevealCached('learner-a', 'card-1', 2, 1, async () => {
     revealCalls += 1;
     return { card: sampleCard, preview: samplePreview };
   });
   assert.equal(revealCalls, 1);
   assert.equal(revealed.preview.token, 'signed-token');
-  assert.equal(getCachedReveal('card-1', 2, 1)?.preview.token, 'signed-token');
-  assert.equal(getCachedReveal('card-1', 3, 1), null, 'version change invalidates stale reveal key');
+  assert.equal(getCachedReveal('learner-a', 'card-1', 2, 1)?.preview.token, 'signed-token');
+  assert.equal(getCachedReveal('learner-a', 'card-1', 3, 1), null, 'version change invalidates stale reveal key');
 
   invalidateReveal('card-1');
-  assert.equal(getCachedReveal('card-1', 2, 1), null);
+  assert.equal(getCachedReveal('learner-a', 'card-1', 2, 1), null);
 });
 
 test('markdown heading extraction ignores fenced code blocks and caches by lesson id', () => {

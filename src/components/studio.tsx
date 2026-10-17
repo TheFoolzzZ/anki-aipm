@@ -22,12 +22,13 @@ import {
     invalidateReveal,
     readBootstrapSnapshot,
     writeBootstrapSnapshot,
-    clearAllClientCaches,
+    clearUserSessionCaches,
     extractMarkdownHeadings,
     instantNavigate,
     type LessonSourcePayload,
 } from '@/lib/client-cache';
-import type { Bootstrap, CardMeta, CardDetail, Preview, ReviewEvent, ReviewResult, Settings } from '@/lib/types';
+import type { Bootstrap, CardMeta, CardDetail, LearnerSummary, Preview, ReviewEvent, ReviewResult, Settings } from '@/lib/types';
+import { normalizeUsername, validateUsername } from '@/lib/username';
 
 async function api<T>(path: string, body?: unknown, method = 'POST'): Promise<T> {
     const r = await fetch(`/api/${path}`, body ? { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : { cache: 'no-store' });
@@ -43,9 +44,16 @@ const fetchReveal = (cardId: string) => api<{ card: CardDetail; preview: Preview
 
 let bootstrapRequest: Promise<Bootstrap> | null = null;
 function loadBootstrap() {
-    if (!bootstrapRequest)
-        bootstrapRequest = api<Bootstrap>('bootstrap').finally(() => { bootstrapRequest = null; });
-    return bootstrapRequest;
+    if (bootstrapRequest) return bootstrapRequest;
+    let request: Promise<Bootstrap>;
+    request = api<Bootstrap>('bootstrap').finally(() => {
+        if (bootstrapRequest === request) bootstrapRequest = null;
+    });
+    bootstrapRequest = request;
+    return request;
+}
+function resetBootstrapFlight() {
+    bootstrapRequest = null;
 }
 
 const Context = createContext<{
@@ -54,6 +62,7 @@ const Context = createContext<{
     update: (change: (data: Bootstrap) => Bootstrap) => void;
     prefetchLesson: (lessonId?: string | null) => void;
     prefetchCard: (cardId?: string | null) => void;
+    replaceSession: (task: () => Promise<void>) => Promise<void>;
 }>(null!);
 
 function useData() { return useContext(Context); }
@@ -92,11 +101,14 @@ export default function Studio() {
     const [error, setError] = useState('');
     const [menu, setMenu] = useState(false);
     const bootstrappedRef = useRef(false);
+    const sessionGeneration = useRef(0);
     const page = route[0];
 
     const refresh = useCallback(async () => {
+        const generation = sessionGeneration.current;
         setError('');
         const d = await loadBootstrap();
+        if (generation !== sessionGeneration.current) return d;
         bootstrappedRef.current = true;
         setData(d);
         writeBootstrapSnapshot(d);
@@ -120,6 +132,15 @@ export default function Studio() {
         prefetchCardInCache(cardId, fetchCardDetail);
     }, []);
 
+    const replaceSession = useCallback(async (task: () => Promise<void>) => {
+        await task();
+        sessionGeneration.current += 1;
+        resetBootstrapFlight();
+        clearUserSessionCaches();
+        bootstrappedRef.current = false;
+        setData(null);
+    }, []);
+
     const menuButton = useRef<HTMLButtonElement>(null);
     const sidebarRef = useRef<HTMLElement>(null);
 
@@ -132,7 +153,9 @@ export default function Studio() {
         }
         refresh().catch(e => {
             if (e.message === 'UNAUTHENTICATED') {
-                clearAllClientCaches();
+                sessionGeneration.current += 1;
+                resetBootstrapFlight();
+                clearUserSessionCaches();
                 setData(null);
                 instantNavigate('/login', 'replace');
             } else {
@@ -187,13 +210,13 @@ export default function Studio() {
     }, [menu]);
 
     if (page === 'login')
-        return <Login onAuthenticated={() => { bootstrappedRef.current = false; }} />;
+        return <Login onAuthenticated={() => { sessionGeneration.current += 1; resetBootstrapFlight(); bootstrappedRef.current = false; setData(null); }} />;
     if (!data)
         return <div className="loading-screen"><Brand /><p>{error || '正在打开你的学习空间…'}</p>{error && <button onClick={() => { void refresh().catch(e => setError(e.message)); }} className="button">重新连接</button>}</div>;
 
     const navigationProps = { data, route, lessonId: searchParams.get('lesson'), cardId: searchParams.get('card'), onPrefetchLesson: prefetchLesson };
     const knowledge = navigationContext(data, route, navigationProps.lessonId, navigationProps.cardId).knowledge;
-    return <Context.Provider value={{ data, refresh, update, prefetchLesson, prefetchCard }}><div className={`app-shell ${knowledge ? 'knowledge-space' : ''}`}>
+    return <Context.Provider value={{ data, refresh, update, prefetchLesson, prefetchCard, replaceSession }}><div className={`app-shell ${knowledge ? 'knowledge-space' : ''}`}>
  <a className="skip-link" href="#main-content">跳到主要内容</a>
  <header className="workspace-topbar"><Brand /><nav className="global-navigation" aria-label="全站导航">{workspaceNav.map(item => <InstantLink key={item.path} href={`/${item.path}`} className={(page === item.path || (knowledge && item.path === 'curriculum') || (page === 'study' && !knowledge && item.path === 'today')) ? 'active' : ''} aria-current={(page === item.path || (knowledge && item.path === 'curriculum') || (page === 'study' && !knowledge && item.path === 'today')) ? 'page' : undefined}>{item.label}</InstantLink>)}</nav><div className="workspace-topbar-right"><InstantLink className="header-search" href="/curriculum" aria-label="查找课程"><Search size={17}/><span>查找课程</span></InstantLink><InstantLink className="header-avatar" href="/settings" aria-label="打开学习偏好">{data.user.display_name.slice(0, 1)}</InstantLink></div></header>
  {menu && <button className="sidebar-scrim" aria-label="关闭课程目录" onClick={() => { setMenu(false); menuButton.current?.focus(); }}/>}
@@ -206,27 +229,51 @@ function Brand() { return <InstantLink href="/today" className="brand"><span cla
 
 function Login({ onAuthenticated }: { onAuthenticated?: () => void }) {
     const [local, setLocal] = useState(false);
+    const [mode, setMode] = useState<'login' | 'register'>('login');
     const [code, setCode] = useState('');
+    const [username, setUsername] = useState('');
+    const [directory, setDirectory] = useState<LearnerSummary[]>([]);
+    const [confirmName, setConfirmName] = useState('');
     const [error, setError] = useState('');
     const [busy, setBusy] = useState(false);
     useEffect(() => {
         api<{ enabled: boolean }>('auth/local').then(x => setLocal(x.enabled)).catch(() => { });
     }, []);
-    async function enter(isLocal = false) {
+    function enterSpace() {
+        clearUserSessionCaches();
+        onAuthenticated?.();
+        instantNavigate('/today', 'replace');
+    }
+    async function verifyCode() {
         setBusy(true);
         setError('');
         try {
-            await api('auth', isLocal ? { local: true } : { code });
-            clearAllClientCaches();
-            onAuthenticated?.();
-            instantNavigate('/today', 'replace');
+            const result = await api<{ valid: boolean; users: LearnerSummary[] }>('auth/verify-code', code.trim() ? { code: code.trim() } : { local: true });
+            setDirectory(result.users);
         } catch (e) {
+            setDirectory([]);
             setError((e as Error).message);
         } finally {
             setBusy(false);
         }
     }
-    return <div className="login"><div className="login-art"><Brand /><div className="login-copy"><span className="eyebrow">A place for what stays.</span><h1>把理解，<br />变成你的<span>第二直觉。</span></h1><p>从第一次想起，到真正掌握。<br />每天留一点时间给未来的自己。</p></div><MemorySculpture /><span className="login-foot">AI PM Learning Studio · 2026</span></div><div className="login-form"><span className="eyebrow">Welcome back</span><h2>进入你的学习空间</h2><p>课程、记忆与成长，都从这里继续。</p><form onSubmit={e => { e.preventDefault(); void enter(); }}><label htmlFor="access-code">学习访问码</label><input id="access-code" type="password" autoComplete="current-password" value={code} onChange={e => setCode(e.target.value)} placeholder="输入你的专属访问码" required/><button disabled={busy} className="button primary">{busy ? '正在连接…' : '进入学习空间'}<ArrowRight size={17}/></button></form>{local && <button disabled={busy} onClick={() => enter(true)} className="button ghost">打开本机学习空间 <ArrowUpRight size={16}/></button>}<ErrorNote error={error}/><small>你的学习记录会保存在专属空间中。</small></div></div>;
+    async function submit(nextMode: 'login' | 'register', name = username) {
+        setBusy(true);
+        setError('');
+        setConfirmName('');
+        try {
+            validateUsername(name);
+            await api('auth', { ...(code.trim() ? { code: code.trim() } : { local: true }), username: name, mode: nextMode });
+            enterSpace();
+        } catch (e) {
+            const failure = e as Error & { code?: string };
+            if (failure.code === 'USER_NOT_FOUND' && nextMode === 'login') setConfirmName(name.trim());
+            else setError(failure.message);
+        } finally {
+            setBusy(false);
+        }
+    }
+    return <div className="login"><div className="login-art"><Brand /><div className="login-copy"><span className="eyebrow">A place for what stays.</span><h1>把理解，<br />变成你的<span>第二直觉。</span></h1><p>从第一次想起，到真正掌握。<br />每天留一点时间给未来的自己。</p></div><MemorySculpture /><span className="login-foot">AI PM Learning Studio · 2026</span></div><div className="login-form"><span className="eyebrow">Welcome back</span><h2>进入你的学习空间</h2><p>输入邀请码，使用你的用户名继续，或创建新的独立学习档案。</p><div className="login-modes" role="tablist" aria-label="登录或新建学习者"><button type="button" className={mode === 'login' ? 'button primary' : 'button ghost'} aria-selected={mode === 'login'} onClick={() => { setMode('login'); setConfirmName(''); }}>已有用户名继续</button><button type="button" className={mode === 'register' ? 'button primary' : 'button ghost'} aria-selected={mode === 'register'} onClick={() => { setMode('register'); setConfirmName(''); }}>+ 新用户录入</button></div><form onSubmit={event => { event.preventDefault(); void submit(mode); }}><label htmlFor="access-code">学习邀请码</label><input id="access-code" type="password" autoComplete="current-password" value={code} onChange={event => setCode(event.target.value)} placeholder="输入邀请码" required={!local}/><label htmlFor="learner-name">用户名</label><input id="learner-name" autoComplete="username" value={username} onChange={event => setUsername(event.target.value)} placeholder="例如：Klein / 你的名字" required/><div className="login-actions"><button type="button" className="button ghost" disabled={busy || (!code.trim() && !local)} onClick={() => { void verifyCode(); }}>查看已有用户名</button><button className="button primary" disabled={busy}>{busy ? '正在连接…' : mode === 'register' ? '创建学习档案' : '进入我的学习空间'}<ArrowRight size={17}/></button></div></form>{directory.length > 0 && <div className="login-chips" aria-label="已登记用户名">{directory.map(item => <button type="button" key={item.id} onClick={() => { setUsername(item.display_name); setMode('login'); setConfirmName(''); }}>{item.display_name}</button>)}</div>}{confirmName && <div className="confirm-note" role="status"><p>未找到用户「{confirmName}」，是否以该用户名创建新的学习空间？</p><button type="button" className="button primary" disabled={busy} onClick={() => { void submit('register', confirmName); }}>创建新学习者档案</button></div>}{local && <button disabled={busy} onClick={() => { setBusy(true); setError(''); api('auth', { local: true }).then(() => enterSpace()).catch(e => setError((e as Error).message)).finally(() => setBusy(false)); }} className="button ghost">打开本机学习空间 <ArrowUpRight size={16}/></button>}<ErrorNote error={error}/><small>邀请码只负责进入这个学习空间。每位用户名的进度单独保存。</small></div></div>;
 }
 
 function MemorySculpture() { return <div className="memory-sculpture" aria-hidden="true"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="sculpture-glow"/><div className="float-card back"><span>Understand.</span><div className="line-art"/></div><div className="float-card middle"><span>Connect.</span><div className="constellation"><i /><i /><i /><i /><i /></div></div><div className="float-card front"><div className="sculpture-card-top"><span>Knowledge, retained.</span><Sparkles size={16}/></div><div className="fold-art"><i /><i /><i /></div><span className="card-thought">每一次想起，<br />都离直觉更近一点。</span><div className="sculpture-card-bottom"><span>AI × Product × You</span><ArrowUpRight size={20}/></div></div><span className="orbit-point p1"/><span className="orbit-point p2"/></div>; }
@@ -325,7 +372,7 @@ function Study() {
         setLoading(false);
         if (nextCard) {
             const stateVersion = source.states.find(s => s.card_id === nextCard.id)?.version || 0;
-            prefetchRevealInCache(nextCard.id, stateVersion, source.settings.version, fetchReveal);
+            prefetchRevealInCache(source.user.id, nextCard.id, stateVersion, source.settings.version, fetchReveal);
         }
     }, [daily, practiceIds]);
 
@@ -334,7 +381,7 @@ function Study() {
     async function reveal() {
         if (!card || busy) return;
         const stateVersion = data.states.find(s => s.card_id === card.id)?.version || 0;
-        const cached = getCachedReveal(card.id, stateVersion, data.settings.version);
+        const cached = getCachedReveal(data.user.id, card.id, stateVersion, data.settings.version);
         if (cached && !previewStale) {
             setDetail(cached.card);
             setPreview(cached.preview);
@@ -346,7 +393,7 @@ function Study() {
         setError('');
         try {
             if (previewStale) invalidateReveal(card.id);
-            const result = await loadRevealCached(card.id, stateVersion, data.settings.version, fetchReveal);
+            const result = await loadRevealCached(data.user.id, card.id, stateVersion, data.settings.version, fetchReveal);
             setDetail(result.card);
             setPreview(result.preview);
             setPreviewStale(false);
@@ -535,8 +582,79 @@ function Progress() {
     return <><Heading eyebrow="Evidence of becoming" title="微小积累，自有回响。" description="让真实的学习痕迹，告诉你走了多远。"/><div className="progress-metrics"><div><span>已学习卡片</span><strong>{s.learned}<small> / {data.cards.length}</small></strong><p>从第一次回忆开始</p></div><div><span>已读课程</span><strong>{data.activity.length}<small> / {data.lessons.length}</small></strong><p>为判断力建立底座</p></div><div><span>跨日回忆成功率</span><strong>{retention === null ? '—' : `${retention}%`}</strong><p>{eligible.length ? `基于 ${eligible.length} 次跨日复习` : '完成跨日复习后显示'}</p></div></div><section className="activity-panel"><div className="section-heading"><div><span className="eyebrow">Your rhythm</span><h2>过去五周的学习节奏</h2></div><span className="muted">每一格，都是一天</span></div><div className="heatmap">{days.map(d => <div key={d.key} tabIndex={0} title={`${d.key} · ${d.count} 次回忆`} aria-label={`${d.key}，${d.count} 次回忆`} className={`heat heat-${Math.min(3, d.count)}`}><span>{d.key.slice(8)}</span>{d.count > 0 && <small>{d.count}</small>}</div>)}</div><div className="heatmap-legend"><span>{days[0].key}</span><span>少 <i /><i /><i /> 多</span><span>{days[34].key}</span></div></section><section className="chapter-progress"><div className="section-heading"><h2>每一章，都在生长</h2><InstantLink href="/curriculum">回到课程 <ArrowRight size={16}/></InstantLink></div>{data.chapters.map(c => { const cards = data.cards.filter(x => x.chapter_id === c.id); const learned = cards.filter(x => learnedCardIds.has(x.id)).length; return <div className="progress-row" key={c.id}><span>{String(c.position).padStart(2, '0')}</span><InstantLink href={`/curriculum/${c.id}`}>{c.title}</InstantLink><div className="thin-progress"><i style={{ width: `${cards.length ? learned / cards.length * 100 : 0}%` }}/></div><small>{cards.length ? `${learned} / ${cards.length} 张已学习` : '卡片待制'}</small></div>; })}</section>{data.historyLimited && <p className="info-note">活动与成功率基于最近 1,000 条记录。</p>}</>;
 }
 
+function formatWhen(value?: string) {
+    if (!value) return '—';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return '—';
+    return new Intl.DateTimeFormat('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(date);
+}
+
+function LearnerIdentity() {
+    const { data, update, replaceSession } = useData();
+    const [name, setName] = useState(data.user.display_name);
+    const [learners, setLearners] = useState<LearnerSummary[]>([]);
+    const [nextName, setNextName] = useState('');
+    const [error, setError] = useState('');
+    const [message, setMessage] = useState('');
+    const [busy, setBusy] = useState(false);
+    const loadLearners = useCallback(() => {
+        api<{ users: LearnerSummary[] }>('users').then(result => setLearners(result.users)).catch(e => setError((e as Error).message));
+    }, []);
+    useEffect(() => { loadLearners(); }, [loadLearners, data.user.id]);
+    useEffect(() => {
+        if (normalizeUsername(name) === data.user.display_name) return;
+        let clean: string;
+        try { clean = validateUsername(name); } catch { return; }
+        const timer = window.setTimeout(() => { void saveName(clean); }, 400);
+        return () => window.clearTimeout(timer);
+    }, [name, data.user.display_name]);
+    async function saveName(nextName: string) {
+        setBusy(true);
+        setError('');
+        setMessage('');
+        try {
+            const saved = await api<{ user: { id: string; display_name: string } }>('users/me', { display_name: nextName }, 'PATCH');
+            update(current => ({ ...current, user: { ...current.user, display_name: saved.user.display_name } }));
+            setName(saved.user.display_name);
+            setMessage('用户名已更新，学习进度仍属于这个账号。');
+            loadLearners();
+        } catch (e) {
+            setError((e as Error).message);
+        } finally {
+            setBusy(false);
+        }
+    }
+    async function rename(event: React.FormEvent) {
+        event.preventDefault();
+        await saveName(name);
+    }
+    async function switchTo(userId: string) {
+        if (userId === data.user.id) return;
+        setBusy(true);
+        setError('');
+        try {
+            await replaceSession(() => api('users/switch', { userId }));
+        } catch (e) {
+            setError((e as Error).message);
+            setBusy(false);
+        }
+    }
+    async function createLearner(event: React.FormEvent) {
+        event.preventDefault();
+        setBusy(true);
+        setError('');
+        try {
+            await replaceSession(() => api('users/switch', { newUsername: nextName }));
+        } catch (e) {
+            setError((e as Error).message);
+            setBusy(false);
+        }
+    }
+    return <section id="learners"><div><h2>学习者身份与用户名</h2><p>修改名字不会换掉学习记录。切换或新建用户后，看到的是那一位自己的进度。</p></div><form onSubmit={rename} className="learner-rename"><label htmlFor="display-name">当前用户名<input id="display-name" value={name} onChange={event => setName(event.target.value)}/></label><button className="button ghost" disabled={busy}>{busy ? '保存中…' : '保存用户名'}</button></form>{message && <p role="status" className="success-note"><Check size={17}/>{message}</p>}<div className="learner-directory"><h3>已登记学习者</h3>{learners.map(item => <div className="learner-row" key={item.id}><span><b>{item.display_name}</b><small>创建于 {formatWhen(item.created_at)} · 最近活跃 {formatWhen(item.last_active_at)}</small></span>{item.id === data.user.id ? <span className="pill">当前</span> : <button type="button" className="button ghost" disabled={busy} onClick={() => { void switchTo(item.id); }}>切换到这位</button>}</div>)}<form onSubmit={createLearner} className="learner-rename"><label htmlFor="new-learner">新增学习者用户名<input id="new-learner" value={nextName} onChange={event => setNextName(event.target.value)} placeholder="新的用户名"/></label><button className="button ghost" disabled={busy || !nextName.trim()}>+ 新增并进入</button></form></div><ErrorNote error={error}/></section>;
+}
+
 function Preferences() {
-    const { data, update } = useData();
+    const { data, update, replaceSession } = useData();
     const [form, setForm] = useState<Settings>({ ...data.settings });
     const [error, setError] = useState('');
     const [message, setMessage] = useState('');
@@ -559,7 +677,7 @@ function Preferences() {
             setBusy(false);
         }
     }
-    return <><Heading eyebrow="Find your own pace" title="按自己的节奏生长。" description="好的计划，应该适合你的生活。"/><div className="settings-form"><ThemePicker/><form onSubmit={save}><section><div><h2>每天一点，持续发生</h2><p>到期复习优先。复习量增加时，系统会自动减少新卡。</p></div><div className="form-grid"><label>每日学习预算<div className="input-unit"><input type="number" min="10" max="120" value={form.daily_minutes} onChange={e => setForm({ ...form, daily_minutes: Number(e.target.value) })}/><span>分钟</span></div></label><label>每天最多新卡<div className="input-unit"><input type="number" min="0" max="30" value={form.new_cards_per_day} onChange={e => setForm({ ...form, new_cards_per_day: Number(e.target.value) })}/><span>张</span></div></label><label>期望记忆保留率<select value={form.retention} onChange={e => setForm({ ...form, retention: Number(e.target.value) })}>{[.8, .85, .9, .95, .97].map(x => <option value={x} key={x}>{x * 100}%{x === .9 ? ' · 推荐' : ''}</option>)}</select><small>越高通常需要越频繁地复习。</small></label><label>学习时区<select value={form.timezone} onChange={e => setForm({ ...form, timezone: e.target.value })}>{['Asia/Shanghai', 'Asia/Hong_Kong', 'Asia/Tokyo', 'Europe/London', 'America/New_York', 'America/Los_Angeles', 'UTC'].map(x => <option key={x}>{x}</option>)}</select><small>每天凌晨 4 点开始新的学习日。</small></label></div></section><section><h2>从哪里开始</h2><div className="route-options">{[['guided', '优先不熟悉的知识', '根据你对章节的熟悉程度安排新卡。'], ['chapter', '按章节顺序推进', '从已有卡片中，按照课程顺序学习。']].map(([v, t, d]) => <label className={form.route_mode === v ? 'chosen' : ''} key={v}><input type="radio" name="route" checked={form.route_mode === v} onChange={() => setForm({ ...form, route_mode: v as Settings['route_mode'] })}/><span><b>{t}</b><small>{d}</small></span></label>)}</div><div className="familiarity-list">{data.chapters.map(c => <label key={c.id}><span>{c.title}</span><select value={form.familiarity[c.id] || 'familiar'} onChange={e => setForm({ ...form, familiarity: { ...form.familiarity, [c.id]: e.target.value } })}><option value="new">刚刚接触</option><option value="familiar">了解一些</option><option value="experienced">比较熟悉</option></select></label>)}</div></section><ErrorNote error={error}/>{message && <p role="status" className="success-note"><Check size={17}/>{message}</p>}<div className="settings-actions"><button disabled={busy} className="button primary">{busy ? '保存中…' : '保存学习偏好'}<Check size={17}/></button><button type="button" className="button ghost" onClick={async () => { await api('auth/logout', {}); clearAllClientCaches(); instantNavigate('/login', 'replace'); }}><LogOut size={16}/>退出学习空间</button></div></form></div></>;
+    return <><Heading eyebrow="Find your own pace" title="按自己的节奏生长。" description="好的计划，应该适合你的生活。"/><div className="settings-form"><LearnerIdentity/><ThemePicker/><form onSubmit={save}><section><div><h2>每天一点，持续发生</h2><p>到期复习优先。复习量增加时，系统会自动减少新卡。</p></div><div className="form-grid"><label>每日学习预算<div className="input-unit"><input type="number" min="10" max="120" value={form.daily_minutes} onChange={e => setForm({ ...form, daily_minutes: Number(e.target.value) })}/><span>分钟</span></div></label><label>每天最多新卡<div className="input-unit"><input type="number" min="0" max="30" value={form.new_cards_per_day} onChange={e => setForm({ ...form, new_cards_per_day: Number(e.target.value) })}/><span>张</span></div></label><label>期望记忆保留率<select value={form.retention} onChange={e => setForm({ ...form, retention: Number(e.target.value) })}>{[.8, .85, .9, .95, .97].map(x => <option value={x} key={x}>{x * 100}%{x === .9 ? ' · 推荐' : ''}</option>)}</select><small>越高通常需要越频繁地复习。</small></label><label>学习时区<select value={form.timezone} onChange={e => setForm({ ...form, timezone: e.target.value })}>{['Asia/Shanghai', 'Asia/Hong_Kong', 'Asia/Tokyo', 'Europe/London', 'America/New_York', 'America/Los_Angeles', 'UTC'].map(x => <option key={x}>{x}</option>)}</select><small>每天凌晨 4 点开始新的学习日。</small></label></div></section><section><h2>从哪里开始</h2><div className="route-options">{[['guided', '优先不熟悉的知识', '根据你对章节的熟悉程度安排新卡。'], ['chapter', '按章节顺序推进', '从已有卡片中，按照课程顺序学习。']].map(([v, t, d]) => <label className={form.route_mode === v ? 'chosen' : ''} key={v}><input type="radio" name="route" checked={form.route_mode === v} onChange={() => setForm({ ...form, route_mode: v as Settings['route_mode'] })}/><span><b>{t}</b><small>{d}</small></span></label>)}</div><div className="familiarity-list">{data.chapters.map(c => <label key={c.id}><span>{c.title}</span><select value={form.familiarity[c.id] || 'familiar'} onChange={e => setForm({ ...form, familiarity: { ...form.familiarity, [c.id]: e.target.value } })}><option value="new">刚刚接触</option><option value="familiar">了解一些</option><option value="experienced">比较熟悉</option></select></label>)}</div></section><ErrorNote error={error}/>{message && <p role="status" className="success-note"><Check size={17}/>{message}</p>}<div className="settings-actions"><button disabled={busy} className="button primary">{busy ? '保存中…' : '保存学习偏好'}<Check size={17}/></button><button type="button" className="button ghost" onClick={async () => { await api('auth/logout', {}); await replaceSession(async () => { instantNavigate('/login', 'replace'); }); }}><LogOut size={16}/>退出学习空间</button></div></form></div></>;
 }
 
 function Interview() { return <div className="interview-page"><div className="voice-orbit"><Volume2 size={46}/><span /><span /></div><span className="eyebrow">The weekend room</span><h1>让理解，<br />成为说得清的能力。</h1><p>周末练习室将在下一阶段开放。<br />未来，你可以围绕本周所学，完成一场真实的语音模拟面试。</p><span className="pill">规划中 · 尚未开放</span><InstantLink className="button primary" href="/cards">先用卡片练习表达 <ArrowUpRight size={17}/></InstantLink></div>; }
