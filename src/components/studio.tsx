@@ -225,7 +225,7 @@ export default function Studio() {
  <main id="main-content" key={page === 'study' ? `${pathname}?${searchKey}` : pathname} className={page === 'study' ? 'content study-content' : 'content'}>{page === 'today' ? <Today /> : page === 'curriculum' ? <KnowledgeAtlas data={data} chapterId={route[1]} onPrefetchLesson={prefetchLesson}/> : page === 'cards' ? <Cards /> : page === 'study' ? <Study /> : page === 'progress' ? <Progress /> : page === 'settings' ? <Preferences /> : page === 'lessons' ? <LessonReader id={route[1]}/> : page === 'interview' ? <Interview /> : <div className="empty-state"><h1>这条路径还没有内容</h1><InstantLink className="button" href="/today">回到今日学习</InstantLink></div>}</main><footer className="footer"><span>recall. <span>理解，然后记住。</span></span><InstantLink href="/curriculum">随时选择你的下一课 <ArrowUpRight size={13}/></InstantLink></footer></div></div></Context.Provider>;
 }
 
-function Brand() { return <InstantLink href="/today" className="brand"><span className="brand-mark"><i /><i /><i /></span><span>recall<span className="brand-period">.</span></span></InstantLink>; }
+function Brand() { return <InstantLink href="/today" className="brand"><span className="brand-mark"><i /><i /><i /></span><span>Recall<span className="brand-period">.</span></span></InstantLink>; }
 
 function Login({ onAuthenticated }: { onAuthenticated?: () => void }) {
     const [local, setLocal] = useState(false);
