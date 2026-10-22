@@ -9,7 +9,7 @@ const sourceRefSchema = z.object({
   line_start: z.number().int().positive(), line_end: z.number().int().positive(),
 }).refine(x => x.line_end >= x.line_start, 'source line range is reversed');
 const cardSchema = z.object({
-  canonical_key: z.string().regex(/^(?:ch(01|02|03|04|05|06|07)\.[a-z0-9.-]+|C(?:0[1-9]|1[0-4]))$/), lesson_source_key: z.string().min(3),
+  canonical_key: z.string().regex(/^(?:ch(01|02|03|04|05|06|07|08|09)\.[a-z0-9.-]+|C(?:0[1-9]|1[0-4]))$/), lesson_source_key: z.string().min(3),
   concept_keys: z.array(z.string().min(3)).min(1), revision: z.number().int().positive(),
   position: z.number().int().positive(), title: z.string().min(3).max(80),
   kind: z.enum(['概念','对比','机制','场景判断','故障诊断']),

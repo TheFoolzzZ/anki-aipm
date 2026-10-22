@@ -1,5 +1,6 @@
 import 'server-only';
 import { db } from './db';
+import { cardRevisionCatalog } from './card-revision-catalog';
 import { usernameKey, validateUsername } from './username';
 import type { Bootstrap, CardDetail, CardMeta, LearnerSummary, Settings } from './types';
 export async function bootstrap(user:{id:string;display_name:string}):Promise<Bootstrap>{
@@ -9,7 +10,7 @@ export async function bootstrap(user:{id:string;display_name:string}):Promise<Bo
   client.from('apm_chapters').select('*').order('position'),
   client.from('apm_lessons').select('id,chapter_id,title,position,summary,reading_minutes').order('position'),
   client.from('apm_cards').select('*').eq('lifecycle','active').order('position'),
-  client.from('apm_card_revisions').select('card_id,revision,title,kind,prompt,estimated_seconds'),
+  cardRevisionCatalog(client),
   client.from('apm_review_states').select('card_id,fsrs,due,version,suspended,last_event_id').eq('user_id',user.id),
   client.from('apm_review_events').select('id,card_id,kind,rating,state_before,state_after,received_at,reviewed_at,duration_ms,undone_event_id').eq('user_id',user.id).order('received_at',{ascending:false}).limit(1000),
   client.from('apm_study_activity').select('lesson_id,completed_at').eq('user_id',user.id),
@@ -18,7 +19,11 @@ export async function bootstrap(user:{id:string;display_name:string}):Promise<Bo
  const [s,ch,l,c,cr,st,e,a]=result;
  const settings=s.data as unknown as Settings;
  const revisionMap=new Map((cr.data||[]).map(r=>[`${r.card_id}:${r.revision}`,r]));
- const cards=(c.data||[]).map(card=>({...card,...revisionMap.get(`${card.id}:${card.active_revision}`)})) as CardMeta[];
+ const cards=(c.data||[]).map(card=>{
+  const revision=revisionMap.get(`${card.id}:${card.active_revision}`);
+  if(!revision)throw new Error('DATABASE_CARD_REVISION_MISSING');
+  return {...card,...revision};
+ }) as CardMeta[];
  return {user,settings:{...settings,retention:Number(settings.retention)},chapters:ch.data as Bootstrap['chapters'],lessons:l.data as Bootstrap['lessons'],cards,states:st.data as Bootstrap['states'],events:e.data as Bootstrap['events'],activity:a.data as Bootstrap['activity'],now:new Date().toISOString(),historyLimited:e.data?.length===1000};
 }
 export async function cardDetail(id:string):Promise<CardDetail>{

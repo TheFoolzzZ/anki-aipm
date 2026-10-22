@@ -11,10 +11,10 @@ test('legacy names are accepted for revisions and reject new legacy identities',
   assert.ok(batchSchema.safeParse(batch('ch03.interview.m11.example.001',1)).success);
 });
 test('supported chapter keys are allowed only in their own chapter',()=>{
-  for(const chapter of [4,5,6,7]){
+  for(const chapter of [4,5,6,7,8,9]){
     const value={...batch(`ch0${chapter}.interview.m01.example.001`,1),chapter_position:chapter};
     assert.ok(batchSchema.safeParse(value).success);
     assert.equal(batchSchema.safeParse({...value,chapter_position:3}).success,false);
   }
-  assert.equal(batchSchema.safeParse({...batch('ch08.interview.m01.example.001',1),chapter_position:8}).success,false);
+  assert.equal(batchSchema.safeParse({...batch('ch10.interview.m01.example.001',1),chapter_position:9}).success,false);
 });
