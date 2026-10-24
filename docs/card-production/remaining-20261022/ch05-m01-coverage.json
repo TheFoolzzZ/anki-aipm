@@ -1,0 +1,1110 @@
+{
+  "module_id": "5.1",
+  "module_key": "ch05-m01",
+  "source_path": "第5章-AI产品设计/5.1-Token成本.md",
+  "source_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+  "lf_line_count": 424,
+  "status": "draft",
+  "old_card_count": 5,
+  "draft_card_count": 5,
+  "new_card_count": 0,
+  "markdown_checklist_count": 0,
+  "box_item_count": 0,
+  "native_question_line_count": 6,
+  "registered": 47,
+  "registration_scope": "冻结源文中标题、含问号行、每个方框项及列明的章末行动目标；编辑目标另列，标题不计实际承载。",
+  "publication_coverage": 0,
+  "practice_completed": 0,
+  "independent_review_completed": false,
+  "objectives": [
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L1",
+      "original_text": "# 5.1 Token成本",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "# 5.1 Token成本"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L20",
+      "original_text": "## 一、Token 成本的构成：你的钱花在哪了？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 20,
+        "line_end": 20
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 一、Token 成本的构成：你的钱花在哪了？"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L22",
+      "original_text": "### （一）API 计费的基本单元",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 22,
+        "line_end": 22
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）API 计费的基本单元"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L41",
+      "original_text": "### （二）隐藏的成本杀手",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 41,
+        "line_end": 41
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）隐藏的成本杀手"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L45",
+      "original_text": "#### 1. 系统 Prompt 的固定开销",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 45,
+        "line_end": 45
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 1. 系统 Prompt 的固定开销"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L63",
+      "original_text": "#### 2. 多轮对话的\"滚雪球\"效应",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 63,
+        "line_end": 63
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2. 多轮对话的\"滚雪球\"效应"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L75",
+      "original_text": "#### 3. RAG 检索结果的\"附加重量\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 75,
+        "line_end": 75
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 3. RAG 检索结果的\"附加重量\""
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L89",
+      "original_text": "#### 4. 重试和失败请求的沉没成本",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 89,
+        "line_end": 89
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 4. 重试和失败请求的沉没成本"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L95",
+      "original_text": "## 二、主流模型的 Token 定价全景图",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 95,
+        "line_end": 95
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 二、主流模型的 Token 定价全景图"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L97",
+      "original_text": "### （一）国际主流模型定价（2025-2026 参考）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 97,
+        "line_end": 97
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）国际主流模型定价（2025-2026 参考）"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L115",
+      "original_text": "### （二）国产主流模型定价（2025-2026 参考）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 115,
+        "line_end": 115
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）国产主流模型定价（2025-2026 参考）"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L132",
+      "original_text": "### （三）一张图看懂\"成本差异\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 132,
+        "line_end": 132
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （三）一张图看懂\"成本差异\""
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L150",
+      "original_text": "## 三、AI PM 如何计算产品的 Token 成本？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 150,
+        "line_end": 150
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 三、AI PM 如何计算产品的 Token 成本？"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L152",
+      "original_text": "### （一）单用户单次请求的成本公式",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 152,
+        "line_end": 152
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）单用户单次请求的成本公式"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L164",
+      "original_text": "| 用户问题 | 80 | \"我的订单为什么还没发货？\" |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 164,
+        "line_end": 164
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 用户问题 | 80 | \"我的订单为什么还没发货？\" |"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L190",
+      "original_text": "### （二）月度总成本的估算方法",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 190,
+        "line_end": 190
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）月度总成本的估算方法"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L218",
+      "original_text": "### （三）不同业务场景的成本特征",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 218,
+        "line_end": 218
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （三）不同业务场景的成本特征"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L230",
+      "original_text": "## 四、降低 Token 成本的 10 个实战策略",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 230,
+        "line_end": 230
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 四、降低 Token 成本的 10 个实战策略"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L232",
+      "original_text": "### 策略 1：精简系统 Prompt",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 232,
+        "line_end": 232
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 1：精简系统 Prompt"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L244",
+      "original_text": "### 策略 2：多轮对话压缩",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 244,
+        "line_end": 244
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 2：多轮对话压缩"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L256",
+      "original_text": "### 策略 3：RAG 结果去重与截断",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 256,
+        "line_end": 256
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 3：RAG 结果去重与截断"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L268",
+      "original_text": "### 策略 4：模型分层调度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 268,
+        "line_end": 268
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 4：模型分层调度"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L280",
+      "original_text": "### 策略 5：输出长度控制",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 280,
+        "line_end": 280
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 5：输出长度控制"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L292",
+      "original_text": "### 策略 6：Prompt Caching（缓存复用）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 292,
+        "line_end": 292
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 6：Prompt Caching（缓存复用）"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L304",
+      "original_text": "### 策略 7：Batch 批处理",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 304,
+        "line_end": 304
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 7：Batch 批处理"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L316",
+      "original_text": "### 策略 8：本地/私有化部署",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 316,
+        "line_end": 316
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 8：本地/私有化部署"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L333",
+      "original_text": "### 策略 9：用户输入预处理",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 333,
+        "line_end": 333
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 9：用户输入预处理"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L345",
+      "original_text": "### 策略 10： Fallback 降级机制",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 345,
+        "line_end": 345
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 策略 10： Fallback 降级机制"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L357",
+      "original_text": "## 五、Token 成本如何影响产品决策",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 357,
+        "line_end": 357
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 五、Token 成本如何影响产品决策"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L359",
+      "original_text": "### （一）产品功能设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 359,
+        "line_end": 359
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）产品功能设计"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L378",
+      "original_text": "### （二）商业模式选择",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 378,
+        "line_end": 378
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）商业模式选择"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L387",
+      "original_text": "### （三）技术方案选型",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 387,
+        "line_end": 387
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （三）技术方案选型"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L399",
+      "original_text": "1.   先定义\"效果达标线\"——准确率需要达到多少？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 399,
+        "line_end": 399
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "1.   先定义\"效果达标线\"——准确率需要达到多少？"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L400",
+      "original_text": "2.   再评估各方案的成本——单用户月均成本是多少？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 400,
+        "line_end": 400
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "2.   再评估各方案的成本——单用户月均成本是多少？"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L401",
+      "original_text": "3.   最后结合商业模式——这个成本结构能否盈利？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 401,
+        "line_end": 401
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "3.   最后结合商业模式——这个成本结构能否盈利？"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L405",
+      "original_text": "## 六、写在最后",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 405,
+        "line_end": 405
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 六、写在最后"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L411",
+      "original_text": "1.   **规模化 ≠ 自动盈利**：用户越多，API 账单越大。如果单位经济模型不健康，规模越大亏得越多。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 411,
+        "line_end": 411
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "1.   **规模化 ≠ 自动盈利**：用户越多，API 账单越大。如果单位经济模型不健康，规模越大亏得越多。"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L412",
+      "original_text": "2.   **模型选择是商业决策**：不是用最强的模型就好，而是用\"足够好且足够便宜\"的模型。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 412,
+        "line_end": 412
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "2.   **模型选择是商业决策**：不是用最强的模型就好，而是用\"足够好且足够便宜\"的模型。"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L413",
+      "original_text": "3.   **成本优化是持续过程**：从系统 Prompt 的 100 个字符，到 RAG 检索策略的阈值调整，每个细节都在影响成本。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 413,
+        "line_end": 413
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "3.   **成本优化是持续过程**：从系统 Prompt 的 100 个字符，到 RAG 检索策略的阈值调整，每个细节都在影响成本。"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L417",
+      "original_text": "**上线前**：用真实数据跑 1000 次请求，算出平均单次成本，乘以预期月活，得出月度 API 预算。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 417,
+        "line_end": 417
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "**上线前**：用真实数据跑 1000 次请求，算出平均单次成本，乘以预期月活，得出月度 API 预算。"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L419",
+      "original_text": "**上线后**：监控\"单用户单次平均 Token 数\"和\"单用户月均 API 成本\"，设置成本异常告警。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 419,
+        "line_end": 419
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "**上线后**：监控\"单用户单次平均 Token 数\"和\"单用户月均 API 成本\"，设置成本异常告警。"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05-m01-L421",
+      "original_text": "**优化时**：每次做成本优化前，先 A/B 测试效果变化——省下的钱不能牺牲用户体验。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 421,
+        "line_end": 421
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "**优化时**：每次做成本优化前，先 A/B 测试效果变化——省下的钱不能牺牲用户体验。"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "C12",
+      "original_text": "## 一、Token 成本的构成：你的钱花在哪了？\n\n### （一）API 计费的基本单元\n\n大模型 API 的计费非常简单，只有两个维度：\n\n```\n总成本 = 输入 Token 数 × 输入单价 + 输出 Token 数 × 输出单价\n```\n\n| 维度 | 说明 | 示例 |\n| --- | --- | --- |\n| **输入 Token（Input）** | 你发给模型的所有内容：用户提问 + 系统 Prompt + 上下文历史 + 检索到的知识 | 用户问\"总结一下这篇文章\"，你附带了一篇 2000 字的文章 → 输入约 1500 Token |\n| **输出 Token（Output）** | 模型返回给你的内容 | 模型返回了一段 500 字的总结 → 输出约 400 Token |\n\n**关键认知**：\n\n*   **输出通常比输入贵**：因为生成输出需要模型逐个 Token 进行概率计算，计算成本更高\n*   **输入单价 ≈ 输出单价的 1/3 到 1/2**（大多数模型）\n*   **上下文历史也算输入**：多轮对话中，之前说的每一句话都会被重复计费",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 20,
+        "line_end": 39
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "C12"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "C12",
+          "required_points": [
+            "分别按输入输出单价与百万单位计算，合计0.016元",
+            "完整输入已含上下文，不重复计算历史/检索内容",
+            "结论限定题设计费范围，真实费用按usage及账单核对"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05.interview.m01.concurrency-billing.001",
+      "original_text": "### （二）月度总成本的估算方法\n\n```\n月度总成本 = 单次请求平均成本 × 月均请求次数 × 并发系数\n```\n\n**案例：AI 写作助手**\n\n假设你的产品是一个 AI 写作助手，有 10 万月活用户：\n\n| 参数 | 估算值 | 说明 |\n| --- | --- | --- |\n| 月活用户 | 100,000 |  |\n| 人均月使用次数 | 20 次 | 每周用 4-5 次 |\n| 月均总请求数 | 2,000,000 |  |\n| 单次平均成本（DeepSeek-V3） | ¥0.01 | 含输入输出平均 |\n| **月度 API 成本** | **¥20,000** |  |\n| 加上重试/失败（10%） | ¥22,000 |  |\n| 加上高峰期冗余（20%） | ¥26,400 |  |\n\n**换算到每个用户的单月成本**：\n\n```\n单用户单月成本 = ¥26,400 / 100,000 = ¥0.264（约 2 毛 6）\n```\n\n这意味着：如果你给用户定价\"每月 9.9 元\"，API 成本占比约 2.7%，还有很大的毛利空间。但如果你定价\"每月 1 元\"，API 成本就占了 26%，加上服务器、人力、运营，大概率亏损。\n",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 190,
+        "line_end": 217
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m01.concurrency-billing.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m01.concurrency-billing.001",
+          "required_points": [
+            "单位一致并算得20,000元/月，重试不重复计",
+            "总用量/单价不变时并发不作为用量费用乘数",
+            "额外容量和新增调用须凭实际方案/用量另列"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05.interview.m01.paid-cohort.001",
+      "original_text": "\n| 参数 | 估算值 | 说明 |\n| --- | --- | --- |\n| 月活用户 | 100,000 |  |\n| 人均月使用次数 | 20 次 | 每周用 4-5 次 |\n| 月均总请求数 | 2,000,000 |  |\n| 单次平均成本（DeepSeek-V3） | ¥0.01 | 含输入输出平均 |\n| **月度 API 成本** | **¥20,000** |  |\n| 加上重试/失败（10%） | ¥22,000 |  |\n| 加上高峰期冗余（20%） | ¥26,400 |  |\n\n**换算到每个用户的单月成本**：\n\n```\n单用户单月成本 = ¥26,400 / 100,000 = ¥0.264（约 2 毛 6）\n```\n\n这意味着：如果你给用户定价\"每月 9.9 元\"，API 成本占比约 2.7%，还有很大的毛利空间。但如果你定价\"每月 1 元\"，API 成本就占了 26%，加上服务器、人力、运营，大概率亏损。\n",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 199,
+        "line_end": 217
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m01.paid-cohort.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m01.paid-cohort.001",
+          "required_points": [
+            "付费人数算收入9,900元，减API为−10,100元",
+            "区分扣API差额与整体盈利，说明其他费用未计",
+            "分免费/付费和轻重群体核对成本、权益及转化假设"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05.interview.m01.cache-economics.001",
+      "original_text": "### 策略 6：Prompt Caching（缓存复用）\n\n**原理**：如果多次请求中有一部分上下文是固定的（如系统 Prompt + 知识库），可以缓存这部分，避免重复计费。\n\n**做法**：\n\n*   使用支持 Prompt Caching 的厂商（如 Anthropic、OpenAI）\n*   把不变的上下文前置并标记为缓存\n*   缓存后的输入价格通常降低 50-90%\n\n**效果**：对于高频重复场景（如客服用同一套知识库回答不同用户），成本可降低 40-60%。",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 292,
+        "line_end": 302
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m01.cache-economics.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m01.cache-economics.001",
+          "required_points": [
+            "区分未缓存/写入/读取及输出等费用，缓存不等于免费",
+            "按实际服务条件及复用频次判断可命中性",
+            "在任务质量一致时比较完整费用，用usage验证命中"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.1",
+      "objective_id": "ch05.interview.m01.batch-deadline.001",
+      "original_text": "### 策略 7：Batch 批处理\n\n**原理**：把多个请求打包成一批提交，享受批量折扣。\n\n**适用场景**：\n\n*   批量生成商品描述\n*   批量处理用户反馈分类\n*   批量数据分析\n\n**效果**：批量处理通常有 25-50% 的价格折扣。",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.1-Token成本.md",
+        "content_hash": "dfbc3756c67ce34c7d8c16c4f72a059cafaa0b54b4ca8c41154c3fa5fddb35c9",
+        "line_start": 304,
+        "line_end": 314
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m01.batch-deadline.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m01.batch-deadline.001",
+          "required_points": [
+            "按业务时限区分即时与可异步任务",
+            "按请求ID和截止时点核对可用结果、失败/过期，受理不等于完成",
+            "以完整费用、质量和交付证据判断采用，时限不符不放行"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 5,
+    "batch_ids": [
+      "ch05-interview-20261022-m01"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "C12": "e69ce9871e7570c921771f34813f7dddcbfda2f0d8f03479969718bf9d051a27",
+    "ch05.interview.m01.concurrency-billing.001": "a45d06f779fa25a8bc7d62a7f5104774d483b2622b0c143b1a693051c61d8886",
+    "ch05.interview.m01.paid-cohort.001": "5cf5f064b60fc90018786d4095ce6835b11bab309c8cb6dba90f55a08b5bcc68",
+    "ch05.interview.m01.cache-economics.001": "2ee9ba5ce51d803b5ce36b07e6bb317355cd27906cd0fc683732035889fc363b",
+    "ch05.interview.m01.batch-deadline.001": "170e5d67cece96f4d60c0af71f98804813b6eedd30fd6f6e99248dd01fa23ad2"
+  }
+}

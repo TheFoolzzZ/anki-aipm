@@ -1,0 +1,287 @@
+{
+  "module_id": "8.5",
+  "module_key": "ch08-m05",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+    "content_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+    "line_count": 84
+  },
+  "native_objective_count": 1,
+  "registered_native_count": 1,
+  "native_registration_coverage": 1,
+  "accepted_card_count": 0,
+  "published_card_count": 0,
+  "publication_coverage": 0,
+  "practice_status": "designed_not_executed",
+  "practice_execution_count": 0,
+  "existing_active_card_count": 0,
+  "new_draft_card_count": 3,
+  "objectives": [
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-O001",
+      "original_text": "_思考题：你手机里安装的 AI 产品中，哪些属于\"陪伴型\"，哪些属于\"任务型\"？你更愿意为什么样的能力付费？_",
+      "source_type": "原生思考题",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 83,
+      "line_start": 83,
+      "line_end": 83,
+      "decision": "拆分",
+      "reason": "原题手机实用与个人偏好不能由作者代填；类型和付费判断做假设子卡，真实使用另留实践。",
+      "edited_objective": "按使用目的分类并论证付费价值",
+      "card_keys": [
+        "ch08.interview.m05.behavioral-classification.001",
+        "ch08.interview.m05.willingness-to-pay.001"
+      ],
+      "mother_question_id": "ch08-m05-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-O002",
+      "original_text": "_思考题：你手机里安装的 AI 产品中，哪些属于\"陪伴型\"，哪些属于\"任务型\"？你更愿意为什么样的能力付费？_",
+      "source_type": "编辑实践承接",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 83,
+      "line_start": 83,
+      "line_end": 83,
+      "decision": "实践任务",
+      "reason": "只有学习者真实使用才能报告手机产品与偏好，设计不代表完成。",
+      "edited_objective": "记录实际两款产品的使用与个人付费证据",
+      "card_keys": [],
+      "mother_question_id": "ch08-m05-M1",
+      "practice_task_ids": [
+        "ch08-m05-P1"
+      ],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-O003",
+      "original_text": "1.   **不要把所有\"智能体\"混为一谈。** 陪伴型、任务型、工具型、平台型，不同形态的产品逻辑完全不同。分析产品前，先界定清楚它到底是什么。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 61,
+      "line_start": 61,
+      "line_end": 61,
+      "decision": "采用",
+      "reason": "保留界定对象，纠正互斥类型的强断言。",
+      "edited_objective": "按任务场景区分目的风格与执行",
+      "card_keys": [
+        "ch08.interview.m05.behavioral-classification.001"
+      ],
+      "mother_question_id": "ch08-m05-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-O004",
+      "original_text": "2.   **用户为\"结果\"付费，不为\"人设\"付费。** 角色扮演可能带来短期活跃，但长期商业价值取决于它能否交付可量化的结果。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 63,
+      "line_start": 63,
+      "line_end": 63,
+      "decision": "采用",
+      "reason": "“不为人设付费”不是普遍事实，转为两种价值的付费假设比较。",
+      "edited_objective": "可兑现体验和结果均需支付证据",
+      "card_keys": [
+        "ch08.interview.m05.willingness-to-pay.001"
+      ],
+      "mother_question_id": "ch08-m05-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-O005",
+      "original_text": "3.   **合规是产品形态的决定性变量。** 当监管成本超过业务价值时，再有趣的产品形态也会被砍掉。产品经理做设计时，要把合规当作前置约束。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 65,
+      "line_start": 65,
+      "line_end": 65,
+      "decision": "合并",
+      "reason": "保留约束前置，不凭业务价值评价法律适用。",
+      "edited_objective": "以风险与必要边界限定设计",
+      "card_keys": [
+        "ch08.interview.m05.risk-not-label.001"
+      ],
+      "mother_question_id": "ch08-m05-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-O006",
+      "original_text": "4.   **C 端 Agent 的机会在\"办事\"，不在\"陪聊\"。** 用户真正需要的不是更懂自己的\"电子宠物\"，而是能替代重复劳动、完成实际任务的\"数字员工\"。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 67,
+      "line_start": 67,
+      "line_end": 67,
+      "decision": "合并",
+      "reason": "不采纳C端只有办事机会；同群对比两类付费价值。",
+      "edited_objective": "验证价值并控制诱导和执行风险",
+      "card_keys": [
+        "ch08.interview.m05.willingness-to-pay.001",
+        "ch08.interview.m05.risk-not-label.001"
+      ],
+      "mother_question_id": "ch08-m05-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-O007",
+      "original_text": "5.   **看大厂动作要看清底层逻辑。** 千问豆包下线某个功能，不等于放弃 Agent。腾讯 All in Agent，也不等于所有 Agent 方向都对。关键是看它做的是什么类型的 Agent。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 69,
+      "line_start": 69,
+      "line_end": 69,
+      "decision": "合并",
+      "reason": "不从大厂动作判定整个形态成败，聚焦实际责任。",
+      "edited_objective": "实际行为与治理而非标签",
+      "card_keys": [
+        "ch08.interview.m05.behavioral-classification.001",
+        "ch08.interview.m05.risk-not-label.001"
+      ],
+      "mother_question_id": "ch08-m05-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-F008",
+      "original_text": "7月4日，阿里千问和字节豆包先后通知用户：7月15 日起，App 内的\"智能体\"功能将下线。几乎同时，腾讯却在加速推进 Agent：混元 Hy3 强化 Agent 能力、元宝上线免费 Agent 功能、WorkBuddy 月访问量冲到 885 万。\n\n看起来矛盾吗？其实并不矛盾。**下线的\"智能体\"和腾讯在做 Agent，根本不是一个物种。**\n\n## 一、新闻澄清：千问豆包下线的是什么？\n\n根据财新报道，千问和豆包下线的\"智能体\"功能，指的是早期依托知识库打造的**特色 AI 聊天机器人**。\n\n典型使用场景包括：\n\n*   角色扮演和陪聊\n*   英语陪练\n*   特定场景文案产出\n*   用户用简单 prompt 自建的人设型机器人\n\n比如用户在豆包里创建一个\"中学老师\"智能体，它会以老师的口吻回答问题。这类产品的核心是**陪伴感和人格化**，而不是完成任务。\n\n而下线的节点，正好撞上 7 月 15 日施行的《人工智能拟人化互动服务管理暂行办法》。UGC 角色扮演内容涉及的软色情、擦边、情感诱导等问题，监管成本极高。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 5,
+      "line_start": 5,
+      "line_end": 22,
+      "decision": "延期核实",
+      "reason": "各平台下线范围、时间及监管因果未得相应一手公告；不当真实前提。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-F009",
+      "original_text": "腾讯的 Agent 产品矩阵完全是另一条路线：\n\n*   **元宝 Agent**：一句话生成 PPT、Word、PDF\n*   **WorkBuddy**：桌面智能体工作台，自动操作电脑、连接微信/企业微信\n*   **CodeBuddy**：AI 编程助手，提升研发效率\n*   **QClaw**：消费级 AI 智能体，直连微信\n\n这些产品的共同点是：**不陪你聊天，帮你干活。**\n\n| 维度 | 千问/豆包下线的\"智能体\" | 腾讯在做 Agent |\n| --- | --- | --- |\n| 核心形态 | 角色化聊天机器人 | 任务执行工具 |\n| 用户需求 | 陪伴、娱乐、新鲜感 | 提效、完成工作 |\n| 内容来源 | UGC，用户自建人设 | 平台定义工具和流程 |\n| 商业逻辑 | 流量 + 广告/会员 | 效率提升 + 企业付费 |\n| 监管风险 | 高：UGC 角色扮演内容难控 | 低：任务型、受控场景 |",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 26,
+      "line_start": 26,
+      "line_end": 41,
+      "decision": "延期核实",
+      "reason": "产品清单、访问量与按形态固定监管等级不由本地文章确认；逐产品需再查。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.5",
+      "objective_id": "ch08-m05-F010",
+      "original_text": "千问和豆包下线的，是**陪伴型 UGC 智能体**这个特定形态。它的问题不是\"智能体\"三个字，而是它的产品逻辑本身站不住脚。\n\n腾讯、阿里、字节真正的战场，已经转移到了**任务型 Agent**——能调用工具、完成任务、交付结果的 Agent。\n\n产品经理要学会区分概念和实体。风口的名称会变，但产品的基本规律不会变：**解决真实问题、商业闭环成立、合规风险可控，才值得长期投入。**",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+      "source_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+      "source_line": 75,
+      "line_start": 75,
+      "line_end": 79,
+      "decision": "延期核实",
+      "reason": "陪伴逻辑不成立、战场已转移为作者判断；只保留可检验的价值/闭环/风险要求。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    }
+  ],
+  "scope_notes": [
+    "原生开放问题与正文编辑补题分别统计；登记率不等于发布覆盖。",
+    "所有草稿未审校，未发布，未运行产品或实践；不据卡片标题宣称覆盖。",
+    "与8.2不同，本课不评广场分发、创作者激励或停服；独立目标是混合类型辨析、体验与结果付费比较、内容关系和数据执行风险的对称治理。"
+  ],
+  "mother_questions": [
+    {
+      "id": "ch08-m05-M1",
+      "prompt": "请用假设产品比较角色陪伴、任务执行及混合场景，说明你会为什么能力付费、如何验证这种选择，以及为何任务型不天然更安全。",
+      "answer": "一、我会先描述用户正在做什么，而不是根据产品名归类。角色聊天可以提供娱乐、表达或练习价值；任务执行要把目标转成可验收产物或外部状态。一个英语陪练既可能依靠角色互动，也可能交付有依据的学习反馈，因此分类不是互斥物种。\n二、在付费判断上，我会选定具体用户和使用机会，列出现有替代、未满足的结果、节省的返工或可持续体验，再测试合适的套餐。假设我需要准备英语面试，愿付费的候选能力是可重复的练习、可信纠错和进展回看；这只是编辑假设，不代表作者或学习者已经购买。应以授权试用、真实自愿付费和后续使用验证，不能把口头偏好或免费点击当收入，也不把情感价值一概判为伪需求。\n三、价值和风险要分开。陪伴场景可能有依赖、诱导和不当内容问题；任务场景可能泄漏数据、错改文件、错发消息或扣款。两者都要看人群脆弱性、数据和权限、失败可逆性，可能同时需要多类治理。假设陪练能把成绩发给家长，就从聊天进入了数据分享和授权边界，不能因“教育任务”免检。\n四、我会在小范围定义体验/结果与安全边界的共同验收：陪练看纠错依据和持续使用，办事看真实完成和返工；用户可退出、纠错、投诉，高后果执行经适当确认。付费试验若靠诱导或越权获得增长即停止。没有执行测试，也不对手机中真实产品、厂商下线或法律生效日期作断言。",
+      "card_keys": [
+        "ch08.interview.m05.behavioral-classification.001",
+        "ch08.interview.m05.willingness-to-pay.001",
+        "ch08.interview.m05.risk-not-label.001"
+      ],
+      "status": "draft"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "ch08-m05-P1",
+      "task": "30–45分钟，选择自己确实用过的两款AI产品，记录一次具体使用目标、产出、是否执行外部动作、愿付费理由与反例；无法实际使用则只填假设设计并标未验证。",
+      "acceptance": "不按品牌或角色名分类；至少一个混合情境；付费判断包含替代与自愿支付证据设计；风险分别列内容/关系与数据/动作，未操作项明确未执行，不伪造手机安装情况。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 3,
+    "batch_ids": [
+      "ch08-interview-20261022-m05"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m05.behavioral-classification.001": "d1d632d8494be17a4b7efc8e03b43f2cbd037f4d57987c9e5c422b875872209a",
+    "ch08.interview.m05.willingness-to-pay.001": "9c3d1126fd908a9d635708ab8fbf07f42aa6a6b8f47cc38e68d2bfae13f94cb8",
+    "ch08.interview.m05.risk-not-label.001": "bc76b03aad3d3eaf3338857b9c0d15bc443695b948117fb51daeedd93f312010"
+  }
+}

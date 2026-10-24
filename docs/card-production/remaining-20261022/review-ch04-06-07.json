@@ -1,0 +1,1171 @@
+{
+  "cards": [
+    {
+      "canonical_key": "ch04.interview.m01.executable-loop.001",
+      "content_hash": "cb18f09db94217a9e17b96ed0292c6ef1556b3439fab232ef54079d94413850f",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "暂停后仍计时是具体失败，回答把运行、状态序列、受限修复和邻近路径回归连起来，验收不是页面好看或生成成功。",
+        "原文协作循环被明确转为编辑假设；与复现反馈卡分别考修改验收循环和反馈输入契约，旧身份保留合理。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m01.prototype-evidence.001",
+      "content_hash": "d3087b0e2c330dbe1ff8cbcb7ab4270048b79d0603141cfdf9ab4dac5d5f8285",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "硬编码摘要及指定用户可操作只支持样本交互结论，核心回答没有外推真实模型质量、持久化或需求成立。",
+        "答案、例子和必答点一致要求补真实输入、权限、持久化及异常证据，能直接说明原型证据到生产证据的缺口。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m01.reproduction-feedback.001",
+      "content_hash": "0fa0075010b20cff13de3df702d56922642a60c85a6e818fe8341debbfda3236",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "题面连续改CSS的失败使观察与根因假说的区分必要；回答列版本环境、前置状态、步骤、预期/实际及脱敏证据。",
+        "修复范围受限并以原步骤和继续/重置回归，未把无报错当行为正确；核心目标是反馈契约，不重复执行闭环。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m01.bounded-increment.001",
+      "content_hash": "c0aceb0883cad56af1442f1bc4bd3a8733be7a9d277167b7e53d020ca588bd94",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "新增任务历史需约定完成触发、记录字段、重复/未完成及刷新语义，承载原文功能增量目标，不是给通用Prompt换场景。",
+        "保留暂停等稳定行为，增量运行和验收是计划，不冒充已实现；例子和评分均落在本次功能边界。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m01.control-accountability.001",
+      "content_hash": "4584d87dee0f613856d2b10778a5810b691e359d09f0376cac94e4e0faafc446",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "原文控制、审计、责任三问均在题面和评分出现；正式库误删的假设例子说明环境/权限阻断比提示小心更可靠。",
+        "授权低风险动作可继续，发布与破坏性动作有负责人；日志最小脱敏、停止接管和获准验证未被改成可选加分。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m02.three-surface-contract.001",
+      "content_hash": "bee04cb70e63fd3d99852efd109a57c26d50c8b07bf1ccc850deaa76b8370ac7",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "本课后端、后台与插件三个交付面被落实到身份/档案ID版本、字段契约和失败状态；后端凭据不能由插件携带。",
+        "档案选择到预览填写的跨端链路及越权反例支持评分；答案没有声称项目已有真实上线或所有招聘站适配。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m02.page-context.001",
+      "content_hash": "c027e1f38909641472851aa54311d6e6e1aec2e4fa0e42286f8e63511c5a8f55",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "区分JSON生成、DOM定位与页面运行上下文；共享DOM不等于能直接读取页面JS变量，默认隔离与通信解释准确。",
+        "Chrome官方content scripts概念页支持默认隔离世界及与扩展通信的补充机制；当前课本地短原文只作插件主题线索，作者已标明编辑补充。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m02.fill-versus-submit.001",
+      "content_hash": "408bd1b79f33d7f685e1bc70aa35106a411349641d10bb49bf070bd0c11c3042",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "字段写入、页面校验接受、服务端提交结果是三个不同状态；状态核验而非再次点击是超时未知场景的关键机制。",
+        "预览纠正和用户提交意图保留，填充成功不推导已投递；例子与自评都不要求越权自动提交。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m02.delivery-gate.001",
+      "content_hash": "c4575eb78a9bc0eeacec3967e36e3391b95e55891b21c7c70c1876c1bdcec99d",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "安装复现、版本配置、交接人和失败恢复均有具体交付物；数据迁移反例正确否定Git回退等于全部恢复。",
+        "第8维为1：安装、跨站支持边界、发布观察及代码/配置/数据恢复同卡并列，90秒负担偏重；仍围绕可接手交付这一目标，三项可归组表达。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m03.task-fit.001",
+      "content_hash": "20ec09f998da68af051141daa63bda62f85cc7675a842850375430b7edaaad88",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "已有仓库跨文件Bug提供足够约束，同仓库/环境/权限下比较复现、接口、修改、检查与接手，不靠工具标签排名。",
+        "类别可重叠是避免从IDE/Agent形态推能力的边界，可接受以不按类别直接拍板作同义表达；评分不额外要求背分类体系。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m03.provider-cost.001",
+      "content_hash": "a463fc0b95d9f379d21feb98409defc4f91efe5200cd39a08fe116e27bb974ee",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "免费许可与模型/算力、托管维护和返工费用区分清楚；1000元是明确假设的费用合计，不是厂商当前报价。",
+        "模型可换与代码、数据、配置、部署和协作迁移分开；与Ch6旧导出卡相邻但分别考供给预算与应用资产迁移，不删除既有身份。"
+      ]
+    },
+    {
+      "canonical_key": "ch04.interview.m03.data-flow.001",
+      "content_hash": "7375dcd881fea1a58ca9bbcff9ee567197a461c5dd4c775b75e31be7fd76ceaf",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "本地命令执行及不训练不能证明不传输；读取索引、远端推理、执行、日志回传逐段取证，对应本课工具隐私宣称。",
+        "错误堆栈传远端的合成例子说明区别，核验先查当前文件/合同配置，禁止拿真实代码越界试验；保留授权与停止条件。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m03.comparable-price.001",
+      "content_hash": "6fa98d83b8031036b099769f73f4036b7a56c81b25555accb0e63ecc31fb67b2",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "原文竞价案例的价格不能直接比较，回答补同规格、数量、币种、优惠资格、时间与来源口径，缺条件不自动选最低。",
+        "LLM猜补条件会破坏可比性这一因果明确，评分与例子一致；未沿用材料中的商家成果或固定提效比例。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m03.page-completeness.001",
+      "content_hash": "525aac4925e85893ae1994c0e82a3e423043d771cf30e4bd1e8c0d5ce7745cd9",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "HTTP成功或合法JSON不代表分页/滚动范围完整；结束标记、去重、采集范围与部分状态给出可核对证据。",
+        "接口或浏览器只是获准路径选择，预算和访问受限时终止并交付缺口，不把原文绕过反爬建议当标准动作。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m03.missing-provenance.001",
+      "content_hash": "b29a0164253e88eb357c1770935ecc2378786414fb5b14a56fee879753ea2c19",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "缺失工资保留null，原文血缘、URL和采集时间与推导字段分离，明确反对把推理补全当事实。",
+        "最小必要原文证据与隐私处理保留；字段校验不能代替来源真实性，具体例子承载抽取与派生的区分。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m03.access-refusal.001",
+      "content_hash": "3ff919739ca8068092b2a25b7ce424eb1586b7831ba38f4e871a9928c22ae019",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "登录墙、验证码和限制是访问边界，答案明确停止、标部分并寻求授权接口或人工路径，未复述代理/轮换账号绕过。",
+        "权限和频率条件需逐项确认，不以robots或公开可见推出全部可采；未知范围不伪造完整交付。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m03.research-signal.001",
+      "content_hash": "adb3e9615bfdac18e6a501259035bedc2d127eb203e43ded7b71a0fb3dacb1d5",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "缺两渠道会改变样本分布，负面条数下降不足以推总体品牌改善；去重、讽刺语境和覆盖变化提供替代解释。",
+        "保留原帖和缺口，分析师复核后另行授权外部报告；来源案例名称不是已证实的产品能力或危机处置成果。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m03.research-next-action.001",
+      "content_hash": "74a4ad61649e250011e5648155bcce0213340881dba3dfbc346bc4992ce09fe3",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "融资报道、摘要主张、星级优先级和访谈待办有明确证据层级，旧报道被今日抓取的例子解释事件时间与采集时间。",
+        "第8维为1：同时核实体/日期和多个外联状态，回忆负担略大；仍属于从研究证据到获准行动的连续目标，安全边界没有遗漏。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m03.extraction-choice.001",
+      "content_hash": "30f444b8de5e0de3eeaa98a9a23cc2a867d2287e8f84f0cebd58231b1607edeb",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "按维护、正确性、完整成本同维比较规则与语义提取，两者均会出错，不承诺LLM免疫DOM变化。",
+        "稳定大表与多样描述的假设例子支持混合方案；新增机制是选择条件，区别既有单次采集范围及缺失字段卡。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m04.compensation-authority.001",
+      "content_hash": "b69f5be0cf1a98f5b4b7aaa0a5e3b9aa4184b5f170ed6ded5cfacfb4afeb9624",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "情绪只影响语气和优先级，不改变赔偿政策与工具权限；查询、申请和实际成功回执没有混写。",
+        "回答未承诺优惠券或凭主观安抚越权赔偿，例子和必答点都保留纠正上下文、依据和责任范围。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m04.handoff-ownership.001",
+      "content_hash": "be42751d8da602c9291420151880ede722787c7b524b5da1da30af437b68f2db",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "发起转接、队列接收、人员承接与关闭分开，状态链解释了为何发摘要并不等于问题已解决。",
+        "最小必要上下文、未解决风险及无人接单的回退负责人都明确，未为降低转人工率堵塞人工入口。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m04.mixed-service-intent.001",
+      "content_hash": "e041e1907cb8d8c74a887c75f6e14d3ff4875547d53937570c835cb8b3b935af",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "订单查询、改地址与退款是有条件依赖的多个意图，答案先确认订单状态再澄清分支，而非把关键词映射成立即退款。",
+        "各动作分别检查授权、字段与回执，任务状态保留；例子支持本课任务式客服的条件图目标。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m04.knowledge-release.001",
+      "content_hash": "92e494d9a49af17629b0da95448eadcd7893c13a633a48ebb77bbecc3e8eb88c",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "政策生效时间与订单适用性、解析索引缓存及最终上下文串联，旧政策命中不能直接归咎模型。",
+        "新旧版本、例外与冲突回归是预期验收，冲突交人工；与通用RAG不同，本卡独立承担客服政策适用和发布状态。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m04.resolution-measurement.001",
+      "content_hash": "a42cd7daf78d569c8ed053e650ad283cfad3b7e6b33d2b681b204785adaabe7b",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "转人工下降不能证明真实解决提升，按问题会话去重、观察窗口、业务确认和重开投诉区分结果。",
+        "放弃/未知不算解决，质量风险与总服务成本一起观察；题面没有要求收费合同，未强加结果计费扩展。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m04.collaboration-choice.001",
+      "content_hash": "33094b6e8c18603e9abd12b40e3b7a6b37de5dec464e91056fee6c595e06aeb6",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "verdict": "revise",
+      "issues": [
+        "原文L317–322区分前置先接待后转人工、Copilot由坐席执行、AI自主完成流程后异常兜底；目前第一项把前置/自主合并，未给第三模式独立的完成责任与接管位置。请用相同维度逐一比较三者，或缩题为两种并把完整三模式比较保留在母题。",
+        "同步修改required_points与示例：例如前置负责初筛、Copilot不替坐席决策、自主模式只在获准流程内执行并核回执，三者分别列出接管触发和责任人；T1未执行不能抵消核心比较缺项。"
+      ],
+      "notes": [
+        "保留错误代价、人工可达和责任，未把自主率最大化当目标，事实/假设边界合格。",
+        "第3/4/5维为1：题面要求三种模式，但核心回答、评分和物流/赔偿例子都合并AI前置与自主处理，只明确区分用户端自动化与坐席辅助。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m05.delegation-package.001",
+      "content_hash": "8dc0468d2aefd6db887df0650dffb5ef233a45bfbdb60d8db23b512b1cd43d12",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "登录/密码重置页面不代表业务任务完成，任务包说明真实依赖、正常与异常、代码约定、可改范围和验收证据。",
+        "无效验证码、重复操作与会话等失败路径具体，执行和文件权限先约束，冲突需接管；结果是待验收方案而非履历成果。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m05.workspace-change-ownership.001",
+      "content_hash": "526a2cd9d16d1a1717c2d59eeb6f4271d7c02d6d72beac9368aabac0d1e6c6c0",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "多人仓库保留用户未提交改动，基线、重读当前状态、作者所属差异与重叠冲突分开处理。",
+        "只撤销自己拥有的变更并回读回归，不能用整体回滚覆盖别人；原文工具效率不是越权清理仓库的依据。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m05.review-load.001",
+      "content_hash": "f0ef895d0a829e23719bed0fcc3a21a8f0286b369dd89a03fdc3259ea0f194cb",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "生成采纳率上升与PR排队是不同环节，按生成、验证、审查、返工拆周期，不能据代码量推团队提效。",
+        "小PR、在制限制和带测试证据的交接是有因果的候选改动，验证看周期和人工负担同时守住质量。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m05.export-dependency.001",
+      "content_hash": "77e88668a7c203956060d56bc736bdbfd25f3b0fa6157ccea8008d083eff22ce",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "源码下载与认证、数据、托管服务及业务流程可运行分开，逐项识别可迁移、需适配和不可替代资产。",
+        "隔离构建、真实业务验收、备份与渐进切换是计划，未把代码回退等同数据恢复；旧卡身份与Ch4成本卡分别保留。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m05.coding-review-responsibility.001",
+      "content_hash": "9ca3f0a3117211abcd5c51b1c36d324aa8633234437f6bc08e57c6e31279a371",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "普通/关键代码不是自动免责分类，按错误后果、授权和恢复能力分配AI辅助及人工批准。",
+        "优惠计算仍可能有金额/舍入/叠加错误，不能测试全绿就自动合并；许可范围及专业审核没有被删去。"
+      ]
+    },
+    {
+      "canonical_key": "ch06.interview.m05.context-freshness.001",
+      "content_hash": "8c46298b7cd11ddbbc73625bdac61c9a527ff2823930e2af6c78e01c54615382",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "旧函数签名诊断沿分支版本、定义调用和配置测试核对，区分没索引、没检索与最终输入丢失。",
+        "相关文件重读、最小修复与实际运行验证形成闭环；新增目标是代码依赖和分支新鲜度，不只是泛用RAG召回名词。",
+        "此pass只对应L217–218的索引/上下文诊断；coverage L219上传位置不能由一句守数据边界视为已考，应复用当前data-flow卡或完整母题另答。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m01.data-loop.001",
+      "content_hash": "562a68544dc61665a31132d1e1e3b2e2270f4424196dba2d899b6cab9beb7d8f",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "授权且有质量的信号、经评测有效的迭代、用户持续价值带回信号三环完整，流量翻倍反例能否定飞轮判断。",
+        "明确知识/规则也可迭代，未沿用原文不训练就不算AI商业的观点；数据使用权和代表性属于核心评分。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m01.network-effect.001",
+      "content_hash": "539244402b07beaee0991f555a3780aec2d6c6137cd45e13ec217c9b4b3535e2",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "受益者是否跨参与者是区分机制，个人偏好积累与有用插件惠及其他用户的对照例子充分。",
+        "排除规模经济、促销和插件数量代替价值，未把用户数平方作普遍定律；与数据飞轮分别考价值传递和改进循环。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m01.value-capture.001",
+      "content_hash": "63befe94946e1b6f0e65abb88f9b862bfb22ef3aa09cf4a41cde8e85b233b76e",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "采购助手省时间却不付费，把用户价值、预算决定者与收费兑现分开，工作流整合、替代和全交付成本均影响判断。",
+        "付费意愿及获准试点是验证，不将人时自动当利润或编造购买结果；不要求唯一商业模式。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m01.incremental-return.001",
+      "content_hash": "9ddb013545b0b41afe483b057e23e7dc538137cd2f505c082a07adea52b1fac2",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "模型升级与涨价同时发生的例子解释混杂，限定同期间可归因收益及一次性/运行增量成本。",
+        "净收益和比率分母明示，不能将原文收益成本比直接称净ROI；高风险对照须授权，已知不安全版本不用于用户实验。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m01.cohort-payback.001",
+      "content_hash": "94367564966ca81997278a486bc02b37428cce495dbd05f0a255023978dc707d",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "每月贡献100、寿命12月与CAC600的假设得到LTV1200、比值2、回收6月，口径不是收入或净利润。",
+        "留存、服务成本和现金约束能改变扩张结论，不采纳固定LTV/CAC阈值；计算题采用编号合理。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m01.moat-test.001",
+      "content_hash": "61b42f91a0b89c2af109a1a9f843168fae018fc93c81a6b11142e21b7abb97e1",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "独家数据到任务价值再到持续收益，以及插件到互补价值的两条因果链都给反证；公共FAQ替代例子使壁垒可证伪。",
+        "第8维为1：同时回忆数据与生态两链，并与同课飞轮/网络效应相邻，负担略重；本卡新增竞争替代与撤回壁垒判断，尚非同义堆卡。",
+        "本卡通过不等于coverage L311模型壁垒问题已覆盖；Top3门槛需单独排除/纠正，L312的数据飞轮应链接data-loop而非仅挂network-effect。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m01.sourcing-choice.001",
+      "content_hash": "6bbb5cc7fb2966600d19a9bbee99b1dcf21a26779d4b2989ee07534a446f2f42",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "调用量不是必自研阈值，同任务比较API、自部署/微调的利用率、运维、训练数据投入和组织供给风险，例子具体。",
+        "第8维为1：与本轮Ch8 m13自研边界、生命周期经济性的新稿交叉明显；优先保留此处供给方式主目标，Ch8保留新闻假设与特有准入机制，通用选择内容建议主编合并复用。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m02.billing-incentive.001",
+      "content_hash": "bc7977916883d09ee0a8e7627ac04bdbd9b8f3a5194bc33166d29e2d52923091",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "席位、轮次/用量、结果三种计费按单位与激励同维比较，说明空置席位、增加轮次及挑易单等行为偏差。",
+        "结果去重、重开、质量归因与争议边界保留，不把所有调用都当价值；不是让学习者支持某个唯一收费模式。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m02.revenue-retention.001",
+      "content_hash": "7195f9c8bcf0ebde37d0983508004abb1bdbc3db683f54e03cb97158461f2337",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "旧客初始10万、增购2万、降配1万、流失2万得NRR90%，加新客5万才得总MRR14万，计算与分群一致。",
+        "总收入增长掩盖老客收缩的反例充分，未把收入留存当客户数留存，也未使用通用合格阈值。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m02.outcome-contract.001",
+      "content_hash": "85620be0949b520fdab61f7ab319fdd3de2ff7be87f2d8ef64827bd08a8706bf",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "成功定义、质量/窗口/去重重开、归因责任和审计争议支付组成可结算结果；失败也耗成本的起点清楚。",
+        "第8维为1：合同、执行预算和纠纷纠错并列较密；它们都直接影响只为成功付费是否可持续，未要求题面外的厂商或法律事实。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m02.sponsor-trust.001",
+      "content_hash": "49939413a81975536d6e5367c08f4dace5a7e25e1c6c3157e75ed555b43e57d8",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "广告收入激励可能偏离用户任务，点击率不是建议质量证据；付费标识、检索事实和自然结果边界明确。",
+        "投诉、留存及任务质量与收入一起观察，有停止条件，未把赞助必然恶意或必然提升体验写成唯一答案。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m02.commission-base.001",
+      "content_hash": "90b0e5c302942bf0ec6eb68848099eca4b26b5dc25ffa15db551b9b5ae2b5201",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "已成交结算GMV10万乘5%佣金为5000，不再次乘转化率；预测流水时才从流量乘转化率与客单价起算。",
+        "退货、归因、折扣税费及到账口径影响可得收入，收入不是利润；明确纠正原文重复计算转化率公式。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m02.custom-delivery.001",
+      "content_hash": "12c9fd2f3cd17640463b3e1e072072410988b64cb2aab21a2df1fbcd9ce0e943",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "大合同仍可能被集成、私有分支、支持升级吃掉收益，回答落到共性配置/API、交付验收与范围变更。",
+        "第8维为1：产品化、报价、销售约束和续费贡献跨多环节，回忆偏密；均服务定制单经济性，拒绝不经济项目允许不同结论。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m02.open-service.001",
+      "content_hash": "8fef3c3182c6675cbd21d99ccc5cbe70ab0c9a6a314498b4da059742723473a3",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "开放权重与可靠托管、集成安全和支持责任是不同付费对象，成熟运维团队可能自建的例子支持模式失效条件。",
+        "对应版本许可、付费采用、留存和服务贡献比下载量更有证据力，不把开放权重推成无条件免费商用。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m02.unit-margin.001",
+      "content_hash": "144565835e05772b17b8e121c80941029c83ec2171d4171f6a9c49a167afb6b8",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "revise",
+      "issues": [
+        "required_points第3项中的分层用量及失败率敏感性超出题面演算和结论边界。请移至可选追问，或在题面明确追加如何验证成本波动且重新控制作答负担；不能回答完原题仍因未讲敏感性方法失分。",
+        "当前基线ch05.interview.m01.paid-cohort.001已实质评分收入减服务费用、贡献不当整体利润及付费/轻重分群。本题多列成本和60%未新增足够判断机制，建议演算移母题M1/T3并明确复用旧卡；若保留，需收窄为独立的成本归类/口径判断，不能只换数字。",
+        "coverage的L852还问毛利改善空间，当前题只计算一组既定贡献；请拆清已承载的成本口径、由cost-drop-response承担的变化决策及T3尚未执行的敏感性，不以本题标题覆盖全部。"
+      ],
+      "notes": [
+        "成本4000、贡献6000、贡献率60%正确，贡献非净利润或现金及假设非财报的边界清楚。",
+        "第1/3/8维为1：新增理由未排除当前paid-cohort卡已承载的贡献/分群机制；题面只要求演算及不能推出的结论，评分却强制给分层敏感性方法。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m02.cost-drop-response.001",
+      "content_hash": "2d3dc4cfd8808d30237718b456c6437f0dc8458badc506a12cef54bc5bee571c",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "推理成本下降10倍被明示为编辑假设，模型占总成本20%且降90%只节约总成本18%的推演口径正确。",
+        "降价、额度/质量或再投入由愿付/替代和用量反弹选择，验证贡献与支持成本，不把预测当定律；与价格传导卡分别考行动取舍和利润推导。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m03.chain-flow.001",
+      "content_hash": "81305b2df21a9767db0f4fa089f4b9c92cbafcf0413a5e4c0eec30303911471a",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "企业知识请求串起数据工具、模型接口、硬件云与应用验收，云超时例子展示跨层依赖，不用厂商格子替代理解。",
+        "第8维为1：四层功能加资本/人才/规则较密，但原生目标确为全链路分工；支撑因素作为影响条件，无需逐项背市场利润或厂商排名。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m03.bottleneck.001",
+      "content_hash": "bdaf1397c5dd213c61bf0d3d91d10dee4f1f26c1b9b84a61d80d925c21a3e7c2",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "多API可能共享同一底层容量，依赖图与故障相关性解释品牌数量为何不等于独立冗余。",
+        "硬件云区域与工具限制、兼容性、数据边界及获准降级/恢复试验具体，未声称云平台当前份额或供应能力。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m03.migration-economics.001",
+      "content_hash": "9ee6a1c6aded6b452b2a1a92dc12dbd9c17b69e57f713f03f5226099d4c9efb4",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "便宜芯片遇到算子不兼容，按有效性能质量/利用率、适配许可和运维容量比较全成本，单位报价不能替代经济性。",
+        "精度与算子回归、并行验证及退出路径可验收，假设不代替厂商性能证据；与编码平台导出卡的迁移对象不同。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m03.price-transmission.001",
+      "content_hash": "365251ef0b5f3e5fb82237a6f5ff8f97d0f0fe3d08f7c9d680863023ec3e9c92",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "模型单位成本、总成本占比/用量与竞争传导分开；收入100成本80其中模型10，减半后利润20到25即增长25%，不是50%。",
+        "数字是编辑假设，需求反弹、议价及价格调整可能改变结论；不把低成本自动等同应用利润或用户收益。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m03.capacity-value.001",
+      "content_hash": "181d76d35aee950ea5a28aa4916af845cf8136a64c4a814d81357c73b08d4fac",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "50人每人每周省5小时只得250小时容量，复核返工与培训投入、实际重分配或避免采购才影响经济收益。",
+        "避免工资/增量销售等收益重复计算，供应商仍需验证付款者愿付与议价，未将用户全部价值视为可捕获收入。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m03.responsibility-map.001",
+      "content_hash": "8005e4430c0b9d8857ecd263af3bc6fe51db8de8455d991a466293ddfd98d046",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "按题面明确不判断法律适用，备案准入、标识、条款、数据权利和行业资质被列成待调查对象，不重述原文一律必须。",
+        "第8维为1：五调查对象再加产品/厂商/专业方分工和复核触发，短卡偏密；证据、适用性及缺证限制均明确，不把合规模型直接当合规产品。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m03.platform-cover.001",
+      "content_hash": "b3646048477b43399e956f3230e52dbd29de88d8882e0530803dd467314a30e2",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "平台新增同功能后比较实际工作流、权限、服务和总成本资产，强化、整合或退出是有条件备选。",
+        "付费与留存、同任务替代和可推翻条件清楚；区别moat-test的资源因果，本卡处理上游进入后的应对，未把人为锁定当正向资产。"
+      ]
+    },
+    {
+      "canonical_key": "ch07.interview.m03.model-fit.001",
+      "content_hash": "9fef77457e8747cde17512c07b50d5a5841d3b8e0d1ca909d3989804bd22de86",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "scores": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "verdict": "revise",
+      "issues": [
+        "当前ch02.role.model-strategy.001已在题面问榜单与真实任务偏离，答案与三项评分覆盖同任务分层、效果/成本/延迟/风险、选型路由和试点停止回退；ch03.tech.evaluation-contract.001又明确代表性、版本与业务试点。新增卡没有独立评分缺口，建议不新增发布。",
+        "coverage的L277/L750可复用上述当前卡，写明分层任务/时延成本/版本试点的实际承载，并保留本课M1完整解释；数据许可及架构部署的产业链特有部分留母题或真正独立任务，不把复用范围扩大成厂商能力或法规证明。"
+      ],
+      "notes": [
+        "本题自身的任务分层、时延负载、合格任务成本、版本数据许可及降级条件完整，未采纳金融政务必须国内模型的原文断言。",
+        "第1维为1、第8维为0：仅以产业链新语境补卡，未建立独立于现行模型评估/策略卡的新机制，已形成实质重复。"
+      ]
+    }
+  ]
+}

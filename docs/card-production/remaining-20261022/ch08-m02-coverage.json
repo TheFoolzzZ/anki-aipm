@@ -1,0 +1,312 @@
+{
+  "module_id": "8.2",
+  "module_key": "ch08-m02",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+    "content_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+    "line_count": 66
+  },
+  "native_objective_count": 3,
+  "registered_native_count": 3,
+  "native_registration_coverage": 1,
+  "accepted_card_count": 0,
+  "published_card_count": 0,
+  "publication_coverage": 0,
+  "practice_status": "designed_not_executed",
+  "practice_execution_count": 0,
+  "existing_active_card_count": 0,
+  "new_draft_card_count": 4,
+  "objectives": [
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-O001",
+      "original_text": "*   用户价值成立吗？",
+      "source_type": "原生分析问题",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 13,
+      "line_start": 13,
+      "line_end": 13,
+      "decision": "采用",
+      "reason": "作为原文显式分析问题登记，用分群和发现漏斗回答，不采纳伪需求结论。",
+      "edited_objective": "用户价值是否持续及如何归因",
+      "card_keys": [
+        "ch08.interview.m02.repeat-value.001"
+      ],
+      "mother_question_id": "ch08-m02-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-O002",
+      "original_text": "*   商业闭环跑通了吗？",
+      "source_type": "原生分析问题",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 14,
+      "line_start": 14,
+      "line_end": 14,
+      "decision": "采用",
+      "reason": "分开平台与创作者商业条件。",
+      "edited_objective": "成本归属与付费/补贴验证",
+      "card_keys": [
+        "ch08.interview.m02.subsidy-economics.001"
+      ],
+      "mother_question_id": "ch08-m02-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-O003",
+      "original_text": "*   战略判断对了吗？",
+      "source_type": "原生分析问题",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 15,
+      "line_start": 15,
+      "line_end": 15,
+      "decision": "拆分",
+      "reason": "战略判断拆为供需匹配机制与退出责任，不等于原文主张已经正确。",
+      "edited_objective": "有效分发是否成立及失败如何退出",
+      "card_keys": [
+        "ch08.interview.m02.marketplace-liquidity.001",
+        "ch08.interview.m02.sunset-obligations.001"
+      ],
+      "mother_question_id": "ch08-m02-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-O004",
+      "original_text": "1.   **功能有人用 ≠ 产品有价值。** 一个功能有人用，不代表它值得长期投入。要追问：解决了什么核心问题？谁为此付费？",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 47,
+      "line_start": 47,
+      "line_end": 47,
+      "decision": "合并",
+      "reason": "与价值判断同目标，不增加同义卡。",
+      "edited_objective": "活跃与用户持续价值的证据区别",
+      "card_keys": [
+        "ch08.interview.m02.repeat-value.001"
+      ],
+      "mother_question_id": "ch08-m02-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-O005",
+      "original_text": "2.   **流量 ≠ 商业。** 活跃数据好看，但算一算账发现赚不回来，那就是个赔钱货。产品决策最终要看损益表，不是看DAU曲线。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 49,
+      "line_start": 49,
+      "line_end": 49,
+      "decision": "合并",
+      "reason": "不把所有赔钱项目一概砍掉；保留收益成本和补贴期限。",
+      "edited_objective": "流量到可持续收益的验证",
+      "card_keys": [
+        "ch08.interview.m02.subsidy-economics.001"
+      ],
+      "mother_question_id": "ch08-m02-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-O006",
+      "original_text": "3.   **不要被概念绑架。** 当年大家追智能体概念，现在回头看，很多决策从一开始就站不住脚。产品经理最该问的问题是：这件事，为什么非做不可？",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 51,
+      "line_start": 51,
+      "line_end": 51,
+      "decision": "合并",
+      "reason": "将“非做不可”落实为目标和供需匹配，不背观点。",
+      "edited_objective": "概念命名不能替代平台分发机制",
+      "card_keys": [
+        "ch08.interview.m02.marketplace-liquidity.001"
+      ],
+      "mother_question_id": "ch08-m02-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-O007",
+      "original_text": "4.   **决定砍什么，比决定做什么更难。** 字节、阿里这次同时砍，说明他们有清晰的止损判断力。结束一个错误的方向，本身就是一种成功。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 53,
+      "line_start": 53,
+      "line_end": 53,
+      "decision": "拆分",
+      "reason": "不能凭退出动作评价决策正确，补退出责任。",
+      "edited_objective": "止损的门槛与已有用户责任",
+      "card_keys": [
+        "ch08.interview.m02.subsidy-economics.001",
+        "ch08.interview.m02.sunset-obligations.001"
+      ],
+      "mother_question_id": "ch08-m02-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-O008",
+      "original_text": "5.   **合规是硬约束，不是可选项。** 当监管成本超过业务价值时，砍掉就是最理性的选择。产品经理在设计功能时，就要把合规作为前置条件，而不是事后补救。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 55,
+      "line_start": 55,
+      "line_end": 55,
+      "decision": "合并",
+      "reason": "安全/合规硬约束保留，法规与具体成本需另外核验。",
+      "edited_objective": "必要约束与有序停服",
+      "card_keys": [
+        "ch08.interview.m02.subsidy-economics.001",
+        "ch08.interview.m02.sunset-obligations.001"
+      ],
+      "mother_question_id": "ch08-m02-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-F009",
+      "original_text": "7月4日，字节豆包和阿里千问宣布7月15日下线C端智能体功能，腾讯元宝、网易妙时早已提前关停。\n\n多家大厂，同一时间，同一动作。这不是巧合，是产品决策的集体转向。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 7,
+      "line_start": 7,
+      "line_end": 9,
+      "decision": "延期核实",
+      "reason": "未取得各平台对应版本与范围的原始公告；不同事件不能合为集体退出。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-F010",
+      "original_text": "用户价值没成立，商业模型没跑通，战略判断没兑现——三杀。砍掉是唯一理性的选择。\n\n还有一层更现实的考量：**合规成本**。\n\n7月15日，《人工智能拟人化互动服务管理暂行办法》正式施行。UGC智能体涉及的软色情、擦边角色扮演等内容管理难度极大。\n\n监管红线压下来，重新搭建全链路风控的成本，已经远超这个业务本身带来的价值。字节在公告中同步引导用户转向独立App“猫箱”，本质上是把高风险场景剥离到独立产品中运营——合规是最高优先级，不能有侥幸心理。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 37,
+      "line_start": 37,
+      "line_end": 43,
+      "decision": "延期核实",
+      "reason": "唯一理性、法规名称日期及下线动机尚不能凭本地文章确认；不作法律结论。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.2",
+      "objective_id": "ch08-m02-F011",
+      "original_text": "这次砍掉的，是C端面向普通用户的开放式UGC智能体——用户可以自己创建人设、定义对话风格、公开发布的聊天机器人。这类产品的共性是：创建门槛低导致质量失控，擦边内容泛滥，用户玩完就忘，商业上跑不通。\n\n但这不意味着智能体的终结，而是一个分水岭。\n\n接下来真正值得关注的方向，是B端任务型Agent——能理解目标、拆解任务、调用工具、拿到结果的那种。帮你处理邮件、写周报、做竞品分析，而不是陪你聊天的“电子宠物”。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+      "source_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+      "source_line": 59,
+      "line_start": 59,
+      "line_end": 63,
+      "decision": "延期核实",
+      "reason": "UGC全部低质、陪聊无价值、B端必然胜出均非已证结论；允许分群价值与多种产品路线。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    }
+  ],
+  "scope_notes": [
+    "原生开放问题与正文编辑补题分别统计；登记率不等于发布覆盖。",
+    "所有草稿未审校，未发布，未运行产品或实践；不据卡片标题宣称覆盖。",
+    "与第5章一般产品评估、第7章单位经济共享基础。本课只新增UGC创建/消费分母、发现与创作者回报机制、补贴归属及停服权益责任；没有另做通用评估框架定义卡。"
+  ],
+  "mother_questions": [
+    {
+      "id": "ch08-m02-M1",
+      "prompt": "假设某平台的UGC智能体广场创作量很高，用户重复使用少，成本持续增加。你会如何决定继续、转型还是下线，并处理已有用户与创作者？",
+      "answer": "S：假设创作量增长，但没有足够证据说明持续价值、收入或战略协同。不能由其他平台下线推断该项目也应退出。\nT：我会分别验证用户问题是否被解决、可持续支付方是否存在、平台是否改善发现和供给，而不是让高活跃掩盖损失。\nA：一、按用户目的和创建/消费角色分群，追踪完成任务后的重复使用、满意度和自愿付费；陪伴场景也允许以体验价值为目标，不能只用时长或“是否干活”否定。二、把平台收入、补贴、推理、审核、售后及创作者分成分开，测试合理定价或受限服务能否形成正向贡献；若有其他业务受益，明确归属和补贴期限。三、检查从搜索、试用到持续使用的漏斗及创作者收益，区分没有需求和需求被低质分发埋没；先在合法、授权范围内试修发现机制或精选供给。四、比较限定场景继续、缩小公开创作、转移已验证用户与全量下线，按事先商定的证据门槛决定，不能把安全风险当可用增长抵销的指标。五、若退出，提供通知、数据导出选择、合理的迁移与删除安排、未结权益处理和创作者申诉渠道。\nR：若目标分群持续受益、获客及服务成本可承担且风险可控，可有限继续；若改动后仍无持续价值或必要约束无法满足，则停止扩张或退出。验收不仅是入口消失，还包括用户权益、数据处理和未结工单已核对。本方案未执行，新闻日期和具体法规不作为前提。",
+      "card_keys": [
+        "ch08.interview.m02.repeat-value.001",
+        "ch08.interview.m02.subsidy-economics.001",
+        "ch08.interview.m02.marketplace-liquidity.001",
+        "ch08.interview.m02.sunset-obligations.001"
+      ],
+      "status": "draft"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "ch08-m02-P1",
+      "task": "30–45分钟，做一张继续/收缩/退出决策表、一段发现漏斗和一份停服清单，数据全用标注的假设，不引用未核实下线案例佐证。",
+      "acceptance": "三个维度均有独立证据与能改变结论的结果；写清分群/分母、成本与创作者分成；退出清单包含通知、导出/删除、权益和未结责任，不能只删除入口。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch08-interview-20261022-m02"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m02.repeat-value.001": "f5de843a699c9c921dc68c76cf382cea0b8014e4c8d73cbf5b64fea0c086b29b",
+    "ch08.interview.m02.subsidy-economics.001": "3715acff754dfeb377c037b7453e51b30857a1f40a7704f4f554759dfe3bedca",
+    "ch08.interview.m02.marketplace-liquidity.001": "e39ce9db66a8416c8c30a5336b6e68f78198e4ef98b219b03fa9fc8bb28bee6b",
+    "ch08.interview.m02.sunset-obligations.001": "58b5fa56940342248e40d53850340921b214f5cad4a5df75f6c99159a8c22747"
+  }
+}

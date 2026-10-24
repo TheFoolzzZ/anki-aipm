@@ -1,0 +1,1006 @@
+{
+  "batch_id": "ch09-m01-interview-20261022-part01",
+  "status": "accepted",
+  "chapter_position": 9,
+  "cards": [
+    {
+      "canonical_key": "ch09.interview.shared-space-externalities.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.shared-space-externalities"
+      ],
+      "revision": 1,
+      "position": 1101,
+      "title": "共享空间的外部性",
+      "kind": "场景判断",
+      "prompt": "假设列车考虑新增有气味且需热水的食品。你如何判断是否销售，并给出一个替代方案和验收边界？",
+      "answer_short": "S：假设新增食品方便部分乘客，却可能影响同车他人。T：满足饮食需求，同时控制气味、烫伤和清洁负担。A：先观察投诉与操作风险，比较密封即食替代品、限定供给与暂不上架，不能只算销售毛利。R：仅在可控试点中核对受影响乘客反馈和事件记录；出现不可接受的安全风险即停止。原题不证明现实列车普遍禁售。",
+      "required_points": [
+        "说明受益者与承担气味、安全、清洁成本者可能不同。",
+        "比较至少一种降低外部性且保留需求的替代方案。",
+        "提出兼顾他人体验与安全的验收/停止条件，不把原题当现实规定。"
+      ],
+      "pitfalls": "没有事故记录不等于安全；现场试点须先满足运营安全授权。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】密封即食食品可能减少现场冲泡，却仍需核对垃圾和过敏信息，不能由包装推出零风险。\n【追问】若销量上升但邻座投诉增加，你是否仍推广？应同时计入外部成本。\n【边界】没有事故记录不等于安全；现场试点须先满足运营安全授权。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 10,
+          "line_end": 34
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "共享空间受益者与受影响者分开，替代食品和不可接受风险停止条件均回答题面。",
+          "原文高铁禁售被明确降为未核实现象；受控试点先满足安全授权，无虚构政策或成果。",
+          "独立审校当前内容指纹: 6dd554601b6aaabd2845116e4f6fb341881ae80deb64ca7453072e3432116bf4",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.traffic-routing-cost.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.traffic-routing-cost"
+      ],
+      "revision": 1,
+      "position": 1102,
+      "title": "动线曝光与任务成本",
+      "kind": "场景判断",
+      "prompt": "假设超市把高频品移到深处，连带购买增加。你会怎样判断该布局是否值得保留，而非直接归因为“更会赚钱”？",
+      "answer_short": "S：假设改动同时增加货架曝光和找货距离。T：看门店净价值及顾客能否高效完成采购。A：区分目的采购与闲逛，比较直达路线和关联陈列，核对补货、冷链、照看鲜食等运营约束。R：对照连带毛利、找货失败、排队和复购；若多卖的收益不足以覆盖操作与顾客成本，就保留直达或撤回。",
+      "required_points": [
+        "解释曝光/关联购买与额外路径成本之间的关系。",
+        "按购物任务比较直达与引导，并检查运营约束这一替代解释。",
+        "用净收益和任务失败/复购共同验收，不能只看停留时长。"
+      ],
+      "pitfalls": "紧急采购、无障碍通行和食品操作约束不能为曝光让路。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】收银区鲜食既可能便于顺手加购，也可能便于店员控温；两种解释需分别观察。\n【追问】牛奶靠后是否一定是营销？可能受冷链和补货入口限制。\n【边界】紧急采购、无障碍通行和食品操作约束不能为曝光让路。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 35,
+          "line_end": 59
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 797,
+          "line_end": 821
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 872,
+          "line_end": 896
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "不仅看连带购买，还比较找货、冷链补货和净贡献，区分营销机制与运营替代解释。",
+          "STAR的R是拟验证及撤回规则；无障碍和食品约束没有被增收覆盖。",
+          "独立审校当前内容指纹: a83ab86ab3596e87b8ca7e275572f3a700626ae51037f49e447c1333ac20ce69",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.default-package-choice.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.default-package-choice"
+      ],
+      "revision": 1,
+      "position": 1103,
+      "title": "默认套餐与知情选择",
+      "kind": "场景判断",
+      "prompt": "假设租借产品默认选中套餐，也提供按量计费。你会依据什么保留或修改默认项，怎样避免用户误付？",
+      "answer_short": "S：假设用户急需租借，默认项能减少操作，也可能使短用用户多付。T：让目标用户快速选择合适计费方式。A：按使用时长算各选项总价，清楚展示默认、封顶和可切换入口；比较不预选或按真实需求推荐。R：同时看完成率、账单理解和退款投诉；若增收来自误解，就改默认并修复告知。",
+      "required_points": [
+        "用目标使用分布和完整账单判断默认是否匹配，而非默认即最优。",
+        "展示价格与切换入口，保留知情选择。",
+        "将理解错误和误付列入验收，不只看转化。"
+      ],
+      "pitfalls": "默认项不代表用户授权新增收费；计费方式、总价和切换入口应在确认前可辨认。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】假设套餐10元、按量每小时2元，短用1小时的人不能只因默认而支付10元。数值为编辑假设。\n【追问】自动用券是否总有利？需核对互斥规则和用户是否打算留券。\n【边界】默认项不代表用户授权新增收费；计费方式、总价和切换入口应在确认前可辨认。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 113,
+          "line_end": 137
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1718,
+          "line_end": 1742
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 6447,
+          "line_end": 6471
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：删去相机专业模式枝节，边界回到确认前辨认计费方式、总价和切换；套餐10元与按量2元/小时的编辑例子支持短用误付风险。",
+          "核心仍按使用分布还原账单、比较不预选/按需求推荐，并用理解和退款共同验收；默认不是新增收费授权。相机原目标的完整覆盖仍需作者另做映射。",
+          "复审已阅读全文及原文引用；替代此前hash 7a43d9aec0254141ac6fb4e82f9766d50ff1e54eb283632115770e44a993ad6d 的审校结论。",
+          "独立审校当前内容指纹: b5b63f0d5a7d5fe1dee76200cf8048a7830dd5ee45c05d8ea2395e3ee97538d2",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.price-frame-equivalence.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.price-frame-equivalence"
+      ],
+      "revision": 1,
+      "position": 1104,
+      "title": "计费与价格锚定的可比性",
+      "kind": "机制",
+      "prompt": "看到两种租借计费文案或大小杯命名时，如何区分真实价格变化与表述造成的锚定？说出比较方法和一个反例。",
+      "answer_short": "一、先把文案还原成同一使用量下的账单：起步、进位、封顶、容量和剩余额度都要计入，不能把不同规则当成换说法。二、保持实际价格与数量不变，再比较展示方式是否改变选择，才有依据讨论锚定。三、若“中杯”实际容量不同，或两规则在边界时段收费不同，就是真实供给/价格变化；命名本身不能证明用户一定升级。",
+      "required_points": [
+        "按相同使用量/容量还原真实总价及计费边界。",
+        "区分价格结构与纯展示效应，说明保持实际条件一致的比较。",
+        "给出价格/容量实际不同的反例，拒绝由名称推唯一心理原因。"
+      ],
+      "pitfalls": "锚定是待验证机制，不是对每个用户的确定心理诊断。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】编辑假设：同样使用2小时，首小时1.5元、以后每小时1元共2.5元；每小时1.5元则共3元，是真实价格差。只有同规则同总价换文案，才适合研究展示效应；选择变化仍可能来自理解程度，不能唯一归因锚定。\n【追问】充值档位留下余额就一定增加消费吗？还可能降低信任或被闲置。\n【边界】锚定是待验证机制，不是对每个用户的确定心理诊断。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 188,
+          "line_end": 212
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 922,
+          "line_end": 946
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1118,
+          "line_end": 1142
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：新增同用2小时的2.5元/3元账单推演，算术成立，明确这是价格差而非只换说法。",
+          "同规则同总价才研究展示影响，且选择变化仍可能来自理解程度，不能唯一归因锚定；编号机制、反例和三项评分一致，未采纳原文后续单价反而更高的错误描述。",
+          "复审已阅读全文及原文引用；替代此前hash 577e6e81cdce7b83ed0c60149fe8582cb017de90011939824726655376fbd055 的审校结论。",
+          "独立审校当前内容指纹: 2d1adc09f01b94d8779bc2ca20465e9beea58063ce54c8505ad346fe34144b10",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.progressive-disclosure.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.progressive-disclosure"
+      ],
+      "revision": 1,
+      "position": 1105,
+      "title": "渐进披露与认知负荷",
+      "kind": "机制",
+      "prompt": "菜单或筛选项很多时，何时应集中展示，何时应只露出常用项？如何验证这种取舍？",
+      "answer_short": "一、熟练、需快速横向比较的任务，可以集中展示关键属性；新手或低频复杂设置更适合先露常用项，再展开高级项。二、减少首屏信息可以降低扫描负担，但隐藏必要条件会增加翻找与误选，不能用“简洁/密集”直接评价优劣。三、在相同任务下比较选对率、完成时间及回退次数，并分别看熟练与新手；固定展示30项不是通用最优值。",
+      "required_points": [
+        "按任务和熟练度说明密集展示与渐进披露各自条件。",
+        "解释减扫描与增查找的代价，并保留必要信息可达性。",
+        "以任务正确率、时间或回退分层验证，不把固定数量当规律。"
+      ],
+      "pitfalls": "关键价格、安全与权限信息不能当低频装饰隐藏。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】编辑假设：价格、品牌始终可见，低频包装尺寸放“更多筛选”；观察新手是否能找到并选对。若隐藏的是购买必须核对的配送范围，则省首屏却增加无效下单，应恢复直接可见。\n【追问】如果“高级筛选”藏了过敏原限制，能算合理简化吗？不能。\n【边界】关键价格、安全与权限信息不能当低频装饰隐藏。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 163,
+          "line_end": 187
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 522,
+          "line_end": 546
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 722,
+          "line_end": 746
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：歌单例子换成价格/品牌与“更多筛选”，并用隐藏配送范围造成无效下单作反例，直接承载减扫描与增查找代价。",
+          "集中展示与渐进披露按熟练度/比较任务选择，任务正确率/时间/回退分层验证；安全、价格、权限等必要信息不因低频而隐藏，未声称30项通用最优。",
+          "复审已阅读全文及原文引用；替代此前hash fb4dbc5af17a799c90b89ab3944a2a9893b39d7c99132da0bd16e44a7ff95135 的审校结论。",
+          "独立审校当前内容指纹: 230155b1a7c3e07d9f74e8ca49016d124ce39a1fafbe14806938e6dd8eac0f57",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.physical-control-access.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.physical-control-access"
+      ],
+      "revision": 1,
+      "position": 1106,
+      "title": "实体控制与可达操作",
+      "kind": "场景判断",
+      "prompt": "假设厨房设备或车内高频操作拟全部改为触屏。你如何比较实体键与屏幕，并决定保留什么？",
+      "answer_short": "S：假设操作发生在湿手或不能持续看屏的环境。T：保证关键任务准确、可达，再考虑界面灵活性。A：比较盲操反馈、误触、复杂设置表达及维修；高频关键动作优先验证实体/混合入口，复杂低频设置可用屏幕。R：通过安全模拟测试不同能力用户的误操作与完成时间，达不到关键任务要求就不替换。",
+      "required_points": [
+        "结合环境与注意力解释物理反馈、误触和屏幕灵活性的取舍。",
+        "明确关键高频动作与复杂低频设置的分工。",
+        "以安全模拟和不同能力用户的任务证据验收，不把先进外观当收益。"
+      ],
+      "pitfalls": "涉及驾驶等任务只做受控安全模拟，不建议边驾驶边试。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】调温旋钮与高级定时屏幕可共存；实际可靠性仍取决于器件和实现。\n【追问】实体键是否总更安全？布局不清、力度不适也会失败。\n【边界】涉及驾驶等任务只做受控安全模拟，不建议边驾驶边试。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 294,
+          "line_end": 322
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1768,
+          "line_end": 1792
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "湿手、注意力与器件差异形成有条件的实体/触屏取舍，不把实体键写成必然可靠。",
+          "R限定安全模拟和不同能力用户；驾驶实测风险被明确排除。",
+          "独立审校当前内容指纹: e33729bd5ed8b1f6730025becd2591b25fca347dd6b696f510b93b4b34604630",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.gesture-learnability.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.gesture-learnability"
+      ],
+      "revision": 1,
+      "position": 1107,
+      "title": "手势效率与可发现性",
+      "kind": "机制",
+      "prompt": "上滑、下拉刷新或摇动等手势能缩短操作，为何仍可能需要可见按钮或替代入口？怎样判断采用条件？",
+      "answer_short": "一、熟悉的手势可减少定位与点击成本，但“自然”取决于既有习惯，不能假设所有人都能发现。二、摇动、边缘滑动可能误触或与系统动作冲突，动作不便的用户也需要按钮等替代方式；不可逆动作不能只靠隐蔽手势。三、用首次发现率、误触率和任务完成测试，比较可见入口与手势组合；单看操作步数会漏掉学习和纠错成本。",
+      "required_points": [
+        "解释操作效率与发现/学习成本不是同一指标。",
+        "指出误触、系统冲突或能力差异，并提供可见替代入口。",
+        "以发现、误触和完成证据判断，不认定某方向天然最优。"
+      ],
+      "pitfalls": "不沿用原文对手势发明者的未经核实归属。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】编辑假设：新用户找不到下拉刷新，增加可见刷新按钮后能完成；熟练用户仍可用手势。比较首次发现与误刷新记录，而不是只比较一次操作步数。\n【追问】行业常用是否足以采用？还需检查本场景与辅助操作。\n【边界】不沿用原文对手势发明者的未经核实归属。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 352,
+          "line_end": 376
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 3143,
+          "line_end": 3167
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 3243,
+          "line_end": 3267
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：例子改为新用户找不到下拉刷新、可见按钮辅助而熟练者仍用手势；发现与误刷新记录比单次步数更贴合题面。",
+          "例子已标编辑假设，不是实测效果；误触、系统冲突、能力差异及不可逆动作替代入口都在核心，未经核实发明归属未被复述。",
+          "复审已阅读全文及原文引用；替代此前hash 5948eb639678a8e838015d2d8eba26386ce500806af75e51b0525a576c463211 的审校结论。",
+          "独立审校当前内容指纹: 5c0732828b26106860663a988178d8cd650a0bf08fb58eb2a0455004ea469993",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.intent-first-navigation.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.intent-first-navigation"
+      ],
+      "revision": 1,
+      "position": 1108,
+      "title": "任务意图与入口优先级",
+      "kind": "场景判断",
+      "prompt": "假设工具App想把首页改成推荐内容集市。你如何决定首页主入口和主要按钮，避免只按收入排位置？",
+      "answer_short": "S：假设首页既服务明确办事，也承担内容发现。T：先保证目标用户的主要任务，再评估增量价值。A：按搜索、办事、闲逛意图区分用户，核对高频与高风险任务；比较主任务直达、次级推荐和近期入口，不能照抄竞品。R：看任务完成、找入口失败及复访，再看推荐净收益；若核心任务受损，缩减或移后推荐。",
+      "required_points": [
+        "按任务意图与频率/风险判断入口优先级。",
+        "比较主任务直达和推荐/次级入口，说明流量变现的任务代价。",
+        "同时用任务成功与增量价值验收，支持受损时撤回。"
+      ],
+      "pitfalls": "不从某公司界面直接推导其唯一定位或真实内部指标。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】编辑假设：查订单工具把“查单”推到推荐流下方，推荐点击增加但用户找入口失败；先恢复主任务直达，再评估次级推荐的增量价值，不能把新增点击抵消任务失败。\n【追问】低频设置一定不重要吗？隐私和售后可能低频但高风险。\n【边界】不从某公司界面直接推导其唯一定位或真实内部指标。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 423,
+          "line_end": 447
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 547,
+          "line_end": 571
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1468,
+          "line_end": 1492
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：购物按钮例子换成查订单工具首页推荐挤占查单，出现新增点击但任务入口失败时先恢复直达，贴合工具首页取舍。",
+          "意图、频率与风险决定优先级，比较直达/次级推荐并以任务成功和增量价值验收；低频隐私/售后不能被频率压掉，未由公司UI推出唯一内部战略。",
+          "复审已阅读全文及原文引用；替代此前hash 46fc982e41ba792a68df919ae1f2d89ba4a603318f7f8c418bc81bd8e554f684 的审校结论。",
+          "独立审校当前内容指纹: e675c209eb93b0d17f4f05e206aa372f906f05738d75e85038877a09c7bacae3",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.exit-friction-proportionality.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.exit-friction-proportionality"
+      ],
+      "revision": 1,
+      "position": 1109,
+      "title": "退出与注销的比例摩擦",
+      "kind": "场景判断",
+      "prompt": "假设团队想增加退出/注销步骤以减少流失。你如何区分必要安全确认和阻挠，并设计验收？",
+      "answer_short": "S：假设退出会改变登录状态，注销还可能影响数据与未结业务。T：保护真实意愿和资产，同时让用户顺利离开。A：按风险设置必要身份确认与影响告知，列明待处理事项；挽留、原因问卷应可跳过，不能靠隐藏入口或循环弹窗留人。R：测真实用户完成率、误删和求助情况；因找不到入口而放弃不算健康留存。",
+      "required_points": [
+        "区分退出与注销的影响及必要核验。",
+        "保留可达入口、可跳过挽留与清晰待办，避免无关阻碍。",
+        "用真实意愿完成与误操作共同验收，不把放弃注销等同留存。"
+      ],
+      "pitfalls": "具体数据留存规则须另核实；不把风控当作无限收集或拖延理由。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】存在未结订单时可解释如何结清及后续状态，不能用一次问卷作为强制前置。\n【追问】注销需要所有人新提交实名材料吗？应证明核验的必要性和最小性。\n【边界】具体数据留存规则须另核实；不把风控当作无限收集或拖延理由。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 448,
+          "line_end": 471
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1493,
+          "line_end": 1517
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 2468,
+          "line_end": 2492
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "明确退出登录与注销的不同影响，并区分必要核验和强制挽留。",
+          "问卷可跳过、入口可达、误删与真实完成共同验收；没有照搬原文的法规留存断言。",
+          "独立审校当前内容指纹: 207b20de7d0a674d4507b082de521c5adf92a0cf0277afdd377651a709ceaedc",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.matching-information-fairness.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.matching-information-fairness"
+      ],
+      "revision": 1,
+      "position": 1110,
+      "title": "派单信息与双方公平",
+      "kind": "场景判断",
+      "prompt": "假设平台考虑接单前隐藏目的地以减少挑单。你会如何评估信息披露时点，保护乘客与司机？",
+      "answer_short": "S：假设隐藏目的地可能提高难服务订单的接单率，也可能使司机承担未知成本。T：兼顾乘客可达性、司机知情与双方安全。A：比较分阶段披露、目的地区间和困难订单补偿；只提供完成任务必要信息，并追踪接单后取消及空驶。R：按区域看成单、取消、司机收益和投诉；若只是把拒单推迟或风险转嫁，就调整方案。",
+      "required_points": [
+        "同时解释减少挑单的收益和司机未知成本，不假定单方信息天然不敏感。",
+        "比较披露时点/范围或补偿替代方案，并限定必要信息。",
+        "按双方结果及区域差异验收，检查拒单是否后移。"
+      ],
+      "pitfalls": "不确认任何现行平台确实采用原题规则；安全信息不因转化目标随意隐藏。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】编辑假设：接单率上升而接单后取消也上升，可能只是拒单后移。若施工使上车点不可安全到达，应在接单前说明必要路况/可达点，不能为了接单率隐藏；不需同时公开乘客精确住址或无关身份。\n【追问】是否能用补偿难服务订单替代完全隐藏？需要比较收益与成本。\n【边界】不确认任何现行平台确实采用原题规则；安全信息不因转化目标随意隐藏。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 472,
+          "line_end": 496
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：新增施工导致上车点不安全可达时须提前说明路况/可达点，同时不公开无关住址身份，安全信息边界可操作。",
+          "接单后取消上升可反驳接单率改善，分阶段/范围披露与补偿有备选，区域成单、收益和投诉兼看；没有把现行平台规则或单方信息不敏感当事实。",
+          "复审已阅读全文及原文引用；替代此前hash b0eaa46c7f06e93fdf6f24403bf03c34c68c619eb0f3f4f047684f8952c3098c 的审校结论。",
+          "独立审校当前内容指纹: 23a6f086a0b62da3db87ec356b9dc4a86be96a8fdf7acbbb5f28d708628e8ddd",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.substitute-complement-recommendation.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.substitute-complement-recommendation"
+      ],
+      "revision": 1,
+      "position": 1111,
+      "title": "替代与互补推荐",
+      "kind": "机制",
+      "prompt": "商品详情、购物车和支付成功页都能推荐商品。怎样区分替代与互补推荐，判断是否真的帮助用户？",
+      "answer_short": "一、替代推荐帮助在未决定时比较同类方案；互补推荐围绕已选商品补全使用场景，不能把所有推荐都当加购。二、详情页可承接不满意当前商品的人；支付后应先清楚确认原订单，再展示可忽略的补充，不能制造原单未完成错觉。三、以同一购物意图的完成、总支出/退货及净增贡献判断，防止推荐分流原成交或诱导无用凑单。",
+      "required_points": [
+        "区分替代比较与互补补全的用户阶段和目标。",
+        "结合页面阶段安排推荐，保护原任务与支付确认。",
+        "检查蚕食原成交、无用凑单及退货，不能只看推荐点击/客单。"
+      ],
+      "pitfalls": "不以“猜你喜欢”标签证明模型真正理解意图，需任务证据。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】手机壳是手机的互补；另一品牌手机通常是替代。满减凑单须核对最终总支出。\n【追问】相似商品点击多说明更好吗？也可能加重比较疲劳。\n【边界】不以“猜你喜欢”标签证明模型真正理解意图，需任务证据。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 2593,
+          "line_end": 2617
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 3768,
+          "line_end": 3792
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 4868,
+          "line_end": 4892
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "替代与互补有共同意图、阶段及反例，手机与手机壳例子明确。",
+          "支付后先确认原单，避免错觉及无用凑单；原文是线索，未宣称推荐已理解用户。",
+          "独立审校当前内容指纹: acaf9dc1371d6352c128e230bda48ff818ab427b4f6a07d27ae10416302c5723",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.paywall-value-disclosure.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.paywall-value-disclosure"
+      ],
+      "revision": 1,
+      "position": 1112,
+      "title": "付费墙与价值告知",
+      "kind": "场景判断",
+      "prompt": "假设创作工具想在导出时提示付费，内容平台想限制未登录/未付费访问。怎样设置门槛才可评估价值又不误导？",
+      "answer_short": "S：假设用户先体验价值，再决定是否付费或登录。T：保护可持续收入和用户知情选择。A：在投入前说明免费范围、导出规格、内容访问权限；到价值节点再提供明确升级，同时保留已承诺的免费路径。R：比较知情转化、完成作品/阅读、退款和投诉；若收入依赖用户最后才发现限制，就修复前置告知。",
+      "required_points": [
+        "解释先体验价值的收益与后置限制的沉没成本风险。",
+        "前置说明免费/付费/登录及导出或内容访问范围，保留已承诺路径。",
+        "验收知情转化与退款/任务结果，拒绝把被迫支付视为价值证明。"
+      ],
+      "pitfalls": "版权/身份权限独立于界面付费提示，不能用登录或付费替代授权。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】可先预览高清差异，不应让用户编辑完成后才知道无法按已宣称条件导出。\n【追问】登录和付费是同一门槛吗？不是；两者应分别说明必要性，不能让用户登录后才发现额外未告知付费。\n【边界】版权/身份权限独立于界面付费提示，不能用登录或付费替代授权。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 572,
+          "line_end": 596
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 3293,
+          "line_end": 3317
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 6497,
+          "line_end": 6521
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：核心和评分将回放细则收束为内容访问范围，追问明确登录与付费应分别告知，不让登录后发现未告知收费。",
+          "导出前已投入作品的例子直接说明沉没投入风险；主答统一为投入前告知、价值节点升级、保留已承诺路径和知情转化。授权不由登录/付费替代，未把被迫支付算价值。",
+          "复审已阅读全文及原文引用；替代此前hash 5d911128939b4de86ac91b4c0695aa4d09b7fc5dfcfccdafac27c924dee1d24e 的审校结论。",
+          "独立审校当前内容指纹: 67eb1e6dc2e0b166ea99ff4cf871917a820f18a1fa7afb267ee51bdb964b3786",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.fulfillment-uncertainty-promise.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.fulfillment-uncertainty-promise"
+      ],
+      "revision": 1,
+      "position": 1113,
+      "title": "履约不确定性与预期",
+      "kind": "场景判断",
+      "prompt": "假设配送平台要展示到达时间、发货地和运费。如何作出可兑现的承诺，并判断区间或物流地图是否有用？",
+      "answer_short": "S：假设备货、交通和运力会变动。T：让用户知道费用与可信到达范围，保留异常处理。A：用同类订单校准区间，明确运费和时效适用条件；地图只展示可靠状态，不假装实时精确，发货地也不能单独保证更快。R：按地区、时段检查区间覆盖、宽度、延误和求助；承诺失效及时更新并提供处理入口。",
+      "required_points": [
+        "解释影响时效的多个环节，区间须有覆盖与宽度校准。",
+        "前置费用和适用条件，区分位置可视化与真实时效保证。",
+        "分层核对兑现率/异常与求助，并提供失约处理。"
+      ],
+      "pitfalls": "不使用原文品牌服务名作现行普遍承诺；不用时效压力推动不安全行为。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】编辑假设：同10单，20–40分钟区间覆盖8单，0–120分钟覆盖10单；后者虽全命中却可能无法安排收货。需按地区时段同时比较覆盖和宽度，费用/地图提供辅助信息，不能替代时效证据；小样本仅演示口径。\n【追问】强调自营标签就能保证准时吗？须看实际可控范围与履约数据。\n【边界】不使用原文品牌服务名作现行普遍承诺；不用时效压力推动不安全行为。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 597,
+          "line_end": 621
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1318,
+          "line_end": 1342
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 4118,
+          "line_end": 4142
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：新增同10单中20–40分钟覆盖8单、0–120分钟覆盖10单的示范，明确全命中但区间过宽未必帮助安排收货，小样本仅示口径。",
+          "多环节不确定性、同类分层校准、失约更新与处理入口和评分对齐；品牌服务未被当现实普遍承诺，避免用时效压力推动不安全行为。",
+          "非阻塞优化：题面仍同时含时间、运费、发货地和地图，范围较宽；现已把费用/地图明确为辅助，口头主答维持区间校准即可，不强背所有形式。",
+          "复审已阅读全文及原文引用；替代此前hash beee4d19364a66d73201a11cb363e4ea9810cef83bc5f942242f9a4252cf9208 的审校结论。",
+          "独立审校当前内容指纹: 68f6261034d2e2889d1ba4115d1399a8af0995d564624248f66501a42f249a43",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.threshold-discount-net-value.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.threshold-discount-net-value"
+      ],
+      "revision": 1,
+      "position": 1114,
+      "title": "满减门槛与真实增量",
+      "kind": "机制",
+      "prompt": "满减、会员红包和临时优惠券如何影响购买？你会怎样判断补贴净价值及用户是否真的省钱？",
+      "answer_short": "一、门槛可能促使凑单，会员券可能促复购，定向券可能唤回犹豫者；这些是待检验机制，不能假定所有领券订单都是新增。二、同时算用户最终支出和平台/商家净贡献：收入减商品、履约与补贴等增量成本，比较本来就会买的人是否也被补贴。三、用可比对照看新增购买及后续复购；有效期与互斥条件要清楚，不能把多花钱买无用品叫省钱。",
+      "required_points": [
+        "以凑单或复购/召回中的一种解释补贴机制，区分新增购买与本来就会购买。",
+        "计算最终支出和扣除补贴/履约的贡献，识别补贴既有需求。",
+        "以对照和后续行为验证，清楚展示有效期与互斥条件。"
+      ],
+      "pitfalls": "不默认差异化优惠必然公平或赚钱；需检查资格规则与被补贴人群。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】假设原单25元，为满30减5加购6元，最终付26元；比原计划多花1元，不是省5元。\n【追问】浏览久就表示缺优惠吗？也可能规格信息不清或无需求。\n【边界】不默认差异化优惠必然公平或赚钱；需检查资格规则与被补贴人群。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 622,
+          "line_end": 646
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1143,
+          "line_end": 1167
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 3068,
+          "line_end": 3092
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：required_points第1项已允许凑单或复购/召回中的一种机制，不再要求背三种补贴形态；主判断维持用户最终支出与补贴净贡献。",
+          "25+6−5=26，比原计划25多1元的编辑算例成立；本来就会买与增量购买分开，可比对照及后续行为验收，资格/有效期/互斥条件透明，不默认差异化优惠必然公平盈利。",
+          "复审已阅读全文及原文引用；替代此前hash 7145388a417aba1c0beeb459fcac064dc0f2fddca8ea9a58451b75b83e6f37a3 的审校结论。",
+          "独立审校当前内容指纹: 8d4ea020317a893d558eeddd95d78d0d626391d5d770da0eb1fe23accda0b059",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.nonstandard-trade-communication.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.nonstandard-trade-communication"
+      ],
+      "revision": 1,
+      "position": 1115,
+      "title": "非标交易的沟通价值",
+      "kind": "机制",
+      "prompt": "二手商品允许议价、标准商品尽量自助下单、售后保留联系商家，这些选择的共同判断依据是什么？",
+      "answer_short": "一、当成色、配件或责任难以结构化描述时，对话可以补足信息、形成履约约定，降低错买；其收益要超过等待和客服成本。二、对规格稳定、价格明确的商品，结构化信息与自助操作通常更易规模化，但异常和售后仍需可达沟通。三、比较成交后纠纷、一次解决率与人力耗时；不是某平台永远非标、另一平台永远不许议价。",
+      "required_points": [
+        "解释沟通补充非标信息/约定的价值及成本。",
+        "按标准化和异常状态选择自助或人工，保留售后联系。",
+        "用纠纷、解决与耗时验证，避免平台类型的绝对归类。"
+      ],
+      "pitfalls": "联系商家不能替代平台必要兜底，勿为追求自助隐藏求助。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】二手相机需确认快门次数；标准新机仍可能因漏件需要人工沟通。\n【追问】如何避免站外沟通争议？在授权范围保留关键约定和申诉入口。\n【边界】联系商家不能替代平台必要兜底，勿为追求自助隐藏求助。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 672,
+          "line_end": 696
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 8872,
+          "line_end": 8896
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "非标信息、标准自助和异常沟通按同一摩擦收益判断，二手相机/标准新机例子具体。",
+          "没有照搬淘宝=B2C、标准平台不许议价等绝对分类，保留平台兜底与申诉联系。",
+          "独立审校当前内容指纹: 58528e2a901ee12d7d2d41f453eabc0895381e1a78895714f55dcf201662dbbf",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.service-tier-value-cost.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.service-tier-value-cost"
+      ],
+      "revision": 1,
+      "position": 1116,
+      "title": "服务分层与企业报价",
+      "kind": "机制",
+      "prompt": "服务产品为何可能设置普通/专属服务或“企业版联系销售”？怎样判断这是有效分层而不只是包装？",
+      "answer_short": "一、不同响应、服务容量、集成和支持可能有不同交付成本与价值，分层应对应可验证的能力，头衔和贵宾标签本身不是证明。二、企业需求不确定时，可先确认用量、范围和服务承诺再报价；自助透明价格仍是需求标准化时的备选。三、看各层付费意愿、履约成本和实际响应；基本权益不能因低价层失去必要保障，权益拆细也不能掩盖总价。",
+      "required_points": [
+        "以实际能力/范围及交付成本解释分层，不以身份标签替代质量。",
+        "说明定制报价与透明自助报价各自适用条件。",
+        "用实际履约和净价值验收，同时保护基本保障和总价透明。"
+      ],
+      "pitfalls": "不将某头衔视为专业资质；不能用付费等级限制必要投诉处理。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】编辑假设：专属客服只换头像而排队不变，不能证明升级；企业版若用量、集成和支持范围尚未确认，也不能先保证固定总价。范围标准化后可提供透明自助价，分层须对应真实交付差异。\n【追问】新客专属支持值得做吗？需看是否改善首次任务及成本。\n【边界】不将某头衔视为专业资质；不能用付费等级限制必要投诉处理。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 993,
+          "line_end": 1017
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1043,
+          "line_end": 1067
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 2018,
+          "line_end": 2042
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：将理发/VIP泛例换成专属客服只换头像而等待不变、企业用量/集成/支持范围未定不能保证固定总价，直接演示真实服务差异与报价依据。",
+          "标准化后可用透明自助价；成本、付费意愿和实际响应共同检验，低价层也保留必要投诉保障，不用头衔当资质。",
+          "非阻塞优化：服务等级与企业定制报价仍是两种形态，可围绕实际交付范围讲共同机制，避免继续加入发型师/银行等额外场景清单。",
+          "复审已阅读全文及原文引用；替代此前hash 5e9860eaa147c3335c7407ae0b8622937e5fd3e43c19b47c85e232fdfa9e4ed0 的审校结论。",
+          "独立审校当前内容指纹: 6b6f0a86060de5e16aee6612a1a8bd1aa2f2747ae966cd99a7606e956d8b188f",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.captive-market-price.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.captive-market-price"
+      ],
+      "revision": 1,
+      "position": 1117,
+      "title": "场景溢价与市场约束",
+      "kind": "机制",
+      "prompt": "封闭场景中的食品可能更贵。如何区分成本、便利价值与替代稀缺的解释，需要什么反证？",
+      "answer_short": "一、分解租金、物流、营业要求等成本，和临近市区、同类场景比较，不能见高价就认定高毛利。二、即时可得的便利可能提高支付意愿，替代商家少也可能增强定价能力；两者与成本可以同时存在。三、若成本相近但替代增加后价格下降，会支持竞争约束解释；若用户可方便自带且仍愿付费，则需检验便利/体验价值。收入高不证明限制替代合理。",
+      "required_points": [
+        "把成本与便利价值/替代稀缺作为可并存的解释。",
+        "说明可比成本或替代变化的证据及反证。",
+        "区分价格、毛利和用户选择，不从高价推唯一动机。"
+      ],
+      "pitfalls": "不替具体经营者作道德或法律结论；价格及外带规则需现场核实。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】酒店迷你吧还涉及补货、盘点和损耗，不能按“无人销售”认定运营成本为零。\n【追问】高价格是否等于剥削？先查成本、替代、告知与选择条件。\n【边界】不替具体经营者作道德或法律结论；价格及外带规则需现场核实。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1018,
+          "line_end": 1042
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 2043,
+          "line_end": 2067
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 2093,
+          "line_end": 2117
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "成本、便利和替代稀缺允许并存；给出成本相近但替代增加的可反驳证据。",
+          "迷你吧补货盘点不是零成本，区分售价与毛利，不对具体经营者作法律或动机判定。",
+          "独立审校当前内容指纹: 42694b1fc62e53df7575df223b6841c69c3ad5e294f86540c6baeb259b5f20ba",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.subscription-consent-value.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.subscription-consent-value"
+      ],
+      "revision": 1,
+      "position": 1118,
+      "title": "订阅续费与主动价值",
+      "kind": "场景判断",
+      "prompt": "假设软件准备推出低首月价和自动续费。如何判断其价值，并设计试用、提醒和取消边界？",
+      "answer_short": "S：假设订阅降低首期支出、支持持续服务；在留存和续订稳定时较便于预测收入，也可能依赖遗忘扣款。T：获得可持续且知情的续订。A：说明首期与后续价格、扣费日和试用结束处理，获得明确授权，提供易找的取消入口及适时提醒；比较主动续订或买断。R：看持续使用、主动续订意愿、退款和取消体验；收入涨但误扣投诉上升不能算验证成功。",
+      "required_points": [
+        "说明持续服务/收入可预测的收益与遗忘扣费风险。",
+        "明确价格、日期、授权、提醒及易取消边界。",
+        "比较替代模式并以使用价值/误扣退款验收，不能只看续费率。"
+      ],
+      "pitfalls": "不把行业普遍默认续费或试用必须绑卡当既定事实/合法性结论。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】假设首月1元后续30元，应在订阅前同时展示，不能只在长协议里埋后续价。\n【追问】取消更方便会使收入下降就不做吗？需区分真实价值与误续费。\n【边界】不把行业普遍默认续费或试用必须绑卡当既定事实/合法性结论。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1068,
+          "line_end": 1092
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1243,
+          "line_end": 1267
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 5747,
+          "line_end": 5771
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已解决原issue）：核心新增“在留存和续订稳定时较便于预测收入”，对收入可预测补了条件并对应required_points第1项，原题答评分缺口已消除，本次由revise改pass。",
+          "首月1元/后续30元在订阅前并列披露的编辑例子贴题；价格、扣费日、试用结束、明确授权、提醒、可达取消与买断/主动续订备选齐全，不把遗忘扣费带来的收入当验证成功。",
+          "复审已阅读全文及原文引用；替代此前hash 95f168ef7e5bb980fa73bf6203b301f1c6a5f5cb5a0929158b1fd6d75e7ed177 的审校结论。",
+          "独立审校当前内容指纹: fd96bf02525085cb6a57f82b1803f3d85e06c27936fe4c4ed8a5895a25a8a63f",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.prepayment-utilization-liability.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.prepayment-utilization-liability"
+      ],
+      "revision": 1,
+      "position": 1119,
+      "title": "预付与使用率及履约义务",
+      "kind": "机制",
+      "prompt": "年卡、充值卡和预约预付都能提前收钱。怎样区分其价值与风险，避免把现金流当利润？",
+      "answer_short": "一、年卡或充值卡可能让高频使用者降单次成本，也给商家带来未来服务义务；预约预付主要约束爽约、便于备料，不能混成同一种收益。二、比较真实使用量、容量峰值、退款条件与剩余权益；现金先到账不代表服务成本消失，也不等于全部已赚取利润。三、用按次/低额预付备选，观察履约、退款和持续使用；不能把用户不来、难退款当唯一盈利方案。",
+      "required_points": [
+        "区分长期预付与预约预付的主要机制。",
+        "将现金到账与未来履约/退款义务分开，并看容量和使用量。",
+        "比较按次或低额方案，以实际履约与退款等验收。"
+      ],
+      "pitfalls": "不把所有经营者归因为“赌用户不来”；预付资金不能任意当扩张利润。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】假设年卡1200元、按次60元，需至少20次才抵平名义支出，仍要算时间、容量和退卡条件。\n【追问】爽约预付全部不退一定合理吗？应先核对透明规则与实际损失，制度另核实。\n【边界】不把所有经营者归因为“赌用户不来”；预付资金不能任意当扩张利润。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1093,
+          "line_end": 1117
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1918,
+          "line_end": 1942
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 1943,
+          "line_end": 1967
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "分开年卡/充值与预约预付，现金流不当利润，明确未来履约与退款义务。",
+          "1200/60=20次名义抵平正确，主动提示容量、时间和退款条件，未背“都赌用户不来”的归因。",
+          "独立审校当前内容指纹: 8488228f52ad971acf744a20939e620ee9ba7bec829a5651497c23cfbbffc2c0",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch09.interview.virtual-currency-spend-control.001",
+      "lesson_source_key": "第9章-产品思维/产品思维培养.md",
+      "concept_keys": [
+        "product-thinking.virtual-currency-spend-control"
+      ],
+      "revision": 1,
+      "position": 1120,
+      "title": "虚拟币与礼物的真实支出",
+      "kind": "场景判断",
+      "prompt": "假设直播平台设置多种代币、最低打赏额和礼物梯度。你会如何评估并防止用户低估支出？",
+      "answer_short": "S：假设代币方便运营，特效和档位增强反馈，也可能模糊真实花费。T：让消费可理解、可控，成本可持续。A：同时显示现金等值、兑换/提现限制和余额，解释最低额及抽成；不默认充值，不以攀比强迫升级，设预算与确认。R：测账单理解、误购退款及支出控制；涉及未成年人先执行必要保护，不能靠特效提升收入覆盖保护要求。",
+      "required_points": [
+        "解释代币/梯度反馈的用途与模糊真实支出的风险。",
+        "清楚展示现金等值、兑换限制和最低额/成本，并保留消费控制。",
+        "以理解/误购验收，未成年人等保护为前置边界。"
+      ],
+      "pitfalls": "未成年人保护的具体现行规则另核实；没有将其当成提升付费的试验变量。",
+      "explanation": "【来源与编辑】原题提供现象及候选机制；以下是编辑设计情境/推演，未核实公司真实动机，也无实测成果。\n【具体例】编辑假设：10元兑100币，一次礼物60币即6元，送两次需120币而余额只有100币。应显示本次6元、当前余额、还差20币及充值/剩余限制，不能只用礼物档位或特效遮住现金支出。\n【追问】礼物特效加大一定有益吗？还需检查遮挡、过度消费和关闭能力。\n【边界】未成年人保护的具体现行规则另核实；没有将其当成提升付费的试验变量。\n【自评】独立说清本题全部必答点且不作无证归因为掌握；核心点缺失为Again，完整但费力为Hard，自然完整为Good，迅速完整为Easy。追问为拓展，不额外加评分门槛。",
+      "estimated_seconds": 75,
+      "source_refs": [
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 4543,
+          "line_end": 4567
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 6572,
+          "line_end": 6596
+        },
+        {
+          "relative_path": "第9章-产品思维/产品思维培养.md",
+          "content_hash": "48b39d496b6a8482fb3ccccfbba80a9e8c76287c35fb2b79a339bfdfd715d857",
+          "line_start": 7322,
+          "line_end": 7346
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "Codex-独立内容审校-ch09-20261022",
+        "notes": [
+          "修订结果（已落实非阻塞建议）：代券泛例换成10元兑100币、60币礼物等值6元、两次120币超余额20币；算术正确，当前余额与充值/剩余限制直接帮助理解现金支出。",
+          "不默认充值、不以攀比迫使升级，有预算与确认，理解/误购退款共同验收；未成年人保护是前置条件，未变成实验变量或虚构具体法规。",
+          "非阻塞优化：多币种、最低额和礼物阶梯仍较多，口头围绕现金等值及支出可控讲一条链路即可；不用为覆盖奖品券原题再强加财税结论。",
+          "复审已阅读全文及原文引用；替代此前hash 6f3bf79947b0ec20508964a276250286a6b80c6ff2e2a26948b410df39282133 的审校结论。",
+          "独立审校当前内容指纹: ceada02c4040c134a837b8c3373a50654a89e8cbae7400cc7fe87026867763ad",
+          "审校记录: review-ch09.json"
+        ]
+      }
+    }
+  ]
+}

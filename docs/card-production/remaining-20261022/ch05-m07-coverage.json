@@ -1,0 +1,1744 @@
+{
+  "module_id": "5.7",
+  "module_key": "ch05-m07",
+  "source_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+  "source_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+  "lf_line_count": 586,
+  "status": "draft",
+  "old_card_count": 3,
+  "draft_card_count": 3,
+  "new_card_count": 0,
+  "markdown_checklist_count": 0,
+  "box_item_count": 0,
+  "native_question_line_count": 23,
+  "registered": 77,
+  "registration_scope": "冻结源文中标题、含问号行、每个方框项及列明的章末行动目标；编辑目标另列，标题不计实际承载。",
+  "publication_coverage": 0,
+  "practice_completed": 0,
+  "independent_review_completed": false,
+  "objectives": [
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L1",
+      "original_text": "# 5.7 AI产品的结构如何设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "# 5.7 AI产品的结构如何设计"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L5",
+      "original_text": "欢迎来到第5章的最后一节。前面我们聊了需求挖掘、竞品分析、需求评估、PRD写作、风险边界——这些都是\"做什么\"和\"为什么做\"的问题。而这一节，我们要解决\"怎么做\"的底层架构问题：**AI产品的结构如何设计？**",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 5,
+        "line_end": 5
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "欢迎来到第5章的最后一节。前面我们聊了需求挖掘、竞品分析、需求评估、PRD写作、风险边界——这些都是\"做什么\"和\"为什么做\"的问题。而这一节，我们要解决\"怎么做\"的底层架构问题：**AI产品的结构如何设计？**"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L9",
+      "original_text": "你不需要会画架构图（虽然学会更好），但你需要理解：一个AI产品从用户点击到模型返回结果，中间经过了哪些模块？每个模块的职责是什么？模块之间如何协作？数据如何流转？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 9,
+        "line_end": 9
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "你不需要会画架构图（虽然学会更好），但你需要理解：一个AI产品从用户点击到模型返回结果，中间经过了哪些模块？每个模块的职责是什么？模块之间如何协作？数据如何流转？"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L15",
+      "original_text": "## 一、AI产品的经典五层架构",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 15,
+        "line_end": 15
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 一、AI产品的经典五层架构"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L21",
+      "original_text": "| **应用层** | 餐厅大堂、服务员、菜单 | 用户直接接触的所有界面和交互 | 用户怎么点菜？怎么上菜？体验好不好？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 21,
+        "line_end": 21
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **应用层** | 餐厅大堂、服务员、菜单 | 用户直接接触的所有界面和交互 | 用户怎么点菜？怎么上菜？体验好不好？ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L22",
+      "original_text": "| **服务层** | 后厨调度、传菜系统、收银台 | 接收订单、协调各岗位、处理业务逻辑 | 订单怎么分配？怎么保证出菜顺序？怎么结账？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 22,
+        "line_end": 22
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **服务层** | 后厨调度、传菜系统、收银台 | 接收订单、协调各岗位、处理业务逻辑 | 订单怎么分配？怎么保证出菜顺序？怎么结账？ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L23",
+      "original_text": "| **模型层** | 主厨的大脑+手艺 | 理解需求、做出决策、生成内容 | 主厨水平如何？做什么菜最拿手？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 23,
+        "line_end": 23
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **模型层** | 主厨的大脑+手艺 | 理解需求、做出决策、生成内容 | 主厨水平如何？做什么菜最拿手？ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L24",
+      "original_text": "| **数据层** | 食材仓库、调料架、菜谱档案 | 存储所有原材料和成品，随时取用 | 食材新鲜吗？库存够吗？取用方便吗？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 24,
+        "line_end": 24
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **数据层** | 食材仓库、调料架、菜谱档案 | 存储所有原材料和成品，随时取用 | 食材新鲜吗？库存够吗？取用方便吗？ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L25",
+      "original_text": "| **基础设施层** | 厨房设备、水电煤、店面装修 | 提供稳定的运行环境 | 灶火够大吗？停电了怎么办？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 25,
+        "line_end": 25
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **基础设施层** | 厨房设备、水电煤、店面装修 | 提供稳定的运行环境 | 灶火够大吗？停电了怎么办？ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L31",
+      "original_text": "## 二、应用层设计：用户的第一触点",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 31,
+        "line_end": 31
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 二、应用层设计：用户的第一触点"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L33",
+      "original_text": "### （一）应用层的核心职责",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 33,
+        "line_end": 33
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）应用层的核心职责"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L42",
+      "original_text": "### （二）AI产品特有的交互设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 42,
+        "line_end": 42
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）AI产品特有的交互设计"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L46",
+      "original_text": "#### 1. AI状态提示",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 46,
+        "line_end": 46
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 1. AI状态提示"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L52",
+      "original_text": "| **思考中** | \"AI在干活吗？卡住了吗？\" | 展示思考过程（如Claude的thinking动画）、预计等待时间 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 52,
+        "line_end": 52
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **思考中** | \"AI在干活吗？卡住了吗？\" | 展示思考过程（如Claude的thinking动画）、预计等待时间 |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L53",
+      "original_text": "| **生成中** | \"内容对吗？我要不要打断？\" | 流式输出（逐字显示）、支持随时停止生成 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 53,
+        "line_end": 53
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **生成中** | \"内容对吗？我要不要打断？\" | 流式输出（逐字显示）、支持随时停止生成 |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L54",
+      "original_text": "| **置信度低** | \"这个答案靠谱吗？\" | 显示置信度分数、标注\"AI生成，仅供参考\"、提供信息来源 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 54,
+        "line_end": 54
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **置信度低** | \"这个答案靠谱吗？\" | 显示置信度分数、标注\"AI生成，仅供参考\"、提供信息来源 |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L55",
+      "original_text": "| **需要确认** | \"AI理解对了吗？\" | 在行动前展示AI的理解摘要，让用户确认 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 55,
+        "line_end": 55
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **需要确认** | \"AI理解对了吗？\" | 在行动前展示AI的理解摘要，让用户确认 |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L56",
+      "original_text": "| **遇到限制** | \"为什么不能回答？\" | 清晰说明限制原因（如\"涉及个人隐私，无法回答\"） |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 56,
+        "line_end": 56
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **遇到限制** | \"为什么不能回答？\" | 清晰说明限制原因（如\"涉及个人隐私，无法回答\"） |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L58",
+      "original_text": "#### 2. 人机协同入口",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 58,
+        "line_end": 58
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2. 人机协同入口"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L67",
+      "original_text": "#### 3. 多模态输入输出",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 67,
+        "line_end": 67
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 3. 多模态输入输出"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L87",
+      "original_text": "### （三）应用层的技术实现方式",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 87,
+        "line_end": 87
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （三）应用层的技术实现方式"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L100",
+      "original_text": "## 三、服务层设计：产品的\"中枢神经系统\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 100,
+        "line_end": 100
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 三、服务层设计：产品的\"中枢神经系统\""
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L104",
+      "original_text": "### （一）服务层的核心模块",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 104,
+        "line_end": 104
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）服务层的核心模块"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L108",
+      "original_text": "#### 1. API网关（API Gateway）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 108,
+        "line_end": 108
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 1. API网关（API Gateway）"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L124",
+      "original_text": "#### 2. 认证与授权（Auth）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 124,
+        "line_end": 124
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2. 认证与授权（Auth）"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L134",
+      "original_text": "#### 3. 会话管理（Session Management）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 134,
+        "line_end": 134
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 3. 会话管理（Session Management）"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L166",
+      "original_text": "#### 4. 上下文组装（Context Assembly）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 166,
+        "line_end": 166
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 4. 上下文组装（Context Assembly）"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L175",
+      "original_text": "用户输入: \"昨天说的那个方案怎么样了？\"",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 175,
+        "line_end": 175
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "用户输入: \"昨天说的那个方案怎么样了？\""
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L202",
+      "original_text": "#### 5. 结果后处理（Post-processing）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 202,
+        "line_end": 202
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 5. 结果后处理（Post-processing）"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L213",
+      "original_text": "#### 6. 计费系统（Billing）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 213,
+        "line_end": 213
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 6. 计费系统（Billing）"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L226",
+      "original_text": "### （二）服务层的高可用设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 226,
+        "line_end": 226
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）服务层的高可用设计"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L240",
+      "original_text": "## 四、模型层设计：产品的\"智能大脑\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 240,
+        "line_end": 240
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 四、模型层设计：产品的\"智能大脑\""
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L244",
+      "original_text": "### （一）模型层的核心职责",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 244,
+        "line_end": 244
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）模型层的核心职责"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L250",
+      "original_text": "### （二）模型选型与接入",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 250,
+        "line_end": 250
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）模型选型与接入"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L252",
+      "original_text": "#### 1. 模型选型的决策矩阵",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 252,
+        "line_end": 252
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 1. 模型选型的决策矩阵"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L256",
+      "original_text": "| **效果质量** | 在该任务上的准确率、流畅度是否达标？ | ⭐⭐⭐⭐⭐ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 256,
+        "line_end": 256
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **效果质量** | 在该任务上的准确率、流畅度是否达标？ | ⭐⭐⭐⭐⭐ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L257",
+      "original_text": "| **响应速度** | 首Token延迟、生成速度是否可接受？ | ⭐⭐⭐⭐ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 257,
+        "line_end": 257
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **响应速度** | 首Token延迟、生成速度是否可接受？ | ⭐⭐⭐⭐ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L258",
+      "original_text": "| **成本效率** | 单次调用的Token成本是多少？ | ⭐⭐⭐⭐ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 258,
+        "line_end": 258
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **成本效率** | 单次调用的Token成本是多少？ | ⭐⭐⭐⭐ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L259",
+      "original_text": "| **上下文长度** | 是否支持足够长的上下文？ | ⭐⭐⭐ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 259,
+        "line_end": 259
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **上下文长度** | 是否支持足够长的上下文？ | ⭐⭐⭐ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L260",
+      "original_text": "| **多模态能力** | 是否需要理解图片/音频/视频？ | ⭐⭐⭐ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 260,
+        "line_end": 260
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **多模态能力** | 是否需要理解图片/音频/视频？ | ⭐⭐⭐ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L261",
+      "original_text": "| **私有化部署** | 是否支持本地部署，数据不出境？ | ⭐⭐⭐ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 261,
+        "line_end": 261
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **私有化部署** | 是否支持本地部署，数据不出境？ | ⭐⭐⭐ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L262",
+      "original_text": "| **生态兼容性** | API是否标准？SDK是否完善？ | ⭐⭐ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 262,
+        "line_end": 262
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **生态兼容性** | API是否标准？SDK是否完善？ | ⭐⭐ |"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L264",
+      "original_text": "#### 2. 多模型策略",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 264,
+        "line_end": 264
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2. 多模型策略"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L292",
+      "original_text": "### （三）Prompt管理工程",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 292,
+        "line_end": 292
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （三）Prompt管理工程"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L296",
+      "original_text": "#### 1. Prompt版本管理",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 296,
+        "line_end": 296
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 1. Prompt版本管理"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L311",
+      "original_text": "#### 2. Prompt A/B测试",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 311,
+        "line_end": 311
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2. Prompt A/B测试"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L321",
+      "original_text": "### （四）模型评测体系",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 321,
+        "line_end": 321
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （四）模型评测体系"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L334",
+      "original_text": "## 五、数据层设计：产品的\"记忆和知识库\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 334,
+        "line_end": 334
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 五、数据层设计：产品的\"记忆和知识库\""
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L336",
+      "original_text": "### （一）数据层的核心组成",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 336,
+        "line_end": 336
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）数据层的核心组成"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L348",
+      "original_text": "### （二）向量数据库：RAG的基石",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 348,
+        "line_end": 348
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）向量数据库：RAG的基石"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L352",
+      "original_text": "#### 1. 向量数据库的工作原理",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 352,
+        "line_end": 352
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 1. 向量数据库的工作原理"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L362",
+      "original_text": "#### 2. 主流向量数据库对比",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 362,
+        "line_end": 362
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2. 主流向量数据库对比"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L373",
+      "original_text": "#### 3. 分块策略（Chunking Strategy）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 373,
+        "line_end": 373
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 3. 分块策略（Chunking Strategy）"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L385",
+      "original_text": "### （三）数据管道：从原始数据到可用知识",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 385,
+        "line_end": 385
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （三）数据管道：从原始数据到可用知识"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L410",
+      "original_text": "### （四）数据回流与飞轮",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 410,
+        "line_end": 410
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （四）数据回流与飞轮"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L427",
+      "original_text": "*   用户点了\"👎\"，这条记录是否进入了Badcase库？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 427,
+        "line_end": 427
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   用户点了\"👎\"，这条记录是否进入了Badcase库？"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L428",
+      "original_text": "*   用户手动修改了AI生成的内容，修改前后的差异是否被记录？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 428,
+        "line_end": 428
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   用户手动修改了AI生成的内容，修改前后的差异是否被记录？"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L429",
+      "original_text": "*   哪些数据可以自动回流？哪些需要人工审核后才能回流？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 429,
+        "line_end": 429
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   哪些数据可以自动回流？哪些需要人工审核后才能回流？"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L433",
+      "original_text": "## 六、基础设施层：稳定运行的底座",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 433,
+        "line_end": 433
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 六、基础设施层：稳定运行的底座"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L435",
+      "original_text": "### （一）算力资源管理",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 435,
+        "line_end": 435
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）算力资源管理"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L459",
+      "original_text": "### （二）监控告警体系",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 459,
+        "line_end": 459
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）监控告警体系"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L472",
+      "original_text": "### （三）CI/CD与模型发布",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 472,
+        "line_end": 472
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （三）CI/CD与模型发布"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L494",
+      "original_text": "## 七、典型架构模式详解",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 494,
+        "line_end": 494
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 七、典型架构模式详解"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L496",
+      "original_text": "### （一）RAG系统架构",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 496,
+        "line_end": 496
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）RAG系统架构"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L509",
+      "original_text": "### （二）Agent系统架构",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 509,
+        "line_end": 509
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）Agent系统架构"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L513",
+      "original_text": "### （三）人机协同架构",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 513,
+        "line_end": 513
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （三）人机协同架构"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L535",
+      "original_text": "## 八、架构案例：AI智能客服系统",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 535,
+        "line_end": 535
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 八、架构案例：AI智能客服系统"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L537",
+      "original_text": "### （一）业务背景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 537,
+        "line_end": 537
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （一）业务背景"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L541",
+      "original_text": "### （二）完整架构设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 541,
+        "line_end": 541
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （二）完整架构设计"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L545",
+      "original_text": "### （三）关键模块说明",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 545,
+        "line_end": 545
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### （三）关键模块说明"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L558",
+      "original_text": "## 九、写在最后",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 558,
+        "line_end": 558
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 九、写在最后"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L581",
+      "original_text": "**新手AI PM**：先理解五层架构的基本概念，能画出自己产品的简单架构图。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 581,
+        "line_end": 581
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "**新手AI PM**：先理解五层架构的基本概念，能画出自己产品的简单架构图。"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L583",
+      "original_text": "**进阶AI PM**：深入理解模型层和数据层的设计，能参与技术选型决策。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 583,
+        "line_end": 583
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "**进阶AI PM**：深入理解模型层和数据层的设计，能参与技术选型决策。"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05-m07-L585",
+      "original_text": "**资深AI PM**：能基于业务目标设计完整的架构方案，平衡效果、成本、风险和扩展性。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 585,
+        "line_end": 585
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "**资深AI PM**：能基于业务目标设计完整的架构方案，平衡效果、成本、风险和扩展性。"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05.interview.m07.five-layer-trace.001",
+      "original_text": "## 一、AI产品的经典五层架构\n\n如果把一个AI产品比作一家餐厅，那么它的五层架构可以这样理解：\n\n| 架构层 | 餐厅类比 | 核心职责 | 关键问题 |\n| --- | --- | --- | --- |\n| **应用层** | 餐厅大堂、服务员、菜单 | 用户直接接触的所有界面和交互 | 用户怎么点菜？怎么上菜？体验好不好？ |\n| **服务层** | 后厨调度、传菜系统、收银台 | 接收订单、协调各岗位、处理业务逻辑 | 订单怎么分配？怎么保证出菜顺序？怎么结账？ |\n| **模型层** | 主厨的大脑+手艺 | 理解需求、做出决策、生成内容 | 主厨水平如何？做什么菜最拿手？ |\n| **数据层** | 食材仓库、调料架、菜谱档案 | 存储所有原材料和成品，随时取用 | 食材新鲜吗？库存够吗？取用方便吗？ |\n| **基础设施层** | 厨房设备、水电煤、店面装修 | 提供稳定的运行环境 | 灶火够大吗？停电了怎么办？ |\n\n下面我们对每一层进行详细拆解。\n\n* * *\n\n## 二、应用层设计：用户的第一触点\n\n### （一）应用层的核心职责\n\n应用层是用户直接接触的产品形态，负责：\n\n*   **多端接入**：Web、App、小程序、浏览器插件、企业微信/钉钉机器人\n*   **交互设计**：输入框、按钮、语音入口、文件上传区域\n*   **AI状态反馈**：让用户知道\"AI正在思考\"\"AI正在生成\"\"AI遇到了问题\"\n*   **结果呈现**：如何把AI生成的内容展示得清晰、可信、可交互",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 15,
+        "line_end": 40
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m07.five-layer-trace.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m07.five-layer-trace.001",
+          "required_points": [
+            "沿请求说明应用、服务和模型职责及资料权限检查",
+            "说明数据资料/版本和基础设施运行保障，结果需校验展示",
+            "区分职责视图和物理部署，不能强制五个服务"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05.interview.m07.async-product-contract.001",
+      "original_text": "### （二）服务层的高可用设计\n\nAI产品的服务层需要特别考虑**模型服务的稳定性**：\n\n| 策略 | 说明 |\n| --- | --- |\n| **超时降级** | 模型响应超过5秒，自动返回\"请稍后再试\"或切换到轻量模型 |\n| **熔断机制** | 当模型API连续失败时，暂时停止调用，避免雪崩 |\n| **负载均衡** | 多个模型实例之间分配请求，避免单点过载 |\n| **异步处理** | 对于耗时任务（如生成长文、分析大数据），采用\"先接收→后台处理→完成后通知\"的模式 |\n| **缓存复用** | 对相同/相似的问题，直接返回缓存结果，减少模型调用 |\n\n* * *",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 226,
+        "line_end": 238
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m07.async-product-contract.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m07.async-product-contract.001",
+          "required_points": [
+            "应用定义真实状态及查询/通知/取消的用户路径",
+            "服务维护任务身份、转换与失败/交付条件",
+            "数据持久化任务结果关系并支持恢复，按可取合格结果判完成"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.7",
+      "objective_id": "ch05.interview.m07.review-capacity.001",
+      "original_text": "### （三）人机协同架构\n\n```\n用户输入\n    ↓\nAI自动处理（95%的场景）\n    ├── 置信度高 → 直接输出结果\n    └── 置信度低 → 进入人工审核队列\n            ↓\n    人工审核（5%的场景）\n        ├── 通过 → 输出结果 + 记录为\"好case\"\n        ├── 修改 → 输出修改后结果 + 记录\"AI初稿+人工修正\"\n        └── 拒绝 → 返回提示 + 记录为\"坏case\"\n                    ↓\n            数据回流\n                ├── 好case → 强化学习正样本\n                ├── 人工修正 → 微调数据\n                └── 坏case → 安全规则库 + Prompt优化\n```\n\n* * *",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.7-AI产品的结构如何设计.md",
+        "content_hash": "c3209a09add5096d6e521722dd675df3e1b070a1b9e1c05d8e938c350ae1a4b1",
+        "line_start": 513,
+        "line_end": 533
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m07.review-capacity.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m07.review-capacity.001",
+          "required_points": [
+            "按时段/类型估转入量与实际可用人数、审核时间",
+            "检查积压、等待和交付期限，产能不是点击确认速度",
+            "服务控范围排队、应用真实告知、运营保证责任能力，关键风险不能绕过"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 3,
+    "batch_ids": [
+      "ch05-interview-20261022-m07"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch05.interview.m07.five-layer-trace.001": "a95ee1d88f9bfee0affb89fdcf380859acf9a5ed84881e54cc9f3ebf73301958",
+    "ch05.interview.m07.async-product-contract.001": "acd530fe6d8ab23be195cd1a27a422e8874c85c802edde64e755b81b7d25ed98",
+    "ch05.interview.m07.review-capacity.001": "9ec761f373d16a253ec68cfb388046f32d09fc8c792ecc7cf2fc17e49987ed0a"
+  }
+}

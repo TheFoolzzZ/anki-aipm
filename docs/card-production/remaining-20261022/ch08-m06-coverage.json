@@ -1,0 +1,294 @@
+{
+  "module_id": "8.6",
+  "module_key": "ch08-m06",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+    "content_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+    "line_count": 90
+  },
+  "native_objective_count": 1,
+  "registered_native_count": 1,
+  "native_registration_coverage": 1,
+  "accepted_card_count": 0,
+  "published_card_count": 0,
+  "publication_coverage": 0,
+  "practice_status": "designed_not_executed",
+  "practice_execution_count": 0,
+  "existing_active_card_count": 0,
+  "new_draft_card_count": 2,
+  "objectives": [
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-O001",
+      "original_text": "_思考题：如果你负责一款垂直服务 App（比如酒店预订），你会选择自己做 Agent，还是接入微信/支付宝的 Agent 生态？各自的利弊是什么？_",
+      "source_type": "原生思考题",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 89,
+      "line_start": 89,
+      "line_end": 89,
+      "decision": "拆分",
+      "reason": "自建/接入优劣不以真实“小微”范围为前提；交易和排序是路线的必要约束。；终审合并重复新卡，实际复用ch08.interview.m01.openness-choice.001，只承接路线/壁垒机制，完整原生情境保留母题。",
+      "edited_objective": "酒店服务的渠道路线、交易责任与规则依赖",
+      "card_keys": [
+        "ch08.interview.m01.openness-choice.001",
+        "ch08.interview.m06.hotel-transaction-responsibility.001",
+        "ch08.interview.m06.ranking-and-dependence.001"
+      ],
+      "mother_question_id": "ch08-m06-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-O002",
+      "original_text": "1.   **Agent 入口的竞争，本质上是生态竞争。** 模型能力会快速拉平，但小程序数量、支付闭环、用户关系链这些生态壁垒很难复制。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 63,
+      "line_start": 63,
+      "line_end": 63,
+      "decision": "合并",
+      "reason": "不接受模型必拉平或生态必胜，转为渠道资源与规则的条件比较。；终审合并重复新卡，实际复用ch08.interview.m01.openness-choice.001，只承接路线/壁垒机制，完整原生情境保留母题。",
+      "edited_objective": "入口价值取决于可交付供给及规则",
+      "card_keys": [
+        "ch08.interview.m01.openness-choice.001",
+        "ch08.interview.m06.ranking-and-dependence.001"
+      ],
+      "mother_question_id": "ch08-m06-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-O003",
+      "original_text": "2.   **对于服务类产品，要重新思考\"被 AI 调用\"的策略。** 你的产品是希望用户打开 App 使用，还是愿意被 Agent 作为能力层调用？两种方式对应的商业模式完全不同。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 65,
+      "line_start": 65,
+      "line_end": 65,
+      "decision": "采用",
+      "reason": "保留服务方被调用战略，具体到酒店品牌和售后。；终审合并重复新卡，实际复用ch08.interview.m01.openness-choice.001，只承接路线/壁垒机制，完整原生情境保留母题。",
+      "edited_objective": "自建/接入/混合的可持续选择",
+      "card_keys": [
+        "ch08.interview.m01.openness-choice.001"
+      ],
+      "mother_question_id": "ch08-m06-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-O004",
+      "original_text": "3.   **自然语言交互会改变产品形态。** 用户可能不再需要翻找菜单、填写表单，而是直接说需求。产品设计的重点会从\"界面设计\"转向\"意图理解和结果交付\"。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 67,
+      "line_start": 67,
+      "line_end": 67,
+      "decision": "采用",
+      "reason": "自然语言不替代日期、价格与责任确认，状态按真实业务结果。",
+      "edited_objective": "从意图到酒店预订与支付确认",
+      "card_keys": [
+        "ch08.interview.m06.hotel-transaction-responsibility.001"
+      ],
+      "mother_question_id": "ch08-m06-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-O005",
+      "original_text": "4.   **平台规则会决定 Agent 的天花板。** 微信、支付宝对 Agent 能调用什么、不能调用什么、怎么抽成、怎么分配流量，都会深刻影响 Agent 产品的形态。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 69,
+      "line_start": 69,
+      "line_end": 69,
+      "decision": "采用",
+      "reason": "规则作用可分析，但不推断真实平台现行抽成。",
+      "edited_objective": "候选排序透明及规则变化的净收益",
+      "card_keys": [
+        "ch08.interview.m06.ranking-and-dependence.001"
+      ],
+      "mother_question_id": "ch08-m06-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-O006",
+      "original_text": "5.   **Agent 时代，用户关系可能被平台截断。** 如果用户只通过\"小微\"订酒店，携程/美团的品牌价值和用户粘性会被稀释。服务方需要思考如何在 Agent 生态中保持存在感。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 71,
+      "line_start": 71,
+      "line_end": 71,
+      "decision": "合并",
+      "reason": "用户关系可能被削弱是风险假设，纳入契约与多渠道策略。；终审合并重复新卡，实际复用ch08.interview.m01.openness-choice.001，只承接路线/壁垒机制，完整原生情境保留母题。",
+      "edited_objective": "保留服务身份与可承接售后",
+      "card_keys": [
+        "ch08.interview.m01.openness-choice.001",
+        "ch08.interview.m06.ranking-and-dependence.001"
+      ],
+      "mother_question_id": "ch08-m06-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-O007",
+      "original_text": "*   如果你做的是超级 App，要想的是如何让 AI 成为生态的统一入口\n*   如果你做的是垂直服务，要想的是如何在 Agent 生态中保持被调用的价值\n*   如果你做的是 AI 产品，要想的是如何连接尽可能多的服务闭环",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 81,
+      "line_start": 81,
+      "line_end": 83,
+      "decision": "合并",
+      "reason": "三类岗位建议作母题视角，不额外背角色分类。；终审合并重复新卡，实际复用ch08.interview.m01.openness-choice.001，只承接路线/壁垒机制，完整原生情境保留母题。",
+      "edited_objective": "平台管入口与规则，服务方管供给售后，AI管意图与状态反馈",
+      "card_keys": [
+        "ch08.interview.m01.openness-choice.001",
+        "ch08.interview.m06.hotel-transaction-responsibility.001",
+        "ch08.interview.m06.ranking-and-dependence.001"
+      ],
+      "mother_question_id": "ch08-m06-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-F008",
+      "original_text": "6 月，微信宣布开放 AI 生态，灰度测试智能体\"小微\"。用户可以在微信内通过自然语言，让 AI 调用小程序完成订餐、比价、订酒店、打车等操作。首批内测应用包括美团、携程、同程、滴滴、猫眼等。\n\n几乎同时，支付宝推出 AI 版，智能体定名\"阿宝\"。两大超级 App 同时把 Agent 入口摆到了台面上。\n\n## 一、为什么超级 App 是 AI 入口的最佳土壤？\n\n微信做\"小微\"有一个得天独厚的优势：**小程序生态**。\n\n根据阿拉丁研究院数据，截至 2026 年一季度，微信小程序数量达到 840 万，占全网小程序的 70%。QuestMobile 数据则显示，2026 年 3 月微信小程序月活用户规模已达 9.73 亿。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 5,
+      "line_start": 5,
+      "line_end": 13,
+      "decision": "延期核实",
+      "reason": "小微/阿宝时间、灰度范围、生态数量及活跃数据未按官方公告确认；社区托管不等于官方。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-F009",
+      "original_text": "从现有信息看，\"小微\"的核心能力是：\n\n*   **理解用户自然语言意图**：\"帮我找一家附近的火锅店，人均 100 以下\"\n*   **调用小程序完成任务**：打开美团、大众点评等小程序选店、下单\n*   **打通支付闭环**：通过微信支付完成扣款\n\n更具体的一个案例是：6 月 17 日，微信支付接入腾讯桌面智能体 WorkBuddy，用户可以通过微信下指令，WorkBuddy 选品购买，再用微信支付专为 AI 开通的扣款渠道付钱。\n\n这说明腾讯内部的 Agent 布局正在打通：微信负责入口和支付，WorkBuddy 负责桌面执行，小程序负责服务供给。\n\n## 三、支付宝\"阿宝\"的应对：另一种入口思路\n\n支付宝推出\"阿宝\"，逻辑和\"小微\"类似：也是通过 Agent 调用支付宝小程序完成服务。\n\n但两者的禀赋不同：\n\n| 维度 | 微信\"小微\" | 支付宝\"阿宝\" |\n| --- | --- | --- |\n| 用户关系 | 社交关系链 | 交易和金融关系链 |\n| 小程序生态 | 840 万小程序，生活服务和社交为主 | 小程序数量仅次于微信，金融和本地生活强 |\n| 支付能力 | 微信支付 | 支付宝支付 |\n| 使用场景 | 聊天场景中自然触发 | 消费、理财、办事场景中触发 |\n| 核心优势 | 高频社交 + 海量小程序 | 交易闭环 + 信用体系 |",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 25,
+      "line_start": 25,
+      "line_end": 47,
+      "decision": "延期核实",
+      "reason": "具体商户调用、WorkBuddy支付渠道、能力及覆盖仍需逐项一手证明；不写入题卡事实。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.6",
+      "objective_id": "ch08-m06-F010",
+      "original_text": "微信\"小微\"和支付宝\"阿宝\"的上线，标志着中国互联网的竞争从\"App 之争\"进入了\"Agent 入口之争\"。\n\n未来的用户可能不再说\"打开美团点个外卖\"，而是说\"帮我点份外卖\"。至于背后是哪个 App 提供的服务，用户可能并不关心。\n\n这对产品经理的影响是深远的：\n\n*   如果你做的是超级 App，要想的是如何让 AI 成为生态的统一入口\n*   如果你做的是垂直服务，要想的是如何在 Agent 生态中保持被调用的价值\n*   如果你做的是 AI 产品，要想的是如何连接尽可能多的服务闭环\n\nAgent 不会消灭 App，但它会重新定义 App 的入口形态和商业逻辑。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+      "source_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+      "source_line": 75,
+      "line_start": 75,
+      "line_end": 85,
+      "decision": "延期核实",
+      "reason": "时代切换与用户不关心品牌是作者预测，不作已验证趋势。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    }
+  ],
+  "scope_notes": [
+    "原生开放问题与正文编辑补题分别统计；登记率不等于发布覆盖。",
+    "所有草稿未审校，未发布，未运行产品或实践；不据卡片标题宣称覆盖。",
+    "与8.1的公共运力路线比较不同，本课评分固定在酒店中介生态的确认/支付分离、跨平台售后、候选范围和分发规则；不再新增一般自然语言交互定义卡。"
+  ],
+  "mother_questions": [
+    {
+      "id": "ch08-m06-M1",
+      "prompt": "假设你负责一家酒店预订App，可自建Agent或接入超级App的Agent生态。如何比较路线、安排订单与支付责任、控制排名与渠道依赖？",
+      "answer": "S：假设我们有酒店供给与售后能力，但外部平台掌握高频入口和支付；具体平台产品、商户范围均未作为事实。\nT：我会争取可持续的增量预订，同时保证用户知道由谁提供服务、谁负责退款和投诉。\nA：一、比较自建、接入和混合：自建保留关系和深度服务但需获客与维护；接入可能降低发现成本，却引入抽成、数据限制与排名变化。用同一目标客群和完整贡献口径测增量及原App迁移，不按流量规模决策。二、把意图与订单状态分开：入住日期、人数、取消条件和总价未确认先补问；酒店库存/报价有效性、预订、支付和取消各有真实回执。入口说“已订”不等于酒店已确认，超时先查原单，不盲重试，未结事项有明确责任人。三、接入契约保留服务方身份、必要订单查询与售后通路；用户授权范围外的聊天、通讯录或支付信息不因生态合作自动开放。四、对比价与推荐规则要求可解释的候选范围、排序及商业激励披露；给用户偏好控制和到原服务确认的选项，避免把平台优先服务误称为全市场最优。五、保留合理的自有服务与可迁移订单出口，模拟抽成上升、排名下降或接口中断时的承接方式。\nR：只有增量贡献、预订准确与售后体验可持续才扩围；若主要搬运老客、用户关系无法维持或责任链断裂，应限范围、重谈契约或保留自建路线。这里是可审阅方案，没有真实预订、支付或平台测试。",
+      "card_keys": [
+        "ch08.interview.m06.hotel-channel-choice.001",
+        "ch08.interview.m06.hotel-transaction-responsibility.001",
+        "ch08.interview.m06.ranking-and-dependence.001"
+      ],
+      "status": "draft"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "ch08-m06-P1",
+      "task": "30–45分钟，做酒店自建/接入/混合比较表、一次预订与取消状态图、渠道规则变更应对表；使用假设酒店和价格，不操作真实订单。",
+      "acceptance": "表中比较获客/抽成/数据关系/维护与增量贡献；状态图含报价有效性、授权、订单支付分别核验及超时原单查询；规则表含候选与商业激励透明、订单售后可承接、可停止条件。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "final_editorial_decision": {
+    "removed_unpublished_key": "ch08.interview.m06.hotel-channel-choice.001",
+    "reused_current_key": "ch08.interview.m01.openness-choice.001",
+    "reason": "独立审校确认无新增独立机制，合并复用；原生综合情境仍由本模块母题/实践承接，未执行。"
+  },
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 2,
+    "batch_ids": [
+      "ch08-interview-20261022-m06"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m06.hotel-transaction-responsibility.001": "3dda8c746e74a8a7fac78169fc9901e6dc68c4a2f84222b47e500342f518e8ed",
+    "ch08.interview.m06.ranking-and-dependence.001": "2740ae437ffc9c9acdee55d799f4c6d971eff4925664ee22a3393dcf0f89c85a"
+  }
+}

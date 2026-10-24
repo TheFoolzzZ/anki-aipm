@@ -1,0 +1,1117 @@
+{
+  "module_id": "ch08-m14",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+    "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+    "line_start": 1,
+    "line_end": 569
+  },
+  "existing_cards": 0,
+  "new_cards": 14,
+  "revised_cards": 0,
+  "native_objectives": 28,
+  "registered_native_objectives": 28,
+  "registration_coverage": 1,
+  "publication_coverage": 0,
+  "practice_executed": 0,
+  "review_completed": 0,
+  "card_content_hash_algorithm": "SHA256(canonicalJson(card去掉review字段))；复用scripts/content-batch-lib.ts的canonicalJson，对象键排序、数组顺序保留、UTF-8",
+  "card_content_hashes": {
+    "ch08.interview.m14.task-contract.001": "c28e36480028b3402a50b7701e41743d77f895bb08ffa64ff7cfefc5a6ffb182",
+    "ch08.interview.m14.memory-boundary.001": "9ed21de9c1fa1b32bdeed6d782f99c3fc93af00622c06bf12fa3518b53fed7c9",
+    "ch08.interview.m14.team-routing.001": "110347acc7b744aa843bffcbae58d6806861a5735460d2752e4e4b5fea30e715",
+    "ch08.interview.m14.handoff-state.001": "e6d213cd401fe7fc3ad87728353f33d4d8d380358d505d069b4179a11de4187d",
+    "ch08.interview.m14.routine-generalization.001": "95d053fb6166f476b046b4da1d748e3e5c1a522614d980a36727ecf4abe4de4a",
+    "ch08.interview.m14.feedback-regression.001": "04209c27df4f9ebadbf6e4649a192f27f752fbc7e4bfb1bb935569836a1a91e4",
+    "ch08.interview.m14.identity-isolation.001": "2aa421106688d12629c035678b139fd6f8c0db1d3953cfa2aa8d09cec198f898",
+    "ch08.interview.m14.tool-selection.001": "5cd5fa6a4bab63b9e01c751ae0f262aab35b78aef6c4c49cb3829b75527830fd",
+    "ch08.interview.m14.approval-contract.001": "46dfefe73f7d61fef941e47ff8d87fc3754b59d13e54a9989fba8072c717b3f2",
+    "ch08.interview.m14.task-cost-diagnosis.001": "cfce92163cae0013ec89a8e563a48a6bac545b86df255c6e65a7ac12a4d49901",
+    "ch08.interview.m14.release-evidence.001": "7543933171280b5d7463aff271818bb14b90f3da54482dbbd9c8746de81792a3",
+    "ch08.interview.m14.automation-modes.001": "7f993ba7e1dba0763eb509711c7cc9c650bc99f3359fc65206525bd9d41d70c5",
+    "ch08.interview.m14.unattended-quality.001": "201673ebb20677d71874ceb6845ef7be3a4029191d5dd5624db3709176618ba8",
+    "ch08.interview.m14.adoption-evidence.001": "8021af1e0b1691587bbd8376fdaca37af244d3f1bac9f09bcb0927f1998245be"
+  },
+  "records": [
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F01",
+      "original_text": "**1. 它和我直接用 Grok 聊天有什么区别？**\nGrok 回答问题，Grok Bot 完成工作。前者给你一段话，后者给你一个结果——一张表格、一封已发送的邮件、一个部署好的页面。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 525,
+        "line_end": 526
+      },
+      "disposition": "拆分",
+      "reason": "保留聊天产出与工具交付的比较，改写为假设任务合同；不承诺任何厂商已经能完成全部任务。",
+      "actual_card_keys": [
+        "ch08.interview.m14.task-contract.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F02",
+      "original_text": "**2. 一定要付费才能体验吗？**\n不用。8 月 21 日之后人人可开限量免费试用，入门篇全部玩法可零成本验证（注意试用有期限与地区变量，见第 00 章）。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 528,
+        "line_end": 529
+      },
+      "disposition": "延期核实",
+      "reason": "免费体验、日期、期限、地区与当前资格须实时官方核对；M3和P2仅提供核验路径，不表示资格问题已回答。",
+      "actual_card_keys": [],
+      "mother_ids": [
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P2"
+      ],
+      "origin": "原生",
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F03",
+      "original_text": "**3. 我的电脑会被它控制吗？**\n不会。Bot 在云端虚拟机里干活，不碰本地设备。想让它能触达本地资源，是你主动经 Tailscale 这类工具开的反向通道。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 531,
+        "line_end": 532
+      },
+      "disposition": "拆分",
+      "reason": "云端/本地可达及主动通道是不同边界，按假设共享环境评分；不背产品绝不碰本地的保证。",
+      "actual_card_keys": [
+        "ch08.interview.m14.identity-isolation.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F04",
+      "original_text": "**4. 它会乱动我的账号吗？**\n行为边界由授权范围和 Auto-review 共同决定。实践建议两条：独立邮箱身份隔离、支付类卡片逐张确认（见第 07、08 章）。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 534,
+        "line_end": 535
+      },
+      "disposition": "拆分",
+      "reason": "独立邮箱和Auto-review非充分隔离，需共享资源权限与可辨认审批。",
+      "actual_card_keys": [
+        "ch08.interview.m14.identity-isolation.001",
+        "ch08.interview.m14.approval-contract.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F05",
+      "original_text": "**5. 手机关机它还干活吗？**\n干活。它跑在云端，这是它和本地 agent 最本质的区别之一。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 537,
+        "line_end": 538
+      },
+      "disposition": "拆分",
+      "reason": "提炼云端持续任务与客户端生命周期、真正暂停控制的区别，非考具体产品现状。",
+      "actual_card_keys": [
+        "ch08.interview.m14.automation-modes.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F06",
+      "original_text": "**6. 一个人最多养几个 Bot？**\n没有硬上限，实际管理上限约五到八个，再多你会记不住谁是谁——这正是总监模式存在的原因。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 540,
+        "line_end": 541
+      },
+      "disposition": "延期核实",
+      "reason": "产品硬上限及五到八个管理结论无充分证据；M3保留以边际收益扩编的完整回答，规则数值仍待核。",
+      "actual_card_keys": [
+        "ch08.interview.m14.team-routing.001",
+        "ch08.interview.m14.adoption-evidence.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1",
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P2"
+      ],
+      "origin": "原生",
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F07",
+      "original_text": "**7. 额度总是不够用怎么办？**\n先按第 09 章六个吞金兽自查，再把重复性工作 routine 化，通常能省一半以上。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 543,
+        "line_end": 544
+      },
+      "disposition": "拆分",
+      "reason": "额度诊断与同质量成本验证可迁移；不采用通常省一半或Routine必省结论。",
+      "actual_card_keys": [
+        "ch08.interview.m14.task-cost-diagnosis.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F08",
+      "original_text": "**8. 它干的活我能改吗？**\n能，而且要改。用嘴告诉它哪里不对、应该怎样，它会记住修正，下次同类任务直接做对。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 546,
+        "line_end": 547
+      },
+      "disposition": "拆分",
+      "reason": "纠正是否生效由新会话留出/回归证据判断，不把会记住当已训练。",
+      "actual_card_keys": [
+        "ch08.interview.m14.feedback-regression.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F09",
+      "original_text": "**9. 中文场景好用吗？**\n好使。大量中文用户在跑公众号选题、社群运营、电商客服质检这类流程，第 05 章的本土化改造就是为此准备的。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 549,
+        "line_end": 550
+      },
+      "disposition": "拆分",
+      "reason": "中文好用不能背作者体验，改为本地化任务验收；本卡覆盖验证方法，不宣布真实产品达标。",
+      "actual_card_keys": [
+        "ch08.interview.m14.feedback-regression.001",
+        "ch08.interview.m14.adoption-evidence.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-F10",
+      "original_text": "**10. 现在入场上不上算？**\n产品还在快速迭代，但你的 routine、记忆和工作台都是积累项，起步越早复利越厚。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 552,
+        "line_end": 553
+      },
+      "disposition": "拆分",
+      "reason": "采用取舍需净收益与退出成本，反对早入场必复利；母题给完整可辩护选择。",
+      "actual_card_keys": [
+        "ch08.interview.m14.adoption-evidence.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-U01",
+      "original_text": "1. Routine 记录的是点击轨迹还是做事意图——两种说法都有证据；",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 515,
+        "line_end": 515
+      },
+      "disposition": "实践任务",
+      "reason": "轨迹/意图机制未知；卡片给可迁移对照方法，P1产出与执行仍未完成。",
+      "actual_card_keys": [
+        "ch08.interview.m14.routine-generalization.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-U02",
+      "original_text": "2. 记忆的管理入口（导出、删除、跨设备同步）什么时候开放；",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 516,
+        "line_end": 516
+      },
+      "disposition": "延期核实",
+      "reason": "记忆管理入口、导出删除与同步开放时间是版本功能未知项；安全测试设计不能冒充功能已经具备。",
+      "actual_card_keys": [
+        "ch08.interview.m14.memory-boundary.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P2"
+      ],
+      "origin": "原生",
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-U03",
+      "original_text": "3. 每周额度对应的任务量基准——官方给出换算表后，省钱心法可以更精确；",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 517,
+        "line_end": 517
+      },
+      "disposition": "延期核实",
+      "reason": "额度与任务量换算依任务与计费契约，未取得官方基准；诊断卡不编换算表。",
+      "actual_card_keys": [
+        "ch08.interview.m14.task-cost-diagnosis.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P2"
+      ],
+      "origin": "原生",
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-U04",
+      "original_text": "4. 驱动模型的组合策略——不同任务会不会自动分配不同型号；",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 518,
+        "line_end": 518
+      },
+      "disposition": "延期核实",
+      "reason": "实际驱动模型组合与自动路由是厂商内部事实，未核实，不从性能或档位倒推。",
+      "actual_card_keys": [],
+      "mother_ids": [
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P2"
+      ],
+      "origin": "原生",
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-U05",
+      "original_text": "5. Android 版上线时间。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 519,
+        "line_end": 519
+      },
+      "disposition": "延期核实",
+      "reason": "原文Android上线时间已具时效风险，题卡不背时间；官方概览平台信息仅在核验表按日期记录。",
+      "actual_card_keys": [],
+      "mother_ids": [
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P2"
+      ],
+      "origin": "原生",
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-C01",
+      "original_text": "1. 这个流程我自己手动跑熟过两次以上吗？没定型的流程教不出稳定的 routine；",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 323,
+        "line_end": 323
+      },
+      "disposition": "拆分",
+      "reason": "手动流程稳定性是候选条件，不把手跑两次当充分统计保证。",
+      "actual_card_keys": [
+        "ch08.interview.m14.routine-generalization.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-C02",
+      "original_text": "2. 每一步的判断能不能写成「如果……就……」？写得出来的才教得会；",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 324,
+        "line_end": 324
+      },
+      "disposition": "拆分",
+      "reason": "条件分支与停止要求由Routine契约承载，不能以是否写得出if就证明可自动化。",
+      "actual_card_keys": [
+        "ch08.interview.m14.routine-generalization.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-C03",
+      "original_text": "3. 中间有没有只有我知道的暗知识（某个后台入口、某个约定俗成的口径）？有的话先补进它的记忆再示范；",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 325,
+        "line_end": 325
+      },
+      "disposition": "拆分",
+      "reason": "暗知识转为最小且有版本的口径与输入，凭据和隐私不可灌入。",
+      "actual_card_keys": [
+        "ch08.interview.m14.memory-boundary.001",
+        "ch08.interview.m14.task-contract.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-C04",
+      "original_text": "4. 教完之后，前三次执行结果务必人工核对——教学期是最容易埋雷的时期，也是纠正成本最低的时期。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 326,
+        "line_end": 326
+      },
+      "disposition": "拆分",
+      "reason": "首次多次核对改为风险分层与回归证据，不背固定三次即可安全。",
+      "actual_card_keys": [
+        "ch08.interview.m14.routine-generalization.001",
+        "ch08.interview.m14.feedback-regression.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-W01",
+      "original_text": "这个月哪个 Bot 替我省的时间最多？",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 297,
+        "line_end": 297
+      },
+      "disposition": "拆分",
+      "reason": "按有效任务计入审核/返工后的净收益，不背省时实绩。",
+      "actual_card_keys": [
+        "ch08.interview.m14.task-cost-diagnosis.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1",
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-W02",
+      "original_text": "哪个 Bot 的产出我返工得最多？",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 297,
+        "line_end": 297
+      },
+      "disposition": "拆分",
+      "reason": "按错误类型与留出回归检查具体修正，不靠一句记住。",
+      "actual_card_keys": [
+        "ch08.interview.m14.feedback-regression.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1",
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-W03",
+      "original_text": "下周要不要调分工？",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 297,
+        "line_end": 297
+      },
+      "disposition": "拆分",
+      "reason": "按依赖交接和边际收益决定扩缩，而非固定人数。",
+      "actual_card_keys": [
+        "ch08.interview.m14.team-routing.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1",
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-R01",
+      "original_text": "好，现在回答那个所有人都会问的问题：Grok Bot 到底是什么？\n\n它跟 Grok 不是一回事。Grok 是聊天机器人——你问，它答；Grok Bot 是一支由多个 AI 组成的工作团队——你派活，它们干，从头干到尾，只在需要你拍板的时候才回来找你。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 30,
+        "line_end": 32
+      },
+      "disposition": "合并",
+      "reason": "“到底是什么”与F01重复，保留原文并用任务交付对照回答，不复述厂商身份。",
+      "actual_card_keys": [
+        "ch08.interview.m14.task-contract.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-R02",
+      "original_text": "> 「基于你对的了解，如果是你，你会怎么设置这个工作台？应该建立哪几个 Bot？它们的职位、职责和日常例行工作是什么？」\n\n它会自己在左侧栏帮你建出一排分工明确的 Bot，连头像和职位描述都替你写好。你只需要审一遍，删掉不需要的，改一改名。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 164,
+        "line_end": 166
+      },
+      "disposition": "实践任务",
+      "reason": "反向配置工作台作为P1任务合同/职责图练习；不实际创建Bot或导入全部背景。",
+      "actual_card_keys": [
+        "ch08.interview.m14.task-contract.001",
+        "ch08.interview.m14.team-routing.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-R03",
+      "original_text": "当你有三五个以上的 Bot，最大的问题不再是能力，是调度：这个活该派给谁？于是社区里人人都在做的第一件事，就是把第一个 Bot 设置成 **Chief of Staff（幕僚长/总监）**：置顶，命名成真人名，所有任务无脑丢给它。\n\n它的日常工作长这样：你发一句「研究一下最近的 AI 趋势，写封邮件发出去」，它回你一句「研究分给 Barry，写邮件分给 Cindy」，然后自动拆解、派发、追踪进度。你面对的始终只有一个对话框，复杂度全部沉到水面之下。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 202,
+        "line_end": 204
+      },
+      "disposition": "合并",
+      "reason": "调度去向与总监作用并入协作卡，主张需同任务边际收益验证。",
+      "actual_card_keys": [
+        "ch08.interview.m14.team-routing.001",
+        "ch08.interview.m14.handoff-state.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-R04",
+      "original_text": "1. **routine 记住的到底是「点击轨迹」还是「做事意图」？** 官方没明说。实测体感是两者混合：简单流程偏轨迹，复杂流程偏意图。这意味着目标网站的按钮位置大改版时，老 routine 可能失效——重要流程记得隔段时间抽查一次执行结果。\n2. **routine 会随你的纠正而进化。** 它执行错了你别自己上手返工，用嘴告诉它错在哪，下一次它会修正。骂人（划掉）反馈本身就是训练。\n3. **越通用的 routine 越值钱。** 别只教它「整理这一个文件夹」，教它「拿到一个新的资料目录该怎么整理」。前者是一次性宏，后者才是可迁移的能力。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 315,
+        "line_end": 317
+      },
+      "disposition": "合并",
+      "reason": "正文机制争论和纠正/迁移建议与U01/F08重复，完整保留并对应机制实验和回归，不夸大内部实现。",
+      "actual_card_keys": [
+        "ch08.interview.m14.routine-generalization.001",
+        "ch08.interview.m14.feedback-regression.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1",
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [
+        "ch08-m14-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-R05",
+      "original_text": "这一部分回答一个社区里每天都在讨论的问题：「很好用，但是额度烧得太快了，怎么办？」",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 368,
+        "line_end": 368
+      },
+      "disposition": "合并",
+      "reason": "额度为什么烧得快与F07相同，集中到成本诊断而非套餐记忆。",
+      "actual_card_keys": [
+        "ch08.interview.m14.task-cost-diagnosis.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-R06",
+      "original_text": "我判断这是未来三年最重要的变化之一。手机是这个变化的入口——因为人最自然的指挥方式，就是掏出手机给同事发条消息。至于这支 AI 团队最终会把我们解放出来，还是让我们沦为只会在审批卡片上点「同意」的角色，取决于接下来几年产品和我们自己的选择。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 476,
+        "line_end": 476
+      },
+      "disposition": "合并",
+      "reason": "解放时间或沦为盲签审批者是作者开放判断，用净收益与可辨认审批评价，不预言未来。",
+      "actual_card_keys": [
+        "ch08.interview.m14.approval-contract.001",
+        "ch08.interview.m14.adoption-evidence.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2",
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-task-contract",
+      "original_text": "### 第三步：派第一个真活\n\n挑一件你今天本来就要干的小事，比如：\n\n> 「帮我盯着这几个竞品的官网和公众号，有任何产品更新立刻总结成三句话发我。」\n\n或者：\n\n> 「把这周邮箱里所有的发票附件整理成一个表格，金额、日期、供应商三列。」\n\n第三个例子给内容创作者：\n\n> 「这是我最近十条笔记的标题和数据（粘贴进去）。找出互动最好的三条的共同点，然后按这个风格出十个新选题，每个配一句开头钩子。」\n\n这类任务有个妙处：它会反问你。实测中它会追问「你的目标读者是谁」「有没有你自己偏爱但数据一般的」，答完之后给出的选题质量明显高一截。所以并非所有活都要派完就走——**前三十秒的对答，往往决定整单活的质量**。判断标准很简单：执行类任务派完就走，创作类任务先来回两句再放手。\n\n对答结束就可以放下手机了。你会看到它在对话里简短地确认理解，接着就没声了——不是卡了，是它在云端的电脑上干活去了。干完（或者需要你审批）的时候，它会像同事发消息一样回来找你。\n\n### 一个重要的心态转变\n\n用惯了 ChatGPT 的人第一天最容易犯的错，是**守着屏幕等它回复**。Grok Bot 的正确用法恰恰相反：派完活就走。它是异步的，你是审批者不是监工。什么时候你真正接受了「派出去就不用管」，这个产品的价值才对你打开。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 170,
+        "line_end": 190
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：云端Agent的首个交付合同。云端Agent的结果是工具中的可核对状态，任务合同应约束输入、权限和证据。",
+      "actual_card_keys": [
+        "ch08.interview.m14.task-contract.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-memory-boundary",
+      "original_text": "### 第一步：别急着派活，先做自我介绍\n\n社区里公认的第一个正确动作，不是给 Bot 下命令，而是**先把你自己交代清楚**。往对话框里灌一切关于你的事：你是谁、做什么的、公司叫什么、每天重复在做什么、讨厌做什么、最近想推进什么事。想到什么写什么，不用 organized。\n\n这一步我叫它「大脑倾倒」。它是后续一切协作的地基——Bot 对你了解越多，派活时需要解释的背景就越少。\n\n### 第二步：让它反过来给你配置\n\n灌完之后，问它一句魔法提问：\n\n> 「基于你对的了解，如果是你，你会怎么设置这个工作台？应该建立哪几个 Bot？它们的职位、职责和日常例行工作是什么？」\n\n它会自己在左侧栏帮你建出一排分工明确的 Bot，连头像和职位描述都替你写好。你只需要审一遍，删掉不需要的，改一改名。\n\n这就是 Grok Bot 最反直觉也最迷人的地方：**传统 agent 工具让你配半天（选模型、调参数、写提示词、接插件），它把这些全删了——配置这个动作本身，也交给了 AI。**",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 154,
+        "line_end": 168
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：初始记忆如何最小化且可纠错。记忆减少重复说明也会固定旧口径、增加泄露与迁移负担，需要可管理性证据。",
+      "actual_card_keys": [
+        "ch08.interview.m14.memory-boundary.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-team-routing",
+      "original_text": "## 04 多智能体：给团队请一个总监\n\n### 总监模式\n\n当你有三五个以上的 Bot，最大的问题不再是能力，是调度：这个活该派给谁？于是社区里人人都在做的第一件事，就是把第一个 Bot 设置成 **Chief of Staff（幕僚长/总监）**：置顶，命名成真人名，所有任务无脑丢给它。\n\n它的日常工作长这样：你发一句「研究一下最近的 AI 趋势，写封邮件发出去」，它回你一句「研究分给 Barry，写邮件分给 Cindy」，然后自动拆解、派发、追踪进度。你面对的始终只有一个对话框，复杂度全部沉到水面之下。\n\n### 群聊：它们真的会互相说话\n\n这是 Grok Bot 最让我觉得「时代变了」的瞬间。你把几个 Bot 拉进同一条对话后，它们会**自发地互相发消息**。\n\n一个社区里流传很广的例子：让写代码的 Bot 开发一个功能，它会主动去给内容 Bot 发消息：“老板前几天在 X 上发的需求，上下文发我一下。”没人教它这么干——任务交接、上下文传递、进度同步，全部发生在你看不见的后台。\n\n配合云端共享的工作环境（一个 Bot 登录过的网站，另一个接手时不用重新登录），整支团队的协作顺滑度远超预期。\n\n### 分工的学问：按专线，不按工具\n\n官方推荐的分工方式是按「专线（lane）」划分：收件箱管理、开支报销、招聘、修 bug、日常运营，一条线一个专家。实践中有两条经验值得记住：\n\n- **按业务域切，不按软件切**。「负责邮件的 Bot」是好设计，「负责 Chrome 的 Bot」不是——工具只是手段，职责才是边界。\n- **花钱的事单独隔离**。支付相关的活固定交给一个专门的 Bot，授权范围最小化，出问题也最容易定位。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 198,
+        "line_end": 219
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：分工何时变成可验证的协作。组织名称只描述分工设想，协作机制需要实际依赖被可靠满足。",
+      "actual_card_keys": [
+        "ch08.interview.m14.team-routing.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-handoff-state",
+      "original_text": "一个社区里流传很广的例子：让写代码的 Bot 开发一个功能，它会主动去给内容 Bot 发消息：“老板前几天在 X 上发的需求，上下文发我一下。”没人教它这么干——任务交接、上下文传递、进度同步，全部发生在你看不见的后台。\n\n配合云端共享的工作环境（一个 Bot 登录过的网站，另一个接手时不用重新登录），整支团队的协作顺滑度远超预期。\n\n### 分工的学问：按专线，不按工具\n\n官方推荐的分工方式是按「专线（lane）」划分：收件箱管理、开支报销、招聘、修 bug、日常运营，一条线一个专家。实践中有两条经验值得记住：\n\n- **按业务域切，不按软件切**。「负责邮件的 Bot」是好设计，「负责 Chrome 的 Bot」不是——工具只是手段，职责才是边界。\n- **花钱的事单独隔离**。支付相关的活固定交给一个专门的 Bot，授权范围最小化，出问题也最容易定位。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 210,
+        "line_end": 219
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：共享工作台如何避免重复与串写。共享环境降低交接摩擦也扩大冲突面，消息到达不等于正确版本与责任已交接。",
+      "actual_card_keys": [
+        "ch08.interview.m14.handoff-state.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-routine-generalization",
+      "original_text": "## 06 Routine：示范一遍，它学一辈子\n\n### 机制\n\nRoutine 是 Grok Bot 里最接近「魔法」的功能。除了打字下指令，你可以**当着它的面把一件事完整操作一遍**——它跟着你的点击和输入看完全程，把过程存成一段可复用的流程。下次你说「照老规矩办」，它就自己执行。\n\n官方员工在发布公告里的证言：\"I showed it a workflow once and now I trust it to run on its own.\"（我给它演示了一遍流程，现在我相信它能自己跑了。）并且声称因此获得了两到三倍的效率提升——因为不再需要逐步审批。\n\n### 什么样的活适合做成 routine\n\n判断标准就一条：**步骤固定、判断很少**。适合的比如：每天的竞品巡查、每周的报表汇总、固定的数据搬运、格式不变的周报初稿。不适合的比如：需要临场判断的谈判、每次都不一样的方案写作。\n\n### 使用前要想清楚的三件事\n\n这部分官方没说透，是我实测和社群交流下来的经验：\n\n1. **routine 记住的到底是「点击轨迹」还是「做事意图」？** 官方没明说。实测体感是两者混合：简单流程偏轨迹，复杂流程偏意图。这意味着目标网站的按钮位置大改版时，老 routine 可能失效——重要流程记得隔段时间抽查一次执行结果。\n2. **routine 会随你的纠正而进化。** 它执行错了你别自己上手返工，用嘴告诉它错在哪，下一次它会修正。骂人（划掉）反馈本身就是训练。\n3. **越通用的 routine 越值钱。** 别只教它「整理这一个文件夹」，教它「拿到一个新的资料目录该怎么整理」。前者是一次性宏，后者才是可迁移的能力。\n\n### 教一条好 routine 的检查清单\n\n示范之前过一遍这四问：\n\n1. 这个流程我自己手动跑熟过两次以上吗？没定型的流程教不出稳定的 routine；\n2. 每一步的判断能不能写成「如果……就……」？写得出来的才教得会；\n3. 中间有没有只有我知道的暗知识（某个后台入口、某个约定俗成的口径）？有的话先补进它的记忆再示范；\n4. 教完之后，前三次执行结果务必人工核对——教学期是最容易埋雷的时期，也是纠正成本最低的时期。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 299,
+        "line_end": 326
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：怎样检验Routine是否可迁移。保存流程的内部机制不能靠宣传语判断，行为对照只能排除部分解释。",
+      "actual_card_keys": [
+        "ch08.interview.m14.routine-generalization.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-feedback-regression",
+      "original_text": "一是给 Barry 换弹药库——信息源从 X 大 V 换成公众号、即刻、知乎热榜和几档播客，输出改成适合直接转发的群发短讯；二是教 Cindy 识别中文商务邮件的常见套路（假报价、资源置换、群发海撒），噪音明显减少；三是加了一个原版没有的岗位——**素材管理员**，专管选题库和素材库，跟内容生产流程衔接。一句话总结：舰队结构可以照抄，弹药库必须换成本土供给。\n\n### 上手节奏与每周复盘\n\n扩编节奏建议「一周一个新员工」：第一周只养总监，把大脑倾倒做足；第二周补上你最烦的那件事对应的专家岗；第三周开始给老员工配 routine；第四周回头清理——两周没被派过活的 Bot 果断删掉。养 Bot 和养团队一样，冗员是悄悄发生的。\n\n每周再花十五分钟做一次复盘，只问三个问题：这个月哪个 Bot 替我省的时间最多？哪个 Bot 的产出我返工得最多？下周要不要调分工？给 Bot 的反馈要像带新人一样具体——「这个不行」没有用，「以后这类消息先用两句话总结再推给我」才有用。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 291,
+        "line_end": 297
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：口头纠正怎样变成可验证改进。反馈可能只改变当前上下文，也可能进入记忆或流程；没有跨任务回归不能确认范围。",
+      "actual_card_keys": [
+        "ch08.interview.m14.feedback-regression.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-identity-isolation",
+      "original_text": "配合云端共享的工作环境（一个 Bot 登录过的网站，另一个接手时不用重新登录），整支团队的协作顺滑度远超预期。\n\n### 分工的学问：按专线，不按工具\n\n官方推荐的分工方式是按「专线（lane）」划分：收件箱管理、开支报销、招聘、修 bug、日常运营，一条线一个专家。实践中有两条经验值得记住：\n\n- **按业务域切，不按软件切**。「负责邮件的 Bot」是好设计，「负责 Chrome 的 Bot」不是——工具只是手段，职责才是边界。\n- **花钱的事单独隔离**。支付相关的活固定交给一个专门的 Bot，授权范围最小化，出问题也最容易定位。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 212,
+        "line_end": 219
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：专用身份为何不能保证Bot隔离。身份、资源隔离与网络可达是不同层控制，必须检查真正承载操作的位置。",
+      "actual_card_keys": [
+        "ch08.interview.m14.identity-isolation.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-tool-selection",
+      "original_text": "## 07 工具箱：必装几件套\n\n裸的 Grok Bot 已经能用，但配上这几件社区公认的标配，战斗力翻倍：\n\n**Agent Mail（强烈推荐）**\n给每个 Bot 发一个独立的邮箱身份。千万别把私人 Gmail 密码交给任何一个 Bot——用 Agent Mail 给它们每人办一张「数字工牌」，再把这批邮箱作为员工邀请进你的各种后台。身份隔离是养 Bot 军团的第一课，先把这一步做对。\n\n**Vercel / Cursor Origin**\n写代码方向的 Bot 必备。AI 写完直接推送部署，一气呵成，不用你碰 git。\n\n**Tailscale**\n内网穿透神器。装上它，云端 Bot 可以反向访问你允许的本地设备——比如那台放着显卡的家用主机。社区里有人让 CTO Bot 远程调度家里的 5090 跑本地模型，就是这么玩的。\n\n**Last 30 Days**\n信息挖掘插件，能逆向调用全网社媒数据做趋势深挖。Barry 型内容监工 Bot 的标配弹药库。\n\n**MCP 接入**\nGrok Bot 支持 MCP 插件生态。虽然它的默认路线是「像人一样点界面」（这正是它能操作一切老旧系统的原因），但有干净 API 可用时，走接口永远更快更稳。优先级策略：能用接口的用接口，只能点界面的点界面。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 328,
+        "line_end": 345
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：接口和界面操作如何选择。接口减少某些视觉交互摩擦，但契约与权限才决定能否可靠完成特定任务。",
+      "actual_card_keys": [
+        "ch08.interview.m14.tool-selection.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-approval-contract",
+      "original_text": "## 08 Auto-review：它什么时候来找你签字\n\n### 触发时机\n\nAuto-review 是 Grok Bot 的审批机制。三种情况下它会停下来弹卡片问你：**涉及支付**、**敏感操作**、**它自己判断不确定**。\n\n卡片上是它想干的事和理由，你点头它继续，你摇头它换路。实测下来大部分日常任务全程安静，只有真正碰到钱和高危动作时才会打扰你。\n\n### 正确的使用姿势\n\n新手常犯的两个相反的错误：\n\n- **什么都审**：每一步都要看，等于回到了「监工模式」，两三倍的效率提升跟你没关系；\n- **什么都不看**：涉及支付的卡片还是值得扫一眼理由再点，配合下一章的额度心法一起用。\n\n我的习惯：**低风险的活提前批量授权，碰钱的卡片一张一张看。** 信任是分级的，不是开关。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 347,
+        "line_end": 362
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：低干预审批怎样避免盲签。共享会话让正确账号和批准绑定更重要；减少打扰不能以失去动作可辨认性为代价。",
+      "actual_card_keys": [
+        "ch08.interview.m14.approval-contract.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-task-cost-diagnosis",
+      "original_text": "## 09 额度是怎么烧完的\n\n先看结构：订阅带**每周使用额度**，超量按 token 计费。全球各地的玩家社区里，高频出现的反馈高度一致：**「两天就把一周额度干没了。」**\n\n复盘下来，额度的大头从来不在「派了多少活」，而在以下六个隐形吞金兽：\n\n1. **重复交代背景**。每个新会话都把公司背景重新讲一遍——这正是 03 章「大脑倾倒」要一次性做足的原因，背景沉淀得越充分，后续每次派活的 token 越省。\n2. **让高薪员工干杂活**。用主力 Bot 去做复制粘贴级别的操作，就像让 CFO 去贴发票。\n3. **失败的尝试**。指令模糊 → Bot 猜错方向 → 整条路径白跑。一次清晰的任务描述胜过三次返工。\n4. **无意义的轮询**。让它每隔几分钟查一次某个页面——这类「站岗型任务」最烧额度，应该改成事件驱动（发生了变化才行动）。\n5. **在一个 Bot 里无限连聊**。上下文像滚雪球，每一轮都为前面的全部历史重复买单。正确习惯是「一事一会话」：话题切换就开新对话，让旧结论沉淀进记忆再走。\n6. **杀鸡用牛车**。写份文档、做个 PPT，也拉起十几二十个 Bot 的舰队——调度和通信本身就是成本。任务越简单，团队应该越小：一个 Bot 够用，就别上五个。\n\n## 10 用最低的成本发挥最高的智能\n\n四条实测有效的省钱心法：\n\n**第一，任务分层。** 把活分成三档：机械重复的交给 routine（跑一次成本极低）；需要理解的交给普通 Bot；只有真正需要推理和创造的才交给主力 Bot。让每一层只吃自己该吃的那档算力。\n\n**第二，能 routine 化的坚决 routine 化。** 任何做过两次的流程，第三次之前教成 routine。Routine 化的本质是把「每次现场推理」变成「一次教学长期复用」，这是整个产品里性价比最高的一件事。\n\n**第三，结果验收前置。** 派活时就说清验收标准（「只要这三个字段」「不超过五句话」），避免它交付一大坨你再让它返工。返工是双倍计费。\n\n**第四，盯住每周的重置节奏。** 额度每周刷新，重活安排在周期前段，轻活往后排；快见底时切换到轻量任务或者干脆让它歇着，别在超量计费区里跑探索性任务——探索意味着高失败率，失败率意味着纯烧钱。\n\n### 一个示例演算\n\n把心法换成数字看（演算示意，非具体账单）。假设某档订阅的一周额度记作 100 单位：\n\n| 用法 | 典型构成 | 一周消耗 |\n|---|---|---|\n| 放任式 | 想到就派、重复交代背景、杂活全用主力 Bot | 约 120 单位，周末进超量区 |\n| 分层式 | 过半日常活 routine 化、杂活走轻量 Bot、主力只接需要理解的任务 | 约 55–70 单位，额度有余 |\n\n同一摊活，消耗差出一倍。这也是为什么省钱心法里最值钱的一条是 routine 化：它省的不是一次任务的钱，是把整类任务从「每次计费」变成「一次教学、长期复用」。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 370,
+        "line_end": 404
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：额度消耗如何定位与验收优化。额度、token与任务量不是一一对应，省钱必须保持业务质量和执行边界。",
+      "actual_card_keys": [
+        "ch08.interview.m14.task-cost-diagnosis.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-release-evidence",
+      "original_text": "> 你的任务是在网上找痛点。每天浏览行业论坛和社媒讨论，收集大家在抱怨什么、缺什么工具。发现值得做的痛点，先写一个最小验证方案给我，批准后再动手做 demo 扔出去测反馈。\n\n五张卡的共同结构值得注意：**职责 + 信息源 + 判断标准 + 汇报格式**。四样凑齐，Bot 才知道「干到什么程度算干完」——缺任何一样，你都会收到一堆方向正确但没法直接用的东西。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 283,
+        "line_end": 285
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：生成页面到正式发布有哪些门槛。工具把步骤连起来不消除业务授权和阶段验收，最终状态需独立证据。",
+      "actual_card_keys": [
+        "ch08.interview.m14.release-evidence.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-automation-modes",
+      "original_text": "## 11 无人值守：24 小时自动上班\n\n省钱只是守住下限，自动化的组合拳才是拉开上限。\n\n### 三种典型的无人值守形态\n\n**哨兵型**：定时扫描 + 异常上报。盯竞品、盯价格、盯舆情、盯服务器。平时完全静默，有事才说话。这是性价比最高、也最适合第一个上的形态。\n\n**流水线型**：多个 Bot 串成一条链。比如：Reed 发现痛点 → Build 做个小工具 → Dusty 发到社群收集反馈 → Cindy 汇总成一页报告。链条上每一环都是独立的 Bot，靠群聊消息接力。\n\n**夜班型**：把白天没算力跑的重活扔给夜里。过夜跑完五百条销售线索评分、凌晨跑数据清洗，早上睁眼收报告。云端虚拟机不吃你的电费，不用白不用。\n\n### 第一条流水线：手把手示例\n\n拿最常见的场景走一遍全流程——竞品动态自动日报。\n\n第一步，确保你有一个内容雷达型 Bot（上一章的 Barry），信息源已配好。第二步，让总监兼任编辑，下达这样的指令：\n\n> 每天晚上 9 点，把 Barry 当天推送的快讯合并去重，按「产品 / 融资 / 行业」分三类，每类挑最重要的不超过两条，做成一页日报发我。连续三天没有大事的日子，只发一行「今日无事」。\n\n第三步，连跑三天，每天花两分钟检查质量，不满意的地方用嘴反馈。第四步，稳定之后整条链路交给它们，你只看日报。\n\n这就是流水线的最小样本：**一个采集者 + 一个编辑者 + 一个固定触发时间**。跑顺之后横向复制即可——招聘线索、价格监控、舆情汇总，全是同一个模子。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 406,
+        "line_end": 428
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：三种无人值守形态怎样比较。无人值守方式改变触发与依赖，不改变对任务状态和副作用的责任。",
+      "actual_card_keys": [
+        "ch08.interview.m14.automation-modes.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-unattended-quality",
+      "original_text": "拿最常见的场景走一遍全流程——竞品动态自动日报。\n\n第一步，确保你有一个内容雷达型 Bot（上一章的 Barry），信息源已配好。第二步，让总监兼任编辑，下达这样的指令：\n\n> 每天晚上 9 点，把 Barry 当天推送的快讯合并去重，按「产品 / 融资 / 行业」分三类，每类挑最重要的不超过两条，做成一页日报发我。连续三天没有大事的日子，只发一行「今日无事」。\n\n第三步，连跑三天，每天花两分钟检查质量，不满意的地方用嘴反馈。第四步，稳定之后整条链路交给它们，你只看日报。\n\n这就是流水线的最小样本：**一个采集者 + 一个编辑者 + 一个固定触发时间**。跑顺之后横向复制即可——招聘线索、价格监控、舆情汇总，全是同一个模子。\n\n### 质量控制：无人值守的三道保险\n\n自动化越放手，质控越重要。我在用的三道保险：\n\n**验收标准前置。** 派活时就写清交付格式——几条、多少字、什么结构。格式不达标它自己就会重试，轮不到你来发现。\n\n**抽样复核。** 不必件件都查，但每周随机抽一两件成果核对原始来源。抽查处未必查出问题，它的意义一是让你心里有底，二是让 Bot 知道你会查。\n\n**异常上报通道。** 明确告诉它：「不确定的事不要自行猜测，整理成一个问题来问我。」无人值守系统最怕的不是出错，是出了错还一声不吭地继续跑。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 420,
+        "line_end": 438
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：云端日报怎样运行且可诊断。静默监控可能把未运行与无变化混淆，需要状态证据和内容证据两条链。",
+      "actual_card_keys": [
+        "ch08.interview.m14.unattended-quality.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M2"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m14",
+      "objective_id": "ch08-m14-E-adoption-evidence",
+      "original_text": "## 00 零成本开箱：限量免费试用\n\n8 月 21 日那轮扩权之后，Grok Bot 的门槛降到了人人可试：**官方宣布向所有用户开放限量免费试用，不再要求任何付费订阅**。先把预期校准——「限量」两个字是真的：社区实测通常有 7 天期限，额度大约够你把入门篇完整跑一遍；另外有部分地区的用户反馈需要相应的网络环境才能完成开通。所以它是一张体验票，不是永久免费版，但足够你验证这本书入门篇的所有玩法，再决定要不要付费。\n\n限量额度不多，更要花在刀刃上。我的建议是把试用期留给三件事：\n\n**第一，跑通一个完整闭环。** 挑一件今天本来就要干的小事（整理发票、盯一次竞品动态都行），完整体验一遍「派活 → 它去云端干活 → 回来交作业」的全流程。这个闭环一旦跑通，你就理解了这个产品和聊天机器人的本质区别。\n\n**第二，做一次大脑倾倒 + 反向配置。** 把自己的背景灌进去，让它替你搭出工作台的第一版。这一次配置的质量，决定你后面每一天的使用体验。\n\n**第三，示范一条最简单的 routine。** 找个步骤固定的五步以内小流程，当着它的面做一遍，然后让它独立重演。你会立刻明白「教员工」是什么感觉。\n\n试用期不建议干的两件事：一是急着拉五人舰队——费额度，而且你还没积累出分工直觉；二是跑长链条自动化——等进了阶篇再说。\n\n额度烧完之后怎么升级，按人群给三条路径：\n\n- **轻度自用**：Cursor Pro+（$60/月）是当前解锁 Grok Bot 的最低付费门槛；\n- **重度个人**：SuperGrok Plus（$100/月）或 Cursor Ultra（$200/月），额度宽裕得多；\n- **团队**：Cursor Teams（$40/席/月）全员可用，谁用得凶就给谁的席位升 Teams Premium（$120/席/月）。",
+      "source": {
+        "relative_path": "第8章-产品密谈/Grok-Bot-橙皮书.md",
+        "content_hash": "2e17ec1cf2a6732b861df2384fd7aa5401b772e3a15525ea264cf9e9df6faa2d",
+        "line_start": 60,
+        "line_end": 78
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：旧教程如何转为采购证据。采购结论需要规则可用性、任务价值和退出代价三类证据，不能互相替代。",
+      "actual_card_keys": [
+        "ch08.interview.m14.adoption-evidence.001"
+      ],
+      "mother_ids": [
+        "ch08-m14-M3"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    }
+  ],
+  "author_revision_date": "2026-10-24",
+  "author_revision_status": "draft_awaiting_independent_rereview",
+  "withdrawn_candidates": [],
+  "reused_card_keys": [],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 14,
+    "batch_ids": [
+      "ch08-interview-draft-20261022-m14"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m14.task-contract.001": "c28e36480028b3402a50b7701e41743d77f895bb08ffa64ff7cfefc5a6ffb182",
+    "ch08.interview.m14.memory-boundary.001": "9ed21de9c1fa1b32bdeed6d782f99c3fc93af00622c06bf12fa3518b53fed7c9",
+    "ch08.interview.m14.team-routing.001": "110347acc7b744aa843bffcbae58d6806861a5735460d2752e4e4b5fea30e715",
+    "ch08.interview.m14.handoff-state.001": "e6d213cd401fe7fc3ad87728353f33d4d8d380358d505d069b4179a11de4187d",
+    "ch08.interview.m14.routine-generalization.001": "95d053fb6166f476b046b4da1d748e3e5c1a522614d980a36727ecf4abe4de4a",
+    "ch08.interview.m14.feedback-regression.001": "04209c27df4f9ebadbf6e4649a192f27f752fbc7e4bfb1bb935569836a1a91e4",
+    "ch08.interview.m14.identity-isolation.001": "2aa421106688d12629c035678b139fd6f8c0db1d3953cfa2aa8d09cec198f898",
+    "ch08.interview.m14.tool-selection.001": "5cd5fa6a4bab63b9e01c751ae0f262aab35b78aef6c4c49cb3829b75527830fd",
+    "ch08.interview.m14.approval-contract.001": "46dfefe73f7d61fef941e47ff8d87fc3754b59d13e54a9989fba8072c717b3f2",
+    "ch08.interview.m14.task-cost-diagnosis.001": "cfce92163cae0013ec89a8e563a48a6bac545b86df255c6e65a7ac12a4d49901",
+    "ch08.interview.m14.release-evidence.001": "7543933171280b5d7463aff271818bb14b90f3da54482dbbd9c8746de81792a3",
+    "ch08.interview.m14.automation-modes.001": "7f993ba7e1dba0763eb509711c7cc9c650bc99f3359fc65206525bd9d41d70c5",
+    "ch08.interview.m14.unattended-quality.001": "201673ebb20677d71874ceb6845ef7be3a4029191d5dd5624db3709176618ba8",
+    "ch08.interview.m14.adoption-evidence.001": "8021af1e0b1691587bbd8376fdaca37af244d3f1bac9f09bcb0927f1998245be"
+  }
+}

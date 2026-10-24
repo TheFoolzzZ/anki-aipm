@@ -1,0 +1,2518 @@
+{
+  "module_id": "5.4",
+  "module_key": "ch05-m04",
+  "source_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+  "source_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+  "lf_line_count": 820,
+  "status": "draft",
+  "old_card_count": 4,
+  "draft_card_count": 4,
+  "new_card_count": 0,
+  "markdown_checklist_count": 5,
+  "box_item_count": 0,
+  "native_question_line_count": 42,
+  "registered": 109,
+  "registration_scope": "冻结源文中标题、含问号行、每个方框项及列明的章末行动目标；编辑目标另列，标题不计实际承载。 同一源句的编辑拆分子目标以parent_objective_id关联，登记条目增加不增加原生问句/清单源行数，也不计发布或实践完成。",
+  "publication_coverage": 0,
+  "practice_completed": 0,
+  "independent_review_completed": false,
+  "objectives": [
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L1",
+      "original_text": "# 5.4 如何合理评估AI产品的需求",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "# 5.4 如何合理评估AI产品的需求"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L11",
+      "original_text": "## 一、为什么AI产品需求的评估比传统产品更复杂",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 11,
+        "line_end": 11
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 一、为什么AI产品需求的评估比传统产品更复杂"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L13",
+      "original_text": "在深入方法论之前，我们先来理解一个根本问题：AI产品需求评估到底难在哪里？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 13,
+        "line_end": 13
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "在深入方法论之前，我们先来理解一个根本问题：AI产品需求评估到底难在哪里？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L15",
+      "original_text": "### 1.1 效果的不确定性：模型不是代码，不会\"按逻辑执行\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 15,
+        "line_end": 15
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.1 效果的不确定性：模型不是代码，不会\"按逻辑执行\""
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L27",
+      "original_text": "这意味着，当你评估一个\"AI自动生成会议纪要\"的需求时，你不能简单地问\"能做吗？\"，而必须问\"能做到多好的程度？80%的准确率用户能接受吗？\"",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 27,
+        "line_end": 27
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "这意味着，当你评估一个\"AI自动生成会议纪要\"的需求时，你不能简单地问\"能做吗？\"，而必须问\"能做到多好的程度？80%的准确率用户能接受吗？\""
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L29",
+      "original_text": "### 1.2 成本不可控：算力成本和数据成本是\"无底洞\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 29,
+        "line_end": 29
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.2 成本不可控：算力成本和数据成本是\"无底洞\""
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L49",
+      "original_text": "### 1.3 技术迭代快：今天的最优解，明天可能被淘汰",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 49,
+        "line_end": 49
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.3 技术迭代快：今天的最优解，明天可能被淘汰"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L61",
+      "original_text": "### 1.4 小结：AI需求评估的核心挑战",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 61,
+        "line_end": 61
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.4 小结：AI需求评估的核心挑战"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L80",
+      "original_text": "## 二、AI需求评估的四维框架",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 80,
+        "line_end": 80
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 二、AI需求评估的四维框架"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L84",
+      "original_text": "### 2.1 用户价值维度：这个需求到底值不值得做？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 84,
+        "line_end": 84
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.1 用户价值维度：这个需求到底值不值得做？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L88",
+      "original_text": "#### 2.1.1 需求真实性：是真需求还是伪需求？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 88,
+        "line_end": 88
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.1.1 需求真实性：是真需求还是伪需求？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L96",
+      "original_text": "| 替代方案调研 | 用户现在怎么解决这个问题？ | 用户已经在用某种低效方式解决，或因为麻烦而忍受 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 96,
+        "line_end": 96
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 替代方案调研 | 用户现在怎么解决这个问题？ | 用户已经在用某种低效方式解决，或因为麻烦而忍受 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L97",
+      "original_text": "| 付费意愿测试 | 直接问\"如果收费X元/月，你会用吗？\" | 超过30%的用户表示愿意付费 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 97,
+        "line_end": 97
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 付费意愿测试 | 直接问\"如果收费X元/月，你会用吗？\" | 超过30%的用户表示愿意付费 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L106",
+      "original_text": "#### 2.1.2 需求频次：是高频刚需还是低频偶发？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 106,
+        "line_end": 106
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.1.2 需求频次：是高频刚需还是低频偶发？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L119",
+      "original_text": "#### 2.1.3 痛点强度：用户有多\"痛\"？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 119,
+        "line_end": 119
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.1.3 痛点强度：用户有多\"痛\"？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L134",
+      "original_text": "#### 2.1.4 用户付费意愿：愿意为这个功能付多少钱？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 134,
+        "line_end": 134
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.1.4 用户付费意愿：愿意为这个功能付多少钱？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L140",
+      "original_text": "1.   **直接询问法**：\"如果这项服务收费99元/月，你愿意付费吗？\"",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 140,
+        "line_end": 140
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "1.   **直接询问法**：\"如果这项服务收费99元/月，你愿意付费吗？\""
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L150",
+      "original_text": "### 2.2 技术可行性维度：我们能不能做出来？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 150,
+        "line_end": 150
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.2 技术可行性维度：我们能不能做出来？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L154",
+      "original_text": "#### 2.2.1 当前模型能力是否满足？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 154,
+        "line_end": 154
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.2.1 当前模型能力是否满足？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L156",
+      "original_text": "这是AI需求评估最核心的技术问题。你需要回答：**现有的大模型/算法，能不能达到产品要求的准确率？**",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 156,
+        "line_end": 156
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "这是AI需求评估最核心的技术问题。你需要回答：**现有的大模型/算法，能不能达到产品要求的准确率？**"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L188",
+      "original_text": "#### 2.2.2 数据是否足够？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 188,
+        "line_end": 188
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.2.2 数据是否足够？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L194",
+      "original_text": "| 数据量 | 是否有至少几千到几万条标注数据？ | 量不够→高风险 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 194,
+        "line_end": 194
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 数据量 | 是否有至少几千到几万条标注数据？ | 量不够→高风险 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L195",
+      "original_text": "| 数据质量 | 数据是否准确、完整、无噪声？ | 质量差→高风险 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 195,
+        "line_end": 195
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 数据质量 | 数据是否准确、完整、无噪声？ | 质量差→高风险 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L196",
+      "original_text": "| 数据获取难度 | 数据是否容易获取？是否需要特殊授权？ | 难获取→高风险 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 196,
+        "line_end": 196
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 数据获取难度 | 数据是否容易获取？是否需要特殊授权？ | 难获取→高风险 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L197",
+      "original_text": "| 标注成本 | 标注一条数据需要多少成本和时间？ | 成本高→需谨慎 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 197,
+        "line_end": 197
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 标注成本 | 标注一条数据需要多少成本和时间？ | 成本高→需谨慎 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L198",
+      "original_text": "| 数据隐私 | 是否涉及用户隐私/商业机密？ | 涉隐私→需合规方案 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 198,
+        "line_end": 198
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 数据隐私 | 是否涉及用户隐私/商业机密？ | 涉隐私→需合规方案 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L213",
+      "original_text": "#### 2.2.3 算法团队能力匹配度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 213,
+        "line_end": 213
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.2.3 算法团队能力匹配度"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L217",
+      "original_text": "| 技术储备 | 团队是否做过类似任务？ | 有成功经验→低风险 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 217,
+        "line_end": 217
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 技术储备 | 团队是否做过类似任务？ | 有成功经验→低风险 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L218",
+      "original_text": "| 人员配置 | 是否有足够的算法工程师？ | 至少2-3名核心算法人员 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 218,
+        "line_end": 218
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 人员配置 | 是否有足够的算法工程师？ | 至少2-3名核心算法人员 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L219",
+      "original_text": "| 工程能力 | 是否有ML工程化经验？ | 模型上线、监控、迭代流程是否成熟 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 219,
+        "line_end": 219
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 工程能力 | 是否有ML工程化经验？ | 模型上线、监控、迭代流程是否成熟 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L220",
+      "original_text": "| 研究能力 | 是否需要前沿研究创新？ | 如果是SOTA级创新，需要研究型团队 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 220,
+        "line_end": 220
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 研究能力 | 是否需要前沿研究创新？ | 如果是SOTA级创新，需要研究型团队 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L222",
+      "original_text": "#### 2.2.4 算力成本评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 222,
+        "line_end": 222
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.2.4 算力成本评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L252",
+      "original_text": "### 2.3 商业可行性维度：能不能赚钱？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 252,
+        "line_end": 252
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.3 商业可行性维度：能不能赚钱？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L256",
+      "original_text": "#### 2.3.1 市场规模（TAM/SAM/SOM）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 256,
+        "line_end": 256
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.3.1 市场规模（TAM/SAM/SOM）"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L270",
+      "original_text": "#### 2.3.2 竞争格局分析",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 270,
+        "line_end": 270
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.3.2 竞争格局分析"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L274",
+      "original_text": "| 直接竞品 | 有没有成熟的同类产品？ | 差异化定位或正面竞争 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 274,
+        "line_end": 274
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 直接竞品 | 有没有成熟的同类产品？ | 差异化定位或正面竞争 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L275",
+      "original_text": "| 间接替代 | 用户现在用什么方式解决？（人工、传统软件） | 证明AI方案10倍优于替代方案 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 275,
+        "line_end": 275
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 间接替代 | 用户现在用什么方式解决？（人工、传统软件） | 证明AI方案10倍优于替代方案 |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L276",
+      "original_text": "| 技术壁垒 | 你的技术护城河是什么？ | 数据飞轮、独家算法、行业Know-how |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 276,
+        "line_end": 276
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 技术壁垒 | 你的技术护城河是什么？ | 数据飞轮、独家算法、行业Know-how |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L277",
+      "original_text": "| 巨头威胁 | BAT/字节/微软会不会跟进？ | 深耕垂直场景，巨头不愿意做的\"脏活累活\" |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 277,
+        "line_end": 277
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 巨头威胁 | BAT/字节/微软会不会跟进？ | 深耕垂直场景，巨头不愿意做的\"脏活累活\" |"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L279",
+      "original_text": "#### 2.3.3 变现路径",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 279,
+        "line_end": 279
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.3.3 变现路径"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L289",
+      "original_text": "#### 2.3.4 投入产出比（ROI）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 289,
+        "line_end": 289
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.3.4 投入产出比（ROI）"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L314",
+      "original_text": "### 2.4 风险可控维度：最坏的情况是什么？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 314,
+        "line_end": 314
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.4 风险可控维度：最坏的情况是什么？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L318",
+      "original_text": "#### 2.4.1 幻觉风险（Hallucination Risk）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 318,
+        "line_end": 318
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.4.1 幻觉风险（Hallucination Risk）"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L328",
+      "original_text": "#### 2.4.2 合规风险",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 328,
+        "line_end": 328
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.4.2 合规风险"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L337",
+      "original_text": "#### 2.4.3 伦理风险",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 337,
+        "line_end": 337
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.4.3 伦理风险"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L344",
+      "original_text": "#### 2.4.4 品牌风险",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 344,
+        "line_end": 344
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 2.4.4 品牌风险"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L355",
+      "original_text": "### 2.5 四维框架总结",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 355,
+        "line_end": 355
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.5 四维框架总结"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L385",
+      "original_text": "## 三、AI需求评估的实用工具",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 385,
+        "line_end": 385
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 三、AI需求评估的实用工具"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L389",
+      "original_text": "### 3.1 AI需求评分卡",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 389,
+        "line_end": 389
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.1 AI需求评分卡"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L393",
+      "original_text": "#### 评分卡模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 393,
+        "line_end": 393
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 评分卡模板"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L411",
+      "original_text": "#### 评分标准（1-5分）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 411,
+        "line_end": 411
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 评分标准（1-5分）"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L421",
+      "original_text": "#### 总分决策矩阵",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 421,
+        "line_end": 421
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 总分决策矩阵"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L435",
+      "original_text": "### 3.2 RICE模型在AI场景的改良版",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 435,
+        "line_end": 435
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.2 RICE模型在AI场景的改良版"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L458",
+      "original_text": "#### RICE评分示例",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 458,
+        "line_end": 458
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### RICE评分示例"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L466",
+      "original_text": "### 3.3 效果-成本矩阵",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 466,
+        "line_end": 466
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.3 效果-成本矩阵"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L486",
+      "original_text": "### 3.4 MoSCoW + 技术可行性交叉矩阵",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 486,
+        "line_end": 486
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.4 MoSCoW + 技术可行性交叉矩阵"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L497",
+      "original_text": "## 四、AI需求评估的完整流程",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 497,
+        "line_end": 497
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 四、AI需求评估的完整流程"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L501",
+      "original_text": "### 4.1 流程总览",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 501,
+        "line_end": 501
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.1 流程总览"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L519",
+      "original_text": "### 4.2 阶段一：需求收集",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 519,
+        "line_end": 519
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.2 阶段一：需求收集"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L529",
+      "original_text": "### 4.3 阶段二：初筛",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 529,
+        "line_end": 529
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.3 阶段二：初筛"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L535",
+      "original_text": "*   [ ] 需求是否与产品定位一致？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 535,
+        "line_end": 535
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 需求是否与产品定位一致？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L536",
+      "original_text": "*   [ ] 目标用户是否明确？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 536,
+        "line_end": 536
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 目标用户是否明确？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L537",
+      "original_text": "*   [ ] 是否有具体的业务场景？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 537,
+        "line_end": 537
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 是否有具体的业务场景？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L538",
+      "original_text": "*   [ ] 是否涉及违法违规？（如涉及，直接放弃）",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 538,
+        "line_end": 538
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 是否涉及违法违规？（如涉及，直接放弃）"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L539",
+      "original_text": "*   [ ] 是否是\"为了AI而AI\"？（纯炫技需求直接放弃）",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 539,
+        "line_end": 539
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 是否是\"为了AI而AI\"？（纯炫技需求直接放弃）"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L541",
+      "original_text": "### 4.4 阶段三：深度评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 541,
+        "line_end": 541
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.4 阶段三：深度评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L552",
+      "original_text": "### 4.5 阶段四：优先级排序",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 552,
+        "line_end": 552
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.5 阶段四：优先级排序"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L563",
+      "original_text": "### 4.6 阶段五：排期",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 563,
+        "line_end": 563
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.6 阶段五：排期"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L574",
+      "original_text": "## 五、实战案例",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 574,
+        "line_end": 574
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 五、实战案例"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L576",
+      "original_text": "### 案例一：评估\"AI自动生成会议纪要\"需求",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 576,
+        "line_end": 576
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 案例一：评估\"AI自动生成会议纪要\"需求"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L578",
+      "original_text": "#### 背景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 578,
+        "line_end": 578
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 背景"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L580",
+      "original_text": "某SaaS协同办公产品的产品经理小王，收到了很多用户反馈：\"能不能加一个功能，开会后自动出会议纪要？\"小王觉得这个需求很有价值，准备做一个评估。",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 580,
+        "line_end": 580
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "某SaaS协同办公产品的产品经理小王，收到了很多用户反馈：\"能不能加一个功能，开会后自动出会议纪要？\"小王觉得这个需求很有价值，准备做一个评估。"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L582",
+      "original_text": "#### 用户价值维度评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 582,
+        "line_end": 582
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 用户价值维度评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L591",
+      "original_text": "#### 技术可行性维度评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 591,
+        "line_end": 591
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 技术可行性维度评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L600",
+      "original_text": "#### 商业可行性维度评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 600,
+        "line_end": 600
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 商业可行性维度评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L609",
+      "original_text": "#### 风险可控维度评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 609,
+        "line_end": 609
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 风险可控维度评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L618",
+      "original_text": "#### 效果-成本矩阵定位",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 618,
+        "line_end": 618
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 效果-成本矩阵定位"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L624",
+      "original_text": "#### 综合评分卡",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 624,
+        "line_end": 624
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 综合评分卡"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L634",
+      "original_text": "#### 决策结论",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 634,
+        "line_end": 634
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 决策结论"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L645",
+      "original_text": "### 案例二：评估\"AI医疗诊断助手\"需求",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 645,
+        "line_end": 645
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 案例二：评估\"AI医疗诊断助手\"需求"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L647",
+      "original_text": "#### 背景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 647,
+        "line_end": 647
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 背景"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L649",
+      "original_text": "某互联网医疗公司的产品经理小李，接到老板的指示：\"现在AI这么火，我们能不能做一个AI医生，帮用户在线诊断？\"小李觉得这个需求需要慎重评估。",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 649,
+        "line_end": 649
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "某互联网医疗公司的产品经理小李，接到老板的指示：\"现在AI这么火，我们能不能做一个AI医生，帮用户在线诊断？\"小李觉得这个需求需要慎重评估。"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L651",
+      "original_text": "#### 用户价值维度评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 651,
+        "line_end": 651
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 用户价值维度评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L660",
+      "original_text": "#### 技术可行性维度评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 660,
+        "line_end": 660
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 技术可行性维度评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L669",
+      "original_text": "#### 商业可行性维度评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 669,
+        "line_end": 669
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 商业可行性维度评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L678",
+      "original_text": "#### 风险可控维度评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 678,
+        "line_end": 678
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 风险可控维度评估"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L687",
+      "original_text": "#### 效果-成本矩阵定位",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 687,
+        "line_end": 687
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 效果-成本矩阵定位"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L693",
+      "original_text": "#### 综合评分卡",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 693,
+        "line_end": 693
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 综合评分卡"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L703",
+      "original_text": "#### 决策结论",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 703,
+        "line_end": 703
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 决策结论"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L719",
+      "original_text": "## 六、常见误区",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 719,
+        "line_end": 719
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 六、常见误区"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L721",
+      "original_text": "### 误区一：低估数据准备成本",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 721,
+        "line_end": 721
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 误区一：低估数据准备成本"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L725",
+      "original_text": "> \"我们有用户行为日志，直接拿来做训练数据不就行了？\"",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 725,
+        "line_end": 725
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "> \"我们有用户行为日志，直接拿来做训练数据不就行了？\""
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L738",
+      "original_text": "### 误区二：高估模型效果",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 738,
+        "line_end": 738
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 误区二：高估模型效果"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L756",
+      "original_text": "### 误区三：忽视维护成本",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 756,
+        "line_end": 756
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 误区三：忽视维护成本"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L774",
+      "original_text": "### 误区四：忽视兜底策略",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 774,
+        "line_end": 774
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 误区四：忽视兜底策略"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L791",
+      "original_text": "### 误区五：为了AI而AI",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 791,
+        "line_end": 791
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 误区五：为了AI而AI"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L804",
+      "original_text": "*   评估前先问：这个功能用传统方法能不能做？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 804,
+        "line_end": 804
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   评估前先问：这个功能用传统方法能不能做？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L808",
+      "original_text": "## 七、写在最后",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 808,
+        "line_end": 808
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 七、写在最后"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L814",
+      "original_text": "1.   **先问用户价值**：用户真的需要吗？愿意付费吗？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 814,
+        "line_end": 814
+      },
+      "decision": "合并",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m04.four-evidence.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m04.four-evidence.001",
+          "required_points": [
+            "用户任务和基线、技术样本与数据就绪各有具体证据",
+            "商业含收益实现和完整投入，风险含后果/权限/接管",
+            "按缺失信息与硬约束给条件试点或暂缓，分数不能代替论证"
+          ]
+        }
+      ],
+      "source_raw_line": "1.   **先问用户价值**：用户真的需要吗？愿意付费吗？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L815",
+      "original_text": "2.   **再问技术可行性**：现有模型能做到什么程度？数据够吗？成本可控吗？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 815,
+        "line_end": 815
+      },
+      "decision": "合并",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m04.four-evidence.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m04.four-evidence.001",
+          "required_points": [
+            "用户任务和基线、技术样本与数据就绪各有具体证据",
+            "商业含收益实现和完整投入，风险含后果/权限/接管",
+            "按缺失信息与硬约束给条件试点或暂缓，分数不能代替论证"
+          ]
+        }
+      ],
+      "source_raw_line": "2.   **再问技术可行性**：现有模型能做到什么程度？数据够吗？成本可控吗？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L816",
+      "original_text": "3.   **三问商业可行性**：市场多大？怎么赚钱？ROI算得过来吗？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 816,
+        "line_end": 816
+      },
+      "decision": "拆分",
+      "reason": "原句含市场规模、变现和ROI三个子目标，分别登记下列子项。four-evidence仅承载有限试点的收益兑现/完整投入取证，不代表完成市场估算或ROI推算；M1/P1/P4提供实际方案与产物验收，均设计未执行。",
+      "card_keys": [],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [
+        "P1",
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "3.   **三问商业可行性**：市场多大？怎么赚钱？ROI算得过来吗？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L816-market-size",
+      "parent_objective_id": "ch05-m04-L816",
+      "original_text": "3.   **三问商业可行性**：市场多大？怎么赚钱？ROI算得过来吗？",
+      "source_type": "原目标子目标（编辑拆分）",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 816,
+        "line_end": 816
+      },
+      "decision": "实践任务",
+      "reason": "市场范围不在four-evidence题面/评分内。M1说明估算逻辑，P1设计市场范围与收入假设表，P4将可争取范围带入条件决策；没有完成市场调研或测得规模。",
+      "edited_objective": "市场多大：按可比对象、地域、期间和服务边界区分TAM/SAM/SOM并列估算链。",
+      "card_keys": [],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [
+        "P1",
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "3.   **三问商业可行性**：市场多大？怎么赚钱？ROI算得过来吗？",
+      "deliverables": [
+        "P1市场范围与收入假设表：对象/地域/期间、去重计量单位、TAM/SAM/SOM估算链、数据出处或假设、渠道/交付容量限制",
+        "P4商业三问决策备忘录：可服务与可争取范围、证据缺口及验证负责人"
+      ],
+      "acceptance": "市场边界及单位同口径，SAM/SOM由服务限制、可触达客户和能力约束说明，不将总体市场直接当收入；无资料写待调研，设计产物不计实践完成。",
+      "execution_status": "designed_not_executed"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L816-revenue",
+      "parent_objective_id": "ch05-m04-L816",
+      "original_text": "3.   **三问商业可行性**：市场多大？怎么赚钱？ROI算得过来吗？",
+      "source_type": "原目标子目标（编辑拆分）",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 816,
+        "line_end": 816
+      },
+      "decision": "拆分",
+      "reason": "four-evidence仅支持收益兑现和完整投入取证；定价/采购假设及其市场口径由M1/P1展开，P4按证据形成条件结论，不宣称已经形成收入。",
+      "edited_objective": "怎么赚钱：识别谁使用/谁付费、收费单位与采购路径，区分工时价值、收入贡献和可兑现支出节约。",
+      "card_keys": [
+        "ch05.interview.m04.four-evidence.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [
+        "P1",
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "3.   **三问商业可行性**：市场多大？怎么赚钱？ROI算得过来吗？",
+      "card_coverage_limit": "仅商业证据种类及收益兑现/完整投入；不把本卡计为市场规模估算或ROI计算已承载。",
+      "deliverables": [
+        "P1市场范围与收入假设表：使用者/付款方、收费单位/价格/期间、可触达/采用/支付假设与采购路径",
+        "P1收益/成本账：工时价值、实际支出变化和收入贡献分列并说明如何兑现",
+        "P4商业三问决策备忘录：支付证据强弱及下一验证动作"
+      ],
+      "acceptance": "口头偏好、采用和真实支付区分；人力时间价值没有支出减少或新增贡献证据不能算现金节约，收益/投入项目不得重复计入；所有数字标证据或假设。",
+      "execution_status": "designed_not_executed"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L816-roi",
+      "parent_objective_id": "ch05-m04-L816",
+      "original_text": "3.   **三问商业可行性**：市场多大？怎么赚钱？ROI算得过来吗？",
+      "source_type": "原目标子目标（编辑拆分）",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 816,
+        "line_end": 816
+      },
+      "decision": "实践任务",
+      "reason": "four-evidence未考ROI推算，不由该卡覆盖。M1给简化估算口径，P1设计可复算账表，P4比较基准/保守情境及停止条件；未计算或验证本业务实际ROI。",
+      "edited_objective": "ROI算得过来吗：固定基线与期间，列完整新增投入、可兑现增量收益和敏感性后作条件决策。",
+      "card_keys": [],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [
+        "P1",
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "3.   **三问商业可行性**：市场多大？怎么赚钱？ROI算得过来吗？",
+      "deliverables": [
+        "P1同基线同期间收益/成本与ROI假设表：B/C定义、币种单位、一次及持续投入、逐项证据/假设、公式与C为0等限制",
+        "P4敏感性及条件决策：采用/价格、合格交付/复核量和成本变化是否翻转结论；关联试点范围/停止/复评"
+      ],
+      "acceptance": "本练习简化ROI=(B−C)/C且C>0，B是同一非AI基线下可兑现增量收益，C是同期间完整新增投入；同一项目不在B/C双扣或双算，跨年分期列账，不拿次年营收减当年研发冒充回报。关键证据未知则结论待验证，均未执行。",
+      "execution_status": "designed_not_executed"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05-m04-L817",
+      "original_text": "4.   **最后问风险**：幻觉怎么办？合规吗？品牌能承受失败吗？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 817,
+        "line_end": 817
+      },
+      "decision": "合并",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m04.four-evidence.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m04.four-evidence.001",
+          "required_points": [
+            "用户任务和基线、技术样本与数据就绪各有具体证据",
+            "商业含收益实现和完整投入，风险含后果/权限/接管",
+            "按缺失信息与硬约束给条件试点或暂缓，分数不能代替论证"
+          ]
+        }
+      ],
+      "source_raw_line": "4.   **最后问风险**：幻觉怎么办？合规吗？品牌能承受失败吗？"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05.interview.m04.four-evidence.001",
+      "original_text": "## 二、AI需求评估的四维框架\n\n面对上述复杂性，我总结了一个**四维评估框架**，从四个维度系统性地审视每一个AI需求。\n\n### 2.1 用户价值维度：这个需求到底值不值得做？\n\n用户价值是需求评估的起点。再酷的技术，如果用户不需要，也是白搭。\n\n#### 2.1.1 需求真实性：是真需求还是伪需求？\n\n**判断方法**：\n\n| 检验方法 | 具体操作 | 通过标准 |\n| --- | --- | --- |\n| 用户访谈 | 访谈至少10个目标用户 | 超过70%的用户表示有这个痛点 |\n| 场景还原 | 让用户描述最近一次遇到该问题的场景 | 用户能清晰描述具体场景、时间、频率 |\n| 替代方案调研 | 用户现在怎么解决这个问题？ | 用户已经在用某种低效方式解决，或因为麻烦而忍受 |\n| 付费意愿测试 | 直接问\"如果收费X元/月，你会用吗？\" | 超过30%的用户表示愿意付费 |\n\n伪需求陷阱\n\n> **\"我们做了个AI功能，用户一定会喜欢\"**——这是最危险的假设。很多AI产品之所以失败，不是因为技术不行，而是因为解决了一个不存在的问题。\n> \n> \n> 经典案例：某大厂曾推出\"AI智能衣架\"，能根据天气推荐穿衣。技术很酷，但用户痛点不够强烈——大多数人早上选衣服只需要看窗外一眼。产品上线后DAU惨淡。\n\n#### 2.1.2 需求频次：是高频刚需还是低频偶发？\n\n频次决定了产品的天花板。\n\n![Image 1](https://res.cloudinary.com/de6byedfx/image/upload/v1785751307/202608/ai-pm-guide/chapter-05/6f5979-01-a52d464dc952.png)\n\n| 频次级别 | 典型场景 | 产品策略 |\n| --- | --- | --- |\n| 高频（每天多次） | AI搜索、智能输入法、智能客服 | 核心功能，重点投入 |\n| 中频（每周几次） | AI周报生成、智能文档校对 | 增值功能，适度投入 |\n| 低频（每月几次） | AI年终总结、智能报税 | 辅助功能，轻量化实现 |\n| 极低频（每年几次） | AI婚礼致辞生成、AI墓志铭 | 谨慎评估，可能不值得 |\n\n#### 2.1.3 痛点强度：用户有多\"痛\"？\n\n痛点强度可以用 **\"不用这个产品的代价\"** 来衡量：\n\n| 痛点级别 | 表现 | 举例 |\n| --- | --- | --- |\n| 致命痛 | 不用会严重影响工作/生活，或造成损失 | 医生不用AI辅助诊断，可能漏诊；客服不用智能回复，响应超时扣钱 |\n| 强烈痛 | 不用会很麻烦，效率大幅下降 | 程序员不用AI代码补全，编码速度慢50% |\n| 中度痛 | 不用会有些许不便，但可以忍受 | 不用AI写邮件，自己写多花5分钟 |\n| 轻微痛 | 不用几乎没感觉 | 不用AI生成朋友圈文案 |\n\n判断技巧\n\n如果用户描述痛点时用了\"每次都要...\"\"特别烦...\"\"浪费我很多时间...\"这样的表述，说明痛点强度较高。如果只是\"如果能...就更好了\"，说明是锦上添花。\n\n#### 2.1.4 用户付费意愿：愿意为这个功能付多少钱？\n\n这是最直接的价值验证。\n\n**付费意愿测试方法**：\n\n1.   **直接询问法**：\"如果这项服务收费99元/月，你愿意付费吗？\"\n2.   **选择实验法**：给用户几个选项，看他们在不同价格下的选择\n3.   **预付费测试**：在MVP阶段就设置付费墙，看转化率\n\n| 付费意愿等级 | 用户占比 | 商业策略 |\n| --- | --- | --- |\n| 高（>50%愿意付费） | 核心用户群 | 可直接收费，或作为付费功能 |\n| 中（20%-50%） | 潜在付费用户 | 免费试用+付费升级模式 |\n| 低（<20%） | 大众用户 | 作为引流功能，靠其他方式变现 |\n\n### 2.2 技术可行性维度：我们能不能做出来？\n\n用户价值再高的需求，如果技术上做不出来或成本过高，也只能放弃或延后。\n\n#### 2.2.1 当前模型能力是否满足？\n\n这是AI需求评估最核心的技术问题。你需要回答：**现有的大模型/算法，能不能达到产品要求的准确率？**\n\n**评估步骤**：\n\n```\nStep 1: 明确任务类型\n  ├─ 文本生成类（写文章、写代码、写邮件）\n  ├─ 信息提取类（NER、关系抽取、摘要）\n  ├─ 分类判断类（情感分析、意图识别、审核）\n  ├─ 问答对话类（知识问答、客服、导购）\n  └─ 多模态类（图像理解、语音转写、视频分析）\n\nStep 2: 查看SOTA水平\n  ├─ 查阅该任务在公开数据集上的SOTA准确率\n  ├─ 了解商用API（GPT-4、Claude、文心等）在该任务的表现\n  └─ 评估差距：SOTA准确率 vs 产品要求的准确率\n\nStep 3: 做快速PoC验证\n  ├─ 准备100条真实业务数据\n  ├─ 调用商用API或开源模型跑测试\n  └─ 记录准确率、延迟、成本\n```\n\n| 任务类型 | 当前商用模型水平 | 达到生产可用标准 | 说明 |\n| --- | --- | --- | --- |\n| 通用文本生成 | GPT-4/Claude 3.5级别已很成熟 | 可用 | 但幻觉问题仍需关注 |\n| 结构化信息抽取 | 准确率85%-95% | 看场景 | 格式稳定的文档效果好，自由文本效果差 |\n| 情感分析 | 准确率90%-95% | 可用 | 简单情感分析已非常成熟 |\n| 医学影像诊断 | 特定病种接近专家水平 | 需谨慎 | FDA/NMPA审批严格，责任重大 |\n| 复杂数学推理 | GPT-4约60%-70% | 不够 | 复杂推理仍是弱项 |\n| 实时语音翻译 | 延迟1-3秒，准确率80%+ | 基本可用 | 专业术语和口音仍是挑战 |\n\n#### 2.2.2 数据是否足够？\n\n数据是AI模型的\"燃料\"。评估数据可用性要考虑：\n\n| 数据维度 | 评估问题 | 风险等级 |\n| --- | --- | --- |\n| 数据量 | 是否有至少几千到几万条标注数据？ | 量不够→高风险 |\n| 数据质量 | 数据是否准确、完整、无噪声？ | 质量差→高风险 |\n| 数据获取难度 | 数据是否容易获取？是否需要特殊授权？ | 难获取→高风险 |\n| 标注成本 | 标注一条数据需要多少成本和时间？ | 成本高→需谨慎 |\n| 数据隐私 | 是否涉及用户隐私/商业机密？ | 涉隐私→需合规方案 |\n\n数据陷阱\n\n> 很多产品经理会想当然地认为\"我们有数据\"。但实际情况往往是：\n> \n> \n> *   有原始日志，但没有标注\n> *   有标注，但标注标准不统一\n> *   有数据，但质量很差（大量噪声、错误标签）\n> *   有数据，但分布和实际场景不一致\n> \n> \n> **建议**：在评估阶段就要求算法团队做一次**数据探查（Data Exploration）**，给出数据质量报告。\n\n#### 2.2.3 算法团队能力匹配度\n\n| 评估维度 | 关键问题 | 判断标准 |\n| --- | --- | --- |\n| 技术储备 | 团队是否做过类似任务？ | 有成功经验→低风险 |\n| 人员配置 | 是否有足够的算法工程师？ | 至少2-3名核心算法人员 |\n| 工程能力 | 是否有ML工程化经验？ | 模型上线、监控、迭代流程是否成熟 |\n| 研究能力 | 是否需要前沿研究创新？ | 如果是SOTA级创新，需要研究型团队 |\n\n#### 2.2.4 算力成本评估\n\n算力成本往往是AI产品成本中最大的一块。你需要做一个粗略的成本估算：\n\n**推理成本估算公式**：\n\n```\n月度推理成本 ≈ 日均调用次数 × 单次调用平均Token数 × Token单价 × 30天\n\n举例：\n- 日均调用：10,000次\n- 单次平均Token：2,000（输入1,500 + 输出500）\n- Token单价：￥0.005 / 1K tokens（GPT-4级别模型）\n- 月度成本 = 10,000 × 2,000 × 0.005 / 1,000 × 30 = ￥3,000/月\n```\n\n| 模型级别 | 代表 | 单价(每1K tokens) | 适用场景 |\n| --- | --- | --- | --- |\n| 顶级模型 | GPT-4o, Claude 3.5 | ￥0.02-0.06 | 复杂推理、高精度任务 |\n| 主流模型 | GPT-4o-mini, 文心4 | ￥0.003-0.01 | 通用任务，性价比之选 |\n| 轻量模型 | GPT-3.5级别 | ￥0.001-0.003 | 简单任务、高并发场景 |\n| 自研小模型 | 微调后的7B/13B模型 | 自有GPU摊销 | 特定任务、成本控制严格 |\n\n成本优化策略\n\n*   **模型路由（Model Routing）**：简单请求走小模型，复杂请求走大模型\n*   **缓存策略**：对重复问题缓存答案\n*   **量化与蒸馏**：用大模型生成数据，训练小模型\n*   **Prompt优化**：通过更好的Prompt减少输出Token长度\n\n### 2.3 商业可行性维度：能不能赚钱？\n\n技术可行不等于商业可行。一个AI需求最终能不能落地，还要看商业模式是否成立。\n\n#### 2.3.1 市场规模（TAM/SAM/SOM）\n\n| 指标 | 全称 | 含义 | 计算方法 |\n| --- | --- | --- | --- |\n| TAM | Total Addressable Market | 总可触达市场 | 所有可能用该产品的用户 × ARPU |\n| SAM | Serviceable Addressable Market | 可服务市场 | 你能触达的市场细分 |\n| SOM | Serviceable Obtainable Market | 可获得市场 | 短期内实际能获得的市场份额 |\n\n**举例：AI智能客服**\n\n*   TAM：全国所有需要客服的企业 = 数百万家企业 × 年费万元级 = 千亿级市场\n*   SAM：你聚焦的电商行业中小企业 = 数十万家 × 年费5千 = 数十亿级\n*   SOM：第一年你能触达并转化的客户 = 500家 × 年费5千 = 250万\n\n#### 2.3.2 竞争格局分析\n\n| 竞争维度 | 评估内容 | 竞争策略 |\n| --- | --- | --- |\n| 直接竞品 | 有没有成熟的同类产品？ | 差异化定位或正面竞争 |\n| 间接替代 | 用户现在用什么方式解决？（人工、传统软件） | 证明AI方案10倍优于替代方案 |\n| 技术壁垒 | 你的技术护城河是什么？ | 数据飞轮、独家算法、行业Know-how |\n| 巨头威胁 | BAT/字节/微软会不会跟进？ | 深耕垂直场景，巨头不愿意做的\"脏活累活\" |\n\n#### 2.3.3 变现路径\n\n| 变现模式 | 适用场景 | 优势 | 挑战 |\n| --- | --- | --- | --- |\n| SaaS订阅 | 企业级AI工具 | 收入稳定、可预测 | 获客成本高、销售周期长 |\n| 按量付费 | API服务 | 灵活、用户门槛低 | 收入波动大 |\n| 效果付费 | 广告、推荐 | ROI明确 | 效果衡量复杂 |\n| 增值功能 | C端产品加AI功能 | 用户基数大 | 付费转化率低 |\n| 数据服务 | 提供AI标注/训练数据 | 技术门槛相对较低 | 规模化难 |\n\n#### 2.3.4 投入产出比（ROI）\n\n做一个粗略的ROI估算：\n\n```\nROI = (预期年收入 - 年度总成本) / 年度总成本 × 100%\n\n年度总成本 = 人力成本 + 算力成本 + 数据成本 + 运营成本\n\n举例：\n- 人力成本：5人 × 30万/年 = 150万\n- 算力成本：30万/年\n- 数据成本：20万/年\n- 运营成本：20万/年\n- 年度总成本 = 220万\n- 预期年收入（第2年）= 400万\n- ROI = (400-220)/220 = 82%\n```\n\nROI评估陷阱\n\n> *   **低估成本**：很多团队只算\"开发成本\"，不算\"模型持续迭代成本\"\n> *   **高估收入**：\"如果我们拿下1%的市场...\"——1%的市场往往比你想象的大得多，也难得多\n> *   **忽略时间价值**：AI项目的回报周期通常比传统产品更长\n\n### 2.4 风险可控维度：最坏的情况是什么？\n\nAI产品面临的风险维度比传统产品更多。你需要一个系统性的风险评估框架。\n\n#### 2.4.1 幻觉风险（Hallucination Risk）\n\n大模型会\"一本正经地胡说八道\"，这在某些场景下可能造成严重后果。\n\n| 风险等级 | 场景 | 应对策略 |\n| --- | --- | --- |\n| 🔴 极高 | AI医疗诊断、AI法律咨询、AI金融建议 | 必须人工审核，不能作为唯一依据 |\n| 🟡 中高 | AI新闻写作、AI教育辅导 | 事实核查机制，置信度低时提醒用户 |\n| 🟢 低 | AI创意写作、AI聊天陪伴 | 明确告知用户\"内容由AI生成\" |\n\n#### 2.4.2 合规风险\n\n| 合规领域 | 核心要求 | 违规后果 |\n| --- | --- | --- |\n| 算法备案 | 中国境内深度合成服务需备案 | 下架、罚款 |\n| 数据安全 | 个人信息保护法、GDPR | 巨额罚款、品牌受损 |\n| 内容安全 | AI生成内容需标识、不能生成违禁内容 | 下架、法律责任 |\n| 行业监管 | 金融、医疗、教育等行业的特殊要求 | 牌照吊销、刑事责任 |\n\n#### 2.4.3 伦理风险\n\n*   **算法偏见**：招聘AI对某类人群歧视\n*   **深度伪造**：AI换脸、语音克隆被用于诈骗\n*   **版权争议**：AI训练数据是否侵犯版权\n*   **就业冲击**：AI替代人工带来的社会问题\n\n#### 2.4.4 品牌风险\n\n如果AI功能表现不佳，可能伤害整体品牌形象。\n\n品牌风险案例\n\n> 某知名互联网公司推出AI搜索功能，因为幻觉问题严重，给用户推荐了错误信息，引发舆论危机。最后该功能被紧急下线，公司股价下跌，品牌受损。\n> \n> \n> **教训**：AI功能上线前，必须做充分的压力测试和边界测试。宁可不上，也不要上一个\"半成品\"。\n\n### 2.5 四维框架总结\n\n```\ngraph LR\n    A[AI需求评估] --> B[用户价值维度]\n    A --> C[技术可行性维度]\n    A --> D[商业可行性维度]\n    A --> E[风险可控维度]\n    \n    B --> B1[需求真实性]\n    B --> B2[需求频次]\n    B --> B3[痛点强度]\n    B --> B4[付费意愿]\n    \n    C --> C1[模型能力匹配]\n    C --> C2[数据可用性]\n    C --> C3[团队能力]\n    C --> C4[算力成本]\n    \n    D --> D1[市场规模]\n    D --> D2[竞争格局]\n    D --> D3[变现路径]\n    D --> D4[ROI预估]\n    \n    E --> E1[幻觉风险]\n    E --> E2[合规风险]\n    E --> E3[伦理风险]\n    E --> E4[品牌风险]\n```",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 80,
+        "line_end": 383
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m04.four-evidence.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m04.four-evidence.001",
+          "required_points": [
+            "用户任务和基线、技术样本与数据就绪各有具体证据",
+            "商业含收益实现和完整投入，风险含后果/权限/接管",
+            "按缺失信息与硬约束给条件试点或暂缓，分数不能代替论证"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05.interview.m04.noncompensable-gate.001",
+      "original_text": "### 3.1 AI需求评分卡\n\n这是一个结构化的打分模板，帮你量化评估每个维度。\n\n#### 评分卡模板\n\n| 评估维度 | 评估项 | 权重 | 评分(1-5分) | 加权得分 | 说明 |\n| --- | --- | --- | --- | --- | --- |\n| **用户价值(30%)** | 需求真实性 | 10% |  |  | 是否有真实用户验证 |\n|  | 需求频次 | 10% |  |  | 每日/每周/每月/偶尔 |\n|  | 痛点强度 | 10% |  |  | 致命/强烈/中等/轻微 |\n| **技术可行性(25%)** | 模型能力匹配 | 10% |  |  | 现有模型能否达到要求 |\n|  | 数据可用性 | 8% |  |  | 数据量/质量/获取难度 |\n|  | 算力成本可控 | 7% |  |  | 推理成本是否在预算内 |\n| **商业可行性(25%)** | 市场规模 | 10% |  |  | TAM/SAM/SOM评估 |\n|  | 变现路径清晰 | 10% |  |  | 是否有明确的变现方式 |\n|  | 竞争优势 | 5% |  |  | 相比竞品的差异化 |\n| **风险可控(20%)** | 幻觉风险可控 | 7% |  |  | 是否有兜底方案 |\n|  | 合规风险 | 7% |  |  | 是否符合法规要求 |\n|  | 品牌风险 | 6% |  |  | 失败对品牌的影响 |\n| **总分** |  | **100%** |  |  |  |\n\n#### 评分标准（1-5分）\n\n| 分数 | 含义 | 决策建议 |\n| --- | --- | --- |\n| 5分 | 非常理想，几乎无风险 | 优先投入 |\n| 4分 | 整体向好，有小风险 | 积极投入 |\n| 3分 | 中规中矩，有明显风险 | 有条件投入 |\n| 2分 | 问题较多，风险较大 | 谨慎投入或延后 |\n| 1分 | 风险极高，几乎不可行 | 放弃 |\n\n#### 总分决策矩阵\n\n| 总分区间 | 等级 | 决策建议 |\n| --- | --- | --- |\n| 4.5-5.0 | ⭐⭐⭐⭐⭐ 明星需求 | 立即启动，重点资源投入 |\n| 4.0-4.4 | ⭐⭐⭐⭐ 优质需求 | 尽快启动，标准资源投入 |\n| 3.5-3.9 | ⭐⭐⭐ 一般需求 | 条件成熟后启动，或降低优先级 |\n| 3.0-3.4 | ⭐⭐ 边缘需求 | 观察等待，资源有富余时考虑 |\n| ❤️.0 | ⭐ 高风险需求 | 建议放弃，除非战略需要 |\n\n使用建议\n\n> 评分卡适合**横向对比**多个需求。建议团队坐下来一起打分，避免个人偏见。每个评分项都要有具体的论据支撑，不能凭感觉。",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 389,
+        "line_end": 433
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m04.noncompensable-gate.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m04.noncompensable-gate.001",
+          "required_points": [
+            "未知/未满足硬约束不能由价值或技术高分补偿",
+            "核实条件或停止/缩范围，替代方案也受约束",
+            "门槛决定可开展范围，排序只比较通过门槛的候选"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05.interview.m04.conditional-plan.001",
+      "original_text": "### 2.2 技术可行性维度：我们能不能做出来？\n\n用户价值再高的需求，如果技术上做不出来或成本过高，也只能放弃或延后。\n\n#### 2.2.1 当前模型能力是否满足？\n\n这是AI需求评估最核心的技术问题。你需要回答：**现有的大模型/算法，能不能达到产品要求的准确率？**\n\n**评估步骤**：\n\n```\nStep 1: 明确任务类型\n  ├─ 文本生成类（写文章、写代码、写邮件）\n  ├─ 信息提取类（NER、关系抽取、摘要）\n  ├─ 分类判断类（情感分析、意图识别、审核）\n  ├─ 问答对话类（知识问答、客服、导购）\n  └─ 多模态类（图像理解、语音转写、视频分析）\n\nStep 2: 查看SOTA水平\n  ├─ 查阅该任务在公开数据集上的SOTA准确率\n  ├─ 了解商用API（GPT-4、Claude、文心等）在该任务的表现\n  └─ 评估差距：SOTA准确率 vs 产品要求的准确率\n\nStep 3: 做快速PoC验证\n  ├─ 准备100条真实业务数据\n  ├─ 调用商用API或开源模型跑测试\n  └─ 记录准确率、延迟、成本\n```\n\n| 任务类型 | 当前商用模型水平 | 达到生产可用标准 | 说明 |\n| --- | --- | --- | --- |\n| 通用文本生成 | GPT-4/Claude 3.5级别已很成熟 | 可用 | 但幻觉问题仍需关注 |\n| 结构化信息抽取 | 准确率85%-95% | 看场景 | 格式稳定的文档效果好，自由文本效果差 |\n| 情感分析 | 准确率90%-95% | 可用 | 简单情感分析已非常成熟 |\n| 医学影像诊断 | 特定病种接近专家水平 | 需谨慎 | FDA/NMPA审批严格，责任重大 |\n| 复杂数学推理 | GPT-4约60%-70% | 不够 | 复杂推理仍是弱项 |\n| 实时语音翻译 | 延迟1-3秒，准确率80%+ | 基本可用 | 专业术语和口音仍是挑战 |\n\n#### 2.2.2 数据是否足够？\n\n数据是AI模型的\"燃料\"。评估数据可用性要考虑：\n\n| 数据维度 | 评估问题 | 风险等级 |\n| --- | --- | --- |\n| 数据量 | 是否有至少几千到几万条标注数据？ | 量不够→高风险 |\n| 数据质量 | 数据是否准确、完整、无噪声？ | 质量差→高风险 |\n| 数据获取难度 | 数据是否容易获取？是否需要特殊授权？ | 难获取→高风险 |\n| 标注成本 | 标注一条数据需要多少成本和时间？ | 成本高→需谨慎 |\n| 数据隐私 | 是否涉及用户隐私/商业机密？ | 涉隐私→需合规方案 |\n\n数据陷阱\n\n> 很多产品经理会想当然地认为\"我们有数据\"。但实际情况往往是：\n> \n> \n> *   有原始日志，但没有标注\n> *   有标注，但标注标准不统一\n> *   有数据，但质量很差（大量噪声、错误标签）\n> *   有数据，但分布和实际场景不一致\n> \n> \n> **建议**：在评估阶段就要求算法团队做一次**数据探查（Data Exploration）**，给出数据质量报告。\n\n#### 2.2.3 算法团队能力匹配度\n\n| 评估维度 | 关键问题 | 判断标准 |\n| --- | --- | --- |\n| 技术储备 | 团队是否做过类似任务？ | 有成功经验→低风险 |",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 150,
+        "line_end": 217
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m04.conditional-plan.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m04.conditional-plan.001",
+          "required_points": [
+            "限定PoC成立范围并明确失败切片和缺失依赖",
+            "排期含数据/标注/复核及负责人、验证和修复",
+            "受限试点按切片与停止条件决定扩大或延期"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.4",
+      "objective_id": "ch05.interview.m04.priority-uncertainty.001",
+      "original_text": "### 3.2 RICE模型在AI场景的改良版\n\nRICE是经典的优先级排序模型：\n\n```\nRICE Score = (Reach × Impact × Confidence) / Effort\n```\n\n但在AI场景下，我们需要做一些改良：\n\n| 原版RICE | AI改良版 | 改良说明 |\n| --- | --- | --- |\n| Reach（触达人数） | Reach × 使用频次 | AI产品频次差异大，高频需求应加权 |\n| Impact（影响力） | Impact × 模型效果置信度 | 模型效果不确定，需打折 |\n| Confidence（信心度） | Confidence × 数据就绪度 | 数据质量影响交付信心 |\n| Effort（工作量） | Effort + 模型迭代成本 | 传统工作量+数据准备+模型调优 |\n\n**改良版公式**：\n\n```\nAI-RICE = (Reach × Freq × Impact × ModelConfidence × DataReadiness) / (DevEffort + DataEffort + ModelIterCost)\n```\n\n#### RICE评分示例\n\n| 需求 | Reach | Freq | Impact | ModelConf | DataReady | Effort | DataEffort | ModelIter | AI-RICE |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| AI会议纪要 | 5000人/月 | 5 | 4 | 0.8 | 0.9 | 20人天 | 10人天 | 15人天 | 90.9 |\n| AI智能客服 | 10000人/月 | 5 | 5 | 0.7 | 0.6 | 40人天 | 30人天 | 30人天 | 48.6 |\n| AI简历诊断 | 2000人/月 | 2 | 4 | 0.6 | 0.7 | 15人天 | 20人天 | 20人天 | 26.7 |\n\n### 3.3 效果-成本矩阵\n\n这是一个二维决策矩阵，横轴是**预期效果**，纵轴是**实现成本**。\n\n![Image 2](https://res.cloudinary.com/de6byedfx/image/upload/v1785751309/202608/ai-pm-guide/chapter-05/6f5979-02-e9e5e4162962.png)\n\n| 象限 | 特征 | 策略 | 举例 |\n| --- | --- | --- | --- |\n| **第一象限** | 高效果 + 高成本 | 重点攻坚，但需要充分论证ROI | AI医疗影像诊断——效果好但研发和审批成本极高 |\n| **第二象限** | 低效果 + 高成本 | 除非战略级项目，否则放弃 | 用GPT-4做简单计算器（大炮打蚊子） |\n| **第三象限** | 低效果 + 低成本 | 快速试错或放弃 | 给按钮加AI动效推荐 |\n| **第四象限** | 高效果 + 低成本 | 立即做！快速验证 | 接入大模型API做智能搜索 |\n\n关键洞察\n\n> AI领域有很多\"第四象限\"机会——即**用现成的API实现高价值功能**。比如接入GPT-4做智能客服问答、用Whisper做语音转写。这些需求的共同特点是：不需要自研模型，调用现成API即可，成本可控，效果有基础保障。\n> \n> \n> 建议团队定期梳理这类\"快速Win\"需求，快速上线验证。\n\n### 3.4 MoSCoW + 技术可行性交叉矩阵\n\nMoSCoW是经典的需求优先级方法，结合技术可行性可以更精准：\n\n| 优先级 \\ 技术可行性 | 高可行性（技术成熟） | 中可行性（需一定研发） | 低可行性（技术前沿/不确定） |\n| --- | --- | --- | --- |\n| **Must have** | 立即做 | 计划做，预留缓冲 | 寻找替代方案或暂缓 |\n| **Should have** | 尽快做 | 排队做 | 技术成熟后再评估 |\n| **Could have** | 有余力时做 | 观望 | 放弃 |\n| **Won't have** | 不做 | 不做 | 不做 |",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.4-如何合理评估AI产品的需求.md",
+        "content_hash": "ca5267f29cf3d0badefceb523d3bd91460c140946a8c95dbb98bf2a6a2f6fe41",
+        "line_start": 435,
+        "line_end": 495
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m04.priority-uncertainty.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m04.priority-uncertainty.001",
+          "required_points": [
+            "统一变量口径及证据区间，避免重复频次或伪精确",
+            "检查关键假设变化是否翻转排序",
+            "不稳时先做有信息价值验证，硬门槛和核心任务优先仍保留"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch05-interview-20261022-m04"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch05.interview.m04.four-evidence.001": "ebe66715aaebb39e599c2d668e16bc787d5778ff891d22e8a78f798ff05f4215",
+    "ch05.interview.m04.noncompensable-gate.001": "99efe2b7a6f4473a38575853ab189351a76ea94a83ef435ac0dbc2352453291c",
+    "ch05.interview.m04.conditional-plan.001": "1f8773b2995d60d8051d8f5057f785dbadd1911671bf9de376e916fdcaa3f1be",
+    "ch05.interview.m04.priority-uncertainty.001": "1e0bc1450cbe7e02d5f6c46ef6bd2d437704ed7798a4da1d8fd5c67e6929a7dc"
+  }
+}

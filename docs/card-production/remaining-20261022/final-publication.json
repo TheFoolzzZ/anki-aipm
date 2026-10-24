@@ -1,0 +1,1540 @@
+{
+  "date": "2026-10-24",
+  "status": "published_verified",
+  "cards": 217,
+  "revised": 82,
+  "added": 135,
+  "batches": 35,
+  "database_counts": {
+    "apm_cards": 543,
+    "apm_card_revisions": 1092,
+    "apm_content_batches": 142,
+    "apm_review_states": 1,
+    "apm_review_events": 1,
+    "apm_study_activity": 1,
+    "apm_lessons": 70,
+    "apm_source_revisions": 70
+  },
+  "practice_executed": 0,
+  "cards_with_review": [
+    {
+      "canonical_key": "ch04.interview.m01.executable-loop.001",
+      "content_hash": "cb18f09db94217a9e17b96ed0292c6ef1556b3439fab232ef54079d94413850f",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m01"
+    },
+    {
+      "canonical_key": "ch04.interview.m01.prototype-evidence.001",
+      "content_hash": "d3087b0e2c330dbe1ff8cbcb7ab4270048b79d0603141cfdf9ab4dac5d5f8285",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m01"
+    },
+    {
+      "canonical_key": "ch04.interview.m01.reproduction-feedback.001",
+      "content_hash": "0fa0075010b20cff13de3df702d56922642a60c85a6e818fe8341debbfda3236",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m01"
+    },
+    {
+      "canonical_key": "ch04.interview.m01.bounded-increment.001",
+      "content_hash": "c0aceb0883cad56af1442f1bc4bd3a8733be7a9d277167b7e53d020ca588bd94",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m01"
+    },
+    {
+      "canonical_key": "ch04.interview.m01.control-accountability.001",
+      "content_hash": "4584d87dee0f613856d2b10778a5810b691e359d09f0376cac94e4e0faafc446",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m01"
+    },
+    {
+      "canonical_key": "ch04.interview.m02.three-surface-contract.001",
+      "content_hash": "bee04cb70e63fd3d99852efd109a57c26d50c8b07bf1ccc850deaa76b8370ac7",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m02"
+    },
+    {
+      "canonical_key": "ch04.interview.m02.page-context.001",
+      "content_hash": "c027e1f38909641472851aa54311d6e6e1aec2e4fa0e42286f8e63511c5a8f55",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m02"
+    },
+    {
+      "canonical_key": "ch04.interview.m02.fill-versus-submit.001",
+      "content_hash": "408bd1b79f33d7f685e1bc70aa35106a411349641d10bb49bf070bd0c11c3042",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m02"
+    },
+    {
+      "canonical_key": "ch04.interview.m02.delivery-gate.001",
+      "content_hash": "c4575eb78a9bc0eeacec3967e36e3391b95e55891b21c7c70c1876c1bdcec99d",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m02"
+    },
+    {
+      "canonical_key": "ch04.interview.m03.task-fit.001",
+      "content_hash": "20ec09f998da68af051141daa63bda62f85cc7675a842850375430b7edaaad88",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m03"
+    },
+    {
+      "canonical_key": "ch04.interview.m03.provider-cost.001",
+      "content_hash": "a463fc0b95d9f379d21feb98409defc4f91efe5200cd39a08fe116e27bb974ee",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m03"
+    },
+    {
+      "canonical_key": "ch04.interview.m03.data-flow.001",
+      "content_hash": "7375dcd881fea1a58ca9bbcff9ee567197a461c5dd4c775b75e31be7fd76ceaf",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch04-interview-remaining-20261022-m03"
+    },
+    {
+      "canonical_key": "C12",
+      "content_hash": "e69ce9871e7570c921771f34813f7dddcbfda2f0d8f03479969718bf9d051a27",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m01"
+    },
+    {
+      "canonical_key": "ch05.interview.m01.concurrency-billing.001",
+      "content_hash": "a45d06f779fa25a8bc7d62a7f5104774d483b2622b0c143b1a693051c61d8886",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m01"
+    },
+    {
+      "canonical_key": "ch05.interview.m01.paid-cohort.001",
+      "content_hash": "5cf5f064b60fc90018786d4095ce6835b11bab309c8cb6dba90f55a08b5bcc68",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m01"
+    },
+    {
+      "canonical_key": "ch05.interview.m01.cache-economics.001",
+      "content_hash": "2ee9ba5ce51d803b5ce36b07e6bb317355cd27906cd0fc683732035889fc363b",
+      "reviewer": "Codex-独立审校-ch05-20261024（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m01"
+    },
+    {
+      "canonical_key": "ch05.interview.m01.batch-deadline.001",
+      "content_hash": "170e5d67cece96f4d60c0af71f98804813b6eedd30fd6f6e99248dd01fa23ad2",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m01"
+    },
+    {
+      "canonical_key": "ch05.interview.m02.task-interview.001",
+      "content_hash": "19291588e5ee28fa445fd1942289df7a53a2af75c92045c263d239417c7eaeb8",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m02"
+    },
+    {
+      "canonical_key": "ch05.interview.m02.signal-hypothesis.001",
+      "content_hash": "486b3fe68a8fe90f7d9c9af354db5d0ab34da199bec3f1f20453a1ac3dc1e72f",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m02"
+    },
+    {
+      "canonical_key": "ch05.interview.m02.pain-capability.001",
+      "content_hash": "8d07f9958ab5f7100bea1da32e471056e44922681003605f5c8efc76b03def7d",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m02"
+    },
+    {
+      "canonical_key": "ch05.interview.m02.must-evidence.001",
+      "content_hash": "5e6f0a5e092051087aa2296a778324c8920169826648744a4c4f068ea785720d",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m02"
+    },
+    {
+      "canonical_key": "ch05.interview.m03.matched-task.001",
+      "content_hash": "af902f561274fc29bdc751ab18fbfbeb6612c8ec2f63aaf9f5ee83037012cd79",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m03"
+    },
+    {
+      "canonical_key": "ch05.interview.m03.blackbox-evidence.001",
+      "content_hash": "8aecaa74300f44957402590d0a0d2ff75b40f64c6847315056f8a5371007279a",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m03"
+    },
+    {
+      "canonical_key": "ch05.interview.m03.workflow-gap.001",
+      "content_hash": "5e595ad23eb2a3ab086f7ac5da2c36c704c94c53052b2456e2ca94c8eef10f63",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m03"
+    },
+    {
+      "canonical_key": "ch05.interview.m03.tracking-decision.001",
+      "content_hash": "ac71271c006a48847fb82524d3f9eaf6032f260c3c7871bc1e365b6f3df7dda2",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m03"
+    },
+    {
+      "canonical_key": "ch05.interview.m04.four-evidence.001",
+      "content_hash": "ebe66715aaebb39e599c2d668e16bc787d5778ff891d22e8a78f798ff05f4215",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m04"
+    },
+    {
+      "canonical_key": "ch05.interview.m04.noncompensable-gate.001",
+      "content_hash": "99efe2b7a6f4473a38575853ab189351a76ea94a83ef435ac0dbc2352453291c",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m04"
+    },
+    {
+      "canonical_key": "ch05.interview.m04.conditional-plan.001",
+      "content_hash": "1f8773b2995d60d8051d8f5057f785dbadd1911671bf9de376e916fdcaa3f1be",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m04"
+    },
+    {
+      "canonical_key": "ch05.interview.m04.priority-uncertainty.001",
+      "content_hash": "1e0bc1450cbe7e02d5f6c46ef6bd2d437704ed7798a4da1d8fd5c67e6929a7dc",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m04"
+    },
+    {
+      "canonical_key": "C13",
+      "content_hash": "0f9a6272e70c888df11f405c4fa870ad27fb3a9e7fb9af8769512cb8f4db9266",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch05.interview.m05.release-contract.001",
+      "content_hash": "72be2fb6bfba99480699d38a268cbb204c721c0e1ea6f34ed317dbfac4d6f10d",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch05.interview.m05.data-delivery.001",
+      "content_hash": "3b2e9c8e15b9d38026f6d0f676db47b8b013b08613667fcce8322a91cb0e6afe",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch05.interview.m05.failure-state.001",
+      "content_hash": "b61fa598c481a20b74cdd6a3f955c5d63c50444243815cbe0e3d1b3b970b1f26",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch05.interview.m05.technical-responsibility.001",
+      "content_hash": "6fd0e7173650372de251bb949f4d7f29306b9304d305aa0dfef0f08030a25057",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch05.interview.m05.fallback-ladder.001",
+      "content_hash": "aeef549dde0544de66590926bc82f0651ec88da1f3cd1f0bd863cfe63b489a9b",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch05.interview.m05.ai-identity.001",
+      "content_hash": "3a33fc6335027127d032e68cbb5de80b34542eeab4846fedca02dafd48c48af2",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch05.interview.m05.feedback-correction.001",
+      "content_hash": "61dd2d6e492a1b27321c8bc21779a0cd3dfe41da41b8ee28c716faf1ecd8fce9",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch05.interview.m05.content-safety-contract.001",
+      "content_hash": "2d53ef5ff414fbfab4dc82878ba02b3cbd1dc0b884f81b7d46ea9f37e9d6c92f",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch05.interview.m06.risk-event-chain.001",
+      "content_hash": "63d0962e7119b90a1ebcfa2b0950b913df18966e9b83010f668a12f4bbeda7c5",
+      "reviewer": "Codex-独立审校-ch05-20261024（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m06"
+    },
+    {
+      "canonical_key": "ch05.interview.m06.matrix-residual.001",
+      "content_hash": "86faf69d01500f7a3635d90799980891af0a0d4aa876374bd0f288565619fa5f",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m06"
+    },
+    {
+      "canonical_key": "ch05.interview.m06.risk-treatment.001",
+      "content_hash": "c1346a767ae4b65bad64ca9089356e89a2fd05ad8897751139fad9c22cdf4f4a",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m06"
+    },
+    {
+      "canonical_key": "ch05.interview.m06.human-review-bias.001",
+      "content_hash": "2a17ace7d07523aa18f3a96932b0d70edf279d926cfeb6a406a7c1d89cb1e3c8",
+      "reviewer": "Codex-独立审校-ch05-20261024（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m06"
+    },
+    {
+      "canonical_key": "ch05.interview.m06.deletion-scope.001",
+      "content_hash": "0f158437a77a5c4c6172e1ddac59dcc99f13d2d935be0b5b68d39d2d905af823",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m06"
+    },
+    {
+      "canonical_key": "ch05.interview.m06.appeal-evidence.001",
+      "content_hash": "9d88c399f17357711696f2f626fe6eb035dd7d645a63c8e0268e7e10e17db4b8",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m06"
+    },
+    {
+      "canonical_key": "ch05.interview.m07.five-layer-trace.001",
+      "content_hash": "a95ee1d88f9bfee0affb89fdcf380859acf9a5ed84881e54cc9f3ebf73301958",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m07"
+    },
+    {
+      "canonical_key": "ch05.interview.m07.async-product-contract.001",
+      "content_hash": "acd530fe6d8ab23be195cd1a27a422e8874c85c802edde64e755b81b7d25ed98",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m07"
+    },
+    {
+      "canonical_key": "ch05.interview.m07.review-capacity.001",
+      "content_hash": "9ec761f373d16a253ec68cfb388046f32d09fc8c792ecc7cf2fc17e49987ed0a",
+      "reviewer": "Codex-独立审校-ch05-20261022（非本轮第5章作者）",
+      "review_file": "review-ch05.json",
+      "batch_id": "ch05-interview-20261022-m07"
+    },
+    {
+      "canonical_key": "ch06.interview.m01.brief-control.001",
+      "content_hash": "abe2aad95acc85570962d67bf66a6a5a650c51e1e8b3146075e5889ecfecd878",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m01.video-continuity.001",
+      "content_hash": "4e63d0cf5bd90b70d88e42d6137a3b36ac84727e6ae545f9edc2fa3f3dca139c",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m01.creative-deliverable.001",
+      "content_hash": "2c302514b68678a708b38e5bcb9919e97291eb0dcaa9a886acecdb39c472c89f",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m01.safety-stages.001",
+      "content_hash": "eff5c724dfc83d0da3edc2d46ef45d5a8b1c2aab0311cfead6034d9b345f1521",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m01.ecosystem-handoff.001",
+      "content_hash": "7bff1cdc0d28aed8ebcff113648561ed68c9628a8bcd4e4cab3a6f7b3bfb5dd4",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m01.rights-data-boundary.001",
+      "content_hash": "36fde3a526bcc3ac677638c2cf8e7d686b0e6a4b64c505ce2853a98ae6c3279a",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch06-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m02.ingestion-release.001",
+      "content_hash": "08b52f6671917f59558e21428fe01d891a08761df8a655097a4a722f5b43ad15",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m02.citation-location.001",
+      "content_hash": "672c0d2193862658dece862bd6d41f0ecd0b63d566d74bc2d95cdfeafc17ba82",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m02.vin-context.001",
+      "content_hash": "703314d50e01fb4901512d162c790e6ab4694ab42fe73d258ac3600182ed97d1",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m02.expert-knowledge.001",
+      "content_hash": "26d323ad17fcdc34ffdd3bd51335447a4b6dd4eef0398a9e981f8a5ccd42d871",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m02.knowledge-action.001",
+      "content_hash": "9fde0dca87fe385975e292e2c86bca0c777a675699b329bbd15218cbd76cfa95",
+      "reviewer": "主编独立内容审校（非本组作者）2026-10-22",
+      "review_file": "review-main-ch06-m01-m02.json",
+      "batch_id": "ch06-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m02.acl-context.001",
+      "content_hash": "b3586a80437e5f8c41a08de42d91e60968fd6f49c60832b156700194b4b6c147",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch06-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m02.feedback-diagnosis.001",
+      "content_hash": "f8d0d9ea8bb1076904affbcc9d528deafd686558b36d8449b638c7c6de0d2269",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch06-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m03.comparable-price.001",
+      "content_hash": "6fa98d83b8031036b099769f73f4036b7a56c81b25555accb0e63ecc31fb67b2",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m03.page-completeness.001",
+      "content_hash": "525aac4925e85893ae1994c0e82a3e423043d771cf30e4bd1e8c0d5ce7745cd9",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m03.missing-provenance.001",
+      "content_hash": "b29a0164253e88eb357c1770935ecc2378786414fb5b14a56fee879753ea2c19",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m03.access-refusal.001",
+      "content_hash": "3ff919739ca8068092b2a25b7ce424eb1586b7831ba38f4e871a9928c22ae019",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m03.research-signal.001",
+      "content_hash": "adb3e9615bfdac18e6a501259035bedc2d127eb203e43ded7b71a0fb3dacb1d5",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m03.research-next-action.001",
+      "content_hash": "74a4ad61649e250011e5648155bcce0213340881dba3dfbc346bc4992ce09fe3",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m03.extraction-choice.001",
+      "content_hash": "c382d0e5882487076ad2a9e7829f14abc3e7e179898f7098ce3ac75252c4b845",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch06-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m04.compensation-authority.001",
+      "content_hash": "b69f5be0cf1a98f5b4b7aaa0a5e3b9aa4184b5f170ed6ded5cfacfb4afeb9624",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m04-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m04.handoff-ownership.001",
+      "content_hash": "be42751d8da602c9291420151880ede722787c7b524b5da1da30af437b68f2db",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m04-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m04.mixed-service-intent.001",
+      "content_hash": "e041e1907cb8d8c74a887c75f6e14d3ff4875547d53937570c835cb8b3b935af",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m04-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m04.knowledge-release.001",
+      "content_hash": "f4a1a91a22c8a8200b1ff56f4692dd3cc2bffab4bd0aad2d84f101a3905fe5c9",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch06-m04-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m04.resolution-measurement.001",
+      "content_hash": "5dcdececb31e95764f764f5a76a06cc0ee8c84a8e9cf285b7f09b5880bead8c5",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch06-m04-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m04.collaboration-choice.001",
+      "content_hash": "9394c13e4b4ff125e00d33b52c0bac44ef4f7ff19995f9f3aa9242f27a1d5602",
+      "reviewer": "Codex-独立复审-20261024",
+      "review_file": "review-fixes-ch06.json",
+      "batch_id": "ch06-m04-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m05.delegation-package.001",
+      "content_hash": "8dc0468d2aefd6db887df0650dffb5ef233a45bfbdb60d8db23b512b1cd43d12",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m05-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m05.workspace-change-ownership.001",
+      "content_hash": "526a2cd9d16d1a1717c2d59eeb6f4271d7c02d6d72beac9368aabac0d1e6c6c0",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m05-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m05.review-load.001",
+      "content_hash": "f0ef895d0a829e23719bed0fcc3a21a8f0286b369dd89a03fdc3259ea0f194cb",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m05-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m05.export-dependency.001",
+      "content_hash": "77e88668a7c203956060d56bc736bdbfd25f3b0fa6157ccea8008d083eff22ce",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m05-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m05.coding-review-responsibility.001",
+      "content_hash": "9ca3f0a3117211abcd5c51b1c36d324aa8633234437f6bc08e57c6e31279a371",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch06-m05-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch06.interview.m05.context-freshness.001",
+      "content_hash": "cb55dcadd23afa88665f528cbd3482f42a80f10676c9e727c79a14e8f394adec",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch06-m05-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m01.data-loop.001",
+      "content_hash": "562a68544dc61665a31132d1e1e3b2e2270f4424196dba2d899b6cab9beb7d8f",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m01.network-effect.001",
+      "content_hash": "539244402b07beaee0991f555a3780aec2d6c6137cd45e13ec217c9b4b3535e2",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m01.value-capture.001",
+      "content_hash": "63befe94946e1b6f0e65abb88f9b862bfb22ef3aa09cf4a41cde8e85b233b76e",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m01.incremental-return.001",
+      "content_hash": "9ddb013545b0b41afe483b057e23e7dc538137cd2f505c082a07adea52b1fac2",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m01.cohort-payback.001",
+      "content_hash": "94367564966ca81997278a486bc02b37428cce495dbd05f0a255023978dc707d",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m01.moat-test.001",
+      "content_hash": "61b42f91a0b89c2af109a1a9f843168fae018fc93c81a6b11142e21b7abb97e1",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m01.sourcing-choice.001",
+      "content_hash": "0e8f6479ac6fdb3bb096301837dfb5f3aac362747384d628954c0d717438f0f5",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch07-m01-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m02.billing-incentive.001",
+      "content_hash": "bc7977916883d09ee0a8e7627ac04bdbd9b8f3a5194bc33166d29e2d52923091",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m02.revenue-retention.001",
+      "content_hash": "7195f9c8bcf0ebde37d0983508004abb1bdbc3db683f54e03cb97158461f2337",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m02.outcome-contract.001",
+      "content_hash": "85620be0949b520fdab61f7ab319fdd3de2ff7be87f2d8ef64827bd08a8706bf",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m02.sponsor-trust.001",
+      "content_hash": "49939413a81975536d6e5367c08f4dace5a7e25e1c6c3157e75ed555b43e57d8",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m02.commission-base.001",
+      "content_hash": "90b0e5c302942bf0ec6eb68848099eca4b26b5dc25ffa15db551b9b5ae2b5201",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m02.custom-delivery.001",
+      "content_hash": "12c9fd2f3cd17640463b3e1e072072410988b64cb2aab21a2df1fbcd9ce0e943",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m02.open-service.001",
+      "content_hash": "8fef3c3182c6675cbd21d99ccc5cbe70ab0c9a6a314498b4da059742723473a3",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m02.cost-drop-response.001",
+      "content_hash": "5b921300a8206dc8a5bcbab1eec8c299b9af3c03eeb378bdf4b02df86a8ace5d",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch07-m02-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m03.chain-flow.001",
+      "content_hash": "81305b2df21a9767db0f4fa089f4b9c92cbafcf0413a5e4c0eec30303911471a",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m03.bottleneck.001",
+      "content_hash": "bdaf1397c5dd213c61bf0d3d91d10dee4f1f26c1b9b84a61d80d925c21a3e7c2",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m03.migration-economics.001",
+      "content_hash": "9ee6a1c6aded6b452b2a1a92dc12dbd9c17b69e57f713f03f5226099d4c9efb4",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m03.price-transmission.001",
+      "content_hash": "365251ef0b5f3e5fb82237a6f5ff8f97d0f0fe3d08f7c9d680863023ec3e9c92",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m03.capacity-value.001",
+      "content_hash": "181d76d35aee950ea5a28aa4916af845cf8136a64c4a814d81357c73b08d4fac",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m03.responsibility-map.001",
+      "content_hash": "8005e4430c0b9d8857ecd263af3bc6fe51db8de8455d991a466293ddfd98d046",
+      "reviewer": "codex-independent-ch04-06-07-20261022",
+      "review_file": "review-ch04-06-07.json",
+      "batch_id": "ch07-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch07.interview.m03.platform-cover.001",
+      "content_hash": "461c674001cec297c23106fe4986864202962918b285892a83e39d83d9bb891e",
+      "reviewer": "Codex-独立标题及卡体复审-20261024",
+      "review_file": "review-title-fixes.json",
+      "batch_id": "ch07-m03-remaining-20261022"
+    },
+    {
+      "canonical_key": "ch08.interview.m01.ecosystem-roles.001",
+      "content_hash": "201d61af7ab8ebe9c28a95caa8c6eb05c0f9fa0910a3c2a7edb09ab68c92f4ce",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m01"
+    },
+    {
+      "canonical_key": "ch08.interview.m01.openness-choice.001",
+      "content_hash": "8fb80c61b044fd9aa28274a93deb9ea618ff342a30791c607a8707bdf3ac1088",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m01"
+    },
+    {
+      "canonical_key": "ch08.interview.m01.small-network-niche.001",
+      "content_hash": "86d78c39761405ef75e1f0cb74c6f1c3ce3d40d9db4261734988e8dc7c5b3c28",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m01"
+    },
+    {
+      "canonical_key": "ch08.interview.m01.capacity-incrementality.001",
+      "content_hash": "4159d9f03ad25a41799e20793acc9299aab90d93106bcc8070f3bdc60079897c",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m01"
+    },
+    {
+      "canonical_key": "ch08.interview.m02.repeat-value.001",
+      "content_hash": "f5de843a699c9c921dc68c76cf382cea0b8014e4c8d73cbf5b64fea0c086b29b",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m02"
+    },
+    {
+      "canonical_key": "ch08.interview.m02.subsidy-economics.001",
+      "content_hash": "3715acff754dfeb377c037b7453e51b30857a1f40a7704f4f554759dfe3bedca",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m02"
+    },
+    {
+      "canonical_key": "ch08.interview.m02.marketplace-liquidity.001",
+      "content_hash": "e39ce9db66a8416c8c30a5336b6e68f78198e4ef98b219b03fa9fc8bb28bee6b",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m02"
+    },
+    {
+      "canonical_key": "ch08.interview.m02.sunset-obligations.001",
+      "content_hash": "58b5fa56940342248e40d53850340921b214f5cad4a5df75f6c99159a8c22747",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m02"
+    },
+    {
+      "canonical_key": "ch08.interview.m03.platform-choice.001",
+      "content_hash": "f12ed2a9b260d438bcfb5bdf5aa822c3925e6fc8c9a9681f6a7c749e5c72692a",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m03"
+    },
+    {
+      "canonical_key": "ch08.interview.m03.file-delivery.001",
+      "content_hash": "619ef5d8471af7fc717940ca0a173fe12da3e916f2ceb17f6df3346e118a5fe1",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m03"
+    },
+    {
+      "canonical_key": "ch08.interview.m03.migration-friction.001",
+      "content_hash": "94330e55ec2cf21a8553eb4429dee0d227687549dee6d2f4a9aaecd21cc684c7",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m03"
+    },
+    {
+      "canonical_key": "ch08.interview.m03.free-growth-evidence.001",
+      "content_hash": "7f06a77f6b11d21b9e703e6b5120f1f50a82e483b90d2076a36420af8aff5f3d",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m03"
+    },
+    {
+      "canonical_key": "ch08.interview.m04.desktop-data-boundary.001",
+      "content_hash": "ba042fe4f3e14314863c906328c08f0eef48e25d9db1980326fe1a26bf442331",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m04"
+    },
+    {
+      "canonical_key": "ch08.interview.m04.suspicious-egress.001",
+      "content_hash": "37c4a3a14039bd294ea051c35800a83d1582bbc9d54940ff98e995edc2d3239b",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m04"
+    },
+    {
+      "canonical_key": "ch08.interview.m04.auditable-actions.001",
+      "content_hash": "7e0d1b0decfb74b47cd4ca366b21326b803b81c23c29a9771ec12ff16d9fc882",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m04"
+    },
+    {
+      "canonical_key": "ch08.interview.m04.controlled-replacement.001",
+      "content_hash": "63f51ab22d307bf058b4f2ec347f89429de30778c1b5c14040ef9388f6d24f11",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m04"
+    },
+    {
+      "canonical_key": "ch08.interview.m05.behavioral-classification.001",
+      "content_hash": "d1d632d8494be17a4b7efc8e03b43f2cbd037f4d57987c9e5c422b875872209a",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch08.interview.m05.willingness-to-pay.001",
+      "content_hash": "9c3d1126fd908a9d635708ab8fbf07f42aa6a6b8f47cc38e68d2bfae13f94cb8",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch08.interview.m05.risk-not-label.001",
+      "content_hash": "bc76b03aad3d3eaf3338857b9c0d15bc443695b948117fb51daeedd93f312010",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m05"
+    },
+    {
+      "canonical_key": "ch08.interview.m06.hotel-transaction-responsibility.001",
+      "content_hash": "3dda8c746e74a8a7fac78169fc9901e6dc68c4a2f84222b47e500342f518e8ed",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m06"
+    },
+    {
+      "canonical_key": "ch08.interview.m06.ranking-and-dependence.001",
+      "content_hash": "2740ae437ffc9c9acdee55d799f4c6d971eff4925664ee22a3393dcf0f89c85a",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m06"
+    },
+    {
+      "canonical_key": "ch08.interview.m07.ecosystem-feedback.001",
+      "content_hash": "6a25637a90779818abe2060b33699511054c9f527e51a24d43d507cfb48235eb",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m07"
+    },
+    {
+      "canonical_key": "ch08.interview.m07.credible-model-option.001",
+      "content_hash": "5b663a9864681ffaa6e27fb9979144747ffa6463b586db97df194369c91911d4",
+      "reviewer": "Codex-Ch08-A",
+      "review_file": "review-ch08-a.json",
+      "batch_id": "ch08-interview-20261022-m07"
+    },
+    {
+      "canonical_key": "ch08.interview.m08.capital-vs-value.001",
+      "content_hash": "2ec0780af8f00f4b5ceb701253e907e3c4eb602ff241dd20a19b563df6fc59a8",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m08"
+    },
+    {
+      "canonical_key": "ch08.interview.m08.task-entry.001",
+      "content_hash": "7cc1010b070cdb57dd341f26085868d0fa74d1be5c49e0bf78a8ac82524a5032",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m08"
+    },
+    {
+      "canonical_key": "ch08.interview.m08.form-factor.001",
+      "content_hash": "966beca7a11e6f469fe25f3edac98cbf044bcd1453c162dd3fc03d4cfa95a093",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m08"
+    },
+    {
+      "canonical_key": "ch08.interview.m08.effective-task-cost.001",
+      "content_hash": "0510bb9be7b2faf2ebd0b2666648c74e8739f53b41905edc553c4c0fee88a2b6",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m08"
+    },
+    {
+      "canonical_key": "ch08.interview.m08.physical-safety.001",
+      "content_hash": "977c56e3a65b798e0b087f285cab331ffd1db9e35118ea0ce58f7001cb4b5f89",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m08"
+    },
+    {
+      "canonical_key": "ch08.interview.m09.restriction-response.001",
+      "content_hash": "86f75f5ae3f8f6c26cd01d61b2c3be4b2683e0f46bfddd39237338e4530f5659",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m09"
+    },
+    {
+      "canonical_key": "ch08.interview.m09.fallback-compatibility.001",
+      "content_hash": "03f67ae40a1514010829d8956964d282725aa4397040ea2c6f078495c386d8ba",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m09"
+    },
+    {
+      "canonical_key": "ch08.interview.m09.staged-release.001",
+      "content_hash": "02e1a5e7053406fca0345ee7666df0dbe12a71a99b1e619abd4f5257d264493f",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m09"
+    },
+    {
+      "canonical_key": "ch08.interview.m09.tiering-evidence.001",
+      "content_hash": "dcfc7b3d06d9c8284fa9c2c88ea51e48ca1c13ea2c0463fc517879ee504d9ca4",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m09"
+    },
+    {
+      "canonical_key": "ch08.interview.m10.first-use-case.001",
+      "content_hash": "6d3c365b59041d4d3446a304bcc9b725bd9ec3710b61b933475bbe48f4667672",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m10"
+    },
+    {
+      "canonical_key": "ch08.interview.m10.wearability-tradeoff.001",
+      "content_hash": "7e14521ccfa9136aa1fceb47d29a9bf7c422fc98e35bf9ee58b9b55437608694",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m10"
+    },
+    {
+      "canonical_key": "ch08.interview.m10.bystander-privacy.001",
+      "content_hash": "f223a8af8253157b968d5b908adfeb8c0db385158658e88c90cc79ba0ee60639",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m10"
+    },
+    {
+      "canonical_key": "ch08.interview.m10.incremental-value-test.001",
+      "content_hash": "f8b56daaa30181162b44f6d546f1b253a0c0fdc3b8e55a7f4482bcf297b21a79",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m10"
+    },
+    {
+      "canonical_key": "ch08.interview.m11.narrative-evidence.001",
+      "content_hash": "8bab0d4318adb0f0235dfe14970a4650ff0af91ff85c46ac94594ecebad5b467",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m11"
+    },
+    {
+      "canonical_key": "ch08.interview.m11.dependency-register.001",
+      "content_hash": "0253f2a66f9bb2c66b27fbd328b0f17420845bab352f2f1bb96889f116a590a3",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m11"
+    },
+    {
+      "canonical_key": "ch08.interview.m11.exit-route.001",
+      "content_hash": "c930ad20538fd3b0ab27169d45bed162242d34a23355c88bd1d73a4612f19be4",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m11"
+    },
+    {
+      "canonical_key": "ch08.interview.m12.attribution-boundary.001",
+      "content_hash": "69e6e85f86fb30753ace7b6306cc77473c59f78fe38269d25d0bdbe8d058a373",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m12"
+    },
+    {
+      "canonical_key": "ch08.interview.m12.execution-policy.001",
+      "content_hash": "7b1c1ef04c28bff8ce2fa02f8fee68a0abd805c5ded3211cb8910a89eb7df0c4",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m12"
+    },
+    {
+      "canonical_key": "ch08.interview.m12.runtime-stop.001",
+      "content_hash": "78cab266181206f25ed6373c877796405b3cf5c174f12ff97f1af24c6e25b46f",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m12"
+    },
+    {
+      "canonical_key": "ch08.interview.m12.recovery-acceptance.001",
+      "content_hash": "7c6dec7803ce3233d213545b878d48f056082984b5ddf3e9c453c25e250c426c",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m12"
+    },
+    {
+      "canonical_key": "ch08.interview.m13.build-buy-scope.001",
+      "content_hash": "be1f9fdc5fd4a69b1075d551cf082f59fc4134abc12a0b8691a2750122a2892a",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m13"
+    },
+    {
+      "canonical_key": "ch08.interview.m13.lifecycle-roi.001",
+      "content_hash": "726f4a8d06ef397a15fb69e6c5b31529dee402370102590e66e8442c169cc742",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m13"
+    },
+    {
+      "canonical_key": "ch08.interview.m13.mixed-routing.001",
+      "content_hash": "9cc11a1449837f506cc487c19eecb6a3a269f4ffd381a5d487bc9006220d3d40",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m13"
+    },
+    {
+      "canonical_key": "ch08.interview.m13.capability-gates.001",
+      "content_hash": "381972158df774546259c627be5f69762719c2bd147f8a784cb9d5e0b321316e",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m13"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.task-contract.001",
+      "content_hash": "c28e36480028b3402a50b7701e41743d77f895bb08ffa64ff7cfefc5a6ffb182",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.memory-boundary.001",
+      "content_hash": "9ed21de9c1fa1b32bdeed6d782f99c3fc93af00622c06bf12fa3518b53fed7c9",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.team-routing.001",
+      "content_hash": "110347acc7b744aa843bffcbae58d6806861a5735460d2752e4e4b5fea30e715",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.handoff-state.001",
+      "content_hash": "e6d213cd401fe7fc3ad87728353f33d4d8d380358d505d069b4179a11de4187d",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.routine-generalization.001",
+      "content_hash": "95d053fb6166f476b046b4da1d748e3e5c1a522614d980a36727ecf4abe4de4a",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.feedback-regression.001",
+      "content_hash": "04209c27df4f9ebadbf6e4649a192f27f752fbc7e4bfb1bb935569836a1a91e4",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.identity-isolation.001",
+      "content_hash": "2aa421106688d12629c035678b139fd6f8c0db1d3953cfa2aa8d09cec198f898",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.tool-selection.001",
+      "content_hash": "5cd5fa6a4bab63b9e01c751ae0f262aab35b78aef6c4c49cb3829b75527830fd",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.approval-contract.001",
+      "content_hash": "46dfefe73f7d61fef941e47ff8d87fc3754b59d13e54a9989fba8072c717b3f2",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.task-cost-diagnosis.001",
+      "content_hash": "cfce92163cae0013ec89a8e563a48a6bac545b86df255c6e65a7ac12a4d49901",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.release-evidence.001",
+      "content_hash": "7543933171280b5d7463aff271818bb14b90f3da54482dbbd9c8746de81792a3",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.automation-modes.001",
+      "content_hash": "7f993ba7e1dba0763eb509711c7cc9c650bc99f3359fc65206525bd9d41d70c5",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.unattended-quality.001",
+      "content_hash": "201673ebb20677d71874ceb6845ef7be3a4029191d5dd5624db3709176618ba8",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch08.interview.m14.adoption-evidence.001",
+      "content_hash": "8021af1e0b1691587bbd8376fdaca37af244d3f1bac9f09bcb0927f1998245be",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "review_file": "review-ch08-b.json",
+      "batch_id": "ch08-interview-draft-20261022-m14"
+    },
+    {
+      "canonical_key": "ch09.interview.shared-space-externalities.001",
+      "content_hash": "6dd554601b6aaabd2845116e4f6fb341881ae80deb64ca7453072e3432116bf4",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.traffic-routing-cost.001",
+      "content_hash": "a83ab86ab3596e87b8ca7e275572f3a700626ae51037f49e447c1333ac20ce69",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.default-package-choice.001",
+      "content_hash": "b5b63f0d5a7d5fe1dee76200cf8048a7830dd5ee45c05d8ea2395e3ee97538d2",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.price-frame-equivalence.001",
+      "content_hash": "2d1adc09f01b94d8779bc2ca20465e9beea58063ce54c8505ad346fe34144b10",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.progressive-disclosure.001",
+      "content_hash": "230155b1a7c3e07d9f74e8ca49016d124ce39a1fafbe14806938e6dd8eac0f57",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.physical-control-access.001",
+      "content_hash": "e33729bd5ed8b1f6730025becd2591b25fca347dd6b696f510b93b4b34604630",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.gesture-learnability.001",
+      "content_hash": "5c0732828b26106860663a988178d8cd650a0bf08fb58eb2a0455004ea469993",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.intent-first-navigation.001",
+      "content_hash": "e675c209eb93b0d17f4f05e206aa372f906f05738d75e85038877a09c7bacae3",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.exit-friction-proportionality.001",
+      "content_hash": "207b20de7d0a674d4507b082de521c5adf92a0cf0277afdd377651a709ceaedc",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.matching-information-fairness.001",
+      "content_hash": "23a6f086a0b62da3db87ec356b9dc4a86be96a8fdf7acbbb5f28d708628e8ddd",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.substitute-complement-recommendation.001",
+      "content_hash": "acaf9dc1371d6352c128e230bda48ff818ab427b4f6a07d27ae10416302c5723",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.paywall-value-disclosure.001",
+      "content_hash": "67eb1e6dc2e0b166ea99ff4cf871917a820f18a1fa7afb267ee51bdb964b3786",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.fulfillment-uncertainty-promise.001",
+      "content_hash": "68f6261034d2e2889d1ba4115d1399a8af0995d564624248f66501a42f249a43",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.threshold-discount-net-value.001",
+      "content_hash": "8d4ea020317a893d558eeddd95d78d0d626391d5d770da0eb1fe23accda0b059",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.nonstandard-trade-communication.001",
+      "content_hash": "58528e2a901ee12d7d2d41f453eabc0895381e1a78895714f55dcf201662dbbf",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.service-tier-value-cost.001",
+      "content_hash": "6b6f0a86060de5e16aee6612a1a8bd1aa2f2747ae966cd99a7606e956d8b188f",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.captive-market-price.001",
+      "content_hash": "42694b1fc62e53df7575df223b6841c69c3ad5e294f86540c6baeb259b5f20ba",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.subscription-consent-value.001",
+      "content_hash": "fd96bf02525085cb6a57f82b1803f3d85e06c27936fe4c4ed8a5895a25a8a63f",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.prepayment-utilization-liability.001",
+      "content_hash": "8488228f52ad971acf744a20939e620ee9ba7bec829a5651497c23cfbbffc2c0",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.virtual-currency-spend-control.001",
+      "content_hash": "ceada02c4040c134a837b8c3373a50654a89e8cbae7400cc7fe87026867763ad",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part01"
+    },
+    {
+      "canonical_key": "ch09.interview.referral-incremental-acquisition.001",
+      "content_hash": "f28dff7bcf50d338100bc9e97defddad40e4bc81ed1a573808f550b04dc38a96",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.social-proof-provenance.001",
+      "content_hash": "258c50c289c28c409091de1c23247c788edc3dc9cf5d5f288d5bb924f52c78c6",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.scarcity-promotion-truth.001",
+      "content_hash": "8c1faba09f4f2bb7e84d492d147c735e9a84240488054c2d0ac6e3db9aeeaf2a",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.habit-reward-core-value.001",
+      "content_hash": "0fd4c4002d324d938f153a647d469a603f064fe6aa2bf3c95d91206f7f7298da",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.creator-incentive-quality.001",
+      "content_hash": "8824f4af087cd145452cc1fc9499fa5cb4e21e72d90712e5b2a2bb5ad257756d",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.surge-capacity-fairness.001",
+      "content_hash": "cb6a86fc142fdb3acc5e3cce03b73a633be7e465d4ab42a24c2f79654bf77f40",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.contextual-onboarding.001",
+      "content_hash": "a0203988d483222d53a26cef50c2237ef2b37d685b9549f617729d06a726894d",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.abuse-expected-payoff.001",
+      "content_hash": "1f782d8f7da61b831fdfcc20c91e3382201c307f11685e90b7406c8a6c473713",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.reciprocal-reputation-bias.001",
+      "content_hash": "ca9f6947afcb8d790e37679664ed5f1077e9844fb973a62fa98fc2421a533a63",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.review-evidence-selection.001",
+      "content_hash": "be7bfb5f96354b36ce3d7f811597699ef50040120819eeefd4fd5c6391b6b71e",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.free-quota-resource-segmentation.001",
+      "content_hash": "d70c010c772f5bf9f4434fd446dd4aedcbc1fd452417c79a50bd4dfad67844e7",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.ai-output-control-feedback.001",
+      "content_hash": "142fc5cccc4df6b73908bab67449fa471b8d1437513b189353d7015f0fcebc54",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.subsidy-cohort-incrementality.001",
+      "content_hash": "8a6b12bea6b6f81eb3a46fd5e508d657f2be438441c8aa52de455e4418c2be6a",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.campaign-causal-rollout.001",
+      "content_hash": "dcabaf7abb82bdff6bb945d9ca195584866a200cdb9e99843f9ac11879f99719",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.filter-sort-organization.001",
+      "content_hash": "13fe6468347665fd00b47f7af6d47232747c2ed036c0a6330d037bee01ce5426",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.asynchronous-state-recovery.001",
+      "content_hash": "880880723c3fe48708e3a48b7545449738a17a49aca29fe1d7517a36cef2f9fb",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.notification-attention-control.001",
+      "content_hash": "a7b9577c22ebd99111de877e53643745d9a7b5a86ae3f982f850b7337a26c601",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.contextual-minimum-permission.001",
+      "content_hash": "7fd46e90d55016ac00d48287172dae98e15c798e4a0edc5c33dd9b28d417ef9c",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.moderation-proportionate-appeal.001",
+      "content_hash": "662d1162011d0023c7360a6968f788f1e5de3ceed0eb0eb9ea2a56dcf533724a",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part02"
+    },
+    {
+      "canonical_key": "ch09.interview.risk-based-authentication.001",
+      "content_hash": "841fbaab1ee8f435da2384b955fcc26c9bdd3fbe4687c0ce0873ae3be464c745",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.history-asset-recovery.001",
+      "content_hash": "33878a69a6ee51ac13abbc2c32388fb948c2ac85b651e8350c230161dfad7935",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.recommendation-feedback-diversity.001",
+      "content_hash": "490b0f4e60e7142e727657eed9cfc311c6ff7763a8e7847ccb2a4f4e7aac2604",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.bot-service-escalation.001",
+      "content_hash": "56c90b3b903fae68c2f7109b40d2731dc42afb020ae2628fdab9056d7a3a2bb4",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.payment-idempotent-state.001",
+      "content_hash": "960762ce6aab111b841539689e0edd8883449492533263590479ee8e87c599e2",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.settlement-refund-traceability.001",
+      "content_hash": "7e947708a1beb9d17263dd7045c683f11a541954acb800e4b71a806d600e2e2a",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.deferred-payment-total-cost.001",
+      "content_hash": "c15288d148f91700bef6c82fc5c118d1d3c7537659b12c7b8806f4cc3c037398",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.adaptive-resource-budget.001",
+      "content_hash": "f9730ead27f7ebb0c79a5a33fa0d48b701614a94caeb45d72cb8c7e4983f554f",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.social-visibility-consent.001",
+      "content_hash": "0d82dcaac189133e98ca14293e76ce75f5897014490d49cd6ee460e94e38eed9",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.platform-commission-service.001",
+      "content_hash": "051abbe0630e1a082a7900d2ec3d05c5b9554f1e91b6f60f53a2ba4656a87f22",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.feedback-sampling-action.001",
+      "content_hash": "eb881c5f6e82ef70c78c88c62b9b679ca4c585c509dfc19e2a7e24bc1b0b14d0",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.change-communication-meaning.001",
+      "content_hash": "e7046f65b032aaabfce78fe148722d1b75a071a66a88ba55fe9604e785965204",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.identity-attestation-boundary.001",
+      "content_hash": "dd480d83c3906bb005145a0b3b53d148478ac2523badafbd6d966243831839d6",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.theme-accessibility-context.001",
+      "content_hash": "89bc74910e67e1031872b46b32b3a53883aab711b741c4ef5d3cc03544ce2759",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.cart-validity-revalidation.001",
+      "content_hash": "5155e2a5e54f3cd472d3551e4fd7fcec17274f2f59ad3da6bc3d987d9099ff50",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    },
+    {
+      "canonical_key": "ch09.interview.goal-progress-reward-obligation.001",
+      "content_hash": "b13aca5119523ed535842d2f3451483cc46476a6a7572c92aeca7abf32f77178",
+      "reviewer": "Codex-独立内容审校-ch09-20261022",
+      "review_file": "review-ch09.json",
+      "batch_id": "ch09-m01-interview-20261022-part03"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "module_id": "ch08-m13",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+    "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+    "line_start": 1,
+    "line_end": 94
+  },
+  "existing_cards": 0,
+  "new_cards": 4,
+  "revised_cards": 0,
+  "native_objectives": 3,
+  "registered_native_objectives": 3,
+  "registration_coverage": 1,
+  "publication_coverage": 0,
+  "practice_executed": 0,
+  "review_completed": 0,
+  "card_content_hash_algorithm": "SHA256(canonicalJson(card去掉review字段))；复用scripts/content-batch-lib.ts的canonicalJson，对象键排序、数组顺序保留、UTF-8",
+  "card_content_hashes": {
+    "ch08.interview.m13.build-buy-scope.001": "be1f9fdc5fd4a69b1075d551cf082f59fc4134abc12a0b8691a2750122a2892a",
+    "ch08.interview.m13.lifecycle-roi.001": "726f4a8d06ef397a15fb69e6c5b31529dee402370102590e66e8442c169cc742",
+    "ch08.interview.m13.mixed-routing.001": "9cc11a1449837f506cc487c19eecb6a3a269f4ffd381a5d487bc9006220d3d40",
+    "ch08.interview.m13.capability-gates.001": "381972158df774546259c627be5f69762719c2bd147f8a784cb9d5e0b321316e"
+  },
+  "records": [
+    {
+      "module_id": "ch08-m13",
+      "objective_id": "ch08-m13-O1",
+      "original_text": "_思考题：如果你的公司每年在 AI 调用上花费巨大，你会选择继续采购外部模型，还是投入自研？决策的关键因素是什么？_",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 93,
+        "line_end": 93
+      },
+      "disposition": "拆分",
+      "reason": "原题要求采购/自研取舍；范围、成本、路由和组织门槛分别承载关键因素，母题保留完整决策，实践只负责可复算产物。",
+      "actual_card_keys": [
+        "ch08.interview.m13.build-buy-scope.001",
+        "ch08.interview.m13.lifecycle-roi.001",
+        "ch08.interview.m13.mixed-routing.001",
+        "ch08.interview.m13.capability-gates.001"
+      ],
+      "mother_ids": [
+        "ch08-m13-M1"
+      ],
+      "practice_ids": [
+        "ch08-m13-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m13",
+      "objective_id": "ch08-m13-R1",
+      "original_text": "## 一、微软和 OpenAI 的\"蜜月期\"结束了？\n\n过去几年，微软是 OpenAI 最重要的盟友。微软向 OpenAI 投资超过 130 亿美元，把 GPT 模型集成进 Bing、Office、Azure。\n\n但现在，微软开始培养自己的模型家族 MAI，并逐渐减少对外部模型的依赖。\n\n这不是关系破裂，而是商业逻辑的必然。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 11,
+        "line_end": 17
+      },
+      "disposition": "延期核实",
+      "reason": "合作关系变化和“必然”解释需要官方范围与实际路由数据，标题不作事实目标；母题说明不可推断。",
+      "actual_card_keys": [],
+      "mother_ids": [
+        "ch08-m13-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m13",
+      "objective_id": "ch08-m13-R2",
+      "original_text": "## 二、这是\"去 OpenAI 化\"的开始吗？\n\n严格来说，不是完全替代，而是\"混合使用\"。\n\n微软的策略很可能是：\n\n*   简单任务用自研模型（便宜、可控）\n*   复杂任务用 OpenAI 模型（能力强）\n*   特定场景用专门训练的垂直模型\n\n这是一种理性的分层策略。\n\n但它也释放了一个信号：**大客户的 AI 战略正在从\"依赖单一供应商\"转向\"多模型、多供应商\"。**",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 33,
+        "line_end": 45
+      },
+      "disposition": "合并",
+      "reason": "去某供应商化不能写成真实全面替代；以假设混合路线表达与验证条件承接。",
+      "actual_card_keys": [
+        "ch08.interview.m13.mixed-routing.001"
+      ],
+      "mother_ids": [
+        "ch08-m13-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m13",
+      "objective_id": "ch08-m13-E-build-buy-scope",
+      "original_text": "**第一，成本太高。**\n\nOpenAI 的 API 价格昂贵。微软一年要在 AI 上花几十亿美元，其中很大一部分流入了 OpenAI。如果微软能用自研模型替代 30% 的调用，节省的费用就是天文数字。\n\n**第二，差异化竞争需要。**\n\n如果微软的产品和谷歌、Salesforce 都用同样的 OpenAI 模型，那微软的差异化在哪里？自研模型可以针对 Office、Windows、Azure 的场景优化，提供更好的体验和更低的成本。\n\n**第三，供应链安全。**\n\n把所有 AI 能力押注在一家外部公司身上，风险太大。OpenAI 的模型访问可能受监管影响，价格可能上涨，服务可能不稳定。微软需要有自己的 Plan B。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 21,
+        "line_end": 31
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题收窄为从零训练、微调、自部署的权重来源、改动对象与维护责任辨析；不再评分完整采购ROI/组织试点流程。",
+      "actual_card_keys": [
+        "ch08.interview.m13.build-buy-scope.001"
+      ],
+      "mother_ids": [
+        "ch08-m13-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m13",
+      "objective_id": "ch08-m13-E-lifecycle-roi",
+      "original_text": "**第一，成本太高。**\n\nOpenAI 的 API 价格昂贵。微软一年要在 AI 上花几十亿美元，其中很大一部分流入了 OpenAI。如果微软能用自研模型替代 30% 的调用，节省的费用就是天文数字。\n\n**第二，差异化竞争需要。**\n\n如果微软的产品和谷歌、Salesforce 都用同样的 OpenAI 模型，那微软的差异化在哪里？自研模型可以针对 Office、Windows、Azure 的场景优化，提供更好的体验和更低的成本。\n\n**第三，供应链安全。**\n\n把所有 AI 能力押注在一家外部公司身上，风险太大。OpenAI 的模型访问可能受监管影响，价格可能上涨，服务可能不稳定。微软需要有自己的 Plan B。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 21,
+        "line_end": 31
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：采购与自研的成本怎样同口径。推理单价是局部成本，业务真正购买的是可稳定完成的任务及持续服务责任。",
+      "actual_card_keys": [
+        "ch08.interview.m13.lifecycle-roi.001"
+      ],
+      "mother_ids": [
+        "ch08-m13-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m13",
+      "objective_id": "ch08-m13-E-mixed-routing",
+      "original_text": "严格来说，不是完全替代，而是\"混合使用\"。\n\n微软的策略很可能是：\n\n*   简单任务用自研模型（便宜、可控）\n*   复杂任务用 OpenAI 模型（能力强）\n*   特定场景用专门训练的垂直模型\n\n这是一种理性的分层策略。\n\n但它也释放了一个信号：**大客户的 AI 战略正在从\"依赖单一供应商\"转向\"多模型、多供应商\"。**",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 35,
+        "line_end": 45
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：混合模型路由怎样受控上线。路由带来的收益依赖分类错误代价和升级开销，不能用“简单/复杂”标签替代回放证据。",
+      "actual_card_keys": [
+        "ch08.interview.m13.mixed-routing.001"
+      ],
+      "mother_ids": [
+        "ch08-m13-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m13",
+      "objective_id": "ch08-m13-E-capability-gates",
+      "original_text": "如果微软的产品和谷歌、Salesforce 都用同样的 OpenAI 模型，那微软的差异化在哪里？自研模型可以针对 Office、Windows、Azure 的场景优化，提供更好的体验和更低的成本。\n\n**第三，供应链安全。**\n\n把所有 AI 能力押注在一家外部公司身上，风险太大。OpenAI 的模型访问可能受监管影响，价格可能上涨，服务可能不稳定。微软需要有自己的 Plan B。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 27,
+        "line_end": 31
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：具备什么条件才继续自研。模型效果只是服务能力的一部分，组织需要承担版本迭代、容量及故障责任。",
+      "actual_card_keys": [
+        "ch08.interview.m13.capability-gates.001"
+      ],
+      "mother_ids": [
+        "ch08-m13-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    }
+  ],
+  "author_revision_date": "2026-10-24",
+  "author_revision_status": "draft_awaiting_independent_rereview",
+  "withdrawn_candidates": [],
+  "reused_card_keys": [],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch08-interview-draft-20261022-m13"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m13.build-buy-scope.001": "be1f9fdc5fd4a69b1075d551cf082f59fc4134abc12a0b8691a2750122a2892a",
+    "ch08.interview.m13.lifecycle-roi.001": "726f4a8d06ef397a15fb69e6c5b31529dee402370102590e66e8442c169cc742",
+    "ch08.interview.m13.mixed-routing.001": "9cc11a1449837f506cc487c19eecb6a3a269f4ffd381a5d487bc9006220d3d40",
+    "ch08.interview.m13.capability-gates.001": "381972158df774546259c627be5f69762719c2bd147f8a784cb9d5e0b321316e"
+  }
+}

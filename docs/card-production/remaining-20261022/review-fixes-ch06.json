@@ -1,0 +1,100 @@
+{
+  "reviewer": "Codex-独立复审-20261024",
+  "score_dimensions": [
+    "原生目标/补题理由",
+    "条件与范围",
+    "题答评分对齐",
+    "机制与依据",
+    "实例证据推演",
+    "边界反例易错",
+    "来源与编辑假设",
+    "负担与去重"
+  ],
+  "hash_method": "SHA256(canonicalJson(card删除review字段))；复用scripts/content-batch-lib.ts的canonicalJson实现，不导入数据库环境",
+  "reviewed_batches": [
+    "ch06-m04-draft.json"
+  ],
+  "cards": [
+    {
+      "canonical_key": "ch06.interview.m04.collaboration-choice.001",
+      "content_hash": "9394c13e4b4ff125e00d33b52c0bac44ef4f7ff19995f9f3aa9242f27a1d5602",
+      "reviewer": "Codex-独立复审-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "原退回问题已解决：前置先接待/初筛后移交、Copilot由坐席核对决定执行、自主在获准低风险流程执行并核回执，三者在核心回答、必答点及同一客服入口示例中分别承载，不再把前置和自主混成一项。",
+        "三项比较均交代处理位置、任务条件及错误代价；前置遇知识不足/用户要求/风险越界由坐席接手，Copilot资料不足或建议冲突由坐席升级，自主异常/投诉/越权风险交明确负责人。上下文及责任状态随交接保留。",
+        "对比题用一二三编号合理，不强套STAR；获准补寄是明确编辑假设，不是本产品已执行流程。真实解决、投诉和含人工总成本为分层试点的拟验收证据，未虚构成果。",
+        "逐行核对本课LF311–337：L319/L320/L321支持三模式及适用条件，L326–337支持多维验收；未把原文固定比例、时延或成本参考值当通用门槛。L322第四种无缝切换不在本题范围，不强加评分。",
+        "授权范围、完成回执、接管责任与用户要求均在本题作答范围内；不把自主率最大化或企业成功故事当因果证据。90秒的三模式比较保持一个选型目标，与单独考交接信息包/情绪赔偿授权的卡有区别。",
+        "复审替代旧hash 33094b6e8c18603e9abd12b40e3b7a6b37de5dec464e91056fee6c595e06aeb6 的revise结论；旧审校记录未修改，当前draft及review.status仍为draft。"
+      ]
+    }
+  ],
+  "deduplication_checks": [
+    {
+      "module": "ch07-m02",
+      "removed_key": "ch07.interview.m02.unit-margin.001",
+      "removed_from_current_draft": true,
+      "current_draft_card_count": 8,
+      "baseline_reuse_keys": [
+        "ch05.interview.m01.paid-cohort.001"
+      ],
+      "objective_ids": [
+        "ch07-m02-L0852",
+        "ch07-m02-card-unit-margin"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [
+        "T3"
+      ],
+      "verdict": "verified_removed_and_reused",
+      "counts_as_new_completion": false,
+      "notes": [
+        "逐项对照实时408卡基线题面、answer_short与required_points，mapping_evidence一致；基线确实评付费人数分母、收入减API贡献非净利润、付费/免费及使用分群，并非仅标题复用。",
+        "L852原句问成本结构及毛利改善；覆盖已明确基线只承载同口径贡献，完整成本演算和敏感性保留M1/T3，改善响应另由cost-drop-response承载，不由一组数字宣布已完成。",
+        "母题/实践设计真实存在；模块文档终审补充列同月10000收入、4000变动成本、6000贡献与60%贡献率，未计固定研发/管理/获客；实践状态designed_not_executed。coverage的publication_coverage、accepted_cards、practice_completed均为0。",
+        "非阻塞记录：上方旧候选卡及旧数量保留为历史，末尾“主编终审合并”已明确最终8张，不作为新卡/新完成发布。"
+      ]
+    },
+    {
+      "module": "ch07-m03",
+      "removed_key": "ch07.interview.m03.model-fit.001",
+      "removed_from_current_draft": true,
+      "current_draft_card_count": 7,
+      "baseline_reuse_keys": [
+        "ch02.role.model-strategy.001",
+        "ch03.tech.evaluation-contract.001"
+      ],
+      "objective_ids": [
+        "ch07-m03-L0750",
+        "ch07-m03-card-model-fit"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "verdict": "verified_removed_and_reused",
+      "counts_as_new_completion": false,
+      "notes": [
+        "两张mapping_evidence逐字段匹配实时基线题面、短答案和评分，实际承载真实任务切片/同条件比较、质量时延成本风险、版本证据、试点及停止/回退；未用榜单或产业链标题声称覆盖。",
+        "L750实际原句问该功能模型成熟度与成本，L277的场景/成本/速度可复用，但数据许可、部署和适用要求不能由评测通过推出。M1及文档终审补充保留这些独立调查项，未采纳“金融政务必须某地模型”的未经核实断言。",
+        "本项映射是两张基线+M1，未硬挂T3；该课T3实际用于责任与平台覆盖，保持范围。母题为draft，实践未执行，coverage的publication_coverage、accepted_cards、practice_completed均为0。",
+        "非阻塞记录：旧候选段仍保留，但末尾“主编终审合并”明确撤去、最终7张，不能进入当前新增发布或计作新完成。"
+      ]
+    }
+  ],
+  "pending": []
+}

@@ -1,0 +1,195 @@
+{
+  "module_id": "ch08-m09",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+    "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+    "line_start": 1,
+    "line_end": 83
+  },
+  "existing_cards": 0,
+  "new_cards": 4,
+  "revised_cards": 0,
+  "native_objectives": 2,
+  "registered_native_objectives": 2,
+  "registration_coverage": 1,
+  "publication_coverage": 0,
+  "practice_executed": 0,
+  "review_completed": 0,
+  "card_content_hash_algorithm": "SHA256(canonicalJson(card去掉review字段))；复用scripts/content-batch-lib.ts的canonicalJson，对象键排序、数组顺序保留、UTF-8",
+  "card_content_hashes": {
+    "ch08.interview.m09.restriction-response.001": "86f75f5ae3f8f6c26cd01d61b2c3be4b2683e0f46bfddd39237338e4530f5659",
+    "ch08.interview.m09.fallback-compatibility.001": "03f67ae40a1514010829d8956964d282725aa4397040ea2c6f078495c386d8ba",
+    "ch08.interview.m09.staged-release.001": "02e1a5e7053406fca0345ee7666df0dbe12a71a99b1e619abd4f5257d264493f",
+    "ch08.interview.m09.tiering-evidence.001": "dcfc7b3d06d9c8284fa9c2c88ea51e48ca1c13ea2c0463fc517879ee504d9ca4"
+  },
+  "records": [
+    {
+      "module_id": "ch08-m09",
+      "objective_id": "ch08-m09-O1",
+      "original_text": "_思考题：如果你的产品依赖的前沿模型突然被监管限制访问，你有什么备选方案？_",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+        "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+        "line_start": 82,
+        "line_end": 82
+      },
+      "disposition": "拆分",
+      "reason": "备选方案必须覆盖限制确认、合规降级与可执行切换；母题保留恢复路径，实践制作决策表。",
+      "actual_card_keys": [
+        "ch08.interview.m09.restriction-response.001",
+        "ch08.interview.m09.fallback-compatibility.001"
+      ],
+      "mother_ids": [
+        "ch08-m09-M1"
+      ],
+      "practice_ids": [
+        "ch08-m09-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m09",
+      "objective_id": "ch08-m09-R1",
+      "original_text": "## 三、第三个逻辑：饥饿营销还是战略克制？\n\n也有人认为，OpenAI 是在玩饥饿营销：先限量，制造稀缺感，再逐步开放。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+        "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+        "line_start": 39,
+        "line_end": 41
+      },
+      "disposition": "合并",
+      "reason": "原文提出的营销/克制争论不是事实结论，改为竞争解释与受控发布的证据判断。",
+      "actual_card_keys": [
+        "ch08.interview.m09.staged-release.001"
+      ],
+      "mother_ids": [
+        "ch08-m09-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m09",
+      "objective_id": "ch08-m09-E-restriction-response",
+      "original_text": "对产品经理来说，这是一个信号：未来做 AI 产品，不能把模型能力当作无限制资源。你必须考虑监管、出口管制、数据主权等约束。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+        "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+        "line_start": 37,
+        "line_end": 37
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：访问受限时如何降级。访问拒绝的原因和范围决定可行路线；技术可调用与允许使用不是同一条件。",
+      "actual_card_keys": [
+        "ch08.interview.m09.restriction-response.001"
+      ],
+      "mother_ids": [
+        "ch08-m09-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m09",
+      "objective_id": "ch08-m09-E-fallback-compatibility",
+      "original_text": "2.   **产品发布节奏要考虑外部监管。** 如果你的产品依赖前沿模型，要预判监管可能带来的访问限制、审核周期、地域差异。\n\n3.   **模型分层是成熟产品的标志。** 不是所有用户都需要最强模型。按能力、成本、场景分层，既能降低用户成本，也能降低平台风险。\n\n4.   **能力越强，责任越大。** 当你的产品能完成复杂任务时，你也要为它的错误和滥用承担更大责任。产品经理要定义清楚使用边界。\n\n5.   **不要把模型能力当作无限资源。** 地缘政治、供应链、监管都可能影响你能调用什么模型。产品架构要保持一定弹性。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+        "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+        "line_start": 59,
+        "line_end": 65
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：备用模型真正可切换的条件。容灾需要业务交付连续性，接口格式相同不代表语义、拒答与执行状态相同。",
+      "actual_card_keys": [
+        "ch08.interview.m09.fallback-compatibility.001"
+      ],
+      "mother_ids": [
+        "ch08-m09-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m09",
+      "objective_id": "ch08-m09-E-staged-release",
+      "original_text": "## 一、限制访问的第一个逻辑：安全不是借口，是真实风险\n\nGPT-5.6 Sol 的评测方向很有意思：编程、生物学、网络安全。\n\n这三个方向有一个共同点——**都是双用途能力**。编程可以写代码也可以写病毒，生物学可以辅助研究也可以设计有害物质，网络安全可以防御也可以攻击。\n\nOpenAI 自己公布的数据显示：GPT-5.6 Sol 在 ExploitBench 和 ExploitGym 等安全任务上表现提升。能力越强，被滥用的潜在风险就越大。\n\n这不是 PR 话术。全球首例 AI Agent 自主勒索攻击\"JADEPUFFER\"已经在 7 月初被曝光：一个 AI Agent 利用漏洞自主渗透、横向移动、加密数据、留下赎金信息，全程无人干预。\n\n当 AI 可以自己完成攻击链时，限制访问就不是保守，而是必要。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+        "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+        "line_start": 11,
+        "line_end": 21
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：限制发布的竞争解释与放量门槛。发布方式是可观察行为，其动机是待检验解释；评估开放范围需要收益与风险的可逆决策。",
+      "actual_card_keys": [
+        "ch08.interview.m09.staged-release.001"
+      ],
+      "mother_ids": [
+        "ch08-m09-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m09",
+      "objective_id": "ch08-m09-E-tiering-evidence",
+      "original_text": "过去几年，OpenAI 的产品策略是\"快速发布、快速迭代\"。GPT-3、GPT-4、GPT-4o、GPT-5 一路狂奔。但现在它开始分层：\n\n*   Sol：给需要最强能力的企业和研究机构\n*   Terra：给日常办公场景\n*   Luna：给高并发、低成本任务\n\n这种分层说明 OpenAI 不再只追求\"最强模型\"，而是在追求**更精细的产品矩阵和更可控的发布节奏**。\n\n限制访问，也可能是为了在小范围内观察真实使用中的风险，再决定如何向公众开放。\n\n## 四、对产品经理的启示\n\n1.   **安全合规要从产品第一天就设计进去。** 不是等产品火了再加风控，而是在设计模型调用、任务执行、数据流转时就把安全机制作为核心约束。\n\n2.   **产品发布节奏要考虑外部监管。** 如果你的产品依赖前沿模型，要预判监管可能带来的访问限制、审核周期、地域差异。\n\n3.   **模型分层是成熟产品的标志。** 不是所有用户都需要最强模型。按能力、成本、场景分层，既能降低用户成本，也能降低平台风险。\n\n4.   **能力越强，责任越大。** 当你的产品能完成复杂任务时，你也要为它的错误和滥用承担更大责任。产品经理要定义清楚使用边界。\n\n5.   **不要把模型能力当作无限资源。** 地缘政治、供应链、监管都可能影响你能调用什么模型。产品架构要保持一定弹性。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+        "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+        "line_start": 45,
+        "line_end": 65
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：模型分层为何不自动降低风险。能力分层和风险授权是两条独立控制轴，模型更强不意味着权限更大。",
+      "actual_card_keys": [
+        "ch08.interview.m09.tiering-evidence.001"
+      ],
+      "mother_ids": [
+        "ch08-m09-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    }
+  ],
+  "author_revision_date": "2026-10-24",
+  "author_revision_status": "draft_awaiting_independent_rereview",
+  "withdrawn_candidates": [],
+  "reused_card_keys": [],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch08-interview-draft-20261022-m09"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m09.restriction-response.001": "86f75f5ae3f8f6c26cd01d61b2c3be4b2683e0f46bfddd39237338e4530f5659",
+    "ch08.interview.m09.fallback-compatibility.001": "03f67ae40a1514010829d8956964d282725aa4397040ea2c6f078495c386d8ba",
+    "ch08.interview.m09.staged-release.001": "02e1a5e7053406fca0345ee7666df0dbe12a71a99b1e619abd4f5257d264493f",
+    "ch08.interview.m09.tiering-evidence.001": "dcfc7b3d06d9c8284fa9c2c88ea51e48ca1c13ea2c0463fc517879ee504d9ca4"
+  }
+}

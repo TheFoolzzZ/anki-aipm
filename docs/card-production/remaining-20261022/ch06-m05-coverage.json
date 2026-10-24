@@ -1,0 +1,688 @@
+{
+  "module_id": "ch06-m05",
+  "source": {
+    "relative_path": "第6章-行业案例/6.5-编程Agent.md",
+    "content_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+    "line_count": 438,
+    "line_convention": "Original LF line numbers; numbered source snapshot verified against local body"
+  },
+  "status": "draft",
+  "native_checklist_count": 0,
+  "registered_checklist_count": 0,
+  "question_candidate_count": 7,
+  "publication_coverage": 0,
+  "accepted_cards": 0,
+  "practice_completed": 0,
+  "mother_questions": [
+    {
+      "id": "M1",
+      "prompt": "M1｜假设团队引入编程Agent开发认证功能并交接平台生成应用，你如何定义可信委派和效率验收？",
+      "answer": "S：假设工作区已有人工修改，Agent可以跨文件实现功能，但最终仍由团队维护。T：交付符合当前契约的可验证软件，同时保护已有工作。A：任务包交代目标、依赖、可改范围、正常和异常验收、权限、项目约定及升级条件；完成要看真实业务路径，不是页面或测试文件。修改前核对当前定义、调用方和索引版本，在有限窗口里补必要上下文，不猜API或外传全部仓库。记录基线和本次差异，按影响与可恢复性渐进授权，重叠修改先读现态；撤销只撤明确归属本任务的补丁，冲突交相关作者处理。认证和折扣都按风险定义人工负责人、审查与验证，AI参与不稀释合并责任。平台源码交接另列认证、数据、文件、部署、许可和运维依赖，逐项验证迁移与回退。R：按同难度任务测需求到合并周期、等待审查、返工、缺陷和人工总投入；生成量上升而审查排队增加不算提效。没有实际运行和迁移证据时保持草稿或部分完成，不编造开发提效比例。",
+      "status": "draft"
+    },
+    {
+      "id": "M2",
+      "prompt": "M2｜为什么编程适合验证，却不能说测试通过就没Bug或会自动学会？",
+      "answer": "一、编译、测试和运行提供较明确反馈，代码与版本差异也便于检查，因此适合建立生成—执行—修正循环；但验收只覆盖已表达规则和已测输入，未覆盖业务、权限或并发路径仍会失败。二、当前上下文使用执行反馈与修改模型参数是不同机制，跑测试成功不证明模型已永久学习；是否训练需另有数据、用途和评测管道。三、信任来自受控范围、可见差异、独立证据和责任归属，不能由品牌、上下文容量或“自主同事”比喻保证。定位和定价按实际节省的完整交付成本及客户预算验证，不预测完全替代时间表。",
+      "status": "draft"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "T1",
+      "title": "产品定位与委派方案",
+      "ranges": [
+        [
+          1,
+          204
+        ],
+        [
+          291,
+          344
+        ],
+        [
+          395,
+          438
+        ]
+      ],
+      "design": "选一个团队具体任务，对补全、IDE/终端协作和自主Agent按输入、责任、权限、交付证据、错误代价及现有工作流比较；分别列用户、采购者、付费单位和总成本，验证定位/定价/壁垒假设，不背厂家优劣。",
+      "acceptance": "任务包有可执行正常/失败验收、停止升级条件；定位与价格有价值和成本变量，作者的行业影响预测列可反驳假设。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T2",
+      "title": "代码上下文与变更恢复",
+      "ranges": [
+        [
+          205,
+          289
+        ]
+      ],
+      "design": "设计旧索引、遗漏调用方、上下文截断、敏感文件及多人同文件冲突样本；分别记录基线、当前定义、Agent补丁、后续人工改动和恢复步骤。",
+      "acceptance": "模拟回滚保留其他作者改动，冲突不自动覆盖；索引版本和实际调用验证均有记录，绝不把全部凭据或代码发出。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T3",
+      "title": "迁移与交付瓶颈评估",
+      "ranges": [
+        [
+          345,
+          393
+        ]
+      ],
+      "design": "对平台应用设计代码/构建、数据、身份、文件、许可、部署和运维迁移表，标可迁/适配/受限；对同类开发任务记录生成、排队、审查、验证、返工和缺陷，并设计小PR与在制品限制。",
+      "acceptance": "隔离环境业务和恢复未执行前不记迁移通过；完成时间与质量一起评价，不把代码行数、采纳率或开发者自评当真实收益。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "objectives": [
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0009",
+      "original_text": "作为AI产品经理，编程Agent行业是一个绝佳的研究对象——它展示了AI如何从\"工具\"进化为\"同事\"，也揭示了AI产品商业化中最核心的命题：**当AI能替代人的核心技能时，产品该如何定位？如何定价？如何建立壁垒？**",
+      "source_line": 9,
+      "source_line_end": 9,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "原文问题候选",
+      "decision": "实践任务",
+      "reason": "T1明确为同一任务设计使用者/预算者、付费单位、完整交付成本与壁垒反证；定位、定价、壁垒三问须分别产出，非只写产品名称。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0039",
+      "original_text": "【3.0 Agent编程】",
+      "source_line": 39,
+      "source_line_end": 39,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "采用",
+      "reason": "delegation-package用认证任务明确目标依赖、正常失败验收、权限和完成证据，不将“同事”比喻视为自主保证。",
+      "card_keys": [
+        "ch06.interview.m05.delegation-package.001"
+      ],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted",
+      "mapping_evidence": [
+        {
+          "canonical_key": "ch06.interview.m05.delegation-package.001",
+          "revision": 2,
+          "prompt": "假设团队把邮箱登录与找回密码交给编程Agent，Agent只做了页面就宣布完成。你会怎样补齐任务包，哪些情况应升级讨论？",
+          "required_points": [
+            "任务包含目标、接口/依赖、约束及正常异常验收",
+            "可改范围、权限、项目约定与交付验证要求明确",
+            "超范围/契约冲突/不可恢复需升级，完成靠实际证据"
+          ],
+          "state": "author_draft"
+        }
+      ]
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0056",
+      "original_text": "### （三）为什么编程是AI最先颠覆的领域？",
+      "source_line": 56,
+      "source_line_end": 56,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "原文问题候选",
+      "decision": "采用",
+      "reason": "M2解释编译/测试反馈适合验证，但测试通过不保证无Bug、不等模型永久学习，不采纳“最先颠覆”排名。",
+      "card_keys": [],
+      "mother_question_id": "M2",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0064",
+      "original_text": "编程任务的\"对错\"是可以验证的：代码能不能运行？测试通不通过？有没有Bug？这种即时、明确的反馈，让AI能快速学习和迭代。",
+      "source_line": 64,
+      "source_line_end": 64,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "原文问题候选",
+      "decision": "采用",
+      "reason": "M2解释编译/测试反馈适合验证，但测试通过不保证无Bug、不等模型永久学习，不采纳“最先颠覆”排名。",
+      "card_keys": [],
+      "mother_question_id": "M2",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0110",
+      "original_text": "| **技术壁垒** | 代码库级上下文理解（索引整个项目）、模型选择灵活（GPT/Claude/o3-mini）、Yolo自动执行 |",
+      "source_line": 110,
+      "source_line_end": 110,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "延期核实",
+      "reason": "厂商索引/上下文容量/合规能力、成熟时间预测、年度价格或开发边际成本趋零均缺当前版本证据；通用机制不替厂商断言通过。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0132",
+      "original_text": "| **技术壁垒** | 1M token超大上下文、终端原生体验、GitHub PR/Issue直接触发 |",
+      "source_line": 132,
+      "source_line_end": 132,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "延期核实",
+      "reason": "厂商索引/上下文容量/合规能力、成熟时间预测、年度价格或开发边际成本趋零均缺当前版本证据；通用机制不替厂商断言通过。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0160",
+      "original_text": "2.   **企业合规**：微软提供完整的企业级安全审计、代码隐私保护、本地部署选项。这是Cursor等创业公司短期内难以企及的。",
+      "source_line": 160,
+      "source_line_end": 160,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "延期核实",
+      "reason": "厂商索引/上下文容量/合规能力、成熟时间预测、年度价格或开发边际成本趋零均缺当前版本证据；通用机制不替厂商断言通过。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0180",
+      "original_text": "1.   **信任问题**：企业敢把核心代码库交给AI自主修改吗？出错了谁负责？",
+      "source_line": 180,
+      "source_line_end": 180,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "原文问题候选",
+      "decision": "采用",
+      "reason": "coding-review-responsibility按风险与权限分工，人类保留设计审查合并责任；不依赖品牌信任。",
+      "card_keys": [
+        "ch06.interview.m05.coding-review-responsibility.001"
+      ],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted",
+      "mapping_evidence": [
+        {
+          "canonical_key": "ch06.interview.m05.coding-review-responsibility.001",
+          "revision": 2,
+          "prompt": "假设团队规定“安全关键代码完全不让AI参与，普通业务代码AI写完可直接合并”。你如何改成按风险分责，并用于认证与订单折扣变更？",
+          "required_points": [
+            "按后果/权限/恢复性分险，人类保留责任与合并决定",
+            "认证受控参与、专业审查和权限边界验证",
+            "折扣仍核业务金额边界，普通标签不免审"
+          ],
+          "state": "author_draft"
+        }
+      ]
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0184",
+      "original_text": "**PM判断**：Devin的方向是对的，但\"完全自主\"的愿景还需要2-3年才能成熟。短期内，\"人机协作\"（Copilot模式）比\"完全替代\"（Devin模式）更具商业价值。",
+      "source_line": 184,
+      "source_line_end": 184,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "延期核实",
+      "reason": "厂商索引/上下文容量/合规能力、成熟时间预测、年度价格或开发边际成本趋零均缺当前版本证据；通用机制不替厂商断言通过。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0205",
+      "original_text": "#### 1. 代码库索引（Codebase Indexing）",
+      "source_line": 205,
+      "source_line_end": 205,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0217",
+      "original_text": "*   索引的实时性：当用户修改代码后，索引多久能更新？",
+      "source_line": 217,
+      "source_line_end": 217,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "原文问题候选",
+      "decision": "采用",
+      "reason": "context-freshness要求工作区/索引版本、最终定义调用上下文及数据外传边界，三点覆盖实时性、遗漏和隐私；T2另需执行验收。",
+      "card_keys": [
+        "ch06.interview.m05.context-freshness.001"
+      ],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted",
+      "mapping_evidence": [
+        {
+          "canonical_key": "ch06.interview.m05.context-freshness.001",
+          "revision": 1,
+          "prompt": "假设编程Agent检索到旧函数签名，修改后调用失败。怎样区分代码索引过时与上下文遗漏，如何验证修复？",
+          "required_points": [
+            "比对工作区与索引版本/时间，先确认真实契约",
+            "核对最终定义/调用/配置上下文，区分索引召回截断",
+            "刷新重读最小修复并验证真实调用，未知不编API且守数据边界"
+          ],
+          "state": "author_draft"
+        }
+      ]
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0218",
+      "original_text": "*   索引的精度：大型项目（10万+文件）的索引是否会遗漏关键上下文？",
+      "source_line": 218,
+      "source_line_end": 218,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "原文问题候选",
+      "decision": "采用",
+      "reason": "context-freshness要求工作区/索引版本、最终定义调用上下文及数据外传边界，三点覆盖实时性、遗漏和隐私；T2另需执行验收。",
+      "card_keys": [
+        "ch06.interview.m05.context-freshness.001"
+      ],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted",
+      "mapping_evidence": [
+        {
+          "canonical_key": "ch06.interview.m05.context-freshness.001",
+          "revision": 1,
+          "prompt": "假设编程Agent检索到旧函数签名，修改后调用失败。怎样区分代码索引过时与上下文遗漏，如何验证修复？",
+          "required_points": [
+            "比对工作区与索引版本/时间，先确认真实契约",
+            "核对最终定义/调用/配置上下文，区分索引召回截断",
+            "刷新重读最小修复并验证真实调用，未知不编API且守数据边界"
+          ],
+          "state": "author_draft"
+        }
+      ]
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0219",
+      "original_text": "*   隐私问题：代码库索引是否会上传到云端？",
+      "source_line": 219,
+      "source_line_end": 219,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "原文问题候选",
+      "decision": "采用",
+      "reason": "context-freshness要求工作区/索引版本、最终定义调用上下文及数据外传边界，三点覆盖实时性、遗漏和隐私；T2另需执行验收。",
+      "card_keys": [
+        "ch06.interview.m05.context-freshness.001"
+      ],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted",
+      "mapping_evidence": [
+        {
+          "canonical_key": "ch06.interview.m05.context-freshness.001",
+          "revision": 1,
+          "prompt": "假设编程Agent检索到旧函数签名，修改后调用失败。怎样区分代码索引过时与上下文遗漏，如何验证修复？",
+          "required_points": [
+            "比对工作区与索引版本/时间，先确认真实契约",
+            "核对最终定义/调用/配置上下文，区分索引召回截断",
+            "刷新重读最小修复并验证真实调用，未知不编API且守数据边界"
+          ],
+          "state": "author_draft"
+        }
+      ]
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0221",
+      "original_text": "#### 2. 上下文管理（Context Management）",
+      "source_line": 221,
+      "source_line_end": 221,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0234",
+      "original_text": "#### 3. Prompt工程（代码场景）",
+      "source_line": 234,
+      "source_line_end": 234,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0263",
+      "original_text": "### （一）信任是核心产品问题",
+      "source_line": 263,
+      "source_line_end": 263,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0277",
+      "original_text": "### （二）人机协作模式设计",
+      "source_line": 277,
+      "source_line_end": 277,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0324",
+      "original_text": "| **年度成本** | ¥18万（80人×$19/月×12） | ¥12万（80人×$15/月×12） | ¥8万（服务器+运维） |",
+      "source_line": 324,
+      "source_line_end": 324,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "延期核实",
+      "reason": "厂商索引/上下文容量/合规能力、成熟时间预测、年度价格或开发边际成本趋零均缺当前版本证据；通用机制不替厂商断言通过。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0345",
+      "original_text": "### （二）案例：Bolt.new的\"零代码\"产品模式",
+      "source_line": 345,
+      "source_line_end": 345,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0375",
+      "original_text": "### （一）对开发者工作流的改变",
+      "source_line": 375,
+      "source_line_end": 375,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-L0418",
+      "original_text": "*   软件开发的边际成本趋近于零",
+      "source_line": 418,
+      "source_line_end": 418,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文候选",
+      "decision": "延期核实",
+      "reason": "厂商索引/上下文容量/合规能力、成熟时间预测、年度价格或开发边际成本趋零均缺当前版本证据；通用机制不替厂商断言通过。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-card-workspace-change-ownership",
+      "original_text": "### （一）信任是核心产品问题",
+      "source_line": 263,
+      "source_line_end": 275,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "旧卡目标重构",
+      "decision": "采用",
+      "reason": "旧卡逐题重写：Git记录文件状态，但未提交工作可能混合多人改动；“全部恢复”无法识别作者意图。本题把正文回滚承诺限定为可核对的变更范围。",
+      "card_keys": [
+        "ch06.interview.m05.workspace-change-ownership.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-card-export-dependency",
+      "original_text": "### （二）案例：Bolt.new的\"零代码\"产品模式",
+      "source_line": 345,
+      "source_line_end": 369,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "旧卡目标重构",
+      "decision": "采用",
+      "reason": "旧卡逐题重写：平台可能将业务规则藏在托管服务和配置中。导出源代码只移交一类资产，运行能力还依赖身份、数据与外部契约。",
+      "card_keys": [
+        "ch06.interview.m05.export-dependency.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-card-review-load",
+      "original_text": "### （一）对开发者工作流的改变",
+      "source_line": 375,
+      "source_line_end": 393,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "旧卡目标重构",
+      "decision": "采用",
+      "reason": "旧卡逐题重写：串行审查能力限制吞吐。上游生成增速超过审查能力，队列会增长，局部省时可能换成全链路等待。",
+      "card_keys": [
+        "ch06.interview.m05.review-load.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-card-delegation-package",
+      "original_text": "【3.0 Agent编程】",
+      "source_line": 39,
+      "source_line_end": 43,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "旧卡目标重构",
+      "decision": "采用",
+      "reason": "旧卡逐题重写：自主执行需要清楚的决策边界。只给功能名会让Agent选最容易观察的页面作为终点。",
+      "card_keys": [
+        "ch06.interview.m05.delegation-package.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-card-coding-review-responsibility",
+      "original_text": "### （二）人机协作模式设计",
+      "source_line": 277,
+      "source_line_end": 289,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "旧卡目标重构",
+      "decision": "采用",
+      "reason": "旧卡逐题重写：原文任务分工可作为起点，但“不建议参与”不能推出通用禁令，“全权生成”也不能推出可直接上线。生成、审查与批准是不同责任。",
+      "card_keys": [
+        "ch06.interview.m05.coding-review-responsibility.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m05",
+      "objective_id": "ch06-m05-card-context-freshness",
+      "original_text": "#### 1. 代码库索引（Codebase Indexing）",
+      "source_line": 205,
+      "source_line_end": 257,
+      "source_path": "第6章-行业案例/6.5-编程Agent.md",
+      "source_hash": "95039481981e862d8c2e5d6bc279b1cf8e593032e37fe75136d9890a4c072453",
+      "source_type": "正文/编辑补题",
+      "decision": "采用",
+      "reason": "真实缺口：索引负责可发现性，上下文选择负责把必要依赖送入模型，窗口大也可能漏关键文件。本题补正文实时性与覆盖问题，不重复通用RAG定义。",
+      "card_keys": [
+        "ch06.interview.m05.context-freshness.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P0",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    }
+  ],
+  "card_content_hashes": {
+    "ch06.interview.m05.delegation-package.001": "8dc0468d2aefd6db887df0650dffb5ef233a45bfbdb60d8db23b512b1cd43d12",
+    "ch06.interview.m05.workspace-change-ownership.001": "526a2cd9d16d1a1717c2d59eeb6f4271d7c02d6d72beac9368aabac0d1e6c6c0",
+    "ch06.interview.m05.review-load.001": "f0ef895d0a829e23719bed0fcc3a21a8f0286b369dd89a03fdc3259ea0f194cb",
+    "ch06.interview.m05.export-dependency.001": "77e88668a7c203956060d56bc736bdbfd25f3b0fa6157ccea8008d083eff22ce",
+    "ch06.interview.m05.coding-review-responsibility.001": "9ca3f0a3117211abcd5c51b1c36d324aa8633234437f6bc08e57c6e31279a371",
+    "ch06.interview.m05.context-freshness.001": "8c46298b7cd11ddbbc73625bdac61c9a527ff2823930e2af6c78e01c54615382"
+  },
+  "hash_definition": "SHA256(canonicalJson(card without review)); sorted object keys, compact JSON, UTF-8",
+  "author_checks": "仅作者结构与内容自检；没有独立scores、pass或accepted",
+  "coverage_claim": "仅候选/原生目标登记分流100%；草稿题卡、母题保留、实践设计、延期分别记录，绝不表示题卡/学习/发布覆盖100%。",
+  "registration_coverage": 1,
+  "card_coverage": "未验收，不计算完成率；跨课卡复用仅覆盖明确评分范围。",
+  "author_correction": "2026-10-22主编指出泛实践兜底后，逐候选复核；只改蓝图/覆盖，不改已审卡正文或哈希。",
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 6,
+    "batch_ids": [
+      "ch06-m05-remaining-20261022"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch06.interview.m05.delegation-package.001": "8dc0468d2aefd6db887df0650dffb5ef233a45bfbdb60d8db23b512b1cd43d12",
+    "ch06.interview.m05.workspace-change-ownership.001": "526a2cd9d16d1a1717c2d59eeb6f4271d7c02d6d72beac9368aabac0d1e6c6c0",
+    "ch06.interview.m05.review-load.001": "f0ef895d0a829e23719bed0fcc3a21a8f0286b369dd89a03fdc3259ea0f194cb",
+    "ch06.interview.m05.export-dependency.001": "77e88668a7c203956060d56bc736bdbfd25f3b0fa6157ccea8008d083eff22ce",
+    "ch06.interview.m05.coding-review-responsibility.001": "9ca3f0a3117211abcd5c51b1c36d324aa8633234437f6bc08e57c6e31279a371",
+    "ch06.interview.m05.context-freshness.001": "cb55dcadd23afa88665f528cbd3482f42a80f10676c9e727c79a14e8f394adec"
+  }
+}

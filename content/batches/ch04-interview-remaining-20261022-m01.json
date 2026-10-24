@@ -1,0 +1,250 @@
+{
+  "batch_id": "ch04-interview-remaining-20261022-m01",
+  "status": "accepted",
+  "chapter_position": 4,
+  "cards": [
+    {
+      "canonical_key": "ch04.interview.m01.executable-loop.001",
+      "lesson_source_key": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+      "concept_keys": [
+        "interview.ch04.m01.executable-loop"
+      ],
+      "revision": 2,
+      "position": 1101,
+      "title": "用行为证据结束一轮开发",
+      "kind": "场景判断",
+      "prompt": "假设AI已生成番茄钟，暂停后数字仍减少。你如何决定这一轮改动能否接受？请说明运行检查、修复反馈与版本处置。",
+      "answer_short": "S｜假设番茄钟外观已完成，暂停行为却失败。\nT｜我要确认状态转换符合约定，再决定是否保留改动。\nA｜一、约定暂停冻结、继续递减、重置回初值，运行同一状态序列并记录实际值；二、把失败步骤交给AI，只修相关逻辑，再复测原失败及继续、重置；三、检查本次差异和风险，保留可恢复版本。\nR｜行为与相关回归均通过才接受；仍失败就保留证据、撤回有问题的改动或请工程师排查，不用页面美观替代验收。",
+      "required_points": [
+        "把暂停、继续、重置约定转成实际运行的状态检查，外观不构成通过",
+        "按失败证据限定修复并复测原路径与相关路径",
+        "核对相关差异和可恢复版本；未通过不接受"
+      ],
+      "pitfalls": "不把AI自查、代码能运行或漂亮截图当行为正确；有风险的回退须保留其他作者改动。",
+      "explanation": "【依据】原文L53–96给出生成、运行、反馈循环；L318–325另要求生产审查。以下状态验收和版本处置是编辑补充。\n【例子】假设前台显示剩余10秒，暂停后等待3秒仍应为10秒；继续后递减；重置后再次开始不能叠加旧计时器。是否清理计时器是候选检查，不凭现象认定根因。\n【追问】改动能编译就能交付吗？不能；编译不能证明暂停语义、重复点击和状态切换正确。\n【自评】三项必答点均需覆盖；只报“已经运行”或“AI说修好了”仍未掌握。边界：本卡验证本次行为，不等于完成生产安全与性能验收。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 53,
+          "line_end": 96
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 100,
+          "line_end": 118
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 318,
+          "line_end": 325
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "codex-independent-ch04-06-07-20261022",
+        "notes": [
+          "暂停后仍计时是具体失败，回答把运行、状态序列、受限修复和邻近路径回归连起来，验收不是页面好看或生成成功。",
+          "原文协作循环被明确转为编辑假设；与复现反馈卡分别考修改验收循环和反馈输入契约，旧身份保留合理。",
+          "独立审校当前内容指纹: cb18f09db94217a9e17b96ed0292c6ef1556b3439fab232ef54079d94413850f",
+          "审校记录: review-ch04-06-07.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m01.prototype-evidence.001",
+      "lesson_source_key": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+      "concept_keys": [
+        "interview.ch04.m01.prototype-evidence"
+      ],
+      "revision": 2,
+      "position": 1102,
+      "title": "原型成功支持多大的结论",
+      "kind": "场景判断",
+      "prompt": "假设会议纪要原型中的摘要是写死的，几位试用者完成了分配责任人的操作。这能支持什么结论？要主张可生产使用还缺哪类证据？",
+      "answer_short": "一、能支持这些样本在给定任务中理解并完成交互的初步证据；要记录任务、困难和模拟环节，不能外推到所有用户。\n二、摘要写死，因此没验证真实提取质量、存储或稳定性，点击成功也不能证明持续使用或付费意愿。\n三、生产判断还需在获准真实任务上核对摘要与原文、验证持久化、权限和失败恢复，并由工程侧检查安全、性能及维护；证据补齐前只报告原型验证结果。",
+      "required_points": [
+        "结论限于给定样本与任务的交互证据，并明确摘要为模拟",
+        "不能据此推断真实摘要/后端效果、普遍需求或生产能力",
+        "补真实任务质量、存储权限与故障，以及生产工程验证"
+      ],
+      "pitfalls": "原文“2小时”“当天”是案例叙述，不作普适排期；原型不是天然没有价值，也不是天然可上线。",
+      "explanation": "【依据】原文L185–195将Demo用于流程验证，L318–325指出生产检查；证据层级是编辑整理。\n【例子】假设用户找到了责任人选择框，但刷新后任务消失。前者支持可发现性，后者暴露未验证或失败的持久化；都不能证明摘要事实正确。\n【追问】用户称赞能算购买证据吗？不能直接算；还要观察真实任务使用、替代方案和真实购买行为。\n【边界】如果原型确实调用了真实模型，可报告对应样本的输出核验，仍不能把少量成功当总体可靠性。\n【自评】三项必答均须覆盖；主动说明观测支持的范围和缺证部分。仅说“还要优化UI”遗漏生产证据。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 185,
+          "line_end": 211
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 248,
+          "line_end": 258
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 318,
+          "line_end": 325
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "codex-independent-ch04-06-07-20261022",
+        "notes": [
+          "硬编码摘要及指定用户可操作只支持样本交互结论，核心回答没有外推真实模型质量、持久化或需求成立。",
+          "答案、例子和必答点一致要求补真实输入、权限、持久化及异常证据，能直接说明原型证据到生产证据的缺口。",
+          "独立审校当前内容指纹: d3087b0e2c330dbe1ff8cbcb7ab4270048b79d0603141cfdf9ab4dac5d5f8285",
+          "审校记录: review-ch04-06-07.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m01.reproduction-feedback.001",
+      "lesson_source_key": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+      "concept_keys": [
+        "interview.ch04.m01.reproduction-feedback"
+      ],
+      "revision": 2,
+      "position": 1103,
+      "title": "把模糊报障转成可复现反馈",
+      "kind": "故障诊断",
+      "prompt": "假设你只反馈“暂停没反应”，AI连续三轮改CSS仍失败。下一轮你会提供什么可复现反馈，怎样限制改动并确认修好？",
+      "answer_short": "S｜假设暂停故障持续，三轮样式改动未解决。\nT｜我要让下一轮复现同一失败，避免继续猜根因。\nA｜一、提供版本、浏览器、起始状态、点击顺序及预期/实际值；二、附最少必要的脱敏录屏或日志，把观察与“可能事件没绑定”等假设分开，限定只修暂停；三、用同一步骤重测，并检查继续和重置，记录改动及结果。\nR｜原失败消失且相关路径通过才判修好；复现条件仍不一致就先补最小案例或协同排查，停止随机大改。",
+      "required_points": [
+        "反馈含环境/版本、前置状态、精确操作及预期与实际差异",
+        "相关证据最小必要且脱敏，观察与根因猜测分开并限定范围",
+        "复测原失败及相关路径；无法复现时补案例而非继续随机改"
+      ],
+      "pitfalls": "不把控制台无报错当修复证据；不为排障上传凭据或整个生产日志。",
+      "explanation": "【依据】原文L88–96列现象反馈，L224–232强调即时、可视、可修正；可复现工单与脱敏是编辑机制。\n【例子】假设Chrome前台，点击开始后显示10秒，点击暂停，3秒后变7秒。附件只含这段状态及与本次点击相关的错误；控制台无错误不能证明事件或定时逻辑正确。\n【追问】是否把全部日志发给模型最有效？不是；先取最小相关片段并去掉令牌、账号和真实业务数据，必要时在测试环境构造替代样本。\n【边界】观察到样式变了不能推出事件根因，增加描述强度也不能替代复现。\n【自评】按三项必答评分；脱敏与范围是本题必答，不能用“提高调试效率”代替。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 88,
+          "line_end": 116
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 224,
+          "line_end": 242
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "codex-independent-ch04-06-07-20261022",
+        "notes": [
+          "题面连续改CSS的失败使观察与根因假说的区分必要；回答列版本环境、前置状态、步骤、预期/实际及脱敏证据。",
+          "修复范围受限并以原步骤和继续/重置回归，未把无报错当行为正确；核心目标是反馈契约，不重复执行闭环。",
+          "独立审校当前内容指纹: 0fa0075010b20cff13de3df702d56922642a60c85a6e818fe8341debbfda3236",
+          "审校记录: review-ch04-06-07.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m01.bounded-increment.001",
+      "lesson_source_key": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+      "concept_keys": [
+        "interview.ch04.m01.bounded-increment"
+      ],
+      "revision": 1,
+      "position": 1104,
+      "title": "把模糊意图拆成有约束的小改动",
+      "kind": "场景判断",
+      "prompt": "假设你要让AI给已有番茄钟加“任务历史”，暂停已稳定可用。本轮怎样描述需求并拆步，防止把旧功能改坏？请给出最小范围和验收。",
+      "answer_short": "S｜假设已有计时器正常，本轮新增任务历史。\nT｜我要交付一条能验证的记录链路，同时守住暂停、继续和重置行为。\nA｜一、明确记录任务名、完成时间及保存规则，约定空任务、未完成和刷新后的行为；本轮不加登录、同步或统计；二、先在既有结构中实现一次完成生成一条记录，再增加存储和展示，每步查看差异；三、用完成、重复触发、未完成及刷新样例核对，并回归旧计时操作。\nR｜只在约定范围和回归都通过时保留；语义不清先澄清，失败按小步撤回，不能让AI擅自扩大范围。",
+      "required_points": [
+        "约定记录字段、触发与保存语义及明确不做项",
+        "沿一条最小链路分步修改，保护既有结构并核对差异",
+        "测试完成/未完成/重复与刷新并回归旧状态；失败小步恢复"
+      ],
+      "pitfalls": "本卡考软件需求增量与旧行为保护，不重复制卡3.9通用提示词模板；保存规则必须显式约定。",
+      "explanation": "【补题理由】原文L112直接追加历史功能，旧三卡未独立考新增需求的规格和拆解。情境和分步方法均为编辑设计。\n【例子】假设约定只在自然计时完成时记录，点击重置不算完成；再次渲染完成状态不应重复加记录。刷新是否保留必须先约定，不能让生成代码替产品做决定。\n【追问】是否必须用localStorage？不必；原文另有本地存储示例，但选择要服从本轮演示目标和数据约束，存储技术不是评分点。\n【边界】历史需求若需要跨设备和登录，应重新确认范围和依赖，不能用本地样例假装实现同步。\n【自评】三点均须覆盖；只有“详细写Prompt”没有触发/持久化口径、增量与回归，仍未掌握。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 63,
+          "line_end": 82
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 100,
+          "line_end": 118
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 248,
+          "line_end": 258
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "codex-independent-ch04-06-07-20261022",
+        "notes": [
+          "新增任务历史需约定完成触发、记录字段、重复/未完成及刷新语义，承载原文功能增量目标，不是给通用Prompt换场景。",
+          "保留暂停等稳定行为，增量运行和验收是计划，不冒充已实现；例子和评分均落在本次功能边界。",
+          "独立审校当前内容指纹: c0aceb0883cad56af1442f1bc4bd3a8733be7a9d277167b7e53d020ca588bd94",
+          "审校记录: review-ch04-06-07.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m01.control-accountability.001",
+      "lesson_source_key": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+      "concept_keys": [
+        "interview.ch04.m01.control-accountability"
+      ],
+      "revision": 1,
+      "position": 1105,
+      "title": "给AI改代码设置控制与责任边界",
+      "kind": "场景判断",
+      "prompt": "假设AI能修改仓库、执行命令并提出发布。PM想“一路自动接受”。你会怎样划分动作控制、留下审计证据并明确出错责任？",
+      "answer_short": "S｜假设编码助手同时可改文件、运行命令和提出发布。\nT｜我要让提速与可控并存，避免错误直接进入正式环境。\nA｜一、按风险限定可读写目录和执行环境，低风险动作在已授权范围内继续，破坏性或发布动作交有权者确认，提供停止与接管；二、保留需求、版本、差异、执行及验收结果，日志最小必要并脱敏；三、约定PM负责需求与验收，工程负责人负责技术审查及恢复，发布由指定负责人决策。\nR｜用获准测试情境检查越界阻断、接管和恢复；AI自行说“安全”不算通过，责任随实际分工落实。",
+      "required_points": [
+        "按动作风险约束实际权限并提供停止/接管，高影响动作由有权者决策",
+        "记录版本差异、执行与验收证据，最小必要脱敏而非索取隐藏思考",
+        "明确需求验收、技术审查恢复及发布决策的人员责任，不把责任转交AI"
+      ],
+      "pitfalls": "不把自然语言提醒当权限隔离，不收集凭据/隐藏思考；生成、验收、发布责任均须有人承担。",
+      "explanation": "【原题】L240–242分别问控制权、解释审计、责任；旧“原型证据”卡未实际评分这三项，本卡补独立承载。以上职责分配是编辑设计，可按团队调整。\n【例子】假设助手把“清理测试数据”计划成删除正式库。应由环境和执行权限限制阻断，不能只在提示词写“请小心”；审计保存受影响对象摘要、拒绝结果和关联版本，不复制数据库敏感内容。\n【追问】过程可解释是否等于展示模型内部思考？不是；可核查的计划、差异、调用结果和验收记录才是工程证据。\n【边界】低风险可逆工作已有授权时无需每步确认；团队实际职责可不同，但不能责任空缺。\n【自评】控制、审计脱敏、责任三点都必答；把其中任一项只放到可选加分不算完整。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 215,
+          "line_end": 242
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.1-了解VibeCoding.md",
+          "content_hash": "053b904c7871f07ef1e9a00ef54e7d9debe54e14cf700b9cf976f628e1fc0810",
+          "line_start": 298,
+          "line_end": 325
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "codex-independent-ch04-06-07-20261022",
+        "notes": [
+          "原文控制、审计、责任三问均在题面和评分出现；正式库误删的假设例子说明环境/权限阻断比提示小心更可靠。",
+          "授权低风险动作可继续，发布与破坏性动作有负责人；日志最小脱敏、停止接管和获准验证未被改成可选加分。",
+          "独立审校当前内容指纹: 4584d87dee0f613856d2b10778a5810b691e359d09f0376cac94e4e0faafc446",
+          "审校记录: review-ch04-06-07.json"
+        ]
+      }
+    }
+  ]
+}

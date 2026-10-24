@@ -1,0 +1,290 @@
+{
+  "module_id": "8.3",
+  "module_key": "ch08-m03",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+    "content_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+    "line_count": 75
+  },
+  "native_objective_count": 1,
+  "registered_native_count": 1,
+  "native_registration_coverage": 1,
+  "accepted_card_count": 0,
+  "published_card_count": 0,
+  "publication_coverage": 0,
+  "practice_status": "designed_not_executed",
+  "practice_execution_count": 0,
+  "existing_active_card_count": 0,
+  "new_draft_card_count": 4,
+  "objectives": [
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-O001",
+      "original_text": "_思考题：如果元宝、豆包、千问都能免费完成复杂任务，你认为用户会选择留在哪个平台？决定因素是什么？_",
+      "source_type": "原生思考题",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 74,
+      "line_start": 74,
+      "line_end": 74,
+      "decision": "拆分",
+      "reason": "免费复杂任务是题目条件，非实际产品范围；拆为选择因素、主动留存与免费归因。",
+      "edited_objective": "同任务下解释平台选择及可改变结论的证据",
+      "card_keys": [
+        "ch08.interview.m03.platform-choice.001",
+        "ch08.interview.m03.migration-friction.001",
+        "ch08.interview.m03.free-growth-evidence.001"
+      ],
+      "mother_question_id": "ch08-m03-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-O002",
+      "original_text": "1.   **Agent 不是功能，而是入口能力。** 未来 AI 产品的竞争，不是\"有没有 Agent\"，而是\"Agent 能调用多少工具、完成多少闭环\"。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 50,
+      "line_start": 50,
+      "line_end": 50,
+      "decision": "合并",
+      "reason": "工具数最大不等于闭环价值，纳入适配与实际交付。",
+      "edited_objective": "连接目标任务所需工具并验收产物",
+      "card_keys": [
+        "ch08.interview.m03.platform-choice.001",
+        "ch08.interview.m03.file-delivery.001"
+      ],
+      "mother_question_id": "ch08-m03-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-O003",
+      "original_text": "2.   **模型能力只是基础，交付结果才是价值。** 用户不在乎你用了什么模型，在乎的是一句话下去，能不能直接拿到可用的文件、报告、方案。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 52,
+      "line_start": 52,
+      "line_end": 52,
+      "decision": "采用",
+      "reason": "结果交付从文件存在推进到业务可用验收。",
+      "edited_objective": "可编辑、可核对、可交付的文件标准",
+      "card_keys": [
+        "ch08.interview.m03.file-delivery.001"
+      ],
+      "mother_question_id": "ch08-m03-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-O004",
+      "original_text": "3.   **免费是 C 端入口战争的必然阶段。** 在入口尚未定型时，付费会阻碍用户迁移。先通过免费建立习惯，再通过增值服务或生态抽成变现。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 54,
+      "line_start": 54,
+      "line_end": 54,
+      "decision": "采用",
+      "reason": "“免费必然阶段”不采纳，只分析免费试验的归因和持续成本。",
+      "edited_objective": "免费放量与持续价值分开验证",
+      "card_keys": [
+        "ch08.interview.m03.free-growth-evidence.001"
+      ],
+      "mother_question_id": "ch08-m03-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-O005",
+      "original_text": "4.   **大厂的 AI 竞争是\"模型 + 场景\"的复合竞争。** 模型强但场景少的产品，很难打过模型够用但场景丰富、生态完整的产品。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 56,
+      "line_start": 56,
+      "line_end": 56,
+      "decision": "合并",
+      "reason": "不接受够用必胜，按同任务适配和质量比较。",
+      "edited_objective": "模型和场景需在目标任务中一起比较",
+      "card_keys": [
+        "ch08.interview.m03.platform-choice.001"
+      ],
+      "mother_question_id": "ch08-m03-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-O006",
+      "original_text": "5.   **Agent 的效果取决于工具生态的厚度。** 没有工具调用的 Agent 只是更好的聊天机器人。能连接文档、表格、日历、邮件、支付、小程序的 Agent，才是真正的生产力工具。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 58,
+      "line_start": 58,
+      "line_end": 58,
+      "decision": "拆分",
+      "reason": "不把工具越多越强当规律；以任务交付与安全连接评估。",
+      "edited_objective": "工具连接是否降低任务返工",
+      "card_keys": [
+        "ch08.interview.m03.platform-choice.001",
+        "ch08.interview.m03.file-delivery.001"
+      ],
+      "mother_question_id": "ch08-m03-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-O007",
+      "original_text": "_思考题：如果元宝、豆包、千问都能免费完成复杂任务，你认为用户会选择留在哪个平台？决定因素是什么？_",
+      "source_type": "编辑实践承接",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 74,
+      "line_start": 74,
+      "line_end": 74,
+      "decision": "实践任务",
+      "reason": "手机实际偏好和迁移体验需真实操作，草稿不替代个人测试。",
+      "edited_objective": "按P1设计对照、验收与迁移试验",
+      "card_keys": [],
+      "mother_question_id": "ch08-m03-M1",
+      "practice_task_ids": [
+        "ch08-m03-P1"
+      ],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-F008",
+      "original_text": "7月6日，腾讯正式发布混元大模型第三代 Hy3 正式版。同一天，元宝宣布接入 Hy3，并上线免费的 Agent 功能——用户用自然语言下指令，元宝可以直接输出 PPT、Word、PDF 等文件。\n\n这是一个值得关注的信号：腾讯的 AI 战略，正在从\"接入 DeepSeek 跟跑\"，转向\"自研模型 + Agent 入口\"双线并进。\n\n## 一、事件梳理：混元 Hy3 到底升级了什么？\n\nHy3 正式版是 4 月 23 日发布的 Hy3 preview 的迭代版本。腾讯官方强调了几个重点：\n\n*   **强化 Agent 能力**：复杂推理、指令遵循、工具调用等方向重点优化\n*   **实用性导向**：姚顺雨接管混元团队后，明确模型追求\"实用性\"原则\n*   **幻觉率下降**：在真实日志评测中，常识错误率和幻觉率较 preview 下降超过一半\n*   **性价比提升**：输入价格降至 1 元 / 百万 tokens，缓存命中价格降至 0.25 元 / 百万 tokens\n\n更关键的是数据：Hy3 preview 上线以来，腾讯混元的日均 token 消耗量增长了 **20 倍**。\n\n这说明什么？模型能力到了可用门槛，调用量自然会指数级放大。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 5,
+      "line_start": 5,
+      "line_end": 20,
+      "decision": "延期核实",
+      "reason": "主编给出的腾讯一手链接仅确认2026-07-06正式发布及厂商说明；全部用户免费、价格、比例与增长因果未据此确认。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-F009",
+      "original_text": "同一天，元宝宣布接入 Hy3，并上线\"对话就能完成复杂任务\"的免费 Agent 功能。用户可以通过自然语言生成教案、数据报告、小游戏等，直接拿到可交付的文件。\n\n这不是简单的功能更新，而是产品定位的升级：\n\n*   **从 chatbot 到 taskbot**：元宝不再只是\"能聊天\"，而是\"能办事\"\n*   **从内容消费到结果交付**：用户获得的是 PPT、Word、PDF，而不是一段回答\n*   **从付费探索到免费放量**：在 C 端入口争夺的关键期，免费 Agent 是拉新和留存的核武器\n\n豆包、千问、元宝三家，正在把 Agent 能力作为 AI 原生入口的核心卖点。\n\n## 三、腾讯 AI 战略的转向：从跟跑到有自己的节奏\n\n2025 年底，姚顺雨从 OpenAI 加入腾讯，直接向总裁刘炽平汇报。2026 年 2 月，混元团队重建预训练和强化学习基础设施，确立了\"模型追求实用性\"的原则。\n\n这一连串动作说明：腾讯不再满足于\"接入别人的模型做产品\"，而是要重新掌握模型层的主动权。\n\n但腾讯的打法不是纯技术竞赛，而是**模型 + 场景 + 生态**的组合拳：\n\n*   **模型层**：混元 Hy3 自研，重点强化 Agent 能力\n*   **入口层**：元宝作为 C 端 AI 助手，WorkBuddy、QClaw 覆盖桌面和效率场景\n*   **生态层**：微信小程序、企业微信、QQ 浏览器、腾讯文档等产品 Skill 化，接入 SkillHub\n\n这套组合的优势在于：模型不一定是最强的，但场景和工具调用能力是最全的。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 24,
+      "line_start": 24,
+      "line_end": 46,
+      "decision": "延期核实",
+      "reason": "元宝免费范围、人员归因、各产品连接范围仍需逐公告确认；卡题只用假设平台。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.3",
+      "objective_id": "ch08-m03-F010",
+      "original_text": "腾讯混元 Hy3 的发布和元宝 Agent 功能的上线，标志着大厂 AI 竞争进入新阶段：\n\n*   第一阶段拼的是模型参数和 benchmark 分数\n*   第二阶段拼的是谁能把模型变成真正可用的产品\n*   第三阶段，也就是现在，拼的是谁能用 Agent 连接最多的真实场景\n\n混元 Hy3 也许还不是最强的模型，但腾讯正在证明一件事：在 AI 时代，**模型够用 + 场景丰富 + 工具连接能力强**，可能比单纯追求模型第一更有产品价值。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+      "source_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+      "source_line": 62,
+      "line_start": 62,
+      "line_end": 68,
+      "decision": "延期核实",
+      "reason": "三个竞争阶段与“够用胜过最强”为作者分析，不能作为行业已验证规律。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    }
+  ],
+  "scope_notes": [
+    "原生开放问题与正文编辑补题分别统计；登记率不等于发布覆盖。",
+    "所有草稿未审校，未发布，未运行产品或实践；不据卡片标题宣称覆盖。",
+    "与第3章Evals的底层评测卡共享术语；本课独立承载消费端文件可交付、工作流迁移、免费与升级同时变化的留存解释，不再新增通用Agent定义或模型评测指标卡。"
+  ],
+  "mother_questions": [
+    {
+      "id": "ch08-m03-M1",
+      "prompt": "假设几个AI平台都免费生成文档等产物，你负责其中一个平台，如何确定用户为何留下，验证结果真的可用，并避免免费放量制造虚假成功？",
+      "answer": "S：假设几家平台都声称免费完成复杂任务，但各自文件质量、服务范围与接入条件未验证；不依赖特定产品当前价格。\nT：我会选一个可重复的目标任务，证明用户能以更少返工交付可验收结果，并愿意再次主动选择，而非证明工具数最多。\nA：一、把比较固定在同类用户、同一任务和输入上，看内容正确、文件可打开和可编辑、与现有工作流协作、响应与隐私控制。模型榜单、工具数和免费只能解释部分吸引力。二、例如做一份采购复盘报告，明确数据来源权限、口径、计算与引用要求，回读生成文件并由任务负责人检查；缺资料时说明缺口，不能编造数字来完成文件。三、考察用户是否因真实价值留下，还是因历史文件或专有连接难迁移而被锁住。设计经授权的导出、格式与替代连接测试，区分可接受的设置成本与人为阻碍；允许多平台并用。四、免费试点须看目标分群在补贴变化后的复用、可承担的服务成本与服务限制，不能把调用上涨等同质量或留存。\nR：若同任务的可交付率、返工与主动复用优于替代且成本、权限受控，才能扩大；若文件可生成却无法使用，先修交付链；若增长只来自免费试用或权限过宽，收缩和纠偏。所有效果待执行验证，不编造提升比例。",
+      "card_keys": [
+        "ch08.interview.m03.platform-choice.001",
+        "ch08.interview.m03.file-delivery.001",
+        "ch08.interview.m03.migration-friction.001",
+        "ch08.interview.m03.free-growth-evidence.001"
+      ],
+      "status": "draft"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "ch08-m03-P1",
+      "task": "30–45分钟，用同一份假设输入设计三平台对照表、产物验收表和一次授权导出测试。只列应检查的证据，不伪造已使用各平台。",
+      "acceptance": "比较维度同口径；报告验收包括文件可读/可编辑、事实与计算、权限及失败状态；主动复用与迁移阻碍分开，免费变化与可交付质量分开。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch08-interview-20261022-m03"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m03.platform-choice.001": "f12ed2a9b260d438bcfb5bdf5aa822c3925e6fc8c9a9681f6a7c749e5c72692a",
+    "ch08.interview.m03.file-delivery.001": "619ef5d8471af7fc717940ca0a173fe12da3e916f2ceb17f6df3346e118a5fe1",
+    "ch08.interview.m03.migration-friction.001": "94330e55ec2cf21a8553eb4429dee0d227687549dee6d2f4a9aaecd21cc684c7",
+    "ch08.interview.m03.free-growth-evidence.001": "7f06a77f6b11d21b9e703e6b5120f1f50a82e483b90d2076a36420af8aff5f3d"
+  }
+}

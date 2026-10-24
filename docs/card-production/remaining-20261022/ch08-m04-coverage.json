@@ -1,0 +1,267 @@
+{
+  "module_id": "8.4",
+  "module_key": "ch08-m04",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+    "content_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+    "line_count": 71
+  },
+  "native_objective_count": 1,
+  "registered_native_count": 1,
+  "native_registration_coverage": 1,
+  "accepted_card_count": 0,
+  "published_card_count": 0,
+  "publication_coverage": 0,
+  "practice_status": "designed_not_executed",
+  "practice_execution_count": 0,
+  "existing_active_card_count": 0,
+  "new_draft_card_count": 4,
+  "objectives": [
+    {
+      "module_id": "8.4",
+      "objective_id": "ch08-m04-O001",
+      "original_text": "_思考题：如果你的产品需要接入一个第三方 Agent 能力，你会从哪些维度评估它的安全风险？_",
+      "source_type": "原生思考题",
+      "source_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+      "source_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+      "source_line": 70,
+      "line_start": 70,
+      "line_end": 70,
+      "decision": "拆分",
+      "reason": "保留第三方准入总问题，按准入、异常、审计、受控替换分工。",
+      "edited_objective": "第三方桌面Agent的任务、数据和执行风险评估",
+      "card_keys": [
+        "ch08.interview.m04.desktop-data-boundary.001",
+        "ch08.interview.m04.suspicious-egress.001",
+        "ch08.interview.m04.auditable-actions.001",
+        "ch08.interview.m04.controlled-replacement.001"
+      ],
+      "mother_question_id": "ch08-m04-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.4",
+      "objective_id": "ch08-m04-O002",
+      "original_text": "1.   **Agent 的权限设计必须最小化。** 不要给一个 Agent 超过它任务所需的权限。能读就不要写，能读局部就不要读全部，能在沙箱运行就不要进生产环境。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+      "source_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+      "source_line": 50,
+      "line_start": 50,
+      "line_end": 50,
+      "decision": "合并",
+      "reason": "最小权限嵌入编码任务准入，不另加定义卡。",
+      "edited_objective": "实际隔离而非提示词限制",
+      "card_keys": [
+        "ch08.interview.m04.desktop-data-boundary.001"
+      ],
+      "mother_question_id": "ch08-m04-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.4",
+      "objective_id": "ch08-m04-O003",
+      "original_text": "2.   **数据出境和存储位置是硬约束。** 企业级 Agent 必须明确数据存在哪里、会不会被用于模型训练、会不会被第三方访问。这是 B 端客户采购前的必答题。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+      "source_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+      "source_line": 52,
+      "line_start": 52,
+      "line_end": 52,
+      "decision": "合并",
+      "reason": "保留数据处理硬约束，不给司法辖区法律判断。",
+      "edited_objective": "输入、遥测、日志、用途和存储边界证据",
+      "card_keys": [
+        "ch08.interview.m04.desktop-data-boundary.001"
+      ],
+      "mother_question_id": "ch08-m04-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.4",
+      "objective_id": "ch08-m04-O004",
+      "original_text": "3.   **安全要从产品设计的第一天就考虑。** 不是等出了事再加审计日志，而是在设计 Agent 的每一步操作时，都考虑\"如果这里被滥用，后果是什么\"。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+      "source_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+      "source_line": 54,
+      "line_start": 54,
+      "line_end": 54,
+      "decision": "拆分",
+      "reason": "设计阶段约束与异常处置分别承载。",
+      "edited_objective": "准入前阻断和事件交接",
+      "card_keys": [
+        "ch08.interview.m04.desktop-data-boundary.001",
+        "ch08.interview.m04.suspicious-egress.001"
+      ],
+      "mother_question_id": "ch08-m04-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.4",
+      "objective_id": "ch08-m04-O005",
+      "original_text": "4.   **自研 vs 第三方的平衡需要重新评估。** 过去企业可能倾向于采购最好的第三方工具。但在 Agent 时代，核心生产力工具的自研或可控部署，会成为越来越多大厂的选择。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+      "source_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+      "source_line": 56,
+      "line_start": 56,
+      "line_end": 56,
+      "decision": "采用",
+      "reason": "自研将成趋势不是必答；保留替换不能免检。",
+      "edited_objective": "同标准评估替代并撤销旧连接",
+      "card_keys": [
+        "ch08.interview.m04.controlled-replacement.001"
+      ],
+      "mother_question_id": "ch08-m04-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.4",
+      "objective_id": "ch08-m04-O006",
+      "original_text": "5.   **Agent 的行为需要可解释、可审计。** 用户和企业都需要知道：Agent 做了什么、调用了什么、修改了什么、为什么这么做。黑箱 Agent 在企业场景走不远。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+      "source_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+      "source_line": 58,
+      "line_start": 58,
+      "line_end": 58,
+      "decision": "采用",
+      "reason": "行为可追溯不等于记录全部或解释内在动机。",
+      "edited_objective": "最小充分的责任链审计",
+      "card_keys": [
+        "ch08.interview.m04.auditable-actions.001"
+      ],
+      "mother_question_id": "ch08-m04-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.4",
+      "objective_id": "ch08-m04-F007",
+      "original_text": "7月3日，阿里内部人士确认：因存在\"植入后门风险\"，阿里将要求员工全面禁用 Anthropic 的 Claude Code，并将其列入高风险软件名单。禁令从 7 月 10 日起正式生效。未来阿里内部的 AI 办公需求，将由自家智能体产品 Qoder 满足。\n\n这件事不只是一次软件替换，而是给所有产品经理提了个醒：**Agent 时代，安全边界必须重新划定。**\n\n## 一、事件本身：Claude Code 被禁的核心原因\n\n根据财新报道，海外论坛 Reddit 用户披露：Anthropic 在 Claude Code 中嵌入了类似间谍软件的隐藏代码，暗中针对中国用户采集数据，并通过植入用户提示词的方式上传用户信息，包括时区、代理服务器、疑似 AI 实验室关联信息等。\n\nAnthropic 研究员回应称，这是今年 3 月上线的一项\"试验机制\"，初衷是防范未经授权的中间商滥用账号，以及抵御模型蒸馏窃取行为。\n\n但不管初衷如何，结果是一样的：一个拥有高权限的桌面 Agent，可能在用户毫无察觉的情况下采集敏感信息。对于阿里这样把代码、数据、业务机密都堆在内部系统的公司来说，这是不可接受的风险。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+      "source_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+      "source_line": 5,
+      "line_start": 5,
+      "line_end": 15,
+      "decision": "延期核实",
+      "reason": "禁用范围、时间、后门指控与供应商回应没有完整一手政策或证据；不将指控作事实。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.4",
+      "objective_id": "ch08-m04-F008",
+      "original_text": "阿里禁用 Claude Code，并用 Qoder 替代，本质上是在做一件事：**把 Agent 纳入供应链安全和数据主权的管控范围。**\n\n这不是阿里一家的问题。腾讯、字节、华为等大厂都在做类似的布局：\n\n*   自研模型和 Agent 工具\n*   私有化部署\n*   权限隔离和审计日志\n*   零信任访问机制",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+      "source_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+      "source_line": 37,
+      "line_start": 37,
+      "line_end": 44,
+      "decision": "延期核实",
+      "reason": "厂商替代动作、统一布局和真实动机未据一手材料确认；只保留抽象方案选项。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.4",
+      "objective_id": "ch08-m04-F009",
+      "original_text": "阿里禁用 Claude Code，表面上是中美科技公司之间的一场信任危机，本质上是 Agent 时代安全范式的提前演练。\n\nAgent 的能力越强，它对企业数据和系统的影响力就越大。产品经理在设计 Agent 产品时，不能只问\"它能做什么\"，更要问\"它不该做什么\"\"出了事怎么追溯\"\"用户怎么信任它\"。\n\n在 Agent 真正大规模进入企业之前，先把安全边界画清楚，可能是比功能创新更紧迫的事。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+      "source_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+      "source_line": 62,
+      "line_start": 62,
+      "line_end": 66,
+      "decision": "延期核实",
+      "reason": "真实企业信任危机的归因是作者解释，不作安全事故定性。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    }
+  ],
+  "scope_notes": [
+    "原生开放问题与正文编辑补题分别统计；登记率不等于发布覆盖。",
+    "所有草稿未审校，未发布，未运行产品或实践；不据卡片标题宣称覆盖。",
+    "已对照既有ch03.interview.m19.server-admission.001和ch03.llm.deployment-tradeoff.001：不再考MCP通用准入或API/私有部署成本；本课评分限定桌面编码进程继承权限、异常外发证据强度、日志再泄漏和替换后的撤旧连接。"
+  ],
+  "mother_questions": [
+    {
+      "id": "ch08-m04-M1",
+      "prompt": "假设企业计划接入能读代码、运行终端和联网的第三方Agent，你会如何决定准入、限制执行范围，并处理疑似异常外发与替换方案？",
+      "answer": "S：假设工具功能有价值，但接入可能扩大代码与终端的影响面；没有任何供应商已被证实存在后门这一前提。\nT：我会把任务完成要求与可访问/外发/修改的资源一同冻结，用可验证的行为和责任判断能否准入。\nA：一、围绕一个低敏研发任务画数据流，列输入、读取文件、终端进程、联网目的地、日志与保留位置；核对供应商版本、数据用途和变更告知，不把自家或私有部署直接判成安全。二、把任务放入隔离副本，仅授予所需目录与临时权限；生产连接、密钥和敏感客户数据不进入，写操作与依赖变更有差异预览及授权，外发走受控通道。三、在获授权的合成样例中验证正常任务、越界读取、非预期外发和失败处置；审计记录任务、授权、动作对象和结果，不为追溯再复制完整秘密。四、若出现异常网络现象，先限制会话与外发、按事件流程保留受限元数据，由安全团队判定数据与范围；不把可疑请求等同已证泄漏，也不把抓包无内容等同未泄漏。五、比较停用、收缩权限、升级修复与替换；替代工具经过同样准入和迁移测试，撤销旧令牌/连接并处置残留数据。\nR：只有任务有效、越权被阻断、数据流和责任可解释、恢复与撤权可验证，才扩大试点。证据不足就维持限制；疑似事件的最终结论由证据与责任人确认，本稿没有执行安全测试。",
+      "card_keys": [
+        "ch08.interview.m04.desktop-data-boundary.001",
+        "ch08.interview.m04.suspicious-egress.001",
+        "ch08.interview.m04.auditable-actions.001",
+        "ch08.interview.m04.controlled-replacement.001"
+      ],
+      "status": "draft"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "ch08-m04-P1",
+      "task": "30–45分钟，设计一份桌面编码Agent准入矩阵、最小任务沙箱和异常事件交接单，只使用合成数据；不运行探测、不读真实密钥。",
+      "acceptance": "矩阵覆盖任务、目录/终端/网络权限、外发和存储、版本变更、审计责任；至少列一个越界阻断与一个误报核验；交接单含未知项、撤权/恢复、替代方案的同标准复测。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch08-interview-20261022-m04"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m04.desktop-data-boundary.001": "ba042fe4f3e14314863c906328c08f0eef48e25d9db1980326fe1a26bf442331",
+    "ch08.interview.m04.suspicious-egress.001": "37c4a3a14039bd294ea051c35800a83d1582bbc9d54940ff98e995edc2d3239b",
+    "ch08.interview.m04.auditable-actions.001": "7e0d1b0decfb74b47cd4ca366b21326b803b81c23c29a9771ec12ff16d9fc882",
+    "ch08.interview.m04.controlled-replacement.001": "63f51ab22d307bf058b4f2ec347f89429de30778c1b5c14040ef9388f6d24f11"
+  }
+}

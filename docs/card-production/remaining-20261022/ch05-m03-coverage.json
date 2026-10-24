@@ -1,0 +1,3111 @@
+{
+  "module_id": "5.3",
+  "module_key": "ch05-m03",
+  "source_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+  "source_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+  "lf_line_count": 817,
+  "status": "draft",
+  "old_card_count": 4,
+  "draft_card_count": 4,
+  "new_card_count": 0,
+  "markdown_checklist_count": 8,
+  "box_item_count": 0,
+  "native_question_line_count": 75,
+  "registered": 136,
+  "registration_scope": "冻结源文中标题、含问号行、每个方框项及列明的章末行动目标；编辑目标另列，标题不计实际承载。",
+  "publication_coverage": 0,
+  "practice_completed": 0,
+  "independent_review_completed": false,
+  "objectives": [
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L1",
+      "original_text": "# 5.3 如何对标竞品AI产品分析",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "# 5.3 如何对标竞品AI产品分析"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L9",
+      "original_text": "为什么？因为AI产品的核心竞争力，往往不在界面上，而在**模型里**——你看不到它的模型架构，摸不准它的效果上限，甚至同一个功能，今天的体验和明天的体验可能都不一样（模型迭代了嘛）。更别提，AI产品的交互范式正在以月为单位快速变化：今天大家都在做聊天机器人，明天可能就都在做Agent了，后天又不知道会冒出什么新形态。",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 9,
+        "line_end": 9
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "为什么？因为AI产品的核心竞争力，往往不在界面上，而在**模型里**——你看不到它的模型架构，摸不准它的效果上限，甚至同一个功能，今天的体验和明天的体验可能都不一样（模型迭代了嘛）。更别提，AI产品的交互范式正在以月为单位快速变化：今天大家都在做聊天机器人，明天可能就都在做Agent了，后天又不知道会冒出什么新形态。"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L11",
+      "original_text": "所以，AI产品的竞品分析，需要一套全新的方法论。这一节，我就把这套方法论完整教给你。咱们不仅要\"看热闹\"，更要\"看门道\"——透过产品表层，看清竞品的底层逻辑。Ready? Go!",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 11,
+        "line_end": 11
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "所以，AI产品的竞品分析，需要一套全新的方法论。这一节，我就把这套方法论完整教给你。咱们不仅要\"看热闹\"，更要\"看门道\"——透过产品表层，看清竞品的底层逻辑。Ready? Go!"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L13",
+      "original_text": "## 一、AI产品竞品分析的特殊性",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 13,
+        "line_end": 13
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 一、AI产品竞品分析的特殊性"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L15",
+      "original_text": "在讲具体方法之前，我们必须先理解：AI产品竞品分析，到底特殊在哪里？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 15,
+        "line_end": 15
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "在讲具体方法之前，我们必须先理解：AI产品竞品分析，到底特殊在哪里？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L17",
+      "original_text": "### 1.1 模型黑盒：你看到的不是全部",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 17,
+        "line_end": 17
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.1 模型黑盒：你看到的不是全部"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L39",
+      "original_text": "> 但你知道为什么吗？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 39,
+        "line_end": 39
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "> 但你知道为什么吗？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L54",
+      "original_text": "### 1.2 交互范式变化快：今天的标杆，明天就过时",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 54,
+        "line_end": 54
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.2 交互范式变化快：今天的标杆，明天就过时"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L83",
+      "original_text": "2025年：？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 83,
+        "line_end": 83
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "2025年：？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L89",
+      "original_text": "做AI竞品分析时，**不要只盯着当前的功能对比**。要思考：这个竞品的交互范式代表了什么趋势？它是在优化现有的范式，还是在开创全新的范式？如果是后者，即使它现在的功能还不完善，也值得高度关注。",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 89,
+        "line_end": 89
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "做AI竞品分析时，**不要只盯着当前的功能对比**。要思考：这个竞品的交互范式代表了什么趋势？它是在优化现有的范式，还是在开创全新的范式？如果是后者，即使它现在的功能还不完善，也值得高度关注。"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L91",
+      "original_text": "### 1.3 数据飞轮效应：先发优势可能被放大",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 91,
+        "line_end": 91
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.3 数据飞轮效应：先发优势可能被放大"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L95",
+      "original_text": "**什么是数据飞轮？**",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 95,
+        "line_end": 95
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "**什么是数据飞轮？**"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L111",
+      "original_text": "1.   **这个竞品有多少用户/数据了？** 数据飞轮转起来了吗？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 111,
+        "line_end": 111
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "1.   **这个竞品有多少用户/数据了？** 数据飞轮转起来了吗？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L112",
+      "original_text": "2.   **它的数据是从哪来的？** 是公开数据还是独家数据？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 112,
+        "line_end": 112
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "2.   **它的数据是从哪来的？** 是公开数据还是独家数据？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L113",
+      "original_text": "3.   **这个领域的数据壁垒高吗？** 后来者容易获取同类数据吗？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 113,
+        "line_end": 113
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "3.   **这个领域的数据壁垒高吗？** 后来者容易获取同类数据吗？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L114",
+      "original_text": "4.   **如果我们要追赶，数据准备需要多长时间、多少成本？**",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 114,
+        "line_end": 114
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "4.   **如果我们要追赶，数据准备需要多长时间、多少成本？**"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L116",
+      "original_text": "## 二、AI竞品分析的六大维度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 116,
+        "line_end": 116
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 二、AI竞品分析的六大维度"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L120",
+      "original_text": "### 维度1：模型能力维度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 120,
+        "line_end": 120
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 维度1：模型能力维度"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L124",
+      "original_text": "#### 分析框架",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 124,
+        "line_end": 124
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 分析框架"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L128",
+      "original_text": "| **底层模型** | 自研模型？调用第三方API？第三方用了什么模型？ | 看官方公告、技术博客、API返回信息、行业报道 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 128,
+        "line_end": 128
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **底层模型** | 自研模型？调用第三方API？第三方用了什么模型？ | 看官方公告、技术博客、API返回信息、行业报道 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L129",
+      "original_text": "| **模型版本** | 用的是最新版还是旧版？更新频率如何？ | 定期测试同一问题，观察回答变化；关注官方更新日志 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 129,
+        "line_end": 129
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **模型版本** | 用的是最新版还是旧版？更新频率如何？ | 定期测试同一问题，观察回答变化；关注官方更新日志 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L130",
+      "original_text": "| **核心指标** | 公开了哪些评测数据？在权威榜单排名如何？ | 查论文、技术报告、公开Benchmark（如MMLU、HumanEval） |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 130,
+        "line_end": 130
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **核心指标** | 公开了哪些评测数据？在权威榜单排名如何？ | 查论文、技术报告、公开Benchmark（如MMLU、HumanEval） |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L131",
+      "original_text": "| **垂直优化** | 是否针对特定领域做了微调/RAG/知识增强？ | 测试专业领域问题，对比通用知识和专业知识的表现差异 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 131,
+        "line_end": 131
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **垂直优化** | 是否针对特定领域做了微调/RAG/知识增强？ | 测试专业领域问题，对比通用知识和专业知识的表现差异 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L133",
+      "original_text": "#### 实战测试方法",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 133,
+        "line_end": 133
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 实战测试方法"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L164",
+      "original_text": "| 逻辑推理：如果A>B, B>C, 那么A和C的关系？ | ... | ... | ... | A:5 B:5 C:4 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 164,
+        "line_end": 164
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 逻辑推理：如果A>B, B>C, 那么A和C的关系？ | ... | ... | ... | A:5 B:5 C:4 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L170",
+      "original_text": "不要只关注\"谁得分高\"，更要关注**\"谁在什么类型的题目上表现好\"**。这能帮你发现竞品的定位策略——它是走\"全才\"路线，还是走\"专才\"路线？它的能力短板在哪里？这些短板是不是你的机会？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 170,
+        "line_end": 170
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "不要只关注\"谁得分高\"，更要关注**\"谁在什么类型的题目上表现好\"**。这能帮你发现竞品的定位策略——它是走\"全才\"路线，还是走\"专才\"路线？它的能力短板在哪里？这些短板是不是你的机会？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L172",
+      "original_text": "### 维度2：功能场景维度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 172,
+        "line_end": 172
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 维度2：功能场景维度"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L176",
+      "original_text": "#### 分析框架",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 176,
+        "line_end": 176
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 分析框架"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L180",
+      "original_text": "| **场景覆盖** | 竞品覆盖了多少个使用场景？ | 场景清单 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 180,
+        "line_end": 180
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **场景覆盖** | 竞品覆盖了多少个使用场景？ | 场景清单 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L181",
+      "original_text": "| **场景深度** | 每个场景下有多少细分功能？流程是否闭环？ | 功能拆解表 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 181,
+        "line_end": 181
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **场景深度** | 每个场景下有多少细分功能？流程是否闭环？ | 功能拆解表 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L182",
+      "original_text": "| **场景优先级** | 竞品的主打场景是什么？资源倾斜在哪里？ | 场景优先级判断 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 182,
+        "line_end": 182
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **场景优先级** | 竞品的主打场景是什么？资源倾斜在哪里？ | 场景优先级判断 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L183",
+      "original_text": "| **场景创新** | 有没有竞品独创的场景？ | 创新场景清单 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 183,
+        "line_end": 183
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **场景创新** | 有没有竞品独创的场景？ | 创新场景清单 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L185",
+      "original_text": "#### 功能场景拆解表示例",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 185,
+        "line_end": 185
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 功能场景拆解表示例"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L208",
+      "original_text": "**从这个表格能读出什么？**",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 208,
+        "line_end": 208
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "**从这个表格能读出什么？**"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L231",
+      "original_text": "1.   竞品的功能布局反映了什么战略选择？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 231,
+        "line_end": 231
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "1.   竞品的功能布局反映了什么战略选择？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L232",
+      "original_text": "2.   哪些功能是\"必备\"的（大家都做），哪些功能是\"差异化\"的（只有它做）？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 232,
+        "line_end": 232
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "2.   哪些功能是\"必备\"的（大家都做），哪些功能是\"差异化\"的（只有它做）？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L233",
+      "original_text": "3.   差异化功能是\"真差异\"还是\"伪差异\"？用户真的在乎吗？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 233,
+        "line_end": 233
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "3.   差异化功能是\"真差异\"还是\"伪差异\"？用户真的在乎吗？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L235",
+      "original_text": "### 维度3：交互体验维度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 235,
+        "line_end": 235
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 维度3：交互体验维度"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L239",
+      "original_text": "#### AI交互体验的三层评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 239,
+        "line_end": 239
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### AI交互体验的三层评估"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L256",
+      "original_text": "├── 是否支持多模态输入（文字/语音/图片/文件）？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 256,
+        "line_end": 256
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否支持多模态输入（文字/语音/图片/文件）？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L257",
+      "original_text": "├── 输入框是否支持富文本（加粗、列表、代码块）？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 257,
+        "line_end": 257
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 输入框是否支持富文本（加粗、列表、代码块）？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L258",
+      "original_text": "├── 是否有快捷输入/提示词推荐？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 258,
+        "line_end": 258
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否有快捷输入/提示词推荐？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L259",
+      "original_text": "├── 是否支持语音输入？识别准确率如何？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 259,
+        "line_end": 259
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否支持语音输入？识别准确率如何？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L260",
+      "original_text": "├── 是否支持上传附件？支持哪些格式？大小限制？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 260,
+        "line_end": 260
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否支持上传附件？支持哪些格式？大小限制？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L263",
+      "original_text": "├── 输出速度如何？首字响应时间？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 263,
+        "line_end": 263
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 输出速度如何？首字响应时间？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L264",
+      "original_text": "├── 是否流式输出（逐字显示）？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 264,
+        "line_end": 264
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否流式输出（逐字显示）？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L265",
+      "original_text": "├── 输出格式是否丰富（代码高亮、表格、公式）？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 265,
+        "line_end": 265
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 输出格式是否丰富（代码高亮、表格、公式）？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L266",
+      "original_text": "├── 是否支持输出后编辑/复制/分享？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 266,
+        "line_end": 266
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否支持输出后编辑/复制/分享？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L267",
+      "original_text": "├── 是否支持重新生成/追问/否定？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 267,
+        "line_end": 267
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否支持重新生成/追问/否定？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L270",
+      "original_text": "├── AI答错时，用户怎么反馈？（点赞/点踩/举报？）",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 270,
+        "line_end": 270
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── AI答错时，用户怎么反馈？（点赞/点踩/举报？）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L271",
+      "original_text": "├── AI拒绝回答时，理由是否清晰？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 271,
+        "line_end": 271
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── AI拒绝回答时，理由是否清晰？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L272",
+      "original_text": "├── 网络超时/服务器繁忙时，提示是否友好？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 272,
+        "line_end": 272
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 网络超时/服务器繁忙时，提示是否友好？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L273",
+      "original_text": "├── 生成长内容中断时，是否支持\"继续\"？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 273,
+        "line_end": 273
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 生成长内容中断时，是否支持\"继续\"？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L276",
+      "original_text": "├── 是否显示对话历史？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 276,
+        "line_end": 276
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否显示对话历史？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L277",
+      "original_text": "├── 是否支持新建/切换会话？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 277,
+        "line_end": 277
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否支持新建/切换会话？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L278",
+      "original_text": "├── 上下文窗口有多大？长对话会不会\"失忆\"？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 278,
+        "line_end": 278
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 上下文窗口有多大？长对话会不会\"失忆\"？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L279",
+      "original_text": "├── 是否支持引用之前的对话内容？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 279,
+        "line_end": 279
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "├── 是否支持引用之前的对话内容？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L295",
+      "original_text": "建议你亲自作为\"深度用户\"使用竞品至少一周。每天记录使用日志：什么时候用了？用来做什么？体验好的地方？体验差的地方？惊喜时刻？抓狂时刻？这些一手体验比任何功能对比表都更有价值。",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 295,
+        "line_end": 295
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "建议你亲自作为\"深度用户\"使用竞品至少一周。每天记录使用日志：什么时候用了？用来做什么？体验好的地方？体验差的地方？惊喜时刻？抓狂时刻？这些一手体验比任何功能对比表都更有价值。"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L297",
+      "original_text": "### 维度4：数据资产维度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 297,
+        "line_end": 297
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 维度4：数据资产维度"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L301",
+      "original_text": "#### 数据资产分析框架",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 301,
+        "line_end": 301
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 数据资产分析框架"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L305",
+      "original_text": "| **数据规模** | 有多少用户？产生了多少数据？ | 公开数据（融资报告、发布会）、第三方估计（SimilarWeb、App Annie） |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 305,
+        "line_end": 305
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **数据规模** | 有多少用户？产生了多少数据？ | 公开数据（融资报告、发布会）、第三方估计（SimilarWeb、App Annie） |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L306",
+      "original_text": "| **数据质量** | 数据是否高质量、有标注？ | 从输出质量反推；看是否有专业团队/合作方 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 306,
+        "line_end": 306
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **数据质量** | 数据是否高质量、有标注？ | 从输出质量反推；看是否有专业团队/合作方 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L307",
+      "original_text": "| **数据独特性** | 是否有竞品无法获取的独家数据？ | 看行业壁垒、合作关系、数据积累时间 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 307,
+        "line_end": 307
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **数据独特性** | 是否有竞品无法获取的独家数据？ | 看行业壁垒、合作关系、数据积累时间 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L308",
+      "original_text": "| **数据更新** | 数据更新频率？时效性如何？ | 测试实时信息类问题，看知识截止日期 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 308,
+        "line_end": 308
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **数据更新** | 数据更新频率？时效性如何？ | 测试实时信息类问题，看知识截止日期 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L309",
+      "original_text": "| **飞轮状态** | 是否已形成正向循环？ | 看产品迭代速度、用户增长趋势、效果改进速度 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 309,
+        "line_end": 309
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **飞轮状态** | 是否已形成正向循环？ | 看产品迭代速度、用户增长趋势、效果改进速度 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L311",
+      "original_text": "#### 数据资产类型对照表",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 311,
+        "line_end": 311
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 数据资产类型对照表"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L329",
+      "original_text": "*   竞品的招聘方向（招标注团队？招数据工程师？）",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 329,
+        "line_end": 329
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   竞品的招聘方向（招标注团队？招数据工程师？）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L331",
+      "original_text": "### 维度5：成本效率维度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 331,
+        "line_end": 331
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 维度5：成本效率维度"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L335",
+      "original_text": "#### 成本效率分析框架",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 335,
+        "line_end": 335
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 成本效率分析框架"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L339",
+      "original_text": "| **推理成本** | 每次请求的成本是多少？ | 如果调用第三方API，查公开定价；自研模型则需要估算 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 339,
+        "line_end": 339
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **推理成本** | 每次请求的成本是多少？ | 如果调用第三方API，查公开定价；自研模型则需要估算 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L340",
+      "original_text": "| **响应速度** | 平均响应时间？高峰期是否变慢？ | 实测（用脚本测100次取平均） |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 340,
+        "line_end": 340
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **响应速度** | 平均响应时间？高峰期是否变慢？ | 实测（用脚本测100次取平均） |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L341",
+      "original_text": "| **资源效率** | 同样效果下，谁的模型更小/更快？ | 技术报告中的参数规模、推理速度对比 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 341,
+        "line_end": 341
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **资源效率** | 同样效果下，谁的模型更小/更快？ | 技术报告中的参数规模、推理速度对比 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L342",
+      "original_text": "| **商业模式** | 如何覆盖成本？免费额度？订阅制？按量计费？ | 直接看定价页面 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 342,
+        "line_end": 342
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **商业模式** | 如何覆盖成本？免费额度？订阅制？按量计费？ | 直接看定价页面 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L343",
+      "original_text": "| **成本趋势** | 成本在上升还是下降？ | 模型优化、量化、蒸馏等技术趋势 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 343,
+        "line_end": 343
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **成本趋势** | 成本在上升还是下降？ | 模型优化、量化、蒸馏等技术趋势 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L345",
+      "original_text": "#### 成本效率对比示例",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 345,
+        "line_end": 345
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 成本效率对比示例"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L366",
+      "original_text": "分析竞品的成本效率，能帮你判断：它能不能长期维持当前的服务质量？如果市场打起价格战，它有没有余地？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 366,
+        "line_end": 366
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "分析竞品的成本效率，能帮你判断：它能不能长期维持当前的服务质量？如果市场打起价格战，它有没有余地？"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L368",
+      "original_text": "### 维度6：生态壁垒维度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 368,
+        "line_end": 368
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 维度6：生态壁垒维度"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L372",
+      "original_text": "#### 生态壁垒分析框架",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 372,
+        "line_end": 372
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 生态壁垒分析框架"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L376",
+      "original_text": "| **开放平台** | 是否开放API？开发者生态规模？ | API文档质量、开发者数量、第三方应用数 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 376,
+        "line_end": 376
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **开放平台** | 是否开放API？开发者生态规模？ | API文档质量、开发者数量、第三方应用数 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L377",
+      "original_text": "| **插件/扩展生态** | 是否支持插件？有多少可用插件？ | 插件数量、质量、活跃度 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 377,
+        "line_end": 377
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **插件/扩展生态** | 是否支持插件？有多少可用插件？ | 插件数量、质量、活跃度 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L378",
+      "original_text": "| **硬件绑定** | 是否和特定硬件深度集成？ | 独家合作、预装、芯片优化 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 378,
+        "line_end": 378
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **硬件绑定** | 是否和特定硬件深度集成？ | 独家合作、预装、芯片优化 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L379",
+      "original_text": "| **内容/数据生态** | 是否有独占的内容或数据源？ | 独家合作、UGC规模、专业内容库 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 379,
+        "line_end": 379
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **内容/数据生态** | 是否有独占的内容或数据源？ | 独家合作、UGC规模、专业内容库 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L380",
+      "original_text": "| **企业生态** | B端客户粘性？集成深度？ | 企业客户数、续约率、集成系统数 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 380,
+        "line_end": 380
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **企业生态** | B端客户粘性？集成深度？ | 企业客户数、续约率、集成系统数 |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L382",
+      "original_text": "#### 生态壁垒案例",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 382,
+        "line_end": 382
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 生态壁垒案例"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L412",
+      "original_text": "*   如果竞品明天关闭API，多少开发者会受影响？（开发者生态深度）",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 412,
+        "line_end": 412
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   如果竞品明天关闭API，多少开发者会受影响？（开发者生态深度）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L413",
+      "original_text": "*   竞品的数据/内容，别人能不能轻易复制？（数据壁垒）",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 413,
+        "line_end": 413
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   竞品的数据/内容，别人能不能轻易复制？（数据壁垒）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L414",
+      "original_text": "*   用户切换到竞品的成本有多高？（迁移成本）",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 414,
+        "line_end": 414
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   用户切换到竞品的成本有多高？（迁移成本）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L418",
+      "original_text": "## 三、竞品分析工具和方法",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 418,
+        "line_end": 418
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 三、竞品分析工具和方法"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L422",
+      "original_text": "### 工具1：AI竞品功能拆解表",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 422,
+        "line_end": 422
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 工具1：AI竞品功能拆解表"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L424",
+      "original_text": "## 竞品功能拆解表模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 424,
+        "line_end": 424
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 竞品功能拆解表模板"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L426",
+      "original_text": "### 基本信息",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 426,
+        "line_end": 426
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 基本信息"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L437",
+      "original_text": "### 模型能力",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 437,
+        "line_end": 437
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 模型能力"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L448",
+      "original_text": "### 功能场景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 448,
+        "line_end": 448
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 功能场景"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L456",
+      "original_text": "### 交互体验",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 456,
+        "line_end": 456
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 交互体验"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L466",
+      "original_text": "### 数据与生态",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 466,
+        "line_end": 466
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 数据与生态"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L476",
+      "original_text": "### 工具2：AI产品用户体验地图",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 476,
+        "line_end": 476
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 工具2：AI产品用户体验地图"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L484",
+      "original_text": "| 准备 | 打开AI助手 | \"希望今天能快一点\" | 显示欢迎语 | 欢迎语能否更个性化？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 484,
+        "line_end": 484
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 准备 | 打开AI助手 | \"希望今天能快一点\" | 显示欢迎语 | 欢迎语能否更个性化？ |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L485",
+      "original_text": "| 输入 | 输入本周工作内容 | \"不知道该怎么组织语言\" | 理解意图，可能提示模板 | 是否有周报模板推荐？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 485,
+        "line_end": 485
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 输入 | 输入本周工作内容 | \"不知道该怎么组织语言\" | 理解意图，可能提示模板 | 是否有周报模板推荐？ |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L486",
+      "original_text": "| 生成 | 等待AI生成 | \"有点慢...\" | 处理中，生成内容 | 响应速度？是否有进度提示？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 486,
+        "line_end": 486
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 生成 | 等待AI生成 | \"有点慢...\" | 处理中，生成内容 | 响应速度？是否有进度提示？ |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L487",
+      "original_text": "| 查看 | 阅读AI生成的周报 | \"整体还行，但数据部分不对\" | 输出完整周报 | 数据准确性如何保证？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 487,
+        "line_end": 487
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 查看 | 阅读AI生成的周报 | \"整体还行，但数据部分不对\" | 输出完整周报 | 数据准确性如何保证？ |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L488",
+      "original_text": "| 编辑 | 手动修改数据部分 | \"还是要自己改\" | 无（等待用户输入） | 能否对接数据源自动填充？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 488,
+        "line_end": 488
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 编辑 | 手动修改数据部分 | \"还是要自己改\" | 无（等待用户输入） | 能否对接数据源自动填充？ |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L489",
+      "original_text": "| 优化 | 让AI调整语气 | \"希望更正式一点\" | 按指令改写 | 语气调整是否精准？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 489,
+        "line_end": 489
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 优化 | 让AI调整语气 | \"希望更正式一点\" | 按指令改写 | 语气调整是否精准？ |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L490",
+      "original_text": "| 完成 | 复制到邮件发送 | \"比从零写快多了\" | 无 | 能否直接集成邮件发送？ |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 490,
+        "line_end": 490
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 完成 | 复制到邮件发送 | \"比从零写快多了\" | 无 | 能否直接集成邮件发送？ |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L492",
+      "original_text": "### 工具3：AI竞品SWOT分析",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 492,
+        "line_end": 492
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 工具3：AI竞品SWOT分析"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L503",
+      "original_text": "### 工具4：竞品追踪表",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 503,
+        "line_end": 503
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 工具4：竞品追踪表"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L507",
+      "original_text": "## 竞品追踪表模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 507,
+        "line_end": 507
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 竞品追踪表模板"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L509",
+      "original_text": "### 追踪维度",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 509,
+        "line_end": 509
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 追踪维度"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L518",
+      "original_text": "### 追踪渠道清单",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 518,
+        "line_end": 518
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 追踪渠道清单"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L520",
+      "original_text": "*   [ ] 竞品官方博客/公众号",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 520,
+        "line_end": 520
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 竞品官方博客/公众号"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L521",
+      "original_text": "*   [ ] 竞品更新日志（Changelog）",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 521,
+        "line_end": 521
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 竞品更新日志（Changelog）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L522",
+      "original_text": "*   [ ] 竞品社交媒体（Twitter/X、LinkedIn）",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 522,
+        "line_end": 522
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 竞品社交媒体（Twitter/X、LinkedIn）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L523",
+      "original_text": "*   [ ] 行业媒体（36氪、极客公园、机器之心）",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 523,
+        "line_end": 523
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 行业媒体（36氪、极客公园、机器之心）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L524",
+      "original_text": "*   [ ] 技术社区（Hacker News、Reddit、知乎）",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 524,
+        "line_end": 524
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 技术社区（Hacker News、Reddit、知乎）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L525",
+      "original_text": "*   [ ] 应用商店更新说明",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 525,
+        "line_end": 525
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 应用商店更新说明"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L526",
+      "original_text": "*   [ ] 第三方数据平台（Sensor Tower、点点数据）",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 526,
+        "line_end": 526
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 第三方数据平台（Sensor Tower、点点数据）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L527",
+      "original_text": "*   [ ] 竞品用户社群（微信群、Discord）",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 527,
+        "line_end": 527
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 竞品用户社群（微信群、Discord）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L538",
+      "original_text": "## 四、AI竞品分析的三大难点",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 538,
+        "line_end": 538
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 四、AI竞品分析的三大难点"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L542",
+      "original_text": "### 难点1：模型效果难以客观量化",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 542,
+        "line_end": 542
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 难点1：模型效果难以客观量化"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L556",
+      "original_text": "### 难点2：交互体验主观性强",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 556,
+        "line_end": 556
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 难点2：交互体验主观性强"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L566",
+      "original_text": "| **任务完成度** | 不要问\"好不好用\"，问\"你完成这个任务了吗？花了多少时间？遇到了什么问题？\" |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 566,
+        "line_end": 566
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| **任务完成度** | 不要问\"好不好用\"，问\"你完成这个任务了吗？花了多少时间？遇到了什么问题？\" |"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L569",
+      "original_text": "### 难点3：技术路线差异大",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 569,
+        "line_end": 569
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 难点3：技术路线差异大"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L581",
+      "original_text": "> 怎么比？哪个更好？取决于你的目标场景是什么。",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 581,
+        "line_end": 581
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "> 怎么比？哪个更好？取决于你的目标场景是什么。"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L601",
+      "original_text": "## 五、完整案例解析",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 601,
+        "line_end": 601
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 五、完整案例解析"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L603",
+      "original_text": "### 案例1：通用大模型产品对比分析（ChatGPT vs Claude vs 文心一言）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 603,
+        "line_end": 603
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 案例1：通用大模型产品对比分析（ChatGPT vs Claude vs 文心一言）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L607",
+      "original_text": "#### 分析框架应用",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 607,
+        "line_end": 607
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 分析框架应用"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L695",
+      "original_text": "#### 综合分析结论",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 695,
+        "line_end": 695
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 综合分析结论"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L716",
+      "original_text": "### 案例2：垂直领域AI产品对比分析（AI法律助手）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 716,
+        "line_end": 716
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 案例2：垂直领域AI产品对比分析（AI法律助手）"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L720",
+      "original_text": "#### 市场格局扫描",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 720,
+        "line_end": 720
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 市场格局扫描"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L729",
+      "original_text": "#### 深度分析：以\"合同审查\"场景为例",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 729,
+        "line_end": 729
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 深度分析：以\"合同审查\"场景为例"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L800",
+      "original_text": "## 写在最后",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 800,
+        "line_end": 800
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 写在最后"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L802",
+      "original_text": "哇，这一节的内容密度不小吧？咱们来做个快速回顾：",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 802,
+        "line_end": 802
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "哇，这一节的内容密度不小吧？咱们来做个快速回顾："
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05-m03-L816",
+      "original_text": "下一节，我们将继续AI产品设计的旅程，探讨**《如何合理评估AI产品的需求》**。需求挖了、竞品看了，但哪些需求值得做？AI能做到什么程度才算\"达标\"？如何设定合理的验收标准？这些都是AI产品经理必须回答的问题。下节见！",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 816,
+        "line_end": 816
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "下一节，我们将继续AI产品设计的旅程，探讨**《如何合理评估AI产品的需求》**。需求挖了、竞品看了，但哪些需求值得做？AI能做到什么程度才算\"达标\"？如何设定合理的验收标准？这些都是AI产品经理必须回答的问题。下节见！"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05.interview.m03.matched-task.001",
+      "original_text": "### 维度1：模型能力维度\n\n这是AI竞品分析**最核心、最独特**的维度。传统产品没有这个维度。\n\n#### 分析框架\n\n| 分析项 | 关键问题 | 分析方法 |\n| --- | --- | --- |\n| **底层模型** | 自研模型？调用第三方API？第三方用了什么模型？ | 看官方公告、技术博客、API返回信息、行业报道 |\n| **模型版本** | 用的是最新版还是旧版？更新频率如何？ | 定期测试同一问题，观察回答变化；关注官方更新日志 |\n| **核心指标** | 公开了哪些评测数据？在权威榜单排名如何？ | 查论文、技术报告、公开Benchmark（如MMLU、HumanEval） |\n| **垂直优化** | 是否针对特定领域做了微调/RAG/知识增强？ | 测试专业领域问题，对比通用知识和专业知识的表现差异 |\n\n#### 实战测试方法\n\n**标准化测试集法：**\n\n```\n构建你的\"竞品测试题库\"：\n\n通用能力测试（适合所有AI产品）：\n├── 逻辑推理题 × 5（测试推理能力）\n├── 创意写作题 × 3（测试生成能力）\n├── 长文本理解题 × 3（测试上下文窗口）\n├── 多轮对话题 × 3（测试记忆和一致性）\n├── 安全/价值观题 × 3（测试对齐质量）\n└── 实时信息题 × 3（测试知识时效性）\n\n专业能力测试（根据竞品领域定制）：\n├── 如果你是分析AI法律助手 → 准备5个法律案例分析题\n├── 如果你是分析AI医疗助手 → 准备5个症状诊断题\n├── 如果你是分析AI编程助手 → 准备5个代码编写/调试题\n\n测试原则：\n1. 同一套题，同一时间，测试所有竞品\n2. 记录回答内容、响应时间、输出长度\n3. 邀请领域专家盲评（不知道哪个回答是哪个竞品的）\n4. 定期复测（每月/每季度），观察竞品进步速度\n```\n\n**示例：通用能力测试记录表**\n\n| 测试题 | 竞品A回答 | 竞品B回答 | 竞品C回答 | 评分(1-5) |\n| --- | --- | --- | --- | --- |\n| 逻辑推理：如果A>B, B>C, 那么A和C的关系？ | ... | ... | ... | A:5 B:5 C:4 |\n| 创意写作：写一首关于春天的诗 | ... | ... | ... | A:4 B:5 C:3 |\n| 长文本：总结这篇5000字文章（附文章） | ... | ... | ... | A:3 B:4 C:5 |\n\n💡 模型能力分析的关键洞察\n\n不要只关注\"谁得分高\"，更要关注**\"谁在什么类型的题目上表现好\"**。这能帮你发现竞品的定位策略——它是走\"全才\"路线，还是走\"专才\"路线？它的能力短板在哪里？这些短板是不是你的机会？",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 120,
+        "line_end": 170
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m03.matched-task.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m03.matched-task.001",
+          "required_points": [
+            "固定交接目标、输入及可核对版本/账号等条件",
+            "按必留信息、正确可执行和完成/补改成本比较",
+            "代表与边界任务重复观察保留坏例，结论限定范围"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05.interview.m03.blackbox-evidence.001",
+      "original_text": "### 1.1 模型黑盒：你看到的不是全部\n\n传统产品的功能，基本是\"所见即所得\"的。竞品做了一个直播功能，你体验一遍，基本就能知道它有哪些能力、流程是什么、交互怎么设计的。\n\n但AI产品不同。两个产品看起来都是\"AI写作\"功能，但背后的差异可能是天壤之别：\n\n| 可见层 | 传统产品 | AI产品 |\n| --- | --- | --- |\n| 界面 | ✅ 能看到 | ✅ 能看到 |\n| 功能流程 | ✅ 能体验 | ✅ 能体验 |\n| 底层技术 | ❌ 一般看不到 | ❌ **绝对看不到** |\n| 效果上限 | N/A | ❌ **很难判断** |\n| 迭代方向 | 相对可预测 | ❌ **黑盒，难以预测** |\n\n**举例：**\n\n> 竞品A和竞品B都有一个\"AI总结文档\"的功能。\n> \n> \n> 你测试了10个文档，发现竞品A的总结更精炼，竞品B的总结更全面。\n> \n> \n> 但你知道为什么吗？\n> \n> \n> *   可能是模型不同（GPT-4 vs Claude vs 自研模型）\n> *   可能是Prompt工程不同（A的Prompt强调\"精简\"，B的强调\"全面\"）\n> *   可能是后处理不同（A做了额外的压缩步骤，B做了信息补全）\n> *   可能是训练数据不同（A用了更多新闻摘要数据，B用了更多学术论文数据）\n> \n> \n> 这些因素，你作为外部观察者，**几乎不可能准确判断**。\n\n💡 应对策略\n\n面对模型黑盒，竞品分析的重点要从\"它用了什么技术\"转向\"它在什么场景下表现好/不好\"。通过大量测试、收集badcase，建立对竞品能力边界的认知，比猜测它的技术路线更有价值。",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 17,
+        "line_end": 52
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m03.blackbox-evidence.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m03.blackbox-evidence.001",
+          "required_points": [
+            "输出观察不唯一决定微调或数据来源",
+            "给至少两种合理技术解释并说明如何影响输出",
+            "区分实测/官方披露/假设并保留日期条件，不能把假设确认为事实"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05.interview.m03.workflow-gap.001",
+      "original_text": "### 维度2：功能场景维度\n\n这是最接近传统竞品分析的维度，但AI产品的功能分析需要更关注\"场景深度\"。\n\n#### 分析框架\n\n| 分析项 | 关键问题 | 输出物 |\n| --- | --- | --- |\n| **场景覆盖** | 竞品覆盖了多少个使用场景？ | 场景清单 |\n| **场景深度** | 每个场景下有多少细分功能？流程是否闭环？ | 功能拆解表 |\n| **场景优先级** | 竞品的主打场景是什么？资源倾斜在哪里？ | 场景优先级判断 |\n| **场景创新** | 有没有竞品独创的场景？ | 创新场景清单 |\n\n#### 功能场景拆解表示例\n\n以\"AI写作助手\"为例，对比三个竞品的功能场景：\n\n| 功能场景 | 竞品A（ Jasper） | 竞品B（Notion AI） | 竞品C（自研产品X） |\n| --- | --- | --- | --- |\n| **文章生成** | ✅ 支持 | ✅ 支持 | ✅ 支持 |\n| ├─ 按模板生成 | ✅ 50+模板 | ✅ 10+模板 | ✅ 20+模板 |\n| ├─ 自定义语气 | ✅ 支持 | ✅ 支持 | ❌ 不支持 |\n| ├─ 多语言生成 | ✅ 30+语言 | ✅ 支持 | ✅ 5种语言 |\n| ├─ SEO优化生成 | ✅ 关键词植入 | ❌ 不支持 | ❌ 不支持 |\n| **文本改写** | ✅ 支持 | ✅ 支持 | ✅ 支持 |\n| ├─ 改写幅度调节 | ✅ 轻微/中等/大幅 | ❌ 仅一种 | ✅ 支持 |\n| ├─ 风格转换 | ✅ 正式/随意/幽默 | ✅ 支持 | ❌ 不支持 |\n| **标题生成** | ✅ 支持 | ✅ 支持 | ✅ 支持 |\n| ├─ 按平台适配 | ✅ 小红书/微博/公众号 | ❌ 通用标题 | ❌ 通用标题 |\n| **语法检查** | ✅ 支持 | ✅ 支持 | ✅ 支持 |\n| ├─ 实时检查 | ✅ 支持 | ✅ 支持 | ❌ 仅事后检查 |\n| **内容续写** | ✅ 支持 | ✅ 支持 | ❌ 不支持 |\n| **大纲生成** | ✅ 支持 | ❌ 不支持 | ✅ 支持 |\n| **团队协作** | ✅ 支持 | ✅ 原生支持 | ❌ 不支持 |\n| **数据洞察** | ✅ 阅读量预测 | ❌ 不支持 | ❌ 不支持 |\n\n**从这个表格能读出什么？**\n\n```\n竞品A（Jasper）的策略：\n  → 定位：专业营销写作工具\n  → 核心优势：模板多、SEO功能强、按平台适配\n  → 目标用户：专业内容营销人员\n\n竞品B（Notion AI）的策略：\n  → 定位：协作写作中的AI助手\n  → 核心优势：与Notion工作流深度融合、团队协作原生支持\n  → 目标用户： already Notion用户\n\n竞品C的策略：\n  → 定位：通用写作辅助\n  → 特点：功能较基础，缺乏差异化\n  → 风险：容易被A或B替代\n```\n\n💡 功能分析的关键洞察\n\n做功能对比时，**不要只数\"谁的功能多\"**。要思考：\n\n1.   竞品的功能布局反映了什么战略选择？\n2.   哪些功能是\"必备\"的（大家都做），哪些功能是\"差异化\"的（只有它做）？\n3.   差异化功能是\"真差异\"还是\"伪差异\"？用户真的在乎吗？\n\n### 维度3：交互体验维度\n\nAI产品的交互体验，和传统产品有很大不同。传统产品讲\"流程是否顺畅\"，AI产品还要讲\"对话是否自然\"\"AI是否懂我\"\"出错时怎么处理\"。\n\n#### AI交互体验的三层评估\n\n**第一层：交互范式**\n\n| 范式类型 | 特点 | 适用场景 | 代表产品 |\n| --- | --- | --- | --- |\n| **对话式** | 聊天界面，自然语言交互 | 通用问答、创意任务 | ChatGPT、Claude |\n| **嵌入协作式** | AI嵌入现有工具，边用边唤 | 办公、编程、创作 | Copilot、Notion AI |\n| **Agent式** | AI自主规划、调用工具、执行任务 | 复杂多步骤任务 | Devin、各类Agent平台 |\n| **混合式** | 多种范式组合 | 综合场景 | 大多数成熟AI产品 |\n\n**第二层：交互细节**\n\n```\n对话式AI的交互细节检查清单：\n\n输入体验：\n├── 是否支持多模态输入（文字/语音/图片/文件）？\n├── 输入框是否支持富文本（加粗、列表、代码块）？\n├── 是否有快捷输入/提示词推荐？\n├── 是否支持语音输入？识别准确率如何？\n├── 是否支持上传附件？支持哪些格式？大小限制？\n\n输出体验：\n├── 输出速度如何？首字响应时间？\n├── 是否流式输出（逐字显示）？\n├── 输出格式是否丰富（代码高亮、表格、公式）？\n├── 是否支持输出后编辑/复制/分享？\n├── 是否支持重新生成/追问/否定？\n\n错误/异常处理：\n├── AI答错时，用户怎么反馈？（点赞/点踩/举报？）\n├── AI拒绝回答时，理由是否清晰？\n├── 网络超时/服务器繁忙时，提示是否友好？\n├── 生成长内容中断时，是否支持\"继续\"？\n\n上下文管理：\n├── 是否显示对话历史？\n├── 是否支持新建/切换会话？\n├── 上下文窗口有多大？长对话会不会\"失忆\"？\n├── 是否支持引用之前的对话内容？\n```\n\n**第三层：情感体验**\n\n这是最容易被忽视，但最能形成差异化的层面。\n\n| 体验要素 | 好的体验 | 差的体验 |\n| --- | --- | --- |\n| AI个性 | 有温度、有个性、让人愿意聊 | 冷冰冰、机械感、像在和机器人说话 |\n| 容错包容 | AI答错了会道歉、会澄清 | AI答错了也理直气壮 |\n| 掌控感 | 用户随时知道AI在做什么、为什么 | AI像个黑盒，不知道它在干嘛 |\n| 成长感 | 用久了感觉AI更懂我了 | 用了一个月和第一天没区别 |\n\n💡 交互体验分析建议\n\n建议你亲自作为\"深度用户\"使用竞品至少一周。每天记录使用日志：什么时候用了？用来做什么？体验好的地方？体验差的地方？惊喜时刻？抓狂时刻？这些一手体验比任何功能对比表都更有价值。",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 172,
+        "line_end": 295
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m03.workflow-gap.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m03.workflow-gap.001",
+          "required_points": [
+            "区分任务覆盖广度与同任务端到端深度",
+            "检查原稿保护、核对/对比/撤销和交付是否可用",
+            "结合真实需求与返工证据给条件判断，不能数按钮排名"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.3",
+      "objective_id": "ch05.interview.m03.tracking-decision.001",
+      "original_text": "### 工具4：竞品追踪表\n\n竞品分析不是一次性的，需要持续跟踪。\n\n## 竞品追踪表模板\n\n### 追踪维度\n\n| 日期 | 竞品 | 更新类型 | 具体内容 | 影响评估 | 我们是否需要跟进 |\n| --- | --- | --- | --- | --- | --- |\n| 2025-01-15 | ChatGPT | 模型更新 | 发布GPT-4.5，推理能力大幅提升 | 高 | 是，评估升级计划 |\n| 2025-02-01 | Claude | 功能更新 | 新增Artifacts功能，支持实时预览 | 中 | 观察用户反馈 |\n| 2025-02-10 | 竞品X | 定价变动 | 降价30% | 高 | 评估是否需要调整定价 |\n| ... |  |  |  |  |  |\n\n### 追踪渠道清单\n\n*   [ ] 竞品官方博客/公众号\n*   [ ] 竞品更新日志（Changelog）\n*   [ ] 竞品社交媒体（Twitter/X、LinkedIn）\n*   [ ] 行业媒体（36氪、极客公园、机器之心）\n*   [ ] 技术社区（Hacker News、Reddit、知乎）\n*   [ ] 应用商店更新说明\n*   [ ] 第三方数据平台（Sensor Tower、点点数据）\n*   [ ] 竞品用户社群（微信群、Discord）\n\n💡 工具使用建议\n\n不要试图一次性做完所有维度的分析。建议：\n\n1.   **第一次分析**：全面扫描六大维度，建立基础认知\n2.   **日常追踪**：用竞品追踪表，每周更新关键动态\n3.   **深度分析**：针对1-2个直接竞品，每季度做一次深度分析（包含实测、用户访谈）\n4.   **专项分析**：当要进入新场景或做重大决策时，做针对性的竞品分析",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.3-如何对标竞品AI产品分析.md",
+        "content_hash": "d28add513da7bba45f8ce8dd4a7ea81df378e5a1664ca0d6ac693ee026a4d361",
+        "line_start": 503,
+        "line_end": 536
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m03.tracking-decision.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m03.tracking-decision.001",
+          "required_points": [
+            "变化记录含范围/开放条件、套餐版本日期与可确认来源",
+            "核实自身任务价值及迁移/采用完整代价",
+            "以证据分跟进/试验/观察并有复评触发"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch05-interview-20261022-m03"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch05.interview.m03.matched-task.001": "af902f561274fc29bdc751ab18fbfbeb6612c8ec2f63aaf9f5ee83037012cd79",
+    "ch05.interview.m03.blackbox-evidence.001": "8aecaa74300f44957402590d0a0d2ff75b40f64c6847315056f8a5371007279a",
+    "ch05.interview.m03.workflow-gap.001": "5e595ad23eb2a3ab086f7ac5da2c36c704c94c53052b2456e2ca94c8eef10f63",
+    "ch05.interview.m03.tracking-decision.001": "ac71271c006a48847fb82524d3f9eaf6032f260c3c7871bc1e365b6f3df7dda2"
+  }
+}

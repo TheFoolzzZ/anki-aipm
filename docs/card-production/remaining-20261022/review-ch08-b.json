@@ -1,0 +1,813 @@
+{
+  "cards": [
+    {
+      "canonical_key": "ch08.interview.m08.capital-vs-value.001",
+      "content_hash": "2ec0780af8f00f4b5ceb701253e907e3c4eb602ff241dd20a19b563df6fc59a8",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "2026-10-24逐卡复审：完整题答、评分、误区和解析均已重读；LF5–21、69–81仍只作议题，融资额、利润趋零及硬件必胜不作事实。",
+        "required_points[0]已接受任意两种可区分、可检验且标假设的解释，不再强制长期期权/资金偏好这组作者分法，修复前次对齐扣分。",
+        "编号回答将融资动机、客户价值与复制难度分开；样机接管多的反例及复购/有效任务成本/复制代价可推翻壁垒判断，开放结论能稳定自评。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m08.task-entry.001",
+      "content_hash": "7cc1010b070cdb57dd341f26085868d0fa74d1be5c49e0bf78a8ac82524a5032",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF91原生切入题已收窄为两个候选任务及单试点预算；STAR按频次、负载、通道和人工/输送基线说明有条件选择。",
+        "搬运量低、通道复杂或拣选已有夹具均能反转结论；R给隔离、安全接管与有效任务成本验收，没有编造商业化结果。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m08.form-factor.001",
+      "content_hash": "966beca7a11e6f469fe25f3edac98cbf044bcd1453c162dd3fc03d4cfa95a093",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF69–75的形态话题被限定在平整库区标准料箱，与切入任务优先级卡分别评分“做什么”和“用何种形态”。",
+        "台阶/人用工具收益与稳定性、能耗、维护逐维比较；已有升降机的反例说明环境改造也可替代爬楼，未将人形或轮式定为唯一答案。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m08.effective-task-cost.001",
+      "content_hash": "0510bb9be7b2faf2ebd0b2666648c74e8739f53b41905edc553c4c0fee88a2b6",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF61–81只作为机器人落地议题；答案以有效完成任务为分母，将设备摊销、停机、维护和人工接管纳入分子，能纠正只比电费。",
+        "100次搬运仅80次有效的数字明确是假设；统一载荷/班次/安全服务水平并检查利用率敏感性，物理设备停机机制使其区别于通用Token预算题。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m08.physical-safety.001",
+      "content_hash": "977c56e3a65b798e0b087f285cab331ffd1db9e35118ea0ce58f7001cb4b5f89",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF61–75的落地风险转为运行区域、速度载荷、通信/感知失效安全和急停接管责任；三条评分均直接对应试点控制与验收。",
+        "断网沿旧路径越界的反例落实了停止证据；明确隔离环境、安全替身和控制失效停试，不用真人危险暴露验证，也不以平均效率补偿安全失败。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m09.restriction-response.001",
+      "content_hash": "86f75f5ae3f8f6c26cd01d61b2c3be4b2683e0f46bfddd39237338e4530f5659",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "2026-10-24逐卡复审：完整STAR及LF37、59–65、82核对；题面已改为合规前提下尽量维持核心服务，并明确必要时降级或暂停，不再暗示保证零中断。",
+        "先核通知/状态/错误码和地区任务范围，再停高风险动作、采用已授权且已评测的备选/规则/人工；一次拒绝不等监管禁令，换地区账号绕限被明确排除。",
+        "摘要与退款不同风险的编辑例支持按任务处理；脱敏回放、用户告知、备用不安全停用及恢复前复测与三条评分一致，没有真实切换成果。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m09.fallback-compatibility.001",
+      "content_hash": "03f67ae40a1514010829d8956964d282725aa4397040ea2c6f078495c386d8ba",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF59–65、82支持供应备选议题；三组评分明确为任务语义/工具结构、授权与承载、状态去重回退，不把两个API连通当容灾完成。",
+        "重复退款例子说明切换会造成副作用，解释检查的是实际业务状态；与m11专有资产退出盘点有不同验收对象。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m09.staged-release.001",
+      "content_hash": "02e1a5e7053406fca0345ee7666df0dbe12a71a99b1e619abd4f5257d264493f",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF11–21、39–57中的安全与营销争论被写成假设有限发布；并列安全滥用、容量体验、战略稀缺及各自证据，不认定单一企业真实动机。",
+        "STAR的准入、执行权限和放量/收缩标准形成闭环；没有把旧文受限发布状态当当前账号准入，解释及追问保留不同结论。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m09.tiering-evidence.001",
+      "content_hash": "dcfc7b3d06d9c8284fa9c2c88ea51e48ca1c13ea2c0463fc517879ee504d9ca4",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF45–65的档位议题对应“能力/成本”与“工具授权”两条轴；答出轻量模型省钱须扣重试和人工，模型档位不能自行扩大权限。",
+        "分层质量、拒答/越权拦截、时延与有效任务成本均与题面验收对应；m13混合路由卡考上线过程，本卡考分层不等于风险控制的机制。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m10.first-use-case.001",
+      "content_hash": "6d3c365b59041d4d3446a304bcc9b725bd9ec3710b61b933475bbe48f4667672",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF86原生应用选择被具体化为陪聊与授权维修免手工单；任务频次、视角必要性、错误代价和手机/耳机替代共同决定有条件选择。",
+        "试点限定许可与安全，误识别、佩戴负担或隐私成本可推翻最初选择；未把小米发布时间、销量或作者使用体验当选择证据。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m10.wearability-tradeoff.001",
+      "content_hash": "7e14521ccfa9136aa1fceb47d29a9bf7c422fc98e35bf9ee58b9b55437608694",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF13–20、64–72的佩戴话题围绕摘下事件区分身体负担、价值不足和功能故障，并明确纳入退出者，避免只问满意用户。",
+        "同任务有限改动及完成/返工/退出对照能分辨原因；不因识别演示准确就要求全天佩戴，与首应用选择及新奇感验证分别评分。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m10.bystander-privacy.001",
+      "content_hash": "f223a8af8253157b968d5b908adfeb8c0db385158658e88c90cc79ba0ee60639",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF18–20、70–72被转为多人现场采集边界；核心答、评分及误区一致指出佩戴者同意不能扩展为旁观者或场地许可。",
+        "必要采集、可辨状态、可靠停用、留存访问删除和缺许可改方案均有对应验收；假数据核对关闭后的采集链路，未要求先拍真实旁观者试错。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m10.incremental-value-test.001",
+      "content_hash": "f8b56daaa30181162b44f6d546f1b253a0c0fdc3b8e55a7f4482bcf297b21a79",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF64–72、86的应用价值转为同任务对照；控制顺序和熟练度，并把重复选择、佩戴负担及隐私退出纳入持续价值。",
+        "首日好评不能支持扩大投入，需预设继续/收窄标准且不在高危险作业中试验；本课独立机制是穿戴形态相对手机的增益。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m11.narrative-evidence.001",
+      "content_hash": "8bab0d4318adb0f0235dfe14970a4650ff0af91ff85c46ac94594ecebad5b467",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF5–9、38–52原文把融资与估值混用，卡片改为假设并要求现金流入/投前投后、交易形式等口径；不采纳500亿、收入或投资合理性的未核实判断。",
+        "技术自主按模型、芯片、云、数据和团队分别取证，战略动机为可能解释，商业价值要求实际交付与成本；三类证据不互相替代。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m11.dependency-register.001",
+      "content_hash": "0253f2a66f9bb2c66b27fbd328b0f17420845bab352f2f1bb96889f116a590a3",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF60–62、74–81原生供应依赖被细化为提示/工具协议、知识记忆、评测、身份及数据资产；统一API封装只解决部分耦合。",
+        "要求授权脱敏资产导出、关键任务兼容、恢复耗时和代价，不能把可下载当可退出；与m09运行切换卡相比，独立增量是专有资产可携带性。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m11.exit-route.001",
+      "content_hash": "c930ad20538fd3b0ab27169d45bed162242d34a23355c88bd1d73a4612f19be4",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF60–64、74–81的自主诉求落到小团队无训练能力这一约束；第二API、许可允许的自部署和人工流程均可选，保留单供应商也可合理。",
+        "按关键任务恢复时间、共同依赖、运维能力和总成本选下一步，以脱敏恢复演练而非拥有模型验收；没有编造已经完成迁移。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m12.attribution-boundary.001",
+      "content_hash": "69e6e85f86fb30753ace7b6306cc77473c59f78fe38269d25d0bdbe8d058a373",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "2026-10-24逐卡复审：LF5–14、18–26中的首例/无人干预断言只作为辨析线索，答案明确区分可观察行为、研究归因和人类角色/目标来源等未知。",
+        "原先超出题面的防御方案必答已删除；当前两条required_points只评观察与归因证据、自动化不推出自主意图。防御已移入明确“不计评分”的可选追问，自评也不强迫回答它。",
+        "机器速度仍可由脚本或人工配置驱动的反例解释证据局限；不据此否认报告已观察动作，也不伪造全球首例或零人类目标，不提供攻击步骤，前次对齐0分已解决。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m12.execution-policy.001",
+      "content_hash": "7b1c1ef04c28bff8ce2fa02f8fee68a0abd805c5ded3211cb8910a89eb7df0c4",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF38–47、70–78、96的安全红线明确落在服务端对象/字段/动作最小权限，短期身份、隔离和审批，而非提示词自约束。",
+        "审批绑定差异、影响恢复、版本及有权人，过期拒绝；假数据同时验证正常与越权，保留安全试点门槛。与基线C07的单一鉴权辨析相比，本题评分还含具体审批与试点证据。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m12.runtime-stop.001",
+      "content_hash": "78cab266181206f25ed6373c877796405b3cf5c174f12ff97f1af24c6e25b46f",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF70–78、88–90的运行风险被具体化为异常批量写入；执行层止写、冻结权限、告警和任务/批准/实际结果的最小脱敏留证有明确顺序。",
+        "特别保留已排队操作可能继续执行的边界，复测停止后的实际写入而非只看模型进程；校准正常批量误报不等于取消安全控制。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m12.recovery-acceptance.001",
+      "content_hash": "7c6dec7803ce3233d213545b878d48f056082984b5ddf3e9c453c25e250c426c",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF74–78、88–96的恢复责任有独立验收目标：备份恢复不能证明根因消除，也不能覆盖事故后合法新提交或忽略外部副作用。",
+        "先隔离对账、修复执行控制再回归同类越权，数据正确和权限证据合格且有负责人批准才渐进重启；事故响应设计没有变成实际生产操作。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m13.build-buy-scope.001",
+      "content_hash": "be1f9fdc5fd4a69b1075d551cf082f59fc4134abc12a0b8691a2750122a2892a",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "2026-10-24逐卡复审：题面与三条评分已收窄到从零训练、微调、自部署的权重来源、改动对象与维护责任，不再要求整套采购ROI、组织试点或路由流程。",
+        "从零训练学习权重仍可依赖外部架构/算力/数据；微调基于获准基座更新参数或适配器并承担回归兼容；自部署改变推理运行及运维范围，不能证明训练了权重。三条按共同维度对齐，原权重托管后再训适配器的例子可用于辨界。",
+        "与ch03.llm.deployment-tradeoff.001及本线程Ch7供给选型草稿的全成本决策已分开；当前独立目标是声明范围与责任辨析。LF21–31、68–76、93仅提供自研议题，机制为显式编辑补充，不推断微软内部路线或必然降本。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m13.lifecycle-roi.001",
+      "content_hash": "726f4a8d06ef397a15fb69e6c5b31529dee402370102590e66e8442c169cc742",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF21–31、70–76的调用开支问题转为同质量、同服务水平的有效任务生命周期成本；两边均计人员、评测、安全、容量和持续升级。",
+        "双跑迁移、人员机会成本、利用率及模型落后/需求变化敏感性构成相对通用单次部署报价卡的增量；允许采购或混合胜出，未背厂商价格。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m13.mixed-routing.001",
+      "content_hash": "9cc11a1449837f506cc487c19eecb6a3a269f4ffd381a5d487bc9006220d3d40",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF35–45、68–76的厂商路线只作假设线索；任务难度/后果和回放证据定义路由，不按模型自信或价格直接分配。",
+        "不确定/高风险升级或人工但权限不扩大，影子验证不实际发送再灰度；质量、返工、尾延迟、总成本和回退去重均可验收，避免重复邮件。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m13.capability-gates.001",
+      "content_hash": "381972158df774546259c627be5f69762719c2bd147f8a784cb9d5e0b321316e",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF27–31、68–76、93的自研组织前提转为离线效果接近但持续运维不足的具体门槛题；训练/推理、数据权利、值班恢复等缺口不能被离线指标抵消。",
+        "与采购补齐成本/周期比较并保留出口，阶段验收有责任人、恢复与成本，失败可停止，明确拒绝沉没成本驱动继续投入。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.task-contract.001",
+      "content_hash": "c28e36480028b3402a50b7701e41743d77f895bb08ffa64ff7cfefc5a6ffb182",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF170–190、283–285、525–526的派活/真实交付被落到授权发票样例；字段币种、缺失待核、输出位置、预算时限及禁止代付外发共同界定任务。",
+        "核对实际表格、来源、金额和去重，并区分完成/失败/待人工，避免“已处理”或格式齐全冒充完成；预期验收与实际操作分开。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.memory-boundary.001",
+      "content_hash": "9ed21de9c1fa1b32bdeed6d782f99c3fc93af00622c06bf12fa3518b53fed7c9",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "2026-10-24逐卡复审：LF154–168、100–102、515–516对照后，题面明确首次周报导入无关履历/家人信息且有其他Bot，补足了本课初始输入与共享范围条件。",
+        "完整STAR只给必要角色口径偏好，标来源时效，排除凭据/无关隐私；先查读取者、跨Bot共享、保存及导出删除，未知不先灌入。以虚构标记测试实际可见性及删除后检索，不拿真实隐私做探针。",
+        "实例已由联系人过期改为不必要家人住址/就医信息和共享文件/会话可见性；相对ch03.agent.memory-freshness.001，独立评分增量落在首次导入前最小化与共享边界，跨会话纠错删除及关键现状回查仍保留，不假定厂商入口已存在。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.team-routing.001",
+      "content_hash": "110347acc7b744aa843bffcbae58d6806861a5735460d2752e4e4b5fea30e715",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF198–219、255–259、540–541对应分工与协作：五份独立报告不等于依赖被可靠满足，交接输入版本、责任和接收证据才构成协作。",
+        "总监降低人工中转也增加协调成本与单点，按同任务质量、时延、审核和成本衡量扩编；未背五到八人或总监必优的固定结论。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.handoff-state.001",
+      "content_hash": "e6d213cd401fe7fc3ad87728353f33d4d8d380358d505d069b4179a11de4187d",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF210–239的Bug交接收窄为共享电脑、文件、浏览器假设，工单ID、复现证据、输入版本、产物和验收给接收方完整依据。",
+        "唯一写入责任/串行门禁、确认超时和去重专门处理多Agent共享资源；登录态不自动授权，屏幕不等隔离。与AG-UI单字段冲突卡相比，本题检验跨Agent交接与工单一次提交。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.routine-generalization.001",
+      "content_hash": "95d053fb6166f476b046b4da1d748e3e5c1a522614d980a36727ecf4abe4de4a",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF299–326、515明示内部轨迹/意图机制未定，答案设计按钮位置、字段次序、参数变化的受控行为对照，而非从原页复跑推出已学会意图。",
+        "输入/分支/输出和停止边界先于测试；失败人工接管、版本化更新，验收范围限已测变化，没有“一次教学永久复用”或固定三次就安全的承诺。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.feedback-regression.001",
+      "content_hash": "04209c27df4f9ebadbf6e4649a192f27f752fbc7e4bfb1bb935569836a1a91e4",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "2026-10-24逐卡复审：LF291–297、315–326、546–550只支持反馈与本地化议题；假设发票场景、权重训练未证实及无实绩边界均保留。",
+        "三条required_points现专门核含税/未税定义、缺失不得猜数、新会话留出和旧正确单据的来源核对、修正后退化与人工处理；训练位置已降为可选追问，不再额外强制回答。",
+        "“总取最大金额”会错在退款/多税率的反例能解释局部修正为何不足；STAR有明确验证/失败处理，未上传真实未授权票据。",
+        "非阻断复用提示（第8维1分）：留出与旧样例回归方法仍与ch03.prompt.regression-versioning.001及ch03.interview.m05.icl-vs-training.001有较多共用。当前以中文财务字段真值和缺失/退化作独立评分可以保留，不再扩成通用训练机制卡。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.identity-isolation.001",
+      "content_hash": "2aa421106688d12629c035678b139fd6f8c0db1d3953cfa2aa8d09cec198f898",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF212–219、332–339、531–535原文有邮箱、电脑和本地通道主张；题面明确共享假设，逐层区别身份名称、资源隔离、浏览器登录态与网络可达。",
+        "执行端限制对象动作，不能借另一Bot支付账号；本地路径/端口最小开放、可撤销并做拒绝/撤权测试，不以连通或独立邮箱证明授权。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.tool-selection.001",
+      "content_hash": "5cd5fa6a4bab63b9e01c751ae0f262aab35b78aef6c4c49cb3829b75527830fd",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF328–345原文API优先主张被改为同一ERP报表任务下的条件比较；覆盖、授权、输出契约、错误/幂等/限流、会话及界面变化维度一致。",
+        "API不保证更稳，UI也不得绕过权限；同任务真实结果、恢复和维护总成本决定选择，不满足则人工，适合编号对比而非硬套STAR。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.approval-contract.001",
+      "content_hash": "46dfefe73f7d61fef941e47ff8d87fc3754b59d13e54a9989fba8072c717b3f2",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "2026-10-24逐卡复审：LF347–362、534–535的审批宣传未作充分安全保证；题面、STAR、例子和评分已共同落在Bot A/企业账号甲的批准被Bot B/账号乙复用。",
+        "金额未变也不构成继承授权，执行身份/账号/任务/版本均须绑定并由执行侧核验；可信授权规则允许的交接须按新状态核准，非简单地禁止一切合法协作。",
+        "有权人核对象金额依据、影响恢复，低风险有界预授权与高风险状态变更重审分开；假交易查跨身份复用、过期重复拒绝和合法一次执行。相对旧的改金额/审批等待卡，新增共享浏览器身份混用与换Bot绕过边界已由独立评分承载。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.task-cost-diagnosis.001",
+      "content_hash": "cfce92163cae0013ec89a8e563a48a6bac545b86df255c6e65a7ac12a4d49901",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF370–404、543–544的额度、省钱和Routine宣传转为逐任务查模型/浏览器工具/调度通信/轮询重试/人工实际账单，不背每周任务量或省一半。",
+        "优化须对应真实成本源，事件触发仅在可用时替代有界轮询；Routine、记忆仍可能消耗模型并有维护成本，按同质量有效任务全成本与停止预算验收。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.release-evidence.001",
+      "content_hash": "7543933171280b5d7463aff271818bb14b90f3da54482dbbd9c8746de81792a3",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF283–285、335–336、525–526将从生成到部署的宣传拆成实际授权和阶段证据；用户只要原型时，先交可审查预览及差异限制。",
+        "后续正式发布需获授权并核目标配置/数据范围/回退责任，以在线行为回读而非生成或构建成功验收；这是任务授权范围与最终产物证据题，未执行真实部署。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.automation-modes.001",
+      "content_hash": "7f993ba7e1dba0763eb509711c7cc9c650bc99f3359fc65206525bd9d41d70c5",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "2026-10-24逐卡复审：LF406–428、537–538的三类形态按共同维度说明，题面、required_points和自评都明确每类仅需触发方式、一个关键失败及对应验收，不要求背全失败清单。",
+        "哨兵事件/有界定时对应检出通知与源/游标风险，流水线依赖交接对应版本责任及重复传播风险，夜批有限窗口对应范围时限与配额会话风险；这些是可供选择的失败/验收，不把同类全例强加评分。",
+        "500条只完成300条是编辑假设；共同授权、预算、状态及可停边界没有被缩短答案时删去。云端不等免费/无故障，关客户端不等服务端停止；本轮未做90秒口答实测，预计秒数不冒充实测。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.unattended-quality.001",
+      "content_hash": "201673ebb20677d71874ceb6845ef7be3a4029191d5dd5624db3709176618ba8",
+      "reviewer": "codex-independent-ch08-b-20261022",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "LF420–438日报流程被限定为授权来源、内部审阅；出处日期和内容验收与格式检查分开，断源不能写成“今日无事”。",
+        "任务ID、时区游标、健康状态、有限重试和去重支持无变化静默又可发现未运行；假数据覆盖断源、重复触发、坏引用和交接，人工接管及预算保留。"
+      ]
+    },
+    {
+      "canonical_key": "ch08.interview.m14.adoption-evidence.001",
+      "content_hash": "8021af1e0b1691587bbd8376fdaca37af244d3f1bac9f09bcb0927f1998245be",
+      "reviewer": "codex-independent-ch08-b-20261024",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "verdict": "pass",
+      "issues": [],
+      "notes": [
+        "2026-10-24逐卡复审：LF60–78、511–553、470–476旧教程中的价格/试用/中文/人数/早用复利均只作线索，不变成当前厂商事实。",
+        "评分和自评已统一为规则可用性、任务价值、退出/扩编三类证据；本地化只选相关例子，不逐项背价格地区配额或强加完整采购流程。未核项保留未知、允许不采购，与题面四种采用理由的审辨对齐。",
+        "中文流畅但币种/时区错的例子把演示与业务正确分开；同授权脱敏任务看合格任务成本，并以可携带性、退出代价和边际收益决定范围，没有承诺早用复利。",
+        "非阻断复用提示（第8维1分）：证据组织仍与ch03.interview.m24.platform-proof.001有较多共用；当前课内增量是本地化字段真值、团队扩编边际收益和旧教程复利承诺辨析，保持该范围即可，不再复制完整平台选型题。"
+      ]
+    }
+  ]
+}

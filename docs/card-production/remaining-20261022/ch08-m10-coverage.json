@@ -1,0 +1,198 @@
+{
+  "module_id": "ch08-m10",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+    "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+    "line_start": 1,
+    "line_end": 87
+  },
+  "existing_cards": 0,
+  "new_cards": 4,
+  "revised_cards": 0,
+  "native_objectives": 2,
+  "registered_native_objectives": 2,
+  "registration_coverage": 1,
+  "publication_coverage": 0,
+  "practice_executed": 0,
+  "review_completed": 0,
+  "card_content_hash_algorithm": "SHA256(canonicalJson(card去掉review字段))；复用scripts/content-batch-lib.ts的canonicalJson，对象键排序、数组顺序保留、UTF-8",
+  "card_content_hashes": {
+    "ch08.interview.m10.first-use-case.001": "6d3c365b59041d4d3446a304bcc9b725bd9ec3710b61b933475bbe48f4667672",
+    "ch08.interview.m10.wearability-tradeoff.001": "7e14521ccfa9136aa1fceb47d29a9bf7c422fc98e35bf9ee58b9b55437608694",
+    "ch08.interview.m10.bystander-privacy.001": "f223a8af8253157b968d5b908adfeb8c0db385158658e88c90cc79ba0ee60639",
+    "ch08.interview.m10.incremental-value-test.001": "f8b56daaa30181162b44f6d546f1b253a0c0fdc3b8e55a7f4482bcf297b21a79"
+  },
+  "records": [
+    {
+      "module_id": "ch08-m10",
+      "objective_id": "ch08-m10-O1",
+      "original_text": "_思考题：如果你要设计一款 AI 眼镜的第一个杀手级应用，你会选择什么场景？为什么？_",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+        "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+        "line_start": 86,
+        "line_end": 86
+      },
+      "disposition": "拆分",
+      "reason": "选择及原因由首应用卡直接评分，佩戴、隐私和对照填补原题未显式要求但影响结论的必要边界；母题保留完整方案。",
+      "actual_card_keys": [
+        "ch08.interview.m10.first-use-case.001",
+        "ch08.interview.m10.wearability-tradeoff.001",
+        "ch08.interview.m10.bystander-privacy.001",
+        "ch08.interview.m10.incremental-value-test.001"
+      ],
+      "mother_ids": [
+        "ch08-m10-M1"
+      ],
+      "practice_ids": [
+        "ch08-m10-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m10",
+      "objective_id": "ch08-m10-R1",
+      "original_text": "但问题是：早在 2012 年 Google Glass 就尝试过了，最后失败了。为什么十几年后，大家又觉得自己能做成？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+        "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+        "line_start": 9,
+        "line_end": 9
+      },
+      "disposition": "合并",
+      "reason": "历史成败因果不背定论，转化为当下同任务增量价值和可佩戴性的可检验解释。",
+      "actual_card_keys": [
+        "ch08.interview.m10.wearability-tradeoff.001",
+        "ch08.interview.m10.incremental-value-test.001"
+      ],
+      "mother_ids": [
+        "ch08-m10-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m10",
+      "objective_id": "ch08-m10-E-first-use-case",
+      "original_text": "当时它没有解决一个核心问题：**用户为什么非要在脸上戴一个设备？**\n\n现在情况变了。\n\n## 二、AI 给了眼镜一个真正的存在理由\n\nGoogle Glass 时代，眼镜只是\"把手机信息放到眼前\"。手机已经做得很好，眼镜没有额外价值。\n\n现在 AI 让眼镜可以做手机不方便做的事：\n\n*   **第一视角的实时理解**：你看到什么，AI 就理解什么\n*   **免手交互**：做饭、骑车、维修时，不用掏手机\n*   **环境感知**：翻译路牌、识别商品、提醒日程\n*   **持续陪伴**：耳机 + 摄像头 + AI，构成一个随时在线的助手\n\n这些场景的共同点是：**手机不是最优解，眼镜才是。**\n\n这才是 AI 眼镜和 Google Glass 的本质区别：前者是新的计算入口，后者是手机的延伸屏幕。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+        "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+        "line_start": 20,
+        "line_end": 37
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：AI眼镜的首个应用如何选择。新形态的价值来自解决原方案的具体摩擦，而不是把同样界面戴在脸上。",
+      "actual_card_keys": [
+        "ch08.interview.m10.first-use-case.001"
+      ],
+      "mother_ids": [
+        "ch08-m10-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m10",
+      "objective_id": "ch08-m10-E-wearability-tradeoff",
+      "original_text": "Google Glass 的问题不是概念问题，而是体验问题：\n\n*   太贵（1500 美元）\n*   太丑（被叫\" Glasshole \"）\n*   功能鸡肋（导航、拍照、搜索，手机都能做）\n*   隐私争议（偷拍）\n\n当时它没有解决一个核心问题：**用户为什么非要在脸上戴一个设备？**",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+        "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+        "line_start": 13,
+        "line_end": 20
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：佩戴负担如何进入产品决策。演示测的是短时能力，佩戴是身体负担和任务收益持续交换，两者不能互代。",
+      "actual_card_keys": [
+        "ch08.interview.m10.wearability-tradeoff.001"
+      ],
+      "mother_ids": [
+        "ch08-m10-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m10",
+      "objective_id": "ch08-m10-E-bystander-privacy",
+      "original_text": "*   隐私争议（偷拍）\n\n当时它没有解决一个核心问题：**用户为什么非要在脸上戴一个设备？**",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+        "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+        "line_start": 18,
+        "line_end": 20
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：旁观者隐私如何进入眼镜设计。穿戴设备采集发生在多人空间，控制必须覆盖看不见界面的被拍者。",
+      "actual_card_keys": [
+        "ch08.interview.m10.bystander-privacy.001"
+      ],
+      "mother_ids": [
+        "ch08-m10-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m10",
+      "objective_id": "ch08-m10-E-incremental-value-test",
+      "original_text": "1.   **新硬件成功的关键，是找到\"手机做不到或做不好的事\"。** 如果 AI 眼镜只是\"不用掏手机拍照\"，价值不够。必须创造手机无法替代的体验。\n\n2.   **形态先于功能。** 用户愿不愿意戴，取决于它看起来像不像普通眼镜。太重、太怪、太显眼，功能再好也没用。\n\n3.   **AI 眼镜的真正竞争是生态竞争。** 镜头、芯片、续航只是基础。谁能把 AI 能力、内容服务、支付、社交串联起来，谁才能赢。\n\n4.   **隐私是悬在头顶的剑。** AI 眼镜能看能听，必然引发隐私焦虑。产品经理要在设计阶段就考虑：什么时候录、什么时候不录、用户怎么知道在被拍。\n\n5.   **杀手级应用可能不是\"通用助手\"，而是垂直场景。** 翻译、导航、运动记录、会议助手、第一人称直播——某个垂直场景可能先爆发。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+        "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+        "line_start": 64,
+        "line_end": 72
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：如何证明眼镜价值不是新奇感。首次满意可能来自新鲜感或选择偏差，场景价值需要重复任务的有效收益。",
+      "actual_card_keys": [
+        "ch08.interview.m10.incremental-value-test.001"
+      ],
+      "mother_ids": [
+        "ch08-m10-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    }
+  ],
+  "author_revision_date": "2026-10-24",
+  "author_revision_status": "draft_awaiting_independent_rereview",
+  "withdrawn_candidates": [],
+  "reused_card_keys": [],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch08-interview-draft-20261022-m10"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m10.first-use-case.001": "6d3c365b59041d4d3446a304bcc9b725bd9ec3710b61b933475bbe48f4667672",
+    "ch08.interview.m10.wearability-tradeoff.001": "7e14521ccfa9136aa1fceb47d29a9bf7c422fc98e35bf9ee58b9b55437608694",
+    "ch08.interview.m10.bystander-privacy.001": "f223a8af8253157b968d5b908adfeb8c0db385158658e88c90cc79ba0ee60639",
+    "ch08.interview.m10.incremental-value-test.001": "f8b56daaa30181162b44f6d546f1b253a0c0fdc3b8e55a7f4482bcf297b21a79"
+  }
+}

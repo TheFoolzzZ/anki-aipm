@@ -1,0 +1,245 @@
+{
+  "module_id": "ch08-m08",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+    "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+    "line_start": 1,
+    "line_end": 92
+  },
+  "existing_cards": 0,
+  "new_cards": 5,
+  "revised_cards": 0,
+  "native_objectives": 3,
+  "registered_native_objectives": 3,
+  "registration_coverage": 1,
+  "publication_coverage": 0,
+  "practice_executed": 0,
+  "review_completed": 0,
+  "card_content_hash_algorithm": "SHA256(canonicalJson(card去掉review字段))；复用scripts/content-batch-lib.ts的canonicalJson，对象键排序、数组顺序保留、UTF-8",
+  "card_content_hashes": {
+    "ch08.interview.m08.capital-vs-value.001": "2ec0780af8f00f4b5ceb701253e907e3c4eb602ff241dd20a19b563df6fc59a8",
+    "ch08.interview.m08.task-entry.001": "7cc1010b070cdb57dd341f26085868d0fa74d1be5c49e0bf78a8ac82524a5032",
+    "ch08.interview.m08.form-factor.001": "966beca7a11e6f469fe25f3edac98cbf044bcd1453c162dd3fc03d4cfa95a093",
+    "ch08.interview.m08.effective-task-cost.001": "0510bb9be7b2faf2ebd0b2666648c74e8739f53b41905edc553c4c0fee88a2b6",
+    "ch08.interview.m08.physical-safety.001": "977c56e3a65b798e0b087f285cab331ffd1db9e35118ea0ce58f7001cb4b5f89"
+  },
+  "records": [
+    {
+      "module_id": "ch08-m08",
+      "objective_id": "ch08-m08-O1",
+      "original_text": "_思考题：如果你要设计一个面向工厂或仓储的机器人产品，你会从哪个具体任务切入？为什么？_",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 91,
+        "line_end": 91
+      },
+      "disposition": "拆分",
+      "reason": "原开放题需要选择理由、经济性与安全证据，核心决策由子卡承载，完整方案保留母题，现场产物转实践。",
+      "actual_card_keys": [
+        "ch08.interview.m08.task-entry.001",
+        "ch08.interview.m08.form-factor.001",
+        "ch08.interview.m08.effective-task-cost.001",
+        "ch08.interview.m08.physical-safety.001"
+      ],
+      "mother_ids": [
+        "ch08-m08-M1"
+      ],
+      "practice_ids": [
+        "ch08-m08-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m08",
+      "objective_id": "ch08-m08-R1",
+      "original_text": "为什么资本宁肯赌一个还不成熟的机器人，也不赌一个已经能用的 AI 应用？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 9,
+        "line_end": 9
+      },
+      "disposition": "合并",
+      "reason": "正文设问包含待核实投资前提；合并为可竞争解释及证据判断，不要求复述资本真实动机。",
+      "actual_card_keys": [
+        "ch08.interview.m08.capital-vs-value.001"
+      ],
+      "mother_ids": [
+        "ch08-m08-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m08",
+      "objective_id": "ch08-m08-R2",
+      "original_text": "机器人不是新概念。为什么 2026 年突然爆发？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 37,
+        "line_end": 37
+      },
+      "disposition": "延期核实",
+      "reason": "为何2026年爆发属于时点及因果断言，原文无可复现因果证据；保留为母题讨论中的待取证项。",
+      "actual_card_keys": [],
+      "mother_ids": [
+        "ch08-m08-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m08",
+      "objective_id": "ch08-m08-E-capital-vs-value",
+      "original_text": "6 月，国内具身智能机器人赛道融资 178 亿元，环比暴涨 345%。智平方单轮 50 亿，自变量机器人估值破 200 亿，光轮智能等 3 家企业跻身百亿俱乐部。\n\n奇怪的是，这笔钱大部分流向了**硬件和整机厂商**，而不是应用层公司。\n\n为什么资本宁肯赌一个还不成熟的机器人，也不赌一个已经能用的 AI 应用？\n\n## 一、软件 AI 的护城河太薄了\n\n过去两年，AI 应用层创业非常火爆。但资本很快发现一个问题：**基于大模型的应用，护城河太薄。**\n\n一个创业者做了一个 AI 写作工具，可能三个月后被大厂免费功能覆盖。一个法律 AI 产品，可能因为模型能力提升而瞬间失去优势。\n\n软件 AI 的边际成本几乎为零，这意味着竞争会迅速把利润压到零。\n\n硬件不一样。\n\n机器人有供应链、有制造、有材料、有物理测试。即使你知道原理，也要花几年时间才能把样机变成量产产品。这种壁垒，软件公司很难跨越。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 5,
+        "line_end": 21
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：融资热度与可持续价值。融资是资金配置结果，不能单独识别其动机，更不能代替客户购买及履约证据。",
+      "actual_card_keys": [
+        "ch08.interview.m08.capital-vs-value.001"
+      ],
+      "mother_ids": [
+        "ch08-m08-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m08",
+      "objective_id": "ch08-m08-E-task-entry",
+      "original_text": "软件产品可以\"小步快跑、快速迭代\"。机器人产品每一次迭代都要改硬件、做测试、验证安全，周期以月甚至年计算。\n\n这意味着产品经理必须有更强的**场景定义能力**和**长期规划能力**。\n\n你不能先做个 MVP 上线再看，必须在设计阶段就想清楚：这个机器人在什么场景、完成什么任务、替代什么人力、成本能不能算得过来。\n\n## 五、产品经理的启示\n\n1.   **硬件产品的护城河在供应链和场景数据。** 不是算法，而是谁能稳定量产、谁能在真实场景中积累最多数据。\n\n2.   **不要追\"通用机器人\"，要追\"特定场景机器人\"。** 家庭保姆机器人还很远，但仓储搬运、工业巡检、康养辅助已经可以看到商业化路径。\n\n3.   **安全是硬件产品的生死线。** 软件出错可以回滚，机器人出错可能伤人。产品经理要把安全设计进核心架构，而不是事后加补丁。\n\n4.   **关注\"人形\"是不是伪需求。** 很多任务不需要人形。轮式、机械臂、专用形态可能更便宜、更可靠。产品经理要质疑每一个\"必须人形\"的假设。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 61,
+        "line_end": 75
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：机器人首个任务切入。任务优先级应由可观察输入、可控环境及失败代价决定，宏大愿景不足以界定试点。",
+      "actual_card_keys": [
+        "ch08.interview.m08.task-entry.001"
+      ],
+      "mother_ids": [
+        "ch08-m08-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m08",
+      "objective_id": "ch08-m08-E-form-factor",
+      "original_text": "1.   **硬件产品的护城河在供应链和场景数据。** 不是算法，而是谁能稳定量产、谁能在真实场景中积累最多数据。\n\n2.   **不要追\"通用机器人\"，要追\"特定场景机器人\"。** 家庭保姆机器人还很远，但仓储搬运、工业巡检、康养辅助已经可以看到商业化路径。\n\n3.   **安全是硬件产品的生死线。** 软件出错可以回滚，机器人出错可能伤人。产品经理要把安全设计进核心架构，而不是事后加补丁。\n\n4.   **关注\"人形\"是不是伪需求。** 很多任务不需要人形。轮式、机械臂、专用形态可能更便宜、更可靠。产品经理要质疑每一个\"必须人形\"的假设。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 69,
+        "line_end": 75
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：人形形态是否必要。形态改变感知、执行及失效路径，不能只在功能清单上比较。",
+      "actual_card_keys": [
+        "ch08.interview.m08.form-factor.001"
+      ],
+      "mother_ids": [
+        "ch08-m08-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m08",
+      "objective_id": "ch08-m08-E-effective-task-cost",
+      "original_text": "软件产品可以\"小步快跑、快速迭代\"。机器人产品每一次迭代都要改硬件、做测试、验证安全，周期以月甚至年计算。\n\n这意味着产品经理必须有更强的**场景定义能力**和**长期规划能力**。\n\n你不能先做个 MVP 上线再看，必须在设计阶段就想清楚：这个机器人在什么场景、完成什么任务、替代什么人力、成本能不能算得过来。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 61,
+        "line_end": 65
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：机器人商业化的成本口径。运行单价忽略可用率和返工，会高估物理设备的商业化收益。",
+      "actual_card_keys": [
+        "ch08.interview.m08.effective-task-cost.001"
+      ],
+      "mother_ids": [
+        "ch08-m08-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m08",
+      "objective_id": "ch08-m08-E-physical-safety",
+      "original_text": "软件产品可以\"小步快跑、快速迭代\"。机器人产品每一次迭代都要改硬件、做测试、验证安全，周期以月甚至年计算。\n\n这意味着产品经理必须有更强的**场景定义能力**和**长期规划能力**。\n\n你不能先做个 MVP 上线再看，必须在设计阶段就想清楚：这个机器人在什么场景、完成什么任务、替代什么人力、成本能不能算得过来。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 61,
+        "line_end": 65
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：仓储机器人如何安全验收。物理后果不能靠软件回滚消除，安全约束应在执行与运行边界中生效。",
+      "actual_card_keys": [
+        "ch08.interview.m08.physical-safety.001"
+      ],
+      "mother_ids": [
+        "ch08-m08-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    }
+  ],
+  "author_revision_date": "2026-10-24",
+  "author_revision_status": "draft_awaiting_independent_rereview",
+  "withdrawn_candidates": [],
+  "reused_card_keys": [],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 5,
+    "batch_ids": [
+      "ch08-interview-draft-20261022-m08"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m08.capital-vs-value.001": "2ec0780af8f00f4b5ceb701253e907e3c4eb602ff241dd20a19b563df6fc59a8",
+    "ch08.interview.m08.task-entry.001": "7cc1010b070cdb57dd341f26085868d0fa74d1be5c49e0bf78a8ac82524a5032",
+    "ch08.interview.m08.form-factor.001": "966beca7a11e6f469fe25f3edac98cbf044bcd1453c162dd3fc03d4cfa95a093",
+    "ch08.interview.m08.effective-task-cost.001": "0510bb9be7b2faf2ebd0b2666648c74e8739f53b41905edc553c4c0fee88a2b6",
+    "ch08.interview.m08.physical-safety.001": "977c56e3a65b798e0b087f285cab331ffd1db9e35118ea0ce58f7001cb4b5f89"
+  }
+}

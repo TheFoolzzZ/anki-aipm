@@ -1,0 +1,4805 @@
+{
+  "module_id": "5.5",
+  "module_key": "ch05-m05",
+  "source_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+  "source_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+  "lf_line_count": 1081,
+  "status": "draft",
+  "old_card_count": 5,
+  "draft_card_count": 9,
+  "new_card_count": 4,
+  "markdown_checklist_count": 10,
+  "box_item_count": 0,
+  "native_question_line_count": 28,
+  "registered": 212,
+  "registration_scope": "冻结源文中标题、含问号行、每个方框项及列明的章末行动目标；编辑目标另列，标题不计实际承载。 同一源句的编辑拆分子目标以parent_objective_id关联，登记条目增加不增加原生问句/清单源行数，也不计发布或实践完成。",
+  "publication_coverage": 0,
+  "practice_completed": 0,
+  "independent_review_completed": false,
+  "objectives": [
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1",
+      "original_text": "# 5.5 如何写AI PRD",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "# 5.5 如何写AI PRD"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L5",
+      "original_text": "如果你之前写过传统互联网产品的PRD，可能会觉得\"这有什么难的？\"但我要告诉你，**AI PRD和传统PRD有着本质的区别**。 传统PRD描述的是一个确定性系统：用户点击A按钮，系统执行B逻辑，展示C结果。一切都是可预期的、可精确描述的。但AI PRD描述的是一个概率性系统：用户输入一个问题，模型\"可能\"给出正确答案，\"可能\"给出错误答案，\"可能\"直接\" hallucinate（幻觉）\"出不存在的信息。你不能在PRD里写\"模型输出正确答案\"，因为这不是一个确定性的功能，而是一个概率性的表现。 所以，AI PRD需要在传统PRD的基础上，增加很多AI特有的模块：模型评估标准、数据需求、兜底策略、效果监控……这些在传统PRD里要么没有，要么非常简单。 这一节，我会把AI PRD拆成**10大核心模块**，每个模块都会给你模板和示例。最后，我还会给你一个完整的AI PRD案例。读完这一节，你就能写出一份让算法工程师、开发工程师、测试工程师都能看懂的AI PRD。",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 5,
+        "line_end": 5
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "如果你之前写过传统互联网产品的PRD，可能会觉得\"这有什么难的？\"但我要告诉你，**AI PRD和传统PRD有着本质的区别**。 传统PRD描述的是一个确定性系统：用户点击A按钮，系统执行B逻辑，展示C结果。一切都是可预期的、可精确描述的。但AI PRD描述的是一个概率性系统：用户输入一个问题，模型\"可能\"给出正确答案，\"可能\"给出错误答案，\"可能\"直接\" hallucinate（幻觉）\"出不存在的信息。你不能在PRD里写\"模型输出正确答案\"，因为这不是一个确定性的功能，而是一个概率性的表现。 所以，AI PRD需要在传统PRD的基础上，增加很多AI特有的模块：模型评估标准、数据需求、兜底策略、效果监控……这些在传统PRD里要么没有，要么非常简单。 这一节，我会把AI PRD拆成**10大核心模块**，每个模块都会给你模板和示例。最后，我还会给你一个完整的AI PRD案例。读完这一节，你就能写出一份让算法工程师、开发工程师、测试工程师都能看懂的AI PRD。"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L7",
+      "original_text": "## 一、AI PRD与传统PRD的本质区别",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 7,
+        "line_end": 7
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 一、AI PRD与传统PRD的本质区别"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L9",
+      "original_text": "### 1.1 核心区别一览",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 9,
+        "line_end": 9
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.1 核心区别一览"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L22",
+      "original_text": "### 1.2 为什么AI PRD更难写？",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 22,
+        "line_end": 22
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.2 为什么AI PRD更难写？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L40",
+      "original_text": "传统功能\"好\"或\"不好\"是明确的：按钮点击后跳转对吗？数据展示对吗？但AI功能\"好\"或\"不好\"是模糊的。你需要在PRD里明确定义什么是\"好\"的回答：",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 40,
+        "line_end": 40
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "传统功能\"好\"或\"不好\"是明确的：按钮点击后跳转对吗？数据展示对吗？但AI功能\"好\"或\"不好\"是模糊的。你需要在PRD里明确定义什么是\"好\"的回答："
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L49",
+      "original_text": "### 1.3 AI PRD的10大核心模块",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 49,
+        "line_end": 49
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.3 AI PRD的10大核心模块"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L66",
+      "original_text": "## 二、AI PRD核心模块详解",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 66,
+        "line_end": 66
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 二、AI PRD核心模块详解"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L68",
+      "original_text": "### 2.1 模块一：需求背景与目标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 68,
+        "line_end": 68
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.1 模块一：需求背景与目标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L70",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 70,
+        "line_end": 70
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L74",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 74,
+        "line_end": 74
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L76",
+      "original_text": "## 1. 需求背景与目标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 76,
+        "line_end": 76
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 1. 需求背景与目标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L78",
+      "original_text": "### 1.1 背景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 78,
+        "line_end": 78
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.1 背景"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L84",
+      "original_text": "### 1.2 目标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 84,
+        "line_end": 84
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.2 目标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L90",
+      "original_text": "### 1.3 成功指标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 90,
+        "line_end": 90
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.3 成功指标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L98",
+      "original_text": "### 1.4 范围",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 98,
+        "line_end": 98
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.4 范围"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L103",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 103,
+        "line_end": 103
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L105",
+      "original_text": "## 1. 需求背景与目标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 105,
+        "line_end": 105
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 1. 需求背景与目标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L107",
+      "original_text": "### 1.1 背景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 107,
+        "line_end": 107
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.1 背景"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L113",
+      "original_text": "### 1.2 目标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 113,
+        "line_end": 113
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.2 目标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L119",
+      "original_text": "### 1.3 成功指标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 119,
+        "line_end": 119
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.3 成功指标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L130",
+      "original_text": "### 1.4 范围",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 130,
+        "line_end": 130
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.4 范围"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L138",
+      "original_text": "### 2.2 模块二：用户场景与角色",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 138,
+        "line_end": 138
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.2 模块二：用户场景与角色"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L140",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 140,
+        "line_end": 140
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L144",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 144,
+        "line_end": 144
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L146",
+      "original_text": "## 2. 用户场景与角色",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 146,
+        "line_end": 146
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 2. 用户场景与角色"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L148",
+      "original_text": "### 2.1 用户角色（Persona）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 148,
+        "line_end": 148
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.1 用户角色（Persona）"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L154",
+      "original_text": "### 2.2 使用场景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 154,
+        "line_end": 154
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.2 使用场景"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L156",
+      "original_text": "#### 场景X：[场景名称]",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 156,
+        "line_end": 156
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 场景X：[场景名称]"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L163",
+      "original_text": "### 2.3 用户旅程图",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 163,
+        "line_end": 163
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.3 用户旅程图"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L167",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 167,
+        "line_end": 167
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L169",
+      "original_text": "## 2. 用户场景与角色",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 169,
+        "line_end": 169
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 2. 用户场景与角色"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L171",
+      "original_text": "### 2.1 用户角色",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 171,
+        "line_end": 171
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.1 用户角色"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L175",
+      "original_text": "| 买家A-急查物流 | 刚下单不久，急于知道包裹位置 | 快速获取物流信息 | \"我的订单到哪了？\" | 35% |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 175,
+        "line_end": 175
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 买家A-急查物流 | 刚下单不久，急于知道包裹位置 | 快速获取物流信息 | \"我的订单到哪了？\" | 35% |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L176",
+      "original_text": "| 买家B-售后维权 | 收到商品有问题，需要退换货 | 快速解决问题 | \"我要退货怎么操作？\" | 25% |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 176,
+        "line_end": 176
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 买家B-售后维权 | 收到商品有问题，需要退换货 | 快速解决问题 | \"我要退货怎么操作？\" | 25% |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L177",
+      "original_text": "| 买家C-活动咨询 | 对优惠活动规则有疑问 | 了解活动规则 | \"这个优惠券怎么用？\" | 20% |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 177,
+        "line_end": 177
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 买家C-活动咨询 | 对优惠活动规则有疑问 | 了解活动规则 | \"这个优惠券怎么用？\" | 20% |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L178",
+      "original_text": "| 买家D-账户问题 | 遇到登录、密码、支付问题 | 恢复正常使用 | \"我忘记密码了怎么办？\" | 15% |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 178,
+        "line_end": 178
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 买家D-账户问题 | 遇到登录、密码、支付问题 | 恢复正常使用 | \"我忘记密码了怎么办？\" | 15% |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L181",
+      "original_text": "### 2.2 使用场景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 181,
+        "line_end": 181
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.2 使用场景"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L183",
+      "original_text": "#### 场景1：查询物流信息",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 183,
+        "line_end": 183
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 场景1：查询物流信息"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L186",
+      "original_text": "*   **用户输入**：\"我的订单到哪了？\"",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 186,
+        "line_end": 186
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   **用户输入**：\"我的订单到哪了？\""
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L195",
+      "original_text": "#### 场景2：申请退货",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 195,
+        "line_end": 195
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 场景2：申请退货"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L202",
+      "original_text": "    3.   条件判断：该商品是否在7天无理由退货期内？是",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 202,
+        "line_end": 202
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "    3.   条件判断：该商品是否在7天无理由退货期内？是"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L208",
+      "original_text": "### 2.3 用户旅程图",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 208,
+        "line_end": 208
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.3 用户旅程图"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L212",
+      "original_text": "### 2.3 模块三：模型目标与评估标准",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 212,
+        "line_end": 212
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.3 模块三：模型目标与评估标准"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L214",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 214,
+        "line_end": 214
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L216",
+      "original_text": "这是AI PRD最核心的模块之一。你需要明确定义：模型要解决什么任务？用什么指标衡量？目标值是多少？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 216,
+        "line_end": 216
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "这是AI PRD最核心的模块之一。你需要明确定义：模型要解决什么任务？用什么指标衡量？目标值是多少？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L218",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 218,
+        "line_end": 218
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L220",
+      "original_text": "## 3. 模型目标与评估标准",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 220,
+        "line_end": 220
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 3. 模型目标与评估标准"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L222",
+      "original_text": "### 3.1 模型任务定义",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 222,
+        "line_end": 222
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.1 模型任务定义"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L231",
+      "original_text": "### 3.2 评估指标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 231,
+        "line_end": 231
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.2 评估指标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L237",
+      "original_text": "### 3.3 评估数据集",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 237,
+        "line_end": 237
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.3 评估数据集"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L243",
+      "original_text": "### 3.4 A/B测试方案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 243,
+        "line_end": 243
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.4 A/B测试方案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L251",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 251,
+        "line_end": 251
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L253",
+      "original_text": "## 3. 模型目标与评估标准",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 253,
+        "line_end": 253
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 3. 模型目标与评估标准"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L255",
+      "original_text": "### 3.1 模型任务定义",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 255,
+        "line_end": 255
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.1 模型任务定义"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L293",
+      "original_text": "### 3.2 评估指标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 293,
+        "line_end": 293
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.2 评估指标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L307",
+      "original_text": "### 3.3 评估数据集",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 307,
+        "line_end": 307
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.3 评估数据集"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L329",
+      "original_text": "### 3.4 A/B测试方案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 329,
+        "line_end": 329
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.4 A/B测试方案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L345",
+      "original_text": "### 2.4 模块四：数据需求",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 345,
+        "line_end": 345
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.4 模块四：数据需求"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L347",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 347,
+        "line_end": 347
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L351",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 351,
+        "line_end": 351
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L353",
+      "original_text": "## 4. 数据需求",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 353,
+        "line_end": 353
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 4. 数据需求"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L355",
+      "original_text": "### 4.1 训练数据",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 355,
+        "line_end": 355
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.1 训练数据"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L361",
+      "original_text": "### 4.2 测试数据",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 361,
+        "line_end": 361
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.2 测试数据"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L367",
+      "original_text": "### 4.3 标注标准",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 367,
+        "line_end": 367
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.3 标注标准"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L371",
+      "original_text": "### 4.4 数据安全与隐私",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 371,
+        "line_end": 371
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.4 数据安全与隐私"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L375",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 375,
+        "line_end": 375
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L377",
+      "original_text": "## 4. 数据需求",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 377,
+        "line_end": 377
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 4. 数据需求"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L379",
+      "original_text": "### 4.1 训练数据",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 379,
+        "line_end": 379
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.1 训练数据"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L389",
+      "original_text": "### 4.2 测试数据",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 389,
+        "line_end": 389
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.2 测试数据"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L398",
+      "original_text": "### 4.3 标注标准（意图识别）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 398,
+        "line_end": 398
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.3 标注标准（意图识别）"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L415",
+      "original_text": "### 4.4 数据安全与隐私",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 415,
+        "line_end": 415
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.4 数据安全与隐私"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L422",
+      "original_text": "### 2.5 模块五：产品功能设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 422,
+        "line_end": 422
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.5 模块五：产品功能设计"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L424",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 424,
+        "line_end": 424
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L428",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 428,
+        "line_end": 428
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L430",
+      "original_text": "## 5. 产品功能设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 430,
+        "line_end": 430
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 5. 产品功能设计"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L432",
+      "original_text": "### 5.1 功能列表",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 432,
+        "line_end": 432
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.1 功能列表"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L438",
+      "original_text": "### 5.2 核心流程",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 438,
+        "line_end": 438
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.2 核心流程"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L442",
+      "original_text": "### 5.3 状态机定义",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 442,
+        "line_end": 442
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.3 状态机定义"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L446",
+      "original_text": "### 5.4 异常处理",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 446,
+        "line_end": 446
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.4 异常处理"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L452",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 452,
+        "line_end": 452
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L454",
+      "original_text": "## 5. 产品功能设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 454,
+        "line_end": 454
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 5. 产品功能设计"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L456",
+      "original_text": "### 5.1 功能列表",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 456,
+        "line_end": 456
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.1 功能列表"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L477",
+      "original_text": "### 5.2 核心流程",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 477,
+        "line_end": 477
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.2 核心流程"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L481",
+      "original_text": "### 5.3 状态机定义",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 481,
+        "line_end": 481
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.3 状态机定义"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L493",
+      "original_text": "### 5.4 异常处理",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 493,
+        "line_end": 493
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.4 异常处理"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L501",
+      "original_text": "| 用户重复提问 | 用户连续3次问同一问题 | 主动询问是否需要转人工 | \"您好像还有疑问，需要我为您转接人工客服吗？\" |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 501,
+        "line_end": 501
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 用户重复提问 | 用户连续3次问同一问题 | 主动询问是否需要转人工 | \"您好像还有疑问，需要我为您转接人工客服吗？\" |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L502",
+      "original_text": "| 会话过长 | 单轮会话超过20轮 | 建议结束会话或转人工 | \"我们的对话已经比较长啦，需要转人工帮您处理吗？\" |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 502,
+        "line_end": 502
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 会话过长 | 单轮会话超过20轮 | 建议结束会话或转人工 | \"我们的对话已经比较长啦，需要转人工帮您处理吗？\" |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L504",
+      "original_text": "### 2.6 模块六：AI交互设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 504,
+        "line_end": 504
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.6 模块六：AI交互设计"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L506",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 506,
+        "line_end": 506
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L510",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 510,
+        "line_end": 510
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L512",
+      "original_text": "## 6. AI交互设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 512,
+        "line_end": 512
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 6. AI交互设计"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L514",
+      "original_text": "### 6.1 输入方式",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 514,
+        "line_end": 514
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.1 输入方式"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L518",
+      "original_text": "### 6.2 输出格式",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 518,
+        "line_end": 518
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.2 输出格式"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L522",
+      "original_text": "### 6.3 置信度展示",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 522,
+        "line_end": 522
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.3 置信度展示"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L526",
+      "original_text": "### 6.4 反馈机制",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 526,
+        "line_end": 526
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.4 反馈机制"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L530",
+      "original_text": "### 6.5 AI身份标识",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 530,
+        "line_end": 530
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.5 AI身份标识"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L534",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 534,
+        "line_end": 534
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L536",
+      "original_text": "## 6. AI交互设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 536,
+        "line_end": 536
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 6. AI交互设计"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L538",
+      "original_text": "### 6.1 输入方式",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 538,
+        "line_end": 538
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.1 输入方式"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L547",
+      "original_text": "### 6.2 输出格式",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 547,
+        "line_end": 547
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.2 输出格式"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L558",
+      "original_text": "### 6.3 置信度展示",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 558,
+        "line_end": 558
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.3 置信度展示"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L569",
+      "original_text": "### 6.4 反馈机制",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 569,
+        "line_end": 569
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.4 反馈机制"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L578",
+      "original_text": "### 6.5 AI身份标识",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 578,
+        "line_end": 578
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.5 AI身份标识"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L585",
+      "original_text": "为什么必须标识AI身份？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 585,
+        "line_end": 585
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "为什么必须标识AI身份？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L589",
+      "original_text": "### 2.7 模块七：兜底策略",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 589,
+        "line_end": 589
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.7 模块七：兜底策略"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L591",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 591,
+        "line_end": 591
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L595",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 595,
+        "line_end": 595
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L597",
+      "original_text": "## 7. 兜底策略",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 597,
+        "line_end": 597
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 7. 兜底策略"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L599",
+      "original_text": "### 7.1 模型失效场景定义",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 599,
+        "line_end": 599
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.1 模型失效场景定义"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L603",
+      "original_text": "### 7.2 降级方案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 603,
+        "line_end": 603
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.2 降级方案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L607",
+      "original_text": "### 7.3 人工介入机制",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 607,
+        "line_end": 607
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.3 人工介入机制"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L611",
+      "original_text": "### 7.4 错误提示文案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 611,
+        "line_end": 611
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.4 错误提示文案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L615",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 615,
+        "line_end": 615
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L617",
+      "original_text": "## 7. 兜底策略",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 617,
+        "line_end": 617
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 7. 兜底策略"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L619",
+      "original_text": "### 7.1 模型失效场景定义",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 619,
+        "line_end": 619
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.1 模型失效场景定义"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L629",
+      "original_text": "### 7.2 降级方案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 629,
+        "line_end": 629
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.2 降级方案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L642",
+      "original_text": "### 7.3 人工介入机制",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 642,
+        "line_end": 642
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.3 人工介入机制"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L657",
+      "original_text": "### 7.4 错误提示文案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 657,
+        "line_end": 657
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.4 错误提示文案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L662",
+      "original_text": "| 需要更多信息 | \"为了更准确地帮您，请问您能提供一下订单号吗？\" | 引导用户提供关键信息 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 662,
+        "line_end": 662
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 需要更多信息 | \"为了更准确地帮您，请问您能提供一下订单号吗？\" | 引导用户提供关键信息 |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L667",
+      "original_text": "### 2.8 模块八：效果评估方案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 667,
+        "line_end": 667
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.8 模块八：效果评估方案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L669",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 669,
+        "line_end": 669
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L671",
+      "original_text": "上线后怎么知道功能好不好？需要定义监控指标、评估周期、迭代标准。",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 671,
+        "line_end": 671
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P4的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "上线后怎么知道功能好不好？需要定义监控指标、评估周期、迭代标准。"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L673",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 673,
+        "line_end": 673
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L675",
+      "original_text": "## 8. 效果评估方案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 675,
+        "line_end": 675
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 8. 效果评估方案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L677",
+      "original_text": "### 8.1 线上监控指标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 677,
+        "line_end": 677
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.1 线上监控指标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L683",
+      "original_text": "### 8.2 评估周期",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 683,
+        "line_end": 683
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.2 评估周期"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L687",
+      "original_text": "### 8.3 迭代标准",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 687,
+        "line_end": 687
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.3 迭代标准"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L691",
+      "original_text": "### 8.4 数据看板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 691,
+        "line_end": 691
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.4 数据看板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L695",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 695,
+        "line_end": 695
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L697",
+      "original_text": "## 8. 效果评估方案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 697,
+        "line_end": 697
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 8. 效果评估方案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L699",
+      "original_text": "### 8.1 线上监控指标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 699,
+        "line_end": 699
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.1 线上监控指标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L721",
+      "original_text": "### 8.2 评估周期",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 721,
+        "line_end": 721
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.2 评估周期"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L730",
+      "original_text": "### 8.3 迭代标准",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 730,
+        "line_end": 730
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.3 迭代标准"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L741",
+      "original_text": "### 8.4 数据看板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 741,
+        "line_end": 741
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.4 数据看板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L751",
+      "original_text": "### 2.9 模块九：技术方案概述",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 751,
+        "line_end": 751
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.9 模块九：技术方案概述"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L753",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 753,
+        "line_end": 753
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L757",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 757,
+        "line_end": 757
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L759",
+      "original_text": "## 9. 技术方案概述",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 759,
+        "line_end": 759
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 9. 技术方案概述"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L761",
+      "original_text": "### 9.1 模型选型",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 761,
+        "line_end": 761
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.1 模型选型"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L767",
+      "original_text": "### 9.2 调用方式",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 767,
+        "line_end": 767
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.2 调用方式"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L771",
+      "original_text": "### 9.3 架构示意",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 771,
+        "line_end": 771
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.3 架构示意"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L775",
+      "original_text": "### 9.4 关键技术决策",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 775,
+        "line_end": 775
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.4 关键技术决策"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L779",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 779,
+        "line_end": 779
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L781",
+      "original_text": "## 9. 技术方案概述",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 781,
+        "line_end": 781
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 9. 技术方案概述"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L783",
+      "original_text": "### 9.1 模型选型",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 783,
+        "line_end": 783
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.1 模型选型"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L792",
+      "original_text": "### 9.2 调用方式",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 792,
+        "line_end": 792
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.2 调用方式"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L800",
+      "original_text": "### 9.3 架构示意",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 800,
+        "line_end": 800
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.3 架构示意"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L804",
+      "original_text": "### 9.4 关键技术决策",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 804,
+        "line_end": 804
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.4 关键技术决策"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L808",
+      "original_text": "| 生成模型用API还是自研？ | 先用API | 快速验证PMF，验证后再决定是否自研 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 808,
+        "line_end": 808
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 生成模型用API还是自研？ | 先用API | 快速验证PMF，验证后再决定是否自研 |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L809",
+      "original_text": "| 意图识别用分类还是检索？ | 分类模型 | 意图类别明确且稳定，分类更可控 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 809,
+        "line_end": 809
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 意图识别用分类还是检索？ | 分类模型 | 意图类别明确且稳定，分类更可控 |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L810",
+      "original_text": "| 是否做多轮对话？ | P1优先级 | 先做单轮，效果稳定后再做多轮 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 810,
+        "line_end": 810
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 是否做多轮对话？ | P1优先级 | 先做单轮，效果稳定后再做多轮 |"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L813",
+      "original_text": "### 2.10 模块十：风险与合规",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 813,
+        "line_end": 813
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 2.10 模块十：风险与合规"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L815",
+      "original_text": "#### 目的",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 815,
+        "line_end": 815
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 目的"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L819",
+      "original_text": "#### 写作模板",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 819,
+        "line_end": 819
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 写作模板"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L821",
+      "original_text": "## 10. 风险与合规",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 821,
+        "line_end": 821
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 10. 风险与合规"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L823",
+      "original_text": "### 10.1 风险评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 823,
+        "line_end": 823
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.1 风险评估"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L829",
+      "original_text": "### 10.2 内容安全",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 829,
+        "line_end": 829
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.2 内容安全"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L833",
+      "original_text": "### 10.3 隐私保护",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 833,
+        "line_end": 833
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.3 隐私保护"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L837",
+      "original_text": "### 10.4 偏见控制",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 837,
+        "line_end": 837
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.4 偏见控制"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L841",
+      "original_text": "#### 示例：智能客服机器人",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 841,
+        "line_end": 841
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "#### 示例：智能客服机器人"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L843",
+      "original_text": "## 10. 风险与合规",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 843,
+        "line_end": 843
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 10. 风险与合规"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L845",
+      "original_text": "### 10.1 风险评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 845,
+        "line_end": 845
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.1 风险评估"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L856",
+      "original_text": "### 10.2 内容安全",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 856,
+        "line_end": 856
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.2 内容安全"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L873",
+      "original_text": "### 10.3 隐私保护",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 873,
+        "line_end": 873
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.3 隐私保护"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L880",
+      "original_text": "### 10.4 偏见控制",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 880,
+        "line_end": 880
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.4 偏见控制"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L886",
+      "original_text": "## 三、AI PRD的写作原则",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 886,
+        "line_end": 886
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 三、AI PRD的写作原则"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L890",
+      "original_text": "### 原则一：具体而非模糊",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 890,
+        "line_end": 890
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 原则一：具体而非模糊"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L899",
+      "original_text": "### 原则二：可测量而非主观",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 899,
+        "line_end": 899
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 原则二：可测量而非主观"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L909",
+      "original_text": "### 原则三：可迭代而非一次性",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 909,
+        "line_end": 909
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 原则三：可迭代而非一次性"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L927",
+      "original_text": "## 四、完整AI PRD案例：AI简历诊断助手",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 927,
+        "line_end": 927
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 四、完整AI PRD案例：AI简历诊断助手"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L933",
+      "original_text": "## AI简历诊断助手 - PRD",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 933,
+        "line_end": 933
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## AI简历诊断助手 - PRD"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L935",
+      "original_text": "## 1. 需求背景与目标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 935,
+        "line_end": 935
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 1. 需求背景与目标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L937",
+      "original_text": "### 1.1 背景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 937,
+        "line_end": 937
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.1 背景"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L941",
+      "original_text": "### 1.2 目标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 941,
+        "line_end": 941
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.2 目标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L947",
+      "original_text": "### 1.3 成功指标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 947,
+        "line_end": 947
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 1.3 成功指标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L957",
+      "original_text": "## 2. 用户场景与角色",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 957,
+        "line_end": 957
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 2. 用户场景与角色"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L967",
+      "original_text": "## 3. 模型目标与评估标准",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 967,
+        "line_end": 967
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 3. 模型目标与评估标准"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L969",
+      "original_text": "### 3.1 模型任务",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 969,
+        "line_end": 969
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.1 模型任务"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L975",
+      "original_text": "### 3.2 评估指标",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 975,
+        "line_end": 975
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.2 评估指标"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L984",
+      "original_text": "### 3.3 A/B测试",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 984,
+        "line_end": 984
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.3 A/B测试"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L990",
+      "original_text": "## 4. 数据需求",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 990,
+        "line_end": 990
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 4. 数据需求"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L998",
+      "original_text": "## 5. 产品功能设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 998,
+        "line_end": 998
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 5. 产品功能设计"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1000",
+      "original_text": "### 5.1 功能列表",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1000,
+        "line_end": 1000
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.1 功能列表"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1012",
+      "original_text": "### 5.2 核心流程",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1012,
+        "line_end": 1012
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.2 核心流程"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1016",
+      "original_text": "## 6. AI交互设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1016,
+        "line_end": 1016
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 6. AI交互设计"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1023",
+      "original_text": "## 7. 兜底策略",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1023,
+        "line_end": 1023
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 7. 兜底策略"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1032",
+      "original_text": "## 8. 效果评估方案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1032,
+        "line_end": 1032
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 8. 效果评估方案"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1038",
+      "original_text": "## 9. 技术方案概述",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1038,
+        "line_end": 1038
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 9. 技术方案概述"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1046",
+      "original_text": "## 10. 风险与合规",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1046,
+        "line_end": 1046
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 10. 风险与合规"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1054",
+      "original_text": "## 五、写在最后",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1054,
+        "line_end": 1054
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 五、写在最后"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1071",
+      "original_text": "*   [ ] 是否定义了明确的模型评估指标和目标值？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1071,
+        "line_end": 1071
+      },
+      "decision": "采用",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "C13"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "C13",
+          "required_points": [
+            "明确任务、版本及代表/边界/关键切片范围",
+            "定义正确性、评分与争议处理，结果可复核",
+            "给带口径门槛和失败路径，不能孤立以百分比或平均值验收"
+          ]
+        }
+      ],
+      "source_raw_line": "*   [ ] 是否定义了明确的模型评估指标和目标值？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1072",
+      "original_text": "*   [ ] 是否定义了最低可接受的指标阈值？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1072,
+        "line_end": 1072
+      },
+      "decision": "采用",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m05.release-contract.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.release-contract.001",
+          "required_points": [
+            "目标/最低值有不同决策用途并带任务和指标口径",
+            "关键切片及硬约束独立判定，平均值不能补偿",
+            "发布限已验证可隔离范围或修复复测，记录责任和证据"
+          ]
+        }
+      ],
+      "source_raw_line": "*   [ ] 是否定义了最低可接受的指标阈值？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1073",
+      "original_text": "*   [ ] 数据需求是否明确（来源、量级、质量）？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1073,
+        "line_end": 1073
+      },
+      "decision": "采用",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m05.data-delivery.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.data-delivery.001",
+          "required_points": [
+            "数据条款有用途/来源/允许范围、字段及数量覆盖依据",
+            "质量标注/验收、负责人交付和更新保留边界可检查",
+            "正确区分训练/独立评估/在线用途，防泄漏和越用途使用"
+          ]
+        }
+      ],
+      "source_raw_line": "*   [ ] 数据需求是否明确（来源、量级、质量）？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1074",
+      "original_text": "*   [ ] 是否有完整的兜底策略（多级降级）？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1074,
+        "line_end": 1074
+      },
+      "decision": "采用",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m05.fallback-ladder.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.fallback-ladder.001",
+          "required_points": [
+            "分清失败类型并有重试/等待预算",
+            "每级备选满足任务能力与权限，缺资料不能继续编造承诺",
+            "人工不可用有可用路径、状态和恢复/停止验收"
+          ]
+        }
+      ],
+      "source_raw_line": "*   [ ] 是否有完整的兜底策略（多级降级）？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1075",
+      "original_text": "*   [ ] 是否定义了模型失效时的用户感知？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1075,
+        "line_end": 1075
+      },
+      "decision": "采用",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m05.failure-state.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.failure-state.001",
+          "required_points": [
+            "定义失效触发、状态转换及当前处理者",
+            "接管含上下文/动作移交和晚到结果控制，避免双重处理",
+            "定义人工不可用及用户状态，测试关键异常分支"
+          ]
+        }
+      ],
+      "source_raw_line": "*   [ ] 是否定义了模型失效时的用户感知？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1076",
+      "original_text": "*   [ ] 是否包含内容安全和合规方案？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1076,
+        "line_end": 1076
+      },
+      "decision": "拆分",
+      "reason": "内容安全控制与具体适用义务是不同子目标：前者由content-safety-contract承载设计与验证，后者只由M1/P5形成适用范围/责任人/证据/状态核验待办，未知延期。不把内容安全卡或原文法规表当完整合规方案或核验完成。",
+      "card_keys": [],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 是否包含内容安全和合规方案？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1076-content-safety",
+      "parent_objective_id": "ch05-m05-L1076",
+      "original_text": "*   [ ] 是否包含内容安全和合规方案？",
+      "source_type": "原目标子目标（编辑拆分）",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1076,
+        "line_end": 1076
+      },
+      "decision": "采用",
+      "reason": "保留现有内容安全卡，只计产品控制和授权隔离测试设计；不扩成背法条或已完成法律适用核验。",
+      "edited_objective": "内容安全：任务级禁止内容、数据/操作权限、输入输出/执行控制及漏拦误拦验证。",
+      "card_keys": [
+        "ch05.interview.m05.content-safety-contract.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "source_raw_line": "*   [ ] 是否包含内容安全和合规方案？",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.content-safety-contract.001",
+          "required_points": [
+            "定义任务级禁止内容、数据/操作范围及后果责任",
+            "控制落到输入输出和执行边界，关键失败停止或有权限接管",
+            "测试有授权、隔离与合适数据，检验漏拦误拦并有停止条件"
+          ]
+        }
+      ],
+      "card_coverage_limit": "本卡仅承载任务级安全契约及验证；具体义务是否适用和是否已履行另见obligations子项。",
+      "execution_status": "designed_not_executed"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1076-applicable-obligations",
+      "parent_objective_id": "ch05-m05-L1076",
+      "original_text": "*   [ ] 是否包含内容安全和合规方案？",
+      "source_type": "原目标子目标（编辑拆分）",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1076,
+        "line_end": 1076
+      },
+      "decision": "实践任务",
+      "reason": "M1/P5只提供适用义务核验待办；现行规则、具体适用和履行证据均未核验。未知列pending_verification/延期，责任人未指定标待指定，不依原文法规表认定合规。",
+      "edited_objective": "具体适用义务：按服务/人群/地域/用途确定待核问题，逐项记录拟责任角色、证据需求与未完成状态。",
+      "card_keys": [],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 是否包含内容安全和合规方案？",
+      "deliverables": [
+        "P5适用义务核验登记册：服务/受众/地域/版本/用途及数据流事实、候选义务问题、拟责任角色/具体负责人、权威依据版本日期及适用判断待办、需取得的履行证据、待办/延期原因",
+        "M1十模块PRD风险部分：内容安全控制与法律适用核验分栏；未知项及受影响范围显式保留"
+      ],
+      "acceptance": "每行有适用事实缺口、责任人或待指定、待取证据和pending_verification状态；后续只有具名负责人和可追溯依据/判断及履行证据齐全才能另行确认，当前不得标已核验/合规。设计与实际执行分别记，不设统一保留天数或照抄备案结论。",
+      "execution_status": "designed_not_executed",
+      "verification_status": "pending_verification",
+      "pending_items": [
+        {
+          "question": "服务适用范围与对外发布条件如何界定？",
+          "scope": "内/外部服务、受众、地域、版本及发布时间待确认",
+          "responsible_role": "拟由产品提供事实，法务/合规核验；具体负责人待指定",
+          "evidence_needed": "服务范围事实表、适用的权威依据及版本/日期、负责人适用判断记录；当前未取得",
+          "status": "pending_verification"
+        },
+        {
+          "question": "数据用途、保留/删除及跨边界处理是否产生具体义务？",
+          "scope": "数据类别/主体、训练评估在线用途、处理方和实际流向待确认",
+          "responsible_role": "拟由数据/隐私责任角色及法务核验；具体负责人待指定",
+          "evidence_needed": "授权与数据流证据、相关权威依据、保留删除/处理安排及适用判断；当前未取得",
+          "status": "pending_verification"
+        },
+        {
+          "question": "AI内容呈现及特定行业/人群是否另有适用要求？",
+          "scope": "输出形式、发布渠道、行业用途和人群范围待确认",
+          "responsible_role": "拟由安全/行业负责人及法务核验；具体负责人待指定",
+          "evidence_needed": "具体场景说明、相应权威依据及版本/日期、控制到义务的映射和履行证据；当前未取得",
+          "status": "pending_verification"
+        }
+      ]
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1077",
+      "original_text": "*   [ ] 是否定义了上线后的监控指标和迭代标准？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1077,
+        "line_end": 1077
+      },
+      "decision": "实践任务",
+      "reason": "上线监控/迭代已有跨章通用题，本课不重复加卡；M1第⑧段给完整PRD责任契约，P4设计指标、告警到责任动作与回归闭环，未执行。",
+      "card_keys": [],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [
+        "P4"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   [ ] 是否定义了上线后的监控指标和迭代标准？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1078",
+      "original_text": "*   [ ] 是否标识了AI身份？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1078,
+        "line_end": 1078
+      },
+      "decision": "采用",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m05.ai-identity.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.ai-identity.001",
+          "required_points": [
+            "关键交互清楚标识当前AI身份，避免真人误导",
+            "告知能力边界及人工路径，身份不等于可信证明",
+            "按用户能识别处理者/切换及失败路径验收"
+          ]
+        }
+      ],
+      "source_raw_line": "*   [ ] 是否标识了AI身份？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1079",
+      "original_text": "*   [ ] 是否提供了用户反馈机制？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1079,
+        "line_end": 1079
+      },
+      "decision": "采用",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m05.feedback-correction.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.feedback-correction.001",
+          "required_points": [
+            "本次纠错有入口、责任/状态和复核反馈，必要时停止错误承诺",
+            "审核反馈与权威资料，不能自动当真值",
+            "数据回流须用途许可、必要范围和版本控制，修复后回归验证"
+          ]
+        }
+      ],
+      "source_raw_line": "*   [ ] 是否提供了用户反馈机制？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05-m05-L1080",
+      "original_text": "*   [ ] 技术方案是否经过算法团队确认？",
+      "source_type": "Markdown清单",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 1080,
+        "line_end": 1080
+      },
+      "decision": "采用",
+      "reason": "题面明确考查本目标，核心答案及必答点实际承载；仅为待审草稿。",
+      "card_keys": [
+        "ch05.interview.m05.technical-responsibility.001"
+      ],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card",
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.technical-responsibility.001",
+          "required_points": [
+            "PM负责业务目标、成功条件和数据/交互/异常需求约束",
+            "技术团队确认效果依赖与接口容量等可行性，给详细设计",
+            "共同记录证据/假设/依赖与变更影响，不能仅凭模型名称承诺"
+          ]
+        }
+      ],
+      "source_raw_line": "*   [ ] 技术方案是否经过算法团队确认？"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "C13",
+      "original_text": "### 2.3 模块三：模型目标与评估标准\n\n#### 目的\n\n这是AI PRD最核心的模块之一。你需要明确定义：模型要解决什么任务？用什么指标衡量？目标值是多少？\n\n#### 写作模板\n\n## 3. 模型目标与评估标准\n\n### 3.1 模型任务定义\n\n*   任务类型：[分类/生成/抽取/检索...]\n*   输入：[明确定义]\n*   输出：[明确定义]\n*   示例： \n    *   输入：\n    *   预期输出：\n\n### 3.2 评估指标\n\n| 指标 | 定义 | 目标值 | 测试方式 |\n| --- | --- | --- | --- |\n|  |  |  |  |\n\n### 3.3 评估数据集\n\n*   数据集规模：\n*   数据分布：\n*   标注标准：\n\n### 3.4 A/B测试方案\n\n*   对照组：\n*   实验组：\n*   核心指标：\n*   实验时长：\n*   样本量：\n\n#### 示例：智能客服机器人\n\n## 3. 模型目标与评估标准\n\n### 3.1 模型任务定义\n\n本项目涉及多个模型子任务：\n\n**子任务1：意图识别（Intent Classification）**\n\n*   任务类型：多分类\n*   输入：用户原始query文本\n*   输出：意图类别 + 置信度\n*   意图类别定义： \n| 意图ID | 意图名称 | 说明 | 示例 |\n| --- | --- | --- | --- |\n| I001 | 查询物流 | 查询订单物流状态 | \"我的快递到哪了\" |\n| I002 | 申请退货 | 表达退货/退款意愿 | \"我要退货\" |\n| I003 | 活动咨询 | 询问优惠活动 | \"满减怎么用\" |\n| I004 | 账户问题 | 登录/密码/支付问题 | \"忘记密码\" |\n| I005 | 商品咨询 | 询问商品信息 | \"这件有M码吗\" |\n| I999 | 其他/未知 | 无法归类或闲聊 | \"你好\" |\n\n**子任务2：实体抽取（Named Entity Recognition）**\n\n*   任务类型：序列标注\n*   输入：用户原始query文本\n*   输出：实体列表（类型+值）\n*   实体类型定义： \n| 实体类型 | 说明 | 示例 |\n| --- | --- | --- |\n| ORDER_ID | 订单号 | \"20240526001\" |\n| PRODUCT | 商品名称 | \"红色连衣裙\" |\n| TIME | 时间 | \"昨天买的\" |\n| AMOUNT | 金额 | \"199元\" |\n\n**子任务3：回答生成（Response Generation）**\n\n*   任务类型：文本生成\n*   输入：用户query + 意图 + 实体 + 相关知识\n*   输出：自然语言回答文本\n\n### 3.2 评估指标\n\n| 指标 | 定义 | 目标值 | 最低可接受值 | 测试方式 |\n| --- | --- | --- | --- | --- |\n| 意图识别准确率 | 正确识别意图的query占比 | ≥92% | ≥85% | 人工标注测试集 |\n| 意图识别召回率 | 所有意图query中被正确识别的占比 | ≥90% | ≥82% | 人工标注测试集 |\n| Top-3意图覆盖率 | 正确答案在Top-3中的占比 | ≥98% | ≥95% | 人工标注测试集 |\n| 实体抽取F1 | 精确率和召回率的调和平均 | ≥85% | ≥75% | 人工标注测试集 |\n| 回答满意度 | 用户对回答的评分(1-5) | ≥4.0 | ≥3.5 | 会话后弹窗评价 |\n| 回答相关性 | 回答与用户问题的相关程度(1-5) | ≥4.2 | ≥3.8 | 人工抽检 |\n| 幻觉率 | 回答中包含错误/编造信息的比例 | ≤3% | ≤5% | 人工抽检 |\n| 平均响应时间 | 从接收请求到返回首字的时间 | <800ms | <1500ms | 系统监控 |\n| 问题解决率 | 用户未转人工即结束会话的比例 | ≥65% | ≥55% | 系统统计 |\n\n### 3.3 评估数据集\n\n**意图识别测试集**：\n\n*   规模：2000条query（每类意图约250-400条）\n*   来源：历史客服会话脱敏数据 + 人工构造边界case\n*   标注标准：每条query由2名标注员独立标注，不一致由第3人仲裁\n*   更新频率：每月补充当月新出现的query类型\n\n**回答质量评估集**：\n\n*   规模：500个对话轮次\n*   评估维度：准确性、完整性、友好度、Actionability\n*   评分标准： \n| 分数 | 标准 |\n| --- | --- |\n| 5分 | 完全正确，用户可直接按此操作 |\n| 4分 | 基本正确，少量信息需补充 |\n| 3分 | 部分正确，用户需要进一步确认 |\n| 2分 | 有明显错误，但方向大致正确 |\n| 1分 | 完全错误或答非所问 |\n\n### 3.4 A/B测试方案\n\n| 项目 | 说明 |\n| --- | --- |\n| 对照组 | 现有FAQ匹配系统 |\n| 实验组 | 新AI智能客服（本方案） |\n| 分流比例 | 对照组50% : 实验组50% |\n| 核心指标 | 问题解决率、用户满意度、平均会话时长 |\n| 守护指标 | 转人工率（不能大幅上升）、投诉率 |\n| 实验时长 | 2周 |\n| 通过标准 | 问题解决率提升≥10%且用户满意度提升≥0.3 |\n\n指标设定技巧\n\n> 建议为每个指标设定**目标值**和**最低可接受值**。上线标准是达到最低可接受值，理想状态是达到目标值。不要把目标值设成唯一的上线门槛，否则项目可能永远无法上线。",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 212,
+        "line_end": 343
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "C13"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "C13",
+          "required_points": [
+            "明确任务、版本及代表/边界/关键切片范围",
+            "定义正确性、评分与争议处理，结果可复核",
+            "给带口径门槛和失败路径，不能孤立以百分比或平均值验收"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05.interview.m05.release-contract.001",
+      "original_text": "### 3.2 评估指标\n\n| 指标 | 定义 | 目标值 | 最低可接受值 | 测试方式 |\n| --- | --- | --- | --- | --- |\n| 意图识别准确率 | 正确识别意图的query占比 | ≥92% | ≥85% | 人工标注测试集 |\n| 意图识别召回率 | 所有意图query中被正确识别的占比 | ≥90% | ≥82% | 人工标注测试集 |\n| Top-3意图覆盖率 | 正确答案在Top-3中的占比 | ≥98% | ≥95% | 人工标注测试集 |\n| 实体抽取F1 | 精确率和召回率的调和平均 | ≥85% | ≥75% | 人工标注测试集 |\n| 回答满意度 | 用户对回答的评分(1-5) | ≥4.0 | ≥3.5 | 会话后弹窗评价 |\n| 回答相关性 | 回答与用户问题的相关程度(1-5) | ≥4.2 | ≥3.8 | 人工抽检 |\n| 幻觉率 | 回答中包含错误/编造信息的比例 | ≤3% | ≤5% | 人工抽检 |\n| 平均响应时间 | 从接收请求到返回首字的时间 | <800ms | <1500ms | 系统监控 |\n| 问题解决率 | 用户未转人工即结束会话的比例 | ≥65% | ≥55% | 系统统计 |\n\n### 3.3 评估数据集\n\n**意图识别测试集**：\n\n*   规模：2000条query（每类意图约250-400条）\n*   来源：历史客服会话脱敏数据 + 人工构造边界case\n*   标注标准：每条query由2名标注员独立标注，不一致由第3人仲裁\n*   更新频率：每月补充当月新出现的query类型\n\n**回答质量评估集**：\n\n*   规模：500个对话轮次\n*   评估维度：准确性、完整性、友好度、Actionability\n*   评分标准： \n| 分数 | 标准 |\n| --- | --- |\n| 5分 | 完全正确，用户可直接按此操作 |\n| 4分 | 基本正确，少量信息需补充 |\n| 3分 | 部分正确，用户需要进一步确认 |\n| 2分 | 有明显错误，但方向大致正确 |\n| 1分 | 完全错误或答非所问 |\n\n### 3.4 A/B测试方案\n\n| 项目 | 说明 |\n| --- | --- |\n| 对照组 | 现有FAQ匹配系统 |\n| 实验组 | 新AI智能客服（本方案） |\n| 分流比例 | 对照组50% : 实验组50% |\n| 核心指标 | 问题解决率、用户满意度、平均会话时长 |\n| 守护指标 | 转人工率（不能大幅上升）、投诉率 |\n| 实验时长 | 2周 |\n| 通过标准 | 问题解决率提升≥10%且用户满意度提升≥0.3 |\n\n指标设定技巧\n\n> 建议为每个指标设定**目标值**和**最低可接受值**。上线标准是达到最低可接受值，理想状态是达到目标值。不要把目标值设成唯一的上线门槛，否则项目可能永远无法上线。",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 293,
+        "line_end": 343
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m05.release-contract.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.release-contract.001",
+          "required_points": [
+            "目标/最低值有不同决策用途并带任务和指标口径",
+            "关键切片及硬约束独立判定，平均值不能补偿",
+            "发布限已验证可隔离范围或修复复测，记录责任和证据"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05.interview.m05.data-delivery.001",
+      "original_text": "### 2.4 模块四：数据需求\n\n#### 目的\n\n明确定义模型训练和评估需要什么样的数据、多少数据、从哪里来、质量要求是什么。\n\n#### 写作模板\n\n## 4. 数据需求\n\n### 4.1 训练数据\n\n| 数据类型 | 数据量 | 数据来源 | 质量要求 | 获取方式 |\n| --- | --- | --- | --- | --- |\n|  |  |  |  |  |\n\n### 4.2 测试数据\n\n| 数据类型 | 数据量 | 用途 | 要求 |\n| --- | --- | --- | --- |\n|  |  |  |  |\n\n### 4.3 标注标准\n\n[详细的标注规范和示例]\n\n### 4.4 数据安全与隐私\n\n[脱敏要求、合规要求]\n\n#### 示例：智能客服机器人\n\n## 4. 数据需求\n\n### 4.1 训练数据\n\n| 数据类型 | 数据量 | 数据来源 | 质量要求 | 获取方式 | 预计时间 |\n| --- | --- | --- | --- | --- | --- |\n| 历史客服会话 | 50万轮 | 客服系统历史数据 | 会话完整，有明确结论 | 数据库导出+脱敏 | 1周 |\n| 意图标注数据 | 1万条 | 历史query人工标注 | 双人标注一致率≥90% | 标注团队标注 | 3周 |\n| FAQ知识库 | 500条 | 现有FAQ + 补充 | 答案准确，覆盖高频问题 | 运营团队整理 | 2周 |\n| 商品信息 | 全量 | 商品中心 | 信息准确，实时更新 | API同步 | 持续 |\n| 负样本（闲聊/无关） | 5000条 | 公开数据集+构造 | 与业务query有区分度 | 数据团队构造 | 1周 |\n\n### 4.2 测试数据\n\n| 数据类型 | 数据量 | 用途 | 要求 |\n| --- | --- | --- | --- |\n| 意图识别测试集 | 2000条 | 评估意图识别准确率 | 分布与线上一致，含边界case |\n| 端到端测试集 | 500轮对话 | 评估整体效果 | 覆盖所有意图类型 |\n| 压力测试数据 | 10万条 | 压测系统性能 | 高并发场景 |\n| 对抗测试集 | 200条 | 测试安全性 | 含诱导性、敏感性问题 |\n\n### 4.3 标注标准（意图识别）\n\n**标注原则**：\n\n1.   以用户真实意图为准，不以字面意思为准\n2.   每个query只能标注一个主意图\n3.   置信度低于0.7的标注为\"其他/未知\"\n\n**标注示例**：\n\n| Query | 正确意图 | 常见错误 | 说明 |\n| --- | --- | --- | --- |\n| \"我昨天买的东西怎么还没发货\" | 查询物流 | 商品咨询 | 核心诉求是物流状态 |\n| \"这个衣服太贵了，能便宜点吗\" | 商品咨询 | 活动咨询 | 用户想了解是否有优惠 |\n| \"你们这是什么垃圾服务\" | 其他/未知 | 退货/投诉 | 情绪化表达，无明确意图，需安抚后引导 |\n| \"帮我退掉订单123456\" | 申请退货 | 查询物流 | 明确表达了退货诉求 |\n\n### 4.4 数据安全与隐私\n\n*   所有用户数据在使用前必须经过脱敏处理（手机号、地址、姓名等PII信息替换为占位符）\n*   数据存储符合等保三级要求\n*   标注人员签署保密协议\n*   数据不得用于本项目以外的任何用途\n",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 345,
+        "line_end": 421
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m05.data-delivery.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.data-delivery.001",
+          "required_points": [
+            "数据条款有用途/来源/允许范围、字段及数量覆盖依据",
+            "质量标注/验收、负责人交付和更新保留边界可检查",
+            "正确区分训练/独立评估/在线用途，防泄漏和越用途使用"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05.interview.m05.failure-state.001",
+      "original_text": "### 5.3 状态机定义\n\n| 状态 | 说明 | 可转移状态 |\n| --- | --- | --- |\n| 待接入 | 用户打开客服窗口 | 意图识别中 |\n| 意图识别中 | 系统处理用户输入 | 生成回答/兜底/转人工 |\n| 生成回答 | 系统生成或匹配回答 | 等待用户反馈 |\n| 等待用户反馈 | 已返回答案，等待用户 | 意图识别中/结束/转人工 |\n| 兜底处理 | 置信度低，返回兜底话术 | 等待用户反馈/转人工 |\n| 人工服务中 | 已转接人工客服 | 结束 |\n| 结束 | 会话结束 | - |\n\n### 5.4 异常处理\n\n| 异常场景 | 触发条件 | 系统行为 | 用户感知 |\n| --- | --- | --- | --- |\n| 意图置信度低 | 最高意图置信度<0.6 | 返回兜底话术+推荐问题 | \"抱歉，我没太理解。您可以问我：1.查询物流 2.申请退货...\" |\n| 敏感问题 | 命中敏感词/风险意图 | 返回安全提示，不回答具体问题 | \"您的这个问题涉及敏感信息，建议您联系人工客服处理。\" |\n| 服务超时 | 模型响应>3秒 | 返回\"正在思考...\"占位，继续等待或降级 | 先看到\"正在为您查询...\"，随后返回结果 |\n| 模型异常 | 模型服务返回错误 | 降级为FAQ匹配，仍失败则转人工 | 用户无感知或看到\"正在为您转接人工客服\" |\n| 用户重复提问 | 用户连续3次问同一问题 | 主动询问是否需要转人工 | \"您好像还有疑问，需要我为您转接人工客服吗？\" |\n| 会话过长 | 单轮会话超过20轮 | 建议结束会话或转人工 | \"我们的对话已经比较长啦，需要转人工帮您处理吗？\" |",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 481,
+        "line_end": 502
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m05.failure-state.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.failure-state.001",
+          "required_points": [
+            "定义失效触发、状态转换及当前处理者",
+            "接管含上下文/动作移交和晚到结果控制，避免双重处理",
+            "定义人工不可用及用户状态，测试关键异常分支"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05.interview.m05.technical-responsibility.001",
+      "original_text": "### 2.9 模块九：技术方案概述\n\n#### 目的\n\n给出技术实现的大致方案，包括模型选型、调用方式、架构示意。注意：PRD中的技术方案是高level的，详细技术方案应由技术团队输出。\n\n#### 写作模板\n\n## 9. 技术方案概述\n\n### 9.1 模型选型\n\n| 任务 | 模型方案 | 选型理由 |\n| --- | --- | --- |\n|  |  |  |\n\n### 9.2 调用方式\n\n[API调用/本地部署/混合]\n\n### 9.3 架构示意\n\n[系统架构图]\n\n### 9.4 关键技术决策\n\n[关键的技术选型和决策理由]\n\n#### 示例：智能客服机器人\n\n## 9. 技术方案概述\n\n### 9.1 模型选型\n\n| 任务 | 模型方案 | 选型理由 | 备选方案 |\n| --- | --- | --- | --- |\n| 意图识别 | 微调BERT-base | 分类任务效果好，推理快，成本低 | RoBERTa、TextCNN |\n| 实体抽取 | 微调BERT-CRF | 序列标注经典方案 | SpanNER |\n| 回答生成 | GPT-4 API + Prompt工程 | 生成质量高，无需自研，快速上线 | Claude 3.5、文心4 |\n| 语义召回 | bge-large-zh向量模型 | 中文语义召回效果好，开源可本地部署 | m3e、text2vec |\n\n### 9.2 调用方式\n\n采用**混合调用策略**：\n\n*   意图识别、实体抽取：本地部署（低延迟、无调用成本）\n*   回答生成：调用GPT-4 API（高质量生成）\n*   语义召回：本地部署向量模型\n\n### 9.3 架构示意\n\n![Image 5](https://res.cloudinary.com/de6byedfx/image/upload/v1785751315/202608/ai-pm-guide/chapter-05/f5197a-05-7da7c0298c97.png)\n\n### 9.4 关键技术决策\n\n| 决策点 | 决策 | 理由 |\n| --- | --- | --- |\n| 生成模型用API还是自研？ | 先用API | 快速验证PMF，验证后再决定是否自研 |\n| 意图识别用分类还是检索？ | 分类模型 | 意图类别明确且稳定，分类更可控 |\n| 是否做多轮对话？ | P1优先级 | 先做单轮，效果稳定后再做多轮 |\n| 知识库更新频率 | 实时 | 商品信息、活动信息变化快，需实时 |",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 751,
+        "line_end": 811
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m05.technical-responsibility.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.technical-responsibility.001",
+          "required_points": [
+            "PM负责业务目标、成功条件和数据/交互/异常需求约束",
+            "技术团队确认效果依赖与接口容量等可行性，给详细设计",
+            "共同记录证据/假设/依赖与变更影响，不能仅凭模型名称承诺"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05.interview.m05.fallback-ladder.001",
+      "original_text": "### 2.7 模块七：兜底策略\n\n#### 目的\n\n模型不是100%可靠的，必须设计完善的兜底策略（Fallback Strategy），确保模型失效时用户体验不崩盘。\n\n#### 写作模板\n\n## 7. 兜底策略\n\n### 7.1 模型失效场景定义\n\n[什么情况下认为模型\"失效\"]\n\n### 7.2 降级方案\n\n[各级别的降级策略]\n\n### 7.3 人工介入机制\n\n[什么时候、怎么转人工]\n\n### 7.4 错误提示文案\n\n[不同场景下给用户看什么]\n\n#### 示例：智能客服机器人\n\n## 7. 兜底策略\n\n### 7.1 模型失效场景定义\n\n| 场景 | 判断条件 | 级别 |\n| --- | --- | --- |\n| 意图识别失效 | Top-1置信度<0.6 | 轻度 |\n| 回答生成异常 | 模型返回空/超时/格式错误 | 中度 |\n| 敏感内容生成 | 生成内容命中敏感词库 | 严重 |\n| 连续失败 | 同一session连续3次无法回答 | 中度 |\n| 服务不可用 | 模型服务整体宕机 | 严重 |\n\n### 7.2 降级方案\n\n**三级降级体系**：\n\nLevel 1（正常）: 模型生成回答 ↓ 意图置信度低/模型异常 Level 2（轻度降级）: FAQ匹配回答 ↓ FAQ无匹配/服务超时 Level 3（重度降级）: 兜底话术 + 转人工引导 ↓ 服务完全不可用 Level 4（灾备）: 展示\"客服繁忙\" + 留言功能\n\n| 降级级别 | 触发条件 | 系统行为 | 用户感知 |\n| --- | --- | --- | --- |\n| L1-正常 | 所有服务正常 | 模型生成回答 | 正常AI对话 |\n| L2-FAQ降级 | 意图置信度<0.6或模型超时 | 切换至FAQ关键词匹配 | 回答可能较生硬，但基本可用 |\n| L3-兜底降级 | FAQ无匹配或连续失败 | 返回兜底话术，建议转人工 | \"抱歉，这个问题比较复杂，建议您转接人工客服\" |\n| L4-灾备 | 整体服务不可用 | 关闭AI入口，仅保留留言 | \"客服系统维护中，您可以留言，我们会尽快回复\" |\n\n### 7.3 人工介入机制\n\n**主动转人工**（系统判断）：\n\n*   连续3次无法有效回答\n*   命中投诉/维权/情绪激烈意图\n*   敏感问题无法自动处理\n\n**被动转人工**（用户主动）：\n\n*   始终提供\"转人工\"按钮，随时可点击\n*   用户输入\"人工\"\"客服\"\"找人工\"等关键词时，立即转接\n\n**转人工流程**： 触发转人工 ↓ 保存当前会话上下文（转给人工客服查看） ↓ 排队等待（显示排队人数和预计等待时间） ↓ 接入人工客服（人工可看到AI对话历史） ↓ 人工处理完成 ↓ 可选择\"AI继续跟进\"或\"结束会话\"\n\n### 7.4 错误提示文案\n\n| 场景 | 提示文案 | 设计原则 |\n| --- | --- | --- |\n| 没理解用户 | \"抱歉，我没太明白您的问题。您可以尝试问我：\\n1. 查询物流\\n2. 申请退货\\n3. 优惠券怎么用\" | 给方向，不道歉过度 |\n| 需要更多信息 | \"为了更准确地帮您，请问您能提供一下订单号吗？\" | 引导用户提供关键信息 |\n| 超出能力范围 | \"这个问题比较复杂，我帮您转接人工客服处理吧~\" | 不暴露技术限制，自然过渡 |\n| 服务繁忙 | \"当前咨询人数较多，您可以稍后再试，或留言给我们\" | 真诚说明，提供替代方案 |\n| 敏感问题 | \"您的问题涉及特殊处理流程，建议您联系人工客服或拨打400-xxx\" | 不拒绝，给出口 |",
+      "source_type": "编辑补题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 589,
+        "line_end": 665
+      },
+      "decision": "采用",
+      "reason": "补齐原生多级降级目标；旧failure-state考晚到并发，不能代替逐类失败的替代路线选择。",
+      "card_keys": [
+        "ch05.interview.m05.fallback-ladder.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.fallback-ladder.001",
+          "required_points": [
+            "分清失败类型并有重试/等待预算",
+            "每级备选满足任务能力与权限，缺资料不能继续编造承诺",
+            "人工不可用有可用路径、状态和恢复/停止验收"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05.interview.m05.ai-identity.001",
+      "original_text": "### 2.6 模块六：AI交互设计\n\n#### 目的\n\nAI产品的交互设计有其特殊性：用户需要知道\"这是AI生成的\"、\"这个回答有多可信\"、\"怎么给反馈\"。\n\n#### 写作模板\n\n## 6. AI交互设计\n\n### 6.1 输入方式\n\n[用户怎么和AI交互]\n\n### 6.2 输出格式\n\n[AI的回答以什么形式展示]\n\n### 6.3 置信度展示\n\n[如何向用户传达回答的可信度]\n\n### 6.4 反馈机制\n\n[用户怎么纠正或评价AI]\n\n### 6.5 AI身份标识\n\n[如何让用户知道这是AI]",
+      "source_type": "编辑补题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 504,
+        "line_end": 532
+      },
+      "decision": "采用",
+      "reason": "补齐原生AI身份自查；现有五卡没有可独立评分的身份交互要求。",
+      "card_keys": [
+        "ch05.interview.m05.ai-identity.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.ai-identity.001",
+          "required_points": [
+            "关键交互清楚标识当前AI身份，避免真人误导",
+            "告知能力边界及人工路径，身份不等于可信证明",
+            "按用户能识别处理者/切换及失败路径验收"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05.interview.m05.feedback-correction.001",
+      "original_text": "### 6.4 反馈机制\n\n[用户怎么纠正或评价AI]",
+      "source_type": "编辑补题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 526,
+        "line_end": 528
+      },
+      "decision": "采用",
+      "reason": "补齐原生反馈机制自查；旧数据交付卡没有承载用户纠错到受控修复的操作闭环。",
+      "card_keys": [
+        "ch05.interview.m05.feedback-correction.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.feedback-correction.001",
+          "required_points": [
+            "本次纠错有入口、责任/状态和复核反馈，必要时停止错误承诺",
+            "审核反馈与权威资料，不能自动当真值",
+            "数据回流须用途许可、必要范围和版本控制，修复后回归验证"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.5",
+      "objective_id": "ch05.interview.m05.content-safety-contract.001",
+      "original_text": "### 2.10 模块十：风险与合规\n\n#### 目的\n\n识别项目风险，制定应对措施，确保合规。\n\n#### 写作模板\n\n## 10. 风险与合规\n\n### 10.1 风险评估\n\n| 风险 | 可能性 | 影响 | 应对措施 |\n| --- | --- | --- | --- |\n|  |  |  |  |\n\n### 10.2 内容安全\n\n[如何防止生成违规内容]\n\n### 10.3 隐私保护\n\n[用户数据如何处理]\n\n### 10.4 偏见控制\n\n[如何防止算法偏见]\n\n#### 示例：智能客服机器人\n\n## 10. 风险与合规\n\n### 10.1 风险评估\n\n| 风险 | 可能性 | 影响 | 应对措施 | 责任人 |\n| --- | --- | --- | --- | --- |\n| 模型幻觉导致错误回答 | 中 | 高 | 1. 高频问题走知识库 2. 低置信度转人工 3. 添加\"仅供参考\"提示 | 产品+算法 |\n| 生成敏感/违规内容 | 低 | 极高 | 1. 输入输出双层审核 2. 敏感词库过滤 3. 人工抽检 | 算法+安全 |\n| 用户隐私泄露 | 低 | 极高 | 1. 数据脱敏 2. 最小化数据使用 3. 访问权限控制 | 工程+法务 |\n| 服务不可用 | 低 | 高 | 1. 多级降级 2. 熔断限流 3. 人工客服兜底 | 工程 |\n| 模型效果不达预期 | 中 | 高 | 1. PoC验证后再开发 2. 分阶段上线 3. 预留迭代时间 | 产品+算法 |\n| 竞品快速跟进 | 高 | 中 | 1. 深耕业务场景 2. 快速迭代 3. 数据飞轮 | 产品 |\n\n### 10.2 内容安全\n\n**输入审核**：\n\n*   用户输入经过敏感词检测\n*   命中敏感词的输入不进入模型，直接返回安全提示\n\n**输出审核**：\n\n*   模型输出经过敏感词过滤\n*   涉及医疗、法律、金融建议的输出，强制添加免责声明\n*   每日人工抽检100条回答\n\n**应急机制**：\n\n*   发现严重安全问题时，可一键关闭AI回答，全部转人工\n\n### 10.3 隐私保护\n\n*   用户手机号、地址等PII信息在传入模型前脱敏\n*   模型训练数据不包含可识别个人的信息\n*   用户对话记录保存90天后自动删除（法律法规要求的除外）\n*   用户可主动删除自己的对话历史\n\n### 10.4 偏见控制\n\n*   训练数据覆盖不同地区、不同年龄、不同性别的用户query\n*   定期审查模型回答是否存在性别/地域/年龄偏见\n*   对投诉中涉及\"不公平对待\"的case重点分析",
+      "source_type": "编辑补题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.5-如何写AI-PRD.md",
+        "content_hash": "b2ccd02ce8499ee688fcd47d0ffcd96690b02d951a2a332df92465223a563016",
+        "line_start": 813,
+        "line_end": 884
+      },
+      "decision": "采用",
+      "reason": "补齐原生内容安全方案自查；发布均值和数据质量不能替代任务级防泄露/越权控制。",
+      "card_keys": [
+        "ch05.interview.m05.content-safety-contract.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m05.content-safety-contract.001",
+          "required_points": [
+            "定义任务级禁止内容、数据/操作范围及后果责任",
+            "控制落到输入输出和执行边界，关键失败停止或有权限接管",
+            "测试有授权、隔离与合适数据，检验漏拦误拦并有停止条件"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 9,
+    "batch_ids": [
+      "ch05-interview-20261022-m05"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "C13": "0f9a6272e70c888df11f405c4fa870ad27fb3a9e7fb9af8769512cb8f4db9266",
+    "ch05.interview.m05.release-contract.001": "72be2fb6bfba99480699d38a268cbb204c721c0e1ea6f34ed317dbfac4d6f10d",
+    "ch05.interview.m05.data-delivery.001": "3b2e9c8e15b9d38026f6d0f676db47b8b013b08613667fcce8322a91cb0e6afe",
+    "ch05.interview.m05.failure-state.001": "b61fa598c481a20b74cdd6a3f955c5d63c50444243815cbe0e3d1b3b970b1f26",
+    "ch05.interview.m05.technical-responsibility.001": "6fd0e7173650372de251bb949f4d7f29306b9304d305aa0dfef0f08030a25057",
+    "ch05.interview.m05.fallback-ladder.001": "aeef549dde0544de66590926bc82f0651ec88da1f3cd1f0bd863cfe63b489a9b",
+    "ch05.interview.m05.ai-identity.001": "3a33fc6335027127d032e68cbb5de80b34542eeab4846fedca02dafd48c48af2",
+    "ch05.interview.m05.feedback-correction.001": "61dd2d6e492a1b27321c8bc21779a0cd3dfe41da41b8ee28c716faf1ecd8fce9",
+    "ch05.interview.m05.content-safety-contract.001": "2d53ef5ff414fbfab4dc82878ba02b3cbd1dc0b884f81b7d46ea9f37e9d6c92f"
+  }
+}

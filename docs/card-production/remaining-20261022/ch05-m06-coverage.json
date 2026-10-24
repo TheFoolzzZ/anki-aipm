@@ -1,0 +1,3384 @@
+{
+  "module_id": "5.6",
+  "module_key": "ch05-m06",
+  "source_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+  "source_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+  "lf_line_count": 1008,
+  "status": "draft",
+  "old_card_count": 5,
+  "draft_card_count": 6,
+  "new_card_count": 1,
+  "markdown_checklist_count": 0,
+  "box_item_count": 65,
+  "native_question_line_count": 30,
+  "registered": 149,
+  "registration_scope": "冻结源文中标题、含问号行、每个方框项及列明的章末行动目标；编辑目标另列，标题不计实际承载。",
+  "publication_coverage": 0,
+  "practice_completed": 0,
+  "independent_review_completed": false,
+  "objectives": [
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L1",
+      "original_text": "# 5.6 如何评估AI产品风险边界",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "# 5.6 如何评估AI产品风险边界"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L13",
+      "original_text": "## 一、为什么AI产品需要专门的风险评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 13,
+        "line_end": 13
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 一、为什么AI产品需要专门的风险评估"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L38",
+      "original_text": "## 二、AI产品六大风险类型全景图",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 38,
+        "line_end": 38
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 二、AI产品六大风险类型全景图"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L57",
+      "original_text": "## 三、模型风险：AI产品的\"原罪\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 57,
+        "line_end": 57
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 三、模型风险：AI产品的\"原罪\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L61",
+      "original_text": "### 3.1 幻觉（Hallucination）：一本正经地胡说八道",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 61,
+        "line_end": 61
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.1 幻觉（Hallucination）：一本正经地胡说八道"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L76",
+      "original_text": "| 发生概率 | 该场景下模型产生幻觉的概率是多少？ | 用测试集跑100次，统计错误率 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 76,
+        "line_end": 76
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 发生概率 | 该场景下模型产生幻觉的概率是多少？ | 用测试集跑100次，统计错误率 |"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L77",
+      "original_text": "| 错误类型 | 是\"事实性错误\"还是\"逻辑性错误\"？ | 事实性错误（如编造数据）> 逻辑性错误 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 77,
+        "line_end": 77
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 错误类型 | 是\"事实性错误\"还是\"逻辑性错误\"？ | 事实性错误（如编造数据）> 逻辑性错误 |"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L78",
+      "original_text": "| 可检测性 | 用户能否轻易发现这是幻觉？ | 专业领域用户可能发现，普通用户很难 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 78,
+        "line_end": 78
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 可检测性 | 用户能否轻易发现这是幻觉？ | 专业领域用户可能发现，普通用户很难 |"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L79",
+      "original_text": "| 影响范围 | 幻觉内容会被多少人看到？ | 1对1对话 < 公开生成的内容 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 79,
+        "line_end": 79
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 影响范围 | 幻觉内容会被多少人看到？ | 1对1对话 < 公开生成的内容 |"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L107",
+      "original_text": "### 3.2 偏见与歧视：数据里的\"社会镜像\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 107,
+        "line_end": 107
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.2 偏见与歧视：数据里的\"社会镜像\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L136",
+      "original_text": "### 3.3 模型迭代导致的回退（Regression）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 136,
+        "line_end": 136
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.3 模型迭代导致的回退（Regression）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L151",
+      "original_text": "□ 建立\"能力基线测试集\"",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 151,
+        "line_end": 151
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 建立\"能力基线测试集\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L155",
+      "original_text": "□ 每次模型升级前跑回归测试",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 155,
+        "line_end": 155
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 每次模型升级前跑回归测试"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L159",
+      "original_text": "□ 设计\"能力降级熔断机制\"",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 159,
+        "line_end": 159
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 设计\"能力降级熔断机制\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L163",
+      "original_text": "□ 保留模型版本回滚能力",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 163,
+        "line_end": 163
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 保留模型版本回滚能力"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L168",
+      "original_text": "### 3.4 黑盒不可解释：出了问题不知道\"为什么\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 168,
+        "line_end": 168
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 3.4 黑盒不可解释：出了问题不知道\"为什么\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L176",
+      "original_text": "| 模型层面 | 为什么输入A得到输出B？Transformer的注意力权重难以翻译成人话 | 技术团队也难以解释异常输出 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 176,
+        "line_end": 176
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 模型层面 | 为什么输入A得到输出B？Transformer的注意力权重难以翻译成人话 | 技术团队也难以解释异常输出 |"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L177",
+      "original_text": "| 系统层面 | 某个用户被推荐了不良内容，是模型问题还是召回策略问题？ | 责任界定困难 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 177,
+        "line_end": 177
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 系统层面 | 某个用户被推荐了不良内容，是模型问题还是召回策略问题？ | 责任界定困难 |"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L178",
+      "original_text": "| 业务层面 | AI拒绝了用户的贷款申请，具体是因为哪些因素？ | 违反\"算法可解释性\"监管要求 |",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 178,
+        "line_end": 178
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P1的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P1"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "| 业务层面 | AI拒绝了用户的贷款申请，具体是因为哪些因素？ | 违反\"算法可解释性\"监管要求 |"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L189",
+      "original_text": "## 四、数据风险：AI产品的\"生命线\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 189,
+        "line_end": 189
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 四、数据风险：AI产品的\"生命线\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L193",
+      "original_text": "### 4.1 数据泄露：训练数据的\"记忆效应\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 193,
+        "line_end": 193
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.1 数据泄露：训练数据的\"记忆效应\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L216",
+      "original_text": "### 4.2 隐私侵犯：超出用户授权的数据使用",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 216,
+        "line_end": 216
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.2 隐私侵犯：超出用户授权的数据使用"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L229",
+      "original_text": "□ 采集阶段",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 229,
+        "line_end": 229
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 采集阶段"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L230",
+      "original_text": "□ 是否明确告知用户采集了哪些数据？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 230,
+        "line_end": 230
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 是否明确告知用户采集了哪些数据？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L231",
+      "original_text": "□ 采集范围是否遵循\"最小必要原则\"？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 231,
+        "line_end": 231
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 采集范围是否遵循\"最小必要原则\"？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L232",
+      "original_text": "□ 敏感个人信息（生物识别、健康、金融等）是否获得单独同意？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 232,
+        "line_end": 232
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 敏感个人信息（生物识别、健康、金融等）是否获得单独同意？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L234",
+      "original_text": "□ 使用阶段",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 234,
+        "line_end": 234
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 使用阶段"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L235",
+      "original_text": "□ 数据使用目的是否与告知用户的一致？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 235,
+        "line_end": 235
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 数据使用目的是否与告知用户的一致？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L236",
+      "original_text": "□ 是否将用户数据用于训练？如使用，是否获得单独授权？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 236,
+        "line_end": 236
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 是否将用户数据用于训练？如使用，是否获得单独授权？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L237",
+      "original_text": "□ 是否存在数据共享给第三方的情况？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 237,
+        "line_end": 237
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 是否存在数据共享给第三方的情况？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L239",
+      "original_text": "□ 存储阶段",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 239,
+        "line_end": 239
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 存储阶段"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L240",
+      "original_text": "□ 数据存储地点是否符合法规要求（境内/跨境）？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 240,
+        "line_end": 240
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 数据存储地点是否符合法规要求（境内/跨境）？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L241",
+      "original_text": "□ 数据保留期限是否明确且合理？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 241,
+        "line_end": 241
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 数据保留期限是否明确且合理？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L242",
+      "original_text": "□ 是否采取加密等安全措施？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 242,
+        "line_end": 242
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 是否采取加密等安全措施？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L244",
+      "original_text": "□ 删除阶段",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 244,
+        "line_end": 244
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 删除阶段"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L245",
+      "original_text": "□ 用户是否有便捷的删除/注销途径？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 245,
+        "line_end": 245
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 用户是否有便捷的删除/注销途径？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L246",
+      "original_text": "□ 用户删除后，数据是否在合理时间内从所有系统清除？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 246,
+        "line_end": 246
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 用户删除后，数据是否在合理时间内从所有系统清除？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L247",
+      "original_text": "□ 已用于训练的数据，删除原始数据后模型是否仍\"记得\"？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 247,
+        "line_end": 247
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P2的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P2"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "  □ 已用于训练的数据，删除原始数据后模型是否仍\"记得\"？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L250",
+      "original_text": "### 4.3 数据投毒：污染模型的\"水源\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 250,
+        "line_end": 250
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.3 数据投毒：污染模型的\"水源\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L275",
+      "original_text": "### 4.4 训练数据版权争议",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 275,
+        "line_end": 275
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 4.4 训练数据版权争议"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L296",
+      "original_text": "## 五、伦理风险：AI的\"道德边界\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 296,
+        "line_end": 296
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 五、伦理风险：AI的\"道德边界\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L300",
+      "original_text": "### 5.1 深度伪造（Deepfake）：真假难辨的信息灾难",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 300,
+        "line_end": 300
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.1 深度伪造（Deepfake）：真假难辨的信息灾难"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L306",
+      "original_text": "*   产品是否具备生成\"真人形象\"内容的能力？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 306,
+        "line_end": 306
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   产品是否具备生成\"真人形象\"内容的能力？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L307",
+      "original_text": "*   是否对生成内容添加了不可篡改的水印/标识？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 307,
+        "line_end": 307
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   是否对生成内容添加了不可篡改的水印/标识？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L308",
+      "original_text": "*   是否建立了举报和快速下架机制？",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 308,
+        "line_end": 308
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P3的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P3"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   是否建立了举报和快速下架机制？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L310",
+      "original_text": "### 5.2 诱导性内容：AI成为\"不良导师\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 310,
+        "line_end": 310
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.2 诱导性内容：AI成为\"不良导师\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L332",
+      "original_text": "### 5.3 自动化决策的公平性",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 332,
+        "line_end": 332
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 5.3 自动化决策的公平性"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L347",
+      "original_text": "## 六、合规风险：监管的红线",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 347,
+        "line_end": 347
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 六、合规风险：监管的红线"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L351",
+      "original_text": "### 6.1 中国AI合规核心法规速览",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 351,
+        "line_end": 351
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.1 中国AI合规核心法规速览"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L361",
+      "original_text": "### 6.2 算法备案：必须完成的\"入场券\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 361,
+        "line_end": 361
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.2 算法备案：必须完成的\"入场券\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L386",
+      "original_text": "### 6.3 AIGC内容标识要求",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 386,
+        "line_end": 386
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.3 AIGC内容标识要求"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L396",
+      "original_text": "□ 文本生成场景",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 396,
+        "line_end": 396
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "□ 文本生成场景"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L397",
+      "original_text": "□ 是否在生成内容区域附近标注\"AI生成\"或类似提示？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 397,
+        "line_end": 397
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "  □ 是否在生成内容区域附近标注\"AI生成\"或类似提示？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L398",
+      "original_text": "□ 用户分享至第三方平台时，标识是否跟随？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 398,
+        "line_end": 398
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "  □ 用户分享至第三方平台时，标识是否跟随？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L400",
+      "original_text": "□ 图片/视频生成场景",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 400,
+        "line_end": 400
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "□ 图片/视频生成场景"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L401",
+      "original_text": "□ 生成结果是否带有可见的\"AI生成\"水印？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 401,
+        "line_end": 401
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "  □ 生成结果是否带有可见的\"AI生成\"水印？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L402",
+      "original_text": "□ 文件元数据中是否嵌入了不可见的数字水印？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 402,
+        "line_end": 402
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "  □ 文件元数据中是否嵌入了不可见的数字水印？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L403",
+      "original_text": "□ 水印是否防篡改（简单裁剪无法去除）？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 403,
+        "line_end": 403
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "  □ 水印是否防篡改（简单裁剪无法去除）？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L405",
+      "original_text": "□ 音频生成场景",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 405,
+        "line_end": 405
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "□ 音频生成场景"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L406",
+      "original_text": "□ 音频开头/结尾是否有AI生成声明？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 406,
+        "line_end": 406
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "  □ 音频开头/结尾是否有AI生成声明？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L407",
+      "original_text": "□ 音频文件中是否嵌入了隐式标识？",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 407,
+        "line_end": 407
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "  □ 音频文件中是否嵌入了隐式标识？"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L410",
+      "original_text": "### 6.4 跨境数据传输",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 410,
+        "line_end": 410
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 6.4 跨境数据传输"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L430",
+      "original_text": "## 七、安全风险：AI系统的\"阿喀琉斯之踵\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 430,
+        "line_end": 430
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 七、安全风险：AI系统的\"阿喀琉斯之踵\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L434",
+      "original_text": "### 7.1 Prompt注入攻击（Prompt Injection）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 434,
+        "line_end": 434
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.1 Prompt注入攻击（Prompt Injection）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L464",
+      "original_text": "### 7.2 模型越狱（Jailbreak）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 464,
+        "line_end": 464
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.2 模型越狱（Jailbreak）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L481",
+      "original_text": "### 7.3 供应链攻击",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 481,
+        "line_end": 481
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 7.3 供应链攻击"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L513",
+      "original_text": "## 八、商业风险：被忽视的\"慢性毒药\"",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 513,
+        "line_end": 513
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 八、商业风险：被忽视的\"慢性毒药\""
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L517",
+      "original_text": "### 8.1 模型供应商依赖",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 517,
+        "line_end": 517
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.1 模型供应商依赖"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L553",
+      "original_text": "### 8.2 API成本失控",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 553,
+        "line_end": 553
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.2 API成本失控"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L575",
+      "original_text": "### 8.3 竞争壁垒低",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 575,
+        "line_end": 575
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 8.3 竞争壁垒低"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L591",
+      "original_text": "## 九、风险评估矩阵：从定性到定量",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 591,
+        "line_end": 591
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 九、风险评估矩阵：从定性到定量"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L595",
+      "original_text": "### 9.1 风险矩阵构建方法",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 595,
+        "line_end": 595
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.1 风险矩阵构建方法"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L623",
+      "original_text": "### 9.2 AI产品风险评估表示例",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 623,
+        "line_end": 623
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 9.2 AI产品风险评估表示例"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L643",
+      "original_text": "4.   **记录评估过程**：为什么评这个分数？便于后续复盘和持续改进",
+      "source_type": "正文问句",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 643,
+        "line_end": 643
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "4.   **记录评估过程**：为什么评这个分数？便于后续复盘和持续改进"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L647",
+      "original_text": "## 十、风险应对策略：四种武器",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 647,
+        "line_end": 647
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 十、风险应对策略：四种武器"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L651",
+      "original_text": "### 10.1 规避（Avoid）：不做就没有风险",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 651,
+        "line_end": 651
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.1 规避（Avoid）：不做就没有风险"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L661",
+      "original_text": "### 10.2 转移（Transfer）：让更能承担风险的一方来承担",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 661,
+        "line_end": 661
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.2 转移（Transfer）：让更能承担风险的一方来承担"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L671",
+      "original_text": "### 10.3 降低（Mitigate）：投入资源减少概率或影响",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 671,
+        "line_end": 671
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.3 降低（Mitigate）：投入资源减少概率或影响"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L682",
+      "original_text": "### 10.4 接受（Accept）：准备好承受后果",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 682,
+        "line_end": 682
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 10.4 接受（Accept）：准备好承受后果"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L703",
+      "original_text": "## 十一、兜底设计原则：当AI\"不靠谱\"时怎么办",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 703,
+        "line_end": 703
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 十一、兜底设计原则：当AI\"不靠谱\"时怎么办"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L707",
+      "original_text": "### 11.1 Graceful Degradation：优雅降级",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 707,
+        "line_end": 707
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 11.1 Graceful Degradation：优雅降级"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L715",
+      "original_text": "### 11.2 人工接管（Human-in-the-Loop）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 715,
+        "line_end": 715
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 11.2 人工接管（Human-in-the-Loop）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L729",
+      "original_text": "### 11.3 安全护栏（Guardrails）",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 729,
+        "line_end": 729
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 11.3 安全护栏（Guardrails）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L739-1",
+      "original_text": "□ 输入层",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 739,
+        "line_end": 739
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输入层 □ 最大输入长度限制 □ 敏感词/敏感语义检测 □ Prompt注入特征检测 □ 请求频率限制（防暴力破解）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L739-2",
+      "original_text": "□ 最大输入长度限制",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 739,
+        "line_end": 739
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输入层 □ 最大输入长度限制 □ 敏感词/敏感语义检测 □ Prompt注入特征检测 □ 请求频率限制（防暴力破解）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L739-3",
+      "original_text": "□ 敏感词/敏感语义检测",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 739,
+        "line_end": 739
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输入层 □ 最大输入长度限制 □ 敏感词/敏感语义检测 □ Prompt注入特征检测 □ 请求频率限制（防暴力破解）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L739-4",
+      "original_text": "□ Prompt注入特征检测",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 739,
+        "line_end": 739
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输入层 □ 最大输入长度限制 □ 敏感词/敏感语义检测 □ Prompt注入特征检测 □ 请求频率限制（防暴力破解）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L739-5",
+      "original_text": "□ 请求频率限制（防暴力破解）",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 739,
+        "line_end": 739
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输入层 □ 最大输入长度限制 □ 敏感词/敏感语义检测 □ Prompt注入特征检测 □ 请求频率限制（防暴力破解）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L741-1",
+      "original_text": "□ 输出层",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 741,
+        "line_end": 741
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输出层 □ 输出长度限制 □ 内容安全分类检测 □ 与训练数据相似度检测（防泄露） □ 事实一致性校验（对结构化知识） □ 偏见检测（敏感话题额外检测）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L741-2",
+      "original_text": "□ 输出长度限制",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 741,
+        "line_end": 741
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输出层 □ 输出长度限制 □ 内容安全分类检测 □ 与训练数据相似度检测（防泄露） □ 事实一致性校验（对结构化知识） □ 偏见检测（敏感话题额外检测）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L741-3",
+      "original_text": "□ 内容安全分类检测",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 741,
+        "line_end": 741
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输出层 □ 输出长度限制 □ 内容安全分类检测 □ 与训练数据相似度检测（防泄露） □ 事实一致性校验（对结构化知识） □ 偏见检测（敏感话题额外检测）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L741-4",
+      "original_text": "□ 与训练数据相似度检测（防泄露）",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 741,
+        "line_end": 741
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输出层 □ 输出长度限制 □ 内容安全分类检测 □ 与训练数据相似度检测（防泄露） □ 事实一致性校验（对结构化知识） □ 偏见检测（敏感话题额外检测）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L741-5",
+      "original_text": "□ 事实一致性校验（对结构化知识）",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 741,
+        "line_end": 741
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输出层 □ 输出长度限制 □ 内容安全分类检测 □ 与训练数据相似度检测（防泄露） □ 事实一致性校验（对结构化知识） □ 偏见检测（敏感话题额外检测）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L741-6",
+      "original_text": "□ 偏见检测（敏感话题额外检测）",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 741,
+        "line_end": 741
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 输出层 □ 输出长度限制 □ 内容安全分类检测 □ 与训练数据相似度检测（防泄露） □ 事实一致性校验（对结构化知识） □ 偏见检测（敏感话题额外检测）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L743-1",
+      "original_text": "□ 业务层",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 743,
+        "line_end": 743
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 业务层 □ 输出格式schema校验 □ 数值范围合理性检查 □ 异常输出熔断（连续异常时降级） □ 完整审计日志"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L743-2",
+      "original_text": "□ 输出格式schema校验",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 743,
+        "line_end": 743
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 业务层 □ 输出格式schema校验 □ 数值范围合理性检查 □ 异常输出熔断（连续异常时降级） □ 完整审计日志"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L743-3",
+      "original_text": "□ 数值范围合理性检查",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 743,
+        "line_end": 743
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 业务层 □ 输出格式schema校验 □ 数值范围合理性检查 □ 异常输出熔断（连续异常时降级） □ 完整审计日志"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L743-4",
+      "original_text": "□ 异常输出熔断（连续异常时降级）",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 743,
+        "line_end": 743
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 业务层 □ 输出格式schema校验 □ 数值范围合理性检查 □ 异常输出熔断（连续异常时降级） □ 完整审计日志"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L743-5",
+      "original_text": "□ 完整审计日志",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 743,
+        "line_end": 743
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P5的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P5"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 业务层 □ 输出格式schema校验 □ 数值范围合理性检查 □ 异常输出熔断（连续异常时降级） □ 完整审计日志"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L747",
+      "original_text": "## 十二、案例一：AI招聘工具的风险评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 747,
+        "line_end": 747
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 十二、案例一：AI招聘工具的风险评估"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L751",
+      "original_text": "### 产品背景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 751,
+        "line_end": 751
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 产品背景"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L760",
+      "original_text": "### 风险识别与评估",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 760,
+        "line_end": 760
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 风险识别与评估"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L772",
+      "original_text": "### 重点风险应对方案",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 772,
+        "line_end": 772
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 重点风险应对方案"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L828",
+      "original_text": "□ 确认产品属于\"生成合成类\"算法，需要备案",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 828,
+        "line_end": 828
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "□ 确认产品属于\"生成合成类\"算法，需要备案"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L829",
+      "original_text": "□ 准备算法安全自评估报告",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 829,
+        "line_end": 829
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "□ 准备算法安全自评估报告"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L830",
+      "original_text": "□ 整理算法原理说明（非技术细节，面向监管）",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 830,
+        "line_end": 830
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "□ 整理算法原理说明（非技术细节，面向监管）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L831",
+      "original_text": "□ 在官网添加\"算法公示\"页面",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 831,
+        "line_end": 831
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "□ 在官网添加\"算法公示\"页面"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L832",
+      "original_text": "□ 提交备案申请（预留2个月审批时间）",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 832,
+        "line_end": 832
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "□ 提交备案申请（预留2个月审批时间）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L833",
+      "original_text": "□ 备案完成前，限制产品对外开放的范围",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 833,
+        "line_end": 833
+      },
+      "decision": "延期核实",
+      "reason": "本地原文不足以确认当前报价、法规适用或审批要求；不得转为事实评分，需另行核对当前第一方材料。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "deferred",
+      "source_raw_line": "□ 备案完成前，限制产品对外开放的范围"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L836",
+      "original_text": "### 产品改进后的架构",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 836,
+        "line_end": 836
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 产品改进后的架构"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L842",
+      "original_text": "## 十三、案例二：AI金融顾问的风险边界",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 842,
+        "line_end": 842
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 十三、案例二：AI金融顾问的风险边界"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L844",
+      "original_text": "### 产品背景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 844,
+        "line_end": 844
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 产品背景"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L853",
+      "original_text": "### 关键风险分析",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 853,
+        "line_end": 853
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 关键风险分析"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L865",
+      "original_text": "### 风险边界划定",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 865,
+        "line_end": 865
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 风险边界划定"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L871",
+      "original_text": "□ 推荐具体的买入/卖出时点",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 871,
+        "line_end": 871
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 推荐具体的买入/卖出时点"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L872",
+      "original_text": "□ 承诺收益率或保本",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 872,
+        "line_end": 872
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 承诺收益率或保本"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L873",
+      "original_text": "□ 代替用户执行交易",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 873,
+        "line_end": 873
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 代替用户执行交易"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L874",
+      "original_text": "□ 使用\"保证\"、\"一定\"、\"稳赚\"等词汇",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 874,
+        "line_end": 874
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 使用\"保证\"、\"一定\"、\"稳赚\"等词汇"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L875",
+      "original_text": "□ 推荐未经合规审核的金融产品",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 875,
+        "line_end": 875
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 推荐未经合规审核的金融产品"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L878",
+      "original_text": "□ 个性化投资组合建议",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 878,
+        "line_end": 878
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 个性化投资组合建议"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L879",
+      "original_text": "□ 涉及用户具体持仓的分析",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 879,
+        "line_end": 879
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 涉及用户具体持仓的分析"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L880",
+      "original_text": "□ 税务、法律相关的财务建议",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 880,
+        "line_end": 880
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 税务、法律相关的财务建议"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L883",
+      "original_text": "□ 市场资讯的整理和解读（注明来源）",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 883,
+        "line_end": 883
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 市场资讯的整理和解读（注明来源）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L884",
+      "original_text": "□ 金融知识科普教育",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 884,
+        "line_end": 884
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 金融知识科普教育"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L885",
+      "original_text": "□ 基于公开数据的统计分析",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 885,
+        "line_end": 885
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 基于公开数据的统计分析"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L886",
+      "original_text": "□ 通用性的资产配置框架（非个性化）",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 886,
+        "line_end": 886
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 通用性的资产配置框架（非个性化）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L887",
+      "original_text": "□ 投资理念和风险提示",
+      "source_type": "方框条目",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 887,
+        "line_end": 887
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "□ 投资理念和风险提示"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L890",
+      "original_text": "### 产品架构设计",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 890,
+        "line_end": 890
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 产品架构设计"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L907",
+      "original_text": "## 十四、案例三：AI医疗辅助诊断的风险边界",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 907,
+        "line_end": 907
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 十四、案例三：AI医疗辅助诊断的风险边界"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L909",
+      "original_text": "### 产品背景",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 909,
+        "line_end": 909
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 产品背景"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L913",
+      "original_text": "### 核心风险识别",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 913,
+        "line_end": 913
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 核心风险识别"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L925",
+      "original_text": "### 风险应对架构",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 925,
+        "line_end": 925
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 风险应对架构"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L951",
+      "original_text": "### 特殊设计：防止医生过度依赖",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 951,
+        "line_end": 951
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "### 特殊设计：防止医生过度依赖"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L984",
+      "original_text": "## 写在最后",
+      "source_type": "正文标题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 984,
+        "line_end": 984
+      },
+      "decision": "不纳入",
+      "reason": "标题只作定位，不是独立题目，不据标题声称覆盖；其正文问句、清单和编辑能力目标另有逐项记录。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "navigation_only",
+      "source_raw_line": "## 写在最后"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L988",
+      "original_text": "1.   **AI产品风险与传统软件风险有本质区别**：概率性、不确定性、黑盒性要求我们建立全新的评估框架。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 988,
+        "line_end": 988
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "1.   **AI产品风险与传统软件风险有本质区别**：概率性、不确定性、黑盒性要求我们建立全新的评估框架。"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L990",
+      "original_text": "2.   **六大风险类型必须全面扫描**：模型风险、数据风险、伦理风险、合规风险、安全风险、商业风险，缺一不可。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 990,
+        "line_end": 990
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "2.   **六大风险类型必须全面扫描**：模型风险、数据风险、伦理风险、合规风险、安全风险、商业风险，缺一不可。"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L992",
+      "original_text": "3.   **风险评估不是一次性工作**：应该在PRD完成后启动，在开发过程中持续更新，在产品上线后定期复评。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 992,
+        "line_end": 992
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "3.   **风险评估不是一次性工作**：应该在PRD完成后启动，在开发过程中持续更新，在产品上线后定期复评。"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L994",
+      "original_text": "4.   **兜底设计是AI产品的必备能力**：优雅降级、人工接管、安全护栏，当AI\"不靠谱\"时，你的产品仍然要\"靠谱\"。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 994,
+        "line_end": 994
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "4.   **兜底设计是AI产品的必备能力**：优雅降级、人工接管、安全护栏，当AI\"不靠谱\"时，你的产品仍然要\"靠谱\"。"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L996",
+      "original_text": "5.   **合规是底线，伦理是高线**：不违法只是最低要求，负责任的产品应该在伦理层面也经得起考验。",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 996,
+        "line_end": 996
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "5.   **合规是底线，伦理是高线**：不违法只是最低要求，负责任的产品应该在伦理层面也经得起考验。"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L1002",
+      "original_text": "*   风险清单（持续更新）",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 1002,
+        "line_end": 1002
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   风险清单（持续更新）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L1003",
+      "original_text": "*   风险矩阵（定期复评）",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 1003,
+        "line_end": 1003
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   风险矩阵（定期复评）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L1004",
+      "original_text": "*   应对措施和负责人",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 1004,
+        "line_end": 1004
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   应对措施和负责人"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05-m06-L1005",
+      "original_text": "*   风险事件记录（事后复盘）",
+      "source_type": "原文总结或行动目标",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 1005,
+        "line_end": 1005
+      },
+      "decision": "实践任务",
+      "reason": "该项需产物和检查证据；按P6的字段及验收逐项设计，尚未执行。",
+      "card_keys": [],
+      "mother_question_ids": [],
+      "practice_task_ids": [
+        "P6"
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "practice_design_only",
+      "source_raw_line": "*   风险事件记录（事后复盘）"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.risk-event-chain.001",
+      "original_text": "## 二、AI产品六大风险类型全景图\n\n在进入每一类风险的详细分析之前，我们先建立一张全景地图。以下是AI产品最常见的六大风险类型及其核心特征：\n\n| 风险类型 | 核心定义 | 典型表现 | 严重程度 |\n| --- | --- | --- | --- |\n| **模型风险** | 模型本身的能力局限或异常行为导致产品输出错误 | 幻觉、偏见、回退、不可解释 | ⭐⭐⭐⭐⭐ |\n| **数据风险** | 数据的采集、存储、使用过程中出现的问题 | 泄露、隐私侵犯、投毒、版权争议 | ⭐⭐⭐⭐⭐ |\n| **伦理风险** | AI行为对社会伦理道德造成的冲击 | 深度伪造、诱导内容、决策不公 | ⭐⭐⭐⭐ |\n| **合规风险** | 违反法律法规和监管要求 | 未备案、未标识、跨境传输违规 | ⭐⭐⭐⭐⭐ |\n| **安全风险** | 恶意攻击者利用AI系统漏洞 | Prompt注入、越狱、供应链攻击 | ⭐⭐⭐⭐ |\n| **商业风险** | AI技术特性对商业模式的负面影响 | 供应商依赖、成本不可控、壁垒低 | ⭐⭐⭐ |\n\n重要提醒\n\n这六大风险不是孤立存在的。一次严重的事故往往是多种风险叠加的结果。比如\"AI招聘工具歧视女性候选人\"，表面上是**模型风险**（训练数据偏见），背后可能涉及**数据风险**（历史招聘数据本身带有性别偏见）、**伦理风险**（自动化决策不公平）、**合规风险**（违反《个人信息保护法》中关于自动化决策的规定）。因此，评估时必须进行**交叉分析**。\n\n* * *",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 38,
+        "line_end": 55
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m06.risk-event-chain.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m06.risk-event-chain.001",
+          "required_points": [
+            "事件链包含输入/判断、动作、受影响对象及后果，原因待证",
+            "风险记录含证据/严重度检测性、控制、负责人和验证",
+            "停动作后仍检查排序/评分及纠错，记录剩余风险"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.matrix-residual.001",
+      "original_text": "## 九、风险评估矩阵：从定性到定量\n\n识别了风险之后，我们需要一个系统的方法来评估和排序这些风险。最经典的工具就是**风险矩阵**。\n\n### 9.1 风险矩阵构建方法\n\n风险值 = 发生概率 × 影响程度\n\n**发生概率评级**：\n\n| 等级 | 概率范围 | 描述 |\n| --- | --- | --- |\n| 1-罕见 | <1% | 几乎不可能发生，或历史上从未发生 |\n| 2-不太可能 | 1%-10% | 在特定条件下可能发生 |\n| 3-可能 | 10%-50% | 有一定可能性，需要关注 |\n| 4-很可能 | 50%-90% | 大概率会发生，必须准备应对方案 |\n| 5-几乎确定 | >90% | 必然发生或已经发生 |\n\n**影响程度评级**：\n\n| 等级 | 影响范围 | 描述 |\n| --- | --- | --- |\n| 1-轻微 | 个别用户体验受影响 | 可快速修复，无负面传播 |\n| 2-较小 | 部分功能异常 | 需要发版修复，小范围投诉 |\n| 3-中等 | 核心功能受损或用户数据轻微泄露 | 媒体关注，监管问询 |\n| 4-严重 | 大量用户数据泄露或系统长时间不可用 | 大规模投诉，监管处罚，品牌受损 |\n| 5-灾难 | 用户人身安全受威胁或公司面临倒闭风险 | 法律诉讼，吊销牌照，社会事件 |\n\n**风险等级划分**：\n\n![Image 2](https://res.cloudinary.com/de6byedfx/image/upload/v1785751318/202608/ai-pm-guide/chapter-05/f4ad10-02-58280c07e0b3.png)\n\n### 9.2 AI产品风险评估表示例\n\n假设你在评估一个\"AI智能招聘助手\"产品：\n\n| 风险项 | 概率 | 影响 | 风险值 | 等级 | 优先级 |\n| --- | --- | --- | --- | --- | --- |\n| 模型产生幻觉，错误解读候选人经历 | 4 | 3 | 12 | 高 | P1 |\n| 训练数据偏见导致性别/年龄歧视 | 3 | 4 | 12 | 高 | P1 |\n| 候选人简历数据泄露 | 2 | 5 | 10 | 高 | P1 |\n| 未进行算法备案被监管处罚 | 2 | 4 | 8 | 中 | P2 |\n| API供应商涨价50% | 3 | 3 | 9 | 中 | P2 |\n| Prompt注入导致内部评价泄露 | 2 | 3 | 6 | 中 | P3 |\n| 模型版本升级后中文理解能力下降 | 3 | 2 | 6 | 中 | P3 |\n| 生成的面试问题涉及隐私敏感话题 | 2 | 2 | 4 | 低 | P4 |\n\n评估实践建议\n\n1.   **概率不要拍脑袋**：基于测试数据、历史案例、行业报告来估算\n2.   **影响要跨部门讨论**：技术团队、法务、运营、客服各抒己见\n3.   **定期复评**：每季度或每次重大版本更新后重新评估\n4.   **记录评估过程**：为什么评这个分数？便于后续复盘和持续改进\n\n* * *",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 591,
+        "line_end": 645
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m06.matrix-residual.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m06.matrix-residual.001",
+          "required_points": [
+            "相同等级乘积不表示性质或可接受性相同",
+            "补看后果严重度、可逆性、暴露、检测性及硬边界",
+            "控制需验证并明确剩余风险接受责任和复评/停止条件"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.risk-treatment.001",
+      "original_text": "## 十、风险应对策略：四种武器\n\n对于评估出的风险，我们有四种基本应对策略：\n\n### 10.1 规避（Avoid）：不做就没有风险\n\n**适用场景**：风险极高且无法有效控制时，选择不开展相关业务。\n\n**AI产品实例**：\n\n*   不提供AI医疗诊断功能（规避医疗事故责任和监管风险）\n*   不提供面向未成年人的AI情感陪伴功能（规避伦理争议）\n*   不在金融投资建议中使用未经充分验证的模型（规避法律责任）\n\n### 10.2 转移（Transfer）：让更能承担风险的一方来承担\n\n**适用场景**：风险存在，但通过保险、合同条款等方式将损失转移。\n\n**AI产品实例**：\n\n*   购买**网络安全责任险**和**技术错误与遗漏险（E&O）**\n*   在用户协议中明确AI生成内容的免责声明（注意：不能免除法定义务）\n*   使用第三方模型时，在合同中明确数据安全和内容安全的责任划分\n\n### 10.3 降低（Mitigate）：投入资源减少概率或影响\n\n**适用场景**：风险值得承担，但需要投入资源将其控制在可接受范围内。\n\n**AI产品实例**：\n\n*   增加人工审核环节降低模型输出的错误影响\n*   建立安全护栏系统降低Prompt注入的成功概率\n*   做多供应商灾备降低单点故障的影响\n*   定期安全审计和渗透测试\n\n### 10.4 接受（Accept）：准备好承受后果\n\n**适用场景**：风险较低，或者降低风险的成本高于风险本身的损失。\n\n**AI产品实例**：\n\n*   偶尔出现的轻微格式错误，由用户手动修正\n*   小模型在简单任务上的性能略低于大模型（为成本做的权衡）\n*   新产品上线初期的少量用户投诉（属于产品迭代的正常成本）\n\n**风险应对策略选择矩阵**：\n\n| 风险等级 | 推荐策略 | 决策依据 |\n| --- | --- | --- |\n| 极高（17-25分） | 优先规避，次选转移 | 一旦发生，公司可能无法承受 |\n| 高（10-16分） | 重点降低，结合转移 | 需要投入专项资源控制 |\n| 中（5-9分） | 适度降低，部分接受 | 纳入日常监控和改进 |\n| 低（1-4分） | 接受为主，例行监控 | 不必投入过多资源 |",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 647,
+        "line_end": 699
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m06.risk-treatment.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m06.risk-treatment.001",
+          "required_points": [
+            "规避改变活动范围，降低改变概率或后果",
+            "转移涉及承担安排，接受须负责人明确承受剩余风险并监控",
+            "免责声明不证明风险消除/责任免除，不能替代有效控制和授权"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.human-review-bias.001",
+      "original_text": "### 特殊设计：防止医生过度依赖\n\n```\n【对抗\"自动化偏见\"的产品设计】\n\n自动化偏见：人类倾向于过度信任自动化系统的输出，即使系统明显出错。\n\n设计方案：\n\n1. 显示AI的\"不确定性\"\n   - 不仅给出结论，还给出置信度\n   - \"肺结节恶性概率：67%（中等不确定，建议进一步检查）\"\n\n2. 提供\"对立观点\"\n   - AI主动列出\"如果判断错误，最可能的替代诊断是什么\"\n   - 促使医生进行批判性思考\n\n3. 定期\"静默测试\"\n   - 系统偶尔（如1%的概率）在低风险场景中注入已知错误的提示\n   - 统计医生是否正确识别并纠正\n   - 如果医生纠错率低，触发培训提醒\n\n4. 强制确认关键决策\n   - 涉及手术、用药等关键决策时，要求医生手动输入理由\n   - 不是简单的勾选，而是文字输入\n```\n\n医疗AI的底线",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 951,
+        "line_end": 978
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m06.human-review-bias.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m06.human-review-bias.001",
+          "required_points": [
+            "审核有资料/能力/时间和拒改权限，按识错纠错而非点击率评价",
+            "验证先获授权，仅用合适数据在离线/隔离模拟，不影响真实决定",
+            "根据漏错改善支持与负荷并复测，结果限定测试范围"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.deletion-scope.001",
+      "original_text": "### 4.2 隐私侵犯：超出用户授权的数据使用\n\n**典型场景**：\n\n*   AI对话产品记录用户对话用于\"产品改进\"，但未明确告知\n*   AI健康助手要求获取用户位置、通讯录等无关权限\n*   用户删除账户后，其数据仍在训练集中存在\n\n**合规检查清单**：\n\n```\n【数据隐私合规自检表】\n\n□ 采集阶段\n  □ 是否明确告知用户采集了哪些数据？\n  □ 采集范围是否遵循\"最小必要原则\"？\n  □ 敏感个人信息（生物识别、健康、金融等）是否获得单独同意？\n  \n□ 使用阶段\n  □ 数据使用目的是否与告知用户的一致？\n  □ 是否将用户数据用于训练？如使用，是否获得单独授权？\n  □ 是否存在数据共享给第三方的情况？\n  \n□ 存储阶段\n  □ 数据存储地点是否符合法规要求（境内/跨境）？\n  □ 数据保留期限是否明确且合理？\n  □ 是否采取加密等安全措施？\n  \n□ 删除阶段\n  □ 用户是否有便捷的删除/注销途径？\n  □ 用户删除后，数据是否在合理时间内从所有系统清除？\n  □ 已用于训练的数据，删除原始数据后模型是否仍\"记得\"？\n```",
+      "source_type": "编辑改写旧卡",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 216,
+        "line_end": 248
+      },
+      "decision": "采用",
+      "reason": "保留旧学习目标逐题重构，非加序号。",
+      "card_keys": [
+        "ch05.interview.m06.deletion-scope.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m06.deletion-scope.001",
+          "required_points": [
+            "登记原始及派生/共享/备份位置、用途和责任范围",
+            "逐处核对保留清除策略、负责人及完成/回流证据",
+            "承诺限实际证据，不由删表推出全部删除或模型遗忘"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    },
+    {
+      "module_id": "5.6",
+      "objective_id": "ch05.interview.m06.appeal-evidence.001",
+      "original_text": "### 3.4 黑盒不可解释：出了问题不知道\"为什么\"\n\n**定义**：模型的决策过程无法被人类理解和追溯，导致出错后难以定位根因、难以向用户解释、难以通过监管审查。\n\n**不可解释性的三层含义**：\n\n| 层面 | 问题描述 | 产品影响 |\n| --- | --- | --- |\n| 模型层面 | 为什么输入A得到输出B？Transformer的注意力权重难以翻译成人话 | 技术团队也难以解释异常输出 |\n| 系统层面 | 某个用户被推荐了不良内容，是模型问题还是召回策略问题？ | 责任界定困难 |\n| 业务层面 | AI拒绝了用户的贷款申请，具体是因为哪些因素？ | 违反\"算法可解释性\"监管要求 |\n\n可解释性提升方案\n\n1.   **输出附带推理链**：让模型先生成思考过程，再给出结论（Chain-of-Thought）\n2.   **关键因子高亮**：在推荐、评分等场景，标注影响结果的核心因素\n3.   **相似案例引用**：\"您的申请被拒绝，与案例#12345的情况类似\"\n4.   **分层解释**：给普通用户简单解释，给专业用户详细解释，给监管完整的技术报告",
+      "source_type": "编辑补题",
+      "source_ref": {
+        "relative_path": "第5章-AI产品设计/5.6-如何评估AI产品风险边界.md",
+        "content_hash": "136710bead61cfe38c5a15925df2cde9969ae67f5ebf80215ef544e2e22f4351",
+        "line_start": 168,
+        "line_end": 185
+      },
+      "decision": "采用",
+      "reason": "编辑补题：本课不可解释风险与招聘案例未形成面向受影响用户的独立纠错评分目标。",
+      "card_keys": [
+        "ch05.interview.m06.appeal-evidence.001"
+      ],
+      "mother_question_ids": [
+        "M1"
+      ],
+      "practice_task_ids": [],
+      "answer_evidence": [
+        {
+          "card_key": "ch05.interview.m06.appeal-evidence.001",
+          "required_points": [
+            "解释依据可核对且限允许数据，模型生成理由不充作实际原因",
+            "申诉有状态/负责人和有权人工复核，必要时暂停后续动作",
+            "证实错误后同步更正并反馈和回归，不以文案结案"
+          ]
+        }
+      ],
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "fulfillment": "draft_card"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 6,
+    "batch_ids": [
+      "ch05-interview-20261022-m06"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch05.interview.m06.risk-event-chain.001": "63d0962e7119b90a1ebcfa2b0950b913df18966e9b83010f668a12f4bbeda7c5",
+    "ch05.interview.m06.matrix-residual.001": "86faf69d01500f7a3635d90799980891af0a0d4aa876374bd0f288565619fa5f",
+    "ch05.interview.m06.risk-treatment.001": "c1346a767ae4b65bad64ca9089356e89a2fd05ad8897751139fad9c22cdf4f4a",
+    "ch05.interview.m06.human-review-bias.001": "2a17ace7d07523aa18f3a96932b0d70edf279d926cfeb6a406a7c1d89cb1e3c8",
+    "ch05.interview.m06.deletion-scope.001": "0f158437a77a5c4c6172e1ddac59dcc99f13d2d935be0b5b68d39d2d905af823",
+    "ch05.interview.m06.appeal-evidence.001": "9d88c399f17357711696f2f626fe6eb035dd7d645a63c8e0268e7e10e17db4b8"
+  }
+}

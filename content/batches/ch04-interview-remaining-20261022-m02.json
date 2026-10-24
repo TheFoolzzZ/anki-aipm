@@ -1,0 +1,187 @@
+{
+  "batch_id": "ch04-interview-remaining-20261022-m02",
+  "status": "accepted",
+  "chapter_position": 4,
+  "cards": [
+    {
+      "canonical_key": "ch04.interview.m02.three-surface-contract.001",
+      "lesson_source_key": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+      "concept_keys": [
+        "interview.ch04.m02.three-surface-contract"
+      ],
+      "revision": 2,
+      "position": 1201,
+      "title": "沿一条任务接通后端、管理端和插件",
+      "kind": "场景判断",
+      "prompt": "假设求职助手有后端、管理端、浏览器插件三工程。以“选档案→预览→填网页”为最小流程，你怎样分工、约定接口并验收集成？",
+      "answer_short": "S｜假设三工程各能启动，但选档案后还不能可靠填网页。\nT｜我要接通一条经授权的档案填写链路。\nA｜一、后端管理身份、档案服务与存储，管理端维护配置，插件识别页面并提供预览纠错；二、约定用户权限、档案ID/版本、字段格式与成功/失败状态，后台密钥不下发插件；三、用测试档案走完读取、映射、预览和填写，检查管理端改配置后插件读到的版本，并测无权或失败响应。\nR｜数据和错误在三端一致才算接通；各页能打开或接口单测通过不能代替集成。",
+      "required_points": [
+        "明确后端服务存储、管理配置、插件页面交互三类职责",
+        "契约含身份权限、档案/配置版本、字段与结果；不向插件暴露后台密钥",
+        "沿同一测试任务验证数据、版本和错误流转，不以各端启动代替集成"
+      ],
+      "pitfalls": "不把编辑分工冒充案例真实架构；服务端仍须执行权限校验，插件不持有数据库管理凭据。",
+      "explanation": "【依据】原文L43列三工程，L11–13列填写、诊断和档案目标，未提供源码；上述分工、契约与验收均为编辑设计。\n【例子】假设档案A为v2，配置把“学校”映射到教育控件；插件读到v1就应暴露版本差异，不能静默用旧字段。服务拒绝读取他人档案时，插件不能继续拿缓存冒充本次授权成功。\n【追问】原文的SpringBoot与Vue3是否必选？不是；技术名录不等于任务契约，须结合团队与运行环境选型。\n【边界】插件负责页面交互不等于它可直接访问后台数据库；配置管理也不能替代业务校验。\n【自评】职责、带权限的契约、整链路证据三点都必答；只列三个工程名未掌握。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 11,
+          "line_end": 16
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 24,
+          "line_end": 37
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 41,
+          "line_end": 47
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "codex-independent-ch04-06-07-20261022",
+        "notes": [
+          "本课后端、后台与插件三个交付面被落实到身份/档案ID版本、字段契约和失败状态；后端凭据不能由插件携带。",
+          "档案选择到预览填写的跨端链路及越权反例支持评分；答案没有声称项目已有真实上线或所有招聘站适配。",
+          "独立审校当前内容指纹: bee04cb70e63fd3d99852efd109a57c26d50c8b07bf1ccc850deaa76b8370ac7",
+          "审校记录: review-ch04-06-07.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m02.page-context.001",
+      "lesson_source_key": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+      "concept_keys": [
+        "interview.ch04.m02.page-context"
+      ],
+      "revision": 2,
+      "position": 1202,
+      "title": "简历JSON到页面填写之间缺什么",
+      "kind": "机制",
+      "prompt": "后端已返回简历JSON，为什么还不能直接填写任意招聘页？请说明content script在页面中的作用、与页面JavaScript的关系，以及访问权限边界。",
+      "answer_short": "一、JSON只是业务数据，还要识别目标页面、字段与控件，把简历字段映射为页面可接受的填写动作；输入框、下拉框和动态表单不能一律按字符串赋值。\n二、content script可在页面上下文中读写DOM；默认隔离的JavaScript环境不等于DOM隔离，也不表示能直接读取页面脚本变量。它可通过消息与扩展其他部分协作。\n三、访问取决于注入方式、匹配范围和相应权限；不能假设有后台凭据就能读取所有网站或跨域框架。范围不足或映射不明时提示不支持、交用户处理，不盲填。",
+      "required_points": [
+        "从业务JSON到具体页面字段/控件仍需识别、映射和页面行为适配",
+        "说明content script共享DOM、默认隔离JS变量及消息协作的区别",
+        "注入/匹配及权限有范围；不默认覆盖所有网站或框架，未知时停止盲填"
+      ],
+      "pitfalls": "默认JS隔离与共享DOM同时成立；具体注入和frame权限按实际配置检查，不用权限不足当理由绕过网站限制。",
+      "explanation": "【来源界定】本地L42、45只提出学习插件和约束规范，未讲执行上下文；本卡机制是显式编辑补充，并已于2026-10-22核对[Chrome官方content scripts文档](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts)。本地refs只锚定补题缘由，不冒充机制原文。\n【例子】假设A站“学校”为输入框，B站需搜索后选下拉项；同一JSON要用不同页面适配。\n【追问】隔离世界是否保证页面无法影响填写结果？不能；DOM仍共享，页面重新渲染可能覆盖值，填写结果要在实际页面核对。\n【边界】不声称原案例使用某种manifest或注入API，也不承诺任意站点适配。\n【自评】三项必答都需说清；把JS隔离理解成DOM不可访问，或把插件身份当全站授权，均未掌握。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 11,
+          "line_end": 11
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 41,
+          "line_end": 45
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "codex-independent-ch04-06-07-20261022",
+        "notes": [
+          "区分JSON生成、DOM定位与页面运行上下文；共享DOM不等于能直接读取页面JS变量，默认隔离与通信解释准确。",
+          "Chrome官方content scripts概念页支持默认隔离世界及与扩展通信的补充机制；当前课本地短原文只作插件主题线索，作者已标明编辑补充。",
+          "独立审校当前内容指纹: c027e1f38909641472851aa54311d6e6e1aec2e4fa0e42286f8e63511c5a8f55",
+          "审校记录: review-ch04-06-07.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m02.fill-versus-submit.001",
+      "lesson_source_key": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+      "concept_keys": [
+        "interview.ch04.m02.fill-versus-submit"
+      ],
+      "revision": 2,
+      "position": 1203,
+      "title": "填写、提交和业务成功分别验收",
+      "kind": "场景判断",
+      "prompt": "假设求职插件把手机号和学校填进控件，就显示“已投递”。你怎样改成功判定和用户控制？如果提交后超时，该怎么处理？",
+      "answer_short": "S｜假设插件只填了字段，却把状态标成已投递。\nT｜我要让状态只反映已取得的证据，保留用户提交决定。\nA｜一、先核对字段映射及页面是否接受输入、必填校验是否通过，此时最多报已填写；二、展示预览让用户纠错，只有用户明确决定才提交；三、提交后按页面可信业务回执或经授权的申请记录核对，超时先标结果未知并查状态，不能盲目重投。\nR｜只有与当前申请对应的成功证据才报已投递；页面不支持或结果未明就提示手工核对，不能用控件有值替代业务完成。",
+      "required_points": [
+        "区分控件有值、页面接受/校验、提交及业务成功，提示与已证状态一致",
+        "填写后保留预览纠错与用户提交决定，不从填写授权推导投递授权",
+        "超时标结果未知，核对对应回执/记录后再判断；不盲目重复投递"
+      ],
+      "pitfalls": "原文一键填写不是一键投递授权；不在真实招聘系统做未获授权的验收投递。",
+      "explanation": "【依据】原文L11声称一键填写，L47提到上线；它没有给出提交或成功判定实现。这里的状态链和恢复规则是编辑设计，不把截图当业务回执。\n【例子】假设框里显示手机号，但页面组件校验仍报必填；这连页面接受都没证实。若提交请求已生效、响应丢失，立即重投可能重复申请。\n【追问】弹出绿色“成功”就足够吗？先核对该提示由谁产生、对应哪次申请，避免把插件自己生成的文案当站点成功。\n【边界】招聘站点未提供可查状态时，停在未知并人工核对，不编造已完成或自动重复。\n【自评】三项都必答；“失败就重试”或“填完自动提交”均与题面授权和安全条件冲突。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 11,
+          "line_end": 13
+        },
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 42,
+          "line_end": 47
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "codex-independent-ch04-06-07-20261022",
+        "notes": [
+          "字段写入、页面校验接受、服务端提交结果是三个不同状态；状态核验而非再次点击是超时未知场景的关键机制。",
+          "预览纠正和用户提交意图保留，填充成功不推导已投递；例子与自评都不要求越权自动提交。",
+          "独立审校当前内容指纹: 408bd1b79f33d7f685e1bc70aa35106a411349641d10bb49bf070bd0c11c3042",
+          "审校记录: review-ch04-06-07.json"
+        ]
+      }
+    },
+    {
+      "canonical_key": "ch04.interview.m02.delivery-gate.001",
+      "lesson_source_key": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+      "concept_keys": [
+        "interview.ch04.m02.delivery-gate"
+      ],
+      "revision": 1,
+      "position": 1204,
+      "title": "修完Bug之后还缺哪些交付证据",
+      "kind": "场景判断",
+      "prompt": "假设求职插件的开发者说“Bug修完，可以上线”，但没有安装复现记录或恢复方案。PM怎样补足这次交付与接手条件？若涉及数据变更，回退能否只恢复代码？",
+      "answer_short": "S｜假设本地修复通过，却缺安装复现和恢复证据。\nT｜我要让同伴能验收、接手并处置发布失败。\nA｜一、固定代码、构建与配置版本，交付安装运行步骤、最小权限说明和脱敏测试档案；二、在获准环境由另一人走通档案选择、预览、填写与失败路径，记录已测和未支持站点；三、明确发布负责人、观察项、停止条件与恢复负责人，分开检查代码、配置和数据变更的恢复。\nR｜证据未齐不据“修完”放行；只恢复代码不能自动撤销数据写入，数据修复须核对真实状态并按授权方案处理。",
+      "required_points": [
+        "交付可复现版本、安装运行与配置权限说明及安全测试数据",
+        "由接手者按关键成功/失败路径验收，明确支持和未验证范围",
+        "明确发布/观察/停止/恢复责任；代码回退不能自动撤销数据，按真实状态处理"
+      ],
+      "pitfalls": "验收和恢复方案本轮仅设计，未安装、未运行、未上线；不操作真实简历与投递，不因回退破坏其他作者改动。",
+      "explanation": "【补题理由】L41、45、47要求基础工具、技术规范及修Bug上线，旧三卡未独立考可接手交付与恢复。以下是编辑设计，不表示本案例已经发布。\n【例子】假设插件回到旧版，但档案字段已迁移，旧版无法读取；必须核对数据格式兼容及恢复方案，而不能说“Git回退即恢复全部”。只复制旧安装包也不能证明权限和配置一致。\n【追问】要让AI自动上线验证才算完成吗？不必；测试、发布是不同权限动作，应由获授权负责人按准备好的版本与证据决策。\n【边界】回滚不得覆盖其他作者改动，不从测试环境成功推出所有招聘站点通用。\n【自评】三项均必答；只给安装包、忽略未测范围或把代码回退等同数据恢复，均未掌握。",
+      "estimated_seconds": 90,
+      "source_refs": [
+        {
+          "relative_path": "第4章-VibeCoding/4.2-VibeCoding实战.md",
+          "content_hash": "0b2f64efde1c445d6a82332a60bc2e4ac8211940ada87fd32f0fb71d45fcfa4a",
+          "line_start": 41,
+          "line_end": 47
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "codex-independent-ch04-06-07-20261022",
+        "notes": [
+          "安装复现、版本配置、交接人和失败恢复均有具体交付物；数据迁移反例正确否定Git回退等于全部恢复。",
+          "第8维为1：安装、跨站支持边界、发布观察及代码/配置/数据恢复同卡并列，90秒负担偏重；仍围绕可接手交付这一目标，三项可归组表达。",
+          "独立审校当前内容指纹: c4575eb78a9bc0eeacec3967e36e3391b95e55891b21c7c70c1876c1bdcec99d",
+          "审校记录: review-ch04-06-07.json"
+        ]
+      }
+    }
+  ]
+}

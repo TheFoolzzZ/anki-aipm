@@ -1,0 +1,668 @@
+{
+  "status": "editorial_registration",
+  "records": 41,
+  "practice_executed": 0,
+  "note": "补充模块台账未单列的标题/过渡/因果设问。登记不等于题卡覆盖；附两项实际稳定目标合并，其余均不声明已发布掌握。",
+  "candidates": [
+    {
+      "module_key": "ch08-m01",
+      "objective_id": "ch08-m01-extra-L85",
+      "original_text": "### 1. 阿里在做什么？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+        "content_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+        "line_start": 85,
+        "line_end": 85
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m01",
+      "objective_id": "ch08-m01-extra-L140",
+      "original_text": "## 五、深度产品思考：为什么选择不同？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+        "content_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+        "line_start": 140,
+        "line_end": 140
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m02",
+      "objective_id": "ch08-m02-extra-L1",
+      "original_text": "# 8.2 多家大厂同时砍掉智能体，产品经理怎么看？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+        "content_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m02",
+      "objective_id": "ch08-m02-extra-L5",
+      "original_text": "## 多家大厂同时砍掉智能体，产品经理怎么看？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.2-多家大厂同时砍掉智能体，产品经理怎么看？.md",
+        "content_hash": "6c87f0ac77f045192e2653edfe3fa07a4a63ec43e996f59f37aa7d99f7119f03",
+        "line_start": 5,
+        "line_end": 5
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m03",
+      "objective_id": "ch08-m03-extra-L1",
+      "original_text": "# 8.3 腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+        "content_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m03",
+      "objective_id": "ch08-m03-extra-L3",
+      "original_text": "## 腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+        "content_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m03",
+      "objective_id": "ch08-m03-extra-L70",
+      "original_text": "产品经理需要的不是追每一个新模型，而是想清楚：你的产品在 Agent 时代，能替用户完成什么闭环？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.3-腾讯混元Hy3发布，元宝上线Agent功能，产品经理怎么看？.md",
+        "content_hash": "6c4cfd4c64fab04bf433afe875fd1f870a55b0633332f8170f307bcec2c7cd8a",
+        "line_start": 70,
+        "line_end": 70
+      },
+      "decision": "合并",
+      "reason": "稳定闭环判断已由文件交付卡的题面/评分承载：生成文件不等于实际可交差；不从此推广所有平台已实现某能力。",
+      "card_keys": [
+        "ch08.interview.m03.file-delivery.001"
+      ],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m04",
+      "objective_id": "ch08-m04-extra-L1",
+      "original_text": "# 8.4 阿里全面禁用Claude Code，Agent时代的安全边界在哪里？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+        "content_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m04",
+      "objective_id": "ch08-m04-extra-L3",
+      "original_text": "## 阿里全面禁用Claude Code，Agent时代的安全边界在哪里？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+        "content_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m04",
+      "objective_id": "ch08-m04-extra-L17",
+      "original_text": "## 二、为什么 Agent 的安全问题比传统 AI 工具更严重？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.4-阿里全面禁用Claude-Code，Agent时代的安全边界在哪里？.md",
+        "content_hash": "d2ae08a12124261cf05d760077a624c65b7a96efa48d35f638940ca2b0f79af4",
+        "line_start": 17,
+        "line_end": 17
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m05",
+      "objective_id": "ch08-m05-extra-L24",
+      "original_text": "## 二、腾讯在做的是什么？任务型 Agent",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+        "content_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+        "line_start": 24,
+        "line_end": 24
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m05",
+      "objective_id": "ch08-m05-extra-L43",
+      "original_text": "## 三、为什么陪伴型被监管，任务型在崛起？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.5-千问豆包下线-智能体-，腾讯却All-in：两种智能体的分野.md",
+        "content_hash": "597bb9659a1a471e52a57e639862342d047b5f1fca697ae98f2115fb46087486",
+        "line_start": 43,
+        "line_end": 43
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m06",
+      "objective_id": "ch08-m06-extra-L1",
+      "original_text": "# 8.6 微信\"小微\"灰度测试，超级App如何做AI入口？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+        "content_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m06",
+      "objective_id": "ch08-m06-extra-L3",
+      "original_text": "## 微信\"小微\"灰度测试，超级App如何做AI入口？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+        "content_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m06",
+      "objective_id": "ch08-m06-extra-L23",
+      "original_text": "## 二、\"小微\"到底在做什么？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+        "content_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+        "line_start": 23,
+        "line_end": 23
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m06",
+      "objective_id": "ch08-m06-extra-L51",
+      "original_text": "## 四、平台博弈：谁掌握调用权？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+        "content_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+        "line_start": 51,
+        "line_end": 51
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m06",
+      "objective_id": "ch08-m06-extra-L53",
+      "original_text": "Agent 入口之争背后，还有一个更深层的问题：**谁来决定 AI 能调用哪些服务？**",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.6-微信-小微-灰度测试，超级App如何做AI入口？.md",
+        "content_hash": "700a05a86255404b895cc76596fe1c08d1535f91b1e524d267db4563af1d86a6",
+        "line_start": 53,
+        "line_end": 53
+      },
+      "decision": "合并",
+      "reason": "平台调用/分发权作为渠道依赖和用户选择的条件问题承接；只覆盖合作排序、渠道依赖和选择控制，不证明现实平台权力或内部动机。",
+      "card_keys": [
+        "ch08.interview.m06.ranking-and-dependence.001"
+      ],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m07",
+      "objective_id": "ch08-m07-extra-L1",
+      "original_text": "# 8.7 美团开源LongCat-2.0，大厂开源模型到底图什么？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.7-美团开源LongCat-2.0，大厂开源模型到底图什么？.md",
+        "content_hash": "1a0e1637466fe5910facdfb36d9ae6d53cacf4ca1302e86069b27529d3e9bfcb",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m07",
+      "objective_id": "ch08-m07-extra-L3",
+      "original_text": "## 美团开源LongCat-2.0，大厂开源模型到底图什么？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.7-美团开源LongCat-2.0，大厂开源模型到底图什么？.md",
+        "content_hash": "1a0e1637466fe5910facdfb36d9ae6d53cacf4ca1302e86069b27529d3e9bfcb",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m07",
+      "objective_id": "ch08-m07-extra-L17",
+      "original_text": "那美团图什么？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.7-美团开源LongCat-2.0，大厂开源模型到底图什么？.md",
+        "content_hash": "1a0e1637466fe5910facdfb36d9ae6d53cacf4ca1302e86069b27529d3e9bfcb",
+        "line_start": 17,
+        "line_end": 17
+      },
+      "decision": "延期核实",
+      "reason": "真实企业动机没有可归因证据；对应模块使用显式假设讨论生态反馈必要条件，不能据编辑情境反推新闻动机。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m07",
+      "objective_id": "ch08-m07-extra-L43",
+      "original_text": "## 三、为什么美团需要影响力？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.7-美团开源LongCat-2.0，大厂开源模型到底图什么？.md",
+        "content_hash": "1a0e1637466fe5910facdfb36d9ae6d53cacf4ca1302e86069b27529d3e9bfcb",
+        "line_start": 43,
+        "line_end": 43
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m08",
+      "objective_id": "ch08-m08-extra-L1",
+      "original_text": "# 8.8 具身智能融资178亿，资本为什么赌硬件不赌应用？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m08",
+      "objective_id": "ch08-m08-extra-L3",
+      "original_text": "## 具身智能融资178亿，资本为什么赌硬件不赌应用？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m08",
+      "objective_id": "ch08-m08-extra-L35",
+      "original_text": "## 三、为什么是现在？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 35,
+        "line_end": 35
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m08",
+      "objective_id": "ch08-m08-extra-L57",
+      "original_text": "## 四、产品经理怎么看具身智能？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.8-具身智能融资178亿，资本为什么赌硬件不赌应用？.md",
+        "content_hash": "df154d8514762e979d6f77619ae60bdb471bbf98442b4beb7efa6a947cfa1a9e",
+        "line_start": 57,
+        "line_end": 57
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m09",
+      "objective_id": "ch08-m09-extra-L1",
+      "original_text": "# 8.9 为什么OpenAI发布GPT-5.6却要限制访问？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+        "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m09",
+      "objective_id": "ch08-m09-extra-L3",
+      "original_text": "## 为什么 OpenAI 发布 GPT-5.6 却要限制访问？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+        "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m09",
+      "objective_id": "ch08-m09-extra-L31",
+      "original_text": "这意味着什么？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.9-为什么OpenAI发布GPT-5.6却要限制访问？.md",
+        "content_hash": "206b9e20a5afb6bbf3d71bce21f81f17e87c3c6c6afe02046ae8deba15d39eef",
+        "line_start": 31,
+        "line_end": 31
+      },
+      "decision": "不纳入",
+      "reason": "过渡设问“这意味着什么”需依上下文，独立题面不足；具体限制/分层/放量判断已逐项登记，本句不另算能力目标。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m10",
+      "objective_id": "ch08-m10-extra-L1",
+      "original_text": "# 8.10 为什么大厂都在重新押注AI眼镜？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+        "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m10",
+      "objective_id": "ch08-m10-extra-L3",
+      "original_text": "## 为什么大厂都在重新押注 AI 眼镜？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+        "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m10",
+      "objective_id": "ch08-m10-extra-L39",
+      "original_text": "## 三、大厂为什么都怕错过眼镜？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.10-为什么大厂都在重新押注AI眼镜？.md",
+        "content_hash": "d6b68f73783d86e7baa257445caecb061e27be116f08e8115c08108b02086d93",
+        "line_start": 39,
+        "line_end": 39
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m11",
+      "objective_id": "ch08-m11-extra-L1",
+      "original_text": "# 8.11 为什么DeepSeek能融到500亿？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m11",
+      "objective_id": "ch08-m11-extra-L3",
+      "original_text": "## 为什么 DeepSeek 能融到 500 亿？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m11",
+      "objective_id": "ch08-m11-extra-L13",
+      "original_text": "中国 AI 产业有一个核心焦虑：**算力和模型会不会被卡脖子？**",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 13,
+        "line_end": 13
+      },
+      "decision": "延期核实",
+      "reason": "涉及宏观产业焦虑与断供判断，本文不能证成；本轮只发布明确假设下的产品依赖/退出决策，不把宏观前提当已证事实。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m11",
+      "objective_id": "ch08-m11-extra-L36",
+      "original_text": "腾讯为什么投 100 亿？因为腾讯可以把 DeepSeek 接入自己的云、元宝、微信生态。对腾讯来说，DeepSeek 不只是一个被投公司，而是一个**生态基础设施**。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 36,
+        "line_end": 36
+      },
+      "decision": "延期核实",
+      "reason": "具体投资金额和真实战略动机本轮无足够一手证据；融资叙事卡要求取证，不承认该金额或唯一动机。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m12",
+      "objective_id": "ch08-m12-extra-L1",
+      "original_text": "# 8.12 为什么AI Agent会自主发起勒索攻击？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m12",
+      "objective_id": "ch08-m12-extra-L3",
+      "original_text": "## 为什么 AI Agent 会自主发起勒索攻击？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m12",
+      "objective_id": "ch08-m12-extra-L28",
+      "original_text": "## 二、这件事为什么让产品经理必须警惕？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 28,
+        "line_end": 28
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m13",
+      "objective_id": "ch08-m13-extra-L1",
+      "original_text": "# 8.13 为什么微软开始用自研模型替代OpenAI？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m13",
+      "objective_id": "ch08-m13-extra-L3",
+      "original_text": "## 为什么微软开始用自研模型替代 OpenAI？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 3,
+        "line_end": 3
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    },
+    {
+      "module_key": "ch08-m13",
+      "objective_id": "ch08-m13-extra-L47",
+      "original_text": "## 三、为什么这对整个行业很重要？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.13-为什么微软开始用自研模型替代OpenAI？.md",
+        "content_hash": "ae5b57c2f3fafc059fcc50161a894ca07f15f1fe65f807a2f065bcc4cd7f55eb",
+        "line_start": 47,
+        "line_end": 47
+      },
+      "decision": "不纳入",
+      "reason": "导航/议题标题，不作为独立能力；正文目标与原生思考题另有逐项台账，不能用标题数冒充覆盖。",
+      "card_keys": [],
+      "review_status": "主编逐项核对原句与分流理由",
+      "publication_coverage": false
+    }
+  ]
+}

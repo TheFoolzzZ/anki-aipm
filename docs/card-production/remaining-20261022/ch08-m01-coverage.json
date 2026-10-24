@@ -1,0 +1,281 @@
+{
+  "module_id": "8.1",
+  "module_key": "ch08-m01",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+    "content_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+    "line_count": 243
+  },
+  "native_objective_count": 1,
+  "registered_native_count": 1,
+  "native_registration_coverage": 1,
+  "accepted_card_count": 0,
+  "published_card_count": 0,
+  "publication_coverage": 0,
+  "practice_status": "designed_not_executed",
+  "practice_execution_count": 0,
+  "existing_active_card_count": 0,
+  "new_draft_card_count": 4,
+  "objectives": [
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-O001",
+      "original_text": "_思考题：如果你是UU跑腿的产品负责人，面对美团740万骑手的规模优势和阿里生态闭环的夹击，你会选择怎样的差异化战略？_",
+      "source_type": "原生思考题",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 242,
+      "line_start": 242,
+      "line_end": 242,
+      "decision": "拆分",
+      "reason": "原题企业与规模前提未独立核实；以编辑假设保留差异化判断，角色、路线和容量为支撑。",
+      "edited_objective": "资源受限履约平台如何在细分市场差异化并验证",
+      "card_keys": [
+        "ch08.interview.m01.small-network-niche.001"
+      ],
+      "mother_question_id": "ch08-m01-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-O002",
+      "original_text": "### 1. 先搞清楚\"谁接入谁\"\n\n在这个案例中，表面上看都是\"AI+跑腿\"，但底层是完全不同的两条线：\n\n*   **美团Skill**：自有运力，面向**所有AI助手**无差别开放\n*   **千问+饿了么**：阿里生态内部闭环，只有千问用户能调用\n*   **高德MCP**：独立的地图能力层，服务于阿里生态内的Agent开发者\n\n这三件事经常被混为一谈，但它们分别对应\"运力层\"\"入口层\"\"地图层\"，角色完全不同。**产品分析的第一步永远是把事实颗粒度拆到足够细。** 在模糊的事实上，再漂亮的分析框架都是空中楼阁。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 189,
+      "line_start": 189,
+      "line_end": 197,
+      "decision": "采用",
+      "reason": "只保留接口与角色拆分，不保留厂商可调用范围断言。",
+      "edited_objective": "沿订单区分入口、履约、地图与支付责任",
+      "card_keys": [
+        "ch08.interview.m01.ecosystem-roles.001"
+      ],
+      "mother_question_id": "ch08-m01-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-O003",
+      "original_text": "### 2. 战略没有标准答案，只有适不适合\n\n美团选择开放，阿里选择闭环，UU跑腿选择先发Skill——三个玩家做了三个不同的选择，但它们都是理性的。\n\n产品人不应该用\"开放=先进，封闭=落后\"这种简单的道德判断来评价战略。真正的问题永远是：**这个选择是否符合企业的禀赋、阶段和目标？**",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 199,
+      "line_start": 199,
+      "line_end": 203,
+      "decision": "合并",
+      "reason": "去掉“各企业都理性”的动机断言，以条件与反证评价路线。",
+      "edited_objective": "按资源与证据选择开放或自建",
+      "card_keys": [
+        "ch08.interview.m01.openness-choice.001"
+      ],
+      "mother_question_id": "ch08-m01-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-O004",
+      "original_text": "### 3. 找到你的\"不可替代性\"，然后决定是\"开放\"还是\"闭环\"\n\n美团的核心洞见是：**AI再聪明，也送不了外卖。**\n\n如果你的产品拥有AI无法替代的能力（线下履约、物理交互、专业服务），那么你有两个选择：\n\n*   像美团一样，把它开放给所有AI，成为基础设施\n*   像阿里一样，把它和自己的AI入口绑定，形成闭环\n\n两个选择都可以成功，关键是你有没有**足够强的不可替代性**，以及**适合你的生态位**。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 205,
+      "line_start": 205,
+      "line_end": 214,
+      "decision": "拆分",
+      "reason": "不可替代性是待验证假设；拆为渠道选择与细分需求验证。",
+      "edited_objective": "明确资产长板并验证细分需求",
+      "card_keys": [
+        "ch08.interview.m01.openness-choice.001",
+        "ch08.interview.m01.small-network-niche.001"
+      ],
+      "mother_question_id": "ch08-m01-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-O005",
+      "original_text": "### 4. 止血期的产品决策：务实比浪漫更重要\n\n234亿的亏损是一个冷酷的数字。它意味着：你的产品团队没有资源去追逐\"改变世界\"的愿景，你必须在**既有能力**上找到**最高效的价值释放路径**。\n\n美团开放Skill，本质上就是一次\"止血式创新\"——不烧钱、不造新轮子、不开辟新战场，只是把内部验证过的能力，多铺了一个分发渠道。",
+      "source_type": "正文编辑目标",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 216,
+      "line_start": 216,
+      "line_end": 220,
+      "decision": "采用",
+      "reason": "不采用财务数字与零成本结论，只考预算约束下真实增量和容量外部性。",
+      "edited_objective": "预算受限时评估增量贡献及峰值挤占",
+      "card_keys": [
+        "ch08.interview.m01.capacity-incrementality.001"
+      ],
+      "mother_question_id": "ch08-m01-M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_status": "not_published",
+      "mapping_limit": "仅承载 edited_objective 指定的稳定判断；原句中的企业动机、行业必然结论或事件前提不随之获得验证。"
+    },
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-F006",
+      "original_text": "> **核心事实梳理（已核实）**\n> \n> \n> *   **2026年5月26日**，美团正式发布\"跑腿Skill\"，向**所有AI助手**开放标准接口（首批接入OpenClaw、Cursor、微信、飞书等）\n> *   **2026年4月20日**，UU跑腿已发布**行业首个**跑腿Skill，美团是**防御性跟进**\n> *   **阿里/千问走的是完全不同的路线**：千问接入的是**饿了么**（阿里自家）的跑腿能力，同时高德地图推出了基于通义千问的**MCP Server**地图服务\n> *   这不是\"千问接入美团\"，而是**两条产品路线**的对照：美团开放Skill vs 阿里闭环生态\n> *   **财务背景：2025年美团净亏损234亿元**，核心本地商业转亏约69亿",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 5,
+      "line_start": 5,
+      "line_end": 12,
+      "decision": "延期核实",
+      "reason": "原文“已核实”、日期、行业首个、全助手范围及财务数字没有在本课得到一手证据；按集中核验记录继续延期。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-F007",
+      "original_text": "*   5月26日发布\"跑腿Skill\"\n*   向所有AI助手开放标准接口（OpenClaw、Cursor、微信、飞书等）\n*   运力来自美团自有740万骑手网络\n\n**路线二：阿里/千问**\n\n*   千问接入的是**饿了么**（阿里自家）的跑腿能力\n*   高德推出基于通义千问的**MCP Server**，覆盖12类地图服务\n*   形成\"千问+饿了么+高德+支付宝\"的**生态内部闭环**",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 22,
+      "line_start": 22,
+      "line_end": 30,
+      "decision": "延期核实",
+      "reason": "运力数量、生态归属、接口范围待核验；卡片用假设角色，不承认全量开放。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-F008",
+      "original_text": "2026年5月26日，美团发布\"跑腿Skill\"。但注意：**UU跑腿在4月20日已经发布了行业首个跑腿Skill**。\n\n这意味着什么？美团不是这个模式的创造者，它是被竞争逼入局的。如果UU跑腿率先成为AI生态默认的\"腿\"，美团的740万骑手网络就可能被边缘化。\n\n**产品人应该警惕把后发者的防御动作过度解读为\" visionary 顶层设计\"。**\n\n### 2. 为什么是\"开放\"？\n\n美团把跑腿能力封装成标准化接口，向所有AI助手开放。用户可以在OpenClaw、Cursor、微信、飞书等任何接入的AI助手中，用自然语言完成下单。\n\n这个选择背后有三个理性判断：\n\n**（1）美团没有高频对话场景**\n\n用户打开美团的心智是\"我要点外卖\"，不是\"我要聊聊\"。美团天然缺乏AI助手需要的高频对话入口。强行做一个\"美团AI\"，用户找不到使用理由。\n\n**（2）履约能力是美团唯一不可替代的筹码**\n\n740万骑手、2800个区县的调度系统、日均数千万单的履约经验——这是AI无论如何也长不出来的能力。与其在不擅长的领域（对话、内容）和巨头死磕，不如把唯一的长板发挥到极致。\n\n**（3）财务现实决定战略选择**\n\n2025年美团净亏损234亿，股价从217港元跌到80港元以下。在这种\"止血期\"，产品决策必须满足两个条件：低风险、高确定性。开放既有能力，远比开辟新战场更符合这个阶段的资源约束。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 47,
+      "line_start": 47,
+      "line_end": 69,
+      "decision": "延期核实",
+      "reason": "先发、防御跟进、不可替代与财务导致战略均不能凭新闻顺序确认因果。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-F009",
+      "original_text": "阿里没有开放饿了么的运力给外部AI助手，而是走了另一条路：\n\n*   **千问**（大脑）：理解用户意图、对话交互\n*   **饿了么**（四肢）：提供跑腿、外卖运力\n*   **高德MCP Server**（地图）：基于通义千问大模型，提供路径规划、POI搜索、天气等12类地图服务\n*   **支付宝**（支付）：完成交易闭环\n\n**这四件套组合在一起，形成了一个完整的、不需要跳出阿里生态的服务闭环。**\n\n### 2. \"主场优势\"：为什么阿里选择闭环？\n\n阿里的策略可以概括为一句话：**\"我有钥匙，为什么要翻墙？\"**\n\n千问作为阿里\"长子\"，手里握着饿了么、高德、支付宝的原生房门钥匙。当用户说\"帮我点杯咖啡\"时，千问直接走内部协议通道，不需要跨越围墙，不需要重新登录，每一步操作都在自家客厅里完成。\n\n这种\"主场优势\"带来的确定性是外部接入者无法比拟的。\n\n与之形成鲜明对比的是字节的豆包。豆包没有自己的履约网络，想在美团、微信的地盘里帮用户办事，本质上是一种\"翻墙\"行为——通过辅助功能模拟点击，宿主一改界面就抓瞎。\n\n### 3. 高德MCP Server：阿里路线的基础设施层\n\n2025年7月，高德开放平台携手阿里云推出地图MCP Server，覆盖12大核心服务接口（地理编码、路径规划、POI搜索、天气等），基于通义千问大模型实现自然语言到地图服务的精准转化。\n\n这件事的意义在于：阿里不仅在**业务层**（饿了么跑腿）实现了闭环，还在**技术层**（地图MCP）为开发者提供了标准化接口。但这个接口是**阿里云生态内的**，不是像美团那样向所有AI助手无差别开放。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 87,
+      "line_start": 87,
+      "line_end": 110,
+      "decision": "延期核实",
+      "reason": "内部闭环排他范围、地图接口与辅助功能能力均不能从作者描述确认。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    },
+    {
+      "module_id": "8.1",
+      "objective_id": "ch08-m01-F010",
+      "original_text": "*   美团自研了**LongCat大模型**（685亿参数，MoE架构）\n*   但用途是**内部提效**：骑手调度、客服、代码生成\n*   2025年6月上线了App内\"AI帮我办事\"，验证了近一年才对外开放Skill\n\n这说明美团不是\"不做AI\"，而是**有选择地做**——不做C端AI助手这个自己不擅长的赛道，把AI能力用在能直接提升履约效率的地方。",
+      "source_type": "新闻前提／待核验子断言",
+      "source_path": "第8章-产品密谈/8.1-美团出了跑腿Skill.md",
+      "source_hash": "159ad027e66466e495d078af0a4c4e4e983e71bcdd82bb3c7101f1fe60992bf4",
+      "source_line": 179,
+      "line_start": 179,
+      "line_end": 183,
+      "decision": "延期核实",
+      "reason": "模型参数、架构、用途及功能时间待核验；不进入长期记忆卡。",
+      "edited_objective": "保留原文以便主编逐项核验；不进入题卡事实评分。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_status": "not_published"
+    }
+  ],
+  "scope_notes": [
+    "原生开放问题与正文编辑补题分别统计；登记率不等于发布覆盖。",
+    "所有草稿未审校，未发布，未运行产品或实践；不据卡片标题宣称覆盖。",
+    "与第7章通用单位经济、平台战略只共享先修概念。本课独立评分是履约平台的入口/运力/地图/支付分工、小网络细分、渠道搬运与峰值挤占；不新增一般API或利润公式定义卡。"
+  ],
+  "mother_questions": [
+    {
+      "id": "ch08-m01-M1",
+      "prompt": "假设一家小型跑腿平台同时面对大运力竞争者和有支付闭环的入口平台，你会怎样明确生态角色、选择渠道与差异化，并用受限试点决定是否扩大？",
+      "answer": "S：假设小平台具备特定区域的稳定运力，但没有高频AI入口；竞争者运力和入口覆盖更广。这些是编辑条件，不是对原文企业的事实描述。\nT：我会以能被持续购买、按约履约且有贡献利润的增量订单为目标，不以接入助手数量证明成功。\nA：一、先画请求链：助手收集意图，服务接口返回可履约范围与报价，跑腿平台接单并负责异常，支付侧提供授权与交易状态。接入认证不代表可自动扣款。二、比较自建入口、开放接口和混合路线。缺乏独立获客能力时，我会先通过少量合格渠道开放受限服务；若独有用户关系已足以支撑获客，则保留自有入口做对照。三、不与大平台拼全域供给，访谈高损失、要求可验证的细分需求，例如指定园区内有交接凭据的急送；先核对资质、供给和真实付费，而非先承诺医疗等受限服务。四、将试点锁定在一个服务区域与时段，按服务承诺、渠道和峰谷分层统计，计算新增渠道收入扣除配送、售后、补贴、接口维护的贡献，并检查原有订单被搬走的比例。\nR：只有目标客群愿意复购、准时交接可验证、单笔贡献和峰值容量均可持续，才扩展渠道。若仅补贴订单增长或原有客户迁移，缩范围或调整渠道；若外部入口不能保留服务身份、投诉归属与退款状态，则先解决契约。完整方案允许开放或闭环，不要求同一种结论。",
+      "card_keys": [
+        "ch08.interview.m01.ecosystem-roles.001",
+        "ch08.interview.m01.openness-choice.001",
+        "ch08.interview.m01.small-network-niche.001",
+        "ch08.interview.m01.capacity-incrementality.001"
+      ],
+      "status": "draft"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "ch08-m01-P1",
+      "task": "30–45分钟，提交一页生态责任图、两种路线比较表和一个细分区域试点方案；使用假设数据，逐项标注待验证的供给、付费和渠道条件。",
+      "acceptance": "图中区分入口/履约/地图/支付；比较表列新增需求、客户关系、成本与失败责任；试点写清分层指标、贡献口径、授权与退出条件，能识别渠道搬运和峰值挤占。仅纸面设计，不能登记为真实运营通过。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch08-interview-20261022-m01"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m01.ecosystem-roles.001": "201d61af7ab8ebe9c28a95caa8c6eb05c0f9fa0910a3c2a7edb09ab68c92f4ce",
+    "ch08.interview.m01.openness-choice.001": "8fb80c61b044fd9aa28274a93deb9ea618ff342a30791c607a8707bdf3ac1088",
+    "ch08.interview.m01.small-network-niche.001": "86d78c39761405ef75e1f0cb74c6f1c3ce3d40d9db4261734988e8dc7c5b3c28",
+    "ch08.interview.m01.capacity-incrementality.001": "4159d9f03ad25a41799e20793acc9299aab90d93106bcc8070f3bdc60079897c"
+  }
+}

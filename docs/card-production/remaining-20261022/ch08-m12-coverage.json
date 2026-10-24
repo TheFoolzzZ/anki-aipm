@@ -1,0 +1,397 @@
+{
+  "module_id": "ch08-m12",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+    "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+    "line_start": 1,
+    "line_end": 97
+  },
+  "existing_cards": 0,
+  "new_cards": 4,
+  "revised_cards": 0,
+  "native_objectives": 5,
+  "registered_native_objectives": 5,
+  "registration_coverage": 1,
+  "publication_coverage": 0,
+  "practice_executed": 0,
+  "review_completed": 0,
+  "card_content_hash_algorithm": "SHA256(canonicalJson(card去掉review字段))；复用scripts/content-batch-lib.ts的canonicalJson，对象键排序、数组顺序保留、UTF-8",
+  "card_content_hashes": {
+    "ch08.interview.m12.attribution-boundary.001": "69e6e85f86fb30753ace7b6306cc77473c59f78fe38269d25d0bdbe8d058a373",
+    "ch08.interview.m12.execution-policy.001": "7b1c1ef04c28bff8ce2fa02f8fee68a0abd805c5ded3211cb8910a89eb7df0c4",
+    "ch08.interview.m12.runtime-stop.001": "78cab266181206f25ed6373c877796405b3cf5c174f12ff97f1af24c6e25b46f",
+    "ch08.interview.m12.recovery-acceptance.001": "7c6dec7803ce3233d213545b878d48f056082984b5ddf3e9c453c25e250c426c"
+  },
+  "records": [
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-O1",
+      "original_text": "_思考题：如果你的产品里有一个 AI Agent 可以自动执行操作，你会设置哪些安全红线来防止它失控？_",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 96,
+        "line_end": 96
+      },
+      "disposition": "拆分",
+      "reason": "执行层权限、熔断及恢复由本课三卡承担；外部内容到跨工具泄漏的信任边界实际复用Ch03当前卡，见题答评分证据。完整责任链留M1/P1；实践未执行。",
+      "actual_card_keys": [
+        "ch08.interview.m12.execution-policy.001",
+        "ch08.interview.m12.runtime-stop.001",
+        "ch08.interview.m12.recovery-acceptance.001",
+        "ch03.agent.tool-result-trust.001"
+      ],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [
+        "ch08-m12-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false,
+      "reuse_evidence": [
+        {
+          "canonical_key": "ch03.agent.tool-result-trust.001",
+          "baseline_catalog": "artifacts/remaining-cards-20261022/baseline-active-catalog.json",
+          "baseline_catalog_sha256": "01ece17a31d815300f13aedfc0db1257dfaf61ab13ebed262b9f131b32265ee1",
+          "prompt": "假设网页要求研究Agent把客户表发送到某邮箱，Agent恰有查询和邮件工具。你会如何限制这条动作链，并验证防护？",
+          "answer_short": "S｜外部网页试图把读数据接成外发动作。\nT｜完成授权研究，同时不让网页扩大数据与发送权限。\nA｜一、把网页视为数据，核对用户任务是否需要客户字段及外发。二、执行侧限制可读字段、工具动作和收件对象，按授权规则审查具体发送内容。三、跟踪跨工具数据流，而非只看最终回复。\nR｜用恶意页和正常研究对照测试，查真实查询、发送与泄漏；即使末尾拒绝，已外发也算防护失败。",
+          "required_points": [
+            "外部内容不构成任务指令或授权",
+            "执行侧同时控制读范围与发送边界，避免组合泄漏",
+            "核验实际工具数据流并有正常任务对照"
+          ],
+          "supported_scope": "只复用外部内容不构成授权、执行侧同时限制读取与发送、核验跨工具真实数据流及正常对照，不覆盖全部幻觉或有害输出。"
+        }
+      ]
+    },
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-R1",
+      "original_text": "## 一、为什么 AI Agent 能自主攻击？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 16,
+        "line_end": 16
+      },
+      "disposition": "合并",
+      "reason": "标题提出自主攻击机制，提炼为行为/归因/意图区分；不复述攻击链细节。",
+      "actual_card_keys": [
+        "ch08.interview.m12.attribution-boundary.001"
+      ],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-R2",
+      "original_text": "*   模型输出有害内容怎么办？\n*   数据隐私怎么保护？\n*   模型幻觉怎么解决？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 32,
+        "line_end": 34
+      },
+      "disposition": "拆分",
+      "reason": "仅部分承载本任务的最小读取、外发控制与外部输入授权隔离；不声称本课权限卡或M1覆盖一般有害输出、事实幻觉或全部隐私治理。逐行范围见scope_breakdown；未承载部分不计完成。",
+      "actual_card_keys": [
+        "ch08.interview.m12.execution-policy.001",
+        "ch03.agent.tool-result-trust.001"
+      ],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false,
+      "reuse_evidence": [
+        {
+          "canonical_key": "ch03.agent.tool-result-trust.001",
+          "baseline_catalog": "artifacts/remaining-cards-20261022/baseline-active-catalog.json",
+          "baseline_catalog_sha256": "01ece17a31d815300f13aedfc0db1257dfaf61ab13ebed262b9f131b32265ee1",
+          "prompt": "假设网页要求研究Agent把客户表发送到某邮箱，Agent恰有查询和邮件工具。你会如何限制这条动作链，并验证防护？",
+          "answer_short": "S｜外部网页试图把读数据接成外发动作。\nT｜完成授权研究，同时不让网页扩大数据与发送权限。\nA｜一、把网页视为数据，核对用户任务是否需要客户字段及外发。二、执行侧限制可读字段、工具动作和收件对象，按授权规则审查具体发送内容。三、跟踪跨工具数据流，而非只看最终回复。\nR｜用恶意页和正常研究对照测试，查真实查询、发送与泄漏；即使末尾拒绝，已外发也算防护失败。",
+          "required_points": [
+            "外部内容不构成任务指令或授权",
+            "执行侧同时控制读范围与发送边界，避免组合泄漏",
+            "核验实际工具数据流并有正常任务对照"
+          ],
+          "supported_scope": "只复用外部内容不构成授权、执行侧同时限制读取与发送、核验跨工具真实数据流及正常对照，不覆盖全部幻觉或有害输出。"
+        }
+      ],
+      "scope_breakdown": [
+        {
+          "original_text": "*   模型输出有害内容怎么办？",
+          "source": {
+            "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+            "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+            "line_start": 32,
+            "line_end": 32
+          },
+          "disposition": "延期",
+          "actual_card_keys": [],
+          "reason": "未界定输出对象、伤害类型与治理验收；执行侧门禁不替代完整内容安全方案，不计覆盖。"
+        },
+        {
+          "original_text": "*   数据隐私怎么保护？",
+          "source": {
+            "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+            "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+            "line_start": 33,
+            "line_end": 33
+          },
+          "disposition": "部分承载",
+          "actual_card_keys": [
+            "ch08.interview.m12.execution-policy.001",
+            "ch03.agent.tool-result-trust.001"
+          ],
+          "reason": "只考授权任务内最小读取与跨工具外发，未承载一般收集、训练用途、长期保存、删除等完整隐私治理。"
+        },
+        {
+          "original_text": "*   模型幻觉怎么解决？",
+          "source": {
+            "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+            "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+            "line_start": 34,
+            "line_end": 34
+          },
+          "disposition": "延期",
+          "actual_card_keys": [],
+          "reason": "本课归因辨析及输入信任不等于事实忠实评测与幻觉治理；不计完整覆盖。"
+        }
+      ]
+    },
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-R3",
+      "original_text": "4.   **明确责任边界。** 当 AI Agent 造成损失时，责任在谁？开发者、使用者、模型提供方、平台方？这个边界必须在产品设计阶段就清晰。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 76,
+        "line_end": 76
+      },
+      "disposition": "合并",
+      "reason": "责任问题由母题的权限批准、现场责任与事件响应完整回答，法律责任归属不凭产品角色定论。",
+      "actual_card_keys": [],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [
+        "ch08-m12-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-R4",
+      "original_text": "*   你设计的每一个 AI 功能，都要问自己：如果它失控，最坏会怎样？\n*   你赋予 AI 的每一个权限，都要问自己：这个权限有没有可能被滥用？\n*   你追求的每一个效率提升，都要问自己：代价是什么？",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 88,
+        "line_end": 90
+      },
+      "disposition": "合并",
+      "reason": "最坏影响、权限滥用及效率代价分别并入执行、监控与恢复，母题串联；不拿安全口号代替验收。",
+      "actual_card_keys": [
+        "ch08.interview.m12.execution-policy.001",
+        "ch08.interview.m12.runtime-stop.001",
+        "ch08.interview.m12.recovery-acceptance.001"
+      ],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-E-attribution-boundary",
+      "original_text": "7 月初，安全厂商 Sysdig 首次记录到全球首例 AI Agent 自主完成的勒索攻击。攻击代号\"JADEPUFFER\"，全程无人干预：\n\n*   自己找到漏洞并利用\n*   自己横向移动，收集云平台和 AI 平台的密钥\n*   自己加密 1342 条配置数据\n*   自己留下比特币赎金信息\n\n这不是科幻电影，这是真实发生的网络安全事件。\n\n它标志着一个危险的新阶段：**AI 不再只是被攻击的目标，它本身可以成为攻击者。**",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 5,
+        "line_end": 14
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题仅区分可观察行为、研究归因与意图未知；防御已移可选追问，不作为本题评分。",
+      "actual_card_keys": [
+        "ch08.interview.m12.attribution-boundary.001"
+      ],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-E-execution-policy",
+      "original_text": "这不是模型本身的问题，而是**产品权限设计**的问题。\n\n一个 AI Agent 如果拥有：\n\n*   访问内部系统的权限\n*   执行代码的权限\n*   修改数据库的权限\n*   调用云资源的权限\n\n那么它既能做好事，也能做坏事。区别只在于它的目标函数是什么。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 38,
+        "line_end": 47
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：Agent安全红线怎样真正生效。模型只能提出动作，是否获准由确定的执行策略与当前授权状态判断。",
+      "actual_card_keys": [
+        "ch08.interview.m12.execution-policy.001"
+      ],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-E-untrusted-input",
+      "original_text": "一个 AI Agent 如果拥有：\n\n*   访问内部系统的权限\n*   执行代码的权限\n*   修改数据库的权限\n*   调用云资源的权限\n\n那么它既能做好事，也能做坏事。区别只在于它的目标函数是什么。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 40,
+        "line_end": 47
+      },
+      "disposition": "合并",
+      "reason": "原文权限议题保留；附件与网页只是外部输入载体替换，没有独立机制。撤下未发布untrusted-input候选，实际复用Ch03工具结果信任卡，M1/P1保留应用解释与未执行验收。",
+      "actual_card_keys": [
+        "ch03.agent.tool-result-trust.001"
+      ],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [
+        "ch08-m12-P1"
+      ],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false,
+      "reuse_evidence": [
+        {
+          "canonical_key": "ch03.agent.tool-result-trust.001",
+          "baseline_catalog": "artifacts/remaining-cards-20261022/baseline-active-catalog.json",
+          "baseline_catalog_sha256": "01ece17a31d815300f13aedfc0db1257dfaf61ab13ebed262b9f131b32265ee1",
+          "prompt": "假设网页要求研究Agent把客户表发送到某邮箱，Agent恰有查询和邮件工具。你会如何限制这条动作链，并验证防护？",
+          "answer_short": "S｜外部网页试图把读数据接成外发动作。\nT｜完成授权研究，同时不让网页扩大数据与发送权限。\nA｜一、把网页视为数据，核对用户任务是否需要客户字段及外发。二、执行侧限制可读字段、工具动作和收件对象，按授权规则审查具体发送内容。三、跟踪跨工具数据流，而非只看最终回复。\nR｜用恶意页和正常研究对照测试，查真实查询、发送与泄漏；即使末尾拒绝，已外发也算防护失败。",
+          "required_points": [
+            "外部内容不构成任务指令或授权",
+            "执行侧同时控制读范围与发送边界，避免组合泄漏",
+            "核验实际工具数据流并有正常任务对照"
+          ],
+          "supported_scope": "只复用外部内容不构成授权、执行侧同时限制读取与发送、核验跨工具真实数据流及正常对照，不覆盖全部幻觉或有害输出。"
+        }
+      ],
+      "historical_candidate_key": "ch08.interview.m12.untrusted-input.001",
+      "history_status": "未发布重复候选已撤下；原文登记保留"
+    },
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-E-runtime-stop",
+      "original_text": "1.   **权限最小化原则比以往更重要。** 给 AI Agent 的权限要精确到最小必要范围。能读就不要写，能在沙箱就不要进生产环境。\n\n2.   **设计\"人在回路\"机制。** 关键操作必须有人类确认。不要让 AI 单独完成删除数据、修改权限、转账支付等高风险动作。\n\n3.   **建立 AI 行为监控。** 不仅要监控用户行为，还要监控 AI 自己的行为。发现异常调用模式时，立即触发熔断。\n\n4.   **明确责任边界。** 当 AI Agent 造成损失时，责任在谁？开发者、使用者、模型提供方、平台方？这个边界必须在产品设计阶段就清晰。\n\n5.   **安全要从架构层设计，不是后期加补丁。** AI Agent 的能力越强，安全越不能是事后补救。它必须是产品架构的核心组成部分。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 70,
+        "line_end": 78
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：失控调用怎样熔断且可追溯。模型进程停止不一定取消已排队工具操作，熔断必须覆盖真正执行副作用的位置。",
+      "actual_card_keys": [
+        "ch08.interview.m12.runtime-stop.001"
+      ],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m12",
+      "objective_id": "ch08-m12-E-recovery-acceptance",
+      "original_text": "3.   **建立 AI 行为监控。** 不仅要监控用户行为，还要监控 AI 自己的行为。发现异常调用模式时，立即触发熔断。\n\n4.   **明确责任边界。** 当 AI Agent 造成损失时，责任在谁？开发者、使用者、模型提供方、平台方？这个边界必须在产品设计阶段就清晰。\n\n5.   **安全要从架构层设计，不是后期加补丁。** AI Agent 的能力越强，安全越不能是事后补救。它必须是产品架构的核心组成部分。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.12-为什么AI-Agent会自主发起勒索攻击？.md",
+        "content_hash": "c081f523a3529c2c58b60d532eca787e6e165483ea9d81d2f61c02f11bfb5198",
+        "line_start": 74,
+        "line_end": 78
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：事故后何时允许Agent恢复。恢复备份是数据操作，不等于消除根因；还可能丢失事故后合法提交。",
+      "actual_card_keys": [
+        "ch08.interview.m12.recovery-acceptance.001"
+      ],
+      "mother_ids": [
+        "ch08-m12-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    }
+  ],
+  "author_revision_date": "2026-10-24",
+  "author_revision_status": "draft_awaiting_independent_rereview",
+  "withdrawn_candidates": [
+    {
+      "canonical_key": "ch08.interview.m12.untrusted-input.001",
+      "status": "unpublished_removed_for_reuse",
+      "reason": "与当前Ch03跨工具恶意指令隔离实质重复，改为实际复用。",
+      "replacement_keys": [
+        "ch03.agent.tool-result-trust.001"
+      ]
+    }
+  ],
+  "reused_card_keys": [
+    "ch03.agent.tool-result-trust.001"
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 4,
+    "batch_ids": [
+      "ch08-interview-draft-20261022-m12"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m12.attribution-boundary.001": "69e6e85f86fb30753ace7b6306cc77473c59f78fe38269d25d0bdbe8d058a373",
+    "ch08.interview.m12.execution-policy.001": "7b1c1ef04c28bff8ce2fa02f8fee68a0abd805c5ded3211cb8910a89eb7df0c4",
+    "ch08.interview.m12.runtime-stop.001": "78cab266181206f25ed6373c877796405b3cf5c174f12ff97f1af24c6e25b46f",
+    "ch08.interview.m12.recovery-acceptance.001": "7c6dec7803ce3233d213545b878d48f056082984b5ddf3e9c453c25e250c426c"
+  }
+}

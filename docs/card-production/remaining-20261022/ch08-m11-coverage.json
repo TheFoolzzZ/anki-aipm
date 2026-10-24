@@ -1,0 +1,321 @@
+{
+  "module_id": "ch08-m11",
+  "status": "draft",
+  "source": {
+    "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+    "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+    "line_start": 1,
+    "line_end": 82
+  },
+  "existing_cards": 0,
+  "new_cards": 3,
+  "revised_cards": 0,
+  "native_objectives": 3,
+  "registered_native_objectives": 3,
+  "registration_coverage": 1,
+  "publication_coverage": 0,
+  "practice_executed": 0,
+  "review_completed": 0,
+  "card_content_hash_algorithm": "SHA256(canonicalJson(card去掉review字段))；复用scripts/content-batch-lib.ts的canonicalJson，对象键排序、数组顺序保留、UTF-8",
+  "card_content_hashes": {
+    "ch08.interview.m11.narrative-evidence.001": "8bab0d4318adb0f0235dfe14970a4650ff0af91ff85c46ac94594ecebad5b467",
+    "ch08.interview.m11.dependency-register.001": "0253f2a66f9bb2c66b27fbd328b0f17420845bab352f2f1bb96889f116a590a3",
+    "ch08.interview.m11.exit-route.001": "c930ad20538fd3b0ab27169d45bed162242d34a23355c88bd1d73a4612f19be4"
+  },
+  "records": [
+    {
+      "module_id": "ch08-m11",
+      "objective_id": "ch08-m11-O1",
+      "original_text": "_思考题：如果你的产品核心能力完全依赖某个外部模型或平台，你有没有考虑过\"被卡脖子\"的风险？_",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 81,
+        "line_end": 81
+      },
+      "disposition": "拆分",
+      "reason": "依赖盘点与退出验证由本课当前卡承载；开放许可、共同上游和授权反馈闭环分别复用现行三卡（见reuse_evidence的实际题答评分），完整解释与迁移实践保留M1/P1。未发布open-weight-boundary候选撤下，不计新卡。",
+      "actual_card_keys": [
+        "ch08.interview.m11.dependency-register.001",
+        "ch08.interview.m11.exit-route.001",
+        "ch03.interview.m05.license-evidence.001",
+        "ch07.interview.m03.bottleneck.001",
+        "ch07.interview.m01.data-loop.001"
+      ],
+      "mother_ids": [
+        "ch08-m11-M1"
+      ],
+      "practice_ids": [
+        "ch08-m11-P1"
+      ],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false,
+      "reuse_evidence": [
+        {
+          "canonical_key": "ch03.interview.m05.license-evidence.001",
+          "baseline_catalog": "artifacts/remaining-cards-20261022/baseline-active-catalog.json",
+          "baseline_catalog_sha256": "01ece17a31d815300f13aedfc0db1257dfaf61ab13ebed262b9f131b32265ee1",
+          "prompt": "假设供应商称模型“开源且权重可下载”，团队要用于收费产品并可能交付客户部署。你会准备哪些可复核材料来决定能否采用？",
+          "answer_short": "S｜假设计划既有收费托管，也可能把模型交付客户。\nT｜核对具体版本与计划用途的准入条件。\nA｜一、锁定权重版本、获取来源及原始许可/使用条件，避免按家族标签判断。二、分别列商用、修改、托管、分发用途，对照限制与附带义务；代码及数据信息的开放程度另行登记。\nR｜预期形成用途—条款—证据表；缺条件交责任人确认，权重下载成功只证明可获取，不能据此宣布准入。",
+          "required_points": [
+            "锁定具体版本、来源与原始条款，不能用开源营销名称替代证据",
+            "分别核对预定商用/修改/托管/分发及附带要求，区分权重可得与开放程度",
+            "存档未解事项并交责任人确认，不把技术运行成功当准入结论"
+          ],
+          "supported_scope": "只复用具体版本/许可及商用修改托管分发准入，不证明开放权重无条件免费或完全自主。"
+        },
+        {
+          "canonical_key": "ch07.interview.m03.bottleneck.001",
+          "baseline_catalog": "artifacts/remaining-cards-20261022/baseline-active-catalog.json",
+          "baseline_catalog_sha256": "01ece17a31d815300f13aedfc0db1257dfaf61ab13ebed262b9f131b32265ee1",
+          "prompt": "模型服务涨价后，应用团队发现所有备选也依赖同一种稀缺算力。为何“多个模型供应商”不等于供应链可替代？",
+          "answer_short": "表面供应商不同可能共享上游资源或同类约束，仍有相关故障与价格风险。议价取决于真正可交付的替代、切换成本及客户差异价值；应把备选向上追溯并验证容量与业务效果。",
+          "required_points": [
+            "不同模型可能共享上游，风险相关",
+            "真正替代能力与切换成本影响议价",
+            "追溯依赖并验证备选容量及目标业务效果"
+          ],
+          "supported_scope": "只复用不同模型共享上游导致风险相关、追溯依赖并验证容量及效果，不证明某厂商供应独立。"
+        },
+        {
+          "canonical_key": "ch07.interview.m01.data-loop.001",
+          "baseline_catalog": "artifacts/remaining-cards-20261022/baseline-active-catalog.json",
+          "baseline_catalog_sha256": "01ece17a31d815300f13aedfc0db1257dfaf61ab13ebed262b9f131b32265ee1",
+          "prompt": "客服助手的会话量翻倍，团队据此宣称形成数据飞轮。还缺哪三个关键环节才能支持这个判断？",
+          "answer_short": "要确认反馈能代表任务成败且可用于迭代，反馈经过治理转为改进，再证明改进提高目标任务价值与留存。数据量增加只是输入，不足以证明因果闭环。",
+          "required_points": [
+            "反馈含任务结果且使用有授权与质量依据",
+            "反馈被治理并用于有效改进",
+            "对照验证改进带来业务价值及回流，而非仅会话增长"
+          ],
+          "supported_scope": "只复用授权且有质量反馈、治理有效改进、任务价值与回流验证，不把使用增长自动当训练或飞轮。"
+        }
+      ]
+    },
+    {
+      "module_id": "ch08-m11",
+      "objective_id": "ch08-m11-R1",
+      "original_text": "一家成立没几年的公司，凭什么拿到这么多钱？\n\n答案不是\"它的模型很厉害\"。比 DeepSeek 厉害的模型不是没有。真正值钱的是它背后的**基础设施叙事**。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 7,
+        "line_end": 9
+      },
+      "disposition": "合并",
+      "reason": "原文融资归因不可直接成立；改为融资/估值/战略价值的证据区分。",
+      "actual_card_keys": [
+        "ch08.interview.m11.narrative-evidence.001"
+      ],
+      "mother_ids": [
+        "ch08-m11-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m11",
+      "objective_id": "ch08-m11-R2",
+      "original_text": "## 三、500 亿估值贵不贵？\n\n从传统财务角度看，500 亿当然贵。DeepSeek 的收入和利润肯定撑不起这个估值。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 38,
+        "line_end": 40
+      },
+      "disposition": "延期核实",
+      "reason": "估值贵不贵混合了融资额与价值定价，缺交易口径和财务证据；不采用原定论，母题保留审辨。",
+      "actual_card_keys": [],
+      "mother_ids": [
+        "ch08-m11-M1"
+      ],
+      "practice_ids": [],
+      "origin": "原生",
+      "priority": "P2",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m11",
+      "objective_id": "ch08-m11-E-narrative-evidence",
+      "original_text": "6 月，DeepSeek 完成创立以来首轮融资，金额高达 500 亿元。其中梁文锋个人出资 200 亿，腾讯出资 100 亿成为外部最大股东，宁德时代、网易、京东、IDG 资本等跟投。\n\n一家成立没几年的公司，凭什么拿到这么多钱？\n\n答案不是\"它的模型很厉害\"。比 DeepSeek 厉害的模型不是没有。真正值钱的是它背后的**基础设施叙事**。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 5,
+        "line_end": 9
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：融资叙事能否证明基础设施价值。金额的单位相同不代表对象相同；融资、定价与产品交付各有独立证据链。",
+      "actual_card_keys": [
+        "ch08.interview.m11.narrative-evidence.001"
+      ],
+      "mother_ids": [
+        "ch08-m11-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m11",
+      "objective_id": "ch08-m11-E-dependency-register",
+      "original_text": "3.   **地缘政治正在重塑产品竞争格局。** 未来做 AI 产品，不能只考虑用户体验和商业逻辑，还要考虑供应链安全、数据主权、合规要求。\n\n4.   **大厂的 AI 投资都在找\"生态锚点\"。** 腾讯投 DeepSeek、投燧原科技、投卜拉格，不是为了短期财务回报，而是为了在 AI 产业链的关键节点占位。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 60,
+        "line_end": 62
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：外部模型依赖怎样形成退出负担。抽象接口降低代码耦合，却不能自动解决语义、资产可携带与基础设施相关性。",
+      "actual_card_keys": [
+        "ch08.interview.m11.dependency-register.001"
+      ],
+      "mother_ids": [
+        "ch08-m11-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    },
+    {
+      "module_id": "ch08-m11",
+      "objective_id": "ch08-m11-E-open-weight-boundary",
+      "original_text": "## 二、开源战略放大了它的影响力\n\nDeepSeek 的另一个关键策略是开源。\n\n开源模型意味着：全球开发者都可以免费用、可以修改、可以商用。这会带来几个结果：\n\n*   **生态快速扩大**：更多人用，更多场景被验证\n*   **行业标准形成**：当大家都用 DeepSeek 的架构，它就成了默认选项\n*   **数据飞轮启动**：更多使用带来更多反馈，模型迭代更快\n*   **商业闭环 indirectly 形成**：虽然模型免费，但云服务、企业定制、行业解决方案可以收费",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 25,
+        "line_end": 34
+      },
+      "disposition": "合并",
+      "reason": "依赖盘点与退出验证由本课当前卡承载；开放许可、共同上游和授权反馈闭环分别复用现行三卡（见reuse_evidence的实际题答评分），完整解释与迁移实践保留M1/P1。未发布open-weight-boundary候选撤下，不计新卡。",
+      "actual_card_keys": [
+        "ch03.interview.m05.license-evidence.001",
+        "ch07.interview.m03.bottleneck.001",
+        "ch07.interview.m01.data-loop.001"
+      ],
+      "mother_ids": [
+        "ch08-m11-M1"
+      ],
+      "practice_ids": [
+        "ch08-m11-P1"
+      ],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false,
+      "reuse_evidence": [
+        {
+          "canonical_key": "ch03.interview.m05.license-evidence.001",
+          "baseline_catalog": "artifacts/remaining-cards-20261022/baseline-active-catalog.json",
+          "baseline_catalog_sha256": "01ece17a31d815300f13aedfc0db1257dfaf61ab13ebed262b9f131b32265ee1",
+          "prompt": "假设供应商称模型“开源且权重可下载”，团队要用于收费产品并可能交付客户部署。你会准备哪些可复核材料来决定能否采用？",
+          "answer_short": "S｜假设计划既有收费托管，也可能把模型交付客户。\nT｜核对具体版本与计划用途的准入条件。\nA｜一、锁定权重版本、获取来源及原始许可/使用条件，避免按家族标签判断。二、分别列商用、修改、托管、分发用途，对照限制与附带义务；代码及数据信息的开放程度另行登记。\nR｜预期形成用途—条款—证据表；缺条件交责任人确认，权重下载成功只证明可获取，不能据此宣布准入。",
+          "required_points": [
+            "锁定具体版本、来源与原始条款，不能用开源营销名称替代证据",
+            "分别核对预定商用/修改/托管/分发及附带要求，区分权重可得与开放程度",
+            "存档未解事项并交责任人确认，不把技术运行成功当准入结论"
+          ],
+          "supported_scope": "只复用具体版本/许可及商用修改托管分发准入，不证明开放权重无条件免费或完全自主。"
+        },
+        {
+          "canonical_key": "ch07.interview.m03.bottleneck.001",
+          "baseline_catalog": "artifacts/remaining-cards-20261022/baseline-active-catalog.json",
+          "baseline_catalog_sha256": "01ece17a31d815300f13aedfc0db1257dfaf61ab13ebed262b9f131b32265ee1",
+          "prompt": "模型服务涨价后，应用团队发现所有备选也依赖同一种稀缺算力。为何“多个模型供应商”不等于供应链可替代？",
+          "answer_short": "表面供应商不同可能共享上游资源或同类约束，仍有相关故障与价格风险。议价取决于真正可交付的替代、切换成本及客户差异价值；应把备选向上追溯并验证容量与业务效果。",
+          "required_points": [
+            "不同模型可能共享上游，风险相关",
+            "真正替代能力与切换成本影响议价",
+            "追溯依赖并验证备选容量及目标业务效果"
+          ],
+          "supported_scope": "只复用不同模型共享上游导致风险相关、追溯依赖并验证容量及效果，不证明某厂商供应独立。"
+        },
+        {
+          "canonical_key": "ch07.interview.m01.data-loop.001",
+          "baseline_catalog": "artifacts/remaining-cards-20261022/baseline-active-catalog.json",
+          "baseline_catalog_sha256": "01ece17a31d815300f13aedfc0db1257dfaf61ab13ebed262b9f131b32265ee1",
+          "prompt": "客服助手的会话量翻倍，团队据此宣称形成数据飞轮。还缺哪三个关键环节才能支持这个判断？",
+          "answer_short": "要确认反馈能代表任务成败且可用于迭代，反馈经过治理转为改进，再证明改进提高目标任务价值与留存。数据量增加只是输入，不足以证明因果闭环。",
+          "required_points": [
+            "反馈含任务结果且使用有授权与质量依据",
+            "反馈被治理并用于有效改进",
+            "对照验证改进带来业务价值及回流，而非仅会话增长"
+          ],
+          "supported_scope": "只复用授权且有质量反馈、治理有效改进、任务价值与回流验证，不把使用增长自动当训练或飞轮。"
+        }
+      ],
+      "historical_candidate_key": "ch08.interview.m11.open-weight-boundary.001",
+      "history_status": "未发布重复候选已撤下；原文登记保留"
+    },
+    {
+      "module_id": "ch08-m11",
+      "objective_id": "ch08-m11-E-exit-route",
+      "original_text": "3.   **地缘政治正在重塑产品竞争格局。** 未来做 AI 产品，不能只考虑用户体验和商业逻辑，还要考虑供应链安全、数据主权、合规要求。\n\n4.   **大厂的 AI 投资都在找\"生态锚点\"。** 腾讯投 DeepSeek、投燧原科技、投卜拉格，不是为了短期财务回报，而是为了在 AI 产业链的关键节点占位。\n\n5.   **不要被估值吓到，要看估值背后的叙事。** 500 亿不是数字游戏，而是资本对\"中国需要自己的 AI 基础设施\"这个命题的投票。",
+      "source": {
+        "relative_path": "第8章-产品密谈/8.11-为什么DeepSeek能融到500亿？.md",
+        "content_hash": "41c41657cfeec9044a2ce7bd8314895233faf7b681a407ef8b761bb69c138158",
+        "line_start": 60,
+        "line_end": 64
+      },
+      "disposition": "拆分",
+      "reason": "编辑补题：怎样选择可负担的独立路线。自主可控是对关键能力的可恢复控制，不等于拥有全部模型与基础设施。",
+      "actual_card_keys": [
+        "ch08.interview.m11.exit-route.001"
+      ],
+      "mother_ids": [
+        "ch08-m11-M1"
+      ],
+      "practice_ids": [],
+      "origin": "正文议题＋编辑机制/情境",
+      "priority": "P1",
+      "review_status": "draft",
+      "publication_coverage": false
+    }
+  ],
+  "author_revision_date": "2026-10-24",
+  "author_revision_status": "draft_awaiting_independent_rereview",
+  "withdrawn_candidates": [
+    {
+      "canonical_key": "ch08.interview.m11.open-weight-boundary.001",
+      "status": "unpublished_removed_for_reuse",
+      "reason": "汇编已有许可、共同上游与数据飞轮机制，改为三卡实际复用。",
+      "replacement_keys": [
+        "ch03.interview.m05.license-evidence.001",
+        "ch07.interview.m03.bottleneck.001",
+        "ch07.interview.m01.data-loop.001"
+      ]
+    }
+  ],
+  "reused_card_keys": [
+    "ch03.interview.m05.license-evidence.001",
+    "ch07.interview.m03.bottleneck.001",
+    "ch07.interview.m01.data-loop.001"
+  ],
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 3,
+    "batch_ids": [
+      "ch08-interview-draft-20261022-m11"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch08.interview.m11.narrative-evidence.001": "8bab0d4318adb0f0235dfe14970a4650ff0af91ff85c46ac94594ecebad5b467",
+    "ch08.interview.m11.dependency-register.001": "0253f2a66f9bb2c66b27fbd328b0f17420845bab352f2f1bb96889f116a590a3",
+    "ch08.interview.m11.exit-route.001": "c930ad20538fd3b0ab27169d45bed162242d34a23355c88bd1d73a4612f19be4"
+  }
+}

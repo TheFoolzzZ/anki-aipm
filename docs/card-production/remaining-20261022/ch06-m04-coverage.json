@@ -1,0 +1,574 @@
+{
+  "module_id": "ch06-m04",
+  "source": {
+    "relative_path": "第6章-行业案例/6.4-智能客服.md",
+    "content_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+    "line_count": 412,
+    "line_convention": "Original LF line numbers; numbered source snapshot verified against local body"
+  },
+  "status": "draft",
+  "native_checklist_count": 0,
+  "registered_checklist_count": 0,
+  "question_candidate_count": 2,
+  "publication_coverage": 0,
+  "accepted_cards": 0,
+  "practice_completed": 0,
+  "mother_questions": [
+    {
+      "id": "M1",
+      "prompt": "M1｜假设电商上线AI售后客服，怎样设计从查单、改地址到条件退款的人机协作，并证明服务有效？",
+      "answer": "S：假设用户常在一句话提出多目标，政策会更新，坐席资源有限。T：在正确政策与权限内解决问题，保留用户选择人工的权利。A：先把原始诉求转成对象、动作、条件和状态，例如“查原因、改地址、改不了再退款”，缺关键订单或地址就澄清，不能把条件分支提前执行。查询事实与变更动作分别授权，情绪只调整表达和优先级，发券/退款必须看真实执行结果。知识由业务负责人管理版本、生效时间、适用品类与例外，沿解析、索引、缓存和最终上下文核对；冲突未解转人工。对高频标准问题可前置或受控自主，复杂或高风险任务采用坐席Copilot；用户要求、服务异常或能力不足时转接。交接传最小必要信息包，并区分排队、接单、处理中及完成，超时有明确负责人和替代入口。R：按问题/工单去重定义解决与观察窗口，放弃和等待不算解决；比较分层解决、重复联系、投诉、幻觉、体验及含人工的总成本。转人工率下降只有在真实解决改善且风险不恶化时才有价值，方案尚未执行不填效果。",
+      "status": "draft"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "T1",
+      "title": "需求与协作PRD",
+      "ranges": [
+        [
+          15,
+          203
+        ],
+        [
+          311,
+          323
+        ],
+        [
+          396,
+          412
+        ]
+      ],
+      "design": "选一个具体售后场景，制作用户诉求/对象/条件表、不同人机模式比较及服务状态图；比较规则式、任务式与生成式责任差异；给查单、修改、退款分别列授权与确认点。",
+      "acceptance": "提交可执行PRD和验收用例，含模糊、复合意图、用户主动转人工和工具失败；不靠模式名称或供应商故事选择。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T2",
+      "title": "知识、赔偿与人工交接",
+      "ranges": [
+        [
+          205,
+          309
+        ],
+        [
+          343,
+          395
+        ]
+      ],
+      "design": "对两版有生效边界的假设售后政策设计源、解析、索引、缓存和回答回归；对无权发券、已申请未完成、人工未接单与下班队列设计信息包、日志最小化、申诉纠错和替代入口。",
+      "acceptance": "每个状态有责任人、用户提示和失败恢复；新旧政策不混用，摘要生成不算接单，情绪误判可纠正。",
+      "status": "designed_not_executed"
+    },
+    {
+      "id": "T3",
+      "title": "解决率与商业验收表",
+      "ranges": [
+        [
+          324,
+          337
+        ],
+        [
+          400,
+          409
+        ]
+      ],
+      "design": "为同类问题设计分层基线，写明解决事件、观察窗口、去重与未知分流；记录首次响应、轮数、转人工、满意度、覆盖、无据回答及每个有效解决总成本；按使用者、采购者和供应商分别算价值及定价假设。",
+      "acceptance": "每指标有分母、事件和来源；放弃不算解决，成本包括人工与失败；有回退条件，未经授权不做高风险线上实验。",
+      "status": "designed_not_executed"
+    }
+  ],
+  "objectives": [
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0025",
+      "original_text": "**三代产品的核心差异**：",
+      "source_line": 25,
+      "source_line_end": 25,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "实践任务",
+      "reason": "T1按规则式、任务式、生成式比较输入、责任、知识/工具依赖与失败，原场景用例须实做，模式名不是验收。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [
+        "T1"
+      ],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0028",
+      "original_text": "用户问：\"我的订单为什么还没发货？\"",
+      "source_line": 28,
+      "source_line_end": 28,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "原文问题候选",
+      "decision": "不纳入",
+      "reason": "示例用户句/JSON问题字段，不是另一个必修问；原文订单与退货规则未经核实，不生成业务事实答案。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0119",
+      "original_text": "*   **学习闭环**：人工客服的回答会被自动学习，用于优化AI",
+      "source_line": 119,
+      "source_line_end": 119,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "拆分",
+      "reason": "人工回答可作为反馈候选，不证明自动学习；knowledge-release与resolution-measurement保留版本核验、真实任务与风险回归，训练另需授权。",
+      "card_keys": [
+        "ch06.interview.m04.knowledge-release.001",
+        "ch06.interview.m04.resolution-measurement.001"
+      ],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted",
+      "mapping_evidence": [
+        {
+          "canonical_key": "ch06.interview.m04.knowledge-release.001",
+          "revision": 1,
+          "prompt": "假设售后政策今天生效，客服仍给旧退货条件。你会先查哪些证据，怎样发布修复并防止新旧条件混用？",
+          "required_points": [
+            "核对权威版本、生效时间、适用对象及例外",
+            "分层定位源/索引/缓存/最终上下文中的旧内容",
+            "版本更新与旧缓存失效，经反例回归，冲突先人工"
+          ],
+          "state": "author_draft"
+        },
+        {
+          "canonical_key": "ch06.interview.m04.resolution-measurement.001",
+          "revision": 1,
+          "prompt": "假设上线后转人工率下降，运营宣布客服成功率提高。你会怎样定义“解决”并排除假改善？",
+          "required_points": [
+            "用问题/工单、观察窗口、政策结果定义解决并去重",
+            "放弃等待未知不算解决，核对业务结果/用户确认",
+            "分层比较重开投诉等护栏，低转人工率不自动成功"
+          ],
+          "state": "author_draft"
+        }
+      ]
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0186",
+      "original_text": "#### 1. 意图识别（Intent Classification）",
+      "source_line": 186,
+      "source_line_end": 186,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0205",
+      "original_text": "#### 2. RAG知识库",
+      "source_line": 205,
+      "source_line_end": 205,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0235",
+      "original_text": "#### 3. 情感分析（Sentiment Analysis）",
+      "source_line": 235,
+      "source_line_end": 235,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0254",
+      "original_text": "#### 4. 转人工策略",
+      "source_line": 254,
+      "source_line_end": 254,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0263",
+      "original_text": "| **置信度不足** | AI对回答的置信度<阈值（如0.7） | 避免错误回答 |",
+      "source_line": 263,
+      "source_line_end": 263,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "实践任务",
+      "reason": "T2按风险、用户主动请求、知识与服务失败设计接管，不采用原文0.7或500元为通用门槛；校准阈值须另有分层证据。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0265",
+      "original_text": "| **业务复杂** | 涉及退款>500元/投诉/法律问题 | 敏感业务人工处理 |",
+      "source_line": 265,
+      "source_line_end": 265,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "实践任务",
+      "reason": "T2按风险、用户主动请求、知识与服务失败设计接管，不采用原文0.7或500元为通用门槛；校准阈值须另有分层证据。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [
+        "T2"
+      ],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0279",
+      "original_text": "### （一）知识库是核心竞争力",
+      "source_line": 279,
+      "source_line_end": 279,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0281",
+      "original_text": "> **一个智能客服的效果，80%取决于知识库质量，20%取决于模型能力。**",
+      "source_line": 281,
+      "source_line_end": 281,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "延期核实",
+      "reason": "80/20效果归因、监管一律禁止或固定五年留存没有本轮适用证据；业务机制卡不为该断言背书，需法务/源证核实。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0283",
+      "original_text": "**知识库建设的PM职责**：",
+      "source_line": 283,
+      "source_line_end": 283,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "该行是正文引导/示例/作者判断：**知识库建设的PM职责**：；不是独立原生自查。没有具体承载即不计覆盖，不能用大范围T任务兜底。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0296",
+      "original_text": "  \"question\": \"如何申请退货？\",",
+      "source_line": 296,
+      "source_line_end": 296,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "原文问题候选",
+      "decision": "不纳入",
+      "reason": "示例用户句/JSON问题字段，不是另一个必修问；原文订单与退货规则未经核实，不生成业务事实答案。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0311",
+      "original_text": "### （二）人机协同是长期状态",
+      "source_line": 311,
+      "source_line_end": 311,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0324",
+      "original_text": "### （三）效果评估体系",
+      "source_line": 324,
+      "source_line_end": 324,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "不纳入",
+      "reason": "候选目录/小标题仅定位主题；不是可独立验收的学习目标，不能用标题宣称覆盖。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0381",
+      "original_text": "*   监管要求：AI客服的回答必须有据可查，不能提供投资建议",
+      "source_line": 381,
+      "source_line_end": 381,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "延期核实",
+      "reason": "80/20效果归因、监管一律禁止或固定五年留存没有本轮适用证据；业务机制卡不为该断言背书，需法务/源证核实。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-L0392",
+      "original_text": "| **日志留痕** | 所有对话记录保存5年以上，支持监管审计 |",
+      "source_line": 392,
+      "source_line_end": 392,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文候选",
+      "decision": "延期核实",
+      "reason": "80/20效果归因、监管一律禁止或固定五年留存没有本轮适用证据；业务机制卡不为该断言背书，需法务/源证核实。",
+      "card_keys": [],
+      "mother_question_id": null,
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-card-handoff-ownership",
+      "original_text": "#### 4. 转人工策略",
+      "source_line": 254,
+      "source_line_end": 273,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "旧卡目标重构",
+      "decision": "采用",
+      "reason": "旧卡逐题重写：转人工是跨角色任务交接。内容摘要解决信息传递，接单状态解决责任归属，二者缺一都会让用户无人负责。",
+      "card_keys": [
+        "ch06.interview.m04.handoff-ownership.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-card-compensation-authority",
+      "original_text": "#### 3. 情感分析（Sentiment Analysis）",
+      "source_line": 235,
+      "source_line_end": 252,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "旧卡目标重构",
+      "decision": "采用",
+      "reason": "旧卡逐题重写：识别情绪与决定业务动作是两条链路。前者帮助选择交互，后者受政策、授权和执行结果约束。",
+      "card_keys": [
+        "ch06.interview.m04.compensation-authority.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-card-mixed-service-intent",
+      "original_text": "#### 1. 意图识别（Intent Classification）",
+      "source_line": 186,
+      "source_line_end": 203,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "旧卡目标重构",
+      "decision": "采用",
+      "reason": "旧卡逐题重写：单标签分类会丢掉任务图。意图表达应保留对象、动作、槽位和条件，事实查询先为后续可行动性提供依据。",
+      "card_keys": [
+        "ch06.interview.m04.mixed-service-intent.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P1",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-card-knowledge-release",
+      "original_text": "#### 2. RAG知识库",
+      "source_line": 205,
+      "source_line_end": 233,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文/编辑补题",
+      "decision": "采用",
+      "reason": "真实缺口：知识新鲜度是源更新到模型输入的全链路属性。改一个FAQ不能确保旧片段退出检索或缓存。",
+      "card_keys": [
+        "ch06.interview.m04.knowledge-release.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P0",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-card-resolution-measurement",
+      "original_text": "### （三）效果评估体系",
+      "source_line": 324,
+      "source_line_end": 337,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文/编辑补题",
+      "decision": "采用",
+      "reason": "真实缺口：转人工是过程选择，解决是结果。压低转接入口可以改善过程数字，却让用户付出更大代价。",
+      "card_keys": [
+        "ch06.interview.m04.resolution-measurement.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P0",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    },
+    {
+      "module_id": "ch06-m04",
+      "objective_id": "ch06-m04-card-collaboration-choice",
+      "original_text": "### （二）人机协同是长期状态",
+      "source_line": 311,
+      "source_line_end": 337,
+      "source_path": "第6章-行业案例/6.4-智能客服.md",
+      "source_hash": "d653587f451c4a42d941f1e1312842a0206c73714dd8394f6934810099ae4608",
+      "source_type": "正文/编辑补题",
+      "decision": "采用",
+      "reason": "真实缺口：同一技术可以放在面向用户或面向坐席的不同责任位置；模式选择同时改变权限、等待成本和错误暴露。",
+      "card_keys": [
+        "ch06.interview.m04.collaboration-choice.001"
+      ],
+      "mother_question_id": "M1",
+      "practice_task_ids": [],
+      "priority": "P0",
+      "review_status": "draft",
+      "coverage_status": "draft_only_not_accepted"
+    }
+  ],
+  "card_content_hashes": {
+    "ch06.interview.m04.compensation-authority.001": "b69f5be0cf1a98f5b4b7aaa0a5e3b9aa4184b5f170ed6ded5cfacfb4afeb9624",
+    "ch06.interview.m04.handoff-ownership.001": "be42751d8da602c9291420151880ede722787c7b524b5da1da30af437b68f2db",
+    "ch06.interview.m04.mixed-service-intent.001": "e041e1907cb8d8c74a887c75f6e14d3ff4875547d53937570c835cb8b3b935af",
+    "ch06.interview.m04.knowledge-release.001": "92e494d9a49af17629b0da95448eadcd7893c13a633a48ebb77bbecc3e8eb88c",
+    "ch06.interview.m04.resolution-measurement.001": "a42cd7daf78d569c8ed053e650ad283cfad3b7e6b33d2b681b204785adaabe7b",
+    "ch06.interview.m04.collaboration-choice.001": "33094b6e8c18603e9abd12b40e3b7a6b37de5dec464e91056fee6c595e06aeb6"
+  },
+  "hash_definition": "SHA256(canonicalJson(card without review)); sorted object keys, compact JSON, UTF-8",
+  "author_checks": "仅作者结构与内容自检；没有独立scores、pass或accepted",
+  "coverage_claim": "仅候选/原生目标登记分流100%；草稿题卡、母题保留、实践设计、延期分别记录，绝不表示题卡/学习/发布覆盖100%。",
+  "registration_coverage": 1,
+  "card_coverage": "未验收，不计算完成率；跨课卡复用仅覆盖明确评分范围。",
+  "author_correction": "2026-10-22主编指出泛实践兜底后，逐候选复核；只改蓝图/覆盖，不改已审卡正文或哈希。",
+  "final_release": {
+    "date": "2026-10-24",
+    "status": "published_verified",
+    "cards": 6,
+    "batch_ids": [
+      "ch06-m04-remaining-20261022"
+    ],
+    "practice_executed": 0,
+    "note": "仅列最终核心卡发布；不将母题、延期或实践设计整体计入目标发布覆盖率。"
+  },
+  "final_card_content_hashes": {
+    "ch06.interview.m04.compensation-authority.001": "b69f5be0cf1a98f5b4b7aaa0a5e3b9aa4184b5f170ed6ded5cfacfb4afeb9624",
+    "ch06.interview.m04.handoff-ownership.001": "be42751d8da602c9291420151880ede722787c7b524b5da1da30af437b68f2db",
+    "ch06.interview.m04.mixed-service-intent.001": "e041e1907cb8d8c74a887c75f6e14d3ff4875547d53937570c835cb8b3b935af",
+    "ch06.interview.m04.knowledge-release.001": "f4a1a91a22c8a8200b1ff56f4692dd3cc2bffab4bd0aad2d84f101a3905fe5c9",
+    "ch06.interview.m04.resolution-measurement.001": "5dcdececb31e95764f764f5a76a06cc0ee8c84a8e9cf285b7f09b5880bead8c5",
+    "ch06.interview.m04.collaboration-choice.001": "9394c13e4b4ff125e00d33b52c0bac44ef4f7ff19995f9f3aa9242f27a1d5602"
+  }
+}
